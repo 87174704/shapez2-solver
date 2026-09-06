@@ -1,0 +1,38 @@
+name: Deploy Shapez2 Solver
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: linux-shell
+    steps:
+      - name: Checkout source
+        run: |
+          workdir=/tmp/ysc-solver-work
+          rm -rf "$workdir"
+          git config --global --add safe.directory /repos/ysc/solver.git
+          git clone --depth 1 --branch main /repos/ysc/solver.git "$workdir"
+          cd "$workdir"
+          git rev-parse HEAD
+
+      - name: Deploy static files
+        run: |
+          source_dir=/tmp/ysc-solver-work
+          target_dir=/deploy/shapez2-solver
+
+          if [ "$target_dir" != "/deploy/shapez2-solver" ]; then
+            echo "Unexpected deploy target: $target_dir" >&2
+            exit 1
+          fi
+
+          test -f "$source_dir/index.html"
+          test -d "$target_dir"
+
+          find "$target_dir" -mindepth 1 -delete
+          find "$source_dir" -mindepth 1 -maxdepth 1 \
+            ! -name .git \
+            ! -name .gitea \
+            -exec cp -a {} "$target_dir"/ \;

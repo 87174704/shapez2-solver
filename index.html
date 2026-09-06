@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (() => {
+      const storageKey = 'shapez2-solver-locale';
+      const supported = new Set(['cn', 'en']);
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      const last = segments.at(-1);
+      const locale = supported.has(last)
+        ? last
+        : last === 'index.html' && supported.has(segments.at(-2))
+          ? segments.at(-2)
+          : null;
+
+      if (locale) {
+        try { localStorage.setItem(storageKey, locale); } catch {}
+        return;
+      }
+
+      const preferred = (() => {
+        try {
+          const saved = localStorage.getItem(storageKey);
+          return supported.has(saved) ? saved : 'cn';
+        } catch {
+          return 'cn';
+        }
+      })();
+
+      const baseSegments = [...segments];
+      if (last === 'index.html') baseSegments.pop();
+      const nextPath = `/${[...baseSegments, preferred].join('/')}/`.replace(/\/+/g, '/');
+      window.location.replace(`${nextPath}${window.location.search}${window.location.hash}`);
+    })();
+  </script>
+  <title>Shapez 2 Solver</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <button class="icon-btn sidebar-toggle" id="sidebar-toggle" title="Collapse sidebar" data-i18n-title="sidebar.toggle.collapse">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="sidebar-header">
+      <h1 data-i18n="page.title">Shapez 2 Solver</h1>
+      <div class="subtitle">v1.0 | <a href="https://github.com/Vystel/shapez2-solver" target="_blank" data-i18n="header.source">Source on GitHub</a></div>
+    </div>
+
+    <div class="tabs sidebar-tabs">
+      <button class="tab sidebar-tab active" data-panel="shapes" data-i18n="sidebar.tab.shapes">Shapes</button>
+      <button class="tab sidebar-tab" data-panel="mixing" data-i18n="sidebar.tab.mixing">Mixing</button>
+    </div>
+
+    <div class="sidebar-sections">
+      <div class="sidebar-panel active" id="panel-shapes">
+        <div class="section">
+          <div class="section-header open">
+            <div class="section-header-left">
+              <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span class="section-label" data-i18n="sections.shapes">Shapes</span>
+            </div>
+          </div>
+
+          <div class="section-body open">
+            <div class="subsection">
+              <div class="subsection-label" data-i18n="subsections.outputs">Outputs</div>
+              <div class="shape-list scroll-thin" id="target-shapes"></div>
+              <div class="input-row">
+                <input type="text" id="target-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
+                <button class="btn-icon" id="add-target-shape-btn" title="Add" data-i18n-title="common.add">+</button>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-label" data-i18n="subsections.inputs">Inputs</div>
+              <div class="shape-list scroll-thin" id="starting-shapes"></div>
+              <div class="input-row">
+                <input type="text" id="starting-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
+                <button class="btn-icon" id="add-starting-shape-btn" title="Add" data-i18n-title="common.add">+</button>
+              </div>
+              <button class="btn-ghost" id="extract-shapes-btn" data-i18n="buttons.extractFromOutputs">Extract from Outputs</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header open">
+            <div class="section-header-left">
+              <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span class="section-label" data-i18n="sections.settings">Settings</span>
+            </div>
+          </div>
+
+          <div class="section-body open">
+            <div class="subsection">
+              <div class="subsection-label" data-i18n="subsections.operations">Operations</div>
+              <div id="enabled-operations">
+                <div class="operation-row">
+                  <div class="operation-item enabled" data-operation="Rotator CW"><img src="images/operations/rotator-cw.png" class="operation-icon"><span data-i18n="operations.short.rotatorCw">CW</span></div>
+                  <div class="operation-item enabled" data-operation="Rotator CCW"><img src="images/operations/rotator-ccw.png" class="operation-icon"><span data-i18n="operations.short.rotatorCcw">CCW</span></div>
+                  <div class="operation-item enabled" data-operation="Rotator 180"><img src="images/operations/rotator-180.png" class="operation-icon"><span data-i18n="operations.short.rotator180">180°</span></div>
+                </div>
+                <div class="operation-row">
+                  <div class="operation-item enabled" data-operation="Half Destroyer"><img src="images/operations/half-destroyer.png" class="operation-icon"><span data-i18n="operations.short.halfDestroyer">Destroy</span></div>
+                  <div class="operation-item enabled" data-operation="Cutter"><img src="images/operations/cutter.png" class="operation-icon"><span data-i18n="operations.short.cutter">Cut</span></div>
+                  <div class="operation-item enabled" data-operation="Swapper"><img src="images/operations/swapper.png" class="operation-icon"><span data-i18n="operations.short.swapper">Swap</span></div>
+                </div>
+                <div class="operation-row">
+                  <div class="operation-item enabled" data-operation="Stacker"><img src="images/operations/stacker.png" class="operation-icon"><span data-i18n="operations.short.stacker">Stack</span></div>
+                  <div class="operation-item enabled" data-operation="Painter"><img src="images/operations/painter.png" class="operation-icon"><span data-i18n="operations.short.painter">Paint</span></div>
+                </div>
+                <div class="operation-row">
+                  <div class="operation-item enabled" data-operation="Pin Pusher"><img src="images/operations/pin-pusher.png" class="operation-icon"><span data-i18n="operations.short.pinPusher">Pin</span></div>
+                  <div class="operation-item enabled" data-operation="Crystal Generator"><img src="images/operations/crystal-generator.png" class="operation-icon"><span data-i18n="operations.short.crystalGenerator">Crystal</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-label" data-i18n="subsections.shapeRules">Shape Rules</div>
+              <div class="option-group">
+                <label class="option-label" for="max-layers" data-i18n="settings.maxLayers">Max Layers</label>
+                <input type="number" class="field-input" id="max-layers" value="4" min="1" max="8">
+                <p class="option-desc" data-i18n="settings.maxLayersDesc">The layer limit for shapes.
+The default game limit is 4 layers (5 in the Insane scenario).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header open">
+            <div class="section-header-left">
+              <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span class="section-label" data-i18n="sections.solve">Solve</span>
+            </div>
+          </div>
+
+          <div class="section-body open">
+            <div class="tabs mode-tabs">
+              <button class="tab mode-tab active" data-mode="solver" data-i18n="modes.solver">Solver</button>
+              <button class="tab mode-tab" data-mode="explorer" data-i18n="modes.explorer">Explorer</button>
+            </div>
+
+            <div class="mode-panel active" id="panel-solver">
+              <button class="btn-primary">Solve</button>
+
+              <div class="subsection-label" data-i18n="subsections.solverOptions">Solver Options</div>
+              <div class="option-group">
+                <label class="option-label" for="max-states-per-level" data-i18n="settings.maxStatesPerLevel">Max States Per Level</label>
+                <input type="number" id="max-states-per-level" class="field-input" value="30000" placeholder="Infinity" data-i18n-placeholder="placeholders.infinity">
+                <p class="option-desc" data-i18n="settings.maxStatesDesc">Smaller = faster but may fail.
+Larger = slower but more efficient.</p>
+              </div>
+
+              <div class="toggle-row">
+                <span class="toggle-name" data-i18n="settings.preventWaste">Prevent Waste</span>
+                <label class="toggle"><input type="checkbox" id="prevent-waste"><span class="toggle-track"></span></label>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-name" data-i18n="settings.orientationSensitive">Orientation-Sensitive</span>
+                <label class="toggle"><input type="checkbox" id="orientation-sensitive"><span class="toggle-track"></span></label>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-name" data-i18n="settings.allowSplitting">Allow Shape Splitting</span>
+                <label class="toggle"><input type="checkbox" id="allow-splitting"><span class="toggle-track"></span></label>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-name" data-i18n="settings.cleanPainting">Clean Painting</span>
+                <label class="toggle"><input type="checkbox" id="clean-painting"><span class="toggle-track"></span></label>
+              </div>
+            </div>
+
+            <div class="mode-panel" id="panel-explorer">
+              <button class="btn-primary">Explore</button>
+              <div class="subsection-label" data-i18n="subsections.explorerOptions">Explorer Options</div>
+              <div class="option-group">
+                <label class="option-label" for="depth-limit-input" data-i18n="settings.depthLimit">Depth Limit</label>
+                <input type="number" class="field-input" id="depth-limit-input" placeholder="Infinity" data-i18n-placeholder="placeholders.infinity">
+                <p class="option-desc" data-i18n="settings.depthLimitDesc">Explore all shapes reachable within this many operation steps.</p>
+              </div>
+              <p class="panel-help" data-i18n="explorer.help">Explore all shapes reachable from the current inputs and enabled operations within the depth limit. The explorer renders a relationship graph instead of finding an optimal recipe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-panel" id="panel-mixing">
+        <div class="section-body open">
+          <div style="margin-bottom:10px;">
+            <div class="toggle-row">
+              <span class="toggle-name" data-i18n="mix.manualInputs">Manual Inputs</span>
+              <label class="toggle"><input type="checkbox" id="mix-manual-inputs"><span class="toggle-track"></span></label>
+            </div>
+          </div>
+
+          <div class="subsection-label" data-i18n="subsections.colors">Colors</div>
+
+          <div class="mix-col-headers">
+            <span></span>
+            <span id="mix-col-have" data-i18n="mix.have">Have</span>
+            <span data-i18n="mix.want">Want</span>
+          </div>
+
+          <div class="mix-color-grid" id="mix-color-grid">
+            <div class="mix-color-row" data-color="red">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(244,44,86);"></div>
+                <span class="mix-color-name" data-i18n="colors.red">Red</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="green">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(113,195,43);"></div>
+                <span class="mix-color-name" data-i18n="colors.green">Green</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="blue">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(75,137,237);"></div>
+                <span class="mix-color-name" data-i18n="colors.blue">Blue</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-divider"></div>
+
+            <div class="mix-color-row" data-color="cyan">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(29,195,145);"></div>
+                <span class="mix-color-name" data-i18n="colors.cyan">Cyan</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="magenta">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(184,68,198);"></div>
+                <span class="mix-color-name" data-i18n="colors.magenta">Magenta</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="yellow">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(232,148,47);"></div>
+                <span class="mix-color-name" data-i18n="colors.yellow">Yellow</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-divider"></div>
+
+            <div class="mix-color-row" data-color="white">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(255,255,255); border-color:#555;"></div>
+                <span class="mix-color-name" data-i18n="colors.white">White</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="gray">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(121,138,150);"></div>
+                <span class="mix-color-name" data-i18n="colors.gray">Gray</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+
+            <div class="mix-color-row" data-color="black">
+              <div class="mix-color-swatch-wrap">
+                <div class="mix-color-swatch" style="background:rgb(65,64,59); border-color:#555;"></div>
+                <span class="mix-color-name" data-i18n="colors.black">Black</span>
+              </div>
+              <input type="number" class="mix-input mix-have" min="0" value="0" placeholder="0">
+              <input type="number" class="mix-input mix-want" min="0" value="0" placeholder="0">
+            </div>
+          </div>
+
+          <button class="btn-ghost" id="reset-mix-btn" data-i18n="buttons.resetAll">Reset All</button>
+          <button class="btn-primary" id="solve-mix">Solve</button>
+
+          <div style="margin-bottom:10px;">
+            <div class="toggle-row">
+              <span class="toggle-name" data-i18n="mix.compactGraph">Compact Mix Graph</span>
+              <label class="toggle"><input type="checkbox" id="mix-compact-graph" checked><span class="toggle-track"></span></label>
+            </div>
+          </div>
+
+          <div id="mix-solutions"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <button class="icon-btn sidebar-toggle-float" id="sidebar-toggle-float" title="Expand sidebar" data-i18n-title="sidebar.toggle.expand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="graph-area">
+      <div class="graph-grid"></div>
+      <div id="graph-container" style="position:absolute; inset:0;"></div>
+
+      <div class="graph-placeholder" id="placeholder">
+        <span class="graph-placeholder-text" data-i18n="placeholder.noGraph">No graph generated yet</span>
+      </div>
+
+      <button class="snapshot-btn" title="Copy snapshot" data-i18n-title="buttons.copySnapshot">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect width="14" height="14" x="8" y="8" rx="2"></rect>
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+        </svg>
+        <span data-i18n="buttons.copyGraph">Copy Graph</span>
+      </button>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-item">
+        <div class="status-dot idle" id="status-dot"></div>
+        <span id="status-text" data-i18n="status.idle">Idle</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="graph-controls-bar">
+        <div class="graph-control-group">
+          <label for="color-mode-select" data-i18n="controls.colorMode">Color Mode</label>
+          <select id="color-mode-select">
+            <option value="rgb">RGB</option>
+            <option value="ryb">RYB</option>
+            <option value="cmyk">CMYK</option>
+          </select>
+        </div>
+
+        <div class="graph-control-group">
+          <label for="direction-select" data-i18n="controls.direction">Direction</label>
+          <select id="direction-select">
+            <option value="LR" data-i18n="controls.direction.lr">Left to Right</option>
+            <option value="TB" data-i18n="controls.direction.tb">Top to Bottom</option>
+            <option value="RL" data-i18n="controls.direction.rl">Right to Left</option>
+            <option value="BT" data-i18n="controls.direction.bt">Bottom to Top</option>
+          </select>
+        </div>
+
+        <div class="graph-control-group">
+          <label for="lang-preference" data-i18n="language.label">Language</label>
+          <select id="lang-preference" class="language-select">
+            <option value="cn" data-i18n="language.option.cn">Chinese</option>
+            <option value="en" data-i18n="language.option.en">English</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="extract-modal" style="display:none;">
+    <div class="modal-content">
+      <div class="subsection-label" data-i18n="modal.extraction.title">Shape Extraction Options</div>
+      <p data-i18n="modal.extraction.description">Automatically set input shapes by splitting the output shapes into smaller components based on a certain property.</p>
+
+      <div class="option-group">
+        <label class="option-label" data-i18n="modal.extraction.uniqueBy">Extract by Unique:</label>
+        <div class="extraction-option"><input type="radio" name="extract-mode" value="layer"><span data-i18n="modal.extraction.layer">Layer</span></div>
+        <div class="extraction-option"><input type="radio" name="extract-mode" value="shape"><span data-i18n="modal.extraction.shape">Shape</span></div>
+        <div class="extraction-option"><input type="radio" name="extract-mode" value="color" checked><span data-i18n="modal.extraction.color">Color</span></div>
+        <div class="extraction-option"><input type="radio" name="extract-mode" value="shape-color"><span data-i18n="modal.extraction.shapeColor">Shape &amp; Color</span></div>
+        <div class="extraction-option"><input type="radio" name="extract-mode" value="part"><span data-i18n="modal.extraction.part">Part</span></div>
+      </div>
+
+      <div class="modal-options">
+        <div class="toggle-row">
+          <span class="toggle-name" data-i18n="modal.extraction.includePins">Include Pins?</span>
+          <label class="toggle"><input type="checkbox" id="include-pins"><span class="toggle-track"></span></label>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-name" data-i18n="modal.extraction.includeCrystals">Include Crystals?</span>
+          <label class="toggle"><input type="checkbox" id="include-crystals"><span class="toggle-track"></span></label>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-name" data-i18n="modal.extraction.includeColor">Include Color?</span>
+          <label class="toggle"><input type="checkbox" id="include-color"><span class="toggle-track"></span></label>
+        </div>
+      </div>
+
+      <div class="modal-buttons">
+        <button id="extract-cancel" data-i18n="common.cancel">Cancel</button>
+        <button id="extract-confirm" class="btn-primary" style="margin:0;" data-i18n="buttons.extract">Extract</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js"></script>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
