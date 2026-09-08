@@ -5,32 +5,25 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
-    runs-on: linux-shell
+    runs-on: solver-shell
     steps:
       - name: Checkout source
-        run: |
-          workdir=/tmp/ysc-solver-work
-          rm -rf "$workdir"
-          git config --global --add safe.directory /repos/ysc/solver.git
-          git clone --depth 1 --branch main /repos/ysc/solver.git "$workdir"
-          cd "$workdir"
-          git rev-parse HEAD
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+          persist-credentials: false
 
       - name: Deploy static files
         run: |
-          source_dir=/tmp/ysc-solver-work
+          source_dir="$GITHUB_WORKSPACE"
           target_dir=/deploy/shapez2-solver
-
-          if [ "$target_dir" != "/deploy/shapez2-solver" ]; then
-            echo "Unexpected deploy target: $target_dir" >&2
-            exit 1
-          fi
-
           test -f "$source_dir/index.html"
           test -d "$target_dir"
-
           find "$target_dir" -mindepth 1 -delete
           find "$source_dir" -mindepth 1 -maxdepth 1 \
             ! -name .git \
