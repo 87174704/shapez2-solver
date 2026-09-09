@@ -17,7 +17,123 @@ const operations = {
     "Pin Pusher": { fn: pushPin, inputCount: 1 },
     "Crystal Generator": { fn: genCrystal, inputCount: 1, needsColor: true }
 };
-const MAX_TOTAL_STATES = 2500000;
+// These limits protect the renderer process as well as the worker. Chromium may
+// terminate the whole tab when a worker exhausts the shared process memory.
+const MAX_TOTAL_STATES = 500000;
+const MAX_FRONTIER_STATES = 5000;
+const MAX_GENERATED_STATES = 5000000;
+const MAX_INTERNED_SHAPES = 150000;
+const MAX_SEARCH_TIME_MS = 120000;
+const MIN_SPLIT_THROUGHPUT = 1 / 4096;
+
+const CACHE_LIMITS = Object.freeze({
+    similarity: 100000,
+    shapes: 20000,
+    paintColors: 15000,
+    operationOutputs: 75000,
+});
+
+function getCachedValue(cache, key) {
+    return cache.get(key);
+}
+
+function setCachedValue(cache, key, value, limit) {
+    if (cache.has(key)) cache.delete(key);
+    cache.set(key, value);
+
+    if (cache.size > limit) {
+        cache.delete(cache.keys().next().value);
+    }
+}
+
+// Keeps only the best K states while successors are being generated. The old
+// implementation materialized every successor and sorted the whole level,
+// which made maxStatesPerLevel ineffective as a memory limit.
+class BoundedStateCollector {
+    constructor(limit, visited) {
+        this.limit = limit;
+        this.visited = visited;
+        this.heap = [];
+        this.retainedByKey = new Map();
+        this.sequence = 0;
+        this.consideredCount = 0;
+    }
+
+    get size() {
+        return this.heap.length;
+    }
+
+    _isWorse(a, b) {
+        if (a.score !== b.score) return a.score < b.score;
+        return a.sequence > b.sequence;
+    }
+
+    _isBetter(score, sequence, entry) {
+        if (score !== entry.score) return score > entry.score;
+        return sequence < entry.sequence;
+    }
+
+    _swap(a, b) {
+        [this.heap[a], this.heap[b]] = [this.heap[b], this.heap[a]];
+    }
+
+    _bubbleUp(index) {
+        while (index > 0) {
+            const parent = Math.floor((index - 1) / 2);
+            if (!this._isWorse(this.heap[index], this.heap[parent])) break;
+            this._swap(index, parent);
+            index = parent;
+        }
+    }
+
+    _sinkDown(index) {
+        while (true) {
+            const left = index * 2 + 1;
+            const right = left + 1;
+            let worst = index;
+
+            if (left < this.heap.length && this._isWorse(this.heap[left], this.heap[worst])) worst = left;
+            if (right < this.heap.length && this._isWorse(this.heap[right], this.heap[worst])) worst = right;
+            if (worst === index) break;
+
+            this._swap(index, worst);
+            index = worst;
+        }
+    }
+
+    consider(stateKey, score, createState) {
+        this.consideredCount += 1;
+        const sequence = this.sequence++;
+
+        if (this.visited.has(stateKey) || this.retainedByKey.has(stateKey)) return false;
+
+        if (this.heap.length >= this.limit && !this._isBetter(score, sequence, this.heap[0])) {
+            return false;
+        }
+
+        const entry = { stateKey, score, sequence, state: createState() };
+
+        if (this.heap.length < this.limit) {
+            this.heap.push(entry);
+            this.retainedByKey.set(stateKey, entry);
+            this._bubbleUp(this.heap.length - 1);
+            return true;
+        }
+
+        const evicted = this.heap[0];
+        this.retainedByKey.delete(evicted.stateKey);
+        this.heap[0] = entry;
+        this.retainedByKey.set(stateKey, entry);
+        this._sinkDown(0);
+        return true;
+    }
+
+    toBestFirstStates() {
+        return this.heap
+            .sort((a, b) => b.score - a.score || a.sequence - b.sequence)
+            .map(entry => entry.state);
+    }
+}
 
 let cancelled = false;
 
@@ -76,22 +192,61 @@ self.onmessage = async function (e) {
 
 async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel = Infinity, preventWaste, orientationSensitive, allowSplitting, cleanPainting) {
     const config = new ShapeOperationConfig(maxLayers);
+    const searchStarted = performance.now();
     let lastUpdate = performance.now();
     let depth = 0;
+    let generatedStates = 0;
+    let shapeLimitReached = false;
+    const frontierLimit = Math.max(
+        1,
+        Math.min(
+            Number.isFinite(maxStatesPerLevel) ? Math.floor(maxStatesPerLevel) : MAX_FRONTIER_STATES,
+            MAX_FRONTIER_STATES
+        )
+    );
 
-    const targetObjects = targetShapeCodes.map(code => Shape.fromShapeCode(code));
-    const targetAcceptableSets = targetObjects.map((targetObject, index) => {
-        const acceptableCodes = new Set();
-        if (orientationSensitive) {
-            acceptableCodes.add(targetShapeCodes[index]);
-        } else {
-            for (const code of _getAllRotations(targetObject, config)) acceptableCodes.add(code);
+    const shapeCodeToId = new Map();
+    const shapeCodes = [];
+
+    function internShapeCode(code) {
+        let shapeId = shapeCodeToId.get(code);
+        if (shapeId === undefined) {
+            if (shapeCodes.length >= MAX_INTERNED_SHAPES) {
+                shapeLimitReached = true;
+                return null;
+            }
+            shapeId = shapeCodes.length;
+            shapeCodeToId.set(code, shapeId);
+            shapeCodes.push(code);
         }
-        return acceptableCodes;
+        return shapeId;
+    }
+
+    function getShapeCode(shapeId) {
+        return shapeCodes[shapeId];
+    }
+
+    const targetObjects = targetShapeCodes.map(code => {
+        internShapeCode(code);
+        return Shape.fromShapeCode(code);
+    });
+    const targetAcceptableSets = targetObjects.map((targetObject, index) => {
+        const acceptableShapeIds = new Set();
+        if (orientationSensitive) {
+            acceptableShapeIds.add(internShapeCode(targetShapeCodes[index]));
+        } else {
+            for (const code of _getAllRotations(targetObject, config)) {
+                acceptableShapeIds.add(internShapeCode(code));
+            }
+        }
+        return acceptableShapeIds;
     });
     const targetAcceptableLists = targetAcceptableSets.map(set => [...set]);
     const orderedTargetAcceptableLists = [...targetAcceptableLists].sort((a, b) => a.length - b.length);
     const targetCodeUniverse = new Set(targetAcceptableLists.flat());
+    const targetLayerShapeIds = new Set(
+        targetObjects.flatMap(targetObject => targetObject.toListOfLayers().map(internShapeCode))
+    );
 
     const targetCrystalColors = new Set(
         targetObjects.flatMap(targetObject => [..._getCrystalColors(targetObject)])
@@ -102,19 +257,19 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     const paintColorsCache = new Map();
     const operationOutputCache = new Map();
 
-    function getShapeObject(code) {
-        let shapeObject = shapeCache.get(code);
+    function getShapeObject(shapeId) {
+        let shapeObject = getCachedValue(shapeCache, shapeId);
         if (shapeObject === undefined) {
-            shapeObject = Shape.fromShapeCode(code);
-            shapeCache.set(code, shapeObject);
+            shapeObject = Shape.fromShapeCode(getShapeCode(shapeId));
+            setCachedValue(shapeCache, shapeId, shapeObject, CACHE_LIMITS.shapes);
         }
         return shapeObject;
     }
 
-    function getCachedSimilarity(code) {
-        let score = similarityCache.get(code);
+    function getCachedSimilarity(shapeId) {
+        let score = getCachedValue(similarityCache, shapeId);
         if (score === undefined) {
-            const shapeObject = getShapeObject(code);
+            const shapeObject = getShapeObject(shapeId);
             score = 0;
             for (const targetObject of targetObjects) {
                 const similarity = _getSimilarity(shapeObject, targetObject);
@@ -122,38 +277,52 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
             }
             // Give full credit to any shape that appears as a layer in any target,
             // so intermediate layer shapes survive pruning.
-            if (score < 0.99 && targetObjects.some(t => t.toListOfLayers().includes(code))) {
+            if (score < 0.99 && targetLayerShapeIds.has(shapeId)) {
                 score = 1.0;
             }
-            similarityCache.set(code, score);
+            setCachedValue(similarityCache, shapeId, score, CACHE_LIMITS.similarity);
         }
         return score;
     }
 
-    function getCachedPaintColors(code) {
-        let colors = paintColorsCache.get(code);
+    function getCachedPaintColors(shapeId) {
+        let colors = getCachedValue(paintColorsCache, shapeId);
         if (colors === undefined) {
-            const inputShape = getShapeObject(code);
+            const inputShape = getShapeObject(shapeId);
             colors = [...new Set(targetObjects.flatMap(targetObject => _getPaintColors(inputShape, targetObject)))];
-            paintColorsCache.set(code, colors);
+            setCachedValue(paintColorsCache, shapeId, colors, CACHE_LIMITS.paintColors);
         }
         return colors;
     }
 
-    function makeToken(code, throughput = 1.0) {
-        return allowSplitting ? `${code}@${throughput}` : code;
+    const tokenKeyToId = new Map();
+    const tokenShapeIds = [];
+    const tokenThroughputs = [];
+
+    function makeToken(shapeId, throughput = 1.0) {
+        if (!allowSplitting) return shapeId;
+
+        const key = `${shapeId}@${throughput}`;
+        let tokenId = tokenKeyToId.get(key);
+        if (tokenId === undefined) {
+            tokenId = tokenShapeIds.length;
+            tokenKeyToId.set(key, tokenId);
+            tokenShapeIds.push(shapeId);
+            tokenThroughputs.push(throughput);
+        }
+        return tokenId;
+    }
+
+    function getTokenShapeId(token) {
+        return allowSplitting ? tokenShapeIds[token] : token;
     }
 
     function getTokenCode(token) {
-        if (!allowSplitting) return token;
-        const separatorIndex = token.lastIndexOf('@');
-        return separatorIndex === -1 ? token : token.slice(0, separatorIndex);
+        return getShapeCode(getTokenShapeId(token));
     }
 
     function getTokenThroughput(token) {
-        if (!allowSplitting) return 1.0;
-        const separatorIndex = token.lastIndexOf('@');
-        return separatorIndex === -1 ? 1.0 : Number(token.slice(separatorIndex + 1));
+        return allowSplitting ? tokenThroughputs[token] : 1.0;
     }
 
     function cloneCounts(counts) {
@@ -170,33 +339,35 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     }
 
     function getCachedOperationOutputs(opName, op, inputTokenA, inputTokenB = null, color = null) {
-        const codeA = getTokenCode(inputTokenA);
+        const shapeIdA = getTokenShapeId(inputTokenA);
         let outputs;
 
         if (op.inputCount === 1) {
-            const cacheKey = color === null ? `${opName}|${codeA}` : `${opName}|${codeA}|${color}`;
-            outputs = operationOutputCache.get(cacheKey);
+            const cacheKey = color === null ? `${opName}|${shapeIdA}` : `${opName}|${shapeIdA}|${color}`;
+            outputs = getCachedValue(operationOutputCache, cacheKey);
             if (outputs === undefined) {
-                const inputShape = getShapeObject(codeA);
+                const inputShape = getShapeObject(shapeIdA);
                 outputs = (color === null ? op.fn(inputShape, config) : op.fn(inputShape, color, config))
                     .filter(outputShape => !outputShape.isEmpty())
-                    .map(outputShape => outputShape.toShapeCode());
-                operationOutputCache.set(cacheKey, outputs);
+                    .map(outputShape => internShapeCode(outputShape.toShapeCode()))
+                    .filter(shapeId => shapeId !== null);
+                setCachedValue(operationOutputCache, cacheKey, outputs, CACHE_LIMITS.operationOutputs);
             }
             return outputs;
         }
 
-        const codeB = getTokenCode(inputTokenB);
-        const [keyA, keyB, shapeA, shapeB] = op.commutative && codeA > codeB
-            ? [codeB, codeA, getShapeObject(codeB), getShapeObject(codeA)]
-            : [codeA, codeB, getShapeObject(codeA), getShapeObject(codeB)];
+        const shapeIdB = getTokenShapeId(inputTokenB);
+        const [keyA, keyB, shapeA, shapeB] = op.commutative && shapeIdA > shapeIdB
+            ? [shapeIdB, shapeIdA, getShapeObject(shapeIdB), getShapeObject(shapeIdA)]
+            : [shapeIdA, shapeIdB, getShapeObject(shapeIdA), getShapeObject(shapeIdB)];
         const cacheKey = `${opName}|${keyA}|${keyB}`;
-        outputs = operationOutputCache.get(cacheKey);
+        outputs = getCachedValue(operationOutputCache, cacheKey);
         if (outputs === undefined) {
             outputs = op.fn(shapeA, shapeB, config)
                 .filter(outputShape => !outputShape.isEmpty())
-                .map(outputShape => outputShape.toShapeCode());
-            operationOutputCache.set(cacheKey, outputs);
+                .map(outputShape => internShapeCode(outputShape.toShapeCode()))
+                .filter(shapeId => shapeId !== null);
+            setCachedValue(operationOutputCache, cacheKey, outputs, CACHE_LIMITS.operationOutputs);
         }
         return outputs;
     }
@@ -205,7 +376,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
         if (targetAcceptableSets.length === 1 && !allowSplitting && !preventWaste) {
             const acceptableSet = targetAcceptableSets[0];
             for (const [token, count] of counts) {
-                if (count > 0 && acceptableSet.has(getTokenCode(token))) return true;
+                if (count > 0 && acceptableSet.has(getTokenShapeId(token))) return true;
             }
             return false;
         }
@@ -216,24 +387,24 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
             function assignTarget(targetIndex) {
                 if (targetIndex >= orderedTargetAcceptableLists.length) {
                     if (!preventWaste) return true;
-                    for (const [code, count] of remainingCounts) {
-                        if (count > 0 && !targetCodeUniverse.has(code)) return false;
+                    for (const [shapeId, count] of remainingCounts) {
+                        if (count > 0 && !targetCodeUniverse.has(shapeId)) return false;
                     }
                     return true;
                 }
 
-                for (const code of orderedTargetAcceptableLists[targetIndex]) {
-                    const count = remainingCounts.get(code) ?? 0;
+                for (const shapeId of orderedTargetAcceptableLists[targetIndex]) {
+                    const count = remainingCounts.get(shapeId) ?? 0;
                     if (count <= 0) continue;
 
                     if (count === 1) {
-                        remainingCounts.delete(code);
+                        remainingCounts.delete(shapeId);
                     } else {
-                        remainingCounts.set(code, count - 1);
+                        remainingCounts.set(shapeId, count - 1);
                     }
 
                     if (assignTarget(targetIndex + 1)) return true;
-                    remainingCounts.set(code, count);
+                    remainingCounts.set(shapeId, count);
                 }
 
                 return false;
@@ -255,7 +426,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
             let totalThroughput = 0;
 
             for (const [token, throughput] of remainingThroughput) {
-                if (throughput > 1e-9 && acceptableSet.has(getTokenCode(token))) {
+                if (throughput > 1e-9 && acceptableSet.has(getTokenShapeId(token))) {
                     totalThroughput += throughput;
                     matchingTokens.push(token);
                 }
@@ -280,7 +451,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
 
         if (preventWaste) {
             for (const [token, throughput] of remainingThroughput) {
-                if (throughput > 1e-9 && !targetCodeUniverse.has(getTokenCode(token))) return false;
+                if (throughput > 1e-9 && !targetCodeUniverse.has(getTokenShapeId(token))) return false;
             }
         }
 
@@ -290,18 +461,24 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     function calculateSimilarityTotal(counts) {
         let total = 0;
         for (const [token, count] of counts) {
-            total += getCachedSimilarity(getTokenCode(token)) * count;
+            total += getCachedSimilarity(getTokenShapeId(token)) * getTokenThroughput(token) * count;
+        }
+        return total;
+    }
+
+    function calculateThroughputTotal(counts) {
+        let total = 0;
+        for (const [token, count] of counts) {
+            total += getTokenThroughput(token) * count;
         }
         return total;
     }
 
     function getStateKey(counts) {
-        const parts = [];
-        for (const [token, count] of counts) {
-            parts.push(`${token}#${count}`);
-        }
-        parts.sort();
-        return parts.join('|');
+        return [...counts]
+            .sort(([tokenA], [tokenB]) => tokenA - tokenB)
+            .map(([token, count]) => `${token}#${count}`)
+            .join('|');
     }
 
     function makeStep(operation, inputTokens, outputTokens, color = null) {
@@ -316,10 +493,11 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     function groupEquivalentInputs(counts) {
         const groups = [];
         for (const [token, count] of counts) {
+            const shapeId = getTokenShapeId(token);
             groups.push({
                 token,
                 count,
-                code: getTokenCode(token),
+                shapeId,
                 throughput: getTokenThroughput(token)
             });
         }
@@ -328,8 +506,8 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
 
     function materializeSolutionPath(state) {
         const compactSteps = [];
-        for (let current = state; current?.step; current = current.parent) {
-            compactSteps.push(current.step);
+        for (let trace = state?.trace; trace; trace = trace.parent) {
+            compactSteps.push(trace.step);
         }
         compactSteps.reverse();
 
@@ -356,7 +534,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
         }
 
         for (const code of startingShapeCodes) {
-            pushToken(makeToken(code, 1.0));
+            pushToken(makeToken(internShapeCode(code), 1.0));
         }
 
         return compactSteps.map(step => {
@@ -379,65 +557,145 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
 
     const initialCounts = new Map();
     for (const code of startingShapeCodes) {
-        adjustCount(initialCounts, makeToken(code, 1.0), 1);
+        adjustCount(initialCounts, makeToken(internShapeCode(code), 1.0), 1);
     }
 
     const initialKey = getStateKey(initialCounts);
     const initialScoreTotal = calculateSimilarityTotal(initialCounts);
+    const initialThroughputTotal = calculateThroughputTotal(initialCounts);
     let frontier = [{
         stateKey: initialKey,
         counts: initialCounts,
-        parent: null,
-        step: null,
-        itemCount: startingShapeCodes.length,
+        trace: null,
+        throughputTotal: initialThroughputTotal,
         scoreTotal: initialScoreTotal,
-        score: startingShapeCodes.length > 0 ? initialScoreTotal / startingShapeCodes.length : 0
+        score: initialThroughputTotal > 0 ? initialScoreTotal / initialThroughputTotal : 0
     }];
     const visited = new Set([initialKey]);
 
-    function pruneStatesAtDepth(states, maxStates) {
-        if (states.length <= maxStates) return states;
-        states.sort((a, b) => b.score - a.score);
-        return states.slice(0, maxStates);
+    function makeLimitResult(limitReason) {
+        return {
+            solutionPath: null,
+            depth,
+            statesExplored: visited.size,
+            generatedStates,
+            limitReached: true,
+            limitReason,
+        };
+    }
+
+    function postProgress(displayDepth, collector) {
+        self.postMessage({
+            type: 'status',
+            messageKey: 'solver.status.progress',
+            messageParams: {
+                depth: displayDepth,
+                queueLength: collector.size,
+                totalStates: visited.size,
+                prunedCount: Math.max(0, collector.consideredCount - collector.size),
+                generatedStates,
+                cacheEntries: similarityCache.size + shapeCache.size + paintColorsCache.size + operationOutputCache.size,
+                internedShapes: shapeCodes.length,
+            },
+            status: 'running',
+        });
+        lastUpdate = performance.now();
     }
 
     while (frontier.length > 0 && !cancelled) {
         const currentDepthStates = frontier;
-        const nextDepthStates = [];
-        const levelSeen = new Set();
+        const nextStates = new BoundedStateCollector(frontierLimit, visited);
+
+        function enqueueSuccessor({
+            stateKey,
+            counts,
+            parent,
+            stepFactory,
+            throughputTotal,
+            scoreTotal,
+            outputTokens,
+            canCompleteGoal = true,
+        }) {
+            generatedStates += 1;
+
+            if (
+                canCompleteGoal &&
+                outputTokens.some(token => targetCodeUniverse.has(getTokenShapeId(token))) &&
+                checkGoal(counts)
+            ) {
+                const goalState = {
+                    trace: { parent: parent.trace, step: stepFactory() },
+                };
+                return {
+                    solutionPath: materializeSolutionPath(goalState),
+                    depth: depth + 1,
+                    statesExplored: visited.size,
+                    generatedStates,
+                };
+            }
+
+            if (generatedStates >= MAX_GENERATED_STATES) {
+                return makeLimitResult('generated-states');
+            }
+
+            if ((generatedStates & 2047) === 0 && performance.now() - searchStarted >= MAX_SEARCH_TIME_MS) {
+                return makeLimitResult('time');
+            }
+
+            const score = throughputTotal > 1e-12 ? scoreTotal / throughputTotal : 0;
+            nextStates.consider(stateKey, score, () => ({
+                stateKey,
+                counts,
+                trace: { parent: parent.trace, step: stepFactory() },
+                throughputTotal,
+                scoreTotal,
+                score,
+            }));
+            return null;
+        }
 
         for (const current of currentDepthStates) {
             if (cancelled) break;
 
-            const { counts, scoreTotal, itemCount } = current;
+            if (performance.now() - searchStarted >= MAX_SEARCH_TIME_MS) {
+                return makeLimitResult('time');
+            }
+
+            const { counts, scoreTotal, throughputTotal } = current;
             const inputGroups = groupEquivalentInputs(counts);
 
             if (checkGoal(counts)) {
-                return { solutionPath: materializeSolutionPath(current), depth, statesExplored: visited.size };
+                return {
+                    solutionPath: materializeSolutionPath(current),
+                    depth,
+                    statesExplored: visited.size,
+                    generatedStates,
+                };
             }
 
             if (allowSplitting) {
-                for (const { token, code, throughput } of inputGroups) {
-                    const childToken = makeToken(code, throughput / 2);
+                for (const { token, shapeId, throughput } of inputGroups) {
+                    const childThroughput = throughput / 2;
+                    if (childThroughput < MIN_SPLIT_THROUGHPUT) continue;
+
+                    const childToken = makeToken(shapeId, childThroughput);
                     const nextCounts = cloneCounts(counts);
                     adjustCount(nextCounts, token, -1);
                     adjustCount(nextCounts, childToken, 2);
 
-                    const nextItemCount = itemCount + 1;
-                    const nextScoreTotal = scoreTotal + getCachedSimilarity(code);
                     const stateKey = getStateKey(nextCounts);
-                    if (!visited.has(stateKey) && !levelSeen.has(stateKey)) {
-                        levelSeen.add(stateKey);
-                        nextDepthStates.push({
-                            stateKey,
-                            counts: nextCounts,
-                            parent: current,
-                            step: makeStep("Splitter", [token], [childToken, childToken]),
-                            itemCount: nextItemCount,
-                            scoreTotal: nextScoreTotal,
-                            score: nextScoreTotal / nextItemCount
-                        });
-                    }
+                    const outputTokens = [childToken, childToken];
+                    const completed = enqueueSuccessor({
+                        stateKey,
+                        counts: nextCounts,
+                        parent: current,
+                        stepFactory: () => makeStep("Splitter", [token], outputTokens),
+                        throughputTotal,
+                        scoreTotal,
+                        outputTokens,
+                        canCompleteGoal: false,
+                    });
+                    if (completed) return completed;
                 }
             }
 
@@ -449,13 +707,13 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                 const { inputCount, needsColor } = op;
 
                 if (inputCount === 1) {
-                    for (const { token, code, throughput } of inputGroups) {
+                    for (const { token, shapeId, throughput } of inputGroups) {
                         if (cancelled) break;
 
-                        const inputSimilarity = getCachedSimilarity(code);
+                        const inputSimilarity = getCachedSimilarity(shapeId);
 
                         if (needsColor) {
-                            const inputShape = getShapeObject(code);
+                            const inputShape = getShapeObject(shapeId);
                             if (cleanPainting && opName === "Painter") {
                                 if (inputShape.layers.length !== 1) continue;
                                 const topLayer = inputShape.layers[0];
@@ -466,12 +724,14 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                             }
 
                             const colors = opName === "Painter"
-                                ? getCachedPaintColors(code)
+                                ? getCachedPaintColors(shapeId)
                                 : [...targetCrystalColors];
 
                             for (const color of colors) {
                                 const outputCodes = getCachedOperationOutputs(opName, op, token, null, color);
+                                if (shapeLimitReached) return makeLimitResult('shape-universe');
                                 if (outputCodes.length === 0) continue;
+                                if (outputCodes.length === 1 && outputCodes[0] === shapeId) continue;
 
                                 const nextCounts = cloneCounts(counts);
                                 const outputTokens = [];
@@ -482,28 +742,28 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                                     const outputToken = makeToken(outputCode, throughput);
                                     outputTokens.push(outputToken);
                                     adjustCount(nextCounts, outputToken, 1);
-                                    outputSimilarityTotal += getCachedSimilarity(outputCode);
+                                    outputSimilarityTotal += getCachedSimilarity(outputCode) * throughput;
                                 }
 
-                                const nextItemCount = itemCount - 1 + outputTokens.length;
-                                const nextScoreTotal = scoreTotal - inputSimilarity + outputSimilarityTotal;
+                                const nextThroughputTotal = throughputTotal - throughput + outputTokens.length * throughput;
+                                const nextScoreTotal = scoreTotal - inputSimilarity * throughput + outputSimilarityTotal;
                                 const stateKey = getStateKey(nextCounts);
-                                if (!visited.has(stateKey) && !levelSeen.has(stateKey)) {
-                                    levelSeen.add(stateKey);
-                                    nextDepthStates.push({
-                                        stateKey,
-                                        counts: nextCounts,
-                                        parent: current,
-                                        step: makeStep(opName, [token], outputTokens, color),
-                                        itemCount: nextItemCount,
-                                        scoreTotal: nextScoreTotal,
-                                        score: nextScoreTotal / nextItemCount
-                                    });
-                                }
+                                const completed = enqueueSuccessor({
+                                    stateKey,
+                                    counts: nextCounts,
+                                    parent: current,
+                                    stepFactory: () => makeStep(opName, [token], outputTokens, color),
+                                    throughputTotal: nextThroughputTotal,
+                                    scoreTotal: nextScoreTotal,
+                                    outputTokens,
+                                });
+                                if (completed) return completed;
                             }
                         } else {
                             const outputCodes = getCachedOperationOutputs(opName, op, token);
+                            if (shapeLimitReached) return makeLimitResult('shape-universe');
                             if (outputCodes.length === 0) continue;
+                            if (outputCodes.length === 1 && outputCodes[0] === shapeId) continue;
 
                             const nextCounts = cloneCounts(counts);
                             const outputTokens = [];
@@ -514,24 +774,22 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                                 const outputToken = makeToken(outputCode, throughput);
                                 outputTokens.push(outputToken);
                                 adjustCount(nextCounts, outputToken, 1);
-                                outputSimilarityTotal += getCachedSimilarity(outputCode);
+                                outputSimilarityTotal += getCachedSimilarity(outputCode) * throughput;
                             }
 
-                            const nextItemCount = itemCount - 1 + outputTokens.length;
-                            const nextScoreTotal = scoreTotal - inputSimilarity + outputSimilarityTotal;
+                            const nextThroughputTotal = throughputTotal - throughput + outputTokens.length * throughput;
+                            const nextScoreTotal = scoreTotal - inputSimilarity * throughput + outputSimilarityTotal;
                             const stateKey = getStateKey(nextCounts);
-                            if (!visited.has(stateKey) && !levelSeen.has(stateKey)) {
-                                levelSeen.add(stateKey);
-                                nextDepthStates.push({
-                                    stateKey,
-                                    counts: nextCounts,
-                                    parent: current,
-                                    step: makeStep(opName, [token], outputTokens),
-                                    itemCount: nextItemCount,
-                                    scoreTotal: nextScoreTotal,
-                                    score: nextScoreTotal / nextItemCount
-                                });
-                            }
+                            const completed = enqueueSuccessor({
+                                stateKey,
+                                counts: nextCounts,
+                                parent: current,
+                                stepFactory: () => makeStep(opName, [token], outputTokens),
+                                throughputTotal: nextThroughputTotal,
+                                scoreTotal: nextScoreTotal,
+                                outputTokens,
+                            });
+                            if (completed) return completed;
                         }
                     }
                 } else if (inputCount === 2) {
@@ -543,6 +801,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                             if (i === j && inputA.count < 2) continue;
 
                             const outputCodes = getCachedOperationOutputs(opName, op, inputA.token, inputB.token);
+                            if (shapeLimitReached) return makeLimitResult('shape-universe');
                             if (outputCodes.length === 0) continue;
 
                             const nextCounts = cloneCounts(counts);
@@ -556,74 +815,65 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
                                 const outputToken = makeToken(outputCode, combinedThroughput);
                                 outputTokens.push(outputToken);
                                 adjustCount(nextCounts, outputToken, 1);
-                                outputSimilarityTotal += getCachedSimilarity(outputCode);
+                                outputSimilarityTotal += getCachedSimilarity(outputCode) * combinedThroughput;
                             }
 
-                            const nextItemCount = itemCount - 2 + outputTokens.length;
-                            const nextScoreTotal = scoreTotal - getCachedSimilarity(inputA.code) - getCachedSimilarity(inputB.code) + outputSimilarityTotal;
+                            const nextThroughputTotal = throughputTotal
+                                - inputA.throughput
+                                - inputB.throughput
+                                + outputTokens.length * combinedThroughput;
+                            const nextScoreTotal = scoreTotal
+                                - getCachedSimilarity(inputA.shapeId) * inputA.throughput
+                                - getCachedSimilarity(inputB.shapeId) * inputB.throughput
+                                + outputSimilarityTotal;
                             const stateKey = getStateKey(nextCounts);
-                            if (!visited.has(stateKey) && !levelSeen.has(stateKey)) {
-                                levelSeen.add(stateKey);
-                                nextDepthStates.push({
-                                    stateKey,
-                                    counts: nextCounts,
-                                    parent: current,
-                                    step: makeStep(opName, [inputA.token, inputB.token], outputTokens),
-                                    itemCount: nextItemCount,
-                                    scoreTotal: nextScoreTotal,
-                                    score: nextScoreTotal / nextItemCount
-                                });
-                            }
+                            const completed = enqueueSuccessor({
+                                stateKey,
+                                counts: nextCounts,
+                                parent: current,
+                                stepFactory: () => makeStep(opName, [inputA.token, inputB.token], outputTokens),
+                                throughputTotal: nextThroughputTotal,
+                                scoreTotal: nextScoreTotal,
+                                outputTokens,
+                            });
+                            if (completed) return completed;
                         }
                     }
                 }
             }
+
+            const now = performance.now();
+            if (now - lastUpdate > 200) postProgress(depth + 1, nextStates);
         }
 
-        // Prune first, then add to visited — critical to avoid visited explosion
-        const prunedNextStates = pruneStatesAtDepth(nextDepthStates, maxStatesPerLevel);
-        frontier = [];
-        for (const state of prunedNextStates) {
-            if (!visited.has(state.stateKey)) {
-                visited.add(state.stateKey);
-                frontier.push(state);
-            }
+        frontier = nextStates.toBestFirstStates();
+        if (visited.size + frontier.length > MAX_TOTAL_STATES) {
+            return makeLimitResult('visited-states');
         }
+
+        for (const state of frontier) {
+            visited.add(state.stateKey);
+        }
+
         if (frontier.length > 0) {
             depth += 1;
         }
 
         for (const state of currentDepthStates) {
             state.counts = null;
-            state.itemCount = 0;
+            state.throughputTotal = 0;
             state.scoreTotal = 0;
             state.score = 0;
         }
 
-        if (visited.size >= MAX_TOTAL_STATES) {
-            return { solutionPath: null, depth, statesExplored: visited.size, limitReached: true };
-        }
-
         const now = performance.now();
         if (now - lastUpdate > 200) {
-            const prunedCount = nextDepthStates.length - prunedNextStates.length;
-            self.postMessage({
-                type: 'status',
-                messageKey: 'solver.status.progress',
-                messageParams: {
-                    depth,
-                    queueLength: frontier.length,
-                    totalStates: visited.size,
-                    prunedCount,
-                },
-                status: 'running',
-            });
-            lastUpdate = now;
+            postProgress(depth, nextStates);
         }
     }
 
     if (cancelled) return null;
-    return { solutionPath: null, depth, statesExplored: visited.size };
+    return { solutionPath: null, depth, statesExplored: visited.size, generatedStates };
 }
 
 async function shapeExplorer(startingShapeCodes, enabledOperations, depthLimit, maxLayers) {
@@ -779,3 +1029,5 @@ async function shapeExplorer(startingShapeCodes, enabledOperations, depthLimit, 
 
     return null;
 }
+
+export { BoundedStateCollector, shapeSolver };

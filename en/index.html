@@ -157,9 +157,9 @@ The default game limit is 4 layers (5 in the Insane scenario).</p>
               <div class="subsection-label" data-i18n="subsections.solverOptions">Solver Options</div>
               <div class="option-group">
                 <label class="option-label" for="max-states-per-level" data-i18n="settings.maxStatesPerLevel">Max States Per Level</label>
-                <input type="number" id="max-states-per-level" class="field-input" value="30000" placeholder="Infinity" data-i18n-placeholder="placeholders.infinity">
-                <p class="option-desc" data-i18n="settings.maxStatesDesc">Smaller = faster but may fail.
-Larger = slower but more efficient.</p>
+                <input type="number" id="max-states-per-level" class="field-input" value="3000" min="1" max="5000" placeholder="3000">
+                <p class="option-desc" data-i18n="settings.maxStatesDesc">Controls the bounded search width.
+Larger may find more solutions but uses more memory (maximum 5,000).</p>
               </div>
 
               <div class="toggle-row">

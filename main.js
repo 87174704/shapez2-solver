@@ -211,7 +211,7 @@ function collectEnabledOperations() {
 function readSolverOptions() {
     return {
         maxLayers: readInt('max-layers', 4),
-        maxStatesPerLevel: readInt('max-states-per-level', 100000),
+        maxStatesPerLevel: readInt('max-states-per-level', 3000),
         preventWaste: byId('prevent-waste')?.checked ?? false,
         orientationSensitive: byId('orientation-sensitive')?.checked ?? false,
         allowSplitting: byId('allow-splitting')?.checked ?? false,
@@ -336,9 +336,27 @@ function setupSolverPanel() {
                         statesExplored: result.statesExplored,
                     }), 'done');
                 } else if (result?.limitReached) {
+                    const reasonMessages = getCurrentLocale() === 'cn'
+                        ? {
+                            time: '已达到 120 秒搜索时间预算。',
+                            'generated-states': '已达到候选状态生成预算。',
+                            'visited-states': '已达到历史状态内存预算。',
+                            'shape-universe': '已达到唯一形状内存预算。',
+                        }
+                        : {
+                            time: 'The 120-second search-time budget was reached.',
+                            'generated-states': 'The generated-candidate budget was reached.',
+                            'visited-states': 'The visited-state memory budget was reached.',
+                            'shape-universe': 'The unique-shape memory budget was reached.',
+                        };
+                    const reason = reasonMessages[result.limitReason] ?? (
+                        getCurrentLocale() === 'cn'
+                            ? '已达到求解器安全预算。'
+                            : 'The solver safety budget was reached.'
+                    );
                     const message = getCurrentLocale() === 'cn'
-                        ? '搜索状态过多，已停止以避免页面崩溃。建议把 Max States Per Level 调到 1000-2000，或关闭不需要的操作。'
-                        : 'Search stopped before the tab ran out of memory. Try lowering Max States Per Level to 1000-2000 or disabling unneeded operations.';
+                        ? `${reason} 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。`
+                        : `${reason} The search stopped safely; disable irrelevant operations or lower states per level and retry.`;
                     setStatus({ rawText: message }, 'error');
                 } else {
                     setStatus(statusDescriptor('solver.status.noSolution'), 'error');
