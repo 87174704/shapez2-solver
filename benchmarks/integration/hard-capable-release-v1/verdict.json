@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "task": "P8-05",
+  "name": "end-to-end-hard-capable-release",
+  "date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS / STOPPED",
+  "release": "hard-capable-v1",
+  "releaseTag": "hard-capable-v1",
+  "releaseCommit": "f62683a3be7e826c8c764afcee4977114b15a9f0",
+  "candidateId": "hard-capable-rc-v1",
+  "candidateIdentity": "hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17",
+  "remote": {
+    "name": "origin",
+    "branch": "main",
+    "push": "PASS",
+    "tagPush": "PASS",
+    "tagCommit": "f62683a3be7e826c8c764afcee4977114b15a9f0"
+  },
+  "ciCd": {
+    "provider": "Gitea Actions",
+    "workflow": "Deploy Shapez2 Solver",
+    "runId": 21,
+    "runNumber": 7,
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "f62683a3be7e826c8c764afcee4977114b15a9f0",
+    "url": "https://git.ysc.icu/ysc/solver/actions/runs/21"
+  },
+  "deployment": {
+    "url": "https://shapez2.ysc.icu/solver/",
+    "entryUrl": "https://shapez2.ysc.icu/solver/en/",
+    "identityEndpoint": "https://shapez2.ysc.icu/solver/deployment.json",
+    "reportedCommit": "f62683a3be7e826c8c764afcee4977114b15a9f0",
+    "reportedRunId": "21",
+    "reportedRunNumber": "7",
+    "reportedRef": "refs/heads/main",
+    "httpStatus": 200,
+    "rcRuntimeHashes": "56/56",
+    "constructiveDependencyHashes": "4/4"
+  },
+  "gates": {
+    "fullTests": "198/198",
+    "productionCapability": "159/159",
+    "replayValid": "159/159",
+    "exactE014Paths": "159/159",
+    "constructiveRoutes": "159/159",
+    "resourceReuse": 0,
+    "distinctTargets": "53/53",
+    "syntax": "120/120",
+    "solverCopiesByteIdentical": true,
+    "localRealChromeWorkerLifecycle": "PASS",
+    "productionOnlineSmoke": "PASS"
+  },
+  "productionSmoke": {
+    "page": "https://shapez2.ysc.icu/solver/en/",
+    "worker": "native production module Worker",
+    "target": "RrcrRrRr:RgcrRgRg:--cr----",
+    "startingShapes": ["RuRuRuRu", "RuRuRuRu", "RuRuRuRu", "RuRuRuRu"],
+    "enabledOperations": 10,
+    "cleanPainting": true,
+    "runs": 2,
+    "solvedRuns": 2,
+    "depth": 52,
+    "states": 52,
+    "observedWallSeconds": [2.70, 0.14],
+    "buttonRestored": true,
+    "graphRendered": true,
+    "browserConsoleErrors": 0,
+    "browserConsoleWarnings": 3
+  },
+  "releaseMechanicalFixes": [
+    "Deployment now publishes an explicit runtime allowlist instead of benchmark, test, and documentation trees.",
+    "Raw .states.ndjson profiling streams and local .codex-temp directories are excluded from Git.",
+    "Runtime text files are stored byte-for-byte so the deployed 56-file RC manifest is reproduced exactly.",
+    "deployment.json exposes the deployed commit, ref, and CI run identity."
+  ],
+  "historyPreserved": {
+    "frozenBenchmarkUnchanged": true,
+    "formalBaselineUnchanged": true,
+    "e014FrontierUnchanged": true,
+    "historicalVerdictsRewritten": false,
+    "rcIdentityUnchanged": true
+  }
+}

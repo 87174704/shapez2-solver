@@ -5,6 +5,16 @@ Candidate: `hard-capable-rc-v1`
 Identity: `hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17`  
 Recorded: 2026-10-02 (Asia/Shanghai)
 
+## Published release binding
+
+Release status: **PASS / STOPPED**  
+Release/tag: `hard-capable-v1`  
+Release commit: `f62683a3be7e826c8c764afcee4977114b15a9f0`  
+CI/CD: Gitea Actions run 21 / number 7, `success`  
+Production: `https://shapez2.ysc.icu/solver/`
+
+The published release preserves this candidate identity. Production reports the release commit through `/deployment.json`, reports this RC identity through `/release.json`, matches all 56 frozen RC file hashes plus all four required constructive dependencies, and passes the online nontrivial 52-step Hard Worker/UI smoke twice. Complete release evidence is in `benchmarks/integration/hard-capable-release-v1/`.
+
 ## Release notes
 
 - The production public Solver route covers all 159 frozen Hard members across all 53 targets.
@@ -32,7 +42,7 @@ The machine-readable verdict and complete checklist are in `benchmarks/integrati
 
 ## Current non-blocking debt
 
-- Create a release commit/tag or signed package only in a separately authorized release milestone; the current candidate is identified by content hash instead.
+- The release commit/tag is complete. Any later package, version, or release still requires a separately authorized milestone.
 - Add cross-browser/platform acceptance if the intended production support matrix extends beyond the recorded Chrome/Windows environment.
 - Decide whether to vendor the visualization dependencies or add an explicit integrity/offline policy.
 - Add visual-regression coverage if pixel-level rendering fidelity becomes a release requirement.

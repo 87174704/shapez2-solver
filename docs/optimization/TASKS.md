@@ -66,6 +66,7 @@ Model labels on completed rows are historical execution records. All new assignm
 | P8-02 | Re-accept real-browser Hard performance and stress readiness | done | medium-high | Primary | NEEDS-FIX / STOPPED: 60/60 correctness, cold/warm timing, memory/drift, cancellation/restart, and lifecycle gates pass, but the 52-step Hard workload exceeds the frozen 100 ms timer-gap gate in 3/20 runs, max 115.9 ms |
 | P8-03 | Attribute and repair the Hard UI responsiveness blocker | done | high | Primary | PASS / STOPPED: Chrome trace attributes the breach to repeated solver Cytoscape reconstruction/first paint; one-turn separation plus solver-instance reuse passes the unchanged 60-run gate at 97.1 ms max with full lifecycle, memory, 198/198, and 159/159 verification |
 | P8-04 | Close the Hard-capable Release Candidate from frozen evidence | done | medium | Primary | PASS / STOPPED: content-addressed `hard-capable-rc-v1` binds the 56-file runtime snapshot, 159/159 replay/path continuity, browser-safe/lifecycle/readiness/100 ms gates, current 198/198 and 120/120 checks, release notes, limitations, debt, and immutable historical verdicts without runtime or remote release actions |
+| P8-05 | Publish the end-to-end Hard-capable Release | done | high | Primary | PASS / STOPPED: commit/tag `f62683a3...`, Gitea Actions run 21, production identity/hash verification, online 52-step Worker/UI smoke, and RC binding all pass; only release-mechanical packaging fixes were made |
 
 ## Gate
 

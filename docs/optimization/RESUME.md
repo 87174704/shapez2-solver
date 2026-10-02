@@ -16,7 +16,9 @@ All 159 instances ran once with frozen configuration and explicit outcomes: 0 so
 
 ## Current phase
 
-P8-04 **Hard-capable Release Candidate closeout** is `PASS / STOPPED`. The accepted candidate is `hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17`, a content-addressed 56-file static runtime snapshot over the intentionally uncommitted working-tree batch. It binds the frozen E-014 159/159 capability, exact replay/path continuity, P6-15 browser-safe boundary, P7-02/P8-03 lifecycle and recovery, and P8-03's passing 60-run readiness/100 ms evidence. P8-04 made documentation/evidence changes only; no commit, push, deployment, remote CI/CD, Solver, benchmark, or optimization started.
+P8-05 **End-to-end Hard-capable Release** is `PASS / STOPPED`. Release `hard-capable-v1`, annotated tag `hard-capable-v1`, Gitea Actions run 21, and the production identity endpoint all bind to commit `f62683a3be7e826c8c764afcee4977114b15a9f0`. Production at `https://shapez2.ysc.icu/solver/` matches all 56 frozen RC runtime hashes and all four required constructive dependency hashes. The online page/Worker solved the nontrivial 52-step interior-Crystal case twice and restored the UI lifecycle. No Solver, benchmark, capability, feature, migration, or optimization change occurred.
+
+P8-04 **Hard-capable Release Candidate closeout** remains `PASS / STOPPED`. The accepted candidate is `hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17`, bound unchanged by P8-05.
 
 P6-14/E-015 is complete and stopped with a `REJECT` verdict under D-054. Frozen PCHA-A solved 159/159 through Node public `shapeSolver` in both first pass and independent repeat; all 318 paths replayed valid, all 159 repeats were path-identical, all 159 paths exactly matched E-014 repeat, and resource reuse was zero. However, the static production import graph reaches Node-only `node:fs/promises` and `node:crypto`, so the real Chrome module Worker could not start. This predeclared correctness failure overrides formal capability success. The production activation was rolled back; the E-014 standalone frontier remains 159/159.
 
@@ -38,11 +40,11 @@ P6-09/E-010 is complete and stopped with an `ACCEPT` verdict under D-044. Frozen
 
 ## Verified repository state
 
-- Branch/HEAD: local `codex/solver-optimization` at starting commit `b367b6e`; `main` and `origin/main` still point at that commit. No push, remote CI/CD, SSH, or production change occurred.
+- Branch/HEAD: local `codex/solver-optimization` at release commit `f62683a3be7e826c8c764afcee4977114b15a9f0`; `origin/main` and annotated tag `hard-capable-v1` point to that commit. Gitea Actions run 21 deployed it successfully.
 - Latest P7-02 checkpoint: reconfirmed on 2026-10-02 in Chrome `154.0.8037.59`, once headless and once visible/headful, using fresh profiles and the real `/en/` page/native module Workers. Visible progress, cancel/immediate restart, six-Worker cleanup, stale-callback isolation, consecutive path stability, malformed Worker error recovery, mixed-part invalid-call isolation, bounded partial rendering, and button/status cleanup all passed. Evidence: `benchmarks/integration/product-lifecycle-v1/`.
 - Latest P7-01 checkpoint: real `/en/` UI constructive route PASS twice with identical 52-step paths and complete render/button cleanup; Chrome wall observations 43.6/82.6 ms; production verification 159/159; full suite 188/188; syntax 118/118; Solver parity `876A3E5F...9191`.
 - Latest P6-15 checkpoint: current public Solver 159/159 solved, replay-valid, constructive-routed, and exact-path-equal to E-014 across 53/53 targets with zero token reuse; real Chrome module Worker lifecycle plus constructive solve PASS; production graph 16/16 local browser-safe runtime modules with no benchmark imports; full suite 188/188; syntax 118/118; W1 signature unchanged; Solver parity SHA-256 `876A3E5F...191`.
-- Modified tracked files: `i18n.js`, `main.js`, `operationGraph.js`, `package.json`, `shapeSolver.js`, `shapeSolver_web.js`, and `tests/shapeSolver.test.mjs`. Optimization docs, official benchmark corpus/results, oracle tests/helpers, benchmark/browser harnesses, lifecycle tests/controller, and discovery tool remain untracked.
+- Release scope: the previously tracked modifications and untracked runtime/test/evidence batch are committed. Raw `.states.ndjson` profiling streams, `.codex-temp-*`, and `node_modules` remain excluded. The final status-only follow-up does not change the deployed runtime.
 - P8-01 recovery reconciliation on 2026-10-02: branch/HEAD and the complete working-tree inventory were rechecked; the stale P5-11 `in progress` experiment label and tracked-file inventory were corrected. `npm test` passed 198/198, `npm run verify:production` passed 159/159 with exact E-014 paths and zero resource reuse, Solver copies remained byte-identical at SHA-256 `24388AD1...ED2AD`, and `git diff --check` reported only line-ending notices. No runtime code, frozen artifact, benchmark, or Solver semantic changed.
 - P8-02 browser readiness on 2026-10-02: Chrome `154.0.8037.59`; 60/60 exact measured solves and stable paths; 60/60 Worker heap coverage; maximum page drift 0.71 MiB; maximum wall drift 1.0195; headless/headful cancellation and recovery PASS; full 198/198; production 159/159; syntax 120/120; Solver parity `24388AD1...ED2AD`. The Hard workload breached the 100 ms responsiveness gate in 3/20 runs, max 115.9 ms, so the verdict is `NEEDS-FIX / STOPPED`. Evidence: `benchmarks/integration/hard-browser-production-readiness-v1/`.
 - P8-04 RC closeout on 2026-10-02: current full suite 198/198; syntax 120/120; browser-safe static graph PASS; Solver parity `24388AD1...ED2AD`; composite trust chain PASS; P8-03 harness `104888D6...12F3` and results `CCB6CB6F...9C19` exact; diff hygiene PASS apart from line-ending notices. The existing dirty working tree is explicitly part of the content-addressed identity, not hidden behind a clean-tree claim.
@@ -106,7 +108,17 @@ On every new session, do not trust this file alone:
 
 ## Next step
 
-P8-04 is `PASS / STOPPED`. No next task is automatically authorized. Preserve the RC identity and frozen evidence until the owner explicitly scopes a commit/tag/package, release, deployment, or later candidate.
+P8-05 is `PASS / STOPPED`. No next task is automatically authorized. Preserve release `hard-capable-v1`, its RC binding, the deployment identity, and all frozen evidence until the owner explicitly scopes later work.
+
+## P8-05 PASS checkpoint
+
+- Release: `hard-capable-v1`; commit/tag `f62683a3be7e826c8c764afcee4977114b15a9f0`; RC `hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17`.
+- Push/CI: `origin/main` and tag push PASS; Gitea Actions run 21 / number 7 completed successfully at the release SHA.
+- Deployment: `https://shapez2.ysc.icu/solver/`; production identity endpoint reports the release SHA/ref/run, and release metadata reports the tag/RC identity.
+- Production content: 56/56 frozen RC hashes and 4/4 constructive dependency hashes exact. `.gitattributes` fixed a release-only line-ending normalization mismatch without semantic change.
+- Gates: 198/198 tests; 159/159 production capability with replay, exact E-014 paths, constructive routing, 53/53 targets, and zero reuse; 120/120 syntax; Solver parity; real installed-Chrome lifecycle PASS.
+- Online smoke: public `/en/` page HTTP 200; native production Worker solved the 52-step interior-Crystal Hard case twice; depth/states 52; graph rendered; button restored; zero browser console errors.
+- Evidence: `benchmarks/integration/hard-capable-release-v1/`.
 
 ## P8-04 PASS checkpoint
 

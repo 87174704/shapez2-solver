@@ -4,10 +4,10 @@ Last verified: 2026-10-02 (Asia/Shanghai; formal baseline measured 2026-09-24)
 
 ## Current phase
 
-- Phase: **Hard-capable Release Candidate established; PASS / STOPPED**.
+- Phase: **End-to-end Hard-capable Release published; PASS / STOPPED**.
 - Frozen capability frontier: E-014 at 159/159 across 53/53 Hard targets, with stable replay-valid paths.
 - Accepted integration boundary: P6-15 browser-safe production integration; the public Worker graph must remain free of Node-only, bare, and `benchmarks/` imports.
-- Priority: P8-04 is `PASS / STOPPED` under D-072. `hard-capable-rc-v1` is the accepted local content-addressed candidate; no later release, commit, push, deployment, remote CI/CD, Solver, benchmark, or optimization task starts automatically.
+- Priority: P8-05 is `PASS / STOPPED` under D-073. `hard-capable-v1` at `f62683a3be7e826c8c764afcee4977114b15a9f0` is deployed and binds unchanged `hard-capable-rc-v1`; no later release, Solver, benchmark, optimization, or other task starts automatically.
 - Guardrail: distinguish capability correctness from product performance. Do not change search semantics because a browser measurement is slow, and do not start a Solver architecture experiment without a demonstrated product capability blocker and a new predeclaration.
 - Immutable scope: do not modify frozen benchmark, formal baseline, release, or accepted capability artifacts; do not add benchmark/diversity/audit work unless needed by a reproduced product problem.
 
@@ -17,8 +17,8 @@ Last verified: 2026-10-02 (Asia/Shanghai; formal baseline measured 2026-09-24)
 - Checked-out branch at phase-one start: `main`; optimization work now lives on local branch `codex/solver-optimization`.
 - Starting commit: `b367b6e` (`docs: add project structure summary`)
 - Starting worktree: clean; `main` and `origin/main` pointed at the same displayed commit.
-- This optimization effort is local-only. Do not push, trigger CI/CD, access the production server, or modify the deployed site.
-- `.gitea/workflows/deploy.yml` deploys on a push to `main`; no workflow is run locally as part of this work.
+- The former local-only boundary was lifted only for the explicitly authorized P8-05 release. The release push/tag/deployment are complete; future remote or production actions again require explicit scope.
+- `.gitea/workflows/deploy.yml` deploys runtime changes on a push to `main`. It now publishes an explicit static-runtime allowlist and emits `deployment.json`; documentation/evidence-only pushes are ignored.
 
 ## Runtime and architecture
 
@@ -127,7 +127,19 @@ Last verified: 2026-10-02 (Asia/Shanghai; formal baseline measured 2026-09-24)
 
 ## Next task
 
-P8-04 is `PASS / STOPPED`. There is no automatically authorized next task. Any commit/tag/package, push, deployment, remote CI/CD, new RC, Solver work, benchmark, or optimization requires a separate explicit milestone.
+P8-05 is `PASS / STOPPED`. There is no automatically authorized next task. Any later release, deployment, Solver work, benchmark, optimization, migration, or feature requires a separate explicit milestone.
+
+## P8-05 End-to-end Hard-capable Release
+
+- Status: `PASS / STOPPED` on 2026-10-02 under D-073.
+- Release identity: annotated tag `hard-capable-v1` and deployment both point to `f62683a3be7e826c8c764afcee4977114b15a9f0`; RC binding remains `hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17`.
+- Remote/CI: `origin/main` and the tag were pushed successfully. Gitea Actions run 21 / number 7 completed with `success` at the release SHA.
+- Production: `https://shapez2.ysc.icu/solver/`; `/deployment.json` reports the release SHA, `refs/heads/main`, and run 21. The public `/en/` page returns 200.
+- Content: all 56 frozen RC runtime hashes and all four required `constructive/` dependency hashes match production. A CRLF-to-LF packaging mismatch found after the first deployment was repaired mechanically with `.gitattributes`; no runtime semantic changed.
+- Smoke: the real online page and production module Worker solved the 52-step interior-Crystal Hard case twice at depth/state count 52, restored the Solve button, and rendered the graph. Browser console errors were zero; only three existing third-party warnings remained.
+- Final local gates: 198/198 tests, production 159/159 with replay and exact E-014 paths, 120/120 syntax, byte-identical Solver copies, and local real-Chrome lifecycle PASS.
+- Scope: 549-file accepted batch plus a six-file byte-preservation packaging commit. Multi-gigabyte raw `.states.ndjson`, local temporary directories, and `node_modules` were excluded; frozen summaries, benchmark, baseline, verdicts, and RC evidence were retained.
+- Evidence: `benchmarks/integration/hard-capable-release-v1/`.
 
 ## P8-04 Hard-capable Release Candidate
 

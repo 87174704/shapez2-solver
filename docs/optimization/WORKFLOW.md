@@ -4,7 +4,7 @@ This file is the durable operating contract for the solver optimization project.
 
 ## Objective and priority
 
-The current long-term phase is **Hard-capable Release Candidate established; stopped pending explicit release scope**. The accepted E-014 Hard 159/159 capability frontier, replay correctness, browser-safe production boundary, Chrome lifecycle, and frozen browser readiness evidence are bound by `hard-capable-rc-v1`. Do not start a commit/tag/package, push, deployment, remote CI/CD, new candidate, Solver, benchmark, or optimization task without an explicit milestone.
+The current long-term phase is **End-to-end Hard-capable Release published; PASS / STOPPED**. Release `hard-capable-v1` at `f62683a3be7e826c8c764afcee4977114b15a9f0` binds the accepted E-014 Hard 159/159 capability frontier, replay correctness, browser-safe production boundary, Chrome lifecycle, frozen browser readiness evidence, and `hard-capable-rc-v1`. Do not start another commit/tag/package, push, deployment, remote CI/CD, candidate, Solver, benchmark, feature, migration, or optimization task without an explicit milestone.
 
 Capability correctness and product performance are separate ledgers. Performance findings do not authorize a search-semantic change. Prefer the smallest product, integration, or behavior-preserving performance repair supported by a reproduced product issue. Do not start another Solver architecture experiment unless product acceptance establishes a concrete capability blocker and a new experiment is explicitly predeclared.
 
@@ -66,7 +66,7 @@ When the current usage window is nearly exhausted, do not start a new large task
 
 ## Repository and deployment boundary
 
-Local reads, edits, builds, tests, benchmarks, profiles, Git history inspection, and local commits are allowed. Do not push, trigger remote CI/CD, use SSH, or modify production. The duplicate `shapeSolver.js` and `shapeSolver_web.js` files must remain byte-identical unless a separately reviewed architectural change removes the duplication.
+Local reads, edits, builds, tests, benchmarks, profiles, Git history inspection, and local commits are allowed. P8-05's explicit remote-release authorization is exhausted: do not make another push, trigger remote CI/CD, use SSH, or modify production without new scope. The duplicate `shapeSolver.js` and `shapeSolver_web.js` files must remain byte-identical unless a separately reviewed architectural change removes the duplication.
 
 ## Completion review
 
