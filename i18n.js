@@ -67,7 +67,7 @@ const TRANSLATIONS = {
         'subsections.solverOptions': 'Solver Options',
         'subsections.explorerOptions': 'Explorer Options',
         'subsections.colors': 'Colors',
-        'explorer.help': 'Explore all shapes reachable from the current inputs and enabled operations within the depth limit. The explorer renders a relationship graph instead of finding an optimal recipe.',
+        'explorer.help': 'Explore all shapes reachable from reusable inputs and enabled operations within the depth limit. Large closures stop safely and display the partial graph.',
         'shape.list.empty': 'None added yet.',
         'shape.input.placeholder': 'Shape code...',
         'common.add': 'Add',
@@ -155,13 +155,15 @@ const TRANSLATIONS = {
         'controls.direction.rl': 'Right to Left',
         'controls.direction.bt': 'Bottom to Top',
         'solver.status.solving': 'Solving...',
-        'solver.status.progress': ({ depth, queueLength, totalStates, prunedCount }) => {
-            const prunedText = prunedCount > 0 ? ` · pruned ${prunedCount}` : '';
-            return `Solving at depth ${depth} · ${queueLength} states queued · ${totalStates} total states${prunedText}`;
+        'solver.status.progress': ({ depth, queueLength, totalStates, beamPruned }) => {
+            const beamText = beamPruned ? ' · beam pruning encountered' : '';
+            return `Solving at depth ${depth} · ${queueLength} states queued · ${totalStates} total states${beamText}`;
         },
         'solver.status.solved': ({ elapsed, depth, statesExplored }) =>
             `Solved in ${elapsed}s · depth ${depth} · ${statesExplored} states`,
         'solver.status.noSolution': 'No solution found.',
+        'solver.status.exhausted': 'No solution found after the search exhausted its unpruned frontier.',
+        'solver.status.notFoundPruned': 'No solution found, but beam pruning occurred, so this does not prove none exists.',
         'solver.alert.addOutput': 'Add at least one output shape.',
         'solver.alert.addOutputFirst': 'Add at least one output shape first.',
         'solver.alert.noOutputToExtract': 'No output shapes to extract from.',
@@ -171,6 +173,12 @@ const TRANSLATIONS = {
         'solver.shortageLine': ({ part, need, have }) => `${part}: need ${need}, have ${have}`,
         'explorer.status.exploring': 'Exploring...',
         'explorer.status.complete': ({ shapeCount, opCount }) => `Exploration complete. Shapes: ${shapeCount}, ops: ${opCount}`,
+        'explorer.status.limited.attempts': ({ shapeCount, opCount }) => `Exploration stopped at the operation-attempt limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
+        'explorer.status.limited.shapes': ({ shapeCount, opCount }) => `Exploration stopped at the shape limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
+        'explorer.status.limited.operations': ({ shapeCount, opCount }) => `Exploration stopped at the operation-node limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
+        'explorer.status.limited.edges': ({ shapeCount, opCount }) => `Exploration stopped at the edge limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
+        'explorer.status.limited.time': ({ shapeCount, opCount }) => `Exploration stopped at the time limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
+        'explorer.status.limited.serialization': ({ shapeCount, opCount }) => `Exploration stopped at the result-size limit. Partial graph: ${shapeCount} shapes, ${opCount} ops.`,
         'explorer.status.noneReachable': 'No shapes reachable.',
         'explorer.popup.copy': 'Copy',
         'explorer.popup.goesTo': 'Goes To',
@@ -236,7 +244,7 @@ const TRANSLATIONS = {
         'subsections.solverOptions': '求解选项',
         'subsections.explorerOptions': '探索选项',
         'subsections.colors': '颜色',
-        'explorer.help': '在深度上限内，从当前输入形状和启用操作出发，枚举全部可达形状。探索器展示的是关系图，不会像求解器那样寻找最优配方。',
+        'explorer.help': '在深度上限内，从可复用的输入形状和启用操作出发枚举全部可达形状。闭包过大时会安全停止并展示部分图。',
         'shape.list.empty': '还没有添加任何内容。',
         'shape.input.placeholder': '形状代码...',
         'common.add': '添加',
@@ -323,13 +331,15 @@ const TRANSLATIONS = {
         'controls.direction.rl': '从右到左',
         'controls.direction.bt': '从下到上',
         'solver.status.solving': '正在求解...',
-        'solver.status.progress': ({ depth, queueLength, totalStates, prunedCount }) => {
-            const prunedText = prunedCount > 0 ? ` · 剪枝 ${prunedCount}` : '';
-            return `求解中：深度 ${depth} · 队列 ${queueLength} · 总状态 ${totalStates}${prunedText}`;
+        'solver.status.progress': ({ depth, queueLength, totalStates, beamPruned }) => {
+            const beamText = beamPruned ? ' · 已发生 beam 剪枝' : '';
+            return `求解中：深度 ${depth} · 队列 ${queueLength} · 总状态 ${totalStates}${beamText}`;
         },
         'solver.status.solved': ({ elapsed, depth, statesExplored }) =>
             `${elapsed} 秒求解完成 · 深度 ${depth} · ${statesExplored} 个状态`,
         'solver.status.noSolution': '未找到方案。',
+        'solver.status.exhausted': '未找到方案：搜索在未发生 beam 剪枝的前沿上自然耗尽。',
+        'solver.status.notFoundPruned': '未找到方案，但搜索发生过 beam 剪枝，因此不能据此证明不存在方案。',
         'solver.alert.addOutput': '请至少添加一个输出形状。',
         'solver.alert.addOutputFirst': '请先至少添加一个输出形状。',
         'solver.alert.noOutputToExtract': '没有可提取的输出形状。',
@@ -339,6 +349,12 @@ const TRANSLATIONS = {
         'solver.shortageLine': ({ part, need, have }) => `${part}：需要 ${need}，当前 ${have}`,
         'explorer.status.exploring': '正在探索...',
         'explorer.status.complete': ({ shapeCount, opCount }) => `探索完成。形状：${shapeCount}，操作：${opCount}`,
+        'explorer.status.limited.attempts': ({ shapeCount, opCount }) => `探索达到操作尝试次数上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
+        'explorer.status.limited.shapes': ({ shapeCount, opCount }) => `探索达到形状数上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
+        'explorer.status.limited.operations': ({ shapeCount, opCount }) => `探索达到操作节点数上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
+        'explorer.status.limited.edges': ({ shapeCount, opCount }) => `探索达到边数上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
+        'explorer.status.limited.time': ({ shapeCount, opCount }) => `探索达到时间上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
+        'explorer.status.limited.serialization': ({ shapeCount, opCount }) => `探索达到结果大小上限后停止。部分图：${shapeCount} 个形状，${opCount} 个操作。`,
         'explorer.status.noneReachable': '没有可达形状。',
         'explorer.popup.copy': '复制',
         'explorer.popup.goesTo': '可到达',

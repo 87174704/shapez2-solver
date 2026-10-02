@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 2,
+  "manifestRevisionId": "hard-53x3-diversity-pilot-v1-manifest-r1",
+  "artifactReleaseId": "hard-53x3-diversity-pilot-v1",
+  "status": "audit-candidate",
+  "suite": "hard",
+  "partition": "expansion-pilot",
+  "profileId": "hard-53x3-diversity-pilot-v1",
+  "createdAt": "2026-09-22T16:30:00+08:00",
+  "predecessorManifestRevisionId": "hard-53x1-stage-v1-manifest-r2",
+  "changeReason": "Development overlay containing two new, structurally distinct families for each selected target; the frozen Hard 53x1 artifact remains the immutable family-1 baseline.",
+  "policyIdentity": {
+    "policyId": "official-hard-policy-v1",
+    "schemaVersion": 1
+  },
+  "bindings": {
+    "userRules": {
+      "path": "docs/benchmark/USER_RULES.md",
+      "sha256": "7ec9b4fddf71f33cf1d088823a4fa869b06690f19133f99a349dca2fda58b331"
+    },
+    "benchmarkRules": {
+      "path": "docs/benchmark/BENCHMARK_RULES.md",
+      "sha256": "184c7fd28e6549b56e0ab9dd59043db4327d09a24b9a4b4e78c7f1c6c2286d63"
+    },
+    "inputSeed": {
+      "path": "benchmarks/sources/input_catalog.seed.json",
+      "sha256": "f8ff83ec06f414e75024df6c591891f86aba00709948290ac730e61934db7c59"
+    },
+    "inputCatalog": {
+      "path": "benchmarks/input_catalog.json",
+      "sha256": "55e8b1ab934b0a7447b16bf4fb1113ec6aaff7c5c279bfde6d293acd0493466a",
+      "version": 1
+    },
+    "inputEnvironmentExpansion": {
+      "path": "benchmarks/policy/input-environment-expansion.v1.json",
+      "sha256": "535b793124e96c6179ef650b2d736d18bdd02ce6b725534177830f7220a61a24",
+      "version": 1
+    },
+    "officialTargets": {
+      "sha256": "8ae87ba4531f32e62364d736fe7265dbd38e4f9aff155ec1d3e27d58496d4d68",
+      "files": [
+        {
+          "path": "benchmarks/manifest.json",
+          "sha256": "f400bd27f2c68a56b0dc0fc5c8c793ecc7c2f621d49883f52214a9f2cbb63a0c"
+        },
+        {
+          "path": "benchmarks/hard_main.txt",
+          "sha256": "9e41fbf81ff3e35e8fd274ecc8a9c85773c93a77f3380e83f79351241af26ab7"
+        },
+        {
+          "path": "benchmarks/hard_side.txt",
+          "sha256": "2107e06d495183124a9bd83b7b49ab1a382c538cc879d28cdcc9862d5df52ce8"
+        }
+      ]
+    },
+    "canonicalSemantics": {
+      "sha256": "066085c4182a663326fa8f02b367aa00a2a036c4a44558efc2514e7ff099dfa5",
+      "files": [
+        {
+          "path": "docs/benchmark/GAME_SEMANTICS.md",
+          "sha256": "5141ccd032b6e1edc40658b3a4973fcaba215b835cd902a91f6140f6f33ec80f"
+        },
+        {
+          "path": "shapeOperations.js",
+          "sha256": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21"
+        },
+        {
+          "path": "shapeConstants.js",
+          "sha256": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+        },
+        {
+          "path": "shapeValidation.js",
+          "sha256": "b624fca8098d3bea752db1961bae2fb07ad3b7e30166c0df252775e2dd33f854"
+        }
+      ],
+      "version": "shape-operations-v1"
+    },
+    "schemas": {
+      "sha256": "e0eec2a3eb557f9b7ef84db2b850f155f8a1904ca86dd4bf73bc41386d348c0b",
+      "files": [
+        {
+          "path": "benchmarks/schema/input-catalog.v2.schema.json",
+          "sha256": "bc47fe6e8f2a3d59d4f75d21b42692b4c6f453770b3efdff25b4ffbd5a36f036"
+        },
+        {
+          "path": "benchmarks/schema/benchmark-instance.v2.schema.json",
+          "sha256": "aafd150b9a802d0a4913864f6835bd74534c67024662666e06d5f66f3bf2462a"
+        },
+        {
+          "path": "benchmarks/schema/benchmark-artifact.v2.schema.json",
+          "sha256": "447861f89d55e445a1bd6d2aa9bd6b7ac0eea657bab81808755139b3965906c9"
+        },
+        {
+          "path": "benchmarks/schema/benchmark-instance.v3.schema.json",
+          "sha256": "512e039fbca642d0f6accc8a1ff9d91ce3b5a64e2be8966597caa1cb3e3ff8ca"
+        },
+        {
+          "path": "benchmarks/schema/benchmark-artifact.v3.schema.json",
+          "sha256": "5d02bc844d19f9ea05475538d89ea2818315d78e57868c3447e8fbb9a2999929"
+        },
+        {
+          "path": "benchmarks/schema/release-manifest.v1.schema.json",
+          "sha256": "8692c54364e5719dfc81025acc653da47bc4db3daf237f499919a44736301aac"
+        },
+        {
+          "path": "benchmarks/schema/release-manifest.v2.schema.json",
+          "sha256": "5ae401e01943c9a1c9cc969492daba0889e34b1fefaa84ce1d21a673b616f8b0"
+        },
+        {
+          "path": "benchmarks/schema/official-policy.v1.schema.json",
+          "sha256": "ac43b7f0f74827d85b8e66826ea1de17c4704904e4186bae0b3a49d93c6a448f"
+        }
+      ]
+    },
+    "generator": {
+      "sha256": "a4f28d3b282e4d2f66dc55d17608159f8f38e0720a476fa60a88997b0b355a5f",
+      "files": [
+        {
+          "path": "benchmarks/tools/build-hard-53x3-diversity-pilot.mjs",
+          "sha256": "24cad328e86625d5aa074f11b1e9d5db9968203a707593bf06c14d488a4f2012"
+        },
+        {
+          "path": "benchmarks/tools/environment-expansion.mjs",
+          "sha256": "858f5b90bce099a00656338d904a54bd1b4e0dfbc26c8b96d1c3af07a8a7ea0f"
+        },
+        {
+          "path": "benchmarks/tools/generation-framework.mjs",
+          "sha256": "f9063e432c77920b682e0313d1330091e293764b1ea1219f9b3a7afa8665f4d1"
+        },
+        {
+          "path": "benchmarks/tools/benchmark-core.mjs",
+          "sha256": "5243ddb0f929b3dfaa6346faac55e9a6235679381647f21758bb400b2485ea0a"
+        },
+        {
+          "path": "benchmarks/policy/input-environment-expansion.v1.json",
+          "sha256": "535b793124e96c6179ef650b2d736d18bdd02ce6b725534177830f7220a61a24"
+        }
+      ],
+      "version": "hard-53x3-diversity-pilot-v1-transformative-source-ancestry"
+    },
+    "validator": {
+      "sha256": "08e2b6e660ebba671bd4b0f8ce0a62eb481dedafb7bbad540277c0d82c2a5e0b",
+      "files": [
+        {
+          "path": "benchmarks/tools/validate-benchmark.mjs",
+          "sha256": "c69e661ee7dd5d2b36844871816830b260ad92d52019b022564db7d5c0de840e"
+        },
+        {
+          "path": "benchmarks/tools/benchmark-core.mjs",
+          "sha256": "5243ddb0f929b3dfaa6346faac55e9a6235679381647f21758bb400b2485ea0a"
+        },
+        {
+          "path": "benchmarks/tools/environment-expansion.mjs",
+          "sha256": "858f5b90bce099a00656338d904a54bd1b4e0dfbc26c8b96d1c3af07a8a7ea0f"
+        },
+        {
+          "path": "benchmarks/tools/schema-validation.mjs",
+          "sha256": "4cc4ce28fbce017a6af42ebfe9cf1bfbc4c2bfd690252c75c328bc90195764b3"
+        },
+        {
+          "path": "benchmarks/tools/repository-policy.mjs",
+          "sha256": "1c644401cf9034891663c51580046018551704184418bb73642a823d47a30f42"
+        }
+      ],
+      "version": "repository-boundary-v5-manifest-revisions"
+    },
+    "artifactContent": {
+      "path": "benchmarks/diversity-pilot/v1/instances.json",
+      "canonicalization": "canonical-json-v1",
+      "sha256": "9eaf8dc3a64cf68830ea0ec734b8ea6aba0fe67304d8033765125ce6fb6139f0"
+    },
+    "instances": {
+      "path": "benchmarks/diversity-pilot/v1/instances.json",
+      "sha256": "99a5309a5e6703da9953571b39e17662688d30c20fe8f590eaedf8606706a9a2"
+    },
+    "witnesses": {
+      "container": "benchmarks/diversity-pilot/v1/instances.json",
+      "jsonPointer": "/instances/*/witness",
+      "sha256": "f31a4b95ef637553fae5e07b7de2f6385d9f4cdc586f0607671ae125d369fc3b"
+    },
+    "generationLog": {
+      "path": "benchmarks/diversity-pilot/v1/candidate-log.json",
+      "sha256": "65516ab71194919838a84af381aa9e07a80c03a6c9131b8f2a031ba15e10b15c"
+    },
+    "rejectionLog": {
+      "container": "benchmarks/diversity-pilot/v1/candidate-log.json",
+      "jsonPointer": "/*[accepted=false]",
+      "sha256": "1de2d8f36e3f83fa41f5deaa9adb04d890d58bce295732e9c8d4f258aaa1168e"
+    },
+    "sourceArtifact": {
+      "path": "benchmarks/hard-53x1/v1/instances.json",
+      "sha256": "e9043ed2917bcd0f13e8a1772076fc7bc5a9f842af02fb781e972055828e56f4"
+    },
+    "solverProjection": {
+      "path": "benchmarks/diversity-pilot/v1/solver-inputs.json",
+      "canonicalization": "canonical-json-v1",
+      "sha256": "0d979fee615c16e3132562fb53d64a5586f234d9b747741fb55f83355ce4bb3b"
+    }
+  },
+  "history": [
+    {
+      "version": "hard-53x1-stage-v1",
+      "artifact": "benchmarks/hard-53x1/v1/instances.json",
+      "reason": "Frozen immutable family-1 baseline; referenced without copying or modification.",
+      "sha256": "e9043ed2917bcd0f13e8a1772076fc7bc5a9f842af02fb781e972055828e56f4"
+    },
+    {
+      "version": "hard-53x3-diversity-pilot-v1",
+      "artifact": "benchmarks/diversity-pilot/v1/instances.json",
+      "reason": "Development overlay with two new causal families for each of thirteen representative targets.",
+      "sha256": "99a5309a5e6703da9953571b39e17662688d30c20fe8f590eaedf8606706a9a2"
+    }
+  ]
+}

@@ -1,0 +1,2750 @@
+{
+  "schemaVersion": 1,
+  "task": "P7-03",
+  "recordedAt": "2026-10-01",
+  "timezone": "Asia/Shanghai",
+  "protocol": {
+    "freshProfiles": 2,
+    "warmupsPerProfileWorkload": 2,
+    "measuredRunsPerProfileWorkload": 10,
+    "workloads": [
+      {
+        "id": "ordinary-constructive",
+        "target": "CuCuRuRu",
+        "starts": [
+          "CuCuCuCu",
+          "RuRuRuRu"
+        ],
+        "operations": [
+          "Rotator CW",
+          "Rotator CCW",
+          "Rotator 180",
+          "Half Destroyer",
+          "Cutter",
+          "Swapper",
+          "Stacker",
+          "Painter",
+          "Pin Pusher",
+          "Crystal Generator"
+        ],
+        "maxLayers": 4,
+        "maxStatesPerLevel": 3000,
+        "preventWaste": false,
+        "orientationSensitive": false,
+        "allowSplitting": false,
+        "cleanPainting": true,
+        "expected": {
+          "route": "constructive-hybrid",
+          "outcome": "solved"
+        }
+      },
+      {
+        "id": "interior-crystal-constructive",
+        "target": "RrcrRrRr:RgcrRgRg:--cr----",
+        "starts": [
+          "RuRuRuRu",
+          "RuRuRuRu",
+          "RuRuRuRu",
+          "RuRuRuRu"
+        ],
+        "operations": [
+          "Rotator CW",
+          "Rotator CCW",
+          "Rotator 180",
+          "Half Destroyer",
+          "Cutter",
+          "Swapper",
+          "Stacker",
+          "Painter",
+          "Pin Pusher",
+          "Crystal Generator"
+        ],
+        "maxLayers": 4,
+        "maxStatesPerLevel": 3000,
+        "preventWaste": false,
+        "orientationSensitive": false,
+        "allowSplitting": false,
+        "cleanPainting": true,
+        "expected": {
+          "route": "constructive-hybrid",
+          "stage": "full-height-column-extraction",
+          "outcome": "solved",
+          "depth": 52
+        }
+      },
+      {
+        "id": "bounded-search-w1",
+        "target": "CuRuSuWu",
+        "starts": [
+          "CuCuCuCu",
+          "RuRuRuRu",
+          "SuSuSuSu",
+          "WuWuWuWu"
+        ],
+        "operations": [
+          "Rotator CW",
+          "Rotator CCW",
+          "Rotator 180",
+          "Half Destroyer",
+          "Cutter",
+          "Swapper",
+          "Stacker",
+          "Painter",
+          "Pin Pusher",
+          "Crystal Generator"
+        ],
+        "maxLayers": 4,
+        "maxStatesPerLevel": 1000,
+        "preventWaste": false,
+        "orientationSensitive": false,
+        "allowSplitting": false,
+        "cleanPainting": false,
+        "expected": {
+          "route": null,
+          "outcome": "solved",
+          "depth": 6,
+          "statesExplored": 3612,
+          "generatedStates": 106816
+        }
+      }
+    ],
+    "timerHeartbeatMs": 10,
+    "workerHeapSampleIntervalMs": 5
+  },
+  "environment": {
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v24.21.0",
+    "browserExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "browserVersions": [
+      "Chrome/154.0.8037.59"
+    ],
+    "userAgents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+    ]
+  },
+  "identities": {
+    "solverSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "solverWebSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "harnessSha256": "43dc01af9d5dfe33bba7f2c1634ee8cacb26f6a0ba5244a7975165c7d4b4f9d7"
+  },
+  "summary": {
+    "measuredRuns": 60,
+    "expectedRuns": 60,
+    "workloads": {
+      "ordinary-constructive": {
+        "measuredRuns": 20,
+        "workerResultMs": {
+          "count": 20,
+          "min": 25.100000000093132,
+          "median": 28.20000000006985,
+          "p90": 32.5,
+          "max": 33.60000000009313
+        },
+        "uiSettledMs": {
+          "count": 20,
+          "min": 43.60000000009313,
+          "median": 48.34999999997672,
+          "p90": 54.5999999998603,
+          "max": 55.199999999953434
+        },
+        "maxTimerGapMs": {
+          "count": 20,
+          "min": 29.800000000046566,
+          "median": 36.45000000006985,
+          "p90": 40.200000000186265,
+          "max": 41.800000000046566
+        },
+        "maxFrameGapMs": {
+          "count": 20,
+          "min": 16.700000000000045,
+          "median": 16.700000000000045,
+          "p90": 16.800000000000182,
+          "max": 33.399999999999864
+        },
+        "pageAfterGcHeapUsedBytes": {
+          "count": 20,
+          "min": 5831204,
+          "median": 6218462,
+          "p90": 6481104,
+          "max": 6546404
+        },
+        "workerPeakHeapUsedBytes": {
+          "count": 20,
+          "min": 412104,
+          "median": 505480,
+          "p90": 511756,
+          "max": 1095008
+        },
+        "workerHeapCoverage": 1,
+        "profiles": [
+          {
+            "profile": 1,
+            "firstMedian": 32.5,
+            "secondMedian": 26.5,
+            "driftRatio": 0.8153846153846154,
+            "pageHeapDeltaBytes": 714420
+          },
+          {
+            "profile": 2,
+            "firstMedian": 28.100000000093132,
+            "secondMedian": 26.200000000186265,
+            "driftRatio": 0.9323843416405491,
+            "pageHeapDeltaBytes": 712844
+          }
+        ],
+        "pathSha256": [
+          "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+        ]
+      },
+      "interior-crystal-constructive": {
+        "measuredRuns": 20,
+        "workerResultMs": {
+          "count": 20,
+          "min": 32.800000000046566,
+          "median": 38.60000000009313,
+          "p90": 43.300000000046566,
+          "max": 48.89999999990687
+        },
+        "uiSettledMs": {
+          "count": 20,
+          "min": 80.80000000004657,
+          "median": 94.40000000002328,
+          "p90": 120.9000000001397,
+          "max": 136.39999999990687
+        },
+        "maxTimerGapMs": {
+          "count": 20,
+          "min": 70.10000000009313,
+          "median": 85.25,
+          "p90": 92.69999999995343,
+          "max": 96.4000000001397
+        },
+        "maxFrameGapMs": {
+          "count": 20,
+          "min": 16.600000000000364,
+          "median": 66.69999999999982,
+          "p90": 66.80000000000018,
+          "max": 83.29999999999973
+        },
+        "pageAfterGcHeapUsedBytes": {
+          "count": 20,
+          "min": 7479732,
+          "median": 7618534,
+          "p90": 7747696,
+          "max": 7750696
+        },
+        "workerPeakHeapUsedBytes": {
+          "count": 20,
+          "min": 428992,
+          "median": 511818,
+          "p90": 1572052,
+          "max": 2178828
+        },
+        "workerHeapCoverage": 1,
+        "profiles": [
+          {
+            "profile": 1,
+            "firstMedian": 40.10000000009313,
+            "secondMedian": 37.10000000009313,
+            "driftRatio": 0.9251870324191264,
+            "pageHeapDeltaBytes": 251164
+          },
+          {
+            "profile": 2,
+            "firstMedian": 39.199999999953434,
+            "secondMedian": 38.4000000001397,
+            "driftRatio": 0.9795918367394213,
+            "pageHeapDeltaBytes": 267964
+          }
+        ],
+        "pathSha256": [
+          "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+        ]
+      },
+      "bounded-search-w1": {
+        "measuredRuns": 20,
+        "workerResultMs": {
+          "count": 20,
+          "min": 403.9000000001397,
+          "median": 417.10000000009313,
+          "p90": 430,
+          "max": 446.89999999990687
+        },
+        "uiSettledMs": {
+          "count": 20,
+          "min": 426.10000000009313,
+          "median": 440.75,
+          "p90": 454.30000000004657,
+          "max": 469
+        },
+        "maxTimerGapMs": {
+          "count": 20,
+          "min": 27.200000000186265,
+          "median": 34.20000000006985,
+          "p90": 39,
+          "max": 41.300000000046566
+        },
+        "maxFrameGapMs": {
+          "count": 20,
+          "min": 16.699999999999818,
+          "median": 16.799999999999272,
+          "p90": 16.800000000000182,
+          "max": 16.80000000000109
+        },
+        "pageAfterGcHeapUsedBytes": {
+          "count": 20,
+          "min": 6837044,
+          "median": 6860228,
+          "p90": 6873056,
+          "max": 6880160
+        },
+        "workerPeakHeapUsedBytes": {
+          "count": 20,
+          "min": 25069532,
+          "median": 31692744,
+          "p90": 34390324,
+          "max": 34922136
+        },
+        "workerHeapCoverage": 1,
+        "profiles": [
+          {
+            "profile": 1,
+            "firstMedian": 414.5,
+            "secondMedian": 409.5,
+            "driftRatio": 0.9879372738238842,
+            "pageHeapDeltaBytes": 33936
+          },
+          {
+            "profile": 2,
+            "firstMedian": 415.60000000009313,
+            "secondMedian": 423.10000000009313,
+            "driftRatio": 1.0180461982675608,
+            "pageHeapDeltaBytes": 36012
+          }
+        ],
+        "pathSha256": [
+          "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+        ]
+      }
+    },
+    "gateFailures": [],
+    "verdict": "PASS"
+  },
+  "profiles": [
+    {
+      "profile": 1,
+      "browserVersion": "Chrome/154.0.8037.59",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "records": [
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 33.199999999953434,
+          "uiSettledMs": 55.199999999953434,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 37.800000000046566,
+          "frameTicks": 3,
+          "maxFrameGapMs": 33.399999999999864,
+          "pageBefore": {
+            "jsHeapUsedBytes": 5759932,
+            "jsHeapTotalBytes": 6291456,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 5831204,
+            "jsHeapTotalBytes": 6553600,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 1095008,
+          "workerPeakHeapTotalBytes": 2621440,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 33.60000000009313,
+          "uiSettledMs": 54.60000000009313,
+          "firstStatusMs": null,
+          "intervalTicks": 6,
+          "maxTimerGapMs": 36.300000000046566,
+          "frameTicks": 5,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 5831036,
+            "jsHeapTotalBytes": 6291456,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6006436,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 30.199999999953434,
+          "uiSettledMs": 51,
+          "firstStatusMs": null,
+          "intervalTicks": 6,
+          "maxTimerGapMs": 30.899999999906868,
+          "frameTicks": 5,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6006436,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6085804,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 32.5,
+          "uiSettledMs": 54.5999999998603,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 36,
+          "frameTicks": 3,
+          "maxFrameGapMs": 33.399999999999864,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6085804,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6153032,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 28.5,
+          "uiSettledMs": 48.800000000046566,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 40.200000000186265,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6143616,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6195804,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 506228,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 30,
+          "uiSettledMs": 50.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 29.800000000046566,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.799999999999955,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6195588,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6252696,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 500376,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 30.0999999998603,
+          "uiSettledMs": 50.5,
+          "firstStatusMs": null,
+          "intervalTicks": 6,
+          "maxTimerGapMs": 30.200000000186265,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6261896,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6419712,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 511756,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 26.299999999813735,
+          "uiSettledMs": 45.199999999953434,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 36.9000000001397,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6407580,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6457792,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 500376,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 25.100000000093132,
+          "uiSettledMs": 43.60000000009313,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 34.5,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6460868,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6481104,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "ordinary-constructive",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 26.5,
+          "uiSettledMs": 45.199999999953434,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 36.199999999953434,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6490164,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6545624,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 505480,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 38.800000000046566,
+          "uiSettledMs": 92.5,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 89.29999999981374,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.60000000000036,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7473396,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7496996,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 511824,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 45.199999999953434,
+          "uiSettledMs": 120.9000000001397,
+          "firstStatusMs": null,
+          "intervalTicks": 8,
+          "maxTimerGapMs": 80.80000000004657,
+          "frameTicks": 5,
+          "maxFrameGapMs": 66.79999999999973,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7496780,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7512932,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 6,
+          "workerPeakHeapUsedBytes": 1027268,
+          "workerPeakHeapTotalBytes": 3670016,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 32.800000000046566,
+          "uiSettledMs": 80.80000000004657,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 70.10000000009313,
+          "frameTicks": 3,
+          "maxFrameGapMs": 50,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7503648,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7544336,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 511812,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 40.10000000009313,
+          "uiSettledMs": 96.69999999995343,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 84,
+          "frameTicks": 2,
+          "maxFrameGapMs": 16.600000000000364,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7553352,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7588004,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 41.39999999990687,
+          "uiSettledMs": 100.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 84.10000000009313,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.69999999999982,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7578780,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7596392,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 1572052,
+          "workerPeakHeapTotalBytes": 2621440,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 35.5999999998603,
+          "uiSettledMs": 88.69999999995343,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 82,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.59999999999991,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7604940,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7654096,
+            "jsHeapTotalBytes": 9175040,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 795424,
+          "workerPeakHeapTotalBytes": 3145728,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 36.699999999953434,
+          "uiSettledMs": 122.0999999998603,
+          "firstStatusMs": null,
+          "intervalTicks": 6,
+          "maxTimerGapMs": 86.30000000004657,
+          "frameTicks": 5,
+          "maxFrameGapMs": 83.29999999999973,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7645312,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7703572,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 498000,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 37.39999999990687,
+          "uiSettledMs": 97.39999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 92.69999999995343,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.70000000000027,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7712140,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7728956,
+            "jsHeapTotalBytes": 9175040,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 838520,
+          "workerPeakHeapTotalBytes": 3670016,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 37.10000000009313,
+          "uiSettledMs": 89.5,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 76,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.80000000000018,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7728740,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7750696,
+            "jsHeapTotalBytes": 9175040,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 437884,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 39,
+          "uiSettledMs": 93.9000000001397,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 86.19999999995343,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.70000000000027,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7750468,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7748160,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 511824,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 413.10000000009313,
+          "uiSettledMs": 437.10000000009313,
+          "firstStatusMs": 225.80000000004657,
+          "intervalTicks": 35,
+          "maxTimerGapMs": 34.699999999953434,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6765856,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6846036,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 28557720,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 414.5,
+          "uiSettledMs": 434.39999999990687,
+          "firstStatusMs": 227.39999999990687,
+          "intervalTicks": 37,
+          "maxTimerGapMs": 31.699999999953434,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6854548,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6848744,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 32117648,
+          "workerPeakHeapTotalBytes": 53039104,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 426.20000000018626,
+          "uiSettledMs": 449.60000000009313,
+          "firstStatusMs": 225.5,
+          "intervalTicks": 39,
+          "maxTimerGapMs": 35.199999999953434,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6857272,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6866496,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 34636188,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 419.0999999998603,
+          "uiSettledMs": 439.89999999990687,
+          "firstStatusMs": 228.39999999990687,
+          "intervalTicks": 36,
+          "maxTimerGapMs": 34.60000000009313,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.799999999999272,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6857752,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6858352,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 30043568,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 413.69999999995343,
+          "uiSettledMs": 435.89999999990687,
+          "firstStatusMs": 228.5,
+          "intervalTicks": 37,
+          "maxTimerGapMs": 33.60000000009313,
+          "frameTicks": 26,
+          "maxFrameGapMs": 16.699999999999818,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6858136,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6864064,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 28,
+          "workerPeakHeapUsedBytes": 30122580,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 405.60000000009313,
+          "uiSettledMs": 429.80000000004657,
+          "firstStatusMs": 226.39999999990687,
+          "intervalTicks": 36,
+          "maxTimerGapMs": 40.89999999990687,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6864064,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6869656,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 28,
+          "workerPeakHeapUsedBytes": 25069532,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 446.89999999990687,
+          "uiSettledMs": 469,
+          "firstStatusMs": 229,
+          "intervalTicks": 41,
+          "maxTimerGapMs": 32.60000000009313,
+          "frameTicks": 29,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6878160,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6870016,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 31,
+          "workerPeakHeapUsedBytes": 30576616,
+          "workerPeakHeapTotalBytes": 54087680,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 409.5,
+          "uiSettledMs": 441.60000000009313,
+          "firstStatusMs": 227.30000000004657,
+          "intervalTicks": 40,
+          "maxTimerGapMs": 41.300000000046566,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.799999999999272,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6870016,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6872784,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 34922136,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 403.9000000001397,
+          "uiSettledMs": 426.10000000009313,
+          "firstStatusMs": 225.60000000009313,
+          "intervalTicks": 35,
+          "maxTimerGapMs": 31.4000000001397,
+          "frameTicks": 26,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6881288,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6880160,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 32460428,
+          "workerPeakHeapTotalBytes": 53039104,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "bounded-search-w1",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 418.60000000009313,
+          "uiSettledMs": 441.69999999995343,
+          "firstStatusMs": 226,
+          "intervalTicks": 37,
+          "maxTimerGapMs": 36.300000000046566,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6888528,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6879972,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 28,
+          "workerPeakHeapUsedBytes": 31508208,
+          "workerPeakHeapTotalBytes": 53039104,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        }
+      ]
+    },
+    {
+      "profile": 2,
+      "browserVersion": "Chrome/154.0.8037.59",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "records": [
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 28.0999999998603,
+          "uiSettledMs": 50,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 41.800000000046566,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 5751716,
+            "jsHeapTotalBytes": 6291456,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 5833560,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 505480,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 28.899999999906868,
+          "uiSettledMs": 48.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 3,
+          "maxTimerGapMs": 40.10000000009313,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 5831128,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 5997884,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 29.699999999953434,
+          "uiSettledMs": 49.39999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 40.5,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 5997884,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6074388,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 412104,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 27.5999999998603,
+          "uiSettledMs": 47.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 38.699999999953434,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6074172,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6141284,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 506228,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 28.100000000093132,
+          "uiSettledMs": 47.699999999953434,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 38.89999999990687,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6131868,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6184372,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 506228,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 26.699999999953434,
+          "uiSettledMs": 45.39999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 36.4000000001397,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6184372,
+            "jsHeapTotalBytes": 6815744,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6241120,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 506216,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 28.300000000046566,
+          "uiSettledMs": 47.800000000046566,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 39.0999999998603,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6246168,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6404064,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 25.100000000093132,
+          "uiSettledMs": 43.9000000001397,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 34.9000000001397,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6394648,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6458404,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 511720,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 26.200000000186265,
+          "uiSettledMs": 44.800000000046566,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 35.89999999990687,
+          "frameTicks": 4,
+          "maxFrameGapMs": 16.700000000000045,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6458404,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6470888,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 511756,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "ordinary-constructive",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 25.899999999906868,
+          "uiSettledMs": 45,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 36.5,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6470888,
+            "jsHeapTotalBytes": 7077888,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6546404,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1035,
+            "jsEventListeners": 125
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 506228,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "delegated-e013",
+            "outcome": "solved",
+            "depth": 13,
+            "statesExplored": 13,
+            "generatedStates": 4,
+            "beamPruned": false,
+            "pathSha256": "2de3de662600cfb12ae78dafee36d6fb74f1ef54a0d6f41bd1327697ed881a75"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 48.89999999990687,
+          "uiSettledMs": 136.39999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 8,
+          "maxTimerGapMs": 96.4000000001397,
+          "frameTicks": 6,
+          "maxFrameGapMs": 66.59999999999991,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7465168,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7479732,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 6,
+          "workerPeakHeapUsedBytes": 2071976,
+          "workerPeakHeapTotalBytes": 4456448,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 35.699999999953434,
+          "uiSettledMs": 91.30000000004657,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 86,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.70000000000027,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7488612,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7490460,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 437884,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 43.300000000046566,
+          "uiSettledMs": 108.69999999995343,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 94.5999999998603,
+          "frameTicks": 4,
+          "maxFrameGapMs": 66.59999999999991,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7481344,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7551588,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 39.199999999953434,
+          "uiSettledMs": 87.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 85,
+          "frameTicks": 3,
+          "maxFrameGapMs": 16.700000000000273,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7542356,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7585424,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 513700,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 35.5,
+          "uiSettledMs": 91,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 80.30000000004657,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.69999999999982,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7576200,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7594944,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 3,
+          "workerPeakHeapUsedBytes": 428992,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 38.800000000046566,
+          "uiSettledMs": 94.89999999990687,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 85.5,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.59999999999991,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7603492,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7640676,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 2178828,
+          "workerPeakHeapTotalBytes": 4456448,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 37.5999999998603,
+          "uiSettledMs": 100.5999999998603,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 91.19999999995343,
+          "frameTicks": 3,
+          "maxFrameGapMs": 83.29999999999973,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7649232,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7701248,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 505536,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 36.89999999990687,
+          "uiSettledMs": 96.30000000004657,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 90.60000000009313,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.69999999999982,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7709804,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7725984,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 900536,
+          "workerPeakHeapTotalBytes": 3932160,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 39.5999999998603,
+          "uiSettledMs": 93.5999999998603,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 77.0999999998603,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.5,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7725768,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7739836,
+            "jsHeapTotalBytes": 8650752,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 494528,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "interior-crystal-constructive",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 38.4000000001397,
+          "uiSettledMs": 91.9000000001397,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 76,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.69999999999982,
+          "pageBefore": {
+            "jsHeapUsedBytes": 7748384,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7747696,
+            "jsHeapTotalBytes": 8912896,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 494528,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 415.60000000009313,
+          "uiSettledMs": 439.60000000009313,
+          "firstStatusMs": 226.4000000001397,
+          "intervalTicks": 36,
+          "maxTimerGapMs": 33.5999999998603,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6756736,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6837044,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 28,
+          "workerPeakHeapUsedBytes": 32128088,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 430,
+          "uiSettledMs": 454.30000000004657,
+          "firstStatusMs": 226.60000000009313,
+          "intervalTicks": 39,
+          "maxTimerGapMs": 33.699999999953434,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.799999999999272,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6845580,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6839752,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 29613976,
+          "workerPeakHeapTotalBytes": 54087680,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 414.80000000004657,
+          "uiSettledMs": 436.30000000004657,
+          "firstStatusMs": 227.19999999995343,
+          "intervalTicks": 34,
+          "maxTimerGapMs": 36,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6839752,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6850840,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 32984072,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 425.20000000018626,
+          "uiSettledMs": 448,
+          "firstStatusMs": 225.60000000009313,
+          "intervalTicks": 38,
+          "maxTimerGapMs": 32.300000000046566,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6842096,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6842692,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 29423308,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 414.5,
+          "uiSettledMs": 436.39999999990687,
+          "firstStatusMs": 225.5,
+          "intervalTicks": 38,
+          "maxTimerGapMs": 33.800000000046566,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6842692,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6848416,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 28,
+          "workerPeakHeapUsedBytes": 34390324,
+          "workerPeakHeapTotalBytes": 53825536,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 5,
+          "measured": true,
+          "workerResultMs": 435.89999999990687,
+          "uiSettledMs": 460.69999999995343,
+          "firstStatusMs": 226.39999999990687,
+          "intervalTicks": 42,
+          "maxTimerGapMs": 35.60000000009313,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.800000000000182,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6848416,
+            "jsHeapTotalBytes": 7340032,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6862104,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 33802092,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 6,
+          "measured": true,
+          "workerResultMs": 423.10000000009313,
+          "uiSettledMs": 448.60000000009313,
+          "firstStatusMs": 228.5,
+          "intervalTicks": 36,
+          "maxTimerGapMs": 29,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.700000000000728,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6853360,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6854020,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 30,
+          "workerPeakHeapUsedBytes": 28826532,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 7,
+          "measured": true,
+          "workerResultMs": 420.39999999990687,
+          "uiSettledMs": 449.80000000004657,
+          "firstStatusMs": 228.80000000004657,
+          "intervalTicks": 42,
+          "maxTimerGapMs": 27.200000000186265,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.799999999999272,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6862548,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6856640,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 32231216,
+          "workerPeakHeapTotalBytes": 54349824,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 8,
+          "measured": true,
+          "workerResultMs": 409.69999999995343,
+          "uiSettledMs": 432.5999999998603,
+          "firstStatusMs": 225.69999999995343,
+          "intervalTicks": 36,
+          "maxTimerGapMs": 39,
+          "frameTicks": 27,
+          "maxFrameGapMs": 16.80000000000109,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6865168,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6863716,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 31877280,
+          "workerPeakHeapTotalBytes": 53563392,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        },
+        {
+          "profile": 2,
+          "workload": "bounded-search-w1",
+          "run": 9,
+          "measured": true,
+          "workerResultMs": 427.0999999998603,
+          "uiSettledMs": 449.29999999981374,
+          "firstStatusMs": 227.19999999995343,
+          "intervalTicks": 40,
+          "maxTimerGapMs": 36,
+          "frameTicks": 28,
+          "maxFrameGapMs": 16.799999999999272,
+          "pageBefore": {
+            "jsHeapUsedBytes": 6863716,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6873056,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1043,
+            "jsEventListeners": 115
+          },
+          "workerHeapSamples": 29,
+          "workerPeakHeapUsedBytes": 29006952,
+          "workerPeakHeapTotalBytes": 53301248,
+          "result": {
+            "route": null,
+            "stage": null,
+            "outcome": "solved",
+            "depth": 6,
+            "statesExplored": 3612,
+            "generatedStates": 106816,
+            "beamPruned": true,
+            "pathSha256": "c519b4307a352a9a44a1577b772d25b7ac9ef506952cb4d026a1206339253439"
+          }
+        }
+      ]
+    }
+  ]
+}

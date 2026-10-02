@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "target-conditioned-candidate-generation-v1",
+  "frozenAt": "2026-09-27T00:00:00+08:00",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "informationBoundary": {
+    "allowed": [
+      "targetShapeCodes",
+      "startingShapeCodes",
+      "enabledOperations",
+      "maxLayers",
+      "maxStatesPerLevel",
+      "preventWaste",
+      "orientationSensitive",
+      "allowSplitting",
+      "cleanPainting"
+    ],
+    "forbidden": [
+      "hidden witness",
+      "construction metadata",
+      "targetId",
+      "familySlot",
+      "structural tags",
+      "benchmark-specific shape-code recipes"
+    ]
+  },
+  "formalProtocol": {
+    "freshProcessPerMember": true,
+    "firstPassMembers": 159,
+    "repeat": "all first-pass solved members in independent fresh processes",
+    "acceptSolvedMembers": 3,
+    "acceptDistinctTargets": 2,
+    "requireReplayValid": true,
+    "runSecondConfigOnlyIfFirstMissesAccept": true,
+    "randomSeedPolicy": "no RNG"
+  },
+  "configurations": [
+    {
+      "id": "TCG-A",
+      "admissionMode": "strict-subgoal",
+      "maxOperations": 24,
+      "maxChartNodes": 40000,
+      "maxCandidateAttempts": 400000,
+      "maxVariantsPerShape": 32,
+      "maxWallMs": 8000
+    },
+    {
+      "id": "TCG-B",
+      "admissionMode": "progressive-subgoal",
+      "maxOperations": 36,
+      "maxChartNodes": 120000,
+      "maxCandidateAttempts": 1500000,
+      "maxVariantsPerShape": 96,
+      "maxWallMs": 15000
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "task": "P8-03-trace",
+  "recordedAt": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "protocol": {
+    "freshProfiles": 1,
+    "warmupsPerProfileWorkload": 2,
+    "measuredRunsPerProfileWorkload": 5,
+    "workloads": [
+      {
+        "id": "interior-crystal-constructive",
+        "target": "RrcrRrRr:RgcrRgRg:--cr----",
+        "starts": [
+          "RuRuRuRu",
+          "RuRuRuRu",
+          "RuRuRuRu",
+          "RuRuRuRu"
+        ],
+        "operations": [
+          "Rotator CW",
+          "Rotator CCW",
+          "Rotator 180",
+          "Half Destroyer",
+          "Cutter",
+          "Swapper",
+          "Stacker",
+          "Painter",
+          "Pin Pusher",
+          "Crystal Generator"
+        ],
+        "maxLayers": 4,
+        "maxStatesPerLevel": 3000,
+        "preventWaste": false,
+        "orientationSensitive": false,
+        "allowSplitting": false,
+        "cleanPainting": true,
+        "expected": {
+          "route": "constructive-hybrid",
+          "stage": "full-height-column-extraction",
+          "outcome": "solved",
+          "depth": 52
+        }
+      }
+    ],
+    "timerHeartbeatMs": 10,
+    "workerHeapSampleIntervalMs": 5
+  },
+  "environment": {
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v24.21.0",
+    "browserExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "browserVersions": [
+      "Chrome/154.0.8037.59"
+    ],
+    "userAgents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+    ]
+  },
+  "identities": {
+    "solverSha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+    "solverWebSha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+    "harnessSha256": "d4f0bf29fdd2b1b1cce46d3f225573e6e76f4516a2693334f9c36f6d9f3651ab"
+  },
+  "summary": {
+    "measuredRuns": 5,
+    "expectedRuns": 5,
+    "workloads": {
+      "interior-crystal-constructive": {
+        "measuredRuns": 5,
+        "workerResultMs": {
+          "count": 5,
+          "min": 34.5,
+          "median": 36,
+          "p90": 58,
+          "max": 58
+        },
+        "uiSettledMs": {
+          "count": 5,
+          "min": 87.80000000074506,
+          "median": 94,
+          "p90": 143.59999999962747,
+          "max": 143.59999999962747
+        },
+        "maxTimerGapMs": {
+          "count": 5,
+          "min": 78.5,
+          "median": 81.90000000037253,
+          "p90": 93.09999999962747,
+          "max": 93.09999999962747
+        },
+        "maxFrameGapMs": {
+          "count": 5,
+          "min": 49.90000000000009,
+          "median": 66.59999999999991,
+          "p90": 66.60000000000014,
+          "max": 66.60000000000014
+        },
+        "pageAfterGcHeapUsedBytes": {
+          "count": 5,
+          "min": 6948624,
+          "median": 7135788,
+          "p90": 7282768,
+          "max": 7282768
+        },
+        "workerPeakHeapUsedBytes": {
+          "count": 5,
+          "min": 497776,
+          "median": 1483500,
+          "p90": 1659248,
+          "max": 1659248
+        },
+        "workerHeapCoverage": 1,
+        "profiles": [
+          {
+            "profile": 1,
+            "firstMedian": 35.25,
+            "secondMedian": 40.59999999962747,
+            "driftRatio": 1.151773049634822,
+            "pageHeapDeltaBytes": 334144
+          }
+        ],
+        "pathSha256": [
+          "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+        ]
+      }
+    },
+    "gateFailures": [],
+    "verdict": "PASS"
+  },
+  "profiles": [
+    {
+      "profile": 1,
+      "browserVersion": "Chrome/154.0.8037.59",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "records": [
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 0,
+          "measured": true,
+          "workerResultMs": 34.5,
+          "uiSettledMs": 112.19999999925494,
+          "firstStatusMs": null,
+          "intervalTicks": 7,
+          "maxTimerGapMs": 81.90000000037253,
+          "frameTicks": 5,
+          "maxFrameGapMs": 66.60000000000014,
+          "resultEventTaskMs": 0,
+          "resultToFrameMs": 52.80000000074506,
+          "longTasks": [
+            {
+              "startTime": 1525.1000000014901,
+              "duration": 51,
+              "name": "self"
+            }
+          ],
+          "phases": {
+            "cytoscapeCalls": 1,
+            "cytoscapeMs": 51,
+            "toDataURLCalls": 0,
+            "toDataURLMs": 0,
+            "cloneNodeMs": 0,
+            "replaceWithMs": 0
+          },
+          "pageBefore": {
+            "jsHeapUsedBytes": 6711192,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 6948624,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 1659248,
+          "workerPeakHeapTotalBytes": 4718592,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 1,
+          "measured": true,
+          "workerResultMs": 36,
+          "uiSettledMs": 90,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 83.70000000111759,
+          "frameTicks": 3,
+          "maxFrameGapMs": 49.90000000000009,
+          "resultEventTaskMs": 0.09999999962747097,
+          "resultToFrameMs": 54.80000000074506,
+          "longTasks": [
+            {
+              "startTime": 1737.7000000011176,
+              "duration": 53,
+              "name": "self"
+            }
+          ],
+          "phases": {
+            "cytoscapeCalls": 1,
+            "cytoscapeMs": 52.5,
+            "toDataURLCalls": 0,
+            "toDataURLMs": 0,
+            "cloneNodeMs": 0,
+            "replaceWithMs": 0
+          },
+          "pageBefore": {
+            "jsHeapUsedBytes": 6939220,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7028412,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 4,
+          "workerPeakHeapUsedBytes": 497776,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 2,
+          "measured": true,
+          "workerResultMs": 35.70000000111759,
+          "uiSettledMs": 87.80000000074506,
+          "firstStatusMs": null,
+          "intervalTicks": 4,
+          "maxTimerGapMs": 81.79999999888241,
+          "frameTicks": 3,
+          "maxFrameGapMs": 50,
+          "resultEventTaskMs": 0,
+          "resultToFrameMs": 53,
+          "longTasks": [
+            {
+              "startTime": 1919,
+              "duration": 52,
+              "name": "self"
+            }
+          ],
+          "phases": {
+            "cytoscapeCalls": 1,
+            "cytoscapeMs": 50.899999998509884,
+            "toDataURLCalls": 0,
+            "toDataURLMs": 0,
+            "cloneNodeMs": 0,
+            "replaceWithMs": 0
+          },
+          "pageBefore": {
+            "jsHeapUsedBytes": 7018932,
+            "jsHeapTotalBytes": 7602176,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7135788,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 1483500,
+          "workerPeakHeapTotalBytes": 2621440,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 3,
+          "measured": true,
+          "workerResultMs": 40.59999999962747,
+          "uiSettledMs": 94,
+          "firstStatusMs": null,
+          "intervalTicks": 5,
+          "maxTimerGapMs": 78.5,
+          "frameTicks": 3,
+          "maxFrameGapMs": 66.59999999999991,
+          "resultEventTaskMs": 0.10000000149011612,
+          "resultToFrameMs": 54.5,
+          "longTasks": [
+            {
+              "startTime": 2111.4000000003725,
+              "duration": 53,
+              "name": "self"
+            }
+          ],
+          "phases": {
+            "cytoscapeCalls": 1,
+            "cytoscapeMs": 51.90000000037253,
+            "toDataURLCalls": 0,
+            "toDataURLMs": 0,
+            "cloneNodeMs": 0,
+            "replaceWithMs": 0
+          },
+          "pageBefore": {
+            "jsHeapUsedBytes": 7135572,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7177916,
+            "jsHeapTotalBytes": 8126464,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 5,
+          "workerPeakHeapUsedBytes": 515072,
+          "workerPeakHeapTotalBytes": 1048576,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        },
+        {
+          "profile": 1,
+          "workload": "interior-crystal-constructive",
+          "run": 4,
+          "measured": true,
+          "workerResultMs": 58,
+          "uiSettledMs": 143.59999999962747,
+          "firstStatusMs": null,
+          "intervalTicks": 8,
+          "maxTimerGapMs": 93.09999999962747,
+          "frameTicks": 6,
+          "maxFrameGapMs": 66.59999999999991,
+          "resultEventTaskMs": 0.09999999962747097,
+          "resultToFrameMs": 60.69999999925494,
+          "longTasks": [
+            {
+              "startTime": 2321.60000000149,
+              "duration": 59,
+              "name": "self"
+            }
+          ],
+          "phases": {
+            "cytoscapeCalls": 1,
+            "cytoscapeMs": 58.70000000111759,
+            "toDataURLCalls": 0,
+            "toDataURLMs": 0,
+            "cloneNodeMs": 0,
+            "replaceWithMs": 0
+          },
+          "pageBefore": {
+            "jsHeapUsedBytes": 7168512,
+            "jsHeapTotalBytes": 7864320,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "pageAfter": {
+            "jsHeapUsedBytes": 7282768,
+            "jsHeapTotalBytes": 8388608,
+            "documents": 1,
+            "nodes": 1070,
+            "jsEventListeners": 169
+          },
+          "workerHeapSamples": 8,
+          "workerPeakHeapUsedBytes": 1656176,
+          "workerPeakHeapTotalBytes": 4456448,
+          "result": {
+            "route": "constructive-hybrid",
+            "stage": "full-height-column-extraction",
+            "outcome": "solved",
+            "depth": 52,
+            "statesExplored": 52,
+            "generatedStates": 1,
+            "beamPruned": false,
+            "pathSha256": "4ee6355fb1254f6dacfe450d3558bf6f4f153c80c98b35730f0bddd9bb22e95c"
+          }
+        }
+      ]
+    }
+  ]
+}

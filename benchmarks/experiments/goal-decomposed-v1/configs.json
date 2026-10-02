@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "goal-decomposed-constructive-synthesis-v1",
+  "frozenAt": "2026-09-28T00:00:00+08:00",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorCapabilityFrontier": {
+    "experimentId": "target-conditioned-candidate-generation-v1",
+    "stableMembers": [
+      "hard-main-001:F1",
+      "hard-main-001:F2"
+    ]
+  },
+  "informationBoundary": {
+    "allowed": [
+      "targetShapeCodes",
+      "startingShapeCodes",
+      "enabledOperations",
+      "maxLayers",
+      "preventWaste",
+      "orientationSensitive",
+      "allowSplitting",
+      "cleanPainting"
+    ],
+    "forbidden": [
+      "hidden witness",
+      "construction metadata",
+      "targetId",
+      "familySlot",
+      "source identity",
+      "structural tags",
+      "benchmark-specific shape-code recipes",
+      "prior solved paths"
+    ]
+  },
+  "formalProtocol": {
+    "freshProcessPerMember": true,
+    "firstPassMembers": 159,
+    "repeat": "all first-pass replay-valid solved members in independent fresh processes",
+    "acceptSolvedMembers": 3,
+    "acceptDistinctTargets": 2,
+    "requireNewMemberBeyondPriorFrontier": true,
+    "requireReplayValid": true,
+    "randomSeedPolicy": "no RNG",
+    "fallbackConfigurations": 0
+  },
+  "configurations": [
+    {
+      "id": "GDCS-A",
+      "maxExtractionOperations": 8,
+      "maxExtractionStates": 256,
+      "maxMatchingTransitions": 20000,
+      "maxOperations": 128,
+      "maxWallMs": 3000
+    }
+  ]
+}

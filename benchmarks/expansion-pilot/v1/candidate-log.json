@@ -1,0 +1,78 @@
+[
+  {
+    "targetId": "hard-main-004",
+    "planId": "main004-additive-catalog-neighborhood-a",
+    "expansionKind": "additive",
+    "accepted": true,
+    "instanceId": "hard-main-004-expansion-01",
+    "preprocessingStepCount": 0,
+    "coreInputMultiplicity": 7,
+    "availableInputMultiplicity": 9
+  },
+  {
+    "targetId": "hard-main-004",
+    "planId": "main004-full-source-substitution-b",
+    "expansionKind": "transformative",
+    "accepted": true,
+    "instanceId": "hard-main-004-expansion-02",
+    "preprocessingStepCount": 1,
+    "coreInputMultiplicity": 7,
+    "availableInputMultiplicity": 9
+  },
+  {
+    "targetId": "hard-main-010",
+    "planId": "main010-additive-crystal-neighborhood-a",
+    "expansionKind": "additive",
+    "accepted": true,
+    "instanceId": "hard-main-010-expansion-01",
+    "preprocessingStepCount": 0,
+    "coreInputMultiplicity": 6,
+    "availableInputMultiplicity": 8
+  },
+  {
+    "targetId": "hard-main-010",
+    "planId": "main010-additive-crystal-neighborhood-b",
+    "expansionKind": "additive",
+    "accepted": true,
+    "instanceId": "hard-main-010-expansion-02",
+    "preprocessingStepCount": 0,
+    "coreInputMultiplicity": 6,
+    "availableInputMultiplicity": 9
+  },
+  {
+    "targetId": "hard-side-021",
+    "planId": "side021-additive-pin-neighborhood-a",
+    "expansionKind": "additive",
+    "accepted": true,
+    "instanceId": "hard-side-021-expansion-01",
+    "preprocessingStepCount": 0,
+    "coreInputMultiplicity": 8,
+    "availableInputMultiplicity": 10
+  },
+  {
+    "targetId": "hard-side-021",
+    "planId": "side021-full-source-substitution-b",
+    "expansionKind": "transformative",
+    "accepted": true,
+    "instanceId": "hard-side-021-expansion-02",
+    "preprocessingStepCount": 1,
+    "coreInputMultiplicity": 8,
+    "availableInputMultiplicity": 10
+  },
+  {
+    "targetId": null,
+    "planId": "arbitrary-shape-substitution",
+    "expansionKind": "transformative",
+    "accepted": false,
+    "unsupported": true,
+    "reason": "No general forward derivation planner exists for arbitrary catalog replacements."
+  },
+  {
+    "targetId": null,
+    "planId": "multi-input-preprocessing-bridge",
+    "expansionKind": "transformative",
+    "accepted": false,
+    "unsupported": true,
+    "reason": "The v1 pilot adapter supports replayed unary derivation chains; general multi-input preprocessing planning remains unsupported."
+  }
+]

@@ -1,0 +1,1071 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "generatedFrom": [
+      "benchmarks/hard_main.txt",
+      "benchmarks/hard_side.txt",
+      "benchmarks/insane_main.txt",
+      "benchmarks/insane_side.txt"
+    ],
+    "normalized": "trim+ignore empty lines",
+    "caseHash": "SHA-256 UTF-8 target",
+    "hardSplitAlgorithm": "per source sha256 ascending/line tie-break + largest remainder 60/20/20; remainder ties development, validation, holdout",
+    "hardTotals": {
+      "development": 32,
+      "validation": 11,
+      "holdout": 10
+    }
+  },
+  "cases": [
+    {
+      "id": "hard-main-001",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 1,
+      "target": "RuRuCuCu:RbRbCrCr",
+      "sha256": "fa22ca62fc942fa1c0166d89284d639814be7ef1d699f46f18f0edd761bca200",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-main-002",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 2,
+      "target": "RbRuRbRu:RuRbRuRb:SrSgSrSg",
+      "sha256": "f31c6e42357a36583d6e9504e304756a39b07cdad5f0a36c7a9fdd998e400266",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-main-003",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 3,
+      "target": "SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg",
+      "sha256": "3de7c58c0d0725963f605e2b491fdb6eca4d46e43ab0b1689d748db92f884e0b",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-004",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 4,
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "sha256": "2183dca26a00cf92caa9869c807ca6604bfa0cd44db12f12619d02a337b6826b",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-005",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 5,
+      "target": "P-CcRcCc:P-CwRwCw:RwWrP-Wr:P---Wr--",
+      "sha256": "5e84e70039fbcd961a057a2daa24f78afe59000187052b02514b8bef68c7221a",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-006",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 6,
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "sha256": "780c3ad3a38c1fe9dab3ed93c4bfba63310ac26596b809c67232aef9b8f20382",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-007",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 7,
+      "target": "WwcbWwcb:P-cwP-cw:WgP---P-",
+      "sha256": "be90ea10cd4bafdd889d955ea4ed3edf9cec6fc9c898156b5da625b58cefb45d",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-main-008",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 8,
+      "target": "cwRwcwcw:cwCwcwcw:cccccccc",
+      "sha256": "da925a5d95229c05605c5228ae1fdaba01e95c318ebb6b0303486b5329c9c5f0",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-main-009",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 9,
+      "target": "XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "sha256": "8f661b214a113104b4ad5f258fc40c4d25073c1af84871fe2d16d0c9889bd5cb",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-main-010",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 10,
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "sha256": "67175a76414254652f63cce9e08721fd0d2e2aafa1873e7b548aa8e8323d0c08",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-011",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 11,
+      "target": "cbP-cbP-:ccXwccXw:Xk--Xk--",
+      "sha256": "3753818862f2ae732e605d350a5469afbe4337013c5fc59b7bba2942ff1746b1",
+      "partition": "development"
+    },
+    {
+      "id": "hard-main-012",
+      "suite": "hard",
+      "track": "main",
+      "source": "hard_main.txt",
+      "line": 12,
+      "target": "cwP---P-:--cw--cw:RrWrYwWr:Yk------",
+      "sha256": "2aabd65cad5dfec402c37b55cbe882602ee8602020fb1d09846d55bfc10602c6",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-001",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 1,
+      "target": "RbCuRbCu:RuCuRuCu:Su--Su--",
+      "sha256": "84ec9aba406783bd6c00fc31e005e955b4c0ea4dc913c9b1d88b9d3d2e2a34b9",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-002",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 2,
+      "target": "CrCuCrRu:CuCrCuCr:--Cu--Cu",
+      "sha256": "cda53975975763903cbf04b543032915c089c9564b983ed51265f6018214f844",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-003",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 3,
+      "target": "Rb--Rb--:Ru--Ru--:Rb------",
+      "sha256": "26ff6a9a44b2bc431df48cd1a60ac95db3f2a884261b9fa62f55fe240c1d4ea1",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-004",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 4,
+      "target": "SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "sha256": "070bb56c64ce2964f29031d8620e0ff7394031de9b20c271dc6915df8a9b1093",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-005",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 5,
+      "target": "CbRrCuRr:CuRuCbRu",
+      "sha256": "da7386dcf27b842be8b3590438803618ba78c34d60c41a5f1e67f88c76b54576",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-006",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 6,
+      "target": "RrRgRbRu:CrCgCbCu:WrWgWbWu",
+      "sha256": "444abc759654ee99be10385ca0081bfc61b044a11997a7f9853d824e0340f540",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-007",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 7,
+      "target": "WgRgRgRg:RbCbCbCb:CgCgWgCg:WuCu--Cu",
+      "sha256": "98bb3baae38df5d30e90350745f56891347ec4cec9e813e53d21ba72cf9002a1",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-008",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 8,
+      "target": "SgWuRuWu:WrCrWrCr:WrCgWrCg:--Wr--Wr",
+      "sha256": "6fdab469c049238e422965daf2f7ea1ced7cee72283076034f32a5dfc157a94b",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-009",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 9,
+      "target": "Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr",
+      "sha256": "cad002dbb8fa36bbbc476cddd57664ccb8ee6a0d1acba169e70a89b057550cd2",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-010",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 10,
+      "target": "Sb----Sb:WbWuWuWb:CuSuSuCu:CbWrWrCb",
+      "sha256": "f51e515d88b2629742cf95d4312e4d3cb3a197c7183099ddea5103d9997007c0",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-011",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 11,
+      "target": "SuSuSuSu:WrWrWrWr:CrCrCrCr:WbWbWbWb",
+      "sha256": "d524e5474aa96fe18b2dc6e2378be75f62dff2973ad472b438fac95d2d64166d",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-012",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 12,
+      "target": "CuRuWuRu:CbRbWbRb:CuCuWuCu:CrCrWrCr",
+      "sha256": "ec63af6de3049f850a0f684096a304844d1101c9a36d726036e9a535f0b9d590",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-013",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 13,
+      "target": "WgSrWgCg:WuWuWuCu:WrWrWrCr",
+      "sha256": "57a300242d36f822c82dd1cc5b761033962e16d750dfed87e011e56d8a9d7fcf",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-014",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 14,
+      "target": "CuRrRrCu:CuCrCrCu:CbCuCuCb:--WbWb--",
+      "sha256": "58e42a00e8dece83c534d41bdfd7f314458739aac4305c0648688c7bba2cafee",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-015",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 15,
+      "target": "WwCwWwCw:WuCuWuCu:WmCmWmCm:CcCcCcCc",
+      "sha256": "651146832326c0bf5abbbbb5d173740ba25a91f00fa986d628909aa8cfc1601d",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-016",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 16,
+      "target": "WgRgWgCg:WmWmWmWm:SySySySy:CwWwWwCw",
+      "sha256": "ebf6cf9170bc940f0d9a1c388f744cebef8a8de26ba6399189378d067c374593",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-017",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 17,
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy",
+      "sha256": "c4491724ebc88f618b865b618cc6674c400a7e2aadd9e592d6d40894257fab1e",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-018",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 18,
+      "target": "--WySyWy:RySwWwSw:CwWwWbWw:CbWbSwWb",
+      "sha256": "2f8629cedb94ddcab49139ede495747e223655e28059c04e762b73fcc3a0ba8a",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-019",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 19,
+      "target": "RcCyCcRy:Sw--RmCm:CwRwWwWw",
+      "sha256": "fcb58615a33db1d5e05936bba6aa3cc93dade549d30ee215284d311ecf4c07ff",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-020",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 20,
+      "target": "RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw",
+      "sha256": "47edb1bc6c316b4a20ff84799ed686efcd98c4f7806ee1b9018ef2807d7a3d03",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-021",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 21,
+      "target": "CyCwCwCy:P-P-P-P-:CbCbCbCb:CwCwCwCw",
+      "sha256": "28f360d3b9cb6600fbeb513a032b0450cd04a364ea20d50cf52488519af63d6c",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-022",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 22,
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "sha256": "a688efbb01d855a66e27e6be0db3b5940dda1386af0776f52ea12149bb4b8f5f",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-023",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 23,
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "sha256": "3ef01de5e7b127791049e5501ae6be2b7530614216d30d81464468328d82ba9d",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-024",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 24,
+      "target": "RwWmRmWw:P-P-P---:RmWwRw--:--WmRmWm",
+      "sha256": "3d2f1def0f29c7cfbb3bfdaa94ee1717a0dbdcb47a3ec6c94739489c671fd9dc",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-025",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 25,
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "sha256": "bb3456e58af3bd577c0ed6f31f625976ae75736556f61f45731cdddad298509a",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-026",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 26,
+      "target": "WyP-P-P-:SyCuSuCu:WuWuWwWu:--P-CuP-",
+      "sha256": "e8ae3f55828276a16b8bf58e4a46554ab988f3df655506599a118dd7d599b7d9",
+      "partition": "holdout"
+    },
+    {
+      "id": "hard-side-027",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 27,
+      "target": "RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb",
+      "sha256": "5ac3dfbe594b16d7983c700040fb17aa16e8dd84d58eb0062107f44f9e10780b",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-028",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 28,
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "sha256": "33bc3a57321d4b047b7e9473e4f7541497eb9ee2b34b0ff99db4e722706821f2",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-029",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 29,
+      "target": "P-cccccc:cmP-P-P-:--CyCyCy:------P-",
+      "sha256": "489ca9647961dcbb24d85c79016559456177501183e70874365e2187da14685d",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-030",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 30,
+      "target": "crCwcrRw:CwcrCwcr:crCwcrCw:crcrcrcr",
+      "sha256": "9f322166052d2288d73e3f526453d3b0f586cdc3ba46d8c65cb0ab9f269d2d91",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-031",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 31,
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "sha256": "c4db916ad9a32f6befb4db263121d3192ba058a9432ec7fb35ca43d9be677f67",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-032",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 32,
+      "target": "RyCyRyCy:Cr--Cr--:CwCwCwCw:cmcmcmcm",
+      "sha256": "76c37c7dc5ba0b599543536d949198f7808977c8f272162d5776093bdde1a684",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-033",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 33,
+      "target": "RwcmRwcm:cmRwcmRw:RwcmRwcm:cmRwcmRw",
+      "sha256": "cb7e184683d111a6f9e437904e6f061dbc2fae9c2cd01d680893fa096f984d4a",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-034",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 34,
+      "target": "--Sg--Sg:--Wg--Wg:RrCrRrCr:cccccccc",
+      "sha256": "4403f75e4abab564fbf5714f595ee5ba76829908cc4a000ee99b0205d6b5c66e",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-035",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 35,
+      "target": "crcrcrcr:WrCwXrCw",
+      "sha256": "770530411a01f97403fb45a2ce0742afd3aa08b209d0fc61a4626b0df4aca165",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-036",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 36,
+      "target": "XbCyCyCy:WyP-CwP-:----Cr--",
+      "sha256": "5c7ce7fc97c42b385f243501c7bdfa47b48d85b96d98e071cadb189de38981dc",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-037",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 37,
+      "target": "XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr",
+      "sha256": "cd68150ee881b6fdf715aac8b745dd7c0285563c2f5ccb68d92fa4863afcaba9",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-038",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 38,
+      "target": "Xm--Xy--:Xy--Xm--:P---P---:CyCmCmCy",
+      "sha256": "53b7bcd6b8d7aa81ceec366d4bdb56a1a2c11cd127b70cc753a3e7257945aa60",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-039",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 39,
+      "target": "RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "sha256": "36dec974c4dd809a6eed2f32690b3da6789411a3d4414f2aea4b14873aa942fb",
+      "partition": "development"
+    },
+    {
+      "id": "hard-side-040",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 40,
+      "target": "cycycycy:XkcwXk--:--Cy----",
+      "sha256": "c9a3065397bb4a7685edbbc56a5c393e709745f09dbdf27d07ea7fd113a37bb6",
+      "partition": "validation"
+    },
+    {
+      "id": "hard-side-041",
+      "suite": "hard",
+      "track": "side",
+      "source": "hard_side.txt",
+      "line": 41,
+      "target": "----Ru--:CuCuYwCu:YkSrWuSr",
+      "sha256": "6992c9ad11ca01e42fcaf077ac8f28cad62a701825e5b7027b579bb9cdb07e65",
+      "partition": "development"
+    },
+    {
+      "id": "insane-main-001",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 1,
+      "target": "CuRbCuRb:CrRuCrRu:CuRbCuRb:CuRuCuRu",
+      "sha256": "e2aec1f3f0954be3f4904bafadc0c0947c5fc4b839ec30fd3ffc78fa945125af",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-002",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 2,
+      "target": "RuCbCuRb:SgWrWrSg:WrCgCgWr:WrCrCrWr",
+      "sha256": "1ba16c0b4151828b0c6c22e624be4ebe37ad654045a83287b96c99697dbd3bff",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-003",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 3,
+      "target": "SbSrSbRr:WrRrWrSb:CgRuCgWr:CuWgCuWu",
+      "sha256": "a4e44383b68960a6f195b988ba8a83cc7dc5594c949f0e3bf4b080cc936f9218",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-004",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 4,
+      "target": "Cc--Cc--:CwWwCwWw:--Wc--Wc:RmWmRmWm:Cw--Cw--",
+      "sha256": "da9be625af9d2d8d6a6f7f0c4c8d8a56e2d74875db401b8a9b25e8eddb530e3e",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-005",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 5,
+      "target": "SbCrRbCr:WbWyWuWy:WyP-WyP-:----Cr--",
+      "sha256": "e269084e06cfd1590aaa114fcd874ca7b1542aacd5037c7469f8d3b9d72e6498",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-006",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 6,
+      "target": "RyRyRyRy:P-RmRmP-:CmRwRwCm:P-P-P-P-:--CmCm--",
+      "sha256": "ac8c443475fef00a0c5f3cc610a9dd59c4008b952611e2af83efe70045b67167",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-007",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 7,
+      "target": "RmCcWcCm:--cm--cc:RcccCmcm:cmcccccm:cw--cw--",
+      "sha256": "f33cc227309d7c9b31d649ab9a83e3c6d283da0dfd4969958ae945be5d2f2160",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-008",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 8,
+      "target": "CwRwCwCw:CcCcCcCc:--Cw--Cw:cccccccc",
+      "sha256": "aaa25388da837cbcaf3ab52da8cbabb55c8c84da3dcdee548f17857b161498b3",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-009",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 9,
+      "target": "P-XrXrP-:crXgXgcr:cgXbXbcg:cbP-P-cb:P-CwCwP-",
+      "sha256": "48de8aeea53427c3dde1897657674f4e98a0a0009e5544a710cd661d1cfd6b3b",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-010",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 10,
+      "target": "cccccccc:XyXyXmXy:cccccccc:XmXcXcXc:ccWmWmWm",
+      "sha256": "f2e9b97c81b11bdc03f6d37989dc84e0f6710a56ffd88e9a33cd31b7a10f9f31",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-011",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 11,
+      "target": "XkP-XkP-:XwcwXwcw:cwCkcwCk:CkXwCkXw:cw--cw--",
+      "sha256": "1b7500c02bf265af0ae985b4b711b2e5cbbf5943ab27e51c16b5b11b5c82feb7",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-main-012",
+      "suite": "insane",
+      "track": "main",
+      "source": "insane_main.txt",
+      "line": 12,
+      "target": "YkP-YkP-:P-YkP-Yk:P-P-P-Wr:YwYwYwXk:--Sw--Wm",
+      "sha256": "b456f56d091ac61bdb813a965a0fb1b8c94b5e801bdb7e6399f9f5f1e9be9345",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-001",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 1,
+      "target": "SuCuCuCr:CrCrCrCu:SuCuCuCr",
+      "sha256": "d877394c82bcf105bac08a1c98b936c125ad6f943b9caa9fe90e0648a8586320",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-002",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 2,
+      "target": "RuRuRuRu:RbCrRbCr:RuCuRuCu:RbCrRbCr",
+      "sha256": "c9a6080c4db650c0d437b8fe3356af7c7a34d6e9c2e3978d8f1029243ab2638a",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-003",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 3,
+      "target": "Rb--Rb--:CrCrCrCr:CuCuCuCu:CrCrCrCr",
+      "sha256": "583bfe24c7774b536fc778c5d350435ae623f16c37b481104360949f76b056d6",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-004",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 4,
+      "target": "Rb--Rb--:RuRuRuRu:Rb--Rb--:SuSuSuSu",
+      "sha256": "2349ef834eae2a8d9f569a30e30fb68362a48150b6b49f79a529953f038c8959",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-005",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 5,
+      "target": "Cg--Cg--:CrCgCrCg:CuCrCuCr:--Cu--Cu",
+      "sha256": "5bb1e953426b8f22e2d37fee9318043bc99cb2c98aa07c6a34c04bb4ea1fee1e",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-006",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 6,
+      "target": "RrWrCbWr:RuWgCuWg:Su------:Sb------",
+      "sha256": "ad44d3607c6e511c53f043fea11509bd19074d5c388b8b7f36a452edf56aa67e",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-007",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 7,
+      "target": "Rb--Rg--:WgWbWbWg:SrCgSrCb:--Cr--Cr:WuCuWuCu",
+      "sha256": "53a48373092adb6dfa31dccdf159eb41e29a6bbf47e8d883b01a807fd8de6e46",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-008",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 8,
+      "target": "WbWgWbWg:--Wb--Wb:RuCgRuCg:RrCrRrCr:CgCgCgCg",
+      "sha256": "2640a2bb98be71ea5bb0b28fed1796c031ad2240afbb327284059c9ffea65fa9",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-009",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 9,
+      "target": "Sr--Sr--:WbSgWbSg:--Wu--Wu:SrWbSrWb:WbWgWbWg",
+      "sha256": "bbc7971943d6ccc6dc6fd66533fbc4b112abc2d359778a9242ba958d6147276d",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-010",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 10,
+      "target": "Sr----Sr:WrWbWbWr:CbSrSrCb:CrCrCrCr:WgWgWgWg",
+      "sha256": "6f92b7ff4fa8050a3bfde9bc693687a66b562e07340e31c8d2fdfb957d0e8a7c",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-011",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 11,
+      "target": "CgRgCgSg:CuRuCuCu:CrRrCrCr:RuRuRuCu:RgCgRgCg",
+      "sha256": "8c270bf590f9744e89225cc43ce156a6739497bd249e43b2b84ddc00abf642d7",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-012",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 12,
+      "target": "WbWbCbWb:WuWuCuWu:WrWrCrWr:WuWuCuWu:WbWbCbWb",
+      "sha256": "8de71e9ff6adf79d15b8920de63621e65764a71e20c7d7422154af9e62532326",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-013",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 13,
+      "target": "SrCgCgCg:WuCuRuCu:WrCrWrCr:CgCgRgCg:RbCbWbCb",
+      "sha256": "1bc64a9f8fb5c2854f97c98e691f66c4d50807977001cbec7b2d062122a95769",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-014",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 14,
+      "target": "CyRyRyCy:CmCwCwCm:CbCcCcCb:Cb----Cb:CmCbCbCm",
+      "sha256": "36048f8861197b63e98b608afccddab469a99fc594c5d553f5b3ac4694975037",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-015",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 15,
+      "target": "SwSwSwSw:WrWrWrWr:CmCmCmCm:WbWbWbWb:CgCgCgCg",
+      "sha256": "d69dbef21ed62717b09652db743312d3e2718fe46c377b3cb4acddc83fce8538",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-016",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 16,
+      "target": "SySbSbSy:CwCwCwCw:RyRbRbCy:SwSrSrSw:Wy--Ry--",
+      "sha256": "fe8761674abdd449aad1d4828ec67a8d8704135bcd8578cb997ae53c3d92f723",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-017",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 17,
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:CbCbCbCb:WyCyWyCy",
+      "sha256": "4b53166189cea14e2bf057ecdbfdee7805b5067303bf452fc36f0dd0bb51cfaf",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-018",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 18,
+      "target": "Sw--Sw--:WbCbWbCb:--Sw--Sw:CcWcCcWc",
+      "sha256": "337630739d2b203287a02db6ceb9dcbc8e259a854b2e32f402dba622254ebce0",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-019",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 19,
+      "target": "CwCrCwCr:CuRcCuRc:Wc--Wc--:WmRmWmRm",
+      "sha256": "48452fc8559e3c94ae108ed056c2713310febe754aa913ea1b2d12a7e45b421a",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-020",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 20,
+      "target": "SmWwWwSm:CwWmWmCw:CcRwRwCc:P-RuRuP-:--P-P---",
+      "sha256": "15b4fc4bc0aea20dfc4b31798f32f8d254de15ba8309037224caf9bd0b05ed29",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-021",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 21,
+      "target": "P-CwRwCw:CrP-P-P-:--CrRrCr:WwCwRwCw:--P-P-P-",
+      "sha256": "ddab8a136c656fb7b613ce226ef680de4a86d49d2d575279e329ef57cbef6f92",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-022",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 22,
+      "target": "WwRyRwCy:Sr----Sr:CrWrWrCr:P-P-P-P-:--CwCw--",
+      "sha256": "e30d480d51f41ecf43cc00571cd039ec7437ec90ca4b467fa66b9e25e239ace3",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-023",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 23,
+      "target": "CbRwRwCb:P-RrWrP-:SrRu--Sr:P-----P-:Sy----Sy",
+      "sha256": "ca0c635ce7ede12ce0cd15cfaf50a65a49b6a4677fb8db596971aece0623a7a8",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-024",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 24,
+      "target": "CmP-CmP-:P-CwP-Cw:P-CcP-Cc:CwP-CwP-:CcCwCcCw",
+      "sha256": "bb3af0261150665461f3c31f74b3611b07facfb9f5accf74acc4e16b354d1e70",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-025",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 25,
+      "target": "CuCbRbCb:P-P-SwP-:P-P-P-P-:WrCr--Cr:SmCw--Cw",
+      "sha256": "4f1982e801f70cdd00108c599c9a1d1f99ba5fdc329463847a9387e632af9cf9",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-026",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 26,
+      "target": "RgCgRyCg:WuCyCyCy:WyP-CyP-:----Cr--:----P---",
+      "sha256": "2ffafa5220a9dfe9a6429e438a936e1bf309a393165c5c8f30c13a3d7bdc1f61",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-027",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 27,
+      "target": "CySyWySy:--WcRcWc:--WwRwWw:--WyCyWy:----P---",
+      "sha256": "b79454b7a4990bd9b8d40ab66c8997d492ac24fa1fad349525077d2370e57c0a",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-028",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 28,
+      "target": "CucrcrCu:--CwCw--:----cc--:--CbCb--:--cw----",
+      "sha256": "e0c52c8aaa53982593a4e0ab303d34b55d7de344bcf4caf2a24b1581ba44dd7b",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-029",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 29,
+      "target": "CbRbRbRb:--P-CuP-:CyWcccWc:cw--Wr--:Wg------",
+      "sha256": "eac4975b3a601ee6316f69c0d321971b44c9896588122b64471b2104c9e263ee",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-030",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 30,
+      "target": "P-P-cmP-:WuWuWuWu:cy--cy--:CwCwCwCw:cgcgcgcg",
+      "sha256": "cddd65c39f1d3f4091c89c9aac0b775efc73479ee5ebd31e6fe2971ddab7cb32",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-031",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 31,
+      "target": "Rr--Rr--:cy--cy--:cyRwcyRw:--Cm--Cm:--cb--cb",
+      "sha256": "c013b80e9c9f8f3e9465bbab38010b1cf105156f254b909d321da5aa89740cbc",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-032",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 32,
+      "target": "CuCuCuCu:CuCuCuCu:Cu--Cu--:CuCuCuCu:cycycycy",
+      "sha256": "1c7028b39c2c4f66240c2e7bfd40ee962f186e29df336b749e41a6c61c181983",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-033",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 33,
+      "target": "cwcwcwP-:CgcmCgcg:Cg--CgP-:cm----P-:----cmCy",
+      "sha256": "c00609db8bddf5696910f6ef41d1d5a1a842b6185d4c29fe5cf948ad435baf3f",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-034",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 34,
+      "target": "CrCrCrCr:crcrcrcr:XrXrXrXr",
+      "sha256": "31204f9ed37400f7d855f29434782e4f93dbb9e5d89e664d9006f158487baa00",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-035",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 35,
+      "target": "P-SySyP-:SyXbXbSy:WwP-P-Ww",
+      "sha256": "0d8036c2a40ca10da7f8c70a9e22e94cda9cddd8331faf040c147a3531860027",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-036",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 36,
+      "target": "CucwCuRu:cwXycwcw:cc--cccc:Cw--Cw--:P---P---",
+      "sha256": "fc8100247655397cd45c995aca16593889e5dcef967a55129becfa3cbe7509a2",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-037",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 37,
+      "target": "P-P-XyP-:ccccWccc:WcP-XcP-:--Cw--Cw:--P---P-",
+      "sha256": "9cd074f7d807b7061fb70051b754b6ac02e72755bd6a52717bf956f1124d3445",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-038",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 38,
+      "target": "CrCrRrCr:WwCkXwCk:P-P-WrP-:XbP---P-:WwCg--Cg",
+      "sha256": "b8f8368ea32fd7d6d4f4fad81e3cf422dd78603cba7cbbb10b755cd206e9960e",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-039",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 39,
+      "target": "cwcwcwXk:P-cwcw--:--CuCu--:--cwcwcw",
+      "sha256": "b5fd5a0b44829fff1bb6729c6f6191eb8ade6064a799be5e93e3a8f0845fbd19",
+      "partition": "stress"
+    },
+    {
+      "id": "insane-side-040",
+      "suite": "insane",
+      "track": "side",
+      "source": "insane_side.txt",
+      "line": 40,
+      "target": "YkcgYwcg:XkcgXwcg:YwcgYkcg:CuSwCuSw:P-crP-cr",
+      "sha256": "eb00c630c4201135447c8a37328e49d7128f786c1e7851eaaa9fbde87f90b059",
+      "partition": "stress"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "crystal-scaffold-goal-decomposed-constructive-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "frontierExperimentId": "pin-goal-decomposed-constructive-synthesis-v1",
+  "frontierStableSolved": 103,
+  "frontierStableDistinctTargets": 35,
+  "configurations": [
+    {
+      "id": "CSGDCS-A",
+      "maxExtractionOperations": 8,
+      "maxExtractionStates": 120000,
+      "maxMatchingTransitions": 500000,
+      "maxOperations": 512,
+      "maxWallMs": 10000
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "targetId": "hard-side-006",
+    "instanceCount": 5,
+    "distinctStructuralFamilies": 5,
+    "representatives": [
+      "hard-side-006-pilot-01",
+      "hard-side-006-pilot-02",
+      "hard-side-006-pilot-03",
+      "hard-side-006-pilot-04",
+      "hard-side-006-pilot-05"
+    ],
+    "duplicateInstances": []
+  },
+  {
+    "targetId": "hard-side-007",
+    "instanceCount": 5,
+    "distinctStructuralFamilies": 5,
+    "representatives": [
+      "hard-side-007-pilot-01",
+      "hard-side-007-pilot-02",
+      "hard-side-007-pilot-03",
+      "hard-side-007-pilot-04",
+      "hard-side-007-pilot-05"
+    ],
+    "duplicateInstances": []
+  },
+  {
+    "targetId": "hard-side-018",
+    "instanceCount": 5,
+    "distinctStructuralFamilies": 5,
+    "representatives": [
+      "hard-side-018-pilot-01",
+      "hard-side-018-pilot-02",
+      "hard-side-018-pilot-03",
+      "hard-side-018-pilot-04",
+      "hard-side-018-pilot-05"
+    ],
+    "duplicateInstances": []
+  },
+  {
+    "targetId": "hard-side-021",
+    "instanceCount": 5,
+    "distinctStructuralFamilies": 5,
+    "representatives": [
+      "hard-side-021-pilot-01",
+      "hard-side-021-pilot-02",
+      "hard-side-021-pilot-03",
+      "hard-side-021-pilot-04",
+      "hard-side-021-pilot-05"
+    ],
+    "duplicateInstances": []
+  },
+  {
+    "targetId": "hard-side-035",
+    "instanceCount": 5,
+    "distinctStructuralFamilies": 5,
+    "representatives": [
+      "hard-side-035-pilot-01",
+      "hard-side-035-pilot-02",
+      "hard-side-035-pilot-03",
+      "hard-side-035-pilot-04",
+      "hard-side-035-pilot-05"
+    ],
+    "duplicateInstances": []
+  }
+]

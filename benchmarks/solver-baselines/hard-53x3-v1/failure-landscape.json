@@ -1,0 +1,1576 @@
+{
+  "schemaVersion": 1,
+  "outcome": {
+    "SOLVED": 0,
+    "TIMEOUT": 1,
+    "STATE_CAP": 0,
+    "CANDIDATE_CAP": 106,
+    "MEMORY_LIMIT": 0,
+    "SHAPE_UNIVERSE_CAP": 52,
+    "NOT_FOUND_PRUNED": 0,
+    "SEARCH_EXHAUSTED": 0,
+    "ERROR": 0
+  },
+  "targetSolvedCounts": {
+    "3/3": 0,
+    "2/3": 0,
+    "1/3": 0,
+    "0/3": 53
+  },
+  "targetsWithAnySolved": 0,
+  "byMechanism": {
+    "class:crystal": {
+      "count": 24,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 19,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 4,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "class:mixed-pin-crystal": {
+      "count": 15,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 15,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 0,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "class:ordinary": {
+      "count": 81,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 47,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 34,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "class:pin": {
+      "count": 39,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 25,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 14,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "crystal": {
+      "count": 39,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 34,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 4,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "mixed-pin-crystal": {
+      "count": 15,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 15,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 0,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "pin": {
+      "count": 54,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 40,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 14,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "refinement:A": {
+      "count": 9,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 0,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 8,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "refinement:B": {
+      "count": 9,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 7,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 2,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "refinement:C": {
+      "count": 9,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 6,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 3,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "refinement:D": {
+      "count": 6,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 3,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 3,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "swapper-related": {
+      "count": 60,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 51,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 9,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "tag:ordinary-only": {
+      "count": 126,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 90,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 36,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    }
+  },
+  "byDepthClass": {
+    "B": {
+      "count": 64,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 39,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 25,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "baseline": {
+      "count": 53,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 35,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 18,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "C": {
+      "count": 1,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 1,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 0,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "D": {
+      "count": 7,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 6,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 1,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "E": {
+      "count": 34,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 25,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 8,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    }
+  },
+  "bySourceCategory": {
+    "baseline": {
+      "count": 53,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 35,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 18,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "replacement": {
+      "count": 42,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 32,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 9,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "retained-B": {
+      "count": 64,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 39,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 25,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    }
+  },
+  "byTrack": {
+    "main": {
+      "count": 36,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 22,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 14,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    "side": {
+      "count": 123,
+      "solved": 0,
+      "solveRate": 0,
+      "byStatus": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 84,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 38,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    }
+  },
+  "targetComparisons": [
+    {
+      "targetId": "hard-main-001",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-002",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-003",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-004",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-005",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-006",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-007",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-008",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-009",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-010",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-011",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-main-012",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-001",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-002",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-003",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-004",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-005",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-006",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-007",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-008",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-009",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-010",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-011",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-012",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-013",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-014",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-015",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-016",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-017",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-018",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-019",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-020",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-021",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": true,
+      "orderOfMagnitudeStates": true,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-022",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-023",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-024",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-025",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-026",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-027",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-028",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-029",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-030",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-031",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-032",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-033",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-034",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-035",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "TIMEOUT"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": false,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-036",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-037",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-038",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-039",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-040",
+      "solved": 0,
+      "statuses": {
+        "F1": "CANDIDATE_CAP",
+        "F2": "CANDIDATE_CAP",
+        "F3": "CANDIDATE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    },
+    {
+      "targetId": "hard-side-041",
+      "solved": 0,
+      "statuses": {
+        "F1": "SHAPE_UNIVERSE_CAP",
+        "F2": "SHAPE_UNIVERSE_CAP",
+        "F3": "SHAPE_UNIVERSE_CAP"
+      },
+      "baselineSolvedDeepFailed": false,
+      "deepSolvedBFailed": false,
+      "allSameFailure": true,
+      "orderOfMagnitudeTime": false,
+      "orderOfMagnitudeStates": false,
+      "orderOfMagnitudeCandidates": false
+    }
+  ],
+  "observedFailureClusters": [
+    {
+      "dimension": "mechanism",
+      "label": "tag:ordinary-only",
+      "cases": 126,
+      "solved": 0,
+      "failed": 126,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 90,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 36,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "class:ordinary",
+      "cases": 81,
+      "solved": 0,
+      "failed": 81,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 47,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 34,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "depthClass",
+      "label": "B",
+      "cases": 64,
+      "solved": 0,
+      "failed": 64,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 39,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 25,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "sourceCategory",
+      "label": "retained-B",
+      "cases": 64,
+      "solved": 0,
+      "failed": 64,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 39,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 25,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "swapper-related",
+      "cases": 60,
+      "solved": 0,
+      "failed": 60,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 51,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 9,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "pin",
+      "cases": 54,
+      "solved": 0,
+      "failed": 54,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 40,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 14,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "depthClass",
+      "label": "baseline",
+      "cases": 53,
+      "solved": 0,
+      "failed": 53,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 35,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 18,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "sourceCategory",
+      "label": "baseline",
+      "cases": 53,
+      "solved": 0,
+      "failed": 53,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 35,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 18,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "sourceCategory",
+      "label": "replacement",
+      "cases": 42,
+      "solved": 0,
+      "failed": 42,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 32,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 9,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "class:pin",
+      "cases": 39,
+      "solved": 0,
+      "failed": 39,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 25,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 14,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "crystal",
+      "cases": 39,
+      "solved": 0,
+      "failed": 39,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 34,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 4,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "depthClass",
+      "label": "E",
+      "cases": 34,
+      "solved": 0,
+      "failed": 34,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 25,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 8,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "class:crystal",
+      "cases": 24,
+      "solved": 0,
+      "failed": 24,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 19,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 4,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "class:mixed-pin-crystal",
+      "cases": 15,
+      "solved": 0,
+      "failed": 15,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 15,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 0,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "mixed-pin-crystal",
+      "cases": 15,
+      "solved": 0,
+      "failed": 15,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 15,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 0,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "refinement:A",
+      "cases": 9,
+      "solved": 0,
+      "failed": 9,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 1,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 0,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 8,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "refinement:B",
+      "cases": 9,
+      "solved": 0,
+      "failed": 9,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 7,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 2,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "refinement:C",
+      "cases": 9,
+      "solved": 0,
+      "failed": 9,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 6,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 3,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "depthClass",
+      "label": "D",
+      "cases": 7,
+      "solved": 0,
+      "failed": 7,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 6,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 1,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    },
+    {
+      "dimension": "mechanism",
+      "label": "refinement:D",
+      "cases": 6,
+      "solved": 0,
+      "failed": 6,
+      "failureRate": 1,
+      "outcomes": {
+        "SOLVED": 0,
+        "TIMEOUT": 0,
+        "STATE_CAP": 0,
+        "CANDIDATE_CAP": 3,
+        "MEMORY_LIMIT": 0,
+        "SHAPE_UNIVERSE_CAP": 3,
+        "NOT_FOUND_PRUNED": 0,
+        "SEARCH_EXHAUSTED": 0,
+        "ERROR": 0
+      }
+    }
+  ]
+}

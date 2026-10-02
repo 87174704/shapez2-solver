@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "task": "P8-03",
+  "name": "hard-ui-responsiveness-repair-and-acceptance",
+  "date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS / STOPPED",
+  "scope": {
+    "solverSemanticChanges": false,
+    "frozenGateChanged": false,
+    "workloadChanged": false,
+    "realPage": "/en/",
+    "nativeModuleWorkers": true
+  },
+  "attribution": {
+    "failedDiagnosticTimerGapMs": 118.4,
+    "mainThreadTerminalLongTaskMs": 73,
+    "cytoscapeSynchronousCallMs": 72.1,
+    "workerComputeAttributedToMainThread": false,
+    "cause": "repeated solver Cytoscape renderer and stylesheet reconstruction followed by first paint"
+  },
+  "repair": {
+    "yieldAfterWorkerResult": true,
+    "reuseSolverCytoscapeInstance": true,
+    "skipGraphUpdates": false,
+    "mixOrExplorerChanged": false
+  },
+  "formalAcceptance": {
+    "measuredRuns": 60,
+    "correctRuns": 60,
+    "workerHeapCoverage": "60/60",
+    "timerGapGateMs": 100,
+    "ordinaryMaximumMs": 31.6,
+    "interiorCrystalMaximumMs": 97.1,
+    "boundedSearchW1MaximumMs": 30.5,
+    "timerGapBreaches": 0,
+    "maximumPageHeapDriftMiB": 0.377,
+    "maximumWallDriftRatio": 1.3246,
+    "passed": true
+  },
+  "verification": {
+    "fullTests": "198/198",
+    "productionCapability": "159/159",
+    "syntax": "120/120",
+    "headlessLifecycle": "PASS",
+    "headfulLifecycle": "PASS",
+    "solverCopiesByteIdentical": true
+  },
+  "identities": {
+    "solverSha256": "24388AD12CE2B3E29075790F762BA8731FE6015E021A56EFCB184AAD218ED2AD",
+    "harnessSha256": "104888D64FEFC0FEDA435EF7078E7B510CB84F767A2D11581D9E4732BF1212F3",
+    "resultsSha256": "CCB6CB6F6E2812D13FBA35357201D875CB94E58DE84F5A83DFD82D0163BF9C19"
+  },
+  "nextMilestone": "Hard-capable Release Candidate closeout"
+}

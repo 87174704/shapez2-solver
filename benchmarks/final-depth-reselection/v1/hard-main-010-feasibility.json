@@ -1,0 +1,184 @@
+{
+  "targetId": "hard-main-010",
+  "macroClassesSearched": [
+    "pin-mask-crystal-staging",
+    "column-first-assembly",
+    "independent-half-swapper-assembly",
+    "rotated-half-swapper-assembly",
+    "chunked-upper-half-recomposition",
+    "sparse-removable-solid-mask",
+    "sparse-removable-solid-mask-swapper-recomposition"
+  ],
+  "candidateCount": 8,
+  "replayFailures": 6,
+  "shallowCollapses": 1,
+  "deepCandidates": 1,
+  "finalClassification": "DEEP_ROUTE_FOUND",
+  "accepted": {
+    "signature": "405896738655ece7f5377acf409c547ca02fb25e1b76b958825e66b9204da552",
+    "depth": "E",
+    "macroTopology": "sparse-removable-solid-mask-swapper-recomposition",
+    "operationCount": 81,
+    "baselineOperationCount": 50,
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "Stacker",
+      "candidateNode": "Swapper"
+    },
+    "rejoin": {
+      "subtreeSignature": "828d1fa2eda1d4d11bca95c13520e4d0d19e0ec57384257e50b4423ea5be3060",
+      "baselinePath": "result.children[0].children[0].children[1]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "layers"
+    },
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "28b247f573cd1e58176a878272b54f052bc48d220e2acff79c2217c59cb7a319",
+        "candidateSignature": "10f8cf89c5dac82b812a818523c8dad2dc582365d434be1313b3c1486134afb7",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "f8659f9f65064928e1d96c9e72372e6a3c9f40c283f5f9048f4e45b7343d4587",
+        "candidateSignature": "299ee6dd408175a5e894c6d7bca8ab68351b76d35f22e9a4f85006d4dba1a39f",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "7df0cd6632134b3007369d903086b6835b280ba7df2e13aa725d1bc1e5742ffc",
+        "candidateSignature": "93ef3e1e5f0dc7ab5b0f00930e5daf167fcce549ec5efee0866d83d175aee432",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "environmentProfile": {
+      "maxWeightedJaccard": 0.375,
+      "baselineWeightedJaccard": 0.375,
+      "newInputTypeCount": 8,
+      "availableOccurrenceCount": 14,
+      "coreOccurrenceCount": 12
+    }
+  },
+  "attempts": [
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 1,
+      "macroPlanId": "pin-mask-crystal-staging",
+      "macroClass": "pin-mask-crystal-staging",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "macro plan pin-mask-crystal-staging produced XycrXyXc:XmcrXmXc:crcrcrcr instead of XycrXyXc:XmcrXmXc:--cr----"
+    },
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 2,
+      "macroPlanId": "column-first",
+      "macroClass": "column-first-assembly",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "Crystal construction unsupported: no canonical half-scaffold for quadrants 0,1"
+    },
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 3,
+      "macroPlanId": "half-swapper-axis-0",
+      "macroClass": "independent-half-swapper-assembly",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "Crystal construction unsupported: no canonical half-scaffold for quadrants 0,1"
+    },
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 4,
+      "macroPlanId": "half-swapper-axis-1",
+      "macroClass": "rotated-half-swapper-assembly",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "Crystal construction unsupported: no canonical half-scaffold for quadrants 2,3"
+    },
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 5,
+      "macroPlanId": "chunked-upper-half-swapper-1",
+      "macroClass": "chunked-upper-half-recomposition",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "Crystal construction unsupported: no canonical half-scaffold for quadrants 0,1"
+    },
+    {
+      "source": "existing Deep Pass funnel",
+      "candidateId": 6,
+      "macroPlanId": "chunked-upper-half-swapper-2",
+      "macroClass": "chunked-upper-half-recomposition",
+      "replayValid": false,
+      "normalizedDepth": null,
+      "operationCount": null,
+      "reason": "chunked upper route requires two non-empty halves"
+    },
+    {
+      "source": "targeted feasibility exploration",
+      "candidateId": 7,
+      "macroPlanId": "removable-solid-mask-column-extraction-stacker",
+      "macroClass": "sparse-removable-solid-mask",
+      "replayValid": true,
+      "expansionValid": true,
+      "structuralNovel": true,
+      "normalizedDepth": "B",
+      "normalizedDepthEvidence": {
+        "assembly": {
+          "baselineSignature": "28b247f573cd1e58176a878272b54f052bc48d220e2acff79c2217c59cb7a319",
+          "candidateSignature": "28b247f573cd1e58176a878272b54f052bc48d220e2acff79c2217c59cb7a319",
+          "isomorphic": true
+        },
+        "support": {
+          "baselineSignature": "f8659f9f65064928e1d96c9e72372e6a3c9f40c283f5f9048f4e45b7343d4587",
+          "candidateSignature": "f8659f9f65064928e1d96c9e72372e6a3c9f40c283f5f9048f4e45b7343d4587",
+          "isomorphic": true
+        },
+        "stateTransition": {
+          "baselineSignature": "7df0cd6632134b3007369d903086b6835b280ba7df2e13aa725d1bc1e5742ffc",
+          "candidateSignature": "7df0cd6632134b3007369d903086b6835b280ba7df2e13aa725d1bc1e5742ffc",
+          "isomorphic": true
+        },
+        "routingInventoryChanged": false
+      },
+      "operationCount": 81,
+      "signature": "23efc7088a04ae2aee1e723e2f3de5ddd8b357b67bb6cd0a27770a70c1ba63f8",
+      "reason": "structural novelty collapses after whole-graph rotation and source/material normalization"
+    },
+    {
+      "source": "targeted feasibility exploration",
+      "candidateId": 8,
+      "macroPlanId": "removable-solid-mask-column-extraction-swapper",
+      "macroClass": "sparse-removable-solid-mask-swapper-recomposition",
+      "replayValid": true,
+      "expansionValid": true,
+      "structuralNovel": true,
+      "normalizedDepth": "E",
+      "normalizedDepthEvidence": {
+        "assembly": {
+          "baselineSignature": "28b247f573cd1e58176a878272b54f052bc48d220e2acff79c2217c59cb7a319",
+          "candidateSignature": "10f8cf89c5dac82b812a818523c8dad2dc582365d434be1313b3c1486134afb7",
+          "isomorphic": false
+        },
+        "support": {
+          "baselineSignature": "f8659f9f65064928e1d96c9e72372e6a3c9f40c283f5f9048f4e45b7343d4587",
+          "candidateSignature": "299ee6dd408175a5e894c6d7bca8ab68351b76d35f22e9a4f85006d4dba1a39f",
+          "isomorphic": false
+        },
+        "stateTransition": {
+          "baselineSignature": "7df0cd6632134b3007369d903086b6835b280ba7df2e13aa725d1bc1e5742ffc",
+          "candidateSignature": "93ef3e1e5f0dc7ab5b0f00930e5daf167fcce549ec5efee0866d83d175aee432",
+          "isomorphic": false
+        },
+        "routingInventoryChanged": true
+      },
+      "operationCount": 81,
+      "signature": "405896738655ece7f5377acf409c547ca02fb25e1b76b958825e66b9204da552",
+      "reason": "rotation-normalized mechanism/state-transition route differs"
+    }
+  ]
+}

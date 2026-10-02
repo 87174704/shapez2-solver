@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "bounded-best-first-plan-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "BFPS-A",
+    "maxOperations": 28,
+    "maxChartNodes": 80000,
+    "maxExpandedNodes": 30000,
+    "maxCandidateAttempts": 600000,
+    "maxVariantsPerShape": 32,
+    "maxPartnerPool": 512,
+    "maxPartnersPerExpansion": 48,
+    "maxWallMs": 10000
+  },
+  "records": [
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F2",
+      "instanceId": "hard-main-001-53x3-pilot-02",
+      "sourceInstanceSha256": "696f2ebd38902856e9a38c6bfd927d78b0cd1a18a1e023bc3983d0af0180600d",
+      "status": "SOLVED",
+      "solved": true,
+      "replayValid": true,
+      "replayError": null,
+      "operationCount": 10,
+      "maxRssKiB": 225420,
+      "result": {
+        "architecture": "bounded-best-first-plan-synthesis-v1",
+        "architectureConfig": "BFPS-A",
+        "chartNodes": 20526,
+        "expandedNodes": 11061,
+        "candidateAttempts": 75989,
+        "wallMs": 5320.8094,
+        "solutionPath": [
+          {
+            "operation": "Half Destroyer",
+            "inputs": [
+              {
+                "id": 8,
+                "shape": "RuCuWuCu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 10,
+                "shape": "RuCu----"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Swapper",
+            "inputs": [
+              {
+                "id": 4,
+                "shape": "Cu--Ru--"
+              },
+              {
+                "id": 1,
+                "shape": "--CuWuSu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 11,
+                "shape": "Cu--WuSu"
+              },
+              {
+                "id": 12,
+                "shape": "--CuRu--"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 5,
+                "shape": "CuCu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 13,
+                "shape": "CrCr----"
+              }
+            ],
+            "params": {
+              "color": "r"
+            }
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 12,
+                "shape": "--CuRu--"
+              },
+              {
+                "id": 13,
+                "shape": "CrCr----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 14,
+                "shape": "--CuRu--:CrCr----"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator 180",
+            "inputs": [
+              {
+                "id": 14,
+                "shape": "--CuRu--:CrCr----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 15,
+                "shape": "Ru----Cu:----CrCr"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Half Destroyer",
+            "inputs": [
+              {
+                "id": 9,
+                "shape": "RuRuSuCu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 16,
+                "shape": "RuRu----"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 16,
+                "shape": "RuRu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 17,
+                "shape": "RbRb----"
+              }
+            ],
+            "params": {
+              "color": "b"
+            }
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 15,
+                "shape": "Ru----Cu:----CrCr"
+              },
+              {
+                "id": 17,
+                "shape": "RbRb----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 18,
+                "shape": "Ru----Cu:RbRbCrCr"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator CCW",
+            "inputs": [
+              {
+                "id": 18,
+                "shape": "Ru----Cu:RbRbCrCr"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 19,
+                "shape": "----CuRu:RbCrCrRb"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 10,
+                "shape": "RuCu----"
+              },
+              {
+                "id": 19,
+                "shape": "----CuRu:RbCrCrRb"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 20,
+                "shape": "RuCuCuRu:RbCrCrRb"
+              }
+            ],
+            "params": {}
+          }
+        ],
+        "depth": 10,
+        "statesExplored": 20526,
+        "generatedStates": 75989,
+        "outcome": "solved",
+        "beamPruned": false,
+        "architectureStatus": "solved",
+        "resourceMask": "818"
+      },
+      "processExitCode": 0,
+      "processSignal": null,
+      "stderr": null
+    }
+  ]
+}

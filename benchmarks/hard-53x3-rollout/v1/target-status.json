@@ -1,0 +1,3415 @@
+[
+  {
+    "targetId": "hard-main-002",
+    "baselineInstanceId": "hard-main-002-53x1-01",
+    "baselineFamilySignature": "8df3fef2376ca002674b5fe0c581038817362cea3615f1d91301617d32fa8b3f",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "00caced2ff697053cb35e3adea613a63e8f11cb14e4bd45c936c8394542685db",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5555555555555556,
+          "baselineWeightedJaccard": 0.5555555555555556,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 79
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "a1692c0fe75d42dc07cb4706c12141c511c89a7ef997d75f5a69deacd1d6fb14",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Cutter:SuCu----",
+              "Rotator 180:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8571428571428571,
+          "baselineWeightedJaccard": 0.5555555555555556,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 80
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 49,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-003",
+    "baselineInstanceId": "hard-main-003-53x1-01",
+    "baselineFamilySignature": "8dfe2b0d0f303efca277c57480058dc9681a70459990fd07ee95664578886026",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "a3dc62da0dc4cacc550501763f0e0ab69e2f4a77dbfa0d01e3b02e367d8ea924",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 102
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "b441509cbd0d01d9a37354cc52c882c62bfc3dbc5dd047e557e0da542676c56d",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 101
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-004",
+    "baselineInstanceId": "hard-main-004-53x1-01",
+    "baselineFamilySignature": "d6cdeb0b0903a2647ba562c6ab6fdfea690c7f4db82d4f916cfc6539e3fe1d74",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "45a7ac8aec94d344c9d115699ad5b62174041b99ba1f0478ec62a31f847b4521",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.4166666666666667,
+          "baselineWeightedJaccard": 0.4166666666666667,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 7,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 40
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "90f08f54ba83f99421e557880dd4c371e42f1c6bf471c6be9dfa246002b2d6a6",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.4166666666666667,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 7,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 40
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 50,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-006",
+    "baselineInstanceId": "hard-main-006-53x1-01",
+    "baselineFamilySignature": "61fbe3d6f8ea01f0710a4370e7a2ed79910625eea42a312e155d95959d126356",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "f90259cfd147f6d9bea208e516b975b40586bb08aed81097e0b6c6a62f597786",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5714285714285714,
+          "baselineWeightedJaccard": 0.5714285714285714,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 57
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f6b063f745d627a0ca09d022ec36d57adb1d85c4d7f252ed4b555984dc977988",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6923076923076923,
+          "baselineWeightedJaccard": 0.5714285714285714,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 57
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-009",
+    "baselineInstanceId": "hard-main-009-53x1-01",
+    "baselineFamilySignature": "f3863184190561904a20d809e210fb8733c73284fd8c798cb6e6296c2b255e39",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "719393d06692095efcba2176ad0b407895a70d086a69b40570520b2ea43c9618",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "--CuWuSu",
+            "presentedInputs": [
+              "CuCu----",
+              "RuSuWuSu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCu----",
+              "Cutter:RuSuWuSu",
+              "Swapper:--CuCu--+----WuSu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.4444444444444444,
+          "baselineWeightedJaccard": 0.4444444444444444,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 7,
+          "coreOccurrenceCount": 5,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 14,
+        "operationCount": 49
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f555b0d0d6dfebc3d531257cb98851a2a7ba062d20dcde2bda2fe0fe8cf7d821",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "--RuRuWu",
+            "presentedInputs": [
+              "Cu--Ru--",
+              "RuWu--Su"
+            ],
+            "derivation": [
+              "Rotator CCW:Cu--Ru--",
+              "Cutter:RuWu--Su",
+              "Rotator 180:RuWu----",
+              "Swapper:--Ru--Cu+----RuWu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.4444444444444444,
+          "baselineWeightedJaccard": 0.4444444444444444,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 7,
+          "coreOccurrenceCount": 5,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 12,
+        "operationCount": 50
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 2,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-011",
+    "baselineInstanceId": "hard-main-011-53x1-01",
+    "baselineFamilySignature": "849927faac65f08b6ccd8d0741463ae3192d52e4a67d5c3fe0f10f12119c6923",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "8b0dd1c6844441caf1c0668fba119f7a30b118fa092ce3a36b9fac074c372645",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6923076923076923,
+          "baselineWeightedJaccard": 0.6923076923076923,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 21,
+          "coreOccurrenceCount": 20,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 20,
+        "operationCount": 145
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "d72f4f3d033811c71f62d263c3855ac8a2063a84153329d798283d517561f2c6",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuSuRuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuSuSuRu",
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.9090909090909091,
+          "baselineWeightedJaccard": 0.6923076923076923,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 21,
+          "coreOccurrenceCount": 20,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 20,
+        "operationCount": 145
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-001",
+    "baselineInstanceId": "hard-side-001-53x1-01",
+    "baselineFamilySignature": "68c30f3b123a277323febc793dad36af7b1790bbcd01a5a87ce6c30d6e3c41f4",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "ba72027dcf1de9023ad15f3a0a1c10b756b3a26724f7f6eeb47bf7154b48c6fe",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5333333333333333,
+          "baselineWeightedJaccard": 0.5333333333333333,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 53
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "5d4bc0fc3041c854988342ce318bacdc18846b9f6962f986c8feecf6b1686069",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6923076923076923,
+          "baselineWeightedJaccard": 0.5333333333333333,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 52
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-002",
+    "baselineInstanceId": "hard-side-002-53x1-01",
+    "baselineFamilySignature": "e296d31d752d995f4bd4dce409d51c4a6129ddd0ee34dff434a27397dc9e1d81",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "37b5211aa59ab6fc76eea52982233e9e5d941ea1649b541fb262088c99b93737",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5,
+          "baselineWeightedJaccard": 0.5,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 49
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "22a3bafc4edfffecdd1c6a91282ad7271217808c216dd2b8dad21074f6fb2cca",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6923076923076923,
+          "baselineWeightedJaccard": 0.5,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 48
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-004",
+    "baselineInstanceId": "hard-side-004-53x1-01",
+    "baselineFamilySignature": "fd2cebfa40be54fe3dcb9f361363f3d6418f032746be77fb0c3b192b130f5a47",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "0cd6fe3fefa2d981b0e9be78f148da05ed5f885bde8938a30001a8b1d5c315f1",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5625,
+          "baselineWeightedJaccard": 0.5625,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 57
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "34966c9fc9869ba56b0b506fe0a2175a95e7adcb364a629e2fc2342c2470875a",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7142857142857143,
+          "baselineWeightedJaccard": 0.5625,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 56
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-005",
+    "baselineInstanceId": "hard-side-005-53x1-01",
+    "baselineFamilySignature": "5ec610ccdab7b846b76a858673880a63a667387ca3c89bee46745614be06d503",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "48df7ee6ea7c884d4ed1e9eb9fb58a22a46fe6a2c342090146614c99add0a346",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.42857142857142855,
+          "baselineWeightedJaccard": 0.42857142857142855,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 9,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 43
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "cbbab8fdab1c18148a1d6b6ba9ed7793178013cf3db83b87a38a60402ebc6c27",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6363636363636364,
+          "baselineWeightedJaccard": 0.42857142857142855,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 9,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 9,
+        "operationCount": 43
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 43,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-006",
+    "baselineInstanceId": "hard-side-006-53x1-01",
+    "baselineFamilySignature": "1236d48f089ffa36acbf138a99646905d2e56e45609e201b9061bc0c42c1e361",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "f1f85168167bc726716ff93079f15e5010315e0df012079f6f0a896274f72062",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuSuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.625,
+          "baselineWeightedJaccard": 0.625,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 78
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f27dc4f19da82ba4498761fa8fffebbd3a027be1bb2fd73f1c17a0e6f72ba018",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7333333333333333,
+          "baselineWeightedJaccard": 0.625,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 79
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 23,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-007",
+    "baselineInstanceId": "hard-side-007-53x1-01",
+    "baselineFamilySignature": "e658e0de1f2d24d2bacf816582c0d450d4ec0a67dbc9cfa78d1d1ef34781434d",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "af1d82743a523aae975aabc3744618eb6100c38d7fcb9b1e533a65fbca1a6a00",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuSuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.65,
+          "baselineWeightedJaccard": 0.65,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 16,
+          "coreOccurrenceCount": 15,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 94
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "59939a58acf3e7deb3ed8908f3844df83a9050e0d48797684e3704cec8abbc44",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7777777777777778,
+          "baselineWeightedJaccard": 0.65,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 16,
+          "coreOccurrenceCount": 15,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 95
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 7,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-008",
+    "baselineInstanceId": "hard-side-008-53x1-01",
+    "baselineFamilySignature": "253d96eaaa490fea97ef2c7a1a8d981a5e9dbdcd3904e64c8d17bbbaf9aaf71f",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "46f7d215225282f73f21cd94a79b226b1798d829628da6e245eb56a5ad376fba",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 90
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "6b44af8e2ec76d72549644f0a68166723c9682c9ced948b2e230f55ffaf62a2b",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7647058823529411,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 90
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 47,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-009",
+    "baselineInstanceId": "hard-side-009-53x1-01",
+    "baselineFamilySignature": "14f6f8ab3101484ae912c9a81cca9f80cf8fcb108bee54f4a9b3a6dd652aa8b3",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "69230cdce1d73d7d41c1caa4cc422fa03f0000fe254077942fd515e7eb65fd12",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6666666666666666,
+          "baselineWeightedJaccard": 0.6666666666666666,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 87
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "991c5842592385da9bcad633a4816ac3eae0b111b1297291820860caca3b00f5",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSuSu--"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.875,
+          "baselineWeightedJaccard": 0.6666666666666666,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 87
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 24,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-010",
+    "baselineInstanceId": "hard-side-010-53x1-01",
+    "baselineFamilySignature": "98ef70b50e29c21b2bdb9d962a97a3388fefa2692db55eabf37968902dc3ecdb",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "09a86dc3454ea3b885e75c89f45a69aa8470f57de758a84ea882f3e290430f98",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.631578947368421,
+          "baselineWeightedJaccard": 0.631578947368421,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 83
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "98079178985c0d5d2ec63d40bfd058fde94cd1a89f01a83c3c62876b87dfd246",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuSuRuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuSuSuRu",
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.875,
+          "baselineWeightedJaccard": 0.631578947368421,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 83
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-011",
+    "baselineInstanceId": "hard-side-011-53x1-01",
+    "baselineFamilySignature": "9f23d62be84e847d5c8c4cf038d3ef13348c4ff4b90e3aef24146c038cd69361",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "aa6c748150c5ca09be4e5b19465019f3a690528bf26f38a6796e804ece1a1ce9",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6363636363636364,
+          "baselineWeightedJaccard": 0.6363636363636364,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 98
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "e0900e839f91a4d8e77ebcc4aa2aa152be19edde3d1a7ba77c68b5f5cf247ba1",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.6363636363636364,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 97
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-012",
+    "baselineInstanceId": "hard-side-012-53x1-01",
+    "baselineFamilySignature": "246e14f9cec78821e495927ecde83aec5273d509edd99ca768c1d61f4606fa37",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "8e8fc495f719c91cccc049986a3f9d28c704f834f84ff6fe756ff28cc018ce8f",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 14,
+        "operationCount": 99
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "9c83da49ddf7384ca3e296d45027dd2e0245f9a98ac07d21cbb8a042e26544b9",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 98
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-013",
+    "baselineInstanceId": "hard-side-013-53x1-01",
+    "baselineFamilySignature": "fc299dc7f7caee8caf74ce3da6b39fe3595722b39a33a12ff81493063b89c205",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "7877de77999b33ee8f9ffdb809d9f766c7ad0edaeb2dc0072ad88075544242ea",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5882352941176471,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 82
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "4ef27babb2f56b29db449fe76a6c5f84dcc50dcfb7898eeffd3e25ce1a3d2f63",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7333333333333333,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 82
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 50,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-014",
+    "baselineInstanceId": "hard-side-014-53x1-01",
+    "baselineFamilySignature": "14bdd3221dd74c842938d08e104a59ef1d4ee14aa2686559eada1d9d03362521",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "b20b80c0649dbf0387eb18ff6f9e44dd1a7ed1916f7937dd1177be74e7b9dcc0",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 79
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "808bdd7a4730b3be336bb230ae999c159629daf55adcb1e58dfbbbf3c4f48399",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7647058823529411,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 78
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-015",
+    "baselineInstanceId": "hard-side-015-53x1-01",
+    "baselineFamilySignature": "2a1bafa75bfe2da8c161b60e9d2870c27fde4e173cbf2dcfb73ad861e656673b",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "4cef81cfc135f7032ca0537d9576e98c20f6a5d4490da9002442df3b9db7b48d",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 101
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "3db6171af138543ae027000a7acdbcd102e50028a58a4dc17451944782687969",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 100
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-016",
+    "baselineInstanceId": "hard-side-016-53x1-01",
+    "baselineFamilySignature": "207ba0dac5230bbf6ccff0f1deb8097e6bbbe3c0b5d79a9d794990ccd85e69ab",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "76b5fbef51595b561588f8810416b6d886040bc543483094601d43a50eb9cc54",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6666666666666666,
+          "baselineWeightedJaccard": 0.6666666666666666,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 110
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f8bfd1c312fe7aee3f6a3aa463b1fb6d73ff71df77ae3fe723b389be1588f640",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuSuRuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuSuSuRu",
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8888888888888888,
+          "baselineWeightedJaccard": 0.6666666666666666,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 110
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-017",
+    "baselineInstanceId": "hard-side-017-53x1-01",
+    "baselineFamilySignature": "2287f0f25cd4f6f941440fef9ed9a10d1dce2145d5dc73c2258ea9aee96c2d87",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "5c8d613a24fdb1a0d82ee44e5f00e887b608277cc03955332711e036be1deee3",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6363636363636364,
+          "baselineWeightedJaccard": 0.6363636363636364,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 106
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f76f4a8fc107d9e9aa56550f2d4cc165fd824e94d2e1fcead72aabfa3ea7df6e",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.6363636363636364,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 105
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-018",
+    "baselineInstanceId": "hard-side-018-53x1-01",
+    "baselineFamilySignature": "3caa24e9fedbb7c62fda96c5b5f545ee11a590f7ee7f5c06e0820265d8b1551f",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "80a36f10a2d3bc84fd445fff219aa2ad9e51e391fa04655e6629b6286f447626",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6842105263157895,
+          "baselineWeightedJaccard": 0.6842105263157895,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 16,
+          "coreOccurrenceCount": 15,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 105
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "2c48860fbdcc3e79d0c25101d9883885c93dd979dff210d7e4ccdc0d128dc028",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7777777777777778,
+          "baselineWeightedJaccard": 0.6842105263157895,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 16,
+          "coreOccurrenceCount": 15,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 104
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-019",
+    "baselineInstanceId": "hard-side-019-53x1-01",
+    "baselineFamilySignature": "dc26ef540056f0d07d755baf92a5e76c2195a8e27e3cce39352589e14137cba5",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "e53769e617b9fdadabf0d7b3f3aec10cb439b030c9e03d9bf98cef011724c2c1",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5625,
+          "baselineWeightedJaccard": 0.5625,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 71
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "b7d322d7dbf0e7d136d914b7c2e69678781e321c1c2df9a0430bfdf3f75126de",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7142857142857143,
+          "baselineWeightedJaccard": 0.5625,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 71
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 43,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-020",
+    "baselineInstanceId": "hard-side-020-53x1-01",
+    "baselineFamilySignature": "fab4ec8bd6388bc438f0732404f3afdf46736d06441350e016dd03811586a89f",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "99304a10a902dc7be91f52bb8c28c1d6da1f3956213f54a3f1fafab47019e93c",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuSuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 85
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "a8e53bebec2784749fbae54cd96a50ead9a31600ffa4c26315062433a616ba76",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7647058823529411,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 86
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 7,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-022",
+    "baselineInstanceId": "hard-side-022-53x1-01",
+    "baselineFamilySignature": "58959580088651f2f3624b5c95a80853469ce6cc9e7a504ca4e6fe73538cf2bc",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "1b26e262c0175d13260d4dbbcc4d5e35d9aad5e7cf1a5bc96ea1e5e93ec90b3c",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5882352941176471,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 77
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "b848df1459ad39677be95a2de77ee30cf0eed77ab78811fae2dd6521f78a7d05",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7333333333333333,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 10,
+        "operationCount": 76
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-023",
+    "baselineInstanceId": "hard-side-023-53x1-01",
+    "baselineFamilySignature": "aafd437c0f3bb5e96618425aadf952f1abaf1d3bfa4e047536a7b15ad2548e44",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "794bf36543ab597438d4ad724d4bb123911f2fc9b3f813d17af17347257a2b04",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 93
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "a32ed4563f00f6f2161b9634a89e61b7774174939c43fe1e653bc479e6dcc876",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7647058823529411,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 92
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-024",
+    "baselineInstanceId": "hard-side-024-53x1-01",
+    "baselineFamilySignature": "2e67e11ef68c64cf8f780580f6b61e102e11d6d261db25cd966c6ef3574b9551",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "db728361f823b1a4a4fb58b5e36a3b7108bae763590e89a00ebf17fceb3e7f5c",
+        "strategy": "source-ancestry variation",
+        "diversityDepth": "source-ancestry variation",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6428571428571429,
+          "baselineWeightedJaccard": 0.6428571428571429,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 70
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "cd4e8728260d213bc64d499c3841234c685e9b65064c98074e2cf5fadca447b8",
+        "strategy": "source-ancestry variation",
+        "diversityDepth": "source-ancestry variation",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8461538461538461,
+          "baselineWeightedJaccard": 0.6428571428571429,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 70
+      }
+    ],
+    "candidateCount": 14,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-025",
+    "baselineInstanceId": "hard-side-025-53x1-01",
+    "baselineFamilySignature": "cc1611ec2122335f9e7e1e65d079eb437cde6af8dd7d8550418c80b8db51624d",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "f004785f132e1de9724b9ab913c4e9dd6df147aa2f65eae54e7e0184e533300b",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSuSu--"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.46153846153846156,
+          "baselineWeightedJaccard": 0.46153846153846156,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 9,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 51
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "4008494a14f7d58e934297cbf7d3d220ffa3c2e2612716c79b1ba5bfafc67094",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8,
+          "baselineWeightedJaccard": 0.46153846153846156,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 9,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 52
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 19,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-026",
+    "baselineInstanceId": "hard-side-026-53x1-01",
+    "baselineFamilySignature": "583d4fa248006e751872426682fb35e4c2e03baa36d94ac0896425bf0544b365",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "6c506f84b3f4e0e831dec9d96f2045701f12f45815a95e53773af604c6c34a1e",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5555555555555556,
+          "baselineWeightedJaccard": 0.5555555555555556,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 72
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "622d69d1ec95edc9f40ee92c27e1905a86d7a577048d218463cbf06f2a340d0a",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSuSu--"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8571428571428571,
+          "baselineWeightedJaccard": 0.5555555555555556,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 72
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 24,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-027",
+    "baselineInstanceId": "hard-side-027-53x1-01",
+    "baselineFamilySignature": "bc60c081d60ef74eac4e84b955ea3783a0ffb235329cb2e7df3b8736c6b2c7d3",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "b0b7dfb829afda69fe1ec01b77c6d662a7668f4e236412bc60ddd1d2c71823a6",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 104
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "1374ab7dc1a35e8331429b70f592189454084e898567a6e06f8b1b6abc19a652",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7894736842105263,
+          "baselineWeightedJaccard": 0.7,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 17,
+          "coreOccurrenceCount": 16,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 103
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-028",
+    "baselineInstanceId": "hard-side-028-53x1-01",
+    "baselineFamilySignature": "5d651f24bf6309ebe797f7ab5a9d4f2394c8c33aa0de58c5cd1181d5dd3c69ed",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "461437ddf371baef403a779729a09034d554502a31614305c706631f238a6d22",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5882352941176471,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 81
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "3593bb15d418760c847e84fb8ed15890fbb962b376d4690fbf7788cbe67cb9d9",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7333333333333333,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 12,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 12,
+        "operationCount": 81
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 47,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-029",
+    "baselineInstanceId": "hard-side-029-53x1-01",
+    "baselineFamilySignature": "95ccbe02cc68b5cc827acab42eb135c6a6ac21fab409702659dd286f98a04fc8",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "7c8883a8a5255609821cadf7b200f7d22ab2bcaa527d39d069c3f85aa9977442",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7857142857142857,
+          "baselineWeightedJaccard": 0.7857142857142857,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 24,
+          "coreOccurrenceCount": 23,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 23,
+        "operationCount": 169
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "e595b864f3439515afb13711ef702b71fcfade932586d875c10cf0ca389edc75",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8461538461538461,
+          "baselineWeightedJaccard": 0.7857142857142857,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 24,
+          "coreOccurrenceCount": 23,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 23,
+        "operationCount": 168
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 18,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-030",
+    "baselineInstanceId": "hard-side-030-53x1-01",
+    "baselineFamilySignature": "51dbd9b4ce5c15f14783b7171e1f7ecebf762f45d98f6693d1d1d03e8017778e",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "a8f538abb7d18f818a500a8ca4776f7d6e43c3373c5a62c4d757e1e68818c9a6",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7692307692307693,
+          "baselineWeightedJaccard": 0.7692307692307693,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 23,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 137
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "f9994db84b363060d4aae300f707be958779247ea586639b936aea8b3052eba7",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.9166666666666666,
+          "baselineWeightedJaccard": 0.7692307692307693,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 23,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 137
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 7,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-031",
+    "baselineInstanceId": "hard-side-031-53x1-01",
+    "baselineFamilySignature": "e92ca92beaeedfaf13df9230825dcfdf2c444435940b5bfe59c184a4313cf128",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "c52b0eaddabb0453c7906846cbe2f8a8fa115e3662ef7797aae72f0a083458d0",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6956521739130435,
+          "baselineWeightedJaccard": 0.6956521739130435,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 19,
+          "coreOccurrenceCount": 18,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 15,
+        "operationCount": 120
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "92f2587b8d94dc4de7eb0ca25c412fdedd54a1d48454c9f86794512b55cf9b9e",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuSuRuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuSuSuRu",
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.9,
+          "baselineWeightedJaccard": 0.6956521739130435,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 19,
+          "coreOccurrenceCount": 18,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 15,
+        "operationCount": 120
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-032",
+    "baselineInstanceId": "hard-side-032-53x1-01",
+    "baselineFamilySignature": "cd77cb573c5593daec6fe1a34f38fbc5fe83a663b97f25ff026ae7f95e4450a1",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "b0117ff6faef8dd7f7102718192919d31aff1b0f8c130b184322116cc23e77b1",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7333333333333333,
+          "baselineWeightedJaccard": 0.7333333333333333,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 25,
+          "coreOccurrenceCount": 24,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 15,
+        "operationCount": 157
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "a5134e117d27f7fc10a371a5ef19fdfbd4f2b8f2115d2ab110456d6e9828dc71",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8518518518518519,
+          "baselineWeightedJaccard": 0.7333333333333333,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 25,
+          "coreOccurrenceCount": 24,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 15,
+        "operationCount": 156
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-034",
+    "baselineInstanceId": "hard-side-034-53x1-01",
+    "baselineFamilySignature": "560af1fd6290043e3315615a1386373b2b5320998da5172a507892d1b2600d7b",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "2603b1ab5d1ebccb150f10f5ee9ebb75751302343a09a6aa0237446fe5fc1347",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7407407407407407,
+          "baselineWeightedJaccard": 0.7407407407407407,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 23,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 127
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "9cbe2512d9c666ca366e1828a5b3b6ac88d03931aefa2414aa026001e83181e0",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSuSu--"
+            ],
+            "derivation": [
+              "Cutter:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.84,
+          "baselineWeightedJaccard": 0.7407407407407407,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 23,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 13,
+        "operationCount": 126
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 18,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-037",
+    "baselineInstanceId": "hard-side-037-53x1-01",
+    "baselineFamilySignature": "0f9f0a4ef2719a5886a24b82c37bffadeec341dfb8d00d0c7d59d868c9cdfc54",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "5a4560a4a5848ac2e6c17f62c8b8109c5ecb4e8f49a75512dc87354f8e5d27d3",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6111111111111112,
+          "baselineWeightedJaccard": 0.6111111111111112,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 14,
+          "coreOccurrenceCount": 13,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 82
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "76e7188e80a6ac85fd8efc7f5d2cb12703436b34db0f0eb053cd91ded0db3df8",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.75,
+          "baselineWeightedJaccard": 0.6111111111111112,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 14,
+          "coreOccurrenceCount": 13,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 82
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 50,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-038",
+    "baselineInstanceId": "hard-side-038-53x1-01",
+    "baselineFamilySignature": "c5289129bbc195106edc63d177373c0bacbc4bc4b1198da3b250b9e4c0ad4663",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "7d4bc06dd6c5ac417e12602b11b53b3e3717a0cc11bf43ef0e82f46fc0b1a341",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.75,
+          "baselineWeightedJaccard": 0.75,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 20,
+          "coreOccurrenceCount": 19,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 21,
+        "operationCount": 131
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "c9c580dbaeeddaeeb449a91fcbc2365b5905fd3c482ab237cf857294b3b96540",
+        "strategy": "preprocessing topology",
+        "diversityDepth": "preprocessing topology",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8181818181818182,
+          "baselineWeightedJaccard": 0.75,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 20,
+          "coreOccurrenceCount": 19,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 21,
+        "operationCount": 130
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 17,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-039",
+    "baselineInstanceId": "hard-side-039-53x1-01",
+    "baselineFamilySignature": "63791c997668ab3b3e9e10a728acffdeabca93fa892aa0452ecebeceb2841dc4",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "8e2523b3506e46fa4575f1af08e06df8038d99b48245f4b937ac3629e322e1f0",
+        "strategy": "source-ancestry variation",
+        "diversityDepth": "source-ancestry variation",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6428571428571429,
+          "baselineWeightedJaccard": 0.6428571428571429,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 67
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "692d32bb24e273e1dad4169d7321a6ba517ca1f6f1b0aa4f4f77c125daf5c75d",
+        "strategy": "source-ancestry variation",
+        "diversityDepth": "source-ancestry variation",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8461538461538461,
+          "baselineWeightedJaccard": 0.6428571428571429,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 10,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 67
+      }
+    ],
+    "candidateCount": 14,
+    "duplicateRejectionCount": 12,
+    "replayInvalidCount": 0,
+    "expansionInvalidCount": 0,
+    "failureCategory": null
+  }
+]

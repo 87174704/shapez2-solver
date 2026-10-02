@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/benchmark-artifact.v3.schema.json",
+  "title": "Shapez 2 Solver Benchmark Artifact v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "benchmarkInstanceSchemaVersion", "name", "releaseId", "suite", "partition", "targetIds", "candidateCount", "acceptedCount", "rejectedCount", "instances", "sha256"],
+  "properties": {
+    "schemaVersion": { "const": 3 },
+    "benchmarkInstanceSchemaVersion": { "const": 3 },
+    "name": { "type": "string", "minLength": 1 },
+    "releaseId": { "type": "string", "minLength": 1 },
+    "suite": { "const": "hard" },
+    "partition": { "$ref": "#/$defs/partition" },
+    "targetIds": { "type": "array", "items": { "type": "string", "pattern": "^hard-(main|side)-[0-9]{3}$" }, "uniqueItems": true },
+    "candidateCount": { "type": "integer", "minimum": 0 },
+    "acceptedCount": { "type": "integer", "minimum": 0 },
+    "rejectedCount": { "type": "integer", "minimum": 0 },
+    "instances": { "type": "array", "items": { "$ref": "benchmark-instance.v3.schema.json" } },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "partition": { "enum": ["expansion-pilot", "development", "validation", "holdout"] }
+  }
+}

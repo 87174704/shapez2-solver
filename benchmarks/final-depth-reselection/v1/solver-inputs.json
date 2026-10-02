@@ -1,0 +1,881 @@
+{
+  "schemaVersion": 1,
+  "sourceReleaseId": "hard-final-depth-reselection-candidates-v1",
+  "suite": "hard",
+  "partition": "expansion-pilot",
+  "instances": [
+    {
+      "id": "hard-main-005-final-depth-reselection",
+      "track": "main",
+      "targetId": "hard-main-005",
+      "target": "P-CcRcCc:P-CwRwCw:RwWrP-Wr:P---Wr--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-006-final-depth-reselection",
+      "track": "main",
+      "targetId": "hard-main-006",
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-007-final-depth-reselection",
+      "track": "main",
+      "targetId": "hard-main-007",
+      "target": "WwcbWwcb:P-cwP-cw:WgP---P-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 3
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 2
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 3
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 2
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 2
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 2
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 2
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "WuCu----",
+          "count": 2
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        },
+        {
+          "shape": "WuWuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-022-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-022",
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-023-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-023",
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-025-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-025",
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-026-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-026",
+      "target": "WyP-P-P-:SyCuSuCu:WuWuWwWu:--P-CuP-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-028-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-028",
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-031-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-031",
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-035-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-035",
+      "target": "crcrcrcr:WrCwXrCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-036-final-depth-reselection",
+      "track": "side",
+      "targetId": "hard-side-036",
+      "target": "XbCyCyCy:WyP-CwP-:----Cr--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-010-final-depth-feasibility",
+      "track": "main",
+      "targetId": "hard-main-010",
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    }
+  ],
+  "sha256": "13932fad89c0d6ee83d55d9e50d24217fb402066f50b98c4e4358b13fe641321"
+}

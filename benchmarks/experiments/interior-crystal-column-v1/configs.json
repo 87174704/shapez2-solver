@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "interior-crystal-column-decomposition-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "frontierExperimentId": "unsupported-crystal-resource-pool-activation-v1",
+  "frontierStableSolved": 156,
+  "frontierStableDistinctTargets": 52,
+  "configurations": [
+    {
+      "id": "ICCDCS-A",
+      "maxExtractionOperations": 8,
+      "maxExtractionStates": 180000,
+      "maxMatchingTransitions": 750000,
+      "maxOperations": 768,
+      "maxWallMs": 12000
+    }
+  ]
+}

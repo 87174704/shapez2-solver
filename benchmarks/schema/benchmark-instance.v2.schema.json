@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/benchmark-instance.v2.schema.json",
+  "title": "Shapez 2 Solver Benchmark Instance v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "suite", "track", "targetId", "target", "partition", "inputs", "rules", "provenance", "construction", "witness", "difficulty", "diversity", "instanceSha256"],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "id": { "type": "string", "minLength": 1 },
+    "suite": { "const": "hard" },
+    "track": { "enum": ["main", "side"] },
+    "targetId": { "type": "string", "pattern": "^hard-(main|side)-[0-9]{3}$" },
+    "target": { "$ref": "#/$defs/shapeCode" },
+    "partition": { "enum": ["pilot", "coverage-pilot", "development", "validation", "holdout"] },
+    "inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["shape", "count"],
+        "properties": {
+          "shape": { "$ref": "#/$defs/shapeCode" },
+          "count": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maxLayers", "cleanPainting", "allowSplitting"],
+      "properties": {
+        "maxLayers": { "const": 4 },
+        "cleanPainting": { "type": "boolean" },
+        "allowSplitting": { "const": false }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["releaseId", "generatorVersion", "generatorSourceSha256", "targetSha256", "officialTargetsSha256", "catalogVersion", "catalogSha256", "inputSeedIdentity", "inputSeedSha256", "gameSemanticsId", "gameSemanticsSha256"],
+      "properties": {
+        "releaseId": { "type": "string", "minLength": 1 },
+        "generatorVersion": { "type": "string", "minLength": 1 },
+        "generatorSourceSha256": { "$ref": "#/$defs/sha256" },
+        "targetSha256": { "$ref": "#/$defs/sha256" },
+        "officialTargetsSha256": { "$ref": "#/$defs/sha256" },
+        "catalogVersion": { "type": "integer", "minimum": 1 },
+        "catalogSha256": { "$ref": "#/$defs/sha256" },
+        "inputSeedIdentity": { "type": "string", "minLength": 1 },
+        "inputSeedSha256": { "$ref": "#/$defs/sha256" },
+        "gameSemanticsId": { "type": "string", "minLength": 1 },
+        "gameSemanticsSha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "construction": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["strategy"],
+      "properties": { "strategy": { "type": "string", "minLength": 1 } }
+    },
+    "witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initial", "steps", "resultId"],
+      "properties": {
+        "initial": { "type": "array", "items": { "$ref": "#/$defs/token" } },
+        "steps": { "type": "array", "items": { "$ref": "#/$defs/step" } },
+        "resultId": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "difficulty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["witnessDepth", "operationCount", "operationCounts", "cutCount", "stackCount", "splitCount", "inputTypes", "inputMultiplicity", "maxInputMultiplicity", "refinementGroup", "liveWasteCount", "targetLayers", "targetOccupiedParts", "structuralTags"],
+      "properties": {
+        "witnessDepth": { "type": "integer", "minimum": 0 },
+        "operationCount": { "type": "integer", "minimum": 0 },
+        "operationCounts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 1 } },
+        "cutCount": { "type": "integer", "minimum": 0 },
+        "stackCount": { "type": "integer", "minimum": 0 },
+        "splitCount": { "const": 0 },
+        "inputTypes": { "type": "integer", "minimum": 1 },
+        "inputMultiplicity": { "type": "integer", "minimum": 1 },
+        "maxInputMultiplicity": { "type": "integer", "minimum": 1 },
+        "refinementGroup": { "type": ["string", "null"] },
+        "liveWasteCount": { "type": "integer", "minimum": 0 },
+        "targetLayers": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "targetOccupiedParts": { "type": "integer", "minimum": 1 },
+        "structuralTags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "diversity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["inputMultisetSignature", "structureVersion", "structureSignature", "classification", "duplicateOf", "maxPriorWeightedJaccard"],
+      "properties": {
+        "inputMultisetSignature": { "type": "string" },
+        "structureVersion": { "const": "causal-construction-v3" },
+        "structureSignature": { "$ref": "#/$defs/sha256" },
+        "classification": { "enum": ["representative", "structural-duplicate"] },
+        "duplicateOf": { "type": ["string", "null"] },
+        "maxPriorWeightedJaccard": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "instanceSha256": { "$ref": "#/$defs/sha256" }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "shapeCode": { "type": "string", "pattern": "^[A-Za-z-]{8}(:[A-Za-z-]{8}){0,3}$" },
+    "token": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "shape"],
+      "properties": {
+        "id": { "type": "integer", "minimum": 0 },
+        "shape": { "$ref": "#/$defs/shapeCode" }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "inputs", "outputs", "params"],
+      "properties": {
+        "operation": { "enum": ["Splitter", "Rotator CW", "Rotator CCW", "Rotator 180", "Half Destroyer", "Cutter", "Swapper", "Stacker", "Painter", "Pin Pusher", "Crystal Generator"] },
+        "inputs": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 1, "maxItems": 2 },
+        "outputs": { "type": "array", "items": { "$ref": "#/$defs/token" } },
+        "params": { "type": "object" }
+      }
+    }
+  }
+}

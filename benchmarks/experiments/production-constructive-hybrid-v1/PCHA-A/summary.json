@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "production-constructive-hybrid-activation-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "PCHA-A",
+    "maxExtractionOperations": 8,
+    "maxExtractionStates": 180000,
+    "maxMatchingTransitions": 750000,
+    "maxOperations": 768,
+    "maxWallMs": 12000
+  },
+  "memberCount": 159,
+  "counts": {
+    "SOLVED": 159
+  },
+  "solved": 159,
+  "replayValidSolved": 159,
+  "repeated": 159,
+  "stableSolved": 159,
+  "stableDistinctTargets": 53,
+  "publicRouteSolved": 159,
+  "pathIdenticalRepeats": 159,
+  "exactFrontierPaths": 159,
+  "resourceReuse": 0,
+  "invalidReplay": 0,
+  "accept": true,
+  "provisional": false,
+  "reject": false
+}

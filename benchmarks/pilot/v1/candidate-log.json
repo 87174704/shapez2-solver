@@ -1,0 +1,152 @@
+[
+  {
+    "targetId": "hard-side-006",
+    "attempt": 1,
+    "accepted": true,
+    "id": "hard-side-006-pilot-01"
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 2,
+    "accepted": true,
+    "id": "hard-side-006-pilot-02"
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 3,
+    "accepted": true,
+    "id": "hard-side-006-pilot-03"
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 4,
+    "accepted": true,
+    "id": "hard-side-006-pilot-04"
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 5,
+    "accepted": true,
+    "id": "hard-side-006-pilot-05"
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 1,
+    "accepted": true,
+    "id": "hard-side-007-pilot-01"
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 2,
+    "accepted": true,
+    "id": "hard-side-007-pilot-02"
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 3,
+    "accepted": true,
+    "id": "hard-side-007-pilot-03"
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 4,
+    "accepted": true,
+    "id": "hard-side-007-pilot-04"
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 5,
+    "accepted": true,
+    "id": "hard-side-007-pilot-05"
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 1,
+    "accepted": true,
+    "id": "hard-side-018-pilot-01"
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 2,
+    "accepted": true,
+    "id": "hard-side-018-pilot-02"
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 3,
+    "accepted": true,
+    "id": "hard-side-018-pilot-03"
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 4,
+    "accepted": true,
+    "id": "hard-side-018-pilot-04"
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 5,
+    "accepted": true,
+    "id": "hard-side-018-pilot-05"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 1,
+    "accepted": true,
+    "id": "hard-side-021-pilot-01"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 2,
+    "accepted": true,
+    "id": "hard-side-021-pilot-02"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 3,
+    "accepted": true,
+    "id": "hard-side-021-pilot-03"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 4,
+    "accepted": true,
+    "id": "hard-side-021-pilot-04"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 5,
+    "accepted": true,
+    "id": "hard-side-021-pilot-05"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 1,
+    "accepted": true,
+    "id": "hard-side-035-pilot-01"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 2,
+    "accepted": true,
+    "id": "hard-side-035-pilot-02"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 3,
+    "accepted": true,
+    "id": "hard-side-035-pilot-03"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 4,
+    "accepted": true,
+    "id": "hard-side-035-pilot-04"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 5,
+    "accepted": true,
+    "id": "hard-side-035-pilot-05"
+  }
+]

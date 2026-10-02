@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "version": 1,
+  "provenance": {
+    "authority": [
+      "docs/benchmark/USER_RULES.md",
+      "benchmarks/sources/input_catalog.seed.json"
+    ],
+    "seedSha256": "f8ff83ec06f414e75024df6c591891f86aba00709948290ac730e61934db7c59",
+    "generatedBy": "benchmarks/tools/build-pilot.mjs"
+  },
+  "ordinary": {
+    "pure": [
+      "RuRuRuRu",
+      "CuCuCuCu",
+      "SuSuSuSu"
+    ],
+    "pure_excluded": [
+      "WuWuWuWu"
+    ],
+    "full": [
+      "RuCuWuCu",
+      "SuSuRuCu",
+      "SuSuSuCu",
+      "WuWuWuSu",
+      "RuRuRuSu",
+      "RuRuSuCu",
+      "RuSuWuSu",
+      "CuWuSuCu",
+      "RuWuSuSu",
+      "SuSuRuRu"
+    ],
+    "partial": [
+      "CuSu--Cu",
+      "RuWu--Su",
+      "SuSu--Su",
+      "--CuWuSu",
+      "WuCuSu--",
+      "--RuRuWu",
+      "RuWuCu--",
+      "--SuSuCu",
+      "CuSuSu--",
+      "SuCuSu--"
+    ],
+    "half": [
+      "CuCu----",
+      "--Su--Wu",
+      "WuCu----",
+      "CuSu----",
+      "----SuCu",
+      "WuRu----",
+      "CuRu----",
+      "Cu--Ru--",
+      "Wu--Ru--"
+    ]
+  },
+  "special": {
+    "SuSuRuRu": {
+      "allowed_in_main": false,
+      "allowed_in_side": true,
+      "allowed_with_refinement": false
+    }
+  },
+  "refinement": {
+    "A": {
+      "inputs": {
+        "XrXrXrXr": 1,
+        "XgXgXgXg": 1,
+        "XbXbXbXb": 1
+      }
+    },
+    "B": {
+      "inputs": {
+        "XcXcXcXc": 1,
+        "XmXmXmXm": 1,
+        "XyXyXyXy": 1
+      }
+    },
+    "C": {
+      "inputs": {
+        "XwXwXwXw": 1,
+        "XkXkXkXk": 1
+      }
+    },
+    "D": {
+      "inputs": {
+        "YkYkYwYw": 2
+      }
+    }
+  }
+}

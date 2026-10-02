@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/official-policy.v1.schema.json",
+  "title": "Repository Benchmark Acceptance Policy v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "policyId", "supportedVersions", "inputSeed", "catalog", "inputEnvironmentExpansion", "officialTargets", "gameSemantics", "historicalManifestRevisions", "profiles"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "policyId": { "const": "official-hard-policy-v1" },
+    "supportedVersions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["artifact", "instance", "catalogSchema", "catalog", "releaseManifest"],
+      "properties": {
+        "artifact": { "$ref": "#/$defs/positiveVersions" },
+        "instance": { "$ref": "#/$defs/positiveVersions" },
+        "catalogSchema": { "$ref": "#/$defs/positiveVersions" },
+        "catalog": { "$ref": "#/$defs/positiveVersions" },
+        "releaseManifest": { "$ref": "#/$defs/positiveVersions" }
+      }
+    },
+    "inputSeed": { "$ref": "#/$defs/identifiedFile" },
+    "inputEnvironmentExpansion": { "$ref": "#/$defs/identifiedVersionedFile" },
+    "catalog": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "schemaVersion", "version", "sha256"],
+      "properties": {
+        "path": { "type": "string" }, "schemaVersion": { "type": "integer", "minimum": 1 },
+        "version": { "type": "integer", "minimum": 1 }, "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "officialTargets": {
+      "type": "object", "additionalProperties": false,
+      "required": ["suite", "targetCount", "manifest", "sources"],
+      "properties": {
+        "suite": { "const": "hard" }, "targetCount": { "const": 53 },
+        "manifest": { "$ref": "#/$defs/file" },
+        "sources": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["path", "track", "sha256"],
+            "properties": { "path": { "type": "string" }, "track": { "enum": ["main", "side"] }, "sha256": { "$ref": "#/$defs/sha256" } }
+          }
+        }
+      }
+    },
+    "gameSemantics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "sha256", "files"],
+      "properties": {
+        "id": { "type": "string" }, "sha256": { "$ref": "#/$defs/sha256" },
+        "files": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/file" } }
+      }
+    },
+    "historicalManifestRevisions": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/historicalManifestRevision" }
+    },
+    "profiles": { "type": "object", "minProperties": 1, "additionalProperties": { "$ref": "#/$defs/profile" } }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "positiveVersions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "integer", "minimum": 1 } },
+    "file": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": { "path": { "type": "string" }, "sha256": { "$ref": "#/$defs/sha256" } }
+    },
+    "identifiedFile": {
+      "type": "object", "additionalProperties": false, "required": ["identity", "path", "sha256"],
+      "properties": { "identity": { "type": "string" }, "path": { "type": "string" }, "sha256": { "$ref": "#/$defs/sha256" } }
+    },
+    "identifiedVersionedFile": {
+      "type": "object", "additionalProperties": false, "required": ["identity", "version", "path", "sha256"],
+      "properties": {
+        "identity": { "type": "string" }, "version": { "type": "integer", "minimum": 1 },
+        "path": { "type": "string" }, "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["profileId", "manifestRevisionId", "artifactReleaseId", "artifactPath", "releaseManifestPath", "releaseManifestSha256", "suite", "partition", "targetIds", "instancesPerTarget", "cleanPainting", "allowSplitting", "allowPureInputs", "minimumWitnessOperations", "minimumWitnessDepth", "maxPairwiseInputWeightedJaccard", "requireDistinctStructuralFamilies"],
+      "properties": {
+        "profileId": { "type": "string" },
+        "manifestRevisionId": { "type": "string" },
+        "artifactReleaseId": { "type": "string" },
+        "artifactPath": { "type": "string" },
+        "solverProjectionPath": { "type": "string" },
+        "releaseManifestPath": { "type": "string" }, "releaseManifestSha256": { "$ref": "#/$defs/sha256" },
+        "suite": { "const": "hard" }, "partition": { "enum": ["pilot", "coverage-pilot", "expansion-pilot", "development", "validation", "holdout"] },
+        "targetIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^hard-(main|side)-[0-9]{3}$" } },
+        "instancesPerTarget": { "type": "integer", "minimum": 1 }, "cleanPainting": { "type": "boolean" },
+        "allowSplitting": { "const": false }, "allowPureInputs": { "type": "boolean" },
+        "minimumWitnessOperations": { "type": "integer", "minimum": 0 }, "minimumWitnessDepth": { "type": "integer", "minimum": 0 },
+        "maxPairwiseInputWeightedJaccard": { "type": "number", "minimum": 0, "maximum": 1 },
+        "requireDistinctStructuralFamilies": { "type": "boolean" },
+        "sourceArtifact": {
+          "type": "object", "additionalProperties": false, "required": ["releaseId", "path", "sha256"],
+          "properties": {
+            "releaseId": { "type": "string" }, "path": { "type": "string" }, "sha256": { "$ref": "#/$defs/sha256" }
+          }
+        }
+      }
+    },
+    "historicalManifestRevision": {
+      "type": "object", "additionalProperties": false,
+      "required": ["manifestRevisionId", "artifactReleaseId", "schemaVersion", "path", "sha256", "trustStatus"],
+      "properties": {
+        "manifestRevisionId": { "type": "string" },
+        "artifactReleaseId": { "type": "string" },
+        "schemaVersion": { "type": "integer", "minimum": 1 },
+        "path": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "trustStatus": { "const": "historical" }
+      }
+    }
+  }
+}

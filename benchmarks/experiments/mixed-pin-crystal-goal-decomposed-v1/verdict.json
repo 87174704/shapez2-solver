@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "mixed-pin-crystal-goal-decomposed-constructive-synthesis-v1",
+  "configurationId": "MPCGDCS-A",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "frontierExperimentId": "crystal-scaffold-goal-decomposed-constructive-synthesis-v1",
+  "frontierStableSolved": 112,
+  "frontierStableDistinctTargets": 38,
+  "verdict": "ACCEPT",
+  "stopped": true,
+  "firstPassSolved": 117,
+  "firstPassReplayValid": 117,
+  "stableSolved": 117,
+  "stableDistinctTargets": 40,
+  "frontierPreserved": true,
+  "stableNewMembers": 5,
+  "stableNewDistinctTargets": 2,
+  "outcomes": {
+    "SOLVED": 117,
+    "UNSUPPORTED_DOMAIN": 21,
+    "EXHAUSTED": 21,
+    "LIMIT": 0,
+    "ERROR": 0,
+    "WATCHDOG": 0,
+    "INVALID_REPLAY": 0
+  },
+  "architectureStatuses": {
+    "solved": 117,
+    "unsupported-terminal-isolated-pin": 6,
+    "unsupported-crystal-layout": 15,
+    "resource-mismatch": 15,
+    "unsupported-isolated-pin": 6
+  },
+  "newMembers": [
+    "hard-main-012:F1",
+    "hard-main-012:F2",
+    "hard-main-012:F3",
+    "hard-side-031:F1",
+    "hard-side-031:F2"
+  ],
+  "newTargetIds": [
+    "hard-main-012",
+    "hard-side-031"
+  ],
+  "identities": {
+    "solverSha256": "d06404ab017ccb19e4f26a1305a67f252c5f6f03eda256654ebfbc0330674cdf",
+    "configSha256": "7b31db6d74af2c14f187a1efa2ad8556a361c677cf4b50efbbf5ab5ffccea2c9",
+    "firstPassSha256": "a577a836cae8093586283072a7a330773f7df0a165d6a0077a3d00b0ab45ab80",
+    "repeatSha256": "a08971d2ef17baa813472772b187b8319cc963b0ca9b5bf6c5c6d8bee7841978",
+    "summarySha256": "16cc95bfaf0bfe90b92323c79facad1b50a1b631d2c8c5c21016505750322aa1"
+  },
+  "stopReason": "Predeclared ACCEPT gate reached with the complete E-009 frontier preserved; no tuning, fallback, terminal isolated-Pin completion, unrelated repair, production integration, or E-011 is authorized in this session."
+}

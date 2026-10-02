@@ -1,0 +1,74 @@
+[
+  {
+    "id": "catalog-chunk",
+    "status": "implemented",
+    "mechanisms": [
+      "partial inputs",
+      "half inputs",
+      "whole-chunk paint/rotate"
+    ]
+  },
+  {
+    "id": "shared-occurrence-extraction",
+    "status": "implemented",
+    "mechanisms": [
+      "Cutter byproduct reuse",
+      "shared input occurrence reuse"
+    ]
+  },
+  {
+    "id": "pin-subassembly",
+    "status": "implemented",
+    "mechanisms": [
+      "full and partial Pin masks below an upper subassembly"
+    ]
+  },
+  {
+    "id": "crystal-scaffold-extraction",
+    "status": "implemented",
+    "mechanisms": [
+      "non-uniform Crystal occupancy",
+      "multi-stage generate/cut/stack"
+    ]
+  },
+  {
+    "id": "legal-crystal-breakage",
+    "status": "implemented",
+    "mechanisms": [
+      "canonical Cutter/Swapper breakage paths"
+    ],
+    "corpusUse": "opt-in; not needed by coverage pilot"
+  },
+  {
+    "id": "swapper-composition",
+    "status": "implemented",
+    "mechanisms": [
+      "two-input/two-output composition and byproduct tracking"
+    ],
+    "corpusUse": "interface smoke-tested"
+  },
+  {
+    "id": "splitter-throughput",
+    "status": "disabled-pending-semantics",
+    "mechanisms": [
+      "Splitter"
+    ],
+    "reason": "Success throughput is unresolved; no 2048/4096 assumption is permitted."
+  },
+  {
+    "id": "upper-isolated-pin",
+    "status": "unsupported",
+    "mechanisms": [
+      "upper/isolated Pin"
+    ],
+    "reason": "No general constructive planner has yet been proved for arbitrary official targets."
+  },
+  {
+    "id": "mixed-pin-crystal-gravity",
+    "status": "unsupported",
+    "mechanisms": [
+      "mixed Pin/Crystal gravity"
+    ],
+    "reason": "Canonical evidence gaps remain for general templates."
+  }
+]

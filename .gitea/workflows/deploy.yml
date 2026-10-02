@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "benchmarks/**"
+      - "docs/**"
+      - "tests/**"
+      - "*.md"
 
 permissions:
   contents: read
@@ -23,9 +28,16 @@ jobs:
           source_dir="$GITHUB_WORKSPACE"
           target_dir=/deploy/shapez2-solver
           test -f "$source_dir/index.html"
+          test -f "$source_dir/release.json"
+          test -d "$source_dir/constructive"
           test -d "$target_dir"
           find "$target_dir" -mindepth 1 -delete
-          find "$source_dir" -mindepth 1 -maxdepth 1 \
-            ! -name .git \
-            ! -name .gitea \
+          find "$source_dir" -maxdepth 1 -type f \
+            \( -name '*.js' -o -name '*.html' -o -name 'styles.css' -o -name 'release.json' \) \
             -exec cp -a {} "$target_dir"/ \;
+          for runtime_dir in cn en images constructive; do
+            cp -a "$source_dir/$runtime_dir" "$target_dir"/
+          done
+          printf '%s\n' \
+            "{\"schemaVersion\":1,\"commit\":\"$GITHUB_SHA\",\"ref\":\"$GITHUB_REF\",\"runId\":\"${GITHUB_RUN_ID:-unknown}\",\"runNumber\":\"${GITHUB_RUN_NUMBER:-unknown}\"}" \
+            > "$target_dir/deployment.json"

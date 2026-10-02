@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "shared-occurrence-goal-decomposed-constructive-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "frontierExperimentId": "isolated-pin-goal-decomposed-constructive-synthesis-v1",
+  "frontierStableSolved": 126,
+  "frontierStableDistinctTargets": 43,
+  "configurations": [
+    {
+      "id": "SOGDCS-A",
+      "maxExtractionOperations": 8,
+      "maxExtractionStates": 180000,
+      "maxMatchingTransitions": 750000,
+      "maxOperations": 768,
+      "maxWallMs": 12000
+    }
+  ]
+}

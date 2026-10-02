@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "baselineId": "hard-53x3-solver-baseline-v1",
+  "createdAt": "2026-09-24T08:09:13.850Z",
+  "benchmark": {
+    "releaseId": "hard-53x3-stage-v1",
+    "manifestRevisionId": "hard-53x3-stage-v1-manifest-r1",
+    "compositeCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+    "finalSelectionCanonicalSha256": "6e3efdece360e8dd338a49dd3edd8fe10620b288aa161d35a8d01ab966e1b47f",
+    "memberCount": 159
+  },
+  "solver": {
+    "gitCommit": "b367b6e6fa17f84b046aa1603190bd4fe63ff1b6",
+    "sourceHashes": {
+      "shapeSolver.js": "1f25e23d2703896bf55c2b9ae5f2d41e2f6a014ccd6748d0e05a82a916ea8d2e",
+      "shapeSolver_web.js": "1f25e23d2703896bf55c2b9ae5f2d41e2f6a014ccd6748d0e05a82a916ea8d2e",
+      "shapeOperations.js": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21",
+      "shapeConstants.js": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+    },
+    "codeCanonicalSha256": "68f2be34f9737204a69f1db2c83463c76e9a3110732f829da916ae5d14aba873"
+  },
+  "runner": {
+    "version": "hard-53x3-formal-solver-baseline-v1",
+    "sourceHashes": {
+      "benchmarks/tools/run-hard-53x3-solver-baseline.mjs": "0e1616cc7a262907e42ee2ce404685d13c2250bece826e97d7c147c729ace24f",
+      "benchmarks/tools/solver-baseline-core.mjs": "c89340f90c0375af402d08cee5e0fc76811e4038395385b960a9c2531fcf29e9",
+      "benchmarks/tools/solver-baseline-case.mjs": "9a04c7183d0961df83dc1eddfc2fdcae0e31ce0a975af6ae60309595bed57273",
+      "tests/helpers/shapeSolverOracle.mjs": "421f717e031c14e216c24201b6a1509d8e3a51c54d1cebb75c6bfc5962436e09"
+    },
+    "codeCanonicalSha256": "761f7aaa3a8d82fd9abe9244197936b7904b0d4c1a1c0ad47eb8de9fee38627f"
+  },
+  "workingTreeAtFreeze": {
+    "head": "b367b6e6fa17f84b046aa1603190bd4fe63ff1b6",
+    "trackedDiffSha256": "0fd32d5e59063eb93458e3769616e13a7e188c139f2b099e3f2df19445e50f85",
+    "statusSha256": "6f6ee12448a26b2255dfd49080be8673ad4bdd95c40ec8abff1024f5b5ee90d7",
+    "statusEntryCount": 176
+  },
+  "runtime": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "v8": "13.6.233.17-node.53",
+    "platform": "win32",
+    "arch": "x64",
+    "osRelease": "10.0.26200",
+    "cpuModel": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "logicalCpuCount": 12,
+    "totalMemoryBytes": 34138533888,
+    "nodeExecPath": "C:\\Program Files\\nodejs\\node.exe",
+    "nodeArgs": [
+      "--expose-gc"
+    ],
+    "browser": {
+      "used": false,
+      "version": null,
+      "reason": "production Solver module run in isolated Node process"
+    }
+  },
+  "configuration": {
+    "targetShapeCodes": "singleton source-instance target",
+    "startingShapeCodes": "source-instance availableInputs expanded by count in recorded row order",
+    "enabledOperations": "all ten production recipe operations in Solver declaration order",
+    "maxLayers": 4,
+    "maxStatesPerLevel": 3000,
+    "preventWaste": false,
+    "orientationSensitive": false,
+    "allowSplitting": false,
+    "cleanPainting": true,
+    "internalLimits": {
+      "maxTotalStates": 500000,
+      "maxFrontierStates": 5000,
+      "maxGeneratedStates": 5000000,
+      "maxInternedShapes": 150000,
+      "maxSearchTimeMs": 120000,
+      "operationTimeCheckInterval": 2048
+    },
+    "searchDepthLimit": null,
+    "memoryLimitBytes": null,
+    "randomSeedPolicy": "no Solver RNG or seed",
+    "workerCount": 1,
+    "concurrency": 1,
+    "externalWatchdogMs": 135000,
+    "executionPath": "fresh Node process importing production shapeSolver.js"
+  },
+  "configCanonicalSha256": "2ed7ea7b1d6af5d8c81e7b4a3baa9277a41cfb8c460947b8664706058ddab009"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "target-conditioned-candidate-generation-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "verdict": "PROVISIONAL",
+  "stopped": true,
+  "acceptanceGate": {
+    "minimumStableSolvedMembers": 3,
+    "minimumDistinctTargets": 2,
+    "requireReplayValid": true,
+    "requireIndependentProcessRepeat": true
+  },
+  "observed": {
+    "stableSolvedMembers": 2,
+    "distinctTargets": 1,
+    "allReturnedSolutionsReplayValid": true,
+    "allSolvedMembersRepeated": true,
+    "stableMembers": [
+      {
+        "targetId": "hard-main-001",
+        "familySlot": "F1",
+        "instanceId": "hard-main-001-53x1-01",
+        "operationCount": 9
+      },
+      {
+        "targetId": "hard-main-001",
+        "familySlot": "F2",
+        "instanceId": "hard-main-001-53x3-pilot-02",
+        "operationCount": 9
+      }
+    ]
+  },
+  "configurations": {
+    "TCG-A": {
+      "SOLVED": 2,
+      "LIMIT": 70,
+      "UNSUPPORTED_DOMAIN": 78,
+      "EXHAUSTED": 9,
+      "ERROR": 0,
+      "WATCHDOG": 0
+    },
+    "TCG-B": {
+      "SOLVED": 2,
+      "LIMIT": 71,
+      "UNSUPPORTED_DOMAIN": 78,
+      "EXHAUSTED": 8,
+      "ERROR": 0,
+      "WATCHDOG": 0
+    }
+  },
+  "capabilityAccounting": {
+    "formalBaselineSolved": 0,
+    "demonstratedStableSolved": 2,
+    "formalBaselineTargetsWithAnySolve": 0,
+    "demonstratedTargetsWithAnySolve": 1,
+    "engineeringPassesCountAsCapability": false
+  },
+  "stopReason": "Nonzero stable capability progress, but below both predeclared ACCEPT dimensions after the two allowed configurations."
+}

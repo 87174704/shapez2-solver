@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "key": "hard-side-028:F1",
+  "targetId": "hard-side-028",
+  "familySlot": "F1",
+  "instanceId": "hard-side-028-53x1-01",
+  "sourceInstanceSha256": "2f9d35f47914cc0fd5ab2839ca443fe81e9d1f2ddc278c884c1e70f5aed95c7b",
+  "structuralSignature": "5d651f24bf6309ebe797f7ab5a9d4f2394c8c33aa0de58c5cd1181d5dd3c69ed",
+  "benchmarkCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "p602SampleSha256": "93c8355e0dd5d4c1497eda388b613641214b9b8af7dba149c9222eeb9e341309",
+  "p602InstrumentedSolverSha256": "35d0d9265ca3e88a91152993cb9c5137d77de548967b503834465ae743c9cd69",
+  "runnerSha256": "91be15a2b1c75d664c919f0ab345e8e4dbda11c3c935165deacaad5481557042",
+  "childSha256": "70e5ab0945172ba1462bb241378cdf578104e29d7cdb38ea17abfab373ad8c3e",
+  "currentSolverSha256": "ee558425bbc1761c5f01b82bb72d02f4d7dd611208c083d7355827600e518a37",
+  "order": [
+    "observer",
+    "plain"
+  ],
+  "logicalParity": true,
+  "plain": {
+    "mode": "plain",
+    "outcome": "limit",
+    "limitReason": "shape-universe",
+    "depth": 31,
+    "statesExplored": 90285,
+    "generatedStates": 4880528,
+    "beamPruned": true,
+    "solutionSignature": null,
+    "wallMs": 20552.9972,
+    "peakRssMiB": 516.4296875,
+    "observation": null,
+    "exitCode": 0,
+    "stderr": null
+  },
+  "observer": {
+    "mode": "observer",
+    "outcome": "limit",
+    "limitReason": "shape-universe",
+    "depth": 31,
+    "statesExplored": 90285,
+    "generatedStates": 4880528,
+    "beamPruned": true,
+    "solutionSignature": null,
+    "wallMs": 20905.001,
+    "peakRssMiB": 572.95703125,
+    "observation": {
+      "operationOutputBirths": 149980,
+      "candidateMaterialized": {
+        "count": 61702,
+        "payloadUtf16Bytes": 4224316
+      },
+      "goalMaterialized": {
+        "count": 0,
+        "payloadUtf16Bytes": 0
+      },
+      "admitted": {
+        "count": 61702,
+        "payloadUtf16Bytes": 4224316
+      },
+      "finalRetained": {
+        "count": 22388,
+        "payloadUtf16Bytes": 1536578
+      },
+      "expanded": {
+        "count": 21984,
+        "payloadUtf16Bytes": 1508298
+      },
+      "unmaterializedAtOriginalCap": {
+        "count": 88278,
+        "payloadUtf16Bytes": 5676918
+      },
+      "d024ShapeSlots": 150000,
+      "d024OverflowAttempts": 1,
+      "descriptorCount": 150000,
+      "descriptorPayloadUtf16Bytes": 9901770,
+      "descriptorMetadataRows": 150000,
+      "candidateMaterializations": 606109,
+      "collectorLazyRejects": 4274419,
+      "operationAttempts": 4968028
+    },
+    "exitCode": 0,
+    "stderr": null
+  },
+  "delta": {
+    "observerMinusPlainWallMs": 352.0037999999986,
+    "observerMinusPlainPeakRssMiB": 56.52734375
+  }
+}

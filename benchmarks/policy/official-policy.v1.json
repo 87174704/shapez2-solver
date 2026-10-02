@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "policyId": "official-hard-policy-v1",
+  "supportedVersions": {
+    "artifact": [2, 3],
+    "instance": [2, 3],
+    "catalogSchema": [2],
+    "catalog": [1],
+    "releaseManifest": [1, 2]
+  },
+  "inputSeed": {
+    "identity": "owner-input-seed-v1",
+    "path": "benchmarks/sources/input_catalog.seed.json",
+    "sha256": "f8ff83ec06f414e75024df6c591891f86aba00709948290ac730e61934db7c59"
+  },
+  "catalog": {
+    "path": "benchmarks/input_catalog.json",
+    "schemaVersion": 2,
+    "version": 1,
+    "sha256": "55e8b1ab934b0a7447b16bf4fb1113ec6aaff7c5c279bfde6d293acd0493466a"
+  },
+  "inputEnvironmentExpansion": {
+    "identity": "input-environment-expansion-v1",
+    "version": 1,
+    "path": "benchmarks/policy/input-environment-expansion.v1.json",
+    "sha256": "535b793124e96c6179ef650b2d736d18bdd02ce6b725534177830f7220a61a24"
+  },
+  "officialTargets": {
+    "suite": "hard",
+    "targetCount": 53,
+    "manifest": {
+      "path": "benchmarks/manifest.json",
+      "sha256": "f400bd27f2c68a56b0dc0fc5c8c793ecc7c2f621d49883f52214a9f2cbb63a0c"
+    },
+    "sources": [
+      {
+        "path": "benchmarks/hard_main.txt",
+        "track": "main",
+        "sha256": "9e41fbf81ff3e35e8fd274ecc8a9c85773c93a77f3380e83f79351241af26ab7"
+      },
+      {
+        "path": "benchmarks/hard_side.txt",
+        "track": "side",
+        "sha256": "2107e06d495183124a9bd83b7b49ab1a382c538cc879d28cdcc9862d5df52ce8"
+      }
+    ]
+  },
+  "gameSemantics": {
+    "id": "shape-operations-v1",
+    "sha256": "066085c4182a663326fa8f02b367aa00a2a036c4a44558efc2514e7ff099dfa5",
+    "files": [
+      {
+        "path": "docs/benchmark/GAME_SEMANTICS.md",
+        "sha256": "5141ccd032b6e1edc40658b3a4973fcaba215b835cd902a91f6140f6f33ec80f"
+      },
+      {
+        "path": "shapeOperations.js",
+        "sha256": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21"
+      },
+      {
+        "path": "shapeConstants.js",
+        "sha256": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+      },
+      {
+        "path": "shapeValidation.js",
+        "sha256": "b624fca8098d3bea752db1961bae2fb07ad3b7e30166c0df252775e2dd33f854"
+      }
+    ]
+  },
+  "historicalManifestRevisions": {
+    "hard-pilot-audit-v2": {
+      "manifestRevisionId": "hard-pilot-audit-v2",
+      "artifactReleaseId": "hard-pilot-audit-v2",
+      "schemaVersion": 1,
+      "path": "benchmarks/releases/hard-pilot-audit-v2.release.json",
+      "sha256": "03c2bb2de15b6709dc629ba171a61eda28b87605aa026f319edae750a8c795e3",
+      "trustStatus": "historical"
+    },
+    "hard-coverage-pilot-v1": {
+      "manifestRevisionId": "hard-coverage-pilot-v1",
+      "artifactReleaseId": "hard-coverage-pilot-v1",
+      "schemaVersion": 1,
+      "path": "benchmarks/releases/hard-coverage-pilot-v1.release.json",
+      "sha256": "b39ac5b2def225a7ea106916d5d8affb30515f1c2d9ce8e4a75d1fbe61a2cc95",
+      "trustStatus": "historical"
+    },
+    "hard-expansion-pilot-v1": {
+      "manifestRevisionId": "hard-expansion-pilot-v1",
+      "artifactReleaseId": "hard-expansion-pilot-v1",
+      "schemaVersion": 1,
+      "path": "benchmarks/releases/hard-expansion-pilot-v1.release.json",
+      "sha256": "7fd768b9ef0d544c7f74bc7869efd0eb589e6837d166f382b3f7b3865a20c188",
+      "trustStatus": "historical"
+    },
+    "hard-53x1-stage-v1": {
+      "manifestRevisionId": "hard-53x1-stage-v1",
+      "artifactReleaseId": "hard-53x1-stage-v1",
+      "schemaVersion": 1,
+      "path": "benchmarks/releases/hard-53x1-stage-v1.release.json",
+      "sha256": "75b677087c26d6b0a82a32a145a95e1ecb6bb92e5c370e181f823ee813777498",
+      "trustStatus": "historical"
+    }
+  },
+  "profiles": {
+    "hard-pilot-audit-v2-manifest-r2": {
+      "profileId": "hard-pilot-audit-v2",
+      "manifestRevisionId": "hard-pilot-audit-v2-manifest-r2",
+      "artifactReleaseId": "hard-pilot-audit-v2",
+      "artifactPath": "benchmarks/pilot/v2/instances.json",
+      "releaseManifestPath": "benchmarks/releases/hard-pilot-audit-v2-manifest-r2.release.json",
+      "releaseManifestSha256": "dc49802d92eec60438a96c0efc9c6f6b6def63c650b261fed2bb989fda1981dd",
+      "suite": "hard",
+      "partition": "pilot",
+      "targetIds": ["hard-side-006", "hard-side-007", "hard-side-018", "hard-side-021", "hard-side-035"],
+      "instancesPerTarget": 5,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 18,
+      "minimumWitnessDepth": 8,
+      "maxPairwiseInputWeightedJaccard": 0.84,
+      "requireDistinctStructuralFamilies": false
+    },
+    "hard-coverage-pilot-v1-manifest-r2": {
+      "profileId": "hard-coverage-pilot-v1",
+      "manifestRevisionId": "hard-coverage-pilot-v1-manifest-r2",
+      "artifactReleaseId": "hard-coverage-pilot-v1",
+      "artifactPath": "benchmarks/coverage-pilot/v1/instances.json",
+      "releaseManifestPath": "benchmarks/releases/hard-coverage-pilot-v1-manifest-r2.release.json",
+      "releaseManifestSha256": "f2274cd4dae40022e3cefdb50b034e2ddd28224994e1e9b975414cb065e59a27",
+      "suite": "hard",
+      "partition": "coverage-pilot",
+      "targetIds": ["hard-main-004", "hard-main-010", "hard-side-021", "hard-side-039", "hard-side-041"],
+      "instancesPerTarget": 1,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 0,
+      "minimumWitnessDepth": 0,
+      "maxPairwiseInputWeightedJaccard": 1,
+      "requireDistinctStructuralFamilies": false
+    },
+    "hard-expansion-pilot-v1-manifest-r2": {
+      "profileId": "hard-expansion-pilot-v1",
+      "manifestRevisionId": "hard-expansion-pilot-v1-manifest-r2",
+      "artifactReleaseId": "hard-expansion-pilot-v1",
+      "artifactPath": "benchmarks/expansion-pilot/v1/instances.json",
+      "solverProjectionPath": "benchmarks/expansion-pilot/v1/solver-inputs.json",
+      "releaseManifestPath": "benchmarks/releases/hard-expansion-pilot-v1-manifest-r2.release.json",
+      "releaseManifestSha256": "faf725e931f80b769104fe74d39dc0d0d5712c641170c988bd010815d1482586",
+      "suite": "hard",
+      "partition": "expansion-pilot",
+      "targetIds": ["hard-main-004", "hard-main-010", "hard-side-021"],
+      "instancesPerTarget": 2,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 0,
+      "minimumWitnessDepth": 0,
+      "maxPairwiseInputWeightedJaccard": 1,
+      "requireDistinctStructuralFamilies": false,
+      "sourceArtifact": {
+        "releaseId": "hard-coverage-pilot-v1",
+        "path": "benchmarks/coverage-pilot/v1/instances.json",
+        "sha256": "d4c1b3f31dea46cb598440fae1a310a611dfaadc06b8304422d9d480b2897613"
+      }
+    },
+    "hard-53x1-stage-v1-manifest-r2": {
+      "profileId": "hard-53x1-stage-v1",
+      "manifestRevisionId": "hard-53x1-stage-v1-manifest-r2",
+      "artifactReleaseId": "hard-53x1-stage-v1",
+      "artifactPath": "benchmarks/hard-53x1/v1/instances.json",
+      "solverProjectionPath": "benchmarks/hard-53x1/v1/solver-inputs.json",
+      "releaseManifestPath": "benchmarks/releases/hard-53x1-stage-v1-manifest-r2.release.json",
+      "releaseManifestSha256": "c26501aaed729f5eaa693e0988b3fd7df402b1d7b8a854582d46a2290c9ddfa0",
+      "suite": "hard",
+      "partition": "expansion-pilot",
+      "targetIds": [
+        "hard-main-001", "hard-main-002", "hard-main-003", "hard-main-004", "hard-main-005",
+        "hard-main-006", "hard-main-007", "hard-main-008", "hard-main-009", "hard-main-010",
+        "hard-main-011", "hard-main-012",
+        "hard-side-001", "hard-side-002", "hard-side-003", "hard-side-004", "hard-side-005",
+        "hard-side-006", "hard-side-007", "hard-side-008", "hard-side-009", "hard-side-010",
+        "hard-side-011", "hard-side-012", "hard-side-013", "hard-side-014", "hard-side-015",
+        "hard-side-016", "hard-side-017", "hard-side-018", "hard-side-019", "hard-side-020",
+        "hard-side-021", "hard-side-022", "hard-side-023", "hard-side-024", "hard-side-025",
+        "hard-side-026", "hard-side-027", "hard-side-028", "hard-side-029", "hard-side-030",
+        "hard-side-031", "hard-side-032", "hard-side-033",
+        "hard-side-034", "hard-side-035", "hard-side-036",
+        "hard-side-037", "hard-side-038", "hard-side-039", "hard-side-040", "hard-side-041"
+      ],
+      "instancesPerTarget": 1,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 0,
+      "minimumWitnessDepth": 0,
+      "maxPairwiseInputWeightedJaccard": 1,
+      "requireDistinctStructuralFamilies": false,
+      "sourceArtifact": {
+        "releaseId": "hard-53x1-core-stage-v1",
+        "path": "benchmarks/hard-53x1/v1/core-instances.json",
+        "sha256": "b978686eab6fad7d1a01db4f0e164629af8bf7f54f63ae197399c64488a56362"
+      }
+    },
+    "hard-53x3-diversity-pilot-v1-manifest-r1": {
+      "profileId": "hard-53x3-diversity-pilot-v1",
+      "manifestRevisionId": "hard-53x3-diversity-pilot-v1-manifest-r1",
+      "artifactReleaseId": "hard-53x3-diversity-pilot-v1",
+      "artifactPath": "benchmarks/diversity-pilot/v1/instances.json",
+      "solverProjectionPath": "benchmarks/diversity-pilot/v1/solver-inputs.json",
+      "releaseManifestPath": "benchmarks/releases/hard-53x3-diversity-pilot-v1-manifest-r1.release.json",
+      "releaseManifestSha256": "fcc1d6c86556f1c6021ac40f4bbe85f33f4bf7d16889210cd8108da6ce74141d",
+      "suite": "hard",
+      "partition": "expansion-pilot",
+      "targetIds": [
+        "hard-main-001", "hard-side-003", "hard-side-035", "hard-main-010", "hard-side-040",
+        "hard-main-012", "hard-main-005", "hard-main-008", "hard-main-007", "hard-side-036",
+        "hard-side-033", "hard-side-041", "hard-side-021"
+      ],
+      "instancesPerTarget": 2,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 0,
+      "minimumWitnessDepth": 0,
+      "maxPairwiseInputWeightedJaccard": 1,
+      "requireDistinctStructuralFamilies": true,
+      "sourceArtifact": {
+        "releaseId": "hard-53x1-stage-v1",
+        "path": "benchmarks/hard-53x1/v1/instances.json",
+        "sha256": "e9043ed2917bcd0f13e8a1772076fc7bc5a9f842af02fb781e972055828e56f4"
+      }
+    },
+    "hard-53x3-rollout-stage-v1-manifest-r1": {
+      "profileId": "hard-53x3-rollout-stage-v1",
+      "manifestRevisionId": "hard-53x3-rollout-stage-v1-manifest-r1",
+      "artifactReleaseId": "hard-53x3-rollout-stage-v1",
+      "artifactPath": "benchmarks/hard-53x3-rollout/v1/instances.json",
+      "solverProjectionPath": "benchmarks/hard-53x3-rollout/v1/solver-inputs.json",
+      "releaseManifestPath": "benchmarks/releases/hard-53x3-rollout-stage-v1-manifest-r1.release.json",
+      "releaseManifestSha256": "b2424224cae43cad320292bf3339786c99a14b6ec5fc159d346b10b07d363ba8",
+      "suite": "hard",
+      "partition": "expansion-pilot",
+      "targetIds": [
+        "hard-main-002", "hard-main-003", "hard-main-004", "hard-main-006", "hard-main-009",
+        "hard-main-011", "hard-side-001", "hard-side-002", "hard-side-004", "hard-side-005",
+        "hard-side-006", "hard-side-007", "hard-side-008", "hard-side-009", "hard-side-010",
+        "hard-side-011", "hard-side-012", "hard-side-013", "hard-side-014", "hard-side-015",
+        "hard-side-016", "hard-side-017", "hard-side-018", "hard-side-019", "hard-side-020",
+        "hard-side-022", "hard-side-023", "hard-side-024", "hard-side-025", "hard-side-026",
+        "hard-side-027", "hard-side-028", "hard-side-029", "hard-side-030", "hard-side-031",
+        "hard-side-032", "hard-side-034", "hard-side-037", "hard-side-038", "hard-side-039"
+      ],
+      "instancesPerTarget": 2,
+      "cleanPainting": true,
+      "allowSplitting": false,
+      "allowPureInputs": false,
+      "minimumWitnessOperations": 0,
+      "minimumWitnessDepth": 0,
+      "maxPairwiseInputWeightedJaccard": 1,
+      "requireDistinctStructuralFamilies": true,
+      "sourceArtifact": {
+        "releaseId": "hard-53x1-stage-v1",
+        "path": "benchmarks/hard-53x1/v1/instances.json",
+        "sha256": "e9043ed2917bcd0f13e8a1772076fc7bc5a9f842af02fb781e972055828e56f4"
+      }
+    }
+  }
+}

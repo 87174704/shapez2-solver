@@ -1,0 +1,1162 @@
+{
+  "benchmark": "shape-solver-official-workload",
+  "generatedAt": "2026-09-13T16:12:44.953Z",
+  "options": {
+    "suite": "hard",
+    "source": null,
+    "partition": "development",
+    "partitionExplicit": true,
+    "caseId": null,
+    "timeoutMs": 10000,
+    "includeHoldout": false,
+    "json": false,
+    "outputFile": "benchmarks/results/official-hard-development-v1-10s.json"
+  },
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "cpuModel": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "logicalCpuCount": 12,
+    "totalMemoryGiB": 31.793987274169922
+  },
+  "manifest": {
+    "path": "benchmarks/manifest.json",
+    "sha256": "f400bd27f2c68a56b0dc0fc5c8c793ecc7c2f621d49883f52214a9f2cbb63a0c",
+    "caseCount": 105,
+    "schemaVersion": 1
+  },
+  "sourceIdentity": {
+    "shapeSolver": {
+      "path": "shapeSolver.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeSolverWeb": {
+      "path": "shapeSolver_web.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeOperations": {
+      "path": "shapeOperations.js",
+      "sha256": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21",
+      "bytes": 25468
+    },
+    "oracleHelper": {
+      "path": "tests/helpers/shapeSolverOracle.mjs",
+      "sha256": "e5d11206661118b4bef1ab8fba00106650ff155fd58378883418d8f59e7636a4",
+      "bytes": 19054
+    },
+    "harness": {
+      "path": "tests/perf/officialWorkload.bench.mjs",
+      "sha256": "8b1e70587104b3ed146129964793912cfa92b9ce497de0b2131bd656f6c499be",
+      "bytes": 21344
+    },
+    "hard_main.txt": {
+      "path": "benchmarks/hard_main.txt",
+      "sha256": "9e41fbf81ff3e35e8fd274ecc8a9c85773c93a77f3380e83f79351241af26ab7",
+      "bytes": 360
+    },
+    "hard_side.txt": {
+      "path": "benchmarks/hard_side.txt",
+      "sha256": "2107e06d495183124a9bd83b7b49ab1a382c538cc879d28cdcc9862d5df52ce8",
+      "bytes": 1341
+    },
+    "insane_main.txt": {
+      "path": "benchmarks/insane_main.txt",
+      "sha256": "8ff3f305fe594e55f7d9edda538f710d43b2e2ec2904edcac15ee32c2ee922eb",
+      "bytes": 495
+    },
+    "insane_side.txt": {
+      "path": "benchmarks/insane_side.txt",
+      "sha256": "3cb8138d85ce449f77469ae170a12395951b72f5c6549c966858a7ecb55c37ee",
+      "bytes": 1674
+    },
+    "byteIdentical": true
+  },
+  "configuration": {
+    "targetShapeCodes": "singleton manifest target",
+    "startingShapeCodes": "_extractLayers(Shape.fromShapeCode(target), 'color', false, false, false)",
+    "enabledOperations": [
+      "Rotator CW",
+      "Rotator CCW",
+      "Rotator 180",
+      "Half Destroyer",
+      "Cutter",
+      "Swapper",
+      "Stacker",
+      "Painter",
+      "Pin Pusher",
+      "Crystal Generator"
+    ],
+    "hardMaxLayers": 4,
+    "insaneMaxLayers": 5,
+    "maxStatesPerLevel": 3000,
+    "preventWaste": false,
+    "orientationSensitive": true,
+    "allowSplitting": true,
+    "cleanPainting": false
+  },
+  "cases": [
+    {
+      "id": "hard-main-003",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 3,
+      "target": "SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg",
+      "partition": "development",
+      "sha256": "3de7c58c0d0725963f605e2b491fdb6eca4d46e43ab0b1689d748db92f884e0b",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 6,
+      "statesExplored": 10088,
+      "candidates": 262279,
+      "wallMs": 852.1478,
+      "freshProcessMaxRssMiB": 241.84375,
+      "pathSignature": "Painter:SuSuSuSu=>SrSrSrSr@r|Painter:WuWuWuWu=>WrWrWrWr@r|Stacker:RuCuRuCu,RuCuCuCu=>RuCuRuCu:RuCuCuCu|Stacker:WrWrWrWr,RuCuRuCu:RuCuCuCu=>WrWrWrWr:RuCuRuCu:RuCuCuCu|Stacker:SrSrSrSr,WrWrWrWr:RuCuRuCu:RuCuCuCu=>SrSrSrSr:WrWrWrWr:RuCuRuCu:RuCuCuCu|Painter:SrSrSrSr:WrWrWrWr:RuCuRuCu:RuCuCuCu=>SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg@g",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 10088,
+        "candidates": 245406,
+        "maxRssMiB": 237.46484375
+      }
+    },
+    {
+      "id": "hard-main-004",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 4,
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "partition": "development",
+      "sha256": "2183dca26a00cf92caa9869c807ca6604bfa0cd44db12f12619d02a337b6826b",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 7,
+      "statesExplored": 13461,
+      "candidates": 362430,
+      "wallMs": 1191.4834999999998,
+      "freshProcessMaxRssMiB": 268.5078125,
+      "pathSignature": "Painter:--RuRuCu=>--RmRmCm@m|Painter:Su------=>Sr------@r|Stacker:--RmRmCm,Sr------=>SrRmRmCm|Painter:--SuSu--=>--SmSm--@m|Stacker:SrRmRmCm,----CuCu=>SrRmRmCm:----CuCu|Stacker:--SmSm--,SrRmRmCm:----CuCu=>--SmSm--:SrRmRmCm:----CuCu|Painter:--SmSm--:SrRmRmCm:----CuCu=>--SmSm--:SrRmRmCm:----CwCw@w",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 10461,
+        "candidates": 323346,
+        "maxRssMiB": 251.9375
+      }
+    },
+    {
+      "id": "hard-main-005",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 5,
+      "target": "P-CcRcCc:P-CwRwCw:RwWrP-Wr:P---Wr--",
+      "partition": "development",
+      "sha256": "5e84e70039fbcd961a057a2daa24f78afe59000187052b02514b8bef68c7221a",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 37,
+      "statesExplored": 106461,
+      "candidates": 5000000,
+      "wallMs": 8867.8492,
+      "freshProcessMaxRssMiB": 499.71484375,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 38,
+        "statesExplored": 106461,
+        "candidates": 4939808,
+        "maxRssMiB": 497.2578125
+      }
+    },
+    {
+      "id": "hard-main-006",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 6,
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "partition": "development",
+      "sha256": "780c3ad3a38c1fe9dab3ed93c4bfba63310ac26596b809c67232aef9b8f20382",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 22,
+        "statesExplored": 58526,
+        "candidates": 3075836,
+        "maxRssMiB": 468.00390625
+      }
+    },
+    {
+      "id": "hard-main-010",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 10,
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "partition": "development",
+      "sha256": "67175a76414254652f63cce9e08721fd0d2e2aafa1873e7b548aa8e8323d0c08",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 29,
+      "statesExplored": 81523,
+      "candidates": 5000000,
+      "wallMs": 6349.2461,
+      "freshProcessMaxRssMiB": 478.3203125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 29,
+        "statesExplored": 78523,
+        "candidates": 4900991,
+        "maxRssMiB": 478.3203125
+      }
+    },
+    {
+      "id": "hard-main-011",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 11,
+      "target": "cbP-cbP-:ccXwccXw:Xk--Xk--",
+      "partition": "development",
+      "sha256": "3753818862f2ae732e605d350a5469afbe4337013c5fc59b7bba2942ff1746b1",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 26,
+      "statesExplored": 71404,
+      "candidates": 5000000,
+      "wallMs": 5261.4938,
+      "freshProcessMaxRssMiB": 370.16796875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 26,
+        "statesExplored": 68404,
+        "candidates": 4959134,
+        "maxRssMiB": 370.16796875
+      }
+    },
+    {
+      "id": "hard-main-012",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 12,
+      "target": "cwP---P-:--cw--cw:RrWrYwWr:Yk------",
+      "partition": "development",
+      "sha256": "2aabd65cad5dfec402c37b55cbe882602ee8602020fb1d09846d55bfc10602c6",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 27,
+      "statesExplored": 75460,
+      "candidates": 5000000,
+      "wallMs": 5335.0184,
+      "freshProcessMaxRssMiB": 501.984375,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 27,
+        "statesExplored": 72460,
+        "candidates": 4817045,
+        "maxRssMiB": 501.984375
+      }
+    },
+    {
+      "id": "hard-side-001",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 1,
+      "target": "RbCuRbCu:RuCuRuCu:Su--Su--",
+      "partition": "development",
+      "sha256": "84ec9aba406783bd6c00fc31e005e955b4c0ea4dc913c9b1d88b9d3d2e2a34b9",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 4,
+      "statesExplored": 4093,
+      "candidates": 57408,
+      "wallMs": 253.11570000000003,
+      "freshProcessMaxRssMiB": 135.26171875,
+      "pathSignature": "Painter:Ru--Ru--=>Rb--Rb--@b|Stacker:--Cu--Cu,Rb--Rb--=>RbCuRbCu|Stacker:RuCuRuCu,Su--Su--=>RuCuRuCu:Su--Su--|Stacker:RbCuRbCu,RuCuRuCu:Su--Su--=>RbCuRbCu:RuCuRuCu:Su--Su--",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 3,
+        "statesExplored": 1093,
+        "candidates": 46583,
+        "maxRssMiB": 110.67578125
+      }
+    },
+    {
+      "id": "hard-side-003",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 3,
+      "target": "Rb--Rb--:Ru--Ru--:Rb------",
+      "partition": "development",
+      "sha256": "26ff6a9a44b2bc431df48cd1a60ac95db3f2a884261b9fa62f55fe240c1d4ea1",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 4,
+      "statesExplored": 2681,
+      "candidates": 6669,
+      "wallMs": 46.59989999999999,
+      "freshProcessMaxRssMiB": 65.3984375,
+      "pathSignature": "Painter:Ru--Ru--=>Rb--Rb--@b|Stacker:Rb--Rb--,Ru------=>Rb--Rb--:Ru------|Stacker:Rb--Rb--:Ru------,Ru--Ru--=>Rb--Rb--:Ru--Ru--:Ru------|Painter:Rb--Rb--:Ru--Ru--:Ru------=>Rb--Rb--:Ru--Ru--:Rb------@b",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": null,
+        "statesExplored": null,
+        "candidates": null,
+        "maxRssMiB": null
+      }
+    },
+    {
+      "id": "hard-side-004",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 4,
+      "target": "SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "partition": "development",
+      "sha256": "070bb56c64ce2964f29031d8620e0ff7394031de9b20c271dc6915df8a9b1093",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 6,
+      "statesExplored": 10323,
+      "candidates": 338815,
+      "wallMs": 890.8246,
+      "freshProcessMaxRssMiB": 245.65625,
+      "pathSignature": "Painter:----Ru--=>----Rb--@b|Stacker:--Cu--Cu,----Rb--=>--CuRbCu|Painter:--Cu--Cu=>--Cr--Cr@r|Stacker:Su--Su--,--Cr--Cr=>SuCrSuCr|Stacker:--CuRbCu,RuCuRuCu=>--CuRbCu:RuCuRuCu|Stacker:SuCrSuCr,--CuRbCu:RuCuRuCu=>SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 5,
+        "statesExplored": 7323,
+        "candidates": 313613,
+        "maxRssMiB": 245.65625
+      }
+    },
+    {
+      "id": "hard-side-006",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 6,
+      "target": "RrRgRbRu:CrCgCbCu:WrWgWbWu",
+      "partition": "development",
+      "sha256": "444abc759654ee99be10385ca0081bfc61b044a11997a7f9853d824e0340f540",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 17,
+        "statesExplored": 45187,
+        "candidates": 3432196,
+        "maxRssMiB": 401.71875
+      }
+    },
+    {
+      "id": "hard-side-007",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 7,
+      "target": "WgRgRgRg:RbCbCbCb:CgCgWgCg:WuCu--Cu",
+      "partition": "development",
+      "sha256": "98bb3baae38df5d30e90350745f56891347ec4cec9e813e53d21ba72cf9002a1",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 31,
+      "statesExplored": 88800,
+      "candidates": 5000000,
+      "wallMs": 7967.277999999999,
+      "freshProcessMaxRssMiB": 483.74609375,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 31,
+        "statesExplored": 85800,
+        "candidates": 4931487,
+        "maxRssMiB": 483.74609375
+      }
+    },
+    {
+      "id": "hard-side-008",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 8,
+      "target": "SgWuRuWu:WrCrWrCr:WrCgWrCg:--Wr--Wr",
+      "partition": "development",
+      "sha256": "6fdab469c049238e422965daf2f7ea1ced7cee72283076034f32a5dfc157a94b",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 18,
+        "statesExplored": 48085,
+        "candidates": 3181772,
+        "maxRssMiB": 472.015625
+      }
+    },
+    {
+      "id": "hard-side-013",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 13,
+      "target": "WgSrWgCg:WuWuWuCu:WrWrWrCr",
+      "partition": "development",
+      "sha256": "57a300242d36f822c82dd1cc5b761033962e16d750dfed87e011e56d8a9d7fcf",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 28,
+      "statesExplored": 78850,
+      "candidates": 5000000,
+      "wallMs": 5876.065100000001,
+      "freshProcessMaxRssMiB": 475.03125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 29,
+        "statesExplored": 78850,
+        "candidates": 4939095,
+        "maxRssMiB": 473.4609375
+      }
+    },
+    {
+      "id": "hard-side-014",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 14,
+      "target": "CuRrRrCu:CuCrCrCu:CbCuCuCb:--WbWb--",
+      "partition": "development",
+      "sha256": "58e42a00e8dece83c534d41bdfd7f314458739aac4305c0648688c7bba2cafee",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 31,
+      "statesExplored": 89139,
+      "candidates": 5000000,
+      "wallMs": 9194.3228,
+      "freshProcessMaxRssMiB": 479.171875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 30,
+        "statesExplored": 83139,
+        "candidates": 4850638,
+        "maxRssMiB": 468.80078125
+      }
+    },
+    {
+      "id": "hard-side-015",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 15,
+      "target": "WwCwWwCw:WuCuWuCu:WmCmWmCm:CcCcCcCc",
+      "partition": "development",
+      "sha256": "651146832326c0bf5abbbbb5d173740ba25a91f00fa986d628909aa8cfc1601d",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 22,
+      "statesExplored": 60370,
+      "candidates": 5000000,
+      "wallMs": 3437.8225,
+      "freshProcessMaxRssMiB": 400.63671875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 23,
+        "statesExplored": 60370,
+        "candidates": 4949031,
+        "maxRssMiB": 400.63671875
+      }
+    },
+    {
+      "id": "hard-side-018",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 18,
+      "target": "--WySyWy:RySwWwSw:CwWwWbWw:CbWbSwWb",
+      "partition": "development",
+      "sha256": "2f8629cedb94ddcab49139ede495747e223655e28059c04e762b73fcc3a0ba8a",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 13,
+        "statesExplored": 33095,
+        "candidates": 1603520,
+        "maxRssMiB": 425.98046875
+      }
+    },
+    {
+      "id": "hard-side-020",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 20,
+      "target": "RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw",
+      "partition": "development",
+      "sha256": "47edb1bc6c316b4a20ff84799ed686efcd98c4f7806ee1b9018ef2807d7a3d03",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 7,
+      "statesExplored": 13297,
+      "candidates": 390338,
+      "wallMs": 1041.4453999999998,
+      "freshProcessMaxRssMiB": 268.32421875,
+      "pathSignature": "Painter:RuRuRuRu=>RgRgRgRg@g|Painter:CuRuCuRu=>CyRyCyRy@y|Painter:CuCuCuCu=>CbCbCbCb@b|Stacker:CbCbCbCb,--Su--Su=>CbCbCbCb:--Su--Su|Stacker:CyRyCyRy,CbCbCbCb:--Su--Su=>CyRyCyRy:CbCbCbCb:--Su--Su|Stacker:RgRgRgRg,CyRyCyRy:CbCbCbCb:--Su--Su=>RgRgRgRg:CyRyCyRy:CbCbCbCb:--Su--Su|Painter:RgRgRgRg:CyRyCyRy:CbCbCbCb:--Su--Su=>RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw@w",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 10297,
+        "candidates": 377943,
+        "maxRssMiB": 262.95703125
+      }
+    },
+    {
+      "id": "hard-side-021",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 21,
+      "target": "CyCwCwCy:P-P-P-P-:CbCbCbCb:CwCwCwCw",
+      "partition": "development",
+      "sha256": "28f360d3b9cb6600fbeb513a032b0450cd04a364ea20d50cf52488519af63d6c",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 33,
+      "statesExplored": 93953,
+      "candidates": 5000000,
+      "wallMs": 4899.171899999999,
+      "freshProcessMaxRssMiB": 495.1640625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 33,
+        "statesExplored": 90953,
+        "candidates": 4923991,
+        "maxRssMiB": 495.1640625
+      }
+    },
+    {
+      "id": "hard-side-023",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 23,
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "partition": "development",
+      "sha256": "3ef01de5e7b127791049e5501ae6be2b7530614216d30d81464468328d82ba9d",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 22,
+        "statesExplored": 58751,
+        "candidates": 4050571,
+        "maxRssMiB": 471.3359375
+      }
+    },
+    {
+      "id": "hard-side-024",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 24,
+      "target": "RwWmRmWw:P-P-P---:RmWwRw--:--WmRmWm",
+      "partition": "development",
+      "sha256": "3d2f1def0f29c7cfbb3bfdaa94ee1717a0dbdcb47a3ec6c94739489c671fd9dc",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 37,
+      "statesExplored": 106679,
+      "candidates": 5000000,
+      "wallMs": 9702.8713,
+      "freshProcessMaxRssMiB": 519.703125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 37,
+        "statesExplored": 103679,
+        "candidates": 4941634,
+        "maxRssMiB": 515.96484375
+      }
+    },
+    {
+      "id": "hard-side-027",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 27,
+      "target": "RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb",
+      "partition": "development",
+      "sha256": "5ac3dfbe594b16d7983c700040fb17aa16e8dd84d58eb0062107f44f9e10780b",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 8,
+      "statesExplored": 17728,
+      "candidates": 810733,
+      "wallMs": 1841.1462,
+      "freshProcessMaxRssMiB": 316.62890625,
+      "pathSignature": "Painter:----CuRu=>----CwRw@w|Swapper:RuCu----,----CwRw=>RuCuCwRw|Painter:SuWuWuSu=>SyWyWySy@y|Painter:RuCuCuRu=>RbCbCbRb@b|Stacker:SyWyWySy,WuCuCuWu=>SyWyWySy:WuCuCuWu|Stacker:RbCbCbRb,SyWyWySy:WuCuCuWu=>RbCbCbRb:SyWyWySy:WuCuCuWu|Stacker:RuCuCwRw,RbCbCbRb:SyWyWySy:WuCuCuWu=>RuCuCwRw:RbCbCbRb:SyWyWySy:WuCuCuWu|Painter:RuCuCwRw:RbCbCbRb:SyWyWySy:WuCuCuWu=>RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb@b",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 8,
+        "statesExplored": 17728,
+        "candidates": 798815,
+        "maxRssMiB": 311.02734375
+      }
+    },
+    {
+      "id": "hard-side-028",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 28,
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "partition": "development",
+      "sha256": "33bc3a57321d4b047b7e9473e4f7541497eb9ee2b34b0ff99db4e722706821f2",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 21,
+        "statesExplored": 56825,
+        "candidates": 2892683,
+        "maxRssMiB": 473.06640625
+      }
+    },
+    {
+      "id": "hard-side-029",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 29,
+      "target": "P-cccccc:cmP-P-P-:--CyCyCy:------P-",
+      "partition": "development",
+      "sha256": "489ca9647961dcbb24d85c79016559456177501183e70874365e2187da14685d",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 24,
+      "statesExplored": 63662,
+      "candidates": 5000000,
+      "wallMs": 4932.1382,
+      "freshProcessMaxRssMiB": 424.01171875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 25,
+        "statesExplored": 63662,
+        "candidates": 4887171,
+        "maxRssMiB": 424.01171875
+      }
+    },
+    {
+      "id": "hard-side-030",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 30,
+      "target": "crCwcrRw:CwcrCwcr:crCwcrCw:crcrcrcr",
+      "partition": "development",
+      "sha256": "9f322166052d2288d73e3f526453d3b0f586cdc3ba46d8c65cb0ab9f269d2d91",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 31,
+      "statesExplored": 87551,
+      "candidates": 5000000,
+      "wallMs": 5350.0524000000005,
+      "freshProcessMaxRssMiB": 458.31640625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 31,
+        "statesExplored": 84551,
+        "candidates": 4826567,
+        "maxRssMiB": 458.31640625
+      }
+    },
+    {
+      "id": "hard-side-032",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 32,
+      "target": "RyCyRyCy:Cr--Cr--:CwCwCwCw:cmcmcmcm",
+      "partition": "development",
+      "sha256": "76c37c7dc5ba0b599543536d949198f7808977c8f272162d5776093bdde1a684",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 63725,
+      "candidates": 5000000,
+      "wallMs": 5168.829,
+      "freshProcessMaxRssMiB": 465.51953125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 23,
+        "statesExplored": 60725,
+        "candidates": 4800985,
+        "maxRssMiB": 460.71875
+      }
+    },
+    {
+      "id": "hard-side-034",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 34,
+      "target": "--Sg--Sg:--Wg--Wg:RrCrRrCr:cccccccc",
+      "partition": "development",
+      "sha256": "4403f75e4abab564fbf5714f595ee5ba76829908cc4a000ee99b0205d6b5c66e",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 63587,
+      "candidates": 5000000,
+      "wallMs": 5080.8682,
+      "freshProcessMaxRssMiB": 427.34765625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 24,
+        "statesExplored": 63587,
+        "candidates": 4905977,
+        "maxRssMiB": 427.34765625
+      }
+    },
+    {
+      "id": "hard-side-035",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 35,
+      "target": "crcrcrcr:WrCwXrCw",
+      "partition": "development",
+      "sha256": "770530411a01f97403fb45a2ce0742afd3aa08b209d0fc61a4626b0df4aca165",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 5,
+      "statesExplored": 5839,
+      "candidates": 79136,
+      "wallMs": 287.8351,
+      "freshProcessMaxRssMiB": 119.8046875,
+      "pathSignature": "Painter:--Cu--Cu=>--Cw--Cw@w|Painter:Wu--Xr--=>Wr--Xr--@r|Stacker:--Cw--Cw,Wr--Xr--=>WrCwXrCw|Pin Pusher:WrCwXrCw=>P-P-P-P-:WrCwXrCw|Crystal Generator:P-P-P-P-:WrCwXrCw=>crcrcrcr:WrCwXrCw@r",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 4,
+        "statesExplored": 2839,
+        "candidates": 44862,
+        "maxRssMiB": 110.0078125
+      }
+    },
+    {
+      "id": "hard-side-036",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 36,
+      "target": "XbCyCyCy:WyP-CwP-:----Cr--",
+      "partition": "development",
+      "sha256": "5c7ce7fc97c42b385f243501c7bdfa47b48d85b96d98e071cadb189de38981dc",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 64270,
+      "candidates": 5000000,
+      "wallMs": 9364.1886,
+      "freshProcessMaxRssMiB": 449.7265625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 24,
+        "statesExplored": 64270,
+        "candidates": 4844144,
+        "maxRssMiB": 449.7265625
+      }
+    },
+    {
+      "id": "hard-side-038",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 38,
+      "target": "Xm--Xy--:Xy--Xm--:P---P---:CyCmCmCy",
+      "partition": "development",
+      "sha256": "53b7bcd6b8d7aa81ceec366d4bdb56a1a2c11cd127b70cc753a3e7257945aa60",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 24,
+      "statesExplored": 68858,
+      "candidates": 5000000,
+      "wallMs": 6174.152,
+      "freshProcessMaxRssMiB": 484.91796875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 25,
+        "statesExplored": 68858,
+        "candidates": 4804609,
+        "maxRssMiB": 478.31640625
+      }
+    },
+    {
+      "id": "hard-side-039",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 39,
+      "target": "RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "partition": "development",
+      "sha256": "36dec974c4dd809a6eed2f32690b3da6789411a3d4414f2aea4b14873aa942fb",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 7,
+      "statesExplored": 15077,
+      "candidates": 649366,
+      "wallMs": 1444.29,
+      "freshProcessMaxRssMiB": 284.22265625,
+      "pathSignature": "Stacker:Xk--Xk--,--Xw--Xw=>XkXwXkXw|Painter:Ru--Ru--=>Rw--Rw--@w|Stacker:--Ru--Ru,Rw--Rw--=>RwRuRwRu|Painter:Wu--Wu--=>Ww--Ww--@w|Stacker:--Wu--Wu,Ww--Ww--=>WwWuWwWu|Stacker:XkXwXkXw,WwWuWwWu=>XkXwXkXw:WwWuWwWu|Stacker:RwRuRwRu,XkXwXkXw:WwWuWwWu=>RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 12077,
+        "candidates": 643942,
+        "maxRssMiB": 278.63671875
+      }
+    },
+    {
+      "id": "hard-side-041",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 41,
+      "target": "----Ru--:CuCuYwCu:YkSrWuSr",
+      "partition": "development",
+      "sha256": "6992c9ad11ca01e42fcaf077ac8f28cad62a701825e5b7027b579bb9cdb07e65",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 6,
+      "statesExplored": 11589,
+      "candidates": 521447,
+      "wallMs": 1354.6257999999998,
+      "freshProcessMaxRssMiB": 289.05859375,
+      "pathSignature": "Swapper:Yk------,----Wu--=>Yk--Wu--|Painter:--Su--Su=>--Sr--Sr@r|Stacker:Yk--Wu--,--Sr--Sr=>YkSrWuSr|Stacker:CuCu--Cu,----Yw--=>CuCuYwCu|Stacker:----Ru--,CuCuYwCu=>----Ru--:CuCuYwCu|Stacker:----Ru--:CuCuYwCu,YkSrWuSr=>----Ru--:CuCuYwCu:YkSrWuSr",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 11589,
+        "candidates": 484580,
+        "maxRssMiB": 276.76171875
+      }
+    }
+  ],
+  "aggregate": {
+    "cases": 32,
+    "solved": 10,
+    "unsolved": 0,
+    "limit": 16,
+    "watchdog": 6,
+    "error": 0,
+    "limitsByReason": {
+      "generated-states": 16
+    },
+    "replay": {
+      "valid": 10,
+      "invalid": 0,
+      "unsupported": 0,
+      "notRun": 22
+    },
+    "statesExplored": 1368468,
+    "candidates": 83478621,
+    "candidatesPerState": 61.00151483264497
+  },
+  "growthByDepth": [
+    {
+      "depth": 4,
+      "cases": 2,
+      "statesExplored": 6774,
+      "candidates": 64077,
+      "candidatesPerState": 9.45925597874225,
+      "statesRatioToPriorDepth": null,
+      "candidatesRatioToPriorDepth": null
+    },
+    {
+      "depth": 5,
+      "cases": 1,
+      "statesExplored": 5839,
+      "candidates": 79136,
+      "candidatesPerState": 13.553005651652681,
+      "statesRatioToPriorDepth": 0.8619722468260997,
+      "candidatesRatioToPriorDepth": 1.2350141236325047
+    },
+    {
+      "depth": 6,
+      "cases": 3,
+      "statesExplored": 32000,
+      "candidates": 1122541,
+      "candidatesPerState": 35.07940625,
+      "statesRatioToPriorDepth": 5.480390477821545,
+      "candidatesRatioToPriorDepth": 14.184960068742418
+    },
+    {
+      "depth": 7,
+      "cases": 3,
+      "statesExplored": 41835,
+      "candidates": 1402134,
+      "candidatesPerState": 33.51581211903908,
+      "statesRatioToPriorDepth": 1.30734375,
+      "candidatesRatioToPriorDepth": 1.249071526117977
+    },
+    {
+      "depth": 8,
+      "cases": 1,
+      "statesExplored": 17728,
+      "candidates": 810733,
+      "candidatesPerState": 45.73178023465704,
+      "statesRatioToPriorDepth": 0.42376000956137205,
+      "candidatesRatioToPriorDepth": 0.578213637212991
+    },
+    {
+      "depth": 22,
+      "cases": 1,
+      "statesExplored": 60370,
+      "candidates": 5000000,
+      "candidatesPerState": 82.8225940036442,
+      "statesRatioToPriorDepth": 3.4053474729241877,
+      "candidatesRatioToPriorDepth": 6.167258517909102
+    },
+    {
+      "depth": 23,
+      "cases": 3,
+      "statesExplored": 191582,
+      "candidates": 15000000,
+      "candidatesPerState": 78.29545573174933,
+      "statesRatioToPriorDepth": 3.1734636408812325,
+      "candidatesRatioToPriorDepth": 3
+    },
+    {
+      "depth": 24,
+      "cases": 2,
+      "statesExplored": 132520,
+      "candidates": 10000000,
+      "candidatesPerState": 75.46030787805614,
+      "statesRatioToPriorDepth": 0.6917142529047614,
+      "candidatesRatioToPriorDepth": 0.6666666666666666
+    },
+    {
+      "depth": 26,
+      "cases": 1,
+      "statesExplored": 71404,
+      "candidates": 5000000,
+      "candidatesPerState": 70.02408828637051,
+      "statesRatioToPriorDepth": 0.5388167823724721,
+      "candidatesRatioToPriorDepth": 0.5
+    },
+    {
+      "depth": 27,
+      "cases": 1,
+      "statesExplored": 75460,
+      "candidates": 5000000,
+      "candidatesPerState": 66.260270341903,
+      "statesRatioToPriorDepth": 1.0568035404179037,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 28,
+      "cases": 1,
+      "statesExplored": 78850,
+      "candidates": 5000000,
+      "candidatesPerState": 63.41154090044388,
+      "statesRatioToPriorDepth": 1.0449244632918102,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 29,
+      "cases": 1,
+      "statesExplored": 81523,
+      "candidates": 5000000,
+      "candidatesPerState": 61.33238472578291,
+      "statesRatioToPriorDepth": 1.0338998097653773,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 31,
+      "cases": 3,
+      "statesExplored": 265490,
+      "candidates": 15000000,
+      "candidatesPerState": 56.49930317526084,
+      "statesRatioToPriorDepth": 3.256626964169621,
+      "candidatesRatioToPriorDepth": 3
+    },
+    {
+      "depth": 33,
+      "cases": 1,
+      "statesExplored": 93953,
+      "candidates": 5000000,
+      "candidatesPerState": 53.21809841090758,
+      "statesRatioToPriorDepth": 0.3538852687483521,
+      "candidatesRatioToPriorDepth": 0.3333333333333333
+    },
+    {
+      "depth": 37,
+      "cases": 2,
+      "statesExplored": 213140,
+      "candidates": 10000000,
+      "candidatesPerState": 46.917519001595196,
+      "statesRatioToPriorDepth": 2.2685810990601682,
+      "candidatesRatioToPriorDepth": 2
+    }
+  ]
+}

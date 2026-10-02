@@ -1,0 +1,24 @@
+{
+  "reselection": {
+    "replacementsFound": 11,
+    "remainingGaps": 0,
+    "depthDistribution": {
+      "D": 1,
+      "E": 10
+    }
+  },
+  "hardMain010": {
+    "finalClassification": "DEEP_ROUTE_FOUND",
+    "candidateCount": 8,
+    "replayFailures": 6,
+    "shallowCollapses": 1,
+    "deepCandidates": 1
+  },
+  "acceptedBefore": {
+    "required": 14,
+    "optionalPromotions": 16,
+    "total": 30
+  },
+  "proposedReplacementTotal": 42,
+  "recommendation": "READY FOR FINAL TARGETED ACCEPTANCE"
+}

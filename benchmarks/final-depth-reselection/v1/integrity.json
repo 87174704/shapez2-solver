@@ -1,0 +1,12 @@
+{
+  "baselineUnchanged": true,
+  "existingAcceptedCandidateArtifactsUnchanged": true,
+  "pilotUnchanged": true,
+  "rolloutUnchanged": true,
+  "structuralCanonicalizationChanged": false,
+  "schemaOrValidatorChanged": false,
+  "compositeReleaseConstructed": false,
+  "solverFilteringUsed": false,
+  "generated53x5": false,
+  "insaneTouched": false
+}

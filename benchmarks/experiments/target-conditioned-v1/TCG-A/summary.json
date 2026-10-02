@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "target-conditioned-candidate-generation-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "TCG-A",
+    "admissionMode": "strict-subgoal",
+    "maxOperations": 24,
+    "maxChartNodes": 40000,
+    "maxCandidateAttempts": 400000,
+    "maxVariantsPerShape": 32,
+    "maxWallMs": 8000
+  },
+  "memberCount": 159,
+  "counts": {
+    "SOLVED": 2,
+    "LIMIT": 70,
+    "UNSUPPORTED_DOMAIN": 78,
+    "EXHAUSTED": 9
+  },
+  "solved": 2,
+  "replayValidSolved": 2,
+  "repeated": 2,
+  "stableSolved": 2,
+  "stableDistinctTargets": 1,
+  "stableMembers": [
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F1",
+      "instanceId": "hard-main-001-53x1-01",
+      "operationCount": 9
+    },
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F2",
+      "instanceId": "hard-main-001-53x3-pilot-02",
+      "operationCount": 9
+    }
+  ],
+  "accept": false
+}

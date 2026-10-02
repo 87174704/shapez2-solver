@@ -5,6 +5,7 @@ import { showValidationErrors } from './shapeValidation.js';
 import { readColorCounts } from './mixingSolver.js';
 import { getCurrentColorMode, getMixColor } from './colorMode.js';
 import { COLOR_MODES, NON_RENEWABLE_PARTS } from './shapeConstants.js';
+import { startWorkerTask } from './workerLifecycle.js';
 import {
     DEFAULT_LOCALE,
     applyTranslations,
@@ -36,6 +37,10 @@ const byId = (id) => document.getElementById(id);
 const qs = (selector, root = document) => root?.querySelector(selector) ?? null;
 const qsa = (selector, root = document) => Array.from(root?.querySelectorAll(selector) ?? []);
 const readInt = (id, fallback) => Number.parseInt(byId(id)?.value, 10) || fallback;
+const readNonnegativeInt = (id, fallback) => {
+    const value = Number.parseInt(byId(id)?.value, 10);
+    return Number.isInteger(value) && value >= 0 ? value : fallback;
+};
 
 const statusDescriptor = (key, params = {}) => ({ key, params });
 
@@ -148,10 +153,9 @@ function createMixWorker() {
     return new Worker(new URL('./mixingSolver.js', import.meta.url), { type: 'module' });
 }
 
-function stopWorker(worker) {
-    if (!worker) return null;
-    worker.postMessage({ action: 'cancel' });
-    worker.terminate();
+function stopWorker(task) {
+    if (!task) return null;
+    task.cancel();
     return null;
 }
 
@@ -168,32 +172,25 @@ function toStatusMessage(data) {
 }
 
 function runWorker({ message, workerFactory = createSolverWorker, payload, onResult, onError }) {
-    const worker = workerFactory();
-    const startTime = performance.now();
-
     if (message) setStatus(message, 'running');
 
-    worker.onmessage = ({ data }) => {
-        if (data.type === 'status') {
+    return startWorkerTask({
+        workerFactory,
+        payload,
+        onStatus(data) {
             const statusMessage = toStatusMessage(data);
             if (statusMessage) setStatus(statusMessage, data.status ?? 'running');
-            return;
-        }
-
-        if (data.type !== 'result') return;
-
-        onResult(data.result, startTime);
-        worker.terminate();
-    };
-
-    worker.onerror = ({ message: workerMessage }) => {
-        setStatus(statusDescriptor('status.workerError', { message: workerMessage }), 'error');
-        if (onError) onError();
-        worker.terminate();
-    };
-
-    worker.postMessage(payload);
-    return worker;
+        },
+        onResult,
+        onError(error) {
+            const statusMessage = toStatusMessage(error);
+            setStatus(
+                statusMessage ?? statusDescriptor('status.workerError', { message: error.message }),
+                'error',
+            );
+            if (onError) onError();
+        },
+    });
 }
 
 function collectStartingCodes() {
@@ -309,7 +306,8 @@ function setupSolverPanel() {
         const startingCodes = collectStartingCodes();
         if (!validateSolveInputs(startingCodes)) return;
 
-        state.solverWorker = runWorker({
+        let task;
+        task = runWorker({
             message: statusDescriptor('solver.status.solving'),
             payload: {
                 action: 'solve',
@@ -320,10 +318,12 @@ function setupSolverPanel() {
                     ...readSolverOptions(),
                 },
             },
-            onResult(result, startTime) {
-                state.solverWorker = null;
-                refreshActionButtons();
-
+            async onResult(result, startTime) {
+                // Let overdue input/timer work run before the synchronous graph
+                // renderer. This keeps Worker completion and graph construction
+                // in separate main-thread tasks without changing either result.
+                await new Promise(resolve => setTimeout(resolve, 0));
+                if (state.solverWorker !== task) return;
                 if (result?.solutionPath) {
                     rememberGraph('solver', result.solutionPath);
                     renderGraph(result.solutionPath);
@@ -358,15 +358,24 @@ function setupSolverPanel() {
                         ? `${reason} 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。`
                         : `${reason} The search stopped safely; disable irrelevant operations or lower states per level and retry.`;
                     setStatus({ rawText: message }, 'error');
+                } else if (result?.outcome === 'exhausted') {
+                    setStatus(statusDescriptor('solver.status.exhausted'), 'error');
+                } else if (result?.outcome === 'not-found-pruned') {
+                    setStatus(statusDescriptor('solver.status.notFoundPruned'), 'error');
                 } else {
+                    // Older Workers did not classify no-result outcomes.
                     setStatus(statusDescriptor('solver.status.noSolution'), 'error');
                 }
+
+                state.solverWorker = null;
+                refreshActionButtons();
             },
             onError() {
                 state.solverWorker = null;
                 refreshActionButtons();
             },
         });
+        state.solverWorker = task;
 
         refreshActionButtons();
     });
@@ -396,7 +405,7 @@ function setupExplorerPanel() {
                 data: {
                     startingShapeCodes: startingCodes,
                     enabledOperations: collectEnabledOperations(),
-                    depthLimit: readInt('depth-limit-input', 999),
+                    depthLimit: readNonnegativeInt('depth-limit-input', 999),
                     maxLayers: readInt('max-layers', 4),
                 },
             },
@@ -408,10 +417,15 @@ function setupExplorerPanel() {
                     rememberGraph('explorer', result);
                     renderSpaceGraph(result);
                     byId('placeholder')?.style.setProperty('display', 'none');
-                    setStatus(statusDescriptor('explorer.status.complete', {
+                    const params = {
                         shapeCount: result.shapes?.length ?? 0,
                         opCount: result.ops?.length ?? 0,
-                    }), 'done');
+                    };
+                    if (result.outcome === 'limit') {
+                        setStatus(statusDescriptor(`explorer.status.limited.${result.limitReason}`, params), 'idle');
+                    } else {
+                        setStatus(statusDescriptor('explorer.status.complete', params), 'done');
+                    }
                 } else {
                     setStatus(statusDescriptor('explorer.status.noneReachable'), 'idle');
                 }

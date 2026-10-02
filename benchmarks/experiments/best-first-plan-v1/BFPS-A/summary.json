@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "bounded-best-first-plan-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "BFPS-A",
+    "maxOperations": 28,
+    "maxChartNodes": 80000,
+    "maxExpandedNodes": 30000,
+    "maxCandidateAttempts": 600000,
+    "maxVariantsPerShape": 32,
+    "maxPartnerPool": 512,
+    "maxPartnersPerExpansion": 48,
+    "maxWallMs": 10000
+  },
+  "memberCount": 159,
+  "counts": {
+    "LIMIT": 158,
+    "SOLVED": 1
+  },
+  "solved": 1,
+  "replayValidSolved": 1,
+  "repeated": 1,
+  "stableSolved": 1,
+  "stableDistinctTargets": 1,
+  "stableNewMembers": [],
+  "invalidReplay": false,
+  "stableMembers": [
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F2",
+      "instanceId": "hard-main-001-53x3-pilot-02",
+      "operationCount": 10
+    }
+  ],
+  "accept": false
+}

@@ -1,0 +1,32 @@
+{
+  "required": {
+    "deepReplacementFound": 25,
+    "stillShallow": 1,
+    "probablyLimited": 3
+  },
+  "depthDistribution": {
+    "D": 15,
+    "E": 10
+  },
+  "macroPlanClassesDiscovered": {
+    "alternate-crystal-staging-boundary": 1,
+    "chunked-upper-half-recomposition": 3,
+    "layer-local-crystal-staging": 1,
+    "mixed-state-transition-routing": 5,
+    "pin-column-support-partition": 13,
+    "pin-mask-crystal-staging": 2
+  },
+  "unknownFeasibility": {
+    "DEEP_ROUTE_FOUND": 21
+  },
+  "candidateFunnel": {
+    "macroCandidates": 282,
+    "replayInvalid": 96,
+    "expansionInvalid": 0,
+    "structuralDuplicate": 12,
+    "bOnly": 31,
+    "cde": 143,
+    "accepted": 25
+  },
+  "recommendation": "diversity quality acceptable → perform final depth re-audit"
+}

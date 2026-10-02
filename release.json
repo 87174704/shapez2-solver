@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "release": "hard-capable-v1",
+  "releaseTag": "hard-capable-v1",
+  "candidateId": "hard-capable-rc-v1",
+  "candidateIdentity": "hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17",
+  "runtimeManifestSha256": "3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/input-catalog.v1.schema.json",
+  "title": "Shapez 2 Solver Input Catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "version", "provenance", "ordinary", "special", "refinement"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "provenance": { "type": "object" },
+    "ordinary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pure", "pure_excluded", "full", "partial", "half"],
+      "properties": {
+        "pure": { "$ref": "#/$defs/shapes" }, "pure_excluded": { "$ref": "#/$defs/shapes" },
+        "full": { "$ref": "#/$defs/shapes" }, "partial": { "$ref": "#/$defs/shapes" }, "half": { "$ref": "#/$defs/shapes" }
+      }
+    },
+    "special": { "type": "object" },
+    "refinement": { "type": "object" }
+  },
+  "$defs": { "shapes": { "type": "array", "items": { "type": "string", "pattern": "^[A-Za-z-]{8}$" }, "uniqueItems": true } }
+}
+

@@ -1,0 +1,911 @@
+[
+  {
+    "targetId": "hard-main-001",
+    "baselineInstanceId": "hard-main-001-53x1-01",
+    "baselineFamilySignature": "5ec610ccdab7b846b76a858673880a63a667387ca3c89bee46745614be06d503",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "a256ca0c0f3038dc32995db96c68315e5e403859ff286f575e8d4cead11501c0",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5384615384615384,
+          "baselineWeightedJaccard": 0.5384615384615384,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 10,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 50
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "493f9bd659ede9e00b0395e0f092dd3a5263ada232e41e1316a9520587f9d0ec",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.46153846153846156,
+          "baselineWeightedJaccard": 0.46153846153846156,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 9,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 9,
+        "operationCount": 51
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 26,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-003",
+    "baselineInstanceId": "hard-side-003-53x1-01",
+    "baselineFamilySignature": "766c16f9d52d4ae8488a1a48886e3d8aed97dfb5920235de2a654fbf140f2900",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "4b29bac85076d9e8826499f316ed48cd21df03415e22645a42a8f0fe4b6ca3b1",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.4444444444444444,
+          "baselineWeightedJaccard": 0.4444444444444444,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 7,
+          "coreOccurrenceCount": 5,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 9,
+        "operationCount": 34
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "0d0fb9dcb78065884d77c70cb4f94c1d8c222043bd8c9ed3c50d859a25c5ca57",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.75,
+          "baselineWeightedJaccard": 0.4444444444444444,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 7,
+          "coreOccurrenceCount": 5,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 9,
+        "operationCount": 34
+      }
+    ],
+    "candidateCount": 14,
+    "duplicateRejectionCount": 12,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-035",
+    "baselineInstanceId": "hard-side-035-53x1-01",
+    "baselineFamilySignature": "285813c205c7f52e9dca51bfcbabcbafa8f46f8eaa55126520e00bac8aa92d84",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "ef8114f413d7cc0fa1474bca85b55b66a08f2be43afe6d45c728d96c485595c5",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "WuCu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator 180:WuCuRuCu",
+              "Cutter:WuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.4166666666666667,
+          "baselineWeightedJaccard": 0.4166666666666667,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 6,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 12,
+        "operationCount": 27
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "2494146c51675dfe0d844ebf25c2e1f6d835f40d0439312a8815377ccf78b5e2",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "WuCu----",
+            "presentedInputs": [
+              "RuWuCu--"
+            ],
+            "derivation": [
+              "Rotator CCW:WuCu--Ru",
+              "Cutter:WuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7777777777777778,
+          "baselineWeightedJaccard": 0.4166666666666667,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 6,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 12,
+        "operationCount": 27
+      }
+    ],
+    "candidateCount": 31,
+    "duplicateRejectionCount": 16,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-010",
+    "baselineInstanceId": "hard-main-010-53x1-01",
+    "baselineFamilySignature": "bebec529dedc9114a1b411afb3ba481d87dd2c804d7c7542902c956687579fc5",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "3aef6d886d198afcd539f01acaccacdd3050b7b0c18ca3e687036b2001698fbf",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuSu--Cu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuWuSuCu",
+              "Cutter:CuCuWuSu",
+              "Rotator CCW:----WuSu",
+              "Swapper:--WuSu--+CuCu----",
+              "Rotator CCW:CuCuSu--"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7777777777777778,
+          "baselineWeightedJaccard": 0.7777777777777778,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 6,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 20,
+        "operationCount": 55
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "ac85ed23a01980d3468dd54557fd37713129fcc6a54a439864184ce216332b91",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuSu--Cu",
+            "presentedInputs": [
+              "SuSuRuCu",
+              "--CuWuSu"
+            ],
+            "derivation": [
+              "Rotator CW:SuSuRuCu",
+              "Rotator 180:--CuWuSu",
+              "Swapper:CuSuSuRu+WuSu--Cu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6,
+          "baselineWeightedJaccard": 0.6,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 8,
+          "coreOccurrenceCount": 6,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 17,
+        "operationCount": 53
+      }
+    ],
+    "candidateCount": 2,
+    "duplicateRejectionCount": 0,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-040",
+    "baselineInstanceId": "hard-side-040-53x1-01",
+    "baselineFamilySignature": "08b3917ea07e1139f03042a8082115faa339866f1d6f64aeba60fec297014180",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "9c4935d5120e510fe141e667a60f930078a8464626d34a4f709b0114ce89401e",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu",
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8723404255319149,
+          "baselineWeightedJaccard": 0.8723404255319149,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 44,
+          "coreOccurrenceCount": 42,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 26,
+        "operationCount": 271
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "2dad262a5b4a67e4ac30d0483b2b4f72d4950b2322459af7ce23eb74294cf9b4",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "WuCu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Cutter:----WuCu",
+              "Rotator 180:WuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8723404255319149,
+          "baselineWeightedJaccard": 0.8723404255319149,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 44,
+          "coreOccurrenceCount": 42,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 26,
+        "operationCount": 271
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 16,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-012",
+    "baselineInstanceId": "hard-main-012-53x1-01",
+    "baselineFamilySignature": "1468bbe79d77461d8d66358a800c8e781a9fec874005500cd6cf1beed74ddbc8",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "b9e4f61bf9e60c388419b0cc0245df54beb6510d1625c5cc511bfdf79b4ccb6c",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Cutter:SuCu----",
+              "Rotator 180:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7222222222222222,
+          "baselineWeightedJaccard": 0.7222222222222222,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 16,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 20,
+        "operationCount": 118
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "c746c1e18e63d294fc6c2f70793ff977a22ef474ff96933e007f10adbd830fc8",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.7222222222222222,
+          "baselineWeightedJaccard": 0.6666666666666666,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 15,
+          "coreOccurrenceCount": 14,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 20,
+        "operationCount": 118
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 21,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-005",
+    "baselineInstanceId": "hard-main-005-53x1-01",
+    "baselineFamilySignature": "26e907e6b0355d047a499a704d02655b2699276d63990ec774691f9402a670ca",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "0d814bea06bed97d9a2ca94688bd60ce7ea2a2c55250627e829550eb36536f03",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Rotator CCW:CuSu--Su",
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5882352941176471,
+          "baselineWeightedJaccard": 0.5882352941176471,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 13,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 11,
+        "operationCount": 65
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "10b039b7a9e1c44e99423b9c14eb284f7ebc42018da2acbeac429225e6371fe2",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5625,
+          "baselineWeightedJaccard": 0.5294117647058824,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 12,
+          "coreOccurrenceCount": 11,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 11,
+        "operationCount": 66
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-008",
+    "baselineInstanceId": "hard-main-008-53x1-01",
+    "baselineFamilySignature": "d8d2550582b22b3fdfdcc9f0f4913e4400e8f5f65047fa49747b53d249e7d54c",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "bd70531ff950b425a52ebd60f4ce2af2942bed92a5f577fb42215d22d9ecf109",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.75,
+          "baselineWeightedJaccard": 0.75,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 24,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 21,
+        "operationCount": 144
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "5d266f43a24021ef4ed164b1e58a380099b295e202f77df9cdec9a1d106f644e",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          },
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Cutter:SuCu----",
+              "Rotator 180:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8076923076923077,
+          "baselineWeightedJaccard": 0.7142857142857143,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 23,
+          "coreOccurrenceCount": 22,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 21,
+        "operationCount": 147
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 35,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-main-007",
+    "baselineInstanceId": "hard-main-007-53x1-01",
+    "baselineFamilySignature": "64e3bf862fee191d2aed7e552ab063772945ab703fdf75970a6c1ab4ab913058",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "66289b44edfc85e70cb06b1a46fe40b5783f7b93e748ba4e9fdcb41c40e1ad4a",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuWuSu",
+              "Half Destroyer:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8928571428571429,
+          "baselineWeightedJaccard": 0.8928571428571429,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 53,
+          "coreOccurrenceCount": 51,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 22,
+        "operationCount": 336
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "2caa08219d3ffea138fa1d6689ddff6d7e5537a97cea4440bf11183fa737d6a0",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.875,
+          "baselineWeightedJaccard": 0.875,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 52,
+          "coreOccurrenceCount": 51,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 22,
+        "operationCount": 336
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 14,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-036",
+    "baselineInstanceId": "hard-side-036-53x1-01",
+    "baselineFamilySignature": "70fb29ab1f2d5401d4497602ca976dd93d3b48be9d44638e7bce565a8b86892e",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "e4a679035d9868ed0d3c39bc9ea43b03ddcbf925622e0c6f4ddc3e763d96d123",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "CuWuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8648648648648649,
+          "baselineWeightedJaccard": 0.8648648648648649,
+          "newInputTypeCount": 2,
+          "availableOccurrenceCount": 35,
+          "coreOccurrenceCount": 33,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 22,
+        "operationCount": 214
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "0e5c131c101c9e36c1bc13517366d797b1562a9e148630dc706e00b576d7e620",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuCu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Rotator CW:CuCuSu--",
+              "Cutter:CuCu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8648648648648649,
+          "baselineWeightedJaccard": 0.8378378378378378,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 34,
+          "coreOccurrenceCount": 33,
+          "expansionDelta": 1
+        },
+        "witnessDepth": 24,
+        "operationCount": 216
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 12,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-033",
+    "baselineInstanceId": "hard-side-033-53x1-01",
+    "baselineFamilySignature": "7ffc9da59473bfc065673995f345aecb73162cf2888e3b6cf06b8a792788b9ec",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "aea7e2cf623771b54c34f145fdc47d28587cebfee5076577c91a67662a05d864",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuCuWuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuCuWu",
+              "Cutter:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8214285714285714,
+          "baselineWeightedJaccard": 0.8214285714285714,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 26,
+          "coreOccurrenceCount": 24,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 14,
+        "operationCount": 165
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "c10678aac181710d2c416c5b8e91c1b9fe4717a25080da1dfdccdfccb0e98c6e",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "CuRu----",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Rotator CW:CuRuRuSu",
+              "Half Destroyer:CuRu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.9259259259259259,
+          "baselineWeightedJaccard": 0.8214285714285714,
+          "newInputTypeCount": 0,
+          "availableOccurrenceCount": 26,
+          "coreOccurrenceCount": 24,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 14,
+        "operationCount": 165
+      }
+    ],
+    "candidateCount": 14,
+    "duplicateRejectionCount": 12,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-041",
+    "baselineInstanceId": "hard-side-041-53x1-01",
+    "baselineFamilySignature": "297e91896558e28c92c0a859f3e783b1a7f474d9014c8de7c18e69708b94f5ff",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "64f0095a9b3456797a04c7f316e9a096fb82363009862d0910df9d8a61819272",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu",
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5333333333333333,
+          "baselineWeightedJaccard": 0.5333333333333333,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 11,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 3
+        },
+        "witnessDepth": 10,
+        "operationCount": 46
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "5be5104ead72fc365bacc84e6255e839543532835e85f297e0f7cdd20ee231bf",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "--SuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu"
+            ]
+          },
+          {
+            "coreShape": "CuSu----",
+            "presentedInputs": [
+              "CuSu--Cu"
+            ],
+            "derivation": [
+              "Half Destroyer:CuSu----"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.6153846153846154,
+          "baselineWeightedJaccard": 0.4666666666666667,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 10,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 10,
+        "operationCount": 46
+      }
+    ],
+    "candidateCount": 160,
+    "duplicateRejectionCount": 31,
+    "failureCategory": null
+  },
+  {
+    "targetId": "hard-side-021",
+    "baselineInstanceId": "hard-side-021-53x1-01",
+    "baselineFamilySignature": "ce74bd7c3e191bd8d03aef61797688dda8fd0d659b07d68e63afaec3baa87c5f",
+    "familyCoverage": "3/3",
+    "acceptedFamilies": [
+      {
+        "familyNumber": 2,
+        "structuralSignature": "9b6208c728f3a69ace37fde0d85bf211fe996e3593b580bb5f025e07a66ef8a0",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "RuRuSuCu"
+            ],
+            "derivation": [
+              "Cutter:----SuCu",
+              "Cutter:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.5833333333333334,
+          "baselineWeightedJaccard": 0.5833333333333334,
+          "newInputTypeCount": 3,
+          "availableOccurrenceCount": 10,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 12,
+        "operationCount": 73
+      },
+      {
+        "familyNumber": 3,
+        "structuralSignature": "37ba9a3c084a3e85112be00d9a3568c71af585f27649bd86eabfdf91f92bd073",
+        "strategy": "transformative source-ancestry substitution",
+        "replacementTopology": [
+          {
+            "coreShape": "----SuCu",
+            "presentedInputs": [
+              "SuCuSu--"
+            ],
+            "derivation": [
+              "Cutter:SuCu----",
+              "Rotator 180:----SuCu"
+            ]
+          }
+        ],
+        "environment": {
+          "maxWeightedJaccard": 0.8181818181818182,
+          "baselineWeightedJaccard": 0.5833333333333334,
+          "newInputTypeCount": 1,
+          "availableOccurrenceCount": 10,
+          "coreOccurrenceCount": 8,
+          "expansionDelta": 2
+        },
+        "witnessDepth": 12,
+        "operationCount": 73
+      }
+    ],
+    "candidateCount": 38,
+    "duplicateRejectionCount": 15,
+    "failureCategory": null
+  }
+]

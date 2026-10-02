@@ -1,0 +1,30 @@
+{
+  "batchNumber": 5,
+  "targetsAttempted": [
+    "hard-side-029",
+    "hard-side-030",
+    "hard-side-031",
+    "hard-side-032",
+    "hard-side-034",
+    "hard-side-037",
+    "hard-side-038",
+    "hard-side-039"
+  ],
+  "achieved3of3": [
+    "hard-side-029",
+    "hard-side-030",
+    "hard-side-031",
+    "hard-side-032",
+    "hard-side-034",
+    "hard-side-037",
+    "hard-side-038",
+    "hard-side-039"
+  ],
+  "achieved2of3Only": [],
+  "duplicateFamilyRejectionCount": 151,
+  "replayInvalidCount": 0,
+  "expansionInvalidCount": 0,
+  "capabilityGapTargets": [],
+  "candidateCount": 1134,
+  "acceptedCount": 16
+}

@@ -1,0 +1,12 @@
+CuRbCuRb:CrRuCrRu:CuRbCuRb:CuRuCuRu
+RuCbCuRb:SgWrWrSg:WrCgCgWr:WrCrCrWr
+SbSrSbRr:WrRrWrSb:CgRuCgWr:CuWgCuWu
+Cc--Cc--:CwWwCwWw:--Wc--Wc:RmWmRmWm:Cw--Cw--
+SbCrRbCr:WbWyWuWy:WyP-WyP-:----Cr--
+RyRyRyRy:P-RmRmP-:CmRwRwCm:P-P-P-P-:--CmCm--
+RmCcWcCm:--cm--cc:RcccCmcm:cmcccccm:cw--cw--
+CwRwCwCw:CcCcCcCc:--Cw--Cw:cccccccc
+P-XrXrP-:crXgXgcr:cgXbXbcg:cbP-P-cb:P-CwCwP-
+cccccccc:XyXyXmXy:cccccccc:XmXcXcXc:ccWmWmWm
+XkP-XkP-:XwcwXwcw:cwCkcwCk:CkXwCkXw:cw--cw--
+YkP-YkP-:P-YkP-Yk:P-P-P-Wr:YwYwYwXk:--Sw--Wm

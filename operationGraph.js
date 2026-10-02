@@ -6,6 +6,9 @@ import { getOperationLabel, t } from './i18n.js';
 // constants 
 
 const DEFAULT_DIRECTION = 'LR';
+const SHAPE_IMAGE_CACHE_LIMIT = 256;
+const SOLVER_RANK_SPACING = 160;
+const SOLVER_NODE_SPACING = 120;
 const MIX_GRAPH_COLOR_CODES   = Object.values(COLOR_CODES).map((c) => c.toUpperCase());
 const ELK_DIRECTION_BY_RANKDIR = Object.freeze({
     LR: 'RIGHT', RL: 'LEFT', TB: 'DOWN', BT: 'UP',
@@ -15,6 +18,9 @@ const ELK_DIRECTION_BY_RANKDIR = Object.freeze({
 
 let cyInstance       = null;
 let graph3dInstance  = null;
+let currentLayoutBuilder = null;
+let currentGraphKind = null;
+const shapeImageCache = new Map();
 
 const explorerState = {
     popup:          null,
@@ -37,6 +43,8 @@ function getDirection() {
 function destroyCyGraph() {
     cyInstance?.destroy();
     cyInstance = null;
+    currentLayoutBuilder = null;
+    currentGraphKind = null;
 }
 
 function destroy3dGraph() {
@@ -85,6 +93,39 @@ function buildBaseLayout(rankDir, animate = false) {
             'elk.spacing.edgeNode':                           '80',
             'elk.spacing.edgeEdge':                           '0',
         },
+        ...(animate ? { animate: true, animationDuration: 500 } : {}),
+    };
+}
+
+function buildSolverPresetLayout(rankDir, nodeRanks, animate = false) {
+    const nodesByRank = new Map();
+    for (const [nodeId, rank] of nodeRanks) {
+        if (!nodesByRank.has(rank)) nodesByRank.set(rank, []);
+        nodesByRank.get(rank).push(nodeId);
+    }
+
+    const basePositions = new Map();
+    for (const [rank, nodeIds] of nodesByRank) {
+        nodeIds.forEach((nodeId, index) => {
+            basePositions.set(nodeId, {
+                x: rank * SOLVER_RANK_SPACING,
+                y: (index - (nodeIds.length - 1) / 2) * SOLVER_NODE_SPACING,
+            });
+        });
+    }
+
+    const transform = {
+        LR: ({ x, y }) => ({ x, y }),
+        RL: ({ x, y }) => ({ x: -x, y }),
+        TB: ({ x, y }) => ({ x: y, y: x }),
+        BT: ({ x, y }) => ({ x: y, y: -x }),
+    }[rankDir] ?? (({ x, y }) => ({ x, y }));
+
+    return {
+        name: 'preset',
+        positions: node => transform(basePositions.get(node.id()) ?? { x: 0, y: 0 }),
+        fit: true,
+        padding: 40,
         ...(animate ? { animate: true, animationDuration: 500 } : {}),
     };
 }
@@ -152,9 +193,26 @@ function operationImagePath(name) {
     return `images/operations/${name.toLowerCase().replace(/\s+/g, '-')}.png`;
 }
 
+function getShapeImage(shapeCode, size) {
+    const key = `${getCurrentColorMode()}\0${size}\0${shapeCode}`;
+    const cached = shapeImageCache.get(key);
+    if (cached !== undefined) {
+        shapeImageCache.delete(key);
+        shapeImageCache.set(key, cached);
+        return cached;
+    }
+
+    const image = createShapeCanvas(shapeCode, size).toDataURL();
+    shapeImageCache.set(key, image);
+    if (shapeImageCache.size > SHAPE_IMAGE_CACHE_LIMIT) {
+        shapeImageCache.delete(shapeImageCache.keys().next().value);
+    }
+    return image;
+}
+
 function createShapeNode(id, shapeCode, size = 240) {
     return {
-        data: { id, label: shapeCode, shapeCanvas: createShapeCanvas(shapeCode, size).toDataURL() },
+        data: { id, label: shapeCode, shapeCanvas: getShapeImage(shapeCode, size) },
         classes: 'shape',
     };
 }
@@ -187,40 +245,57 @@ export function renderGraph(solutionPath) {
     let container = getGraphContainer();
     if (!container) return;
 
-    container = resetGraphs(container);
+    const reuseSolverGraph = cyInstance && currentGraphKind === 'solver';
+    if (!reuseSolverGraph) container = resetGraphs(container);
     if (!solutionPath?.length) return;
 
     const elements       = [];
     const seenShapeNodes = new Set();
+    const shapeRanks     = new Map();
+    const nodeRanks      = new Map();
 
     solutionPath.forEach((step, stepIndex) => {
         const opNode = buildOperationNode(step, stepIndex);
         const opId   = opNode.data.id;
+        const operationRank = Math.max(0, ...step.inputs.map(({ id }) => shapeRanks.get(id) ?? 0)) + 1;
         elements.push(opNode);
+        nodeRanks.set(opId, operationRank);
 
         for (const { id, shape } of [...step.inputs, ...step.outputs]) {
             const shapeId = `shape-${id}`;
+            const isInput = step.inputs.some((input) => input.id === id);
+            if (!shapeRanks.has(id)) shapeRanks.set(id, isInput ? 0 : operationRank + 1);
             if (!seenShapeNodes.has(shapeId)) {
                 elements.push(createShapeNode(shapeId, shape));
                 seenShapeNodes.add(shapeId);
+                nodeRanks.set(shapeId, shapeRanks.get(id));
             }
-            const isInput = step.inputs.some((i) => i.id === id);
             elements.push({ data: { source: isInput ? shapeId : opId, target: isInput ? opId : shapeId } });
         }
     });
+
+    currentLayoutBuilder = (rankDir, animate) => buildSolverPresetLayout(rankDir, nodeRanks, animate);
+    if (reuseSolverGraph) {
+        cyInstance.startBatch();
+        cyInstance.elements().remove();
+        cyInstance.add(elements);
+        cyInstance.endBatch();
+        cyInstance.layout(currentLayoutBuilder(getDirection())).run();
+        return;
+    }
 
     cyInstance = cytoscape({
         container,
         elements,
         style:  CYTO_BASE_STYLES,
-        layout: buildBaseLayout(getDirection()),
+        layout: currentLayoutBuilder(getDirection()),
         userZoomingEnabled:  true,
         userPanningEnabled:  true,
         boxSelectionEnabled: true,
         autoungrabify:       false,
         wheelSensitivity:    0.1,
     });
-
+    currentGraphKind = 'solver';
     cyInstance.on('tap', 'node.shape', async (event) => {
         try { await navigator.clipboard.writeText(event.target.data('label')); }
         catch (err) { console.error('Failed to copy:', err); }
@@ -372,6 +447,7 @@ export function renderMixGraph(steps, inputCounts, options = {}) {
         ? buildMixElementsCompact(steps, inputCounts)
         : buildMixElementsExpanded(steps, inputCounts);
 
+    currentLayoutBuilder = buildBaseLayout;
     cyInstance = cytoscape({
         container,
         elements,
@@ -424,7 +500,8 @@ export async function copyGraphToClipboard() {
 
 export function applyGraphLayout(direction) {
     if (!cyInstance) return;
-    cyInstance.layout(buildBaseLayout(direction || getDirection(), true)).run();
+    const buildLayout = currentLayoutBuilder ?? buildBaseLayout;
+    cyInstance.layout(buildLayout(direction || getDirection(), true)).run();
 }
 
 // explorer 3D graph

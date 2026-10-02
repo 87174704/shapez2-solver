@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "task": "P7-02",
+  "name": "real-ui-product-lifecycle-acceptance",
+  "date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS / STOPPED",
+  "browser": {
+    "name": "Google Chrome",
+    "version": "154.0.8037.59",
+    "freshProfileRuns": 2,
+    "headfulRuns": 1,
+    "headlessRuns": 1
+  },
+  "sequence": {
+    "visibleProgress": true,
+    "terminateBasedCancellation": true,
+    "cancelCleanup": true,
+    "staleEventSuppressionAfterCancel": true,
+    "consecutiveCompletedSolves": 2,
+    "consecutivePathStable": true,
+    "terminalSolveError": true,
+    "terminalExplorerError": true,
+    "errorCleanup": true,
+    "staleEventSuppressionAfterError": true,
+    "samePageRecovery": true,
+    "mixedPartInvalidIsolation": true,
+    "boundedPartialLimit": true,
+    "workersObservedPerRun": 6
+  },
+  "informationBoundary": {
+    "realPage": "/en/",
+    "nativeModuleWorkers": true,
+    "productionPayloads": true,
+    "testOnlySolverSemantics": false,
+    "workerObservationOnly": true,
+    "faultInjection": "malformed production Worker payloads in the browser gate only"
+  },
+  "solverSemanticChanges": false,
+  "productionCodeChanges": false,
+  "nextTask": "P7-03"
+}

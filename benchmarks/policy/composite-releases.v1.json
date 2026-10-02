@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "registryId": "official-composite-releases-v1",
+  "hashCanonicalization": "canonical-json-v1",
+  "releases": {
+    "hard-53x3-stage-v1": {
+      "manifestRevisionId": "hard-53x3-stage-v1-manifest-r1",
+      "manifestPath": "benchmarks/releases/hard-53x3-stage-v1.release.json",
+      "schemaVersion": 4,
+      "status": "released",
+      "compositeCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db"
+    }
+  }
+}

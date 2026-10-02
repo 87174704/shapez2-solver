@@ -1,0 +1,8 @@
+{
+  "artifactReleaseId": "hard-53x1-stage-v1",
+  "manifestRevisionId": "hard-53x1-stage-v1-manifest-r2",
+  "artifactPath": "benchmarks/hard-53x1/v1/instances.json",
+  "artifactCanonicalSha256": "11005e04e359fff9d0d3a0fec66dd491ca8e441f5c5c880e1ff3441b9fc77da3",
+  "instancesSha256": "40c4ea586dfeafb5f5e37545101220451d2cc9a9ca2ab54eb9d00a94806c8375",
+  "solverProjectionSha256": "52b07a352c8da0215bd4e052c08262b2255aa094d1cddd9635a75f5ea68bf15a"
+}

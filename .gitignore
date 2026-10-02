@@ -1,0 +1,3 @@
+node_modules/
+.codex-temp-*/
+benchmarks/profiling/**/records/*.states.ndjson

@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "sourceReleaseId": "hard-expansion-pilot-v1",
+  "suite": "hard",
+  "partition": "expansion-pilot",
+  "instances": [
+    {
+      "id": "hard-main-004-expansion-01",
+      "track": "main",
+      "targetId": "hard-main-004",
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-004-expansion-02",
+      "track": "main",
+      "targetId": "hard-main-004",
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-010-expansion-01",
+      "track": "main",
+      "targetId": "hard-main-010",
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "availableInputs": [
+        {
+          "shape": "CuSu--Cu",
+          "count": 3
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-010-expansion-02",
+      "track": "main",
+      "targetId": "hard-main-010",
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "availableInputs": [
+        {
+          "shape": "CuSu--Cu",
+          "count": 3
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-021-expansion-01",
+      "track": "side",
+      "targetId": "hard-side-021",
+      "target": "CyCwCwCy:P-P-P-P-:CbCbCbCb:CwCwCwCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 3
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-021-expansion-02",
+      "track": "side",
+      "targetId": "hard-side-021",
+      "target": "CyCwCwCy:P-P-P-P-:CbCbCbCb:CwCwCwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 3
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    }
+  ],
+  "sha256": "f0cf521216757294101883554a992e1385f972cb2111833225d23ff97a3be5bc"
+}

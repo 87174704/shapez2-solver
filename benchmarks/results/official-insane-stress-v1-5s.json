@@ -1,0 +1,1410 @@
+{
+  "benchmark": "shape-solver-official-workload",
+  "generatedAt": "2026-09-13T16:18:16.959Z",
+  "options": {
+    "suite": "insane",
+    "source": null,
+    "partition": "stress",
+    "partitionExplicit": true,
+    "caseId": null,
+    "timeoutMs": 5000,
+    "includeHoldout": false,
+    "json": false,
+    "outputFile": "benchmarks/results/official-insane-stress-v1-5s.json"
+  },
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "cpuModel": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "logicalCpuCount": 12,
+    "totalMemoryGiB": 31.793987274169922
+  },
+  "manifest": {
+    "path": "benchmarks/manifest.json",
+    "sha256": "f400bd27f2c68a56b0dc0fc5c8c793ecc7c2f621d49883f52214a9f2cbb63a0c",
+    "caseCount": 105,
+    "schemaVersion": 1
+  },
+  "sourceIdentity": {
+    "shapeSolver": {
+      "path": "shapeSolver.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeSolverWeb": {
+      "path": "shapeSolver_web.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeOperations": {
+      "path": "shapeOperations.js",
+      "sha256": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21",
+      "bytes": 25468
+    },
+    "oracleHelper": {
+      "path": "tests/helpers/shapeSolverOracle.mjs",
+      "sha256": "e5d11206661118b4bef1ab8fba00106650ff155fd58378883418d8f59e7636a4",
+      "bytes": 19054
+    },
+    "harness": {
+      "path": "tests/perf/officialWorkload.bench.mjs",
+      "sha256": "8b1e70587104b3ed146129964793912cfa92b9ce497de0b2131bd656f6c499be",
+      "bytes": 21344
+    },
+    "hard_main.txt": {
+      "path": "benchmarks/hard_main.txt",
+      "sha256": "9e41fbf81ff3e35e8fd274ecc8a9c85773c93a77f3380e83f79351241af26ab7",
+      "bytes": 360
+    },
+    "hard_side.txt": {
+      "path": "benchmarks/hard_side.txt",
+      "sha256": "2107e06d495183124a9bd83b7b49ab1a382c538cc879d28cdcc9862d5df52ce8",
+      "bytes": 1341
+    },
+    "insane_main.txt": {
+      "path": "benchmarks/insane_main.txt",
+      "sha256": "8ff3f305fe594e55f7d9edda538f710d43b2e2ec2904edcac15ee32c2ee922eb",
+      "bytes": 495
+    },
+    "insane_side.txt": {
+      "path": "benchmarks/insane_side.txt",
+      "sha256": "3cb8138d85ce449f77469ae170a12395951b72f5c6549c966858a7ecb55c37ee",
+      "bytes": 1674
+    },
+    "byteIdentical": true
+  },
+  "configuration": {
+    "targetShapeCodes": "singleton manifest target",
+    "startingShapeCodes": "_extractLayers(Shape.fromShapeCode(target), 'color', false, false, false)",
+    "enabledOperations": [
+      "Rotator CW",
+      "Rotator CCW",
+      "Rotator 180",
+      "Half Destroyer",
+      "Cutter",
+      "Swapper",
+      "Stacker",
+      "Painter",
+      "Pin Pusher",
+      "Crystal Generator"
+    ],
+    "hardMaxLayers": 4,
+    "insaneMaxLayers": 5,
+    "maxStatesPerLevel": 3000,
+    "preventWaste": false,
+    "orientationSensitive": true,
+    "allowSplitting": true,
+    "cleanPainting": false
+  },
+  "cases": [
+    {
+      "id": "insane-main-001",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 1,
+      "target": "CuRbCuRb:CrRuCrRu:CuRbCuRb:CuRuCuRu",
+      "partition": "stress",
+      "sha256": "e2aec1f3f0954be3f4904bafadc0c0947c5fc4b839ec30fd3ffc78fa945125af",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 63862,
+      "candidates": 5000000,
+      "wallMs": 4528.185,
+      "freshProcessMaxRssMiB": 425.20703125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 24,
+        "statesExplored": 63862,
+        "candidates": 4831796,
+        "maxRssMiB": 420.96875
+      }
+    },
+    {
+      "id": "insane-main-002",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 2,
+      "target": "RuCbCuRb:SgWrWrSg:WrCgCgWr:WrCrCrWr",
+      "partition": "stress",
+      "sha256": "1ba16c0b4151828b0c6c22e624be4ebe37ad654045a83287b96c99697dbd3bff",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21127,
+        "candidates": 1212009,
+        "maxRssMiB": 466.33203125
+      }
+    },
+    {
+      "id": "insane-main-003",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 3,
+      "target": "SbSrSbRr:WrRrWrSb:CgRuCgWr:CuWgCuWu",
+      "partition": "stress",
+      "sha256": "a4e44383b68960a6f195b988ba8a83cc7dc5594c949f0e3bf4b080cc936f9218",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21160,
+        "candidates": 1719524,
+        "maxRssMiB": 428.36328125
+      }
+    },
+    {
+      "id": "insane-main-004",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 4,
+      "target": "Cc--Cc--:CwWwCwWw:--Wc--Wc:RmWmRmWm:Cw--Cw--",
+      "partition": "stress",
+      "sha256": "da9be625af9d2d8d6a6f7f0c4c8d8a56e2d74875db401b8a9b25e8eddb530e3e",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 19,
+      "statesExplored": 52752,
+      "candidates": 5000000,
+      "wallMs": 4694.0013,
+      "freshProcessMaxRssMiB": 445.9453125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 20,
+        "statesExplored": 52752,
+        "candidates": 4866230,
+        "maxRssMiB": 445.9453125
+      }
+    },
+    {
+      "id": "insane-main-005",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 5,
+      "target": "SbCrRbCr:WbWyWuWy:WyP-WyP-:----Cr--",
+      "partition": "stress",
+      "sha256": "e269084e06cfd1590aaa114fcd874ca7b1542aacd5037c7469f8d3b9d72e6498",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21100,
+        "candidates": 1194036,
+        "maxRssMiB": 433.2109375
+      }
+    },
+    {
+      "id": "insane-main-006",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 6,
+      "target": "RyRyRyRy:P-RmRmP-:CmRwRwCm:P-P-P-P-:--CmCm--",
+      "partition": "stress",
+      "sha256": "ac8c443475fef00a0c5f3cc610a9dd59c4008b952611e2af83efe70045b67167",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 22867,
+        "candidates": 898053,
+        "maxRssMiB": 464.44921875
+      }
+    },
+    {
+      "id": "insane-main-007",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 7,
+      "target": "RmCcWcCm:--cm--cc:RcccCmcm:cmcccccm:cw--cw--",
+      "partition": "stress",
+      "sha256": "f33cc227309d7c9b31d649ab9a83e3c6d283da0dfd4969958ae945be5d2f2160",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 22732,
+        "candidates": 560126,
+        "maxRssMiB": 427.8515625
+      }
+    },
+    {
+      "id": "insane-main-008",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 8,
+      "target": "CwRwCwCw:CcCcCcCc:--Cw--Cw:cccccccc",
+      "partition": "stress",
+      "sha256": "aaa25388da837cbcaf3ab52da8cbabb55c8c84da3dcdee548f17857b161498b3",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 23,
+        "statesExplored": 60644,
+        "candidates": 4617441,
+        "maxRssMiB": 433.0703125
+      }
+    },
+    {
+      "id": "insane-main-009",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 9,
+      "target": "P-XrXrP-:crXgXgcr:cgXbXbcg:cbP-P-cb:P-CwCwP-",
+      "partition": "stress",
+      "sha256": "48de8aeea53427c3dde1897657674f4e98a0a0009e5544a710cd661d1cfd6b3b",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 22986,
+        "candidates": 758286,
+        "maxRssMiB": 451.421875
+      }
+    },
+    {
+      "id": "insane-main-010",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 10,
+      "target": "cccccccc:XyXyXmXy:cccccccc:XmXcXcXc:ccWmWmWm",
+      "partition": "stress",
+      "sha256": "f2e9b97c81b11bdc03f6d37989dc84e0f6710a56ffd88e9a33cd31b7a10f9f31",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 17,
+        "statesExplored": 44174,
+        "candidates": 2667409,
+        "maxRssMiB": 421.05859375
+      }
+    },
+    {
+      "id": "insane-main-011",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 11,
+      "target": "XkP-XkP-:XwcwXwcw:cwCkcwCk:CkXwCkXw:cw--cw--",
+      "partition": "stress",
+      "sha256": "1b7500c02bf265af0ae985b4b711b2e5cbbf5943ab27e51c16b5b11b5c82feb7",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 22903,
+        "candidates": 760540,
+        "maxRssMiB": 443.46484375
+      }
+    },
+    {
+      "id": "insane-main-012",
+      "suite": "insane",
+      "source": "insane_main.txt",
+      "line": 12,
+      "target": "YkP-YkP-:P-YkP-Yk:P-P-P-Wr:YwYwYwXk:--Sw--Wm",
+      "partition": "stress",
+      "sha256": "b456f56d091ac61bdb813a965a0fb1b8c94b5e801bdb7e6399f9f5f1e9be9345",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21077,
+        "candidates": 966524,
+        "maxRssMiB": 434.55859375
+      }
+    },
+    {
+      "id": "insane-side-001",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 1,
+      "target": "SuCuCuCr:CrCrCrCu:SuCuCuCr",
+      "partition": "stress",
+      "sha256": "d877394c82bcf105bac08a1c98b936c125ad6f943b9caa9fe90e0648a8586320",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 8,
+      "statesExplored": 15879,
+      "candidates": 544889,
+      "wallMs": 1091.9667,
+      "freshProcessMaxRssMiB": 256.40625,
+      "pathSignature": "Painter:------Cu=>------Cr@r|Stacker:SuCuCu--,------Cr=>SuCuCuCr|Painter:------Cu=>------Cr@r|Stacker:SuCuCu--,------Cr=>SuCuCuCr|Painter:CuCuCu--=>CrCrCr--@r|Stacker:------Cu,CrCrCr--=>CrCrCrCu|Stacker:SuCuCuCr,CrCrCrCu=>SuCuCuCr:CrCrCrCu|Stacker:SuCuCuCr:CrCrCrCu,SuCuCuCr=>SuCuCuCr:CrCrCrCu:SuCuCuCr",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 7,
+        "statesExplored": 12879,
+        "candidates": 526097,
+        "maxRssMiB": 248.72265625
+      }
+    },
+    {
+      "id": "insane-side-002",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 2,
+      "target": "RuRuRuRu:RbCrRbCr:RuCuRuCu:RbCrRbCr",
+      "partition": "stress",
+      "sha256": "c9a6080c4db650c0d437b8fe3356af7c7a34d6e9c2e3978d8f1029243ab2638a",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 22,
+        "statesExplored": 58551,
+        "candidates": 4605292,
+        "maxRssMiB": 477.17578125
+      }
+    },
+    {
+      "id": "insane-side-003",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 3,
+      "target": "Rb--Rb--:CrCrCrCr:CuCuCuCu:CrCrCrCr",
+      "partition": "stress",
+      "sha256": "583bfe24c7774b536fc778c5d350435ae623f16c37b481104360949f76b056d6",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 25,
+      "statesExplored": 69270,
+      "candidates": 5000000,
+      "wallMs": 4052.5028,
+      "freshProcessMaxRssMiB": 420.20703125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 26,
+        "statesExplored": 69270,
+        "candidates": 4941424,
+        "maxRssMiB": 420.20703125
+      }
+    },
+    {
+      "id": "insane-side-004",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 4,
+      "target": "Rb--Rb--:RuRuRuRu:Rb--Rb--:SuSuSuSu",
+      "partition": "stress",
+      "sha256": "2349ef834eae2a8d9f569a30e30fb68362a48150b6b49f79a529953f038c8959",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 5,
+      "statesExplored": 6594,
+      "candidates": 183208,
+      "wallMs": 498.2492,
+      "freshProcessMaxRssMiB": 175.45703125,
+      "pathSignature": "Painter:Ru--Ru--=>Rb--Rb--@b|Painter:Ru--Ru--=>Rb--Rb--@b|Stacker:RuRuRuRu,Rb--Rb--=>RuRuRuRu:Rb--Rb--|Stacker:RuRuRuRu:Rb--Rb--,SuSuSuSu=>RuRuRuRu:Rb--Rb--:SuSuSuSu|Stacker:Rb--Rb--,RuRuRuRu:Rb--Rb--:SuSuSuSu=>Rb--Rb--:RuRuRuRu:Rb--Rb--:SuSuSuSu",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 4,
+        "statesExplored": 3594,
+        "candidates": 135861,
+        "maxRssMiB": 153.73828125
+      }
+    },
+    {
+      "id": "insane-side-005",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 5,
+      "target": "Cg--Cg--:CrCgCrCg:CuCrCuCr:--Cu--Cu",
+      "partition": "stress",
+      "sha256": "5bb1e953426b8f22e2d37fee9318043bc99cb2c98aa07c6a34c04bb4ea1fee1e",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 22,
+      "statesExplored": 60438,
+      "candidates": 5000000,
+      "wallMs": 3778.2842,
+      "freshProcessMaxRssMiB": 359.7734375,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 23,
+        "statesExplored": 60438,
+        "candidates": 4786282,
+        "maxRssMiB": 354.5234375
+      }
+    },
+    {
+      "id": "insane-side-006",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 6,
+      "target": "RrWrCbWr:RuWgCuWg:Su------:Sb------",
+      "partition": "stress",
+      "sha256": "ad44d3607c6e511c53f043fea11509bd19074d5c388b8b7f36a452edf56aa67e",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 23513,
+        "candidates": 854733,
+        "maxRssMiB": 459.26171875
+      }
+    },
+    {
+      "id": "insane-side-007",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 7,
+      "target": "Rb--Rg--:WgWbWbWg:SrCgSrCb:--Cr--Cr:WuCuWuCu",
+      "partition": "stress",
+      "sha256": "53a48373092adb6dfa31dccdf159eb41e29a6bbf47e8d883b01a807fd8de6e46",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21161,
+        "candidates": 1838746,
+        "maxRssMiB": 379.234375
+      }
+    },
+    {
+      "id": "insane-side-008",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 8,
+      "target": "WbWgWbWg:--Wb--Wb:RuCgRuCg:RrCrRrCr:CgCgCgCg",
+      "partition": "stress",
+      "sha256": "2640a2bb98be71ea5bb0b28fed1796c031ad2240afbb327284059c9ffea65fa9",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 24087,
+        "candidates": 1506898,
+        "maxRssMiB": 358.71484375
+      }
+    },
+    {
+      "id": "insane-side-009",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 9,
+      "target": "Sr--Sr--:WbSgWbSg:--Wu--Wu:SrWbSrWb:WbWgWbWg",
+      "partition": "stress",
+      "sha256": "bbc7971943d6ccc6dc6fd66533fbc4b112abc2d359778a9242ba958d6147276d",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 11,
+        "statesExplored": 25900,
+        "candidates": 1229575,
+        "maxRssMiB": 480.40234375
+      }
+    },
+    {
+      "id": "insane-side-010",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 10,
+      "target": "Sr----Sr:WrWbWbWr:CbSrSrCb:CrCrCrCr:WgWgWgWg",
+      "partition": "stress",
+      "sha256": "6f92b7ff4fa8050a3bfde9bc693687a66b562e07340e31c8d2fdfb957d0e8a7c",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21121,
+        "candidates": 1447288,
+        "maxRssMiB": 439.3671875
+      }
+    },
+    {
+      "id": "insane-side-011",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 11,
+      "target": "CgRgCgSg:CuRuCuCu:CrRrCrCr:RuRuRuCu:RgCgRgCg",
+      "partition": "stress",
+      "sha256": "8c270bf590f9744e89225cc43ce156a6739497bd249e43b2b84ddc00abf642d7",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 17,
+      "statesExplored": 46755,
+      "candidates": 5000000,
+      "wallMs": 4458.792,
+      "freshProcessMaxRssMiB": 479.203125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 18,
+        "statesExplored": 46755,
+        "candidates": 4922702,
+        "maxRssMiB": 479.203125
+      }
+    },
+    {
+      "id": "insane-side-012",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 12,
+      "target": "WbWbCbWb:WuWuCuWu:WrWrCrWr:WuWuCuWu:WbWbCbWb",
+      "partition": "stress",
+      "sha256": "8de71e9ff6adf79d15b8920de63621e65764a71e20c7d7422154af9e62532326",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 24,
+      "statesExplored": 65486,
+      "candidates": 5000000,
+      "wallMs": 3644.8988,
+      "freshProcessMaxRssMiB": 313.3828125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 25,
+        "statesExplored": 65486,
+        "candidates": 4955064,
+        "maxRssMiB": 313.3828125
+      }
+    },
+    {
+      "id": "insane-side-013",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 13,
+      "target": "SrCgCgCg:WuCuRuCu:WrCrWrCr:CgCgRgCg:RbCbWbCb",
+      "partition": "stress",
+      "sha256": "1bc64a9f8fb5c2854f97c98e691f66c4d50807977001cbec7b2d062122a95769",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 24098,
+        "candidates": 1355629,
+        "maxRssMiB": 434.90625
+      }
+    },
+    {
+      "id": "insane-side-014",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 14,
+      "target": "CyRyRyCy:CmCwCwCm:CbCcCcCb:Cb----Cb:CmCbCbCm",
+      "partition": "stress",
+      "sha256": "36048f8861197b63e98b608afccddab469a99fc594c5d553f5b3ac4694975037",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 11,
+        "statesExplored": 25758,
+        "candidates": 1716752,
+        "maxRssMiB": 446.96875
+      }
+    },
+    {
+      "id": "insane-side-015",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 15,
+      "target": "SwSwSwSw:WrWrWrWr:CmCmCmCm:WbWbWbWb:CgCgCgCg",
+      "partition": "stress",
+      "sha256": "d69dbef21ed62717b09652db743312d3e2718fe46c377b3cb4acddc83fce8538",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 63753,
+      "candidates": 5000000,
+      "wallMs": 4297.254,
+      "freshProcessMaxRssMiB": 378.08203125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 24,
+        "statesExplored": 63753,
+        "candidates": 4905452,
+        "maxRssMiB": 376.48046875
+      }
+    },
+    {
+      "id": "insane-side-016",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 16,
+      "target": "SySbSbSy:CwCwCwCw:RyRbRbCy:SwSrSrSw:Wy--Ry--",
+      "partition": "stress",
+      "sha256": "fe8761674abdd449aad1d4828ec67a8d8704135bcd8578cb997ae53c3d92f723",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 8,
+        "statesExplored": 18104,
+        "candidates": 1647756,
+        "maxRssMiB": 409.671875
+      }
+    },
+    {
+      "id": "insane-side-017",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 17,
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:CbCbCbCb:WyCyWyCy",
+      "partition": "stress",
+      "sha256": "4b53166189cea14e2bf057ecdbfdee7805b5067303bf452fc36f0dd0bb51cfaf",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 19,
+      "statesExplored": 52298,
+      "candidates": 5000000,
+      "wallMs": 3671.7883,
+      "freshProcessMaxRssMiB": 364.53125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 20,
+        "statesExplored": 52298,
+        "candidates": 4874486,
+        "maxRssMiB": 364.53125
+      }
+    },
+    {
+      "id": "insane-side-018",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 18,
+      "target": "Sw--Sw--:WbCbWbCb:--Sw--Sw:CcWcCcWc",
+      "partition": "stress",
+      "sha256": "337630739d2b203287a02db6ceb9dcbc8e259a854b2e32f402dba622254ebce0",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 7,
+      "statesExplored": 13245,
+      "candidates": 436443,
+      "wallMs": 1120.3711,
+      "freshProcessMaxRssMiB": 278.84375,
+      "pathSignature": "Painter:WuCuWuCu=>WbCbWbCb@b|Painter:Su--Su--=>Sw--Sw--@w|Painter:--Su--Su=>--Sw--Sw@w|Stacker:--Sw--Sw,CuWuCuWu=>--Sw--Sw:CuWuCuWu|Stacker:WbCbWbCb,--Sw--Sw:CuWuCuWu=>WbCbWbCb:--Sw--Sw:CuWuCuWu|Stacker:Sw--Sw--,WbCbWbCb:--Sw--Sw:CuWuCuWu=>Sw--Sw--:WbCbWbCb:--Sw--Sw:CuWuCuWu|Painter:Sw--Sw--:WbCbWbCb:--Sw--Sw:CuWuCuWu=>Sw--Sw--:WbCbWbCb:--Sw--Sw:CcWcCcWc@c",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 7,
+        "statesExplored": 13245,
+        "candidates": 394510,
+        "maxRssMiB": 260.4375
+      }
+    },
+    {
+      "id": "insane-side-019",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 19,
+      "target": "CwCrCwCr:CuRcCuRc:Wc--Wc--:WmRmWmRm",
+      "partition": "stress",
+      "sha256": "48452fc8559e3c94ae108ed056c2713310febe754aa913ea1b2d12a7e45b421a",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 20799,
+        "candidates": 1046575,
+        "maxRssMiB": 459.109375
+      }
+    },
+    {
+      "id": "insane-side-020",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 20,
+      "target": "SmWwWwSm:CwWmWmCw:CcRwRwCc:P-RuRuP-:--P-P---",
+      "partition": "stress",
+      "sha256": "15b4fc4bc0aea20dfc4b31798f32f8d254de15ba8309037224caf9bd0b05ed29",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 20354,
+        "candidates": 1140907,
+        "maxRssMiB": 440.2578125
+      }
+    },
+    {
+      "id": "insane-side-021",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 21,
+      "target": "P-CwRwCw:CrP-P-P-:--CrRrCr:WwCwRwCw:--P-P-P-",
+      "partition": "stress",
+      "sha256": "ddab8a136c656fb7b613ce226ef680de4a86d49d2d575279e329ef57cbef6f92",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 13,
+        "statesExplored": 30889,
+        "candidates": 1467381,
+        "maxRssMiB": 449.58203125
+      }
+    },
+    {
+      "id": "insane-side-022",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 22,
+      "target": "WwRyRwCy:Sr----Sr:CrWrWrCr:P-P-P-P-:--CwCw--",
+      "partition": "stress",
+      "sha256": "e30d480d51f41ecf43cc00571cd039ec7437ec90ca4b467fa66b9e25e239ace3",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 8,
+        "statesExplored": 18081,
+        "candidates": 886479,
+        "maxRssMiB": 448.8671875
+      }
+    },
+    {
+      "id": "insane-side-023",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 23,
+      "target": "CbRwRwCb:P-RrWrP-:SrRu--Sr:P-----P-:Sy----Sy",
+      "partition": "stress",
+      "sha256": "ca0c635ce7ede12ce0cd15cfaf50a65a49b6a4677fb8db596971aece0623a7a8",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 23923,
+        "candidates": 1158680,
+        "maxRssMiB": 443.09375
+      }
+    },
+    {
+      "id": "insane-side-024",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 24,
+      "target": "CmP-CmP-:P-CwP-Cw:P-CcP-Cc:CwP-CwP-:CcCwCcCw",
+      "partition": "stress",
+      "sha256": "bb3af0261150665461f3c31f74b3611b07facfb9f5accf74acc4e16b354d1e70",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 12,
+        "statesExplored": 27512,
+        "candidates": 938315,
+        "maxRssMiB": 439.171875
+      }
+    },
+    {
+      "id": "insane-side-025",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 25,
+      "target": "CuCbRbCb:P-P-SwP-:P-P-P-P-:WrCr--Cr:SmCw--Cw",
+      "partition": "stress",
+      "sha256": "4f1982e801f70cdd00108c599c9a1d1f99ba5fdc329463847a9387e632af9cf9",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21089,
+        "candidates": 1132259,
+        "maxRssMiB": 426.3515625
+      }
+    },
+    {
+      "id": "insane-side-026",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 26,
+      "target": "RgCgRyCg:WuCyCyCy:WyP-CyP-:----Cr--:----P---",
+      "partition": "stress",
+      "sha256": "2ffafa5220a9dfe9a6429e438a936e1bf309a393165c5c8f30c13a3d7bdc1f61",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21091,
+        "candidates": 1051628,
+        "maxRssMiB": 460.44140625
+      }
+    },
+    {
+      "id": "insane-side-027",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 27,
+      "target": "CySyWySy:--WcRcWc:--WwRwWw:--WyCyWy:----P---",
+      "partition": "stress",
+      "sha256": "b79454b7a4990bd9b8d40ab66c8997d492ac24fa1fad349525077d2370e57c0a",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 20,
+      "statesExplored": 55196,
+      "candidates": 5000000,
+      "wallMs": 4233.7326,
+      "freshProcessMaxRssMiB": 481.19921875,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 21,
+        "statesExplored": 55196,
+        "candidates": 4946678,
+        "maxRssMiB": 481.19921875
+      }
+    },
+    {
+      "id": "insane-side-028",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 28,
+      "target": "CucrcrCu:--CwCw--:----cc--:--CbCb--:--cw----",
+      "partition": "stress",
+      "sha256": "e0c52c8aaa53982593a4e0ab303d34b55d7de344bcf4caf2a24b1581ba44dd7b",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 21,
+      "statesExplored": 57549,
+      "candidates": 5000000,
+      "wallMs": 4138.4485,
+      "freshProcessMaxRssMiB": 415.66015625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 22,
+        "statesExplored": 57549,
+        "candidates": 4862296,
+        "maxRssMiB": 415.66015625
+      }
+    },
+    {
+      "id": "insane-side-029",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 29,
+      "target": "CbRbRbRb:--P-CuP-:CyWcccWc:cw--Wr--:Wg------",
+      "partition": "stress",
+      "sha256": "eac4975b3a601ee6316f69c0d321971b44c9896588122b64471b2104c9e263ee",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21089,
+        "candidates": 1227692,
+        "maxRssMiB": 411.0390625
+      }
+    },
+    {
+      "id": "insane-side-030",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 30,
+      "target": "P-P-cmP-:WuWuWuWu:cy--cy--:CwCwCwCw:cgcgcgcg",
+      "partition": "stress",
+      "sha256": "cddd65c39f1d3f4091c89c9aac0b775efc73479ee5ebd31e6fe2971ddab7cb32",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 29,
+        "statesExplored": 76955,
+        "candidates": 4535414,
+        "maxRssMiB": 418.37109375
+      }
+    },
+    {
+      "id": "insane-side-031",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 31,
+      "target": "Rr--Rr--:cy--cy--:cyRwcyRw:--Cm--Cm:--cb--cb",
+      "partition": "stress",
+      "sha256": "c013b80e9c9f8f3e9465bbab38010b1cf105156f254b909d321da5aa89740cbc",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 20,
+        "statesExplored": 51718,
+        "candidates": 3566264,
+        "maxRssMiB": 464.66015625
+      }
+    },
+    {
+      "id": "insane-side-032",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 32,
+      "target": "CuCuCuCu:CuCuCuCu:Cu--Cu--:CuCuCuCu:cycycycy",
+      "partition": "stress",
+      "sha256": "1c7028b39c2c4f66240c2e7bfd40ee962f186e29df336b749e41a6c61c181983",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 28,
+        "statesExplored": 75141,
+        "candidates": 4883225,
+        "maxRssMiB": 384.1796875
+      }
+    },
+    {
+      "id": "insane-side-033",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 33,
+      "target": "cwcwcwP-:CgcmCgcg:Cg--CgP-:cm----P-:----cmCy",
+      "partition": "stress",
+      "sha256": "c00609db8bddf5696910f6ef41d1d5a1a842b6185d4c29fe5cf948ad435baf3f",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 18,
+        "statesExplored": 45438,
+        "candidates": 1927972,
+        "maxRssMiB": 459.0625
+      }
+    },
+    {
+      "id": "insane-side-034",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 34,
+      "target": "CrCrCrCr:crcrcrcr:XrXrXrXr",
+      "partition": "stress",
+      "sha256": "31204f9ed37400f7d855f29434782e4f93dbb9e5d89e664d9006f158487baa00",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 4,
+      "statesExplored": 1558,
+      "candidates": 5844,
+      "wallMs": 61.2476,
+      "freshProcessMaxRssMiB": 75.5390625,
+      "pathSignature": "Painter:CuCuCuCu=>CrCrCrCr@r|Pin Pusher:XrXrXrXr=>P-P-P-P-:XrXrXrXr|Stacker:CrCrCrCr,P-P-P-P-:XrXrXrXr=>CrCrCrCr:P-P-P-P-:XrXrXrXr|Crystal Generator:CrCrCrCr:P-P-P-P-:XrXrXrXr=>CrCrCrCr:crcrcrcr:XrXrXrXr@r",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": null,
+        "statesExplored": null,
+        "candidates": null,
+        "maxRssMiB": null
+      }
+    },
+    {
+      "id": "insane-side-035",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 35,
+      "target": "P-SySyP-:SyXbXbSy:WwP-P-Ww",
+      "partition": "stress",
+      "sha256": "0d8036c2a40ca10da7f8c70a9e22e94cda9cddd8331faf040c147a3531860027",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 13,
+        "statesExplored": 31432,
+        "candidates": 1007513,
+        "maxRssMiB": 465.1875
+      }
+    },
+    {
+      "id": "insane-side-036",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 36,
+      "target": "CucwCuRu:cwXycwcw:cc--cccc:Cw--Cw--:P---P---",
+      "partition": "stress",
+      "sha256": "fc8100247655397cd45c995aca16593889e5dcef967a55129becfa3cbe7509a2",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 22,
+      "statesExplored": 60626,
+      "candidates": 5000000,
+      "wallMs": 4759.4445,
+      "freshProcessMaxRssMiB": 420.265625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 23,
+        "statesExplored": 60626,
+        "candidates": 4809502,
+        "maxRssMiB": 420.265625
+      }
+    },
+    {
+      "id": "insane-side-037",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 37,
+      "target": "P-P-XyP-:ccccWccc:WcP-XcP-:--Cw--Cw:--P---P-",
+      "partition": "stress",
+      "sha256": "9cd074f7d807b7061fb70051b754b6ac02e72755bd6a52717bf956f1124d3445",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 11,
+        "statesExplored": 25088,
+        "candidates": 733374,
+        "maxRssMiB": 449.64453125
+      }
+    },
+    {
+      "id": "insane-side-038",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 38,
+      "target": "CrCrRrCr:WwCkXwCk:P-P-WrP-:XbP---P-:WwCg--Cg",
+      "partition": "stress",
+      "sha256": "b8f8368ea32fd7d6d4f4fad81e3cf422dd78603cba7cbbb10b755cd206e9960e",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 9,
+        "statesExplored": 21087,
+        "candidates": 1212680,
+        "maxRssMiB": 394.78515625
+      }
+    },
+    {
+      "id": "insane-side-039",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 39,
+      "target": "cwcwcwXk:P-cwcw--:--CuCu--:--cwcwcw",
+      "partition": "stress",
+      "sha256": "b5fd5a0b44829fff1bb6729c6f6191eb8ade6064a799be5e93e3a8f0845fbd19",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 25,
+        "statesExplored": 64495,
+        "candidates": 4817292,
+        "maxRssMiB": 338.4609375
+      }
+    },
+    {
+      "id": "insane-side-040",
+      "suite": "insane",
+      "source": "insane_side.txt",
+      "line": 40,
+      "target": "YkcgYwcg:XkcgXwcg:YwcgYkcg:CuSwCuSw:P-crP-cr",
+      "partition": "stress",
+      "sha256": "eb00c630c4201135447c8a37328e49d7128f786c1e7851eaaa9fbde87f90b059",
+      "status": "watchdog",
+      "watchdogMs": 5000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 10,
+        "statesExplored": 24111,
+        "candidates": 1550034,
+        "maxRssMiB": 399.05078125
+      }
+    }
+  ],
+  "aggregate": {
+    "cases": 52,
+    "solved": 4,
+    "unsolved": 0,
+    "limit": 11,
+    "watchdog": 37,
+    "error": 0,
+    "limitsByReason": {
+      "generated-states": 11
+    },
+    "replay": {
+      "valid": 4,
+      "invalid": 0,
+      "unsupported": 0,
+      "notRun": 48
+    },
+    "statesExplored": 685261,
+    "candidates": 56170384,
+    "candidatesPerState": 81.96932847484389
+  },
+  "growthByDepth": [
+    {
+      "depth": 4,
+      "cases": 1,
+      "statesExplored": 1558,
+      "candidates": 5844,
+      "candidatesPerState": 3.7509627727856225,
+      "statesRatioToPriorDepth": null,
+      "candidatesRatioToPriorDepth": null
+    },
+    {
+      "depth": 5,
+      "cases": 1,
+      "statesExplored": 6594,
+      "candidates": 183208,
+      "candidatesPerState": 27.78404610251744,
+      "statesRatioToPriorDepth": 4.232349165596919,
+      "candidatesRatioToPriorDepth": 31.349760438056126
+    },
+    {
+      "depth": 7,
+      "cases": 1,
+      "statesExplored": 13245,
+      "candidates": 436443,
+      "candidatesPerState": 32.951528878822195,
+      "statesRatioToPriorDepth": 2.0086442220200182,
+      "candidatesRatioToPriorDepth": 2.3822267586568273
+    },
+    {
+      "depth": 8,
+      "cases": 1,
+      "statesExplored": 15879,
+      "candidates": 544889,
+      "candidatesPerState": 34.315070218527616,
+      "statesRatioToPriorDepth": 1.198867497168743,
+      "candidatesRatioToPriorDepth": 1.248476891598674
+    },
+    {
+      "depth": 17,
+      "cases": 1,
+      "statesExplored": 46755,
+      "candidates": 5000000,
+      "candidatesPerState": 106.94043417816276,
+      "statesRatioToPriorDepth": 2.9444549404874363,
+      "candidatesRatioToPriorDepth": 9.176180836830987
+    },
+    {
+      "depth": 19,
+      "cases": 2,
+      "statesExplored": 105050,
+      "candidates": 10000000,
+      "candidatesPerState": 95.19276534983341,
+      "statesRatioToPriorDepth": 2.2468185220831995,
+      "candidatesRatioToPriorDepth": 2
+    },
+    {
+      "depth": 20,
+      "cases": 1,
+      "statesExplored": 55196,
+      "candidates": 5000000,
+      "candidatesPerState": 90.5862743677078,
+      "statesRatioToPriorDepth": 0.5254259876249405,
+      "candidatesRatioToPriorDepth": 0.5
+    },
+    {
+      "depth": 21,
+      "cases": 1,
+      "statesExplored": 57549,
+      "candidates": 5000000,
+      "candidatesPerState": 86.88248275382718,
+      "statesRatioToPriorDepth": 1.0426299007174433,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 22,
+      "cases": 2,
+      "statesExplored": 121064,
+      "candidates": 10000000,
+      "candidatesPerState": 82.60093834665962,
+      "statesRatioToPriorDepth": 2.1036681784218665,
+      "candidatesRatioToPriorDepth": 2
+    },
+    {
+      "depth": 23,
+      "cases": 2,
+      "statesExplored": 127615,
+      "candidates": 10000000,
+      "candidatesPerState": 78.36069427575129,
+      "statesRatioToPriorDepth": 1.0541118747108966,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 24,
+      "cases": 1,
+      "statesExplored": 65486,
+      "candidates": 5000000,
+      "candidatesPerState": 76.35219741624164,
+      "statesRatioToPriorDepth": 0.5131528425341848,
+      "candidatesRatioToPriorDepth": 0.5
+    },
+    {
+      "depth": 25,
+      "cases": 1,
+      "statesExplored": 69270,
+      "candidates": 5000000,
+      "candidatesPerState": 72.18131947452,
+      "statesRatioToPriorDepth": 1.0577833430046117,
+      "candidatesRatioToPriorDepth": 1
+    }
+  ]
+}

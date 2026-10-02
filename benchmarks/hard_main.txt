@@ -1,0 +1,12 @@
+RuRuCuCu:RbRbCrCr
+RbRuRbRu:RuRbRuRb:SrSgSrSg
+SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg
+--SmSm--:SrRmRmCm:----CwCw
+P-CcRcCc:P-CwRwCw:RwWrP-Wr:P---Wr--
+CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy
+WwcbWwcb:P-cwP-cw:WgP---P-
+cwRwcwcw:cwCwcwcw:cccccccc
+XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww
+XycrXyXc:XmcrXmXc:--cr----
+cbP-cbP-:ccXwccXw:Xk--Xk--
+cwP---P-:--cw--cw:RrWrYwWr:Yk------

@@ -1,0 +1,3570 @@
+{
+  "schemaVersion": 1,
+  "sourceReleaseId": "hard-53x1-stage-v1",
+  "suite": "hard",
+  "partition": "expansion-pilot",
+  "instances": [
+    {
+      "id": "hard-main-001-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-001",
+      "target": "RuRuCuCu:RbRbCrCr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-002-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-002",
+      "target": "RbRuRbRu:RuRbRuRb:SrSgSrSg",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-003-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-003",
+      "target": "SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-004-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-004",
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-005-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-005",
+      "target": "P-CcRcCc:P-CwRwCw:RwWrP-Wr:P---Wr--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-006-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-006",
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-007-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-007",
+      "target": "WwcbWwcb:P-cwP-cw:WgP---P-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 3
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 3
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 2
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 2
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 2
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 2
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 2
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "WuCu----",
+          "count": 2
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        },
+        {
+          "shape": "WuWuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-008-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-008",
+      "target": "cwRwcwcw:cwCwcwcw:cccccccc",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 3
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-009-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-009",
+      "target": "XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-010-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-010",
+      "target": "XycrXyXc:XmcrXmXc:--cr----",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 3
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-011-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-011",
+      "target": "cbP-cbP-:ccXwccXw:Xk--Xk--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-012-53x1-01",
+      "track": "main",
+      "targetId": "hard-main-012",
+      "target": "cwP---P-:--cw--cw:RrWrYwWr:Yk------",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "YkYkYwYw",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-001-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-001",
+      "target": "RbCuRbCu:RuCuRuCu:Su--Su--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-002-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-002",
+      "target": "CrCuCrRu:CuCrCuCr:--Cu--Cu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-003-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-003",
+      "target": "Rb--Rb--:Ru--Ru--:Rb------",
+      "availableInputs": [
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-004-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-004",
+      "target": "SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-005-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-005",
+      "target": "CbRrCuRr:CuRuCbRu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-006-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-006",
+      "target": "RrRgRbRu:CrCgCbCu:WrWgWbWu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-007-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-007",
+      "target": "WgRgRgRg:RbCbCbCb:CgCgWgCg:WuCu--Cu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-008-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-008",
+      "target": "SgWuRuWu:WrCrWrCr:WrCgWrCg:--Wr--Wr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-009-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-009",
+      "target": "Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-010-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-010",
+      "target": "Sb----Sb:WbWuWuWb:CuSuSuCu:CbWrWrCb",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-011-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-011",
+      "target": "SuSuSuSu:WrWrWrWr:CrCrCrCr:WbWbWbWb",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-012-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-012",
+      "target": "CuRuWuRu:CbRbWbRb:CuCuWuCu:CrCrWrCr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-013-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-013",
+      "target": "WgSrWgCg:WuWuWuCu:WrWrWrCr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-014-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-014",
+      "target": "CuRrRrCu:CuCrCrCu:CbCuCuCb:--WbWb--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-015-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-015",
+      "target": "WwCwWwCw:WuCuWuCu:WmCmWmCm:CcCcCcCc",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-016-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-016",
+      "target": "WgRgWgCg:WmWmWmWm:SySySySy:CwWwWwCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-017-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-017",
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-018-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-018",
+      "target": "--WySyWy:RySwWwSw:CwWwWbWw:CbWbSwWb",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-019-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-019",
+      "target": "RcCyCcRy:Sw--RmCm:CwRwWwWw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-020-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-020",
+      "target": "RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-021-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-021",
+      "target": "CyCwCwCy:P-P-P-P-:CbCbCbCb:CwCwCwCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 3
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-022-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-022",
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-023-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-023",
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-024-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-024",
+      "target": "RwWmRmWw:P-P-P---:RmWwRw--:--WmRmWm",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-025-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-025",
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-026-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-026",
+      "target": "WyP-P-P-:SyCuSuCu:WuWuWwWu:--P-CuP-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-027-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-027",
+      "target": "RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-028-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-028",
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-029-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-029",
+      "target": "P-cccccc:cmP-P-P-:--CyCyCy:------P-",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-030-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-030",
+      "target": "crCwcrRw:CwcrCwcr:crCwcrCw:crcrcrcr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 3
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-031-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-031",
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-032-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-032",
+      "target": "RyCyRyCy:Cr--Cr--:CwCwCwCw:cmcmcmcm",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 3
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-033-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-033",
+      "target": "RwcmRwcm:cmRwcmRw:RwcmRwcm:cmRwcmRw",
+      "availableInputs": [
+        {
+          "shape": "--RuRuWu",
+          "count": 3
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 2
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 2
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-034-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-034",
+      "target": "--Sg--Sg:--Wg--Wg:RrCrRrCr:cccccccc",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-035-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-035",
+      "target": "crcrcrcr:WrCwXrCw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-036-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-036",
+      "target": "XbCyCyCy:WyP-CwP-:----Cr--",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 3
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 2
+        },
+        {
+          "shape": "CuRu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 2
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-037-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-037",
+      "target": "XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-038-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-038",
+      "target": "Xm--Xy--:Xy--Xm--:P---P---:CyCmCmCy",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-039-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-039",
+      "target": "RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-040-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-040",
+      "target": "cycycycy:XkcwXk--:--Cy----",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 3
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 3
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 3
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 3
+        },
+        {
+          "shape": "CuCu----",
+          "count": 3
+        },
+        {
+          "shape": "CuRu----",
+          "count": 3
+        },
+        {
+          "shape": "CuSu----",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 2
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 2
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 2
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 2
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "WuCu----",
+          "count": 2
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 2
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-041-53x1-01",
+      "track": "side",
+      "targetId": "hard-side-041",
+      "target": "----Ru--:CuCuYwCu:YkSrWuSr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 2
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "YkYkYwYw",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    }
+  ],
+  "sha256": "27b26b8244a6d54b692d718ca9cd2ae3445f834d970af699a2e9ae433e541213"
+}

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "selectionId": "hard-final-optional-promotion-selection-v1",
+  "selectionVersion": 1,
+  "status": "frozen",
+  "sourceOptionalCandidates": {
+    "path": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+    "releaseId": "hard-53x3-deep-replacement-candidates-v1",
+    "fileSha256": "9b823a8dace291b72b8dd8b6e6a52f7a3b6435282fc4945c6584b1f7d3c735f1",
+    "canonicalSha256": "1992e8d284b83d5c3ab7d65b0be15e821e94d4134fb178122b9f86e30afc3718",
+    "candidateCount": 21
+  },
+  "sourceAudit": {
+    "path": "benchmarks/hard-53x3-deep-diversity/v1/unknown-feasibility.json",
+    "fileSha256": "1817f09eafa203ef0d26eec5934dded1225ef18b26ee8145e837d74a569485a1",
+    "canonicalSha256": "c4ccd989b7cea374fc08dfd1307cffa7f34246f139c60304442b53a18f42691f",
+    "entryCount": 21
+  },
+  "count": 16,
+  "promotions": [
+    {
+      "targetId": "hard-main-002",
+      "replacementInstanceId": "hard-main-002-deep-optional-01",
+      "replacementInstanceSha256": "863820d52e65a722aa5854f7f9d933d6762fb69d56346eca11b82117ebe8011e",
+      "replacementSignature": "b29da260e8ad401d655ddae2d8335516688104914a8b76eeebdafceff5720193",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F3",
+      "replacedOriginalSlot": "F2",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-main-003",
+      "replacementInstanceId": "hard-main-003-deep-optional-01",
+      "replacementInstanceSha256": "13414f0be4fc3884ec5a29c663e6806db66f3fd667044911169c3e60546c26b9",
+      "replacementSignature": "1060c7df752ef43e35bf1aed2568f1581441554bd42cb4a0663b1742f1d77209",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-006",
+      "replacementInstanceId": "hard-side-006-deep-optional-01",
+      "replacementInstanceSha256": "34028f48a46c4c83c733fdf3d6ce504b029303d755c67cae00b9adeb16283c85",
+      "replacementSignature": "63059e0a3c7e4d1758b6c121b9aaa70ed8e466f4f0e546ee67f51d0974186bf4",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F3",
+      "replacedOriginalSlot": "F2",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-007",
+      "replacementInstanceId": "hard-side-007-deep-optional-01",
+      "replacementInstanceSha256": "9739b5654405cee61be0473e1d5eb23731d7d13817feed61dc4128bc8f46cf64",
+      "replacementSignature": "cbfa21cadef015d599af644f883dc879ffc8ade7988178aefc8f94fdbe0d48eb",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-008",
+      "replacementInstanceId": "hard-side-008-deep-optional-01",
+      "replacementInstanceSha256": "c50b6b99f36f94fbb86af83d4b80b45052936292cb544c1b7723970f4332ba18",
+      "replacementSignature": "3f173be1b1b375723b3ad5124931e7a0890ce0dee4e4142a13f018f56e27e4c9",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-009",
+      "replacementInstanceId": "hard-side-009-deep-optional-01",
+      "replacementInstanceSha256": "9efa0455a7909b5c3ca6a59d001be33568ea07ff5b5cc2e64333395f0104e31a",
+      "replacementSignature": "baad794c1f07cd475005865bf30f871045aaba56a3c77638352a0a30f8aaa75e",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-010",
+      "replacementInstanceId": "hard-side-010-deep-optional-01",
+      "replacementInstanceSha256": "da8f480ea39fd4bf2e98fac2b9b61facf58dbe0116e9059c1310fe66b811beb4",
+      "replacementSignature": "06210f206e97aa0219a1fd991b77b7dadde480bcf1dea1503baf13199faeaef4",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-011",
+      "replacementInstanceId": "hard-side-011-deep-optional-01",
+      "replacementInstanceSha256": "93c57b5cb82f80a633600a612d8fd9a580746ab9e1f63d2c00dfbb79e19f03ea",
+      "replacementSignature": "76d9d250030be97459154cc9fa6c05d72d0ed5047528a21e1f70c47a6b2e14c1",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-012",
+      "replacementInstanceId": "hard-side-012-deep-optional-01",
+      "replacementInstanceSha256": "63f6e850fec0916b351280a9040e0a9911d2ee6e7bbdde678c52b5c12605306b",
+      "replacementSignature": "e5ff018634686d314f1e654e291cc6c8258702b56a690a13eda320c28c78eeca",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-013",
+      "replacementInstanceId": "hard-side-013-deep-optional-01",
+      "replacementInstanceSha256": "5d6cb0882f7dee32708516532c6ec1a7aa9c2056eae90247f53f48fd6d93ff01",
+      "replacementSignature": "80a480ef99c00f8e1eb937ef13b88e201916b329c8af4ca851d32a27df164f59",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-015",
+      "replacementInstanceId": "hard-side-015-deep-optional-01",
+      "replacementInstanceSha256": "1021c278aaba11fc1b805e98ee282acf01c5c9a4426bdc991bd60ddfbb62f719",
+      "replacementSignature": "0eb322fa5944d1bbc4ba219e16c17e4c2f98712075666a3a923e8bef51f990f8",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-016",
+      "replacementInstanceId": "hard-side-016-deep-optional-01",
+      "replacementInstanceSha256": "e43d245fbfaf5ee1359d70d60d35ee9d5310da03dd109eb44abf14cc47d33305",
+      "replacementSignature": "c05e05109c378039627dd946aa5bb5f49b19b76d4226d4988081ab2bd52af2c2",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-017",
+      "replacementInstanceId": "hard-side-017-deep-optional-01",
+      "replacementInstanceSha256": "1b62f0c56b2a0398bcf9ea909721fb37d6312a48fd30ae19c66d943b8d7c6933",
+      "replacementSignature": "3fdc023c0266ba31019685d15bc9de9cafb4ce00fbe6f00fa9c53bc7a036bd5e",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-018",
+      "replacementInstanceId": "hard-side-018-deep-optional-01",
+      "replacementInstanceSha256": "0a6b7a5096b42717561ea7be5aa2f2f306b1769a5864b11bddc625b335f9ce30",
+      "replacementSignature": "f16957313f1ee3f4c56932e98e5b68e5bf7c389b66a89175550aaca94ed15230",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-020",
+      "replacementInstanceId": "hard-side-020-deep-optional-01",
+      "replacementInstanceSha256": "c83746b3029e5a236af31c00d0f3677e9e61b1982925a4d2ddc06be91f20a2e1",
+      "replacementSignature": "89676577578bb3db33db218ea38be2f6d249cb6e61b760a08314304eca730d61",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "E"
+    },
+    {
+      "targetId": "hard-side-027",
+      "replacementInstanceId": "hard-side-027-deep-optional-01",
+      "replacementInstanceSha256": "83005e08ea73f4b1b42a3f8a0bd73e8bef3034d2fb55774dbece398606eb874e",
+      "replacementSignature": "4e2ff5743bf3bfb30a3d9a7cd266e9f85533434b9d24b0271f0b7b9fb670a026",
+      "replacementSourceArtifact": "benchmarks/hard-53x3-deep-diversity/v1/optional-candidates.json",
+      "retainedOriginalSlot": "F2",
+      "replacedOriginalSlot": "F3",
+      "acceptedDepth": "C"
+    }
+  ],
+  "negativeDecisions": {
+    "decision": "KEEP_CURRENT_B_B",
+    "count": 5,
+    "targetIds": [
+      "hard-side-001",
+      "hard-side-002",
+      "hard-side-004",
+      "hard-side-014",
+      "hard-side-019"
+    ]
+  },
+  "hashAlgorithm": "sha256",
+  "hashCanonicalization": "canonical-json-v1",
+  "hashScope": "all fields except optionalPromotionSelectionHash",
+  "optionalPromotionSelectionHash": "1adee7776f28ed10194108925dd21f4a0a9d591a945a6060e6a145ad17645989"
+}

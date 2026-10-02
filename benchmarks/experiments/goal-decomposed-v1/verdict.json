@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "goal-decomposed-constructive-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "verdict": "ACCEPT",
+  "stopped": true,
+  "acceptanceGate": {
+    "minimumStableSolvedMembers": 3,
+    "minimumDistinctTargets": 2,
+    "requireNewMemberBeyondPriorFrontier": true,
+    "requireReplayValid": true,
+    "requireIndependentProcessRepeat": true
+  },
+  "priorCapabilityFrontier": {
+    "stableSolvedMembers": 2,
+    "distinctTargets": 1,
+    "members": [
+      "hard-main-001:F1",
+      "hard-main-001:F2"
+    ]
+  },
+  "observed": {
+    "stableSolvedMembers": 78,
+    "distinctTargets": 26,
+    "stableNewMembers": 76,
+    "stableNewTargets": 25,
+    "allReturnedSolutionsReplayValid": true,
+    "allFirstPassSolvedMembersRepeated": true,
+    "invalidReplayCount": 0,
+    "errorCount": 0,
+    "watchdogCount": 0
+  },
+  "configuration": {
+    "id": "GDCS-A",
+    "SOLVED": 78,
+    "UNSUPPORTED_DOMAIN": 78,
+    "EXHAUSTED": 3,
+    "LIMIT": 0,
+    "ERROR": 0,
+    "WATCHDOG": 0,
+    "architectureStatuses": {
+      "solved": 78,
+      "unsupported-domain": 78,
+      "resource-mismatch": 3
+    }
+  },
+  "capabilityAccounting": {
+    "formalBaselineSolved": 0,
+    "priorFrontierStableSolved": 2,
+    "stableNewSolved": 76,
+    "stableNewTargets": 25,
+    "resultingFrontierStableSolved": 78,
+    "resultingFrontierDistinctTargets": 26,
+    "engineeringPassesCountAsCapability": false
+  },
+  "solutionOperationCounts": {
+    "min": 19,
+    "median": 59,
+    "p90": 73,
+    "max": 78
+  },
+  "identities": {
+    "solverSha256": "fdb286700fba1204d7434fe36d0a4cd53cd6c3c6476e95ae37e3bf11dadbcf26",
+    "configSha256": "451d3b7562b213390023982e405bcd647e5b5b14c7dd50ba99ffcb1ee13d6137",
+    "firstPassSha256": "0adf209cf12c73eb7232b4398c774243ef1824612008e1ad7b259e3dbea6d208",
+    "repeatSha256": "7baac62e16cc5d4bc5ef9dbd2ef1c73157dde2055be68a25a7983756c2ba7106",
+    "summarySha256": "a7b7c4006f41c3665092e092c3d587c86d2c1dff216763e6baf530bdf5d44a75"
+  },
+  "verification": {
+    "smallDomainTests": "8/8",
+    "repositoryTestsBeforeFormal": "142/142",
+    "repositoryTestsFinal": "142/142",
+    "artifactAudit": "PASS",
+    "syntaxChecks": "79/79",
+    "quickW1": "solved depth 6 / 3,612 states / 106,816 candidates",
+    "gitDiffCheck": "PASS apart from informational line-ending warnings",
+    "productionSolverCopiesByteIdentical": true,
+    "productionSolverSha256": "ee558425bbc1761c5f01b82bb72d02f4d7dd611208c083d7355827600e518a37"
+  },
+  "stopReason": "GDCS-A exceeded every frozen capability threshold and all first-pass solutions repeated with valid replay."
+}

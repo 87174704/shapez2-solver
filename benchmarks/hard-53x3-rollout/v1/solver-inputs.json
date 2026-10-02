@@ -1,0 +1,5389 @@
+{
+  "schemaVersion": 1,
+  "sourceReleaseId": "hard-53x3-rollout-stage-v1",
+  "suite": "hard",
+  "partition": "expansion-pilot",
+  "instances": [
+    {
+      "id": "hard-main-002-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-002",
+      "target": "RbRuRbRu:RuRbRuRb:SrSgSrSg",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-002-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-002",
+      "target": "RbRuRbRu:RuRbRuRb:SrSgSrSg",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-003-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-003",
+      "target": "SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-003-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-003",
+      "target": "SrSrSrSr:WrWrWrWr:RuCuRuCu:RgCgCgCg",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-004-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-004",
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-004-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-004",
+      "target": "--SmSm--:SrRmRmCm:----CwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-006-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-006",
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-006-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-006",
+      "target": "CyCyCyCy:P-CrCrP-:P-P-P-P-:WyRwRwWy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-009-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-009",
+      "target": "XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "availableInputs": [
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-009-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-009",
+      "target": "XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "XbXbXbXb",
+          "count": 1
+        },
+        {
+          "shape": "XgXgXgXg",
+          "count": 1
+        },
+        {
+          "shape": "XrXrXrXr",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-011-53x3-rollout-02",
+      "track": "main",
+      "targetId": "hard-main-011",
+      "target": "cbP-cbP-:ccXwccXw:Xk--Xk--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-main-011-53x3-rollout-03",
+      "track": "main",
+      "targetId": "hard-main-011",
+      "target": "cbP-cbP-:ccXwccXw:Xk--Xk--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-001-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-001",
+      "target": "RbCuRbCu:RuCuRuCu:Su--Su--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-001-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-001",
+      "target": "RbCuRbCu:RuCuRuCu:Su--Su--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-002-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-002",
+      "target": "CrCuCrRu:CuCrCuCr:--Cu--Cu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-002-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-002",
+      "target": "CrCuCrRu:CuCrCuCr:--Cu--Cu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-004-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-004",
+      "target": "SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-004-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-004",
+      "target": "SuCrSuCr:--CuRbCu:RuCuRuCu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-005-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-005",
+      "target": "CbRrCuRr:CuRuCbRu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-005-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-005",
+      "target": "CbRrCuRr:CuRuCbRu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-006-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-006",
+      "target": "RrRgRbRu:CrCgCbCu:WrWgWbWu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-006-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-006",
+      "target": "RrRgRbRu:CrCgCbCu:WrWgWbWu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-007-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-007",
+      "target": "WgRgRgRg:RbCbCbCb:CgCgWgCg:WuCu--Cu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-007-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-007",
+      "target": "WgRgRgRg:RbCbCbCb:CgCgWgCg:WuCu--Cu",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-008-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-008",
+      "target": "SgWuRuWu:WrCrWrCr:WrCgWrCg:--Wr--Wr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-008-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-008",
+      "target": "SgWuRuWu:WrCrWrCr:WrCgWrCg:--Wr--Wr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-009-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-009",
+      "target": "Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-009-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-009",
+      "target": "Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-010-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-010",
+      "target": "Sb----Sb:WbWuWuWb:CuSuSuCu:CbWrWrCb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-010-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-010",
+      "target": "Sb----Sb:WbWuWuWb:CuSuSuCu:CbWrWrCb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-011-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-011",
+      "target": "SuSuSuSu:WrWrWrWr:CrCrCrCr:WbWbWbWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-011-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-011",
+      "target": "SuSuSuSu:WrWrWrWr:CrCrCrCr:WbWbWbWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-012-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-012",
+      "target": "CuRuWuRu:CbRbWbRb:CuCuWuCu:CrCrWrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-012-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-012",
+      "target": "CuRuWuRu:CbRbWbRb:CuCuWuCu:CrCrWrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-013-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-013",
+      "target": "WgSrWgCg:WuWuWuCu:WrWrWrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-013-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-013",
+      "target": "WgSrWgCg:WuWuWuCu:WrWrWrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 3
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-014-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-014",
+      "target": "CuRrRrCu:CuCrCrCu:CbCuCuCb:--WbWb--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-014-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-014",
+      "target": "CuRrRrCu:CuCrCrCu:CbCuCuCb:--WbWb--",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-015-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-015",
+      "target": "WwCwWwCw:WuCuWuCu:WmCmWmCm:CcCcCcCc",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-015-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-015",
+      "target": "WwCwWwCw:WuCuWuCu:WmCmWmCm:CcCcCcCc",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-016-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-016",
+      "target": "WgRgWgCg:WmWmWmWm:SySySySy:CwWwWwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-016-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-016",
+      "target": "WgRgWgCg:WmWmWmWm:SySySySy:CwWwWwCw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-017-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-017",
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-017-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-017",
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-018-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-018",
+      "target": "--WySyWy:RySwWwSw:CwWwWbWw:CbWbSwWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-018-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-018",
+      "target": "--WySyWy:RySwWwSw:CwWwWbWw:CbWbSwWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-019-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-019",
+      "target": "RcCyCcRy:Sw--RmCm:CwRwWwWw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-019-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-019",
+      "target": "RcCyCcRy:Sw--RmCm:CwRwWwWw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-020-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-020",
+      "target": "RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-020-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-020",
+      "target": "RgRgRgRg:CyRyCyRy:CbCbCbCb:--Sw--Sw",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-022-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-022",
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-022-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-022",
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-023-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-023",
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-023-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-023",
+      "target": "RyCyCyRy:SrP-P-Sr:CrCrCrCr:P-CwCwP-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-024-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-024",
+      "target": "RwWmRmWw:P-P-P---:RmWwRw--:--WmRmWm",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-024-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-024",
+      "target": "RwWmRmWw:P-P-P---:RmWwRw--:--WmRmWm",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-025-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-025",
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-025-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-025",
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-026-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-026",
+      "target": "WyP-P-P-:SyCuSuCu:WuWuWwWu:--P-CuP-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-026-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-026",
+      "target": "WyP-P-P-:SyCuSuCu:WuWuWwWu:--P-CuP-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-027-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-027",
+      "target": "RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-027-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-027",
+      "target": "RuCuCwRw:RbCbCbRb:SyWyWySy:WbCbCbWb",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-028-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-028",
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-028-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-028",
+      "target": "Ww--Sg--:P-CrCrCr:WrWwWwWw:--RrRrRr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-029-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-029",
+      "target": "P-cccccc:cmP-P-P-:--CyCyCy:------P-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-029-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-029",
+      "target": "P-cccccc:cmP-P-P-:--CyCyCy:------P-",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-030-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-030",
+      "target": "crCwcrRw:CwcrCwcr:crCwcrCw:crcrcrcr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 3
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-030-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-030",
+      "target": "crCwcrRw:CwcrCwcr:crCwcrCw:crcrcrcr",
+      "availableInputs": [
+        {
+          "shape": "----SuCu",
+          "count": 1
+        },
+        {
+          "shape": "--CuWuSu",
+          "count": 2
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 3
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "WuCuSu--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-031-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-031",
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-031-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-031",
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-032-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-032",
+      "target": "RyCyRyCy:Cr--Cr--:CwCwCwCw:cmcmcmcm",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-032-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-032",
+      "target": "RyCyRyCy:Cr--Cr--:CwCwCwCw:cmcmcmcm",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 2
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 2
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        },
+        {
+          "shape": "Wu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "WuRu----",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-034-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-034",
+      "target": "--Sg--Sg:--Wg--Wg:RrCrRrCr:cccccccc",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-034-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-034",
+      "target": "--Sg--Sg:--Wg--Wg:RrCrRrCr:cccccccc",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 2
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuWu--Su",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "RuWuSuSu",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSu--Su",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuRu",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-037-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-037",
+      "target": "XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-037-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-037",
+      "target": "XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-038-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-038",
+      "target": "Xm--Xy--:Xy--Xm--:P---P---:CyCmCmCy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 1
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-038-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-038",
+      "target": "Xm--Xy--:Xy--Xm--:P---P---:CyCmCmCy",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--SuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuCu----",
+          "count": 1
+        },
+        {
+          "shape": "CuRu----",
+          "count": 1
+        },
+        {
+          "shape": "CuSu--Cu",
+          "count": 2
+        },
+        {
+          "shape": "CuSuSu--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuWuCu--",
+          "count": 1
+        },
+        {
+          "shape": "SuCuSu--",
+          "count": 1
+        },
+        {
+          "shape": "SuSuRuCu",
+          "count": 1
+        },
+        {
+          "shape": "SuSuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "WuCu----",
+          "count": 1
+        },
+        {
+          "shape": "XcXcXcXc",
+          "count": 1
+        },
+        {
+          "shape": "XmXmXmXm",
+          "count": 1
+        },
+        {
+          "shape": "XyXyXyXy",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-039-53x3-rollout-02",
+      "track": "side",
+      "targetId": "hard-side-039",
+      "target": "RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    },
+    {
+      "id": "hard-side-039-53x3-rollout-03",
+      "track": "side",
+      "targetId": "hard-side-039",
+      "target": "RwRuRwRu:XkXwXkXw:WwWuWwWu",
+      "availableInputs": [
+        {
+          "shape": "--CuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "--RuRuWu",
+          "count": 1
+        },
+        {
+          "shape": "--Su--Wu",
+          "count": 1
+        },
+        {
+          "shape": "Cu--Ru--",
+          "count": 1
+        },
+        {
+          "shape": "CuWuSuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuCuWuCu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuRuSu",
+          "count": 1
+        },
+        {
+          "shape": "RuRuSuCu",
+          "count": 2
+        },
+        {
+          "shape": "RuSuWuSu",
+          "count": 1
+        },
+        {
+          "shape": "XkXkXkXk",
+          "count": 1
+        },
+        {
+          "shape": "XwXwXwXw",
+          "count": 1
+        }
+      ],
+      "rules": {
+        "maxLayers": 4,
+        "cleanPainting": true,
+        "allowSplitting": false
+      }
+    }
+  ],
+  "sha256": "4148275d2307bf82aad85276390e17bc6f922ba44df1d978df0041ea4181cf84"
+}

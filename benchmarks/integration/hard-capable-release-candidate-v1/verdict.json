@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "task": "P8-04",
+  "name": "hard-capable-release-candidate-closeout",
+  "date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "candidateId": "hard-capable-rc-v1",
+  "candidateIdentity": "hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17",
+  "status": "PASS / STOPPED",
+  "sourceSnapshot": {
+    "branch": "codex/solver-optimization",
+    "baseCommit": "b367b6e",
+    "gitClean": false,
+    "identityMode": "content-addressed-uncommitted-working-tree",
+    "runtimeFileCount": 56,
+    "runtimeManifestAlgorithm": "sha256-utf8-lines-v1: sorted path<TAB>lowercase-file-sha256<LF>",
+    "runtimeManifestPath": "benchmarks/integration/hard-capable-release-candidate-v1/runtime-manifest.json",
+    "runtimeManifestSha256": "3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17",
+    "runtimeSelection": [
+      "*.js",
+      "*.html",
+      "styles.css",
+      "en/index.html",
+      "cn/index.html",
+      "images/**"
+    ],
+    "keyFiles": {
+      "shapeSolver.js": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+      "shapeSolver_web.js": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+      "main.js": "5767038c930532c5aa6a9b20f5e5e25839a8816e4f611a238d0bf7154fb80490",
+      "operationGraph.js": "004a99b78cdd3a7a08008250800ccb4a4cb971636d0690c367d14c3557e05cb8",
+      "workerLifecycle.js": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
+    }
+  },
+  "capability": {
+    "frontier": "E-014",
+    "members": 159,
+    "solved": 159,
+    "replayValid": 159,
+    "exactE014Paths": 159,
+    "constructiveRoutes": 159,
+    "resourceReuse": 0,
+    "distinctTargets": 53,
+    "source": "P8-03 frozen closeout evidence"
+  },
+  "gates": {
+    "browserSafeStaticDependencyBoundary": "PASS",
+    "chromeWorkerAndUiLifecycle": "PASS",
+    "terminalErrorRecovery": "PASS",
+    "frozenBrowserPerformanceReadiness": "PASS",
+    "responsiveness100Ms": "PASS",
+    "formalMeasuredRuns": "60/60",
+    "responsivenessMaximumMs": 97.1,
+    "currentFullTests": "198/198",
+    "currentSyntax": "120/120",
+    "solverCopiesByteIdentical": true,
+    "currentDiffCheck": "PASS with informational line-ending notices"
+  },
+  "evidenceBindings": {
+    "releasedCompositeCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+    "formalBaselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+    "e014RepeatSha256": "9f8ea12211024412e180cffbe532fc18f8fd85e3ce52b56da29c51436bc61197",
+    "browserSafeVerdictFileSha256": "1979cd75704fe2c6311ada409a328cf1f22b9ae1a1204df746509a1aaf8caef1",
+    "productLifecycleVerdictFileSha256": "f2d51ab6623cae442b821edc9fb3aa2aa5f7b86e26c94a1913bbe95752106234",
+    "responsivenessVerdictFileSha256": "cf4ad1dadb3eda44c36bead44ba5a530162489e452a8c9bc1823723a03607d38",
+    "responsivenessHarnessSha256": "104888d64fefc0feda435ef7078e7b510cb84f767a2d11581d9e4732bf1212f3",
+    "responsivenessResultsSha256": "ccb6cb6f6e2812d13fba35357201d875cb94e58de84f5a83dfd82d0163bf9c19"
+  },
+  "historyPreserved": {
+    "frozenBenchmarkUnchanged": true,
+    "formalBaselineUnchanged": true,
+    "e014FrontierUnchanged": true,
+    "historicalVerdictsRewritten": false,
+    "p802NeedsFixRetainedAsHistoricalObservation": true,
+    "p803AcceptedAsResolvingEvidence": true
+  },
+  "treeAudit": {
+    "unexpectedCapabilityOrRuntimeSemanticChanges": 0,
+    "p804RuntimeChanges": 0,
+    "p804ArtifactAndDocumentationOnly": true,
+    "dirtyTreeDocumented": true
+  },
+  "remoteActions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "remoteCiCd": false
+  }
+}

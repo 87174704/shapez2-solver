@@ -1,0 +1,24 @@
+{
+  "baselineUnchanged": true,
+  "pilotRetainedFamiliesUnchanged": true,
+  "rolloutRetainedFamiliesUnchanged": true,
+  "baselineIdentity": {
+    "releaseId": "hard-53x1-stage-v1",
+    "artifactCanonicalSha256": "11005e04e359fff9d0d3a0fec66dd491ca8e441f5c5c880e1ff3441b9fc77da3",
+    "instancesSha256": "40c4ea586dfeafb5f5e37545101220451d2cc9a9ca2ab54eb9d00a94806c8375"
+  },
+  "pilotIdentity": {
+    "releaseId": "hard-53x3-diversity-pilot-v1",
+    "artifactCanonicalSha256": "9eaf8dc3a64cf68830ea0ec734b8ea6aba0fe67304d8033765125ce6fb6139f0",
+    "instancesSha256": "9ccffd150764176162ca759c4b9f414c3b308f60a967e6e33e322e0e1968f3a0"
+  },
+  "rolloutIdentity": {
+    "releaseId": "hard-53x3-rollout-stage-v1",
+    "artifactCanonicalSha256": "36ffc2397f3fa5c29b0edf0840515c0159008e0bd91c41ac7f4d2407c12064ad",
+    "instancesSha256": "874369d93095d0a4a69e130d15c36543d2072ff86870ec86106ab01501bf809e"
+  },
+  "structuralCanonicalizationChanged": false,
+  "solverFilteringUsed": false,
+  "artificialMechanismInjectionUsed": false,
+  "compositeReleaseConstructed": false
+}

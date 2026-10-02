@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/input-catalog.v2.schema.json",
+  "title": "Shapez 2 Solver Input Catalog schema v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "version", "provenance", "ordinary", "special", "refinement"],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "version": { "const": 1 },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority", "seedSha256", "generatedBy"],
+      "properties": {
+        "authority": { "const": ["docs/benchmark/USER_RULES.md", "benchmarks/sources/input_catalog.seed.json"] },
+        "seedSha256": { "$ref": "#/$defs/sha256" },
+        "generatedBy": { "type": "string", "minLength": 1 }
+      }
+    },
+    "ordinary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pure", "pure_excluded", "full", "partial", "half"],
+      "properties": {
+        "pure": { "$ref": "#/$defs/shapes" },
+        "pure_excluded": { "$ref": "#/$defs/shapes" },
+        "full": { "$ref": "#/$defs/shapes" },
+        "partial": { "$ref": "#/$defs/shapes" },
+        "half": { "$ref": "#/$defs/shapes" }
+      }
+    },
+    "special": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["SuSuRuRu"],
+      "properties": {
+        "SuSuRuRu": {
+          "type": "object", "additionalProperties": false,
+          "required": ["allowed_in_main", "allowed_in_side", "allowed_with_refinement"],
+          "properties": {
+            "allowed_in_main": { "const": false },
+            "allowed_in_side": { "const": true },
+            "allowed_with_refinement": { "const": false }
+          }
+        }
+      }
+    },
+    "refinement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D"],
+      "properties": {
+        "A": { "$ref": "#/$defs/refinementGroup" },
+        "B": { "$ref": "#/$defs/refinementGroup" },
+        "C": { "$ref": "#/$defs/refinementGroup" },
+        "D": { "$ref": "#/$defs/refinementGroup" }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "shapes": { "type": "array", "items": { "type": "string", "pattern": "^[A-Za-z-]{8}$" }, "uniqueItems": true },
+    "refinementGroup": {
+      "type": "object", "additionalProperties": false, "required": ["inputs"],
+      "properties": {
+        "inputs": {
+          "type": "object", "minProperties": 1,
+          "propertyNames": { "pattern": "^[A-Za-z-]{8}$" },
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

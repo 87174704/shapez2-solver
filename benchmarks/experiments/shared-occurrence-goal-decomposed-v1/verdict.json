@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "shared-occurrence-goal-decomposed-constructive-synthesis-v1",
+  "configurationId": "SOGDCS-A",
+  "verdict": "ACCEPT",
+  "status": "STOPPED",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorFrontier": {
+    "stableSolved": 126,
+    "stableDistinctTargets": 43
+  },
+  "result": {
+    "memberCount": 159,
+    "firstPassSolved": 144,
+    "firstPassReplayValid": 144,
+    "repeatedSolved": 144,
+    "repeatedReplayValid": 144,
+    "pathIdenticalRepeats": 144,
+    "stableSolved": 144,
+    "stableDistinctTargets": 48,
+    "frontierPreserved": true,
+    "stableNewMembers": 18,
+    "stableNewMemberTargetIds": [
+      "hard-main-009",
+      "hard-main-011",
+      "hard-side-021",
+      "hard-side-031",
+      "hard-side-037",
+      "hard-side-038",
+      "hard-side-039"
+    ],
+    "newlyCoveredDistinctTargets": 5,
+    "newlyCoveredTargetIds": [
+      "hard-main-009",
+      "hard-main-011",
+      "hard-side-037",
+      "hard-side-038",
+      "hard-side-039"
+    ],
+    "failureDistribution": {
+      "unsupported-crystal-layout": 15
+    },
+    "invalidReplay": 0,
+    "limit": 0,
+    "error": 0,
+    "watchdog": 0
+  },
+  "acceptance": {
+    "requiredFrontierPreservation": true,
+    "requiredStableNewMembers": 3,
+    "requiredNewlyCoveredDistinctTargets": 2,
+    "passed": true
+  },
+  "identities": {
+    "solverSha256": "fe07681b9d3aec67d7ea91dea41f8ebc60301b3b48bdc3a3a1f85a366e7a408e",
+    "configSha256": "a165101b2561cd6f0f222ef57eb162ad42e1d776fe16bc5b9ec96592debfaa58",
+    "firstPassSha256": "213d05630b86ffcb75bdb2f5212e1d18270008c663893d4e3f902a14c9e974c3",
+    "repeatSha256": "c47d600b193c953e8ccbb175089457b11e8157de4453707e2b0b9a7af78b75ef",
+    "summarySha256": "0909ba88e9fe25eddfad22861b09f8ebb79adbeb1a25da4a702d496895f1c5a8"
+  },
+  "recordedAt": "2026-09-30"
+}

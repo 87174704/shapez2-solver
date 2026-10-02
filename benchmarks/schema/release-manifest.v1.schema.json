@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shapez2-solver.local/schema/release-manifest.v1.schema.json",
+  "title": "Benchmark Release Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "releaseId", "status", "suite", "partition", "profile", "createdAt", "predecessor", "changeReason", "bindings", "history"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "releaseId": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["audit-candidate", "released", "superseded"] },
+    "suite": { "const": "hard" },
+    "partition": { "enum": ["pilot", "coverage-pilot", "expansion-pilot", "development", "validation", "holdout"] },
+    "profile": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "predecessor": { "type": ["string", "null"] },
+    "changeReason": { "type": "string", "minLength": 1 },
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["userRules", "benchmarkRules", "inputSeed", "inputCatalog", "inputEnvironmentExpansion", "officialTargets", "canonicalSemantics", "schemas", "generator", "validator", "artifactContent", "instances", "witnesses", "generationLog", "rejectionLog"],
+      "properties": {
+        "userRules": { "$ref": "#/$defs/fileBinding" },
+        "benchmarkRules": { "$ref": "#/$defs/fileBinding" },
+        "inputSeed": { "$ref": "#/$defs/fileBinding" },
+        "inputCatalog": { "$ref": "#/$defs/versionedFileBinding" },
+        "inputEnvironmentExpansion": { "$ref": "#/$defs/versionedFileBinding" },
+        "sourceArtifact": { "$ref": "#/$defs/fileBinding" },
+        "officialTargets": { "$ref": "#/$defs/fileSetBinding" },
+        "canonicalSemantics": { "$ref": "#/$defs/versionedFileSetBinding" },
+        "schemas": { "$ref": "#/$defs/fileSetBinding" },
+        "generator": { "$ref": "#/$defs/versionedFileSetBinding" },
+        "validator": { "$ref": "#/$defs/versionedFileSetBinding" },
+        "artifactContent": { "$ref": "#/$defs/canonicalContentBinding" },
+        "instances": { "$ref": "#/$defs/fileBinding" },
+        "solverProjection": { "$ref": "#/$defs/canonicalContentBinding" },
+        "witnesses": { "$ref": "#/$defs/embeddedBinding" },
+        "generationLog": { "$ref": "#/$defs/fileBinding" },
+        "rejectionLog": { "$ref": "#/$defs/embeddedBinding" }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["version", "artifact", "sha256", "reason"],
+        "properties": {
+          "version": { "type": "string" },
+          "artifact": { "type": "string" },
+          "sha256": { "$ref": "#/$defs/sha256" },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "versionedFileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "version"],
+      "properties": {
+        "path": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "version": { "type": ["integer", "string"] }
+      }
+    },
+    "fileSetBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "files"],
+      "properties": {
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "files": { "type": "array", "items": { "$ref": "#/$defs/fileBinding" }, "minItems": 1 }
+      }
+    },
+    "versionedFileSetBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "files", "version"],
+      "properties": {
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "files": { "type": "array", "items": { "$ref": "#/$defs/fileBinding" }, "minItems": 1 },
+        "version": { "type": "string" }
+      }
+    },
+    "embeddedBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["container", "jsonPointer", "sha256"],
+      "properties": {
+        "container": { "type": "string" },
+        "jsonPointer": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "canonicalContentBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "canonicalization", "sha256"],
+      "properties": {
+        "path": { "type": "string" },
+        "canonicalization": { "const": "canonical-json-v1" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    }
+  }
+}

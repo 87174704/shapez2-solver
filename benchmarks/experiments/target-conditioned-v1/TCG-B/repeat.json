@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "target-conditioned-candidate-generation-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "TCG-B",
+    "admissionMode": "progressive-subgoal",
+    "maxOperations": 36,
+    "maxChartNodes": 120000,
+    "maxCandidateAttempts": 1500000,
+    "maxVariantsPerShape": 96,
+    "maxWallMs": 15000
+  },
+  "records": [
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F1",
+      "instanceId": "hard-main-001-53x1-01",
+      "sourceInstanceSha256": "b8b942bc53a3e7359d7c2371bc6cd38afd95fba5f3e35cb0028b9a894fcbce3e",
+      "status": "SOLVED",
+      "solved": true,
+      "replayValid": true,
+      "replayError": null,
+      "operationCount": 9,
+      "result": {
+        "architecture": "target-conditioned-candidate-generation-v1",
+        "architectureConfig": "TCG-B",
+        "admissionMode": "progressive-subgoal",
+        "chartNodes": 12129,
+        "candidateAttempts": 252085,
+        "wallMs": 2226.5089000000003,
+        "solutionPath": [
+          {
+            "operation": "Rotator 180",
+            "inputs": [
+              {
+                "id": 8,
+                "shape": "CuRu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 10,
+                "shape": "----CuRu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Swapper",
+            "inputs": [
+              {
+                "id": 10,
+                "shape": "----CuRu"
+              },
+              {
+                "id": 9,
+                "shape": "RuCuWuCu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 11,
+                "shape": "----WuCu"
+              },
+              {
+                "id": 12,
+                "shape": "RuCuCuRu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator 180",
+            "inputs": [
+              {
+                "id": 12,
+                "shape": "RuCuCuRu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 13,
+                "shape": "CuRuRuCu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator CCW",
+            "inputs": [
+              {
+                "id": 7,
+                "shape": "CuCu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 14,
+                "shape": "Cu----Cu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 14,
+                "shape": "Cu----Cu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 15,
+                "shape": "Cr----Cr"
+              }
+            ],
+            "params": {
+              "color": "r"
+            }
+          },
+          {
+            "operation": "Swapper",
+            "inputs": [
+              {
+                "id": 6,
+                "shape": "Cu--Ru--"
+              },
+              {
+                "id": 4,
+                "shape": "--RuRuWu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 16,
+                "shape": "Cu--RuWu"
+              },
+              {
+                "id": 17,
+                "shape": "--RuRu--"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 17,
+                "shape": "--RuRu--"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 18,
+                "shape": "--RbRb--"
+              }
+            ],
+            "params": {
+              "color": "b"
+            }
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 15,
+                "shape": "Cr----Cr"
+              },
+              {
+                "id": 18,
+                "shape": "--RbRb--"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 19,
+                "shape": "CrRbRbCr"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 13,
+                "shape": "CuRuRuCu"
+              },
+              {
+                "id": 19,
+                "shape": "CrRbRbCr"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 20,
+                "shape": "CuRuRuCu:CrRbRbCr"
+              }
+            ],
+            "params": {}
+          }
+        ],
+        "depth": 9,
+        "statesExplored": 12129,
+        "generatedStates": 252085,
+        "outcome": "solved",
+        "beamPruned": false,
+        "architectureStatus": "solved",
+        "resourceMask": "976"
+      },
+      "processExitCode": 0,
+      "processSignal": null,
+      "stderr": null
+    },
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F2",
+      "instanceId": "hard-main-001-53x3-pilot-02",
+      "sourceInstanceSha256": "696f2ebd38902856e9a38c6bfd927d78b0cd1a18a1e023bc3983d0af0180600d",
+      "status": "SOLVED",
+      "solved": true,
+      "replayValid": true,
+      "replayError": null,
+      "operationCount": 9,
+      "result": {
+        "architecture": "target-conditioned-candidate-generation-v1",
+        "architectureConfig": "TCG-B",
+        "admissionMode": "progressive-subgoal",
+        "chartNodes": 13130,
+        "candidateAttempts": 297367,
+        "wallMs": 2439.8191,
+        "solutionPath": [
+          {
+            "operation": "Swapper",
+            "inputs": [
+              {
+                "id": 7,
+                "shape": "CuSu--Cu"
+              },
+              {
+                "id": 2,
+                "shape": "--RuRuWu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 10,
+                "shape": "CuSuRuWu"
+              },
+              {
+                "id": 11,
+                "shape": "--Ru--Cu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 11,
+                "shape": "--Ru--Cu"
+              },
+              {
+                "id": 4,
+                "shape": "Cu--Ru--"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 12,
+                "shape": "CuRuRuCu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator CCW",
+            "inputs": [
+              {
+                "id": 5,
+                "shape": "CuCu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 13,
+                "shape": "Cu----Cu"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 13,
+                "shape": "Cu----Cu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 14,
+                "shape": "Cr----Cr"
+              }
+            ],
+            "params": {
+              "color": "r"
+            }
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 12,
+                "shape": "CuRuRuCu"
+              },
+              {
+                "id": 14,
+                "shape": "Cr----Cr"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 15,
+                "shape": "CuRuRuCu:Cr----Cr"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Half Destroyer",
+            "inputs": [
+              {
+                "id": 9,
+                "shape": "RuRuSuCu"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 16,
+                "shape": "RuRu----"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Rotator CW",
+            "inputs": [
+              {
+                "id": 16,
+                "shape": "RuRu----"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 17,
+                "shape": "--RuRu--"
+              }
+            ],
+            "params": {}
+          },
+          {
+            "operation": "Painter",
+            "inputs": [
+              {
+                "id": 17,
+                "shape": "--RuRu--"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 18,
+                "shape": "--RbRb--"
+              }
+            ],
+            "params": {
+              "color": "b"
+            }
+          },
+          {
+            "operation": "Stacker",
+            "inputs": [
+              {
+                "id": 15,
+                "shape": "CuRuRuCu:Cr----Cr"
+              },
+              {
+                "id": 18,
+                "shape": "--RbRb--"
+              }
+            ],
+            "outputs": [
+              {
+                "id": 19,
+                "shape": "CuRuRuCu:CrRbRbCr"
+              }
+            ],
+            "params": {}
+          }
+        ],
+        "depth": 9,
+        "statesExplored": 13130,
+        "generatedStates": 297367,
+        "outcome": "solved",
+        "beamPruned": false,
+        "architectureStatus": "solved",
+        "resourceMask": "692"
+      },
+      "processExitCode": 0,
+      "processSignal": null,
+      "stderr": null
+    }
+  ]
+}

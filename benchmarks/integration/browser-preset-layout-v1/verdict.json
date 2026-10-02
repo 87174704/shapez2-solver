@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "task": "P7-04f",
+  "name": "deterministic-preset-solver-graph-layout",
+  "date": "2026-10-01",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS / STOPPED",
+  "protocol": {
+    "freshProfiles": 2,
+    "warmupsPerProfileWorkload": 2,
+    "measuredRunsPerProfileWorkload": 10,
+    "measuredRuns": 60,
+    "unchangedP703Harness": true
+  },
+  "correctness": {
+    "completed": 60,
+    "expected": 60,
+    "pathStableByWorkload": true,
+    "w1ExactSignature": true,
+    "solverSemanticChanges": false,
+    "productionCapability": "159/159"
+  },
+  "responsiveness": {
+    "timerGapGateMs": 100,
+    "ordinaryConstructiveMaximumMs": 41.8,
+    "interiorCrystalMaximumMs": 96.4,
+    "boundedSearchW1MaximumMs": 41.3,
+    "passed": true
+  },
+  "memoryAndDrift": {
+    "workerHeapCoverage": "60/60",
+    "maximumPageHeapDriftMiB": 0.68,
+    "pageHeapDriftGateMiB": 5,
+    "maximumWallDriftRatio": 1.0181,
+    "wallDriftGateRatio": 2,
+    "passed": true
+  },
+  "environment": {
+    "browser": "Chrome/154.0.8037.59",
+    "node": "v24.21.0",
+    "platform": "win32-x64"
+  },
+  "identities": {
+    "solverSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "harnessSha256": "43dc01af9d5dfe33bba7f2c1634ee8cacb26f6a0ba5244a7975165c7d4b4f9d7",
+    "resultsSha256": "423708b7f99d1e3a51cc92281a7ebba3830d4e3b57381fea5ff149e8c6bf3e19",
+    "operationGraphSha256": "041a0c35a71a5e07a323d10a4e7c2af4b2d5977ef454550c5bcf9bb5d874c3ff"
+  },
+  "finalAudit": {
+    "reviewer": "GPT-6 Astra Medium",
+    "status": "PASS",
+    "blockingFindings": 0,
+    "astraHighRequired": false
+  }
+}

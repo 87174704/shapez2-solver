@@ -1,0 +1,265 @@
+{
+  "family": {
+    "targetsAt3of3": 53,
+    "candidatesSearched": 7487,
+    "acceptedCandidates": 106,
+    "structuralDuplicateRejects": 1089
+  },
+  "candidateFunnel": {
+    "searched": 7487,
+    "replayInvalid": 16,
+    "structuralDuplicates": 1089,
+    "expansionInvalid": 0,
+    "validButLowerRanked": 6276,
+    "accepted": 106
+  },
+  "expansion": {
+    "additive": 53,
+    "transformative": 106,
+    "newInputTypeExpansions": 100,
+    "multiplicityOnly": 0,
+    "multiSourcePreprocessing": 3
+  },
+  "environment": {
+    "all159": {
+      "instanceCount": 159,
+      "availableOccurrences": {
+        "min": 6,
+        "median": 15,
+        "p90": 25,
+        "max": 53,
+        "mean": 16.553459119496857
+      },
+      "coreOccurrences": {
+        "min": 5,
+        "median": 14,
+        "p90": 23,
+        "max": 51,
+        "mean": 15.037735849056604
+      },
+      "availableToCoreRatio": {
+        "min": 1.0196078431372548,
+        "median": 1.0833333333333333,
+        "p90": 1.2727272727272727,
+        "max": 1.5,
+        "mean": 1.130378969757475
+      },
+      "expansionDelta": {
+        "min": 1,
+        "median": 1,
+        "p90": 3,
+        "max": 4,
+        "mean": 1.5157232704402517
+      },
+      "availableTypeCount": {
+        "min": 5,
+        "median": 13,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.515723270440251
+      },
+      "coreTypeCount": {
+        "min": 4,
+        "median": 14,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.433962264150944
+      }
+    },
+    "baselineFamily1": {
+      "instanceCount": 53,
+      "availableOccurrences": {
+        "min": 6,
+        "median": 15,
+        "p90": 25,
+        "max": 53,
+        "mean": 17.07547169811321
+      },
+      "coreOccurrences": {
+        "min": 5,
+        "median": 14,
+        "p90": 23,
+        "max": 51,
+        "mean": 15.037735849056604
+      },
+      "availableToCoreRatio": {
+        "min": 1.0303030303030303,
+        "median": 1.1538461538461537,
+        "p90": 1.2857142857142858,
+        "max": 1.5,
+        "mean": 1.1677626456528365
+      },
+      "expansionDelta": {
+        "min": 1,
+        "median": 2,
+        "p90": 3,
+        "max": 4,
+        "mean": 2.0377358490566038
+      },
+      "availableTypeCount": {
+        "min": 5,
+        "median": 14,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.547169811320755
+      },
+      "coreTypeCount": {
+        "min": 4,
+        "median": 14,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.433962264150944
+      }
+    },
+    "newFamilies2and3": {
+      "instanceCount": 106,
+      "availableOccurrences": {
+        "min": 7,
+        "median": 15,
+        "p90": 24,
+        "max": 53,
+        "mean": 16.29245283018868
+      },
+      "coreOccurrences": {
+        "min": 5,
+        "median": 14,
+        "p90": 23,
+        "max": 51,
+        "mean": 15.037735849056604
+      },
+      "availableToCoreRatio": {
+        "min": 1.0196078431372548,
+        "median": 1.0769230769230769,
+        "p90": 1.25,
+        "max": 1.4,
+        "mean": 1.111687131809796
+      },
+      "expansionDelta": {
+        "min": 1,
+        "median": 1,
+        "p90": 2,
+        "max": 3,
+        "mean": 1.2547169811320755
+      },
+      "availableTypeCount": {
+        "min": 6,
+        "median": 13,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.5
+      },
+      "coreTypeCount": {
+        "min": 4,
+        "median": 14,
+        "p90": 20,
+        "max": 28,
+        "mean": 13.433962264150944
+      }
+    }
+  },
+  "construction": {
+    "coreStrategyDistribution": {
+      "direct-layered-forward-construction": 78,
+      "generic-crystal-single-color-half-scaffold": 12,
+      "generic-crystal-sparse-upper-refinement-mask": 3,
+      "generic-crystal-staged-full-layer-refinement-mask": 3,
+      "generic-mixed-pin-crystal-state-transition": 15,
+      "generic-pin-column-sequence": 21,
+      "generic-pin-supported-upper-region": 9,
+      "reuse-validated-catalog-half-chunk+multi-stage-stack": 3,
+      "reuse-validated-crystal-over-pins": 3,
+      "reuse-validated-crystal-scaffold-extraction+shared-refinement": 3,
+      "reuse-validated-partial-refinement-occurrence-reuse": 3,
+      "reuse-validated-shared-occurrence-pin-subassembly": 3,
+      "reuse-validated-shared-refinement-byproduct-reuse": 3
+    },
+    "pin": 63,
+    "crystal": 45,
+    "mixedPinCrystal": 30,
+    "swapper": 37,
+    "reuseStrategy": 18,
+    "stagedMask": 3,
+    "sparseMask": 3,
+    "scaffold": 15,
+    "quarterRouting": 0
+  },
+  "complexity": {
+    "all159": {
+      "witnessDepth": {
+        "min": 8,
+        "median": 12,
+        "p90": 21,
+        "max": 26,
+        "mean": 13.20754716981132
+      },
+      "operationCount": {
+        "min": 25,
+        "median": 82,
+        "p90": 157,
+        "max": 336,
+        "mean": 96.76729559748428
+      },
+      "terminalWaste": {
+        "min": 7,
+        "median": 26,
+        "p90": 54,
+        "max": 116,
+        "mean": 30.81761006289308
+      }
+    },
+    "baselineFamily1": {
+      "witnessDepth": {
+        "min": 8,
+        "median": 11,
+        "p90": 21,
+        "max": 26,
+        "mean": 12.962264150943396
+      },
+      "operationCount": {
+        "min": 25,
+        "median": 80,
+        "p90": 154,
+        "max": 334,
+        "mean": 95.01886792452831
+      },
+      "terminalWaste": {
+        "min": 7,
+        "median": 25,
+        "p90": 52,
+        "max": 115,
+        "mean": 29.92452830188679
+      }
+    },
+    "newFamilies2and3": {
+      "witnessDepth": {
+        "min": 9,
+        "median": 12,
+        "p90": 21,
+        "max": 26,
+        "mean": 13.330188679245284
+      },
+      "operationCount": {
+        "min": 27,
+        "median": 83,
+        "p90": 157,
+        "max": 336,
+        "mean": 97.64150943396227
+      },
+      "terminalWaste": {
+        "min": 8,
+        "median": 27,
+        "p90": 54,
+        "max": 116,
+        "mean": 31.264150943396228
+      }
+    }
+  },
+  "diversityDepth": {
+    "sourceAncestryVariation": 22,
+    "multiReplacementPreprocessingAncestry": 81,
+    "multiSourcePreprocessingGraph": 3,
+    "assemblyTopology": 0,
+    "supportOrScaffoldTopology": 0,
+    "mechanismRoutingDifference": 0
+  }
+}

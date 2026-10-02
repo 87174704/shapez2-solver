@@ -1,0 +1,863 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "mixed-pin-crystal-goal-decomposed-constructive-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "configuration": {
+    "id": "MPCGDCS-A",
+    "maxExtractionOperations": 8,
+    "maxExtractionStates": 180000,
+    "maxMatchingTransitions": 750000,
+    "maxOperations": 768,
+    "maxWallMs": 12000
+  },
+  "memberCount": 159,
+  "counts": {
+    "SOLVED": 117,
+    "UNSUPPORTED_DOMAIN": 21,
+    "EXHAUSTED": 21
+  },
+  "architectureStatuses": {
+    "solved": 117,
+    "unsupported-terminal-isolated-pin": 6,
+    "unsupported-crystal-layout": 15,
+    "resource-mismatch": 15,
+    "unsupported-isolated-pin": 6
+  },
+  "limitReasons": {},
+  "solved": 117,
+  "replayValidSolved": 117,
+  "repeated": 117,
+  "stableSolved": 117,
+  "stableDistinctTargets": 40,
+  "frontierPreserved": true,
+  "missingFrontier": [],
+  "stableNewMembers": 5,
+  "stableNewDistinctTargets": 2,
+  "stableNewTargetIds": [
+    "hard-main-012",
+    "hard-side-031"
+  ],
+  "stableMembers": [
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F1",
+      "instanceId": "hard-main-001-53x1-01",
+      "operationCount": 31,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F2",
+      "instanceId": "hard-main-001-53x3-pilot-02",
+      "operationCount": 31,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-001",
+      "familySlot": "F3",
+      "instanceId": "hard-main-001-53x3-pilot-03",
+      "operationCount": 32,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-002",
+      "familySlot": "F1",
+      "instanceId": "hard-main-002-53x1-01",
+      "operationCount": 54,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-002",
+      "familySlot": "F2",
+      "instanceId": "hard-main-002-deep-optional-01",
+      "operationCount": 50,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-002",
+      "familySlot": "F3",
+      "instanceId": "hard-main-002-53x3-rollout-03",
+      "operationCount": 51,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-003",
+      "familySlot": "F1",
+      "instanceId": "hard-main-003-53x1-01",
+      "operationCount": 69,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-003",
+      "familySlot": "F2",
+      "instanceId": "hard-main-003-53x3-rollout-02",
+      "operationCount": 71,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-003",
+      "familySlot": "F3",
+      "instanceId": "hard-main-003-deep-optional-01",
+      "operationCount": 69,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-004",
+      "familySlot": "F1",
+      "instanceId": "hard-main-004-53x1-01",
+      "operationCount": 32,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-004",
+      "familySlot": "F2",
+      "instanceId": "hard-main-004-53x3-rollout-02",
+      "operationCount": 32,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-004",
+      "familySlot": "F3",
+      "instanceId": "hard-main-004-deep-replacement-f3",
+      "operationCount": 31,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-005",
+      "familySlot": "F1",
+      "instanceId": "hard-main-005-53x1-01",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-005",
+      "familySlot": "F2",
+      "instanceId": "hard-main-005-53x3-pilot-02",
+      "operationCount": 53,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-005",
+      "familySlot": "F3",
+      "instanceId": "hard-main-005-final-depth-reselection",
+      "operationCount": 53,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-006",
+      "familySlot": "F1",
+      "instanceId": "hard-main-006-53x1-01",
+      "operationCount": 51,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-006",
+      "familySlot": "F2",
+      "instanceId": "hard-main-006-53x3-rollout-02",
+      "operationCount": 48,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-006",
+      "familySlot": "F3",
+      "instanceId": "hard-main-006-final-depth-reselection",
+      "operationCount": 48,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-main-012",
+      "familySlot": "F1",
+      "instanceId": "hard-main-012-53x1-01",
+      "operationCount": 80,
+      "isNew": true
+    },
+    {
+      "targetId": "hard-main-012",
+      "familySlot": "F2",
+      "instanceId": "hard-main-012-deep-replacement-f2",
+      "operationCount": 79,
+      "isNew": true
+    },
+    {
+      "targetId": "hard-main-012",
+      "familySlot": "F3",
+      "instanceId": "hard-main-012-53x3-pilot-03",
+      "operationCount": 80,
+      "isNew": true
+    },
+    {
+      "targetId": "hard-side-001",
+      "familySlot": "F1",
+      "instanceId": "hard-side-001-53x1-01",
+      "operationCount": 34,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-001",
+      "familySlot": "F2",
+      "instanceId": "hard-side-001-53x3-rollout-02",
+      "operationCount": 39,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-001",
+      "familySlot": "F3",
+      "instanceId": "hard-side-001-53x3-rollout-03",
+      "operationCount": 38,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-002",
+      "familySlot": "F1",
+      "instanceId": "hard-side-002-53x1-01",
+      "operationCount": 36,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-002",
+      "familySlot": "F2",
+      "instanceId": "hard-side-002-53x3-rollout-02",
+      "operationCount": 38,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-002",
+      "familySlot": "F3",
+      "instanceId": "hard-side-002-53x3-rollout-03",
+      "operationCount": 38,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-003",
+      "familySlot": "F1",
+      "instanceId": "hard-side-003-53x1-01",
+      "operationCount": 19,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-003",
+      "familySlot": "F2",
+      "instanceId": "hard-side-003-53x3-pilot-02",
+      "operationCount": 22,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-003",
+      "familySlot": "F3",
+      "instanceId": "hard-side-003-53x3-pilot-03",
+      "operationCount": 22,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-004",
+      "familySlot": "F1",
+      "instanceId": "hard-side-004-53x1-01",
+      "operationCount": 39,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-004",
+      "familySlot": "F2",
+      "instanceId": "hard-side-004-53x3-rollout-02",
+      "operationCount": 40,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-004",
+      "familySlot": "F3",
+      "instanceId": "hard-side-004-53x3-rollout-03",
+      "operationCount": 40,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-005",
+      "familySlot": "F1",
+      "instanceId": "hard-side-005-53x1-01",
+      "operationCount": 28,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-005",
+      "familySlot": "F2",
+      "instanceId": "hard-side-005-53x3-rollout-02",
+      "operationCount": 33,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-005",
+      "familySlot": "F3",
+      "instanceId": "hard-side-005-53x3-rollout-03",
+      "operationCount": 31,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-006",
+      "familySlot": "F1",
+      "instanceId": "hard-side-006-53x1-01",
+      "operationCount": 55,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-006",
+      "familySlot": "F2",
+      "instanceId": "hard-side-006-deep-optional-01",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-006",
+      "familySlot": "F3",
+      "instanceId": "hard-side-006-53x3-rollout-03",
+      "operationCount": 56,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-007",
+      "familySlot": "F1",
+      "instanceId": "hard-side-007-53x1-01",
+      "operationCount": 62,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-007",
+      "familySlot": "F2",
+      "instanceId": "hard-side-007-53x3-rollout-02",
+      "operationCount": 68,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-007",
+      "familySlot": "F3",
+      "instanceId": "hard-side-007-deep-optional-01",
+      "operationCount": 67,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-008",
+      "familySlot": "F1",
+      "instanceId": "hard-side-008-53x1-01",
+      "operationCount": 65,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-008",
+      "familySlot": "F2",
+      "instanceId": "hard-side-008-53x3-rollout-02",
+      "operationCount": 66,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-008",
+      "familySlot": "F3",
+      "instanceId": "hard-side-008-deep-optional-01",
+      "operationCount": 66,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-009",
+      "familySlot": "F1",
+      "instanceId": "hard-side-009-53x1-01",
+      "operationCount": 62,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-009",
+      "familySlot": "F2",
+      "instanceId": "hard-side-009-53x3-rollout-02",
+      "operationCount": 65,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-009",
+      "familySlot": "F3",
+      "instanceId": "hard-side-009-deep-optional-01",
+      "operationCount": 60,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-010",
+      "familySlot": "F1",
+      "instanceId": "hard-side-010-53x1-01",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-010",
+      "familySlot": "F2",
+      "instanceId": "hard-side-010-53x3-rollout-02",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-010",
+      "familySlot": "F3",
+      "instanceId": "hard-side-010-deep-optional-01",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-011",
+      "familySlot": "F1",
+      "instanceId": "hard-side-011-53x1-01",
+      "operationCount": 72,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-011",
+      "familySlot": "F2",
+      "instanceId": "hard-side-011-53x3-rollout-02",
+      "operationCount": 73,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-011",
+      "familySlot": "F3",
+      "instanceId": "hard-side-011-deep-optional-01",
+      "operationCount": 72,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-012",
+      "familySlot": "F1",
+      "instanceId": "hard-side-012-53x1-01",
+      "operationCount": 68,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-012",
+      "familySlot": "F2",
+      "instanceId": "hard-side-012-53x3-rollout-02",
+      "operationCount": 67,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-012",
+      "familySlot": "F3",
+      "instanceId": "hard-side-012-deep-optional-01",
+      "operationCount": 65,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-013",
+      "familySlot": "F1",
+      "instanceId": "hard-side-013-53x1-01",
+      "operationCount": 54,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-013",
+      "familySlot": "F2",
+      "instanceId": "hard-side-013-53x3-rollout-02",
+      "operationCount": 56,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-013",
+      "familySlot": "F3",
+      "instanceId": "hard-side-013-deep-optional-01",
+      "operationCount": 54,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-014",
+      "familySlot": "F1",
+      "instanceId": "hard-side-014-53x1-01",
+      "operationCount": 55,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-014",
+      "familySlot": "F2",
+      "instanceId": "hard-side-014-53x3-rollout-02",
+      "operationCount": 60,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-014",
+      "familySlot": "F3",
+      "instanceId": "hard-side-014-53x3-rollout-03",
+      "operationCount": 58,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-015",
+      "familySlot": "F1",
+      "instanceId": "hard-side-015-53x1-01",
+      "operationCount": 69,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-015",
+      "familySlot": "F2",
+      "instanceId": "hard-side-015-53x3-rollout-02",
+      "operationCount": 70,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-015",
+      "familySlot": "F3",
+      "instanceId": "hard-side-015-deep-optional-01",
+      "operationCount": 70,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-016",
+      "familySlot": "F1",
+      "instanceId": "hard-side-016-53x1-01",
+      "operationCount": 78,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-016",
+      "familySlot": "F2",
+      "instanceId": "hard-side-016-53x3-rollout-02",
+      "operationCount": 75,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-016",
+      "familySlot": "F3",
+      "instanceId": "hard-side-016-deep-optional-01",
+      "operationCount": 72,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-017",
+      "familySlot": "F1",
+      "instanceId": "hard-side-017-53x1-01",
+      "operationCount": 73,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-017",
+      "familySlot": "F2",
+      "instanceId": "hard-side-017-53x3-rollout-02",
+      "operationCount": 77,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-017",
+      "familySlot": "F3",
+      "instanceId": "hard-side-017-deep-optional-01",
+      "operationCount": 75,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-018",
+      "familySlot": "F1",
+      "instanceId": "hard-side-018-53x1-01",
+      "operationCount": 71,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-018",
+      "familySlot": "F2",
+      "instanceId": "hard-side-018-53x3-rollout-02",
+      "operationCount": 75,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-018",
+      "familySlot": "F3",
+      "instanceId": "hard-side-018-deep-optional-01",
+      "operationCount": 70,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-019",
+      "familySlot": "F1",
+      "instanceId": "hard-side-019-53x1-01",
+      "operationCount": 50,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-019",
+      "familySlot": "F2",
+      "instanceId": "hard-side-019-53x3-rollout-02",
+      "operationCount": 53,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-019",
+      "familySlot": "F3",
+      "instanceId": "hard-side-019-53x3-rollout-03",
+      "operationCount": 51,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-020",
+      "familySlot": "F1",
+      "instanceId": "hard-side-020-53x1-01",
+      "operationCount": 63,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-020",
+      "familySlot": "F2",
+      "instanceId": "hard-side-020-53x3-rollout-02",
+      "operationCount": 69,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-020",
+      "familySlot": "F3",
+      "instanceId": "hard-side-020-deep-optional-01",
+      "operationCount": 68,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-021",
+      "familySlot": "F3",
+      "instanceId": "hard-side-021-deep-replacement-f3",
+      "operationCount": 57,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-022",
+      "familySlot": "F1",
+      "instanceId": "hard-side-022-53x1-01",
+      "operationCount": 56,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-022",
+      "familySlot": "F2",
+      "instanceId": "hard-side-022-final-depth-reselection",
+      "operationCount": 55,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-022",
+      "familySlot": "F3",
+      "instanceId": "hard-side-022-53x3-rollout-03",
+      "operationCount": 57,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-023",
+      "familySlot": "F1",
+      "instanceId": "hard-side-023-53x1-01",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-023",
+      "familySlot": "F2",
+      "instanceId": "hard-side-023-final-depth-reselection",
+      "operationCount": 64,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-023",
+      "familySlot": "F3",
+      "instanceId": "hard-side-023-53x3-rollout-03",
+      "operationCount": 65,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-024",
+      "familySlot": "F1",
+      "instanceId": "hard-side-024-53x1-01",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-024",
+      "familySlot": "F2",
+      "instanceId": "hard-side-024-53x3-rollout-02",
+      "operationCount": 53,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-024",
+      "familySlot": "F3",
+      "instanceId": "hard-side-024-deep-replacement-f3",
+      "operationCount": 47,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-025",
+      "familySlot": "F1",
+      "instanceId": "hard-side-025-53x1-01",
+      "operationCount": 44,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-025",
+      "familySlot": "F2",
+      "instanceId": "hard-side-025-final-depth-reselection",
+      "operationCount": 41,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-025",
+      "familySlot": "F3",
+      "instanceId": "hard-side-025-53x3-rollout-03",
+      "operationCount": 43,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-026",
+      "familySlot": "F1",
+      "instanceId": "hard-side-026-53x1-01",
+      "operationCount": 51,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-026",
+      "familySlot": "F2",
+      "instanceId": "hard-side-026-53x3-rollout-02",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-026",
+      "familySlot": "F3",
+      "instanceId": "hard-side-026-final-depth-reselection",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-027",
+      "familySlot": "F1",
+      "instanceId": "hard-side-027-53x1-01",
+      "operationCount": 77,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-027",
+      "familySlot": "F2",
+      "instanceId": "hard-side-027-53x3-rollout-02",
+      "operationCount": 73,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-027",
+      "familySlot": "F3",
+      "instanceId": "hard-side-027-deep-optional-01",
+      "operationCount": 72,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-028",
+      "familySlot": "F1",
+      "instanceId": "hard-side-028-53x1-01",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-028",
+      "familySlot": "F2",
+      "instanceId": "hard-side-028-53x3-rollout-02",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-028",
+      "familySlot": "F3",
+      "instanceId": "hard-side-028-final-depth-reselection",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-030",
+      "familySlot": "F1",
+      "instanceId": "hard-side-030-53x1-01",
+      "operationCount": 50,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-030",
+      "familySlot": "F2",
+      "instanceId": "hard-side-030-deep-replacement-f2",
+      "operationCount": 48,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-030",
+      "familySlot": "F3",
+      "instanceId": "hard-side-030-53x3-rollout-03",
+      "operationCount": 48,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-031",
+      "familySlot": "F1",
+      "instanceId": "hard-side-031-53x1-01",
+      "operationCount": 76,
+      "isNew": true
+    },
+    {
+      "targetId": "hard-side-031",
+      "familySlot": "F2",
+      "instanceId": "hard-side-031-53x3-rollout-02",
+      "operationCount": 76,
+      "isNew": true
+    },
+    {
+      "targetId": "hard-side-033",
+      "familySlot": "F1",
+      "instanceId": "hard-side-033-53x1-01",
+      "operationCount": 52,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-033",
+      "familySlot": "F2",
+      "instanceId": "hard-side-033-deep-replacement-f2",
+      "operationCount": 59,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-033",
+      "familySlot": "F3",
+      "instanceId": "hard-side-033-53x3-pilot-03",
+      "operationCount": 56,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-035",
+      "familySlot": "F1",
+      "instanceId": "hard-side-035-53x1-01",
+      "operationCount": 21,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-035",
+      "familySlot": "F2",
+      "instanceId": "hard-side-035-53x3-pilot-02",
+      "operationCount": 22,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-035",
+      "familySlot": "F3",
+      "instanceId": "hard-side-035-final-depth-reselection",
+      "operationCount": 25,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-041",
+      "familySlot": "F1",
+      "instanceId": "hard-side-041-53x1-01",
+      "operationCount": 33,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-041",
+      "familySlot": "F2",
+      "instanceId": "hard-side-041-deep-replacement-f2",
+      "operationCount": 31,
+      "isNew": false
+    },
+    {
+      "targetId": "hard-side-041",
+      "familySlot": "F3",
+      "instanceId": "hard-side-041-53x3-pilot-03",
+      "operationCount": 33,
+      "isNew": false
+    }
+  ],
+  "accept": true,
+  "provisional": false
+}

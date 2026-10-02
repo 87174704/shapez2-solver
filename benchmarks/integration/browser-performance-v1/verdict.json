@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "task": "P7-03",
+  "name": "repeated-real-browser-performance-and-responsiveness",
+  "date": "2026-10-01",
+  "timezone": "Asia/Shanghai",
+  "status": "NEEDS-FIX / STOPPED",
+  "browser": {
+    "name": "Google Chrome",
+    "version": "153.0.8010.53",
+    "freshProfiles": 2
+  },
+  "protocol": {
+    "workloads": 3,
+    "warmupsPerProfileWorkload": 2,
+    "measuredRunsPerProfileWorkload": 10,
+    "measuredRuns": 60,
+    "nativeModuleWorkers": true,
+    "realPage": "/en/",
+    "productionPayloads": true,
+    "testOnlySolverSemantics": false
+  },
+  "correctness": {
+    "completed": 60,
+    "expected": 60,
+    "pathStableByWorkload": true,
+    "w1ExactSignature": true,
+    "solverSemanticChanges": false,
+    "productionCodeChanges": false
+  },
+  "memory": {
+    "workerHeapCoverage": {
+      "ordinaryConstructive": "20/20",
+      "interiorCrystalConstructive": "20/20",
+      "boundedSearchW1": "20/20"
+    },
+    "maximumPageHeapDriftMiB": 1.6,
+    "pageHeapDriftGateMiB": 5,
+    "passed": true
+  },
+  "wallDrift": {
+    "maximumSecondHalfToFirstHalfMedianRatio": 1.1910828025395055,
+    "gateRatio": 2,
+    "passed": true
+  },
+  "responsiveness": {
+    "timerGapGateMs": 100,
+    "ordinaryConstructiveViolations": "3/20",
+    "ordinaryConstructiveMaximumMs": 111.3,
+    "interiorCrystalViolations": "19/20",
+    "interiorCrystalMaximumMs": 260.7,
+    "boundedSearchW1Violations": "0/20",
+    "boundedSearchW1MaximumMs": 70.8,
+    "passed": false
+  },
+  "identities": {
+    "solverSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "harnessSha256": "43dc01af9d5dfe33bba7f2c1634ee8cacb26f6a0ba5244a7975165c7d4b4f9d7",
+    "resultsSha256": "81728305843a611018433c48b0748eaffadf59ff4c49e74e091754b89211e775"
+  },
+  "nextTask": "P7-04"
+}

@@ -1,0 +1,717 @@
+[
+  {
+    "targetId": "hard-main-005",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 3,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 6,
+    "macroPlanId": "half-swapper-axis-0",
+    "macroClass": "independent-half-swapper-assembly",
+    "baselineSignature": "26e907e6b0355d047a499a704d02655b2699276d63990ec774691f9402a670ca",
+    "retainedBSignature": "0d814bea06bed97d9a2ca94688bd60ce7ea2a2c55250627e829550eb36536f03",
+    "rejectedStagedSignature": "10b039b7a9e1c44e99423b9c14eb284f7ebc42018da2acbeac429225e6371fe2",
+    "rejectedDeepPassSignature": "1969022448e0c57c7aa4652b8e6a0b060579792873e574c73c7bd66a7fc41626",
+    "newSignature": "49ae0fe78b5c043099e359d4bce50f6146ce98870ecc91160ecb7b0c625874d5",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "e3b27ef40b52fd27d718469bd90d196530cf8c97e6e6438fd7478a0dfa14fef4",
+        "candidateSignature": "88e0abb9bbdcff6b57f3a82bcf37878eca727ad1b4c45b205c656f740714d54a",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "30b07e8a02eb46df41b9fff992d7b00656539afdb963b3ec7e5e685b589201ab",
+        "candidateSignature": "75d24ec2d37bdaafbae506206fce6c8c186941e64e8a00a57eb26cca550ef325",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "e43af87561507992fde333b5d2613307ba7e1b4df6d94cfd5592778dd7dff2fb",
+        "candidateSignature": "268febd174aacceb14d776017994c553711604138c76c2317049611d13f97347",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "Swapper"
+    },
+    "rejoin": {
+      "subtreeSignature": "fa3d27bca299b059943703d9201691447e099d63d2280a6a9d95d641bd38576d",
+      "baselinePath": "result.children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "Pin Pusher"
+    },
+    "baselineOperations": 63,
+    "oldRejectedOperations": 69,
+    "candidateOperations": 63,
+    "environment": {
+      "maxWeightedJaccard": 0.6875,
+      "baselineWeightedJaccard": 0.6875,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 13,
+      "coreOccurrenceCount": 11
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 6,
+      "originalCandidateSignature": "49ae0fe78b5c043099e359d4bce50f6146ce98870ecc91160ecb7b0c625874d5",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-main-006",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 3,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 8,
+    "macroPlanId": "chunked-upper-half-swapper-1",
+    "macroClass": "chunked-upper-half-recomposition",
+    "baselineSignature": "61fbe3d6f8ea01f0710a4370e7a2ed79910625eea42a312e155d95959d126356",
+    "retainedBSignature": "f90259cfd147f6d9bea208e516b975b40586bb08aed81097e0b6c6a62f597786",
+    "rejectedStagedSignature": "f6b063f745d627a0ca09d022ec36d57adb1d85c4d7f252ed4b555984dc977988",
+    "rejectedDeepPassSignature": "52036c5953f743cacc53ae1f653821003c65b324e462786a470f332c7b22ae09",
+    "newSignature": "991a076417e91a8a4518ce3588f030ede41e8728bb48fb145029319ce18e7b04",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "fcacc887c9a902c5770b56d13c4f1c82af64ef985879378386473f6e29dbca2a",
+        "candidateSignature": "9a2175b8470c61697087c33c017c4576473b384055f64cbd43e440e308f65b1b",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "e7e0fee2848957ffc011508b25b7466d4c45410d6be7dcdaba59d6b22f144822",
+        "candidateSignature": "e31fac0b961e71620d0d0c42b361b80c2584e566a4573fdad67de530d98d9e76",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "fa7c39302f749731ae76f6b07374ce4b0c05d625144ca0cc056a5b7f5c6561d0",
+        "candidateSignature": "b9f47e6067f8bf451392e19592958ed690e5e1f368bfc6acabecadd6d176177f",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "layers"
+    },
+    "rejoin": {
+      "subtreeSignature": "ffb15afd02a2b8ccf3df2502ea64d42881e7fa2c7da090a8f3b34d17f2d0bfe6",
+      "baselinePath": "result.children[0].children[1]",
+      "candidatePath": "result.children[1].children[0].children[0]",
+      "nodeKind": "Pin Pusher"
+    },
+    "baselineOperations": 54,
+    "oldRejectedOperations": 67,
+    "candidateOperations": 57,
+    "environment": {
+      "maxWeightedJaccard": 0.7692307692307693,
+      "baselineWeightedJaccard": 0.7692307692307693,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 12,
+      "coreOccurrenceCount": 10
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 8,
+      "originalCandidateSignature": "991a076417e91a8a4518ce3588f030ede41e8728bb48fb145029319ce18e7b04",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-main-007",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 3,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 2,
+    "macroPlanId": "native-mixed-r1-3",
+    "macroClass": "mixed-state-transition-routing",
+    "baselineSignature": "64e3bf862fee191d2aed7e552ab063772945ab703fdf75970a6c1ab4ab913058",
+    "retainedBSignature": "2caa08219d3ffea138fa1d6689ddff6d7e5537a97cea4440bf11183fa737d6a0",
+    "rejectedStagedSignature": "66289b44edfc85e70cb06b1a46fe40b5783f7b93e748ba4e9fdcb41c40e1ad4a",
+    "rejectedDeepPassSignature": "6b0c408984f4b5b1b48e3f5cbf9c25032ea5b0cc81355867fd87ce71b7e6ce1b",
+    "newSignature": "fdb11201fe2a8fd13621b3b7b645fb6eb6549a30b9d88ad053be75dc50bd9ee0",
+    "depth": "D",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "9c040d83c850176f220e54d48caacd41df1886690cc85d53384932dec8680bd9",
+        "candidateSignature": "60048057ea2bdd3de1acad5365e8c1e67232c9c68d441571e4c322a5005faa9d",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "c3fc3e2771954fb08368e2950de5e6d1f622a8bfdab13adf08879362ab743d0a",
+        "candidateSignature": "5fb031f36b40a669b2f0c4ca5ee10af3debbcfdee42fe1b76a6ea769e86c85c8",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "6b94e44a7dc4ace1aef3733bbf43d6670fa0eaab712114cab37f700f164a2e2b",
+        "candidateSignature": "6b94e44a7dc4ace1aef3733bbf43d6670fa0eaab712114cab37f700f164a2e2b",
+        "isomorphic": true
+      },
+      "routingInventoryChanged": false
+    },
+    "earliestDivergence": {
+      "path": "result.children[0].children[1].children[1]",
+      "baselineNode": "Pin Pusher",
+      "candidateNode": "Pin Pusher"
+    },
+    "rejoin": {
+      "subtreeSignature": "6ac8ab31d6a8ba4e3b098aef63f9457cfff8e31f375d1fe94e926745f1ce92c8",
+      "baselinePath": "result.children[0].children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "layers"
+    },
+    "baselineOperations": 334,
+    "oldRejectedOperations": 344,
+    "candidateOperations": 345,
+    "environment": {
+      "maxWeightedJaccard": 0.8928571428571429,
+      "baselineWeightedJaccard": 0.8928571428571429,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 53,
+      "coreOccurrenceCount": 51
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 2,
+      "originalCandidateSignature": "fdb11201fe2a8fd13621b3b7b645fb6eb6549a30b9d88ad053be75dc50bd9ee0",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-022",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 1,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 6,
+    "macroPlanId": "half-swapper-axis-0",
+    "macroClass": "independent-half-swapper-assembly",
+    "baselineSignature": "58959580088651f2f3624b5c95a80853469ce6cc9e7a504ca4e6fe73538cf2bc",
+    "retainedBSignature": "b848df1459ad39677be95a2de77ee30cf0eed77ab78811fae2dd6521f78a7d05",
+    "rejectedStagedSignature": "1b26e262c0175d13260d4dbbcc4d5e35d9aad5e7cf1a5bc96ea1e5e93ec90b3c",
+    "rejectedDeepPassSignature": "b72d85a7618368b5cededfbf4b2f7e0f27da00b038a34b824cc4a8e67344d365",
+    "newSignature": "0cabd7677eeb2f2800a5489b115d88331c42ae96b248a63da0e77d681ac69ffd",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "1416433bb0a4082ff81cd4f1c5c681427fa9e33ea12a34cc4021e3f889e66841",
+        "candidateSignature": "2c30e8e42253e3c1575576877309a06a98c2c99261616854a7c973312df1b720",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "94eee492bb91ab8e33439673587482ff432a7361cb060034d776582ce33018bf",
+        "candidateSignature": "8c54c63feffe684d0ae5e0e67d6676b2a00f1ecd6f123977a40576ab080213dd",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "6027a9fa30bb0a2ea3bfdc98a075c018f1d35c92e7ca68364de3d2fa4850ac63",
+        "candidateSignature": "15493221fecae8d9ca7e188e6beb1cccedf41cec34f84c30dff646855fb0c35b",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "Swapper"
+    },
+    "rejoin": {
+      "subtreeSignature": "4e437554fc732884cb8e308170a74355d8e145810665532a599da8604f630cfd",
+      "baselinePath": "result.children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "Stacker"
+    },
+    "baselineOperations": 74,
+    "oldRejectedOperations": 76,
+    "candidateOperations": 76,
+    "environment": {
+      "maxWeightedJaccard": 0.5882352941176471,
+      "baselineWeightedJaccard": 0.5555555555555556,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 14,
+      "coreOccurrenceCount": 12
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 6,
+      "originalCandidateSignature": "0cabd7677eeb2f2800a5489b115d88331c42ae96b248a63da0e77d681ac69ffd",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-023",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 3,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 6,
+    "macroPlanId": "half-swapper-axis-0",
+    "macroClass": "independent-half-swapper-assembly",
+    "baselineSignature": "aafd437c0f3bb5e96618425aadf952f1abaf1d3bfa4e047536a7b15ad2548e44",
+    "retainedBSignature": "a32ed4563f00f6f2161b9634a89e61b7774174939c43fe1e653bc479e6dcc876",
+    "rejectedStagedSignature": "794bf36543ab597438d4ad724d4bb123911f2fc9b3f813d17af17347257a2b04",
+    "rejectedDeepPassSignature": "e097928977e7ebfa8a14b6f561edef17411f3714fab1221feefb4baa8a78b840",
+    "newSignature": "bc67e32b9ce1c2e14564cbb40e66cc55a2d1cd110dced6cde856a65d9dd071b7",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "1f9a5d5fb8d0b2b4f8d7ccdb61ae5810e0085aacaab00a63c8b54fdbfcc9fb8e",
+        "candidateSignature": "f828d5a6ee07db8c51f852b6ba8883e329ab46640e517adfbeefaf5717afdc86",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "e2ea64537f98cb2308f006db9b28fa8c56a0580ae00a6c2f1e34e7ce3cabe78b",
+        "candidateSignature": "ada80a9d7b734f5877d0c7d153372d3bc6be83e6c583181dbd8494c4771c550e",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "d7e881f296fb9040fef2b4eb8770b6046a82c101915837a0dbd747dd7e5f54d0",
+        "candidateSignature": "4c6872ed644acd67a40792e591367b5f37fad5076cb1efc8979dd617ce5aa989",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "Swapper"
+    },
+    "rejoin": {
+      "subtreeSignature": "aee1e34906b7f1f3381833d29c3889c34602d2ccce66ff597e148e6a03ea1a69",
+      "baselinePath": "result.children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "Stacker"
+    },
+    "baselineOperations": 90,
+    "oldRejectedOperations": 87,
+    "candidateOperations": 91,
+    "environment": {
+      "maxWeightedJaccard": 0.65,
+      "baselineWeightedJaccard": 0.65,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 16,
+      "coreOccurrenceCount": 14
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 6,
+      "originalCandidateSignature": "bc67e32b9ce1c2e14564cbb40e66cc55a2d1cd110dced6cde856a65d9dd071b7",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-025",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 2,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 10,
+    "macroPlanId": "chunked-upper-half-swapper-3",
+    "macroClass": "chunked-upper-half-recomposition",
+    "baselineSignature": "cc1611ec2122335f9e7e1e65d079eb437cde6af8dd7d8550418c80b8db51624d",
+    "retainedBSignature": "4008494a14f7d58e934297cbf7d3d220ffa3c2e2612716c79b1ba5bfafc67094",
+    "rejectedStagedSignature": "f004785f132e1de9724b9ab913c4e9dd6df147aa2f65eae54e7e0184e533300b",
+    "rejectedDeepPassSignature": "573208adc140daf365f598050d1d3f3f1b7f711d0c18aae1a1e01f7b78f1fbd3",
+    "newSignature": "057b7e2632d0462a99426ba3536d96bc381a4e17b442035c6ad583060c17f429",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "6acbc59c5675c093ba5da05645319e5ccd0cc5738065088dd6433fbf05291075",
+        "candidateSignature": "0a9737c14047bf8b0b86cec77e29074a381e8629fafb2b16b53bb9137db09d28",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "83580ef4c1333e59750fb91c0aafa96a28247af2d38c2814c607743ec7d92870",
+        "candidateSignature": "d9a44dd7ea5f20b1f633cde44ca1b9c24a56da2c6dc9ee5f34f8e36ecd7c6347",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "099e14d4e06a234406d08f5b3d775409df3535e86fb6426c484654fc773f598b",
+        "candidateSignature": "a7573cf3fa5537816fd3066fdb710a9858d4f69bf9f96269fcff062dd1e57332",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "layers"
+    },
+    "rejoin": {
+      "subtreeSignature": "36c318d8b5846af4d71db4c8b2b53c73a6d9f5c650998973785926910e1d4382",
+      "baselinePath": "result.children[0].children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "Pin Pusher"
+    },
+    "baselineOperations": 49,
+    "oldRejectedOperations": 50,
+    "candidateOperations": 53,
+    "environment": {
+      "maxWeightedJaccard": 0.5384615384615384,
+      "baselineWeightedJaccard": 0.5384615384615384,
+      "newInputTypeCount": 2,
+      "availableOccurrenceCount": 10,
+      "coreOccurrenceCount": 8
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 10,
+      "originalCandidateSignature": "057b7e2632d0462a99426ba3536d96bc381a4e17b442035c6ad583060c17f429",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-026",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 3,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 6,
+    "macroPlanId": "half-swapper-axis-0",
+    "macroClass": "independent-half-swapper-assembly",
+    "baselineSignature": "583d4fa248006e751872426682fb35e4c2e03baa36d94ac0896425bf0544b365",
+    "retainedBSignature": "6c506f84b3f4e0e831dec9d96f2045701f12f45815a95e53773af604c6c34a1e",
+    "rejectedStagedSignature": "622d69d1ec95edc9f40ee92c27e1905a86d7a577048d218463cbf06f2a340d0a",
+    "rejectedDeepPassSignature": "9bbdff49b55f50e676c787e4513d31bf79d680d2031cde78d01c54655dcf02af",
+    "newSignature": "2e5532be2273a7c0d07192a56716c3e3a100b29a7e7cc6c2ccabca8d6494d176",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "8a8e00960fbfeed6bbbc3f5393b8bc723028012e623d9282b5d052c66895b5bb",
+        "candidateSignature": "63a0b6b317a19d3debffb1cefc528f73026959cdbcb7759f844984f6c749b876",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "00aebf33ae57b8e7c632899efdbcc3edaa028e7856e7a6a279ea536c99fd983e",
+        "candidateSignature": "0684266ce4ebcaadef5621232abd5635ee7636508e0496f409c02e77e054a92c",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "619e5705590b8cef49da157fa27d0ae04549a220d6591e5b5388cfe32177563c",
+        "candidateSignature": "26020b22c294482c06b2d24e63cc6de1f53abb5ed4de2a356ea203b165adf2a9",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "Swapper"
+    },
+    "rejoin": {
+      "subtreeSignature": "98ecaa93433fc8274be04d46d71183660848e6e22ad2a8d2e051451891e767db",
+      "baselinePath": "result.children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "Pin Pusher"
+    },
+    "baselineOperations": 70,
+    "oldRejectedOperations": 68,
+    "candidateOperations": 70,
+    "environment": {
+      "maxWeightedJaccard": 0.6875,
+      "baselineWeightedJaccard": 0.6111111111111112,
+      "newInputTypeCount": 0,
+      "availableOccurrenceCount": 14,
+      "coreOccurrenceCount": 12
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 6,
+      "originalCandidateSignature": "2e5532be2273a7c0d07192a56716c3e3a100b29a7e7cc6c2ccabca8d6494d176",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-028",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 2,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 10,
+    "macroPlanId": "chunked-upper-half-swapper-3",
+    "macroClass": "chunked-upper-half-recomposition",
+    "baselineSignature": "5d651f24bf6309ebe797f7ab5a9d4f2394c8c33aa0de58c5cd1181d5dd3c69ed",
+    "retainedBSignature": "461437ddf371baef403a779729a09034d554502a31614305c706631f238a6d22",
+    "rejectedStagedSignature": "3593bb15d418760c847e84fb8ed15890fbb962b376d4690fbf7788cbe67cb9d9",
+    "rejectedDeepPassSignature": "281e90a36a7262b636d34f45072050181e77862765465effed4fc4a45e944648",
+    "newSignature": "4d1deba07e8844627c07a049ade57021fefe84771020cfe2f1f961283c43c926",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "9fc157f5635c3ff186a9bc3adcdd5b72b0c580688c5c861e9e4313fffec81a2c",
+        "candidateSignature": "7ca2732335417a269608af0d1251405e29ecc5888bb9f13de14b1f5e8cb62bf0",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "54f5401750521eea4ae90f18a77a7281047ca911038b1110664c2df3a3eb4758",
+        "candidateSignature": "7a53a3ac436aaf14b77f712b61254c0daf1edcad4be76c432666d649ca70be3d",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "1fd6d239414723359a91e63ed3328ce938a29a00f79c96a83dcb2bfb94c5b741",
+        "candidateSignature": "8a80cb10d2a756576dfa55990c12aa0c6643beb14c01012faaeaa1f536a12082",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "Stacker",
+      "candidateNode": "layers"
+    },
+    "rejoin": {
+      "subtreeSignature": "1618eaa672e01a7a9e2f39f31b57e6bdc669c34247e7d8896a04cb58d9351468",
+      "baselinePath": "result.children[0]",
+      "candidatePath": "result.children[0].children[0]",
+      "nodeKind": "compose"
+    },
+    "baselineOperations": 78,
+    "oldRejectedOperations": 75,
+    "candidateOperations": 74,
+    "environment": {
+      "maxWeightedJaccard": 0.5555555555555556,
+      "baselineWeightedJaccard": 0.5555555555555556,
+      "newInputTypeCount": 2,
+      "availableOccurrenceCount": 14,
+      "coreOccurrenceCount": 12
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 10,
+      "originalCandidateSignature": "4d1deba07e8844627c07a049ade57021fefe84771020cfe2f1f961283c43c926",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-031",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 2,
+    "oldRejectedReason": "naturalness rejection: 311 operations vs baseline 117",
+    "originalCandidateId": 10,
+    "macroPlanId": "chunked-upper-half-swapper-3",
+    "macroClass": "chunked-upper-half-recomposition",
+    "baselineSignature": "e92ca92beaeedfaf13df9230825dcfdf2c444435940b5bfe59c184a4313cf128",
+    "retainedBSignature": "c52b0eaddabb0453c7906846cbe2f8a8fa115e3662ef7797aae72f0a083458d0",
+    "rejectedStagedSignature": "92f2587b8d94dc4de7eb0ca25c412fdedd54a1d48454c9f86794512b55cf9b9e",
+    "rejectedDeepPassSignature": "71d0ab8eb15c2098b3e52b3cc6545cfd00bb6ab797b0ff8cba4c783d7db8c922",
+    "newSignature": "f1e2df4c13cbd25049dbd32d1b02b4ec36d5e00e0110dfc293076b62202e88dc",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "967b8001096f1bf61f7d1a46e48d4d3ccc5ccfe197871b19abf282934ac39df3",
+        "candidateSignature": "1504e02e60c6ef6e814dd97310b7da2d8a0161606db9937d07a12b5901f6fff2",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "79c69628815d9adb52ceee05452d6da907620a4814f957dfe8ff6960fd81e3c2",
+        "candidateSignature": "1a3d4f0fc6454099a4f157c2d4435bbee204ba0c782168a6295805a7fd2ed5b3",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "5de55c5515606119c83fe26474a32a7361f62dbcffd3a0e1bdd96355bfec1dd9",
+        "candidateSignature": "f77452ca0340503d67d1f284e319535216bda06f1708c769d729bfc9a83f81fb",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "Swapper",
+      "candidateNode": "layers"
+    },
+    "rejoin": {
+      "subtreeSignature": "db20dfa2bc962cc27ebc1c9d7ea4c50f2b8371e718694ab481269399595dd05e",
+      "baselinePath": "result.children[0].children[0]",
+      "candidatePath": "result.children[0].children[0].children[0]",
+      "nodeKind": "resource"
+    },
+    "baselineOperations": 117,
+    "oldRejectedOperations": 311,
+    "candidateOperations": 94,
+    "environment": {
+      "maxWeightedJaccard": 0.6363636363636364,
+      "baselineWeightedJaccard": 0.6363636363636364,
+      "newInputTypeCount": 2,
+      "availableOccurrenceCount": 16,
+      "coreOccurrenceCount": 14
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 10,
+      "originalCandidateSignature": "f1e2df4c13cbd25049dbd32d1b02b4ec36d5e00e0110dfc293076b62202e88dc",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-035",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 5,
+    "oldRejectedReason": "naturalness rejection: 360 operations vs baseline 25",
+    "originalCandidateId": 6,
+    "macroPlanId": "pin-mask-crystal-staging",
+    "macroClass": "pin-mask-crystal-staging",
+    "baselineSignature": "285813c205c7f52e9dca51bfcbabcbafa8f46f8eaa55126520e00bac8aa92d84",
+    "retainedBSignature": "ef8114f413d7cc0fa1474bca85b55b66a08f2be43afe6d45c728d96c485595c5",
+    "rejectedStagedSignature": "2494146c51675dfe0d844ebf25c2e1f6d835f40d0439312a8815377ccf78b5e2",
+    "rejectedDeepPassSignature": "47419249caebc3eb21dd5a57e26af6825b89547d8f39692cc4f5f7651acc48c2",
+    "newSignature": "6a8164af9c6fc67cbb8c53c3168b18d532bfd763b7fe2484ca60a41236a3c758",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "6cfe49030df314a24b1066c2533994f1e6014813253225d0f61357d0735b02a4",
+        "candidateSignature": "7d733a424d0a86fe999c304e2938a10bc2c86fad9c22fcb53714555bb25f16ef",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "909120f4fa1c7c1b81bf76e2883eacb8492548ec5113dcb4ca6db56cd05d7904",
+        "candidateSignature": "907b8b854abb5290f316b8e0ad883162dbea034df49a7b64f7840a620dfca6fe",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "111f36d9104b15deeb24723b41e3fe5c03219cccf8134b3d22e0befebab2567f",
+        "candidateSignature": "b6aaa759ec5a6789b93f4e64a55f8e19878a4005075ac905f83cbf02d357f493",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result.children[0]",
+      "baselineNode": "Pin Pusher",
+      "candidateNode": "compose"
+    },
+    "rejoin": {
+      "subtreeSignature": "db20dfa2bc962cc27ebc1c9d7ea4c50f2b8371e718694ab481269399595dd05e",
+      "baselinePath": "result.children[0].children[0].children[0]",
+      "candidatePath": "result.children[0].children[0].children[0]",
+      "nodeKind": "resource"
+    },
+    "baselineOperations": 25,
+    "oldRejectedOperations": 360,
+    "candidateOperations": 40,
+    "environment": {
+      "maxWeightedJaccard": 0.5454545454545454,
+      "baselineWeightedJaccard": 0.5454545454545454,
+      "newInputTypeCount": 2,
+      "availableOccurrenceCount": 8,
+      "coreOccurrenceCount": 6
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 6,
+      "originalCandidateSignature": "6a8164af9c6fc67cbb8c53c3168b18d532bfd763b7fe2484ca60a41236a3c758",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  },
+  {
+    "targetId": "hard-side-036",
+    "candidateRecovered": true,
+    "oldRejectedCandidate": 2,
+    "oldRejectedReason": "rotation/material normalized depth collapsed to A/B",
+    "originalCandidateId": 8,
+    "macroPlanId": "chunked-upper-half-swapper-1",
+    "macroClass": "chunked-upper-half-recomposition",
+    "baselineSignature": "70fb29ab1f2d5401d4497602ca976dd93d3b48be9d44638e7bce565a8b86892e",
+    "retainedBSignature": "0e5c131c101c9e36c1bc13517366d797b1562a9e148630dc706e00b576d7e620",
+    "rejectedStagedSignature": "e4a679035d9868ed0d3c39bc9ea43b03ddcbf925622e0c6f4ddc3e763d96d123",
+    "rejectedDeepPassSignature": "46f56b77ed7f0abbd8518343052bc26844a6efcd0590cfb43b8fef7f85dca5f1",
+    "newSignature": "9e5d52ee32585ed22e51d0986621b687bea4b9f0eaef9b8f9b0d16f7a5077b51",
+    "depth": "E",
+    "normalizedDepthEvidence": {
+      "assembly": {
+        "baselineSignature": "e7ecd9341860c91870a83f0387faed1c0125b841384a8e0f4acdb468662844be",
+        "candidateSignature": "56f910edb333a002b03ccdbed3936c71b877d7cdd2b8cfd41c7aaf1eb72cf4d0",
+        "isomorphic": false
+      },
+      "support": {
+        "baselineSignature": "dc319e372afa7ec4383380451005cd7152068703058b87c5c3afbacbdc183b5e",
+        "candidateSignature": "91c9c13e4ec6da710c61c77d331b61c9bb85919e7bd07b2646e49af0bd3efa39",
+        "isomorphic": false
+      },
+      "stateTransition": {
+        "baselineSignature": "f6e5a26e652cdbb0640a57f30e5483380a0d87543bedea9eb8bc5f7e136fef74",
+        "candidateSignature": "216129dfccaeddc0c8a30337a768193f8895785eeedc8526811a2c9ec0bfc5dd",
+        "isomorphic": false
+      },
+      "routingInventoryChanged": true
+    },
+    "earliestDivergence": {
+      "path": "result",
+      "baselineNode": "compose",
+      "candidateNode": "layers"
+    },
+    "rejoin": {
+      "subtreeSignature": "81f36ee6b0f9956097b32f2a585300a780cdc2b98556b34c58041cfc5611fe28",
+      "baselinePath": "result.children[0].children[1]",
+      "candidatePath": "result.children[1].children[0].children[1]",
+      "nodeKind": "Pin Pusher"
+    },
+    "baselineOperations": 213,
+    "oldRejectedOperations": 224,
+    "candidateOperations": 208,
+    "environment": {
+      "maxWeightedJaccard": 0.627906976744186,
+      "baselineWeightedJaccard": 0.6046511627906976,
+      "newInputTypeCount": 7,
+      "availableOccurrenceCount": 35,
+      "coreOccurrenceCount": 33
+    },
+    "replayValid": true,
+    "expansionValid": true,
+    "structuralNovel": true,
+    "naturalnessAccepted": true,
+    "accepted": true,
+    "provenance": {
+      "funnelReleaseId": "hard-53x3-deep-replacement-candidates-v1",
+      "originalCandidateId": 8,
+      "originalCandidateSignature": "9e5d52ee32585ed22e51d0986621b687bea4b9f0eaef9b8f9b0d16f7a5077b51",
+      "materializedReleaseId": "hard-final-depth-reselection-candidates-v1"
+    }
+  }
+]

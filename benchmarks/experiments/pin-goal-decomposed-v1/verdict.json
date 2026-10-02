@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "pin-goal-decomposed-constructive-synthesis-v1",
+  "configurationId": "PGDCS-A",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "frontierExperimentId": "goal-decomposed-constructive-synthesis-v1",
+  "frontierStableSolved": 78,
+  "frontierStableDistinctTargets": 26,
+  "verdict": "ACCEPT",
+  "stopped": true,
+  "firstPassSolved": 103,
+  "firstPassReplayValid": 103,
+  "stableSolved": 103,
+  "stableDistinctTargets": 35,
+  "stableNewMembers": 25,
+  "stableNewDistinctTargets": 9,
+  "outcomes": {
+    "SOLVED": 103,
+    "UNSUPPORTED_DOMAIN": 39,
+    "EXHAUSTED": 17,
+    "LIMIT": 0,
+    "ERROR": 0,
+    "WATCHDOG": 0,
+    "INVALID_REPLAY": 0
+  },
+  "architectureStatuses": {
+    "solved": 103,
+    "unsupported-domain": 39,
+    "resource-mismatch": 11,
+    "unsupported-isolated-pin": 6
+  },
+  "newTargetIds": [
+    "hard-main-005",
+    "hard-main-006",
+    "hard-side-021",
+    "hard-side-022",
+    "hard-side-023",
+    "hard-side-024",
+    "hard-side-025",
+    "hard-side-026",
+    "hard-side-028"
+  ],
+  "identities": {
+    "solverSha256": "6ccf166b56cc36538d13721a2713cecc4876a30074a1268d37c043a8da3230f7",
+    "configSha256": "48b5b5bfae02abced06d0e42110858eb44d00a0a751107aa4b4e323b11e242bc",
+    "firstPassSha256": "a835cc09724f495e83f887b014b4b108a86a3477db9f1d4d1968cd528ff7c508",
+    "repeatSha256": "060d1d17feb336c72c199fda7f8f9d998a0ae478335d437c54c2affc12b49131",
+    "summarySha256": "84b087d4ae865435d1c41f464156ff3dad73d9d25f5c1931cb2b76f4465cdd15"
+  },
+  "stopReason": "Predeclared ACCEPT gate reached; no tuning, Crystal extension, production integration, fallback configuration, or E-009 is authorized in this session."
+}

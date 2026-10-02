@@ -1,0 +1,859 @@
+[
+  {
+    "targetId": "hard-main-001",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-001",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 10,
+    "coreBasisCount": 8
+  },
+  {
+    "targetId": "hard-main-002",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-002",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 15,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-main-003",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-003",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-main-004",
+    "attempt": 1,
+    "strategy": "reuse-validated-catalog-half-chunk+multi-stage-stack",
+    "accepted": true,
+    "source": "hard-main-004-coverage-01"
+  },
+  {
+    "targetId": "hard-main-004",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 9,
+    "coreBasisCount": 7
+  },
+  {
+    "targetId": "hard-main-005",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-005",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 14,
+    "coreBasisCount": 11
+  },
+  {
+    "targetId": "hard-main-006",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-006",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 11,
+    "coreBasisCount": 10
+  },
+  {
+    "targetId": "hard-main-007",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "mixed-pin-crystal-gravity gap",
+    "reason": "Pin and Crystal base planners do not define the required ordered mixed state transition"
+  },
+  {
+    "targetId": "hard-main-007",
+    "attempt": 2,
+    "strategy": "generic-mixed-pin-crystal-state-transition",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-007",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 53,
+    "coreBasisCount": 51
+  },
+  {
+    "targetId": "hard-main-008",
+    "attempt": 1,
+    "strategy": "generic-crystal-staged-full-layer-refinement-mask",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-008",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 25,
+    "coreBasisCount": 22
+  },
+  {
+    "targetId": "hard-main-009",
+    "attempt": 1,
+    "strategy": "generic-pin-supported-upper-region",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-009",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 6,
+    "coreBasisCount": 5
+  },
+  {
+    "targetId": "hard-main-010",
+    "attempt": 1,
+    "strategy": "reuse-validated-crystal-scaffold-extraction+shared-refinement",
+    "accepted": true,
+    "source": "hard-main-010-coverage-01"
+  },
+  {
+    "targetId": "hard-main-010",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 8,
+    "coreBasisCount": 6
+  },
+  {
+    "targetId": "hard-main-011",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "mixed-pin-crystal-gravity gap",
+    "reason": "Pin and Crystal base planners do not define the required ordered mixed state transition"
+  },
+  {
+    "targetId": "hard-main-011",
+    "attempt": 2,
+    "strategy": "generic-mixed-pin-crystal-state-transition",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-011",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 23,
+    "coreBasisCount": 20
+  },
+  {
+    "targetId": "hard-main-012",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "mixed-pin-crystal-gravity gap",
+    "reason": "Pin and Crystal base planners do not define the required ordered mixed state transition"
+  },
+  {
+    "targetId": "hard-main-012",
+    "attempt": 2,
+    "strategy": "generic-mixed-pin-crystal-state-transition",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-main-012",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 15,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-001",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-001",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 12,
+    "coreBasisCount": 10
+  },
+  {
+    "targetId": "hard-side-002",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-002",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 13,
+    "coreBasisCount": 10
+  },
+  {
+    "targetId": "hard-side-003",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-003",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 6,
+    "coreBasisCount": 5
+  },
+  {
+    "targetId": "hard-side-004",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-004",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 13,
+    "coreBasisCount": 11
+  },
+  {
+    "targetId": "hard-side-005",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-005",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 11,
+    "coreBasisCount": 8
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-006",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 13,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-007",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 15
+  },
+  {
+    "targetId": "hard-side-008",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-008",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-009",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-009",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 15,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-010",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-010",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 16,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-011",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-011",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 19,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-012",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-012",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-013",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-013",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 14,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-side-014",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-014",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-015",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-015",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-016",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-016",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 18,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-017",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-017",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 19,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-018",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 16,
+    "coreBasisCount": 15
+  },
+  {
+    "targetId": "hard-side-019",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-019",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 13,
+    "coreBasisCount": 11
+  },
+  {
+    "targetId": "hard-side-020",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-020",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 1,
+    "strategy": "reuse-validated-shared-occurrence-pin-subassembly",
+    "accepted": true,
+    "source": "hard-side-021-coverage-01"
+  },
+  {
+    "targetId": "hard-side-021",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 9,
+    "coreBasisCount": 8
+  },
+  {
+    "targetId": "hard-side-022",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-022",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 14,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-side-023",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-023",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 14
+  },
+  {
+    "targetId": "hard-side-024",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-024",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 11,
+    "coreBasisCount": 10
+  },
+  {
+    "targetId": "hard-side-025",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-025",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 10,
+    "coreBasisCount": 8
+  },
+  {
+    "targetId": "hard-side-026",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-026",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 15,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-side-027",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-027",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 17,
+    "coreBasisCount": 16
+  },
+  {
+    "targetId": "hard-side-028",
+    "attempt": 1,
+    "strategy": "generic-pin-supported-upper-region",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-028",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 14,
+    "coreBasisCount": 12
+  },
+  {
+    "targetId": "hard-side-029",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "mixed-pin-crystal-gravity gap",
+    "reason": "Pin and Crystal base planners do not define the required ordered mixed state transition"
+  },
+  {
+    "targetId": "hard-side-029",
+    "attempt": 2,
+    "strategy": "generic-mixed-pin-crystal-state-transition",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-029",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 26,
+    "coreBasisCount": 23
+  },
+  {
+    "targetId": "hard-side-030",
+    "attempt": 1,
+    "strategy": "generic-crystal-single-color-half-scaffold",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-030",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 23,
+    "coreBasisCount": 22
+  },
+  {
+    "targetId": "hard-side-031",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "mixed-pin-crystal-gravity gap",
+    "reason": "Pin and Crystal base planners do not define the required ordered mixed state transition"
+  },
+  {
+    "targetId": "hard-side-031",
+    "attempt": 2,
+    "strategy": "generic-mixed-pin-crystal-state-transition",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-031",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 20,
+    "coreBasisCount": 18
+  },
+  {
+    "targetId": "hard-side-032",
+    "attempt": 1,
+    "strategy": "generic-crystal-single-color-half-scaffold",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-032",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 27,
+    "coreBasisCount": 24
+  },
+  {
+    "targetId": "hard-side-033",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": false,
+    "category": "construction planner gap",
+    "reason": "dense Crystal assembly RwcmRwcm:RwRwRwRw:--Rw--Rw != RwcmRwcm:cmRwcmRw:RwcmRwcm:cmRwcmRw"
+  },
+  {
+    "targetId": "hard-side-033",
+    "attempt": 2,
+    "strategy": "generic-crystal-single-color-half-scaffold",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-033",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 25,
+    "coreBasisCount": 24
+  },
+  {
+    "targetId": "hard-side-034",
+    "attempt": 1,
+    "strategy": "generic-crystal-single-color-half-scaffold",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-034",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 24,
+    "coreBasisCount": 22
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 1,
+    "strategy": "reuse-validated-crystal-over-pins",
+    "accepted": true,
+    "source": "hard-side-035-pilot-01"
+  },
+  {
+    "targetId": "hard-side-035",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 9,
+    "coreBasisCount": 6
+  },
+  {
+    "targetId": "hard-side-036",
+    "attempt": 1,
+    "strategy": "generic-pin-column-sequence",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-036",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 34,
+    "coreBasisCount": 33
+  },
+  {
+    "targetId": "hard-side-037",
+    "attempt": 1,
+    "strategy": "direct-layered-forward-construction",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-037",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 15,
+    "coreBasisCount": 13
+  },
+  {
+    "targetId": "hard-side-038",
+    "attempt": 1,
+    "strategy": "generic-pin-supported-upper-region",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-038",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 22,
+    "coreBasisCount": 19
+  },
+  {
+    "targetId": "hard-side-039",
+    "attempt": 1,
+    "strategy": "reuse-validated-shared-refinement-byproduct-reuse",
+    "accepted": true,
+    "source": "hard-side-039-coverage-01"
+  },
+  {
+    "targetId": "hard-side-039",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 11,
+    "coreBasisCount": 10
+  },
+  {
+    "targetId": "hard-side-040",
+    "attempt": 1,
+    "strategy": "generic-crystal-staged-full-layer-refinement-mask",
+    "accepted": false,
+    "category": "Crystal construction unsupported",
+    "reason": "Crystal construction unsupported: staged refinement-mask requires a fully occupied single-color base and a full monochrome Crystal suffix"
+  },
+  {
+    "targetId": "hard-side-040",
+    "attempt": 2,
+    "strategy": "generic-crystal-sparse-upper-refinement-mask",
+    "accepted": true
+  },
+  {
+    "targetId": "hard-side-040",
+    "attempt": 3,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 44,
+    "coreBasisCount": 42
+  },
+  {
+    "targetId": "hard-side-041",
+    "attempt": 1,
+    "strategy": "reuse-validated-partial-refinement-occurrence-reuse",
+    "accepted": true,
+    "source": "hard-side-041-coverage-01"
+  },
+  {
+    "targetId": "hard-side-041",
+    "attempt": 2,
+    "strategy": "additive related-input expansion",
+    "accepted": true,
+    "expansionKind": "additive",
+    "availableInputCount": 12,
+    "coreBasisCount": 8
+  }
+]

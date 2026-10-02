@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "production-constructive-hybrid-activation-v1",
+  "configurationId": "PCHA-A",
+  "verdict": "REJECT",
+  "status": "STOPPED",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorFrontier": {
+    "stableSolved": 159,
+    "stableDistinctTargets": 53
+  },
+  "formalResult": {
+    "memberCount": 159,
+    "firstPassSolved": 159,
+    "firstPassReplayValid": 159,
+    "repeatedSolved": 159,
+    "repeatedReplayValid": 159,
+    "pathIdenticalRepeats": 159,
+    "exactE014Paths": 159,
+    "publicRouteSolved": 159,
+    "stableDistinctTargets": 53,
+    "failureDistribution": {},
+    "invalidReplay": 0,
+    "resourceReuse": 0,
+    "error": 0,
+    "watchdog": 0
+  },
+  "blockingGate": {
+    "name": "real Chrome module Worker lifecycle",
+    "passed": false,
+    "failure": "Static constructive-chain import reaches Node-only node:fs/promises and node:crypto modules, so the browser Worker cannot start.",
+    "rollbackVerified": true
+  },
+  "acceptance": {
+    "formalCapabilityPassed": true,
+    "legacyWorkerGatePassed": false,
+    "passed": false
+  },
+  "identities": {
+    "evaluatedSolverSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "rolledBackSolverSha256": "ee558425bbc1761c5f01b82bb72d02f4d7dd611208c083d7355827600e518a37",
+    "configSha256": "dc7391c86238ec84ff616c9b07bebac38ec6e82f5eede1a471f2a91f470e9a63",
+    "firstPassSha256": "f6d45980590e68f504535f23bb2b5d176a089ae801a7dd2c04730dfbb78114e0",
+    "repeatSha256": "4697a61ea89bb285ae3326b4495ce058521a313b8f5d4148b533554479f7be48",
+    "summarySha256": "c91eb0fd53b20d008d6ac6361c9bbffca4d82cbaaf6be58d6e6bfb24feb8f4eb"
+  },
+  "recordedAt": "2026-09-30"
+}

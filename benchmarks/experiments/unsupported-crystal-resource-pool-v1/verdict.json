@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "unsupported-crystal-resource-pool-activation-v1",
+  "configurationId": "UCRPGDCS-A",
+  "verdict": "ACCEPT",
+  "status": "STOPPED",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorFrontier": {
+    "stableSolved": 144,
+    "stableDistinctTargets": 48
+  },
+  "result": {
+    "memberCount": 159,
+    "firstPassSolved": 156,
+    "firstPassReplayValid": 156,
+    "repeatedSolved": 156,
+    "repeatedReplayValid": 156,
+    "pathIdenticalRepeats": 156,
+    "stableSolved": 156,
+    "stableDistinctTargets": 52,
+    "frontierPreserved": true,
+    "stableNewMembers": 12,
+    "stableNewMemberTargetIds": [
+      "hard-main-008",
+      "hard-side-032",
+      "hard-side-034",
+      "hard-side-040"
+    ],
+    "newlyCoveredDistinctTargets": 4,
+    "newlyCoveredTargetIds": [
+      "hard-main-008",
+      "hard-side-032",
+      "hard-side-034",
+      "hard-side-040"
+    ],
+    "failureDistribution": {
+      "shared-resource-construction-failed": 3
+    },
+    "remainingMembers": [
+      "hard-main-010:F1",
+      "hard-main-010:F2",
+      "hard-main-010:F3"
+    ],
+    "invalidReplay": 0,
+    "limit": 0,
+    "error": 0,
+    "watchdog": 0
+  },
+  "acceptance": {
+    "requiredFrontierPreservation": true,
+    "requiredStableNewMembers": 3,
+    "requiredNewlyCoveredDistinctTargets": 2,
+    "passed": true
+  },
+  "identities": {
+    "solverSha256": "02518d4874199178a24b43e8958e678f3bd4a2d645bd82bfa8e052446327d98b",
+    "configSha256": "d16702677aff9152d6c35f3d5f478765784e344fd807e850ee17be3b1e41a025",
+    "firstPassSha256": "c51f55d729862c39b5c4d4ae56fe47506efb8728d6493c2b085fe71865896664",
+    "repeatSha256": "49c9b41df2e66f46fcce6909b4dd43fa26bff638cb2380a1d91f054d84783404",
+    "summarySha256": "4c8547f2d0d2b4bee4c6dbaebd1a4f4a8f8bb788c3144f0dbf41ead7886866a2"
+  },
+  "recordedAt": "2026-09-30"
+}

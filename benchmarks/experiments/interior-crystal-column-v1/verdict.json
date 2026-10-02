@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "interior-crystal-column-decomposition-v1",
+  "configurationId": "ICCDCS-A",
+  "verdict": "ACCEPT",
+  "status": "STOPPED",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorFrontier": {
+    "stableSolved": 156,
+    "stableDistinctTargets": 52
+  },
+  "result": {
+    "memberCount": 159,
+    "firstPassSolved": 159,
+    "firstPassReplayValid": 159,
+    "repeatedSolved": 159,
+    "repeatedReplayValid": 159,
+    "pathIdenticalRepeats": 159,
+    "stableSolved": 159,
+    "stableDistinctTargets": 53,
+    "frontierPreserved": true,
+    "stableNewMembers": 3,
+    "stableNewMemberTargetIds": [
+      "hard-main-010"
+    ],
+    "newlyCoveredDistinctTargets": 1,
+    "newlyCoveredTargetIds": [
+      "hard-main-010"
+    ],
+    "failureDistribution": {},
+    "remainingMembers": [],
+    "invalidReplay": 0,
+    "resourceReuse": 0,
+    "limit": 0,
+    "error": 0,
+    "watchdog": 0
+  },
+  "acceptance": {
+    "requiredFrontierPreservation": true,
+    "requiredStableNewMembers": 3,
+    "requiredFinalStableSolved": 159,
+    "passed": true
+  },
+  "identities": {
+    "solverSha256": "d248493153cf77c03bc028bbbf158e7fe33df96ff5697b2df10519ea0c416f59",
+    "plannerSha256": "703fd544de6da66ac4658257c0febc2da7dca17a12193594eb327aaec093e2d8",
+    "sharedConstructorSha256": "2382b29285bc454417e286511a3cbaa398808f91f3b1ee0b236a387aedcca852",
+    "configSha256": "d2955d341fdcbbdbf4d0def7de1a1107cc66e2a51b8e57ec673fcb26a54beb59",
+    "firstPassSha256": "f0cdcddf40a5f42f0e06c1c16cd17d5ba45bf725fabcb723b4283020596e18b6",
+    "repeatSha256": "9f8ea12211024412e180cffbe532fc18f8fd85e3ce52b56da29c51436bc61197",
+    "summarySha256": "f61883f4f6cffafd761bec4ee99559ea46069d97f0fa41af424229d64acceabe"
+  },
+  "recordedAt": "2026-09-30"
+}

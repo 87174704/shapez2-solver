@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "benchmarkCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "p602SampleSha256": "93c8355e0dd5d4c1497eda388b613641214b9b8af7dba149c9222eeb9e341309",
+  "p602InstrumentedSolverSha256": "35d0d9265ca3e88a91152993cb9c5137d77de548967b503834465ae743c9cd69",
+  "runnerSha256": "91be15a2b1c75d664c919f0ab345e8e4dbda11c3c935165deacaad5481557042",
+  "childSha256": "70e5ab0945172ba1462bb241378cdf578104e29d7cdb38ea17abfab373ad8c3e",
+  "currentSolverSha256": "ee558425bbc1761c5f01b82bb72d02f4d7dd611208c083d7355827600e518a37",
+  "runtime": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "completedCases": 8,
+  "expectedCases": 8,
+  "totals": {
+    "operationOutputBirths": 1199836,
+    "unmaterializedAtOriginalCap": 870648,
+    "candidateMaterialized": 329188,
+    "admitted": 329188,
+    "finalRetained": 165168,
+    "expanded": 162224,
+    "d024ShapeSlots": 1200000,
+    "descriptorPayloadUtf16Bytes": 70558338
+  },
+  "cases": [
+    {
+      "key": "hard-side-041:F3",
+      "order": [
+        "plain",
+        "observer"
+      ],
+      "operationOutputBirths": 149985,
+      "unmaterializedAtOriginalCap": 101465,
+      "wallDeltaMs": 250.48890000000029,
+      "peakRssDeltaMiB": 44.8515625
+    },
+    {
+      "key": "hard-side-013:F2",
+      "order": [
+        "observer",
+        "plain"
+      ],
+      "operationOutputBirths": 149981,
+      "unmaterializedAtOriginalCap": 107177,
+      "wallDeltaMs": -153.56999999999607,
+      "peakRssDeltaMiB": 2.78515625
+    },
+    {
+      "key": "hard-side-036:F1",
+      "order": [
+        "plain",
+        "observer"
+      ],
+      "operationOutputBirths": 149972,
+      "unmaterializedAtOriginalCap": 145297,
+      "wallDeltaMs": -358.7404999999999,
+      "peakRssDeltaMiB": 12.0703125
+    },
+    {
+      "key": "hard-side-028:F1",
+      "order": [
+        "observer",
+        "plain"
+      ],
+      "operationOutputBirths": 149980,
+      "unmaterializedAtOriginalCap": 88278,
+      "wallDeltaMs": 352.0037999999986,
+      "peakRssDeltaMiB": 56.52734375
+    },
+    {
+      "key": "hard-main-010:F1",
+      "order": [
+        "plain",
+        "observer"
+      ],
+      "operationOutputBirths": 149987,
+      "unmaterializedAtOriginalCap": 111405,
+      "wallDeltaMs": 326.00090000000273,
+      "peakRssDeltaMiB": 29.59765625
+    },
+    {
+      "key": "hard-side-035:F1",
+      "order": [
+        "observer",
+        "plain"
+      ],
+      "operationOutputBirths": 149985,
+      "unmaterializedAtOriginalCap": 66995,
+      "wallDeltaMs": 3492.596399999995,
+      "peakRssDeltaMiB": 46.09375
+    },
+    {
+      "key": "hard-side-036:F2",
+      "order": [
+        "plain",
+        "observer"
+      ],
+      "operationOutputBirths": 149963,
+      "unmaterializedAtOriginalCap": 143600,
+      "wallDeltaMs": 259.34130000000005,
+      "peakRssDeltaMiB": 41.33203125
+    },
+    {
+      "key": "hard-main-002:F2",
+      "order": [
+        "observer",
+        "plain"
+      ],
+      "operationOutputBirths": 149983,
+      "unmaterializedAtOriginalCap": 106431,
+      "wallDeltaMs": -1779.1119000000035,
+      "peakRssDeltaMiB": 28.01953125
+    }
+  ],
+  "interpretation": {
+    "unmaterializedAtOriginalCap": "Counterfactual identity demand through the original cap only; not a D-024 compliant cap extension",
+    "descriptorPayloadUtf16Bytes": "UTF-16 code-unit payload proxy; excludes JS object, Map, and allocator overhead",
+    "rssDelta": "Fresh-process high-water Node RSS; a single alternating A/B run per case is descriptive, not a stable speed or browser-memory estimate"
+  }
+}

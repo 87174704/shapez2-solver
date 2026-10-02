@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "policyId": "input-environment-expansion-v1",
+  "purpose": "Produce irregular, plausible available-input environments without changing the constructive solvability boundary.",
+  "modes": {
+    "additive": {
+      "requiresCoreMultisetPreserved": true,
+      "requiresEndToEndReplay": true
+    },
+    "transformative": {
+      "requiresCoreMultisetPreserved": false,
+      "requiresPreprocessingBridge": true,
+      "requiresEndToEndReplay": true,
+      "forbidAssumedDerivations": true
+    }
+  },
+  "candidateSelection": {
+    "allowedRelations": [
+      "catalog shape sharing ordinary part families with the core construction",
+      "fuller catalog shape with a mechanically replayed derivation to a removed core resource",
+      "alternate catalog source plausible for the same construction vocabulary"
+    ],
+    "forbidUnrelatedRandomFillers": true,
+    "forbidPreassignedResourceRoles": true,
+    "inputOrderDoesNotCreateDiversity": true
+  },
+  "pilotBounds": {
+    "minimumAvailableMultiplicityIncrease": 1,
+    "maximumAddedOrdinaryMultiplicity": 3,
+    "maximumAddedOrdinaryMultiplicitySemantics": "total count of added ordinary input occurrences in the core-to-presented multiset delta",
+    "allowPureInputs": false
+  },
+  "inheritedRules": [
+    "ordinary multiplicity maximum 3",
+    "WuWuWuWu excluded",
+    "SuSuRuRu main/refinement restrictions",
+    "exact target-selected refinement bundle",
+    "main/side catalog restrictions"
+  ]
+}

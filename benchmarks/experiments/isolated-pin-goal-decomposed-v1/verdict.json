@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "isolated-pin-goal-decomposed-constructive-synthesis-v1",
+  "configurationId": "TIPGDCS-A",
+  "verdict": "ACCEPT",
+  "status": "STOPPED",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorFrontier": { "stableSolved": 117, "stableDistinctTargets": 40 },
+  "result": {
+    "memberCount": 159,
+    "firstPassSolved": 126,
+    "firstPassReplayValid": 126,
+    "repeatedSolved": 126,
+    "repeatedReplayValid": 126,
+    "stableSolved": 126,
+    "stableDistinctTargets": 43,
+    "frontierPreserved": true,
+    "stableNewMembers": 9,
+    "stableNewDistinctTargets": 3,
+    "stableNewTargetIds": ["hard-main-007", "hard-side-029", "hard-side-036"],
+    "failureDistribution": { "unsupported-crystal-layout": 15, "resource-mismatch": 18 },
+    "invalidReplay": 0,
+    "limit": 0,
+    "error": 0,
+    "watchdog": 0
+  },
+  "acceptance": {
+    "requiredFrontierPreservation": true,
+    "requiredStableNewMembers": 3,
+    "requiredStableNewDistinctTargets": 2,
+    "passed": true
+  },
+  "identities": {
+    "solverSha256": "a2dae5c30fd87fc5264b6d6ebd51c6e2ac46201ac72dada6c1b7ef4c261c8994",
+    "configSha256": "899bf1b208334709f58db4a2fe0ab9b4c8e85f0070580e9d550b01ed2b4ede6c",
+    "firstPassSha256": "10cc4d432f49f84ca7711ac0a4648cac9a58b8e3cae0e5321ab36386fe915f81",
+    "repeatSha256": "846926e4ec7bc0a23d01550e6a301ab14e259b1dbddb3af679d9253329223fbf",
+    "summarySha256": "bbf545551f293670dd0a79d85654f1eb8d10169d27bcad76d117a6be3740737b"
+  },
+  "recordedAt": "2026-09-30"
+}

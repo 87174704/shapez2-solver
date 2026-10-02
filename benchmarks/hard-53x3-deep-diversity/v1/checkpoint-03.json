@@ -1,0 +1,33 @@
+{
+  "batchNumber": 3,
+  "targetIds": [
+    "hard-side-040",
+    "hard-main-007",
+    "hard-main-008",
+    "hard-main-009",
+    "hard-main-012",
+    "hard-side-022",
+    "hard-side-023"
+  ],
+  "replacementsFound": [
+    "hard-main-007",
+    "hard-main-008",
+    "hard-main-009",
+    "hard-main-012",
+    "hard-side-022",
+    "hard-side-023"
+  ],
+  "noDeepRoute": [
+    "hard-side-040"
+  ],
+  "structuralDuplicates": 1,
+  "replayInvalid": 28,
+  "macroPlanCandidateCount": 69,
+  "depthDistribution": {
+    "A": 1,
+    "B": 8,
+    "C": 1,
+    "D": 22,
+    "E": 9
+  }
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "targetId": "hard-main-002",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "b29da260e8ad401d655ddae2d8335516688104914a8b76eeebdafceff5720193",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-main-003",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "1060c7df752ef43e35bf1aed2568f1581441554bd42cb4a0663b1742f1d77209",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-001",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "7257a5106b207691a2de1cbabafec7016314191b0d1204c47f7b3457a3957bd9",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-002",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "55470c29fd796c9c4e5eb57145c26f4a3b40526282101122c872eaf995a62a30",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-004",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "772effc4f97a5a4aa7473d2b7c46921d4a87d4b6115e2833fbea53c41de4f7a1",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-006",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "63059e0a3c7e4d1758b6c121b9aaa70ed8e466f4f0e546ee67f51d0974186bf4",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-007",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "cbfa21cadef015d599af644f883dc879ffc8ade7988178aefc8f94fdbe0d48eb",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-008",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "3f173be1b1b375723b3ad5124931e7a0890ce0dee4e4142a13f018f56e27e4c9",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-009",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "baad794c1f07cd475005865bf30f871045aaba56a3c77638352a0a30f8aaa75e",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-010",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "06210f206e97aa0219a1fd991b77b7dadde480bcf1dea1503baf13199faeaef4",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-011",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "76d9d250030be97459154cc9fa6c05d72d0ed5047528a21e1f70c47a6b2e14c1",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-012",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "e5ff018634686d314f1e654e291cc6c8258702b56a690a13eda320c28c78eeca",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-013",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "80a480ef99c00f8e1eb937ef13b88e201916b329c8af4ca851d32a27df164f59",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-014",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "68ceea96bc8b93f03fb233277485043ac4c4e07c410de3214793d040f4d8ecb4",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-015",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "0eb322fa5944d1bbc4ba219e16c17e4c2f98712075666a3a923e8bef51f990f8",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-016",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "c05e05109c378039627dd946aa5bb5f49b19b76d4226d4988081ab2bd52af2c2",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-017",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "3fdc023c0266ba31019685d15bc9de9cafb4ce00fbe6f00fa9c53bc7a036bd5e",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-018",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "f16957313f1ee3f4c56932e98e5b68e5bf7c389b66a89175550aaca94ed15230",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-019",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "a4c92f197034fff806101df18766ad03195ef3592accae6b0074e55d04edf6f5",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-020",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "E",
+    "macroPlanClass": "chunked-upper-half-recomposition",
+    "candidateSignature": "89676577578bb3db33db218ea38be2f6d249cb6e61b760a08314304eca730d61",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "replay-backed mechanism/state-transition routing differs"
+  },
+  {
+    "targetId": "hard-side-027",
+    "status": "DEEP_ROUTE_FOUND",
+    "candidateDepth": "C",
+    "macroPlanClass": "column-first-assembly",
+    "candidateSignature": "4e2ff5743bf3bfb30a3d9a7cd266e9f85533434b9d24b0271f0b7b9fb670a026",
+    "searchedMacroPlanClasses": [
+      "direct-layered",
+      "column-first-assembly",
+      "chunked-upper-half-recomposition"
+    ],
+    "reason": "component partition or merge DAG differs beyond resource preparation"
+  }
+]

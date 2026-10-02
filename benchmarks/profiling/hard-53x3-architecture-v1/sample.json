@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "benchmarkCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "instrumentedSolverSha256": "35d0d9265ca3e88a91152993cb9c5137d77de548967b503834465ae743c9cd69",
+  "sampleEveryExpandedState": 256,
+  "cases": [
+    {
+      "key": "hard-main-003:F1",
+      "reason": "ordinary candidate cap, lower states",
+      "targetId": "hard-main-003",
+      "familySlot": "F1",
+      "instanceId": "hard-main-003-53x1-01",
+      "sourceInstanceSha256": "e631e69d9c8af9074e928f115693b757aed0f4b2f445399294c5720483153204",
+      "structuralSignature": "8dfe2b0d0f303efca277c57480058dc9681a70459990fd07ee95664578886026",
+      "mechanism": {
+        "structuralTags": [
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "ordinary",
+        "ordinaryOnly": true,
+        "pin": false,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 2909.1106,
+        "statesExplored": 15467,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 6,
+        "instanceId": "hard-main-003-53x1-01",
+        "sourceInstanceSha256": "e631e69d9c8af9074e928f115693b757aed0f4b2f445399294c5720483153204",
+        "structuralSignature": "8dfe2b0d0f303efca277c57480058dc9681a70459990fd07ee95664578886026"
+      }
+    },
+    {
+      "key": "hard-main-007:F1",
+      "reason": "mixed pin/crystal and swapper candidate cap, very low states",
+      "targetId": "hard-main-007",
+      "familySlot": "F1",
+      "instanceId": "hard-main-007-53x1-01",
+      "sourceInstanceSha256": "c9e69778c3087f19478fe58a75141b96982a2061d81b1462229f13f89eb886d3",
+      "structuralSignature": "64e3bf862fee191d2aed7e552ab063772945ab703fdf75970a6c1ab4ab913058",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "crystals",
+          "ordinary-only",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "mixed-pin-crystal",
+        "ordinaryOnly": true,
+        "pin": true,
+        "crystal": true,
+        "mixedPinCrystal": true,
+        "swapperRelated": true,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 6269.4715,
+        "statesExplored": 4328,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 2,
+        "instanceId": "hard-main-007-53x1-01",
+        "sourceInstanceSha256": "c9e69778c3087f19478fe58a75141b96982a2061d81b1462229f13f89eb886d3",
+        "structuralSignature": "64e3bf862fee191d2aed7e552ab063772945ab703fdf75970a6c1ab4ab913058"
+      }
+    },
+    {
+      "key": "hard-side-017:F3",
+      "reason": "ordinary swapper-related candidate cap",
+      "targetId": "hard-side-017",
+      "familySlot": "F3",
+      "instanceId": "hard-side-017-deep-optional-01",
+      "sourceInstanceSha256": "1b62f0c56b2a0398bcf9ea909721fb37d6312a48fd30ae19c66d943b8d7c6933",
+      "structuralSignature": "3fdc023c0266ba31019685d15bc9de9cafb4ce00fbe6f00fa9c53bc7a036bd5e",
+      "mechanism": {
+        "structuralTags": [
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "ordinary",
+        "ordinaryOnly": true,
+        "pin": false,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": true,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 8136.2101,
+        "statesExplored": 15504,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 6,
+        "instanceId": "hard-side-017-deep-optional-01",
+        "sourceInstanceSha256": "1b62f0c56b2a0398bcf9ea909721fb37d6312a48fd30ae19c66d943b8d7c6933",
+        "structuralSignature": "3fdc023c0266ba31019685d15bc9de9cafb4ce00fbe6f00fa9c53bc7a036bd5e"
+      }
+    },
+    {
+      "key": "hard-side-040:F1",
+      "reason": "crystal swapper-related candidate cap",
+      "targetId": "hard-side-040",
+      "familySlot": "F1",
+      "instanceId": "hard-side-040-53x1-01",
+      "sourceInstanceSha256": "5ac61ad557652864b9924ba8146b8ea93f69fd4db63929e6d273b852455785d6",
+      "structuralSignature": "08b3917ea07e1139f03042a8082115faa339866f1d6f64aeba60fec297014180",
+      "mechanism": {
+        "structuralTags": [
+          "crystals",
+          "refinement",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "crystal",
+        "ordinaryOnly": false,
+        "pin": false,
+        "crystal": true,
+        "mixedPinCrystal": false,
+        "swapperRelated": true,
+        "refinementGroup": "C"
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 10519.2294,
+        "statesExplored": 6705,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 3,
+        "instanceId": "hard-side-040-53x1-01",
+        "sourceInstanceSha256": "5ac61ad557652864b9924ba8146b8ea93f69fd4db63929e6d273b852455785d6",
+        "structuralSignature": "08b3917ea07e1139f03042a8082115faa339866f1d6f64aeba60fec297014180"
+      }
+    },
+    {
+      "key": "hard-side-021:F1",
+      "reason": "family contrast, high states",
+      "targetId": "hard-side-021",
+      "familySlot": "F1",
+      "instanceId": "hard-side-021-53x1-01",
+      "sourceInstanceSha256": "8f288bbcae5d4a46d388a5f8c74096ee627c279ca6b7f697f4f826378818d7af",
+      "structuralSignature": "ce74bd7c3e191bd8d03aef61797688dda8fd0d659b07d68e63afaec3baa87c5f",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": true,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 67672.469,
+        "statesExplored": 225101,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 76,
+        "instanceId": "hard-side-021-53x1-01",
+        "sourceInstanceSha256": "8f288bbcae5d4a46d388a5f8c74096ee627c279ca6b7f697f4f826378818d7af",
+        "structuralSignature": "ce74bd7c3e191bd8d03aef61797688dda8fd0d659b07d68e63afaec3baa87c5f"
+      }
+    },
+    {
+      "key": "hard-side-021:F2",
+      "reason": "family contrast, middle states",
+      "targetId": "hard-side-021",
+      "familySlot": "F2",
+      "instanceId": "hard-side-021-53x3-pilot-02",
+      "sourceInstanceSha256": "e16c4ca1cd66dc101b9f8bc164e51b7de8b06747c3b1ea2cef9865d22c79c773",
+      "structuralSignature": "9b6208c728f3a69ace37fde0d85bf211fe996e3593b580bb5f025e07a66ef8a0",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": true,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 49855.3207,
+        "statesExplored": 177155,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 60,
+        "instanceId": "hard-side-021-53x3-pilot-02",
+        "sourceInstanceSha256": "e16c4ca1cd66dc101b9f8bc164e51b7de8b06747c3b1ea2cef9865d22c79c773",
+        "structuralSignature": "9b6208c728f3a69ace37fde0d85bf211fe996e3593b580bb5f025e07a66ef8a0"
+      }
+    },
+    {
+      "key": "hard-side-021:F3",
+      "reason": "family contrast, low states",
+      "targetId": "hard-side-021",
+      "familySlot": "F3",
+      "instanceId": "hard-side-021-deep-replacement-f3",
+      "sourceInstanceSha256": "c4cfd5bfffcc80f7461fbfb2e1cf2cc7a92e115531ab8d83b54fb3f12a602c5f",
+      "structuralSignature": "3d5179a6b848b3671d08b66d42740d79d7dd51044ec03e7e15dba01641deb3a2",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": true,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "CANDIDATE_CAP",
+        "wallMs": 3697.6825999999996,
+        "statesExplored": 21292,
+        "candidatesGenerated": 5000000,
+        "maxSearchDepthReached": 8,
+        "instanceId": "hard-side-021-deep-replacement-f3",
+        "sourceInstanceSha256": "c4cfd5bfffcc80f7461fbfb2e1cf2cc7a92e115531ab8d83b54fb3f12a602c5f",
+        "structuralSignature": "3d5179a6b848b3671d08b66d42740d79d7dd51044ec03e7e15dba01641deb3a2"
+      }
+    },
+    {
+      "key": "hard-side-041:F3",
+      "reason": "ordinary shape-universe cap, shallower",
+      "targetId": "hard-side-041",
+      "familySlot": "F3",
+      "instanceId": "hard-side-041-53x3-pilot-03",
+      "sourceInstanceSha256": "fe7efffe90d574915935d4ca78a4d9a7f12034c6e464d57460f813c879cb86d8",
+      "structuralSignature": "5be5104ead72fc365bacc84e6255e839543532835e85f297e0f7cdd20ee231bf",
+      "mechanism": {
+        "structuralTags": [
+          "refinement",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "ordinary",
+        "ordinaryOnly": false,
+        "pin": false,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": "D"
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 19745.7618,
+        "statesExplored": 54143,
+        "candidatesGenerated": 3078788,
+        "maxSearchDepthReached": 19,
+        "instanceId": "hard-side-041-53x3-pilot-03",
+        "sourceInstanceSha256": "fe7efffe90d574915935d4ca78a4d9a7f12034c6e464d57460f813c879cb86d8",
+        "structuralSignature": "5be5104ead72fc365bacc84e6255e839543532835e85f297e0f7cdd20ee231bf"
+      }
+    },
+    {
+      "key": "hard-side-013:F2",
+      "reason": "ordinary shape-universe cap, deeper",
+      "targetId": "hard-side-013",
+      "familySlot": "F2",
+      "instanceId": "hard-side-013-53x3-rollout-02",
+      "sourceInstanceSha256": "6c82b3d230db8da3e9686f4bbaf61b40f474d800ca7a976b059a6fd64b730f09",
+      "structuralSignature": "7877de77999b33ee8f9ffdb809d9f766c7ad0edaeb2dc0072ad88075544242ea",
+      "mechanism": {
+        "structuralTags": [
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "ordinary",
+        "ordinaryOnly": true,
+        "pin": false,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 27666.8847,
+        "statesExplored": 108298,
+        "candidatesGenerated": 4537274,
+        "maxSearchDepthReached": 37,
+        "instanceId": "hard-side-013-53x3-rollout-02",
+        "sourceInstanceSha256": "6c82b3d230db8da3e9686f4bbaf61b40f474d800ca7a976b059a6fd64b730f09",
+        "structuralSignature": "7877de77999b33ee8f9ffdb809d9f766c7ad0edaeb2dc0072ad88075544242ea"
+      }
+    },
+    {
+      "key": "hard-side-036:F1",
+      "reason": "pin shape-universe cap, shallow",
+      "targetId": "hard-side-036",
+      "familySlot": "F1",
+      "instanceId": "hard-side-036-53x1-01",
+      "sourceInstanceSha256": "daa6b0af1f7294f7bbb7134a4ddd130659de10e9401193f539f90c878d724e29",
+      "structuralSignature": "70fb29ab1f2d5401d4497602ca976dd93d3b48be9d44638e7bce565a8b86892e",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "refinement",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": false,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": "A"
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 11550.6681,
+        "statesExplored": 3785,
+        "candidatesGenerated": 3217963,
+        "maxSearchDepthReached": 2,
+        "instanceId": "hard-side-036-53x1-01",
+        "sourceInstanceSha256": "daa6b0af1f7294f7bbb7134a4ddd130659de10e9401193f539f90c878d724e29",
+        "structuralSignature": "70fb29ab1f2d5401d4497602ca976dd93d3b48be9d44638e7bce565a8b86892e"
+      }
+    },
+    {
+      "key": "hard-side-028:F1",
+      "reason": "pin shape-universe cap, deep",
+      "targetId": "hard-side-028",
+      "familySlot": "F1",
+      "instanceId": "hard-side-028-53x1-01",
+      "sourceInstanceSha256": "2f9d35f47914cc0fd5ab2839ca443fe81e9d1f2ddc278c884c1e70f5aed95c7b",
+      "structuralSignature": "5d651f24bf6309ebe797f7ab5a9d4f2394c8c33aa0de58c5cd1181d5dd3c69ed",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "ordinary-only",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": true,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 23531.5099,
+        "statesExplored": 90285,
+        "candidatesGenerated": 4880528,
+        "maxSearchDepthReached": 31,
+        "instanceId": "hard-side-028-53x1-01",
+        "sourceInstanceSha256": "2f9d35f47914cc0fd5ab2839ca443fe81e9d1f2ddc278c884c1e70f5aed95c7b",
+        "structuralSignature": "5d651f24bf6309ebe797f7ab5a9d4f2394c8c33aa0de58c5cd1181d5dd3c69ed"
+      }
+    },
+    {
+      "key": "hard-main-010:F1",
+      "reason": "crystal shape-universe cap",
+      "targetId": "hard-main-010",
+      "familySlot": "F1",
+      "instanceId": "hard-main-010-53x1-01",
+      "sourceInstanceSha256": "8553ec2eca7a705809dd6b2e1c1ed69c5c63fd6cca2ac32e3caf4cfc03e29c5a",
+      "structuralSignature": "bebec529dedc9114a1b411afb3ba481d87dd2c804d7c7542902c956687579fc5",
+      "mechanism": {
+        "structuralTags": [
+          "crystals",
+          "refinement",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "crystal",
+        "ordinaryOnly": false,
+        "pin": false,
+        "crystal": true,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": "B"
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 19380.837,
+        "statesExplored": 63075,
+        "candidatesGenerated": 1639290,
+        "maxSearchDepthReached": 22,
+        "instanceId": "hard-main-010-53x1-01",
+        "sourceInstanceSha256": "8553ec2eca7a705809dd6b2e1c1ed69c5c63fd6cca2ac32e3caf4cfc03e29c5a",
+        "structuralSignature": "bebec529dedc9114a1b411afb3ba481d87dd2c804d7c7542902c956687579fc5"
+      }
+    },
+    {
+      "key": "hard-side-035:F1",
+      "reason": "crystal shape-universe cap",
+      "targetId": "hard-side-035",
+      "familySlot": "F1",
+      "instanceId": "hard-side-035-53x1-01",
+      "sourceInstanceSha256": "7f4dcba3023632f25ce2d931e8b4a11dd88372b27945b3727972857afc7dd70e",
+      "structuralSignature": "285813c205c7f52e9dca51bfcbabcbafa8f46f8eaa55126520e00bac8aa92d84",
+      "mechanism": {
+        "structuralTags": [
+          "crystals",
+          "refinement",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "crystal",
+        "ordinaryOnly": false,
+        "pin": false,
+        "crystal": true,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": "A"
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 73141.327,
+        "statesExplored": 186161,
+        "candidatesGenerated": 4169175,
+        "maxSearchDepthReached": 63,
+        "instanceId": "hard-side-035-53x1-01",
+        "sourceInstanceSha256": "7f4dcba3023632f25ce2d931e8b4a11dd88372b27945b3727972857afc7dd70e",
+        "structuralSignature": "285813c205c7f52e9dca51bfcbabcbafa8f46f8eaa55126520e00bac8aa92d84"
+      }
+    },
+    {
+      "key": "hard-side-036:F2",
+      "reason": "pin and swapper-related shape-universe cap, shallow",
+      "targetId": "hard-side-036",
+      "familySlot": "F2",
+      "instanceId": "hard-side-036-final-depth-reselection",
+      "sourceInstanceSha256": "4ba0b2cd343a82ea147471bf50b6f1d8e7823f05da1cf13457d41bf43e5d1570",
+      "structuralSignature": "9e5d52ee32585ed22e51d0986621b687bea4b9f0eaef9b8f9b0d16f7a5077b51",
+      "mechanism": {
+        "structuralTags": [
+          "pins",
+          "refinement",
+          "partial-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "pin",
+        "ordinaryOnly": false,
+        "pin": true,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": true,
+        "refinementGroup": "A"
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 13954.9156,
+        "statesExplored": 4500,
+        "candidatesGenerated": 4408124,
+        "maxSearchDepthReached": 2,
+        "instanceId": "hard-side-036-final-depth-reselection",
+        "sourceInstanceSha256": "4ba0b2cd343a82ea147471bf50b6f1d8e7823f05da1cf13457d41bf43e5d1570",
+        "structuralSignature": "9e5d52ee32585ed22e51d0986621b687bea4b9f0eaef9b8f9b0d16f7a5077b51"
+      }
+    },
+    {
+      "key": "hard-main-002:F2",
+      "reason": "ordinary swapper-related shape-universe cap, deeper",
+      "targetId": "hard-main-002",
+      "familySlot": "F2",
+      "instanceId": "hard-main-002-deep-optional-01",
+      "sourceInstanceSha256": "863820d52e65a722aa5854f7f9d933d6762fb69d56346eca11b82117ebe8011e",
+      "structuralSignature": "b29da260e8ad401d655ddae2d8335516688104914a8b76eeebdafceff5720193",
+      "mechanism": {
+        "structuralTags": [
+          "ordinary-only",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "ordinary",
+        "ordinaryOnly": true,
+        "pin": false,
+        "crystal": false,
+        "mixedPinCrystal": false,
+        "swapperRelated": true,
+        "refinementGroup": null
+      },
+      "baseline": {
+        "status": "SHAPE_UNIVERSE_CAP",
+        "wallMs": 28489.369300000002,
+        "statesExplored": 93292,
+        "candidatesGenerated": 4992403,
+        "maxSearchDepthReached": 32,
+        "instanceId": "hard-main-002-deep-optional-01",
+        "sourceInstanceSha256": "863820d52e65a722aa5854f7f9d933d6762fb69d56346eca11b82117ebe8011e",
+        "structuralSignature": "b29da260e8ad401d655ddae2d8335516688104914a8b76eeebdafceff5720193"
+      }
+    },
+    {
+      "key": "hard-side-035:F3",
+      "reason": "timeout control",
+      "targetId": "hard-side-035",
+      "familySlot": "F3",
+      "instanceId": "hard-side-035-final-depth-reselection",
+      "sourceInstanceSha256": "890d2521f0d3c25b556009316a992404bbe7d2e40bcf6aa0faa6ea623506ee86",
+      "structuralSignature": "6a8164af9c6fc67cbb8c53c3168b18d532bfd763b7fe2484ca60a41236a3c758",
+      "mechanism": {
+        "structuralTags": [
+          "crystals",
+          "refinement",
+          "full-layers",
+          "cut-heavy",
+          "stack-heavy"
+        ],
+        "mechanismClass": "crystal",
+        "ordinaryOnly": false,
+        "pin": false,
+        "crystal": true,
+        "mixedPinCrystal": false,
+        "swapperRelated": false,
+        "refinementGroup": "A"
+      },
+      "baseline": {
+        "status": "TIMEOUT",
+        "wallMs": 120001.4222,
+        "statesExplored": 252123,
+        "candidatesGenerated": 4649025,
+        "maxSearchDepthReached": 85,
+        "instanceId": "hard-side-035-final-depth-reselection",
+        "sourceInstanceSha256": "890d2521f0d3c25b556009316a992404bbe7d2e40bcf6aa0faa6ea623506ee86",
+        "structuralSignature": "6a8164af9c6fc67cbb8c53c3168b18d532bfd763b7fe2484ca60a41236a3c758"
+      }
+    }
+  ]
+}

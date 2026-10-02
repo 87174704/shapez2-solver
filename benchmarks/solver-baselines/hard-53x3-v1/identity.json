@@ -1,0 +1,10 @@
+{
+  "baselineId": "hard-53x3-solver-baseline-v1",
+  "benchmarkCanonicalSha256": "5836350ed30779f76fa32a6d4e9dce3628f7b5a554dfc4cb4e512c3b1ffe72db",
+  "finalSelectionCanonicalSha256": "6e3efdece360e8dd338a49dd3edd8fe10620b288aa161d35a8d01ab966e1b47f",
+  "solverCodeCanonicalSha256": "68f2be34f9737204a69f1db2c83463c76e9a3110732f829da916ae5d14aba873",
+  "configCanonicalSha256": "2ed7ea7b1d6af5d8c81e7b4a3baa9277a41cfb8c460947b8664706058ddab009",
+  "membershipCanonicalSha256": "2d575703b6f014a18280368e3924a9f9e08697aacec5579f6e1ab536591aade3",
+  "resultCanonicalSha256": "b5280ee921365f7dcbaaaed900aba040c49e3b3dedcd89c9af181f659ee0d987",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661"
+}

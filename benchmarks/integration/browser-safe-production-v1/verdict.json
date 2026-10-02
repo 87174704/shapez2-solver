@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "taskId": "browser-safe-production-integration-v1",
+  "verdict": "PASS",
+  "status": "STOPPED",
+  "recordedAt": "2026-09-30",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "architectureFrontier": {
+    "experiment": "E-014",
+    "stableSolved": 159,
+    "stableDistinctTargets": 53,
+    "changed": false
+  },
+  "capability": {
+    "members": 159,
+    "solved": 159,
+    "replayValid": 159,
+    "constructiveRoutes": 159,
+    "exactE014Paths": 159,
+    "resourceReuse": 0,
+    "distinctTargets": 53
+  },
+  "browserGate": {
+    "realChromeModuleWorker": true,
+    "constructiveSolveInWorker": true,
+    "legacyLifecycle": true
+  },
+  "productionImportGraph": {
+    "entry": "shapeSolver.js",
+    "moduleCount": 16,
+    "localOnly": true,
+    "nodeSpecifiers": 0,
+    "bareSpecifiers": 0,
+    "benchmarkModules": 0
+  },
+  "regression": {
+    "testsPassed": 188,
+    "testsTotal": 188,
+    "syntaxPassed": 118,
+    "syntaxTotal": 118,
+    "quickW1ExactSignature": true,
+    "solverCopiesByteIdentical": true
+  },
+  "identities": {
+    "solverSha256": "876a3e5f494ecb8edd4392506fecf5bfc7f383a42162f3599a1a4a110cbd9191",
+    "runtimeSha256": "fa6be4c6a2ca264a8c698830d568bc8f3d7b657bdc44b07590687cf8a90a0a3a",
+    "verificationScriptSha256": "278e96ea60c3b0c38b169544bea3dd0651e048c23ef96d1f5580bece633c73c1"
+  }
+}

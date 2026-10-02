@@ -1,0 +1,528 @@
+{
+  "benchmark": "shape-solver-official-workload",
+  "generatedAt": "2026-09-13T16:14:01.310Z",
+  "options": {
+    "suite": "hard",
+    "source": null,
+    "partition": "validation",
+    "partitionExplicit": true,
+    "caseId": null,
+    "timeoutMs": 10000,
+    "includeHoldout": false,
+    "json": false,
+    "outputFile": "benchmarks/results/official-hard-validation-v1-10s.json"
+  },
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "cpuModel": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "logicalCpuCount": 12,
+    "totalMemoryGiB": 31.793987274169922
+  },
+  "manifest": {
+    "path": "benchmarks/manifest.json",
+    "sha256": "f400bd27f2c68a56b0dc0fc5c8c793ecc7c2f621d49883f52214a9f2cbb63a0c",
+    "caseCount": 105,
+    "schemaVersion": 1
+  },
+  "sourceIdentity": {
+    "shapeSolver": {
+      "path": "shapeSolver.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeSolverWeb": {
+      "path": "shapeSolver_web.js",
+      "sha256": "c820fc503097ead51eb18f06078314a5233f75bee02cd3da7e76e2f9e61901be",
+      "bytes": 49347
+    },
+    "shapeOperations": {
+      "path": "shapeOperations.js",
+      "sha256": "c21fc3fcbff818e8c3bb85a84b47d5f975475aab0f6a81bb2e6d59aa66e3eb21",
+      "bytes": 25468
+    },
+    "oracleHelper": {
+      "path": "tests/helpers/shapeSolverOracle.mjs",
+      "sha256": "e5d11206661118b4bef1ab8fba00106650ff155fd58378883418d8f59e7636a4",
+      "bytes": 19054
+    },
+    "harness": {
+      "path": "tests/perf/officialWorkload.bench.mjs",
+      "sha256": "8b1e70587104b3ed146129964793912cfa92b9ce497de0b2131bd656f6c499be",
+      "bytes": 21344
+    },
+    "hard_main.txt": {
+      "path": "benchmarks/hard_main.txt",
+      "sha256": "9e41fbf81ff3e35e8fd274ecc8a9c85773c93a77f3380e83f79351241af26ab7",
+      "bytes": 360
+    },
+    "hard_side.txt": {
+      "path": "benchmarks/hard_side.txt",
+      "sha256": "2107e06d495183124a9bd83b7b49ab1a382c538cc879d28cdcc9862d5df52ce8",
+      "bytes": 1341
+    },
+    "insane_main.txt": {
+      "path": "benchmarks/insane_main.txt",
+      "sha256": "8ff3f305fe594e55f7d9edda538f710d43b2e2ec2904edcac15ee32c2ee922eb",
+      "bytes": 495
+    },
+    "insane_side.txt": {
+      "path": "benchmarks/insane_side.txt",
+      "sha256": "3cb8138d85ce449f77469ae170a12395951b72f5c6549c966858a7ecb55c37ee",
+      "bytes": 1674
+    },
+    "byteIdentical": true
+  },
+  "configuration": {
+    "targetShapeCodes": "singleton manifest target",
+    "startingShapeCodes": "_extractLayers(Shape.fromShapeCode(target), 'color', false, false, false)",
+    "enabledOperations": [
+      "Rotator CW",
+      "Rotator CCW",
+      "Rotator 180",
+      "Half Destroyer",
+      "Cutter",
+      "Swapper",
+      "Stacker",
+      "Painter",
+      "Pin Pusher",
+      "Crystal Generator"
+    ],
+    "hardMaxLayers": 4,
+    "insaneMaxLayers": 5,
+    "maxStatesPerLevel": 3000,
+    "preventWaste": false,
+    "orientationSensitive": true,
+    "allowSplitting": true,
+    "cleanPainting": false
+  },
+  "cases": [
+    {
+      "id": "hard-main-007",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 7,
+      "target": "WwcbWwcb:P-cwP-cw:WgP---P-",
+      "partition": "validation",
+      "sha256": "be90ea10cd4bafdd889d955ea4ed3edf9cec6fc9c898156b5da625b58cefb45d",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 28,
+      "statesExplored": 77488,
+      "candidates": 5000000,
+      "wallMs": 6581.7228000000005,
+      "freshProcessMaxRssMiB": 484.4765625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 28,
+        "statesExplored": 74488,
+        "candidates": 4842754,
+        "maxRssMiB": 484.4765625
+      }
+    },
+    {
+      "id": "hard-main-008",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 8,
+      "target": "cwRwcwcw:cwCwcwcw:cccccccc",
+      "partition": "validation",
+      "sha256": "da925a5d95229c05605c5228ae1fdaba01e95c318ebb6b0303486b5329c9c5f0",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 23,
+      "statesExplored": 61541,
+      "candidates": 5000000,
+      "wallMs": 4539.5356,
+      "freshProcessMaxRssMiB": 466.61328125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 24,
+        "statesExplored": 61541,
+        "candidates": 4801497,
+        "maxRssMiB": 466.61328125
+      }
+    },
+    {
+      "id": "hard-main-009",
+      "suite": "hard",
+      "source": "hard_main.txt",
+      "line": 9,
+      "target": "XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "partition": "validation",
+      "sha256": "8f661b214a113104b4ad5f258fc40c4d25073c1af84871fe2d16d0c9889bd5cb",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 12,
+      "statesExplored": 30083,
+      "candidates": 1463333,
+      "wallMs": 4794.9095,
+      "freshProcessMaxRssMiB": 362.79296875,
+      "pathSignature": "Painter:------Wu=>------Ww@w|Swapper:Xb------,------Ww=>Xb----Ww|Pin Pusher:--Xg----=>--P-----:--Xg----|Swapper:------Xg,--P-----:--Xg----=>--P---Xg:--Xg----|Stacker:Xr------,--P---Xg:--Xg----=>XrP---Xg:--Xg----|Swapper:--Wu----,----Xb--=>--WuXb--|Stacker:XrP---Xg:--Xg----,--WuXb--=>XrP---Xg:--Xg----:--WuXb--|Pin Pusher:XrP---Xg:--Xg----:--WuXb--=>P-P---P-:XrP---Xg:--Xg----:--WuXb--|Stacker:----Xr--,P-P---P-:XrP---Xg:--Xg----:--WuXb--=>P-P-XrP-:XrP---Xg:--Xg----:--WuXb--|Stacker:P-P-XrP-:XrP---Xg:--Xg----:--WuXb--,Xb----Ww=>P-P-XrP-:XrP---Xg:XbXg--Ww:--WuXb--|Painter:P-P-XrP-:XrP---Xg:XbXg--Ww:--WuXb--=>P-P-XrP-:XrP---Xg:XbXg--Ww:--WwXb--@w|Rotator 180:P-P-XrP-:XrP---Xg:XbXg--Ww:--WwXb--=>XrP-P-P-:--XgXrP-:--WwXbXg:Xb----Ww",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 11,
+        "statesExplored": 27083,
+        "candidates": 1452691,
+        "maxRssMiB": 362.79296875
+      }
+    },
+    {
+      "id": "hard-side-009",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 9,
+      "target": "Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr",
+      "partition": "validation",
+      "sha256": "cad002dbb8fa36bbbc476cddd57664ccb8ee6a0d1acba169e70a89b057550cd2",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 6,
+      "statesExplored": 10704,
+      "candidates": 366973,
+      "wallMs": 1083.6396,
+      "freshProcessMaxRssMiB": 276.0859375,
+      "pathSignature": "Painter:WuWuCuWu=>WgWgCgWg@g|Painter:Wu--Cu--=>Wg--Cg--@g|Stacker:WgWgCgWg,RuWuRuWu=>WgWgCgWg:RuWuRuWu|Stacker:WuSuCuSu,WgWgCgWg:RuWuRuWu=>WuSuCuSu:WgWgCgWg:RuWuRuWu|Stacker:Wg--Cg--,WuSuCuSu:WgWgCgWg:RuWuRuWu=>Wg--Cg--:WuSuCuSu:WgWgCgWg:RuWuRuWu|Painter:Wg--Cg--:WuSuCuSu:WgWgCgWg:RuWuRuWu=>Wg--Cg--:WuSuCuSu:WgWgCgWg:RrWrRrWr@r",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 10704,
+        "candidates": 341991,
+        "maxRssMiB": 263.7109375
+      }
+    },
+    {
+      "id": "hard-side-017",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 17,
+      "target": "RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy",
+      "partition": "validation",
+      "sha256": "c4491724ebc88f618b865b618cc6674c400a7e2aadd9e592d6d40894257fab1e",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 7,
+      "statesExplored": 12975,
+      "candidates": 497071,
+      "wallMs": 987.7632000000001,
+      "freshProcessMaxRssMiB": 251.6015625,
+      "pathSignature": "Painter:RuCuRuCu=>RrCrRrCr@r|Painter:RuCuRuCu=>RwCwRwCw@w|Painter:CuCuCuCu=>CmCmCmCm@m|Stacker:CmCmCmCm,WuCuWuCu=>CmCmCmCm:WuCuWuCu|Stacker:RwCwRwCw,CmCmCmCm:WuCuWuCu=>RwCwRwCw:CmCmCmCm:WuCuWuCu|Stacker:RrCrRrCr,RwCwRwCw:CmCmCmCm:WuCuWuCu=>RrCrRrCr:RwCwRwCw:CmCmCmCm:WuCuWuCu|Painter:RrCrRrCr:RwCwRwCw:CmCmCmCm:WuCuWuCu=>RrCrRrCr:RwCwRwCw:CmCmCmCm:WyCyWyCy@y",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 6,
+        "statesExplored": 9975,
+        "candidates": 399556,
+        "maxRssMiB": 241.25
+      }
+    },
+    {
+      "id": "hard-side-022",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 22,
+      "target": "CcCcRcRc:CwCwCwCw:P-P-P-P-:P-P-P-P-",
+      "partition": "validation",
+      "sha256": "a688efbb01d855a66e27e6be0db3b5940dda1386af0776f52ea12149bb4b8f5f",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 36,
+      "statesExplored": 101649,
+      "candidates": 5000000,
+      "wallMs": 7563.6907,
+      "freshProcessMaxRssMiB": 455.078125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 37,
+        "statesExplored": 101649,
+        "candidates": 4930466,
+        "maxRssMiB": 455.078125
+      }
+    },
+    {
+      "id": "hard-side-025",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 25,
+      "target": "SwP-P-P-:P-P-SyP-:SrSyWySy:--Ww--Ww",
+      "partition": "validation",
+      "sha256": "bb3456e58af3bd577c0ed6f31f625976ae75736556f61f45731cdddad298509a",
+      "status": "watchdog",
+      "watchdogMs": 10000,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "stderr": "",
+      "latestProgress": {
+        "reachedDepth": 18,
+        "statesExplored": 46606,
+        "candidates": 1817532,
+        "maxRssMiB": 490.40234375
+      }
+    },
+    {
+      "id": "hard-side-031",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 31,
+      "target": "P-P-cycy:cmcmcrcr:cwcwcwcw:WmWmWrWr",
+      "partition": "validation",
+      "sha256": "c4db916ad9a32f6befb4db263121d3192ba058a9432ec7fb35ca43d9be677f67",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 35,
+      "statesExplored": 99310,
+      "candidates": 5000000,
+      "wallMs": 7198.8253,
+      "freshProcessMaxRssMiB": 558.23828125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 36,
+        "statesExplored": 99310,
+        "candidates": 4865803,
+        "maxRssMiB": 539.859375
+      }
+    },
+    {
+      "id": "hard-side-033",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 33,
+      "target": "RwcmRwcm:cmRwcmRw:RwcmRwcm:cmRwcmRw",
+      "partition": "validation",
+      "sha256": "cb7e184683d111a6f9e437904e6f061dbc2fae9c2cd01d680893fa096f984d4a",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 29,
+      "statesExplored": 81346,
+      "candidates": 5000000,
+      "wallMs": 5263.0231,
+      "freshProcessMaxRssMiB": 455.6640625,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 30,
+        "statesExplored": 81346,
+        "candidates": 4955180,
+        "maxRssMiB": 453.2265625
+      }
+    },
+    {
+      "id": "hard-side-037",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 37,
+      "target": "XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr",
+      "partition": "validation",
+      "sha256": "cd68150ee881b6fdf715aac8b745dd7c0285563c2f5ccb68d92fa4863afcaba9",
+      "status": "solved",
+      "limitReason": null,
+      "depth": 6,
+      "statesExplored": 9559,
+      "candidates": 188575,
+      "wallMs": 585.0973,
+      "freshProcessMaxRssMiB": 231.81640625,
+      "pathSignature": "Painter:WuRuWuRu=>WwRwWwRw@w|Painter:XcRuXcRu=>XcRcXcRc@c|Pin Pusher:CuCuCuCu=>P-P-P-P-:CuCuCuCu|Stacker:WwRwWwRw,P-P-P-P-:CuCuCuCu=>WwRwWwRw:P-P-P-P-:CuCuCuCu|Stacker:XcRcXcRc,WwRwWwRw:P-P-P-P-:CuCuCuCu=>XcRcXcRc:WwRwWwRw:P-P-P-P-:CuCuCuCu|Painter:XcRcXcRc:WwRwWwRw:P-P-P-P-:CuCuCuCu=>XcRcXcRc:WwRwWwRw:P-P-P-P-:CrCrCrCr@r",
+      "replay": {
+        "status": "valid",
+        "diagnostics": {
+          "splitterSteps": 0,
+          "minimumUnits": 4096,
+          "implicitBinaryDiscardUnits": 0,
+          "emptyOutputConsumedUnits": 0,
+          "unacceptableTerminalWaste": 0,
+          "acceptableTerminalSurplus": 0
+        },
+        "error": null
+      },
+      "latestProgress": {
+        "reachedDepth": 5,
+        "statesExplored": 6559,
+        "candidates": 104867,
+        "maxRssMiB": 156.36328125
+      }
+    },
+    {
+      "id": "hard-side-040",
+      "suite": "hard",
+      "source": "hard_side.txt",
+      "line": 40,
+      "target": "cycycycy:XkcwXk--:--Cy----",
+      "partition": "validation",
+      "sha256": "c9a3065397bb4a7685edbbc56a5c393e709745f09dbdf27d07ea7fd113a37bb6",
+      "status": "limit",
+      "limitReason": "generated-states",
+      "depth": 27,
+      "statesExplored": 74027,
+      "candidates": 5000000,
+      "wallMs": 5250.1569,
+      "freshProcessMaxRssMiB": 468.078125,
+      "pathSignature": null,
+      "replay": {
+        "status": "not-run",
+        "diagnostics": null
+      },
+      "latestProgress": {
+        "reachedDepth": 28,
+        "statesExplored": 74027,
+        "candidates": 4965699,
+        "maxRssMiB": 466.09375
+      }
+    }
+  ],
+  "aggregate": {
+    "cases": 11,
+    "solved": 4,
+    "unsolved": 0,
+    "limit": 6,
+    "watchdog": 1,
+    "error": 0,
+    "limitsByReason": {
+      "generated-states": 6
+    },
+    "replay": {
+      "valid": 4,
+      "invalid": 0,
+      "unsupported": 0,
+      "notRun": 7
+    },
+    "statesExplored": 558682,
+    "candidates": 32515952,
+    "candidatesPerState": 58.20118063585367
+  },
+  "growthByDepth": [
+    {
+      "depth": 6,
+      "cases": 2,
+      "statesExplored": 20263,
+      "candidates": 555548,
+      "candidatesPerState": 27.41686818338844,
+      "statesRatioToPriorDepth": null,
+      "candidatesRatioToPriorDepth": null
+    },
+    {
+      "depth": 7,
+      "cases": 1,
+      "statesExplored": 12975,
+      "candidates": 497071,
+      "candidatesPerState": 38.30990366088632,
+      "statesRatioToPriorDepth": 0.6403296649064798,
+      "candidatesRatioToPriorDepth": 0.8947399684635711
+    },
+    {
+      "depth": 12,
+      "cases": 1,
+      "statesExplored": 30083,
+      "candidates": 1463333,
+      "candidatesPerState": 48.643187182129445,
+      "statesRatioToPriorDepth": 2.318535645472062,
+      "candidatesRatioToPriorDepth": 2.9439114331755425
+    },
+    {
+      "depth": 23,
+      "cases": 1,
+      "statesExplored": 61541,
+      "candidates": 5000000,
+      "candidatesPerState": 81.24664857574625,
+      "statesRatioToPriorDepth": 2.0457068776385334,
+      "candidatesRatioToPriorDepth": 3.4168572703547313
+    },
+    {
+      "depth": 27,
+      "cases": 1,
+      "statesExplored": 74027,
+      "candidates": 5000000,
+      "candidatesPerState": 67.54292352790198,
+      "statesRatioToPriorDepth": 1.2028891308233536,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 28,
+      "cases": 1,
+      "statesExplored": 77488,
+      "candidates": 5000000,
+      "candidatesPerState": 64.52612017344622,
+      "statesRatioToPriorDepth": 1.0467532116660136,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 29,
+      "cases": 1,
+      "statesExplored": 81346,
+      "candidates": 5000000,
+      "candidatesPerState": 61.46583728763553,
+      "statesRatioToPriorDepth": 1.049788354325831,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 35,
+      "cases": 1,
+      "statesExplored": 99310,
+      "candidates": 5000000,
+      "candidatesPerState": 50.34739703957305,
+      "statesRatioToPriorDepth": 1.220834460207017,
+      "candidatesRatioToPriorDepth": 1
+    },
+    {
+      "depth": 36,
+      "cases": 1,
+      "statesExplored": 101649,
+      "candidates": 5000000,
+      "candidatesPerState": 49.188875443929604,
+      "statesRatioToPriorDepth": 1.0235525123351124,
+      "candidatesRatioToPriorDepth": 1
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "bounded-best-first-plan-synthesis-v1",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "verdict": "REJECT",
+  "stopped": true,
+  "acceptanceGate": {
+    "minimumStableSolvedMembers": 3,
+    "minimumDistinctTargets": 2,
+    "requireNewMemberBeyondPriorFrontier": true,
+    "requireReplayValid": true,
+    "requireIndependentProcessRepeat": true
+  },
+  "priorCapabilityFrontier": {
+    "stableSolvedMembers": 2,
+    "distinctTargets": 1,
+    "members": [
+      "hard-main-001:F1",
+      "hard-main-001:F2"
+    ]
+  },
+  "observed": {
+    "stableSolvedMembers": 1,
+    "distinctTargets": 1,
+    "stableNewMembers": [],
+    "stableNewTargets": 0,
+    "allReturnedSolutionsReplayValid": true,
+    "allFirstPassSolvedMembersRepeated": true,
+    "stableMembers": [
+      {
+        "targetId": "hard-main-001",
+        "familySlot": "F2",
+        "instanceId": "hard-main-001-53x3-pilot-02",
+        "operationCount": 10,
+        "configuration": "BFPS-A",
+        "priorFrontierMember": true
+      }
+    ]
+  },
+  "configurations": {
+    "BFPS-A": {
+      "SOLVED": 1,
+      "LIMIT": 158,
+      "ERROR": 0,
+      "WATCHDOG": 0,
+      "limitReasons": {
+        "time": 143,
+        "expanded-nodes": 15
+      }
+    },
+    "BFPS-B": {
+      "SOLVED": 0,
+      "LIMIT": 159,
+      "ERROR": 0,
+      "WATCHDOG": 0,
+      "limitReasons": {
+        "time": 159
+      }
+    }
+  },
+  "capabilityAccounting": {
+    "formalBaselineSolved": 0,
+    "priorFrontierStableSolved": 2,
+    "stableNewSolved": 0,
+    "stableNewTargets": 0,
+    "resultingFrontierStableSolved": 2,
+    "resultingFrontierDistinctTargets": 1,
+    "engineeringPassesCountAsCapability": false
+  },
+  "identities": {
+    "solverSha256": "1fa6346166b2006eb58ee527628e3048f4d056e6a6c1c1c619d957d61c4f609e",
+    "configSha256": "b5970650be89a6cda23c7dff53b1f758bb0da6ff4b7352c7c35453df230d57d0",
+    "bfpsAFirstPassSha256": "df4d49b528b3991243d8b3442794958d714749cd03b4468bb2ecaad785e04327",
+    "bfpsARepeatSha256": "f08c93d1ae3b1819f29dc6695f9cf9467f03372d4afbba3397a5b9ec1374321d",
+    "bfpsBFirstPassSha256": "82ad73f204f993556465a8f0f4dbd8f7c118c0270e03221e62824ccfa2c2e67e",
+    "bfpsBRepeatSha256": "46238ccff2e810dc5a77e5b1b5bdc9cd0a000d42ac8ad0f6acc4e596624e9b49"
+  },
+  "verification": {
+    "smallDomainTests": "7/7",
+    "repositoryTests": "134/134",
+    "artifactAudit": "PASS",
+    "syntaxChecks": "75/75",
+    "productionSolverCopiesByteIdentical": true,
+    "productionSolverSha256": "ee558425bbc1761c5f01b82bb72d02f4d7dd611208c083d7355827600e518a37"
+  },
+  "stopReason": "Neither frozen configuration produced a stable member outside the prior E-005 capability frontier."
+}

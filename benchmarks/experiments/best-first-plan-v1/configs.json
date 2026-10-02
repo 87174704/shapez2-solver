@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "bounded-best-first-plan-synthesis-v1",
+  "frozenAt": "2026-09-28T00:00:00+08:00",
+  "baselineCanonicalSha256": "a23979099a2ae0dc7c8fa0a77c89ffa77d23fc82170e38690de000b708082661",
+  "priorCapabilityFrontier": {
+    "experimentId": "target-conditioned-candidate-generation-v1",
+    "stableMembers": [
+      "hard-main-001:F1",
+      "hard-main-001:F2"
+    ]
+  },
+  "informationBoundary": {
+    "allowed": [
+      "targetShapeCodes",
+      "startingShapeCodes",
+      "enabledOperations",
+      "maxLayers",
+      "maxStatesPerLevel",
+      "preventWaste",
+      "orientationSensitive",
+      "allowSplitting",
+      "cleanPainting"
+    ],
+    "forbidden": [
+      "hidden witness",
+      "construction metadata",
+      "targetId",
+      "familySlot",
+      "source identity",
+      "structural tags",
+      "benchmark-specific shape-code recipes"
+    ]
+  },
+  "formalProtocol": {
+    "freshProcessPerMember": true,
+    "firstPassMembers": 159,
+    "repeat": "all first-pass replay-valid solved members in independent fresh processes",
+    "acceptSolvedMembers": 3,
+    "acceptDistinctTargets": 2,
+    "requireNewMemberBeyondPriorFrontier": true,
+    "requireReplayValid": true,
+    "runSecondConfigOnlyIfFirstMissesAccept": true,
+    "randomSeedPolicy": "no RNG"
+  },
+  "configurations": [
+    {
+      "id": "BFPS-A",
+      "maxOperations": 28,
+      "maxChartNodes": 80000,
+      "maxExpandedNodes": 30000,
+      "maxCandidateAttempts": 600000,
+      "maxVariantsPerShape": 32,
+      "maxPartnerPool": 512,
+      "maxPartnersPerExpansion": 48,
+      "maxWallMs": 10000
+    },
+    {
+      "id": "BFPS-B",
+      "maxOperations": 40,
+      "maxChartNodes": 180000,
+      "maxExpandedNodes": 80000,
+      "maxCandidateAttempts": 1800000,
+      "maxVariantsPerShape": 96,
+      "maxPartnerPool": 1536,
+      "maxPartnersPerExpansion": 128,
+      "maxWallMs": 20000
+    }
+  ]
+}

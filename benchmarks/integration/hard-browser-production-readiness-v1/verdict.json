@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "task": "P8-02",
+  "name": "real-browser-hard-performance-and-stress-acceptance",
+  "date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "status": "NEEDS-FIX / STOPPED",
+  "scope": {
+    "measurementOnly": true,
+    "solverSemanticChanges": false,
+    "productOptimizations": false,
+    "realPage": "/en/",
+    "nativeModuleWorkers": true
+  },
+  "protocol": {
+    "freshProfiles": 2,
+    "warmupsPerProfileWorkload": 2,
+    "measuredRunsPerProfileWorkload": 10,
+    "measuredRuns": 60,
+    "headlessLifecycleRuns": 1,
+    "headfulLifecycleRuns": 1
+  },
+  "correctness": {
+    "completed": 60,
+    "expected": 60,
+    "pathStableByWorkload": true,
+    "w1ExactSignature": true,
+    "productionCapability": "159/159"
+  },
+  "coldWarmWallTimeMs": {
+    "workload": "interior-crystal-constructive",
+    "headlessFreshPageFirst": 41.6,
+    "headlessImmediateRepeat": 33.2,
+    "headfulFreshPageFirst": 47.6,
+    "headfulImmediateRepeat": 48.1
+  },
+  "continuousSolvesAndMemory": {
+    "workerHeapCoverage": "60/60",
+    "maximumPageHeapDriftMiB": 0.71,
+    "pageHeapDriftGateMiB": 5,
+    "maximumWallDriftRatio": 1.0195,
+    "wallDriftGateRatio": 2,
+    "passed": true
+  },
+  "cancellation": {
+    "headlessPassed": true,
+    "headfulPassed": true,
+    "handlersDetachedBeforeTermination": true,
+    "terminationExactlyOnce": true,
+    "staleDeliverySuppressed": true,
+    "immediateRestartPassed": true
+  },
+  "responsiveness": {
+    "timerGapGateMs": 100,
+    "ordinaryConstructiveMaximumMs": 51,
+    "interiorCrystalMaximumMs": 115.9,
+    "interiorCrystalBreaches": "3/20",
+    "boundedSearchW1MaximumMs": 45.9,
+    "passed": false
+  },
+  "environment": {
+    "browser": "Chrome/154.0.8037.59",
+    "node": "v24.21.0",
+    "platform": "win32-x64"
+  },
+  "identities": {
+    "solverSha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+    "solverWebSha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad",
+    "harnessSha256": "104888d64fefc0feda435ef7078e7b510cb84f767a2d11581d9e4732bf1212f3",
+    "resultsSha256": "81829caf86c3e04da24d01787ea60448f50d87e241f63de844f4adf860b6ff18"
+  },
+  "nextTask": null
+}

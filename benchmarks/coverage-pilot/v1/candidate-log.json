@@ -1,0 +1,53 @@
+[
+  {
+    "targetId": "hard-main-004",
+    "strategy": "catalog-half-chunk+multi-stage-stack",
+    "accepted": true,
+    "instanceId": "hard-main-004-coverage-01"
+  },
+  {
+    "targetId": "hard-main-010",
+    "strategy": "crystal-scaffold-extraction+shared-refinement",
+    "accepted": true,
+    "instanceId": "hard-main-010-coverage-01"
+  },
+  {
+    "targetId": "hard-side-021",
+    "strategy": "shared-occurrence-pin-subassembly",
+    "accepted": true,
+    "instanceId": "hard-side-021-coverage-01"
+  },
+  {
+    "targetId": "hard-side-039",
+    "strategy": "shared-refinement-byproduct-reuse",
+    "accepted": true,
+    "instanceId": "hard-side-039-coverage-01"
+  },
+  {
+    "targetId": "hard-side-041",
+    "strategy": "partial-refinement-occurrence-reuse",
+    "accepted": true,
+    "instanceId": "hard-side-041-coverage-01"
+  },
+  {
+    "targetId": null,
+    "strategy": "splitter-throughput",
+    "accepted": false,
+    "unsupported": true,
+    "reason": "Success throughput is unresolved; no 2048/4096 assumption is permitted."
+  },
+  {
+    "targetId": null,
+    "strategy": "upper-isolated-pin",
+    "accepted": false,
+    "unsupported": true,
+    "reason": "No general constructive planner has yet been proved for arbitrary official targets."
+  },
+  {
+    "targetId": null,
+    "strategy": "mixed-pin-crystal-gravity",
+    "accepted": false,
+    "unsupported": true,
+    "reason": "Canonical evidence gaps remain for general templates."
+  }
+]

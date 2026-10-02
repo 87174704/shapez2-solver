@@ -1,0 +1,252 @@
+[
+  {
+    "id": "hard-side-006-pilot-01",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "7a398a94fbaf779a310ca89c45228e68ea4600deb08a9ba5a20486802da8493f",
+    "newInstanceSha256": "57c0870f83245e8933be6578e8d56b5bcfb085d3cdb5b078f6421fffcc744ada",
+    "structureSignature": "1f701f20173a0d3e6d347b2126240f51267c6955e16e1eb4653d857e1d196b23",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-006-pilot-02",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "f603daf9125a0deee0d5adc3e2efbb32c3956adb51e45f11d7be2700726b37a6",
+    "newInstanceSha256": "0a20e77a2e590f3ce92ed08ab28da9b89b367c8342f777a6b4dd11fc7cc5027b",
+    "structureSignature": "c0e02c34ed5eebcad52d338e08f94f80f9342e42fe839da590178b3cd3d39420",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-006-pilot-03",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "e8c7723472c8690d811f53500e83083c301f817074a0203b959b176a9b0d2c79",
+    "newInstanceSha256": "bc72918d94ba95e9490a14b4cfc9cf056a24040dad4541d103714dd1ca76c3e9",
+    "structureSignature": "dcc775914ffef88d0091af034b4524a4475983b1a9c7a756ffbf94b57f47b928",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-006-pilot-04",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "c81c028859130ceb19fad484cfe65df7b8d32f881b72e863ef5f151fa498fbdc",
+    "newInstanceSha256": "f496378adc79b19b59309171e471c1ebc76aba5e1da92f0d83b927c4ca7aef60",
+    "structureSignature": "0db43b1627355efe9d41437867bbda272d11cbcdcc01a1f349b1deef25f97ce8",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-006-pilot-05",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "18e838394e6e485082890d3568ebca219c2cf22506020364ff41014bb41489e3",
+    "newInstanceSha256": "8fb927ad21240905f0c5aa9ae1ca94f95b87eb1647b6864fac8cce210f57c109",
+    "structureSignature": "7d9b0a8af714e72509702c912137efab6737df3f4c0f1245b46f77bf23ca4a8d",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-007-pilot-01",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "2167b61695e9f9c00df7715426cd2d017054c69b600ec6cdcd667465638dfd68",
+    "newInstanceSha256": "e5de43e279c3d25a2e1681fe714079f070c910cf74736c86edcdccc88e6caedd",
+    "structureSignature": "0d4ab5d8a8f18f074cb9623cb45f3a17900108dd48b7881c9f7188306e264f60",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-007-pilot-02",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "e63abdec56f2d4c914a947e421c407c43726a278009f5c461abe5693dd6ae3c5",
+    "newInstanceSha256": "adbc7e94bc80b1688566327d5964f71a549cda02e691fca47219bc325243bedb",
+    "structureSignature": "d50cc46496571540c02aa6ca501252447c621db6e7d3364f9a57494916b91cdf",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-007-pilot-03",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "09b4b76a2569f5c751d4d3f57f5d95304c3ff84cd4b898b9e76a1d95edccf47d",
+    "newInstanceSha256": "14efbb2b089e00ecf9a1c382d07d2888e99d4955872a94c72b05093dd6030589",
+    "structureSignature": "28d977f57c5e54edb41befe98bd6967f0e813e1fd0e45fdfb6c08145870ea0bd",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-007-pilot-04",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "ccbb32d4f6be91bb651b1e3f8ea79326f0b358e0ee81dffafb446167b9b6229e",
+    "newInstanceSha256": "21b3180363a3135f95ba9fe76517275b1cbd264d0ed0e59372305d0ce4644170",
+    "structureSignature": "f7a49e7632277ad260447d78ed5c0520cc3ec2b7a78cbd6f8c5f8bd198f6d7c6",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-007-pilot-05",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "57578d348da13890a22cc7228c8a7d8f818c4b47085ca7f5fcac447032fa800d",
+    "newInstanceSha256": "870cbfa4b63a6e0ff2e92497080a9b69dbbc04012f4a02970f4814c16d70a34d",
+    "structureSignature": "cc1dc2b398a02294b0ced346fb83c1c6484708e43258a682f0d3c19238791497",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-018-pilot-01",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "f23557750721d5530e4c5cf848bc2bdbd5dd4d658b0c6dadb097a74728b9b631",
+    "newInstanceSha256": "17c758c30014d6c3a2213f8b23b24c8b2cd0430883ca801027612f267b95b820",
+    "structureSignature": "0f37566d2e51312ef3aaa16bfe96514dfe4f162fb42e1371600446c85808c4a7",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-018-pilot-02",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "e26cb330b7ea13dcf8af722a98945fb5db98c1a1b39316b757890364146ff8c2",
+    "newInstanceSha256": "baf39f6a36155b2d4075c7d1170f06d3a89956ff52603a3fe8fc342435f44dc6",
+    "structureSignature": "5acd7f6332d4aca99f9544af5e60629c73c56323f2318440e4c9d092f6626d38",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-018-pilot-03",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "fdee9ffc10d2614f20f452d9194a59bfc0c12935723edcfa17633dc8f2d0275f",
+    "newInstanceSha256": "3eaae915d58075baa41ac87e644aa9e2c0c78a48e1847bd4d8f089f6dc54de9a",
+    "structureSignature": "e5292f39537591683595e0db887377ef22315265582da996a70edb7fba360916",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-018-pilot-04",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "2210617746f2f8b03af3ed5c2ab15530360ab46724ced6aa91b64165a387ce1b",
+    "newInstanceSha256": "ac128359a8001b0f42b454a18f84ea9f7ed697051366736f458a8c830fa5dd7c",
+    "structureSignature": "5772293eccd007dad9dd65d59158579837aa488fce40b4fdfa040503df10463c",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-018-pilot-05",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "3c863a1d7f03c264e70652f0c86f598c339141706a75eff5484d252ce1247622",
+    "newInstanceSha256": "c2b773c3af89713f2b685b40a5105b368d4afecac14f5ff0792b94e72211ad30",
+    "structureSignature": "931289996d15a584ea26925573c18907b84b4eb3cbe776725c861cdf5dab22fb",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-021-pilot-01",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "75a25679da579af7176d1940650ea817abfdf8d6411f03d286ca1dcdac5b534a",
+    "newInstanceSha256": "131bd263c7ada97df3e714fa06f9cdaf6e18665a19e44092013decd1943a2e29",
+    "structureSignature": "2c7e4526cb1817b2df93d4c4d7ddb3dfee219880f7a49e3a7fe0c14b0719b9b2",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-021-pilot-02",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "e9df2ce74b2ee59485b27db2bd97473fb5707431cda3b2765fd49668cab324ca",
+    "newInstanceSha256": "c88b40dc73186f85da793aa965f8e93e06a60ceec20cbf5c7abc7fda822a3f32",
+    "structureSignature": "0e632d53917c370e1c4133c617cde28bb02c99093f9489bb04eb3ab029985f6c",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-021-pilot-03",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "b46e58ca50147825f6ea4579a4b7993e03ddb7b2f2ad7232a1347addbb6c46fa",
+    "newInstanceSha256": "b4333c33d4c277f82c71ad635ee37cc3fa2a1bbcd121e2eb7f0d786d2927df4d",
+    "structureSignature": "873e125aff459521fa3773d5a7594bfef9c2de3bf72bb039b47d3674cbf8559e",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-021-pilot-04",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "424022f9547fea29c479b7beb013cdf08474a6967b7fb8dca0fe926929dd9053",
+    "newInstanceSha256": "d02abdb493a7108ff36a5ab138e55779a4e962f52cd2f557faaee4fe655b5679",
+    "structureSignature": "c6c2857e5b6d3bb9e53ecc02e3afa044c57c974f48ea572829f02d408a34962c",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-021-pilot-05",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "0eb3eaef60c63ca9db12ff25b15c7e9d441d070b0bb3a036480ecddb7c093e29",
+    "newInstanceSha256": "5c54284eb51ef5b1798b2cac850a1bbf823f8ffed8380c4b7f9152ca0d13591c",
+    "structureSignature": "8617e587e9b3e932b54496c464f5574c233d5facdf5ec4cd39b8efbbfb7d5622",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-035-pilot-01",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "31bcbf333ab1d5aa5754f8c206cf916327801363680fbba3b97e4e78d027249f",
+    "newInstanceSha256": "10fe111465f47175b7713f19ba229d2cd3d1fc36e343cdbb32569bb9327e2ccf",
+    "structureSignature": "285813c205c7f52e9dca51bfcbabcbafa8f46f8eaa55126520e00bac8aa92d84",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-035-pilot-02",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "60527c4f07028f3868d7d9b4ea7639ab31937280f472944311cad6d6ab87b3ee",
+    "newInstanceSha256": "cdf5232c2e2a57502e7d2ed44108f93bb371bab0ea602708578df3b5c79a5973",
+    "structureSignature": "5b23732a76848e55969666386a34d93cb98cb03d589098c75f897c468f151e2f",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-035-pilot-03",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "5bceedb24d541f2193013187e96b8252e76c4fbb5e08db75d6f2dd44cc4f2645",
+    "newInstanceSha256": "d053f86043440b77e3edb769aa651985f6d0a9d97b717c28a56e91e4026d9557",
+    "structureSignature": "577d8fde85e7a2cc08fd381360c26ec292fa0895563e259ec93d2969620745b8",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-035-pilot-04",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "742fcd0b051496ce474c3dc2b786d844489818cef9cb61a02c07470ec5a8ae1e",
+    "newInstanceSha256": "39063fc29aff4bcfc554952853c4623a8558ccb835cd6708f46cccda793c3808",
+    "structureSignature": "5563617e133cfb34a2c9219bad08559c1c3e4d260b328bff49f3ad38120b372e",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  },
+  {
+    "id": "hard-side-035-pilot-05",
+    "sourceVersion": "benchmarks/pilot/v1/instances.json",
+    "sourceInstanceSha256": "506fdce472052c12367776ebe3111d1660dbf25326efcba41002208a3bc1c992",
+    "newInstanceSha256": "1b8ac20781997ce6105ceb17324495c39cb1f4f7619fae6854b6838653c4030f",
+    "structureSignature": "6bb88a673af21aad4a9a41a1a2567edb852533e3d43ecb259ed10ebe4d1ee0d1",
+    "classification": "representative",
+    "duplicateOf": null,
+    "reason": "Recomputed repository-bound provenance and witness-DAG structural diversity; inputs and witness unchanged."
+  }
+]
