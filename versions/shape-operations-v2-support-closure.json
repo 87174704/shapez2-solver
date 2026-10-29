@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "version": "shape-operations-v2-support-closure",
+  "status": "local-release-candidate-not-published",
+  "baseCommit": "0647b8502f75145936faf8fbcde7cf2ab5371f75",
+  "parent": {
+    "version": "shape-operations-v1",
+    "canonicalSha256": "bc6a6f4f4d67b785f704ee7052370a5c5f3b6e8fb174bad30a7a9a37d4f39302"
+  },
+  "semantics": {
+    "sha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "files": [
+      {
+        "path": "versions/SEMANTICS_V2.md",
+        "sha256": "f2976f45ad06eec45978865778cc1c9eb2c07168a56d4315364f50036b4c93d3"
+      },
+      {
+        "path": "shapeOperations.js",
+        "sha256": "3052ea5686bf7808cdefbee0d58347b3dcef812ea694d0a23bf1749e1be0bcc9"
+      },
+      {
+        "path": "shapeConstants.js",
+        "sha256": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+      },
+      {
+        "path": "shapeValidation.js",
+        "sha256": "b624fca8098d3bea752db1961bae2fb07ad3b7e30166c0df252775e2dd33f854"
+      }
+    ]
+  },
+  "runtime": {
+    "sha256": "c3adcaf60727f035166ccc30c74fde979faf4be482c1e7d71a2d52eeaa9c1897",
+    "files": [
+      {
+        "path": "bestFirstPlanSolver.js",
+        "sha256": "1fa6346166b2006eb58ee527628e3048f4d056e6a6c1c1c619d957d61c4f609e"
+      },
+      {
+        "path": "cn/index.html",
+        "sha256": "c7d4b794795ca440e256ad37a6ac5c6fcb88148085f7e2f0bddec5d03dd76fdc"
+      },
+      {
+        "path": "colorMode.js",
+        "sha256": "b068857f8cd9a3d2495da4639a69f8b8a281001bf5e33cc12ab239c15e026b5d"
+      },
+      {
+        "path": "constructive/crystal-construction-planner.js",
+        "sha256": "9d601f9a0424e4385352c84ae833b79315c33e77bd2bc02aba70742598c2143f"
+      },
+      {
+        "path": "constructive/interior-crystal-column-planner.js",
+        "sha256": "29fad99c70406d89a92010b8b5ec0cf24f2388bc56dea24583228d2bceccf8f6"
+      },
+      {
+        "path": "constructive/mixed-pin-crystal-construction-planner.js",
+        "sha256": "09bfbf8f8e66f2ef9ea22212871790daf7f12c59560ce88543e21597362529eb"
+      },
+      {
+        "path": "constructive/pin-construction-planner.js",
+        "sha256": "92e49ea9c90c6d513c4a72b11ce582998f963ba8593498edca32da8fa4b3d3ef"
+      },
+      {
+        "path": "constructiveSolverRuntime.js",
+        "sha256": "fa6be4c6a2ca264a8c698830d568bc8f3d7b657bdc44b07590687cf8a90a0a3a"
+      },
+      {
+        "path": "crystalScaffoldGoalDecomposedSolver.js",
+        "sha256": "51a129abdd2e8a2d573af0fbde05a43ed8cb616d0b46a19b7ff758e118b7d79f"
+      },
+      {
+        "path": "deploy-shapez2-index.html",
+        "sha256": "22e2d2b7eff1bb295835a62c77dc8c193d7e560ddf3cfc74369995fa7291fdd0"
+      },
+      {
+        "path": "en/index.html",
+        "sha256": "df4687a8578cf6acb29a036d5e25b1d01bef2ee68f9d0251eb0f3bce3eedd528"
+      },
+      {
+        "path": "goalDecomposedSolver.js",
+        "sha256": "fdb286700fba1204d7434fe36d0a4cd53cd6c3c6476e95ae37e3bf11dadbcf26"
+      },
+      {
+        "path": "i18n.js",
+        "sha256": "f90233a4b1a755b8d5e99119565c0d41f42ebe2e9b2d037f99698bec87a8c75a"
+      },
+      {
+        "path": "images/clipboard-copy.png",
+        "sha256": "d4a98e277b16c725ab9f2c22e9cbe3c527518ea275be904baf7348ef2da41705"
+      },
+      {
+        "path": "images/clipboard.png",
+        "sha256": "16ebe145365c8fd552a53b82fb136ba852dbe7b901fda8ab852eb31fd2cb4e1f"
+      },
+      {
+        "path": "images/duplicate.png",
+        "sha256": "2c4ce8d0b9d8b3ee4edcc12a33908dd62cee83eec8c57217b8d3ab923e8b462e"
+      },
+      {
+        "path": "images/favicon.ico",
+        "sha256": "ca2b87b1af1734c821ab8477a72c89ac87bdbe46af82e9078a7d3f14f6921936"
+      },
+      {
+        "path": "images/favicon2.ico",
+        "sha256": "a4b84576b83adfdb00c5795f3f0df878f63381524ffce4f9cb66039ee791f1cd"
+      },
+      {
+        "path": "images/fluids.png",
+        "sha256": "7e2047f0414da651aa3eea8b03f1545bed6418d8e2060e49250224a31e4441ce"
+      },
+      {
+        "path": "images/link.png",
+        "sha256": "15469be7881c96550fa96df9d6e1b4b3864296a4ecb3e108054a1a8d42c7bd4d"
+      },
+      {
+        "path": "images/nodes.png",
+        "sha256": "949e33a92455dd7616d0e9e84482f53e25b38b07a70dc46918ffc1c60a80e317"
+      },
+      {
+        "path": "images/operations/color-mixer.png",
+        "sha256": "3cd278217db6f4107f19406aab2137e179885538684394f93fbce98491f3d87a"
+      },
+      {
+        "path": "images/operations/crystal-generator.png",
+        "sha256": "9d6e1c3bb7b5016241b3b34144c5153057126f3150629b6cbf31553cf4b61335"
+      },
+      {
+        "path": "images/operations/crystal-generator2.png",
+        "sha256": "65b92da62ee6af51e84f542d0158a797d309063dad1902a050c23752a1d4e1a8"
+      },
+      {
+        "path": "images/operations/cutter.png",
+        "sha256": "f119d2894f9282bc5665c49b978937db40aa2183a80ef31e4b263a11d3c881c2"
+      },
+      {
+        "path": "images/operations/cutter2.png",
+        "sha256": "43566c0c002d49269aecf3bfed55ab1f0df627bdbc6b87b0279fac161da8535b"
+      },
+      {
+        "path": "images/operations/half-destroyer.png",
+        "sha256": "1156908f3b692aa02eabedd49e1cd6dd49ee381e81ca9d4262f4267c9adae429"
+      },
+      {
+        "path": "images/operations/painter.png",
+        "sha256": "aa518e2dd023c12996334bd8c24591bec0bdfaa35ab26db30897745ba365bc70"
+      },
+      {
+        "path": "images/operations/pin-pusher.png",
+        "sha256": "cfe734e25c8e53e0e240b9d10f972cc6440d00dfc6ac79b806f72c4d9baa8cb1"
+      },
+      {
+        "path": "images/operations/pin-pusher2.png",
+        "sha256": "7982a8f802002d6805489dd444012370a856a2d9899a29412d770b9dd42f9045"
+      },
+      {
+        "path": "images/operations/rotator-180.png",
+        "sha256": "c51f96533ae4eec9a208d89cc052d4a179f8f12e7306b440f36c36f22941641a"
+      },
+      {
+        "path": "images/operations/rotator-ccw.png",
+        "sha256": "678b294606a9e090673bbac82a0aadf13c1298e8951f2bf5db4c9c4f96403fad"
+      },
+      {
+        "path": "images/operations/rotator-cw.png",
+        "sha256": "d14bda0847508b28a915cab22a179f44839c15f2a62e42048745d7c4e0f756fb"
+      },
+      {
+        "path": "images/operations/splitter.png",
+        "sha256": "7fd90d1d003c30e90397fa563c40c11f2052ca4ab89134a934cb65eee8ea5c24"
+      },
+      {
+        "path": "images/operations/stacker.png",
+        "sha256": "a38b9e57e39884f8d8d1299336a06599633bf272fe359f10e4ef6e427c2cac5c"
+      },
+      {
+        "path": "images/operations/swapper.png",
+        "sha256": "dfd08efe3fb33c1df97609b12ded0449e7b8a9b0d2607f982ce752a2eae4eb0e"
+      },
+      {
+        "path": "images/processor.png",
+        "sha256": "a889ec4a61729400cbd126ea23b014d74067ba6a33ce8fe2836c72a099d9f810"
+      },
+      {
+        "path": "images/shapes.png",
+        "sha256": "915b719fab543271b9918c8576e0ba64035f04398bfc42029f43fcbe973c7b18"
+      },
+      {
+        "path": "images/trades.png",
+        "sha256": "91d841d5f9219a76340527a66689cf8e29d7425c94d6e3dd3ca27d1423e148eb"
+      },
+      {
+        "path": "images/trades2.png",
+        "sha256": "07dc8cb0e3a5f9d22902f299404f697d60b849d6c5b9b0e3c45701a379921d24"
+      },
+      {
+        "path": "images/trash.png",
+        "sha256": "999f318a7c2e84fb1b3d1d0efaade4fdbd93223952efe98ccfcbe4a1a7c39690"
+      },
+      {
+        "path": "index.html",
+        "sha256": "11ec87be2f6cc272021d08d70c6a88ca2e5b9215c8262136b7412e338a4590ef"
+      },
+      {
+        "path": "interiorCrystalColumnSolver.js",
+        "sha256": "8d797fc93a9c734150fa1627a89ec68906944a392dc1fec4e02dbe870f1b9b75"
+      },
+      {
+        "path": "isolatedPinGoalDecomposedSolver.js",
+        "sha256": "46fa6e3e58a536b72e4e17098c55136e2c117f221b59b20021641f9ed615a009"
+      },
+      {
+        "path": "main.js",
+        "sha256": "5767038c930532c5aa6a9b20f5e5e25839a8816e4f611a238d0bf7154fb80490"
+      },
+      {
+        "path": "mixedPinCrystalGoalDecomposedSolver.js",
+        "sha256": "b704b4b6e61cdb9c2f49cd5eaf878630474fada2f323ee92b8a8a5edab2b8e2e"
+      },
+      {
+        "path": "mixingSolver.js",
+        "sha256": "3124eaaebc33a0a7419e502df7d5d5da9e05e3f530b6fa95946d73a368514c1a"
+      },
+      {
+        "path": "operationGraph.js",
+        "sha256": "004a99b78cdd3a7a08008250800ccb4a4cb971636d0690c367d14c3557e05cb8"
+      },
+      {
+        "path": "pinGoalDecomposedSolver.js",
+        "sha256": "6ccf166b56cc36538d13721a2713cecc4876a30074a1268d37c043a8da3230f7"
+      },
+      {
+        "path": "shapeConstants.js",
+        "sha256": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+      },
+      {
+        "path": "shapeOperations.js",
+        "sha256": "3052ea5686bf7808cdefbee0d58347b3dcef812ea694d0a23bf1749e1be0bcc9"
+      },
+      {
+        "path": "shapeRendering.js",
+        "sha256": "6c70dbd1385e1d5785163bde1d7606b84c0b8e1fee453090ca00fc792f69876a"
+      },
+      {
+        "path": "shapeSolver.js",
+        "sha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad"
+      },
+      {
+        "path": "shapeSolver_web.js",
+        "sha256": "24388ad12ce2b3e29075790f762ba8731fe6015e021a56efcb184aad218ed2ad"
+      },
+      {
+        "path": "shapeValidation.js",
+        "sha256": "b624fca8098d3bea752db1961bae2fb07ad3b7e30166c0df252775e2dd33f854"
+      },
+      {
+        "path": "sharedOccurrenceGoalDecomposedSolver.js",
+        "sha256": "b4bfbe2a096608f119ea28b1c72239fdf4e75fb2e97ad00c458ca91cbca64e63"
+      },
+      {
+        "path": "styles.css",
+        "sha256": "28611a09ee4dd599e9532aebc126d46880c569411a64a3e3a369c061a460de12"
+      },
+      {
+        "path": "targetConditionedSolver.js",
+        "sha256": "bcc138a0613b329a5f6a87c63f60c4c31dbaeaadc48f31a4d1a08eab64e694d4"
+      },
+      {
+        "path": "unsupportedCrystalResourcePoolSolver.js",
+        "sha256": "02518d4874199178a24b43e8958e678f3bd4a2d645bd82bfa8e052446327d98b"
+      },
+      {
+        "path": "workerLifecycle.js",
+        "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
+      }
+    ]
+  },
+  "acceptance": {
+    "sha256": "3e73890d5db20b3ead38e5242244ce3bbc8ea93973f4b668ebd7ffd24fe27ec0",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "sha256": "4dd2f2e7c5b653b5505721a9c776b7945001275f36702879599609e7df8d47a6"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "efe542fc3fff6273094904cd4c89b9a4e82bbd8c6bc55494208ec82a72a20763"
+      },
+      {
+        "path": "package.json",
+        "sha256": "e380d049b7f1beacae4ab3760c4ed6deebee696e21ad297cba6031884a57b90a"
+      },
+      {
+        "path": "tests/benchmark.test.mjs",
+        "sha256": "05e0f5fbe76879107ee1c8ee43c274092834bfda430d21945d7c2cfeb311113b"
+      },
+      {
+        "path": "tests/compositeRelease.test.mjs",
+        "sha256": "b32f2580e3bfe298b561089372ff8fd7dd44efdaf6c17c6944856605d8bef59b"
+      },
+      {
+        "path": "tests/crystalPhysicsFix.test.mjs",
+        "sha256": "22b41e82c64c8b91f0177f02b8cdaf89c3f9fcca174e1ba7040996356c9659c2"
+      },
+      {
+        "path": "tests/helpers/historicalV1Test.mjs",
+        "sha256": "4e96c36b5b88a5b83d406a63e01880eeb3a89264702cd8807b353414e8e3d319"
+      },
+      {
+        "path": "tests/helpers/independentPhysics.mjs",
+        "sha256": "d85f20f15a53218e169cc27ed5cf677c8ac644c488d718c4f998e127468cd842"
+      },
+      {
+        "path": "tests/helpers/physicsProbe.mjs",
+        "sha256": "c91c9965526bfb0118dec9674e648d857f0175eb9238d828ffea77e16f9945b4"
+      },
+      {
+        "path": "tests/helpers/shapeSolverOracle.mjs",
+        "sha256": "421f717e031c14e216c24201b6a1509d8e3a51c54d1cebb75c6bfc5962436e09"
+      },
+      {
+        "path": "tests/tools/boundedPhysicsV2.mjs",
+        "sha256": "9dd35d364376d7f9f39828fe94bb58b21bb7e901ab26a9432c2286829351cc7a"
+      },
+      {
+        "path": "tests/tools/capturePhysicsV2.mjs",
+        "sha256": "8c1da8658937b0094982ccc7b474f1e7b461fe6f3eb643e9b91afa6f4f5438f8"
+      },
+      {
+        "path": "tests/tools/measurePhysicsV2.mjs",
+        "sha256": "d95f2f8dd4fba0c08220604be060b1a26d080a67f7b3f67c2839ab2a385775cb"
+      },
+      {
+        "path": "tests/tools/runHistoricalV1.mjs",
+        "sha256": "27713280b1e5729f8e603546aaa7e40eb600f38d20b91743e7ba91a6cd04dc2b"
+      },
+      {
+        "path": "tests/tools/validatePhysicsV2.mjs",
+        "sha256": "f2b23a234dfd84a473209e8a7a6389a1e850ed5b17ea597e0ae69a4c804d7bac"
+      },
+      {
+        "path": "tests/versionIdentity.test.mjs",
+        "sha256": "99956d3bbc8fe1b2221a8c14445ea8d87bc62192187308e07a5fed0b85c90930"
+      },
+      {
+        "path": "versions/benchmark-v2.mjs",
+        "sha256": "181985eb25186d88d05f076cf9a12014e05bfafd01cbf81c5c0d9cfe84a7a094"
+      },
+      {
+        "path": "versions/historical-test-partition.json",
+        "sha256": "e0a67ee3faefb7f35e0417b3a7538011d521fddbafa6b55fda51f5a1e13838aa"
+      },
+      {
+        "path": "versions/identity.mjs",
+        "sha256": "d8635f35b5fbee62b0f52a35284e3d90c94d1b900b9ce21bd2cdaabbb70ebc8a"
+      }
+    ]
+  },
+  "frozenInventory": {
+    "path": "versions/frozen-v1.inventory.json",
+    "sha256": "2d2d7327d7f714776f38ae396a232419a6afa47a8dde6b5b83ece305a27b58b9"
+  },
+  "benchmark": {
+    "inputReleaseId": "hard-53x3-stage-v1",
+    "members": 159,
+    "mode": "read-only-reuse-with-independent-v2-acceptance",
+    "manifestPath": "benchmarks/releases/hard-53x3-stage-v1.release.json"
+  },
+  "gameCertification": "UNKNOWN"
+}

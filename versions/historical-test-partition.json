@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reason": "Immutable v1 release acceptance callbacks run under original v1 code; never counted as v2 PASS.",
+  "historicalCommand": "npm run test:historical-v1",
+  "tests": [
+    {
+      "location": "tests\\benchmark.test.mjs:76:1",
+      "name": "pilot generation is deterministic and the committed artifact independently validates",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:99:1",
+      "name": "Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:147:1",
+      "name": "Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:200:1",
+      "name": "coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:214:1",
+      "name": "expansion pilot separates proof basis from two distinct presented environments and replays all six",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:235:1",
+      "name": "Hard 53x1 staged generation covers every target and release-validates every success",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:1148:1",
+      "name": "difficulty comparison uses canonical object keys while preserving array order",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:1231:1",
+      "name": "trusted release binds the canonical content of the actual external artifact",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:1280:1",
+      "name": "canonical release identity accepts a content-identical artifact copy and binds the public solver projection",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:1297:1",
+      "name": "manifest revision identity is independent from immutable artifact release identity without changing semantic validation",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\benchmark.test.mjs:1318:1",
+      "name": "manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\compositeRelease.test.mjs:42:1",
+      "name": "released composite deterministically resolves all 159 provenance-preserving members",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    },
+    {
+      "location": "tests\\compositeRelease.test.mjs:138:1",
+      "name": "JSON formatting and property order do not alter trusted composite identity",
+      "onlyKnownBindingFailure": true,
+      "currentDisposition": "HISTORICAL_V1_ONLY",
+      "behavioralDependence": "No observed v1-only physical output; immutable trusted-release source identity is v1-specific."
+    }
+  ]
+}

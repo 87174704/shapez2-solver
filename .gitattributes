@@ -3,3 +3,8 @@
 /styles.css -text
 /en/index.html -text
 /cn/index.html -text
+/versions/** -text
+/tests/** -text
+/package.json -text
+/release.json -text
+/docs/physics-v2-release-gate-20261029/** -text

@@ -1,0 +1,4682 @@
+{
+  "scope": "Finite hand-designed controls and 4x15 mask grid; states not all proven constructible. Not complete game parity.",
+  "sourceEvidenceSha256": "e3fc3d7f6794ccc9e9483adee5260858d4cc350b1d588109729cd1fc1ea40d80",
+  "cases": [
+    {
+      "id": "pin-u-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "pin-u-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu----"
+      ]
+    },
+    {
+      "id": "pin-u-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cucu--"
+      ]
+    },
+    {
+      "id": "pin-u-mirrorfalse-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cu--cucu"
+      ]
+    },
+    {
+      "id": "pin-u-mirrortrue-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:cucu--cu"
+      ]
+    },
+    {
+      "id": "pin-u-mirrortrue-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cucucu--"
+      ]
+    },
+    {
+      "id": "pin-u-mirrortrue-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:--cucucu"
+      ]
+    },
+    {
+      "id": "pin-u-mirrortrue-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cu--cucu"
+      ]
+    },
+    {
+      "id": "pin-u-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "pin-u-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "pin-u-prefix-P-P-P-P-:CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:CuCuCuCu:------Cu"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cr"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:crcrcr--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:crcr----"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--crcrcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--crcr--"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cr--crcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cr--crcr"
+      ]
+    },
+    {
+      "id": "pin-r-mirrortrue-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:crcr--cr"
+      ]
+    },
+    {
+      "id": "pin-r-mirrortrue-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:crcrcr--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:crcrcr--"
+      ]
+    },
+    {
+      "id": "pin-r-mirrortrue-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--crcrcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:--crcrcr"
+      ]
+    },
+    {
+      "id": "pin-r-mirrortrue-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cr--crcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cr--crcr"
+      ]
+    },
+    {
+      "id": "pin-r-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cr"
+      ]
+    },
+    {
+      "id": "pin-r-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cr"
+      ]
+    },
+    {
+      "id": "pin-r-prefix-P-P-P-P-:CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:CuCuCuCu:------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:CuCuCuCu:------Cu"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cb"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cbcrcg--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cbcr----"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cbcrcg"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cbcr--"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cg--cbcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cg--cbcr"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrortrue-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:crcb--cg"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:crcb--cg"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrortrue-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cgcrcb--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cgcrcb--"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrortrue-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cgcrcb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:--cgcrcb"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrortrue-rot3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cb--cgcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cb--cgcr"
+      ]
+    },
+    {
+      "id": "pin-mixed-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cb"
+      ]
+    },
+    {
+      "id": "pin-mixed-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cb"
+      ]
+    },
+    {
+      "id": "pin-mixed-prefix-P-P-P-P-:CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:CuCuCuCu:------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:CuCuCuCu:------Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-0-1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-1",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-1",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-1",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-1",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cu------",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu:cu------",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-2",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-2",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-2",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-2",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:--cu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu----"
+      ]
+    },
+    {
+      "id": "stack-mask-0-3",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cucu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucu----:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-3",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:cucu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-3",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-3",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cucu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu:cucu----",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-4",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-4",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:----cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-4",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-4",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-4",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:----cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-5",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-5",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cu--cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-5",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-5",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-5",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cu--cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu:cu------",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-6",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-6",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-6",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-6",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-6",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:--cucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-7",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu----"
+      ]
+    },
+    {
+      "id": "stack-mask-0-7",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cucucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucu----:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-7",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-7",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-7",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cucucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-8",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-8",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:------cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-8",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-8",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-8",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:------cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-9",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cu----cu"
+      ]
+    },
+    {
+      "id": "stack-mask-0-9",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cu----cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu----cu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-9",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-9",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-9",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cu----cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-10",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-10",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-10",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-10",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-10",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:--cu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-11",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu--cu"
+      ]
+    },
+    {
+      "id": "stack-mask-0-11",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucu--cu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-11",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-11",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-11",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cucu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-12",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-12",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:----cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-12",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-12",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-12",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:----cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-13",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cu--cucu"
+      ]
+    },
+    {
+      "id": "stack-mask-0-13",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cu--cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu--cucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-13",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-13",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-13",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cu--cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-14",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "stack-mask-0-14",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-14",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-14",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-14",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:--cucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-0-15",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-0-15",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cucucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucucucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-0-15",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-0-15",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "Cu------:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-0-15",
+      "operation": "Swapper",
+      "inputs": [
+        "Cu------:cucucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu--RuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-1",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-1",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-1",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-1",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cu------",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-2",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:--cu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----:--cu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-2",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-2",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-2",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:--cu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu:--cu----",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:cucu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-3",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cucu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:cucu----:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-3",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----:cucu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-3",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:cucu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-3",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cucu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu:cucu----",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-4",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-4",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:----cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-4",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-4",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-4",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:----cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-5",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-5",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cu--cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-5",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-5",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-5",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cu--cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-6",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-1-6",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:--cucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----:--cucu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-6",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-6",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-6",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:--cucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-7",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:cucucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-1-7",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cucucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:cucucu--:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-7",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-7",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-7",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cucucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-8",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-8",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:------cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-8",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-8",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-8",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:------cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-9",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-9",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cu----cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-9",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-9",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-9",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cu----cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-10",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-10",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:--cu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----:--cu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-10",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-10",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:--cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-10",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:--cu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu:--cu----",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-11",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:cucu--cu"
+      ]
+    },
+    {
+      "id": "stack-mask-1-11",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:cucu--cu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-11",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-11",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-11",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cucu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-12",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-12",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:----cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-12",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-12",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-12",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:----cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-13",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----"
+      ]
+    },
+    {
+      "id": "stack-mask-1-13",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cu--cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-13",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-13",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-13",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cu--cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-14",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-1-14",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:--cucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----:--cucu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-14",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-14",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-14",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:--cucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-1-15",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:cucucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-1-15",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:cucucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----:cucucucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-1-15",
+      "operation": "Cutter",
+      "inputs": [
+        "--Cu----:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-1-15",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "--Cu----:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "id": "Swapper-mask-1-15",
+      "operation": "Swapper",
+      "inputs": [
+        "--Cu----:cucucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRu----"
+      ]
+    },
+    {
+      "id": "pin-mask-2-1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-1",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-1",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-1",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-1",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cu------",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-2",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:--cu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-2",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-2",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-2",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:--cu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-3",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cucu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-3",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-3",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-3",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cucu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-4",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:----cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-4",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:----cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--:----cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-4",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:----cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-4",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-4",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:----cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--:----cu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-5",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:----cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-5",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cu--cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--:----cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-5",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:----cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-5",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-5",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cu--cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--:----cu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-6",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:--cucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-6",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:--cucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--:--cucu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-6",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-6",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-6",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:--cucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-7",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cucucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-7",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cucucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:cucucu--:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-7",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-7",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-7",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cucucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-8",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-8",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:------cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-8",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-8",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-8",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:------cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-9",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-9",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cu----cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-9",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-9",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-9",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cu----cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-10",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-10",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:--cu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-10",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-10",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-10",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:--cu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-11",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--"
+      ]
+    },
+    {
+      "id": "stack-mask-2-11",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-11",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-11",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-11",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cucu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-12",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:----cucu"
+      ]
+    },
+    {
+      "id": "stack-mask-2-12",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:----cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--:----cucu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-12",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:----cucu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-12",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-12",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:----cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--:----cucu"
+      ]
+    },
+    {
+      "id": "pin-mask-2-13",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cu--cucu"
+      ]
+    },
+    {
+      "id": "stack-mask-2-13",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cu--cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:cu--cucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-13",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-13",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-13",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cu--cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-14",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:--cucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-2-14",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:--cucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru--Cu--:--cucucu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-14",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-14",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-14",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:--cucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-2-15",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "----Cu--:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----P---:----Cu--:cucucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-2-15",
+      "operation": "Stacker",
+      "inputs": [
+        "----Cu--:cucucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--:cucucucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-2-15",
+      "operation": "Cutter",
+      "inputs": [
+        "----Cu--:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-2-15",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "----Cu--:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-2-15",
+      "operation": "Swapper",
+      "inputs": [
+        "----Cu--:cucucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "id": "pin-mask-3-1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-1",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-1",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-1",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-1",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cu------",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-2",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:--cu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-2",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-2",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:--cu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-2",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:--cu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-3",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-3",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucu----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-3",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-3",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cucu----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-3",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cucu----",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-4",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-4",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:----cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-4",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-4",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:----cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-4",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:----cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-5",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-5",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cu--cu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-5",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-5",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cu--cu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-5",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cu--cu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-6",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-6",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:--cucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-6",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-6",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:--cucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-6",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:--cucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-7",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-7",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-7",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-7",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-7",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cucucu--",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-8",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:------cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-8",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:------cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu:------cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-8",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:------cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-8",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:------cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-8",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:------cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu:------cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-9",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-9",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cu----cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu----cu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-9",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-9",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cu----cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-9",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cu----cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-10",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:------cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-10",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:--cu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu:------cu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-10",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:------cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-10",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:--cu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-10",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:--cu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu:------cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-11",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-11",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu----cu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-11",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-11",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-11",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cucu--cu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-12",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:----cucu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-12",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:----cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu:----cucu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-12",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:----cucu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-12",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:----cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-12",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:----cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu:----cucu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-13",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu--cucu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-13",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cu--cucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu--cucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-13",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-13",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cu--cucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-13",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cu--cucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-14",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:--cucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-14",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:--cucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Ru----Cu:--cucucu"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-14",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-14",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-14",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:--cucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-15",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cucucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-15",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cucucucu:Ru------"
+      ]
+    },
+    {
+      "id": "Cutter-mask-3-15",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "Half Destroyer-mask-3-15",
+      "operation": "Half Destroyer",
+      "inputs": [
+        "------Cu:cucucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------"
+      ]
+    },
+    {
+      "id": "Swapper-mask-3-15",
+      "operation": "Swapper",
+      "inputs": [
+        "------Cu:cucucucu",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----RuRu",
+        "RuRu--Cu"
+      ]
+    },
+    {
+      "id": "control-pin-------Cu:cucu--cu",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ]
+    },
+    {
+      "id": "control-stack-------Cu:cucu--cu",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu----cu:Ru------"
+      ]
+    },
+    {
+      "id": "control-generator-------Cu:cucu--cu",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "cgcgcgCu:cucucgcu"
+      ]
+    },
+    {
+      "id": "control-cut-------Cu:cucu--cu",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "control-pin-------Cu:crcg--cb:--cw----",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cb"
+      ]
+    },
+    {
+      "id": "control-stack-------Cu:crcg--cb:--cw----",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cr----cb:Ru------"
+      ]
+    },
+    {
+      "id": "control-generator-------Cu:crcg--cb:--cw----",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "cgcgcgCu:crcgcgcb:cgcwcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-------Cu:crcg--cb:--cw----",
+      "operation": "Cutter",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu",
+        "--------"
+      ]
+    },
+    {
+      "id": "control-pin-Cu------:cu------:cu------:cu------",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cu------:cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "control-stack-Cu------:cu------:cu------:cu------",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cu------:cu------:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cu------:cu------:cu------"
+      ]
+    },
+    {
+      "id": "control-generator-Cu------:cu------:cu------:cu------",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "Cu------:cu------:cu------:cu------"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "Cucgcgcg:cucgcgcg:cucgcgcg:cucgcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-Cu------:cu------:cu------:cu------",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cu------:cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:cu------:cu------:cu------"
+      ]
+    },
+    {
+      "id": "control-pin-Cu------:cr------:cb------:cg------",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cr------:cb------:cg------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "control-stack-Cu------:cr------:cb------:cg------",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cr------:cb------:cg------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cr------:cb------:cg------"
+      ]
+    },
+    {
+      "id": "control-generator-Cu------:cr------:cb------:cg------",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "Cu------:cr------:cb------:cg------"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "Cucgcgcg:crcgcgcg:cbcgcgcg:cgcgcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-Cu------:cr------:cb------:cg------",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:cr------:cb------:cg------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:cr------:cb------:cg------"
+      ]
+    },
+    {
+      "id": "control-pin-CuCuCuCu:RuRuRuRu:cr------:cb------",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:RuRuRuRu"
+      ]
+    },
+    {
+      "id": "control-stack-CuCuCuCu:RuRuRuRu:cr------:cb------",
+      "operation": "Stacker",
+      "inputs": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------"
+      ]
+    },
+    {
+      "id": "control-generator-CuCuCuCu:RuRuRuRu:cr------:cb------",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "CuCuCuCu:RuRuRuRu:crcgcgcg:cbcgcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-CuCuCuCu:RuRuRuRu:cr------:cb------",
+      "operation": "Cutter",
+      "inputs": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----CuCu:----RuRu",
+        "CuCu----:RuRu----:cr------:cb------"
+      ]
+    },
+    {
+      "id": "control-pin-Cu------:--cr----",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cr----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "control-stack-Cu------:--cr----",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cr----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "control-generator-Cu------:--cr----",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "Cu------:--cr----"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "Cucgcgcg:cgcrcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-Cu------:--cr----",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cr----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "control-pin-Cu------:--cr--cb",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--cr--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "control-stack-Cu------:--cr--cb",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:--cr--cb",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Ru------"
+      ]
+    },
+    {
+      "id": "control-generator-Cu------:--cr--cb",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "Cu------:--cr--cb"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "Cucgcgcg:cgcrcgcb"
+      ]
+    },
+    {
+      "id": "control-cut-Cu------:--cr--cb",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:--cr--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------"
+      ]
+    },
+    {
+      "id": "control-pin-Cu------:Cu------:Cu------:cu------",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:Cu------:Cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:Cu------:Cu------"
+      ]
+    },
+    {
+      "id": "control-stack-Cu------:Cu------:Cu------:cu------",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:Cu------:Cu------:cu------",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:Cu------:Cu------:cu------"
+      ]
+    },
+    {
+      "id": "control-generator-Cu------:Cu------:Cu------:cu------",
+      "operation": "Crystal Generator",
+      "inputs": [
+        "Cu------:Cu------:Cu------:cu------"
+      ],
+      "params": {
+        "color": "g"
+      },
+      "maxLayers": 4,
+      "actual": [
+        "Cucgcgcg:Cucgcgcg:Cucgcgcg:cucgcgcg"
+      ]
+    },
+    {
+      "id": "control-cut-Cu------:Cu------:Cu------:cu------",
+      "operation": "Cutter",
+      "inputs": [
+        "Cu------:Cu------:Cu------:cu------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--------",
+        "Cu------:Cu------:Cu------:cu------"
+      ]
+    },
+    {
+      "id": "unsupported-adjacent",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--crcg--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "id": "unsupported-separated",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cr--cb--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cr------"
+      ]
+    }
+  ]
+}

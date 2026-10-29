@@ -1,0 +1,121 @@
+{
+  "sourceEvidenceSha256": "254aef70fb8827c07440147aee36ed00c76a373a96433273466826e2f57725b2",
+  "rows": [
+    {
+      "id": "ring-same",
+      "input": "cucu--cu",
+      "seed": [
+        0,
+        1
+      ],
+      "after": "--------"
+    },
+    {
+      "id": "ring-mixed",
+      "input": "crcg--cb",
+      "seed": [
+        0,
+        1
+      ],
+      "after": "--------"
+    },
+    {
+      "id": "cross-layer-mixed",
+      "input": "crcg--cb:--cw----",
+      "seed": [
+        0,
+        3
+      ],
+      "after": "--------:--------"
+    },
+    {
+      "id": "diagonal-separate",
+      "input": "cr--cb--",
+      "seed": [
+        0,
+        0
+      ],
+      "after": "----cb--"
+    },
+    {
+      "id": "four-layer-vertical",
+      "input": "cr------:cg------:cb------:cw------",
+      "seed": [
+        2,
+        0
+      ],
+      "after": "--------:--------:--------:--------"
+    }
+  ],
+  "triggers": [
+    {
+      "operation": "Cutter",
+      "inputs": [
+        "crCuCucr:cgcgcgcg"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "----Cu--",
+        "--Cu----"
+      ]
+    },
+    {
+      "operation": "Half Destroyer",
+      "inputs": [
+        "crCuCucr:cgcgcgcg"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--Cu----"
+      ]
+    },
+    {
+      "operation": "Swapper",
+      "inputs": [
+        "crCuCucr:cgcgcgcg",
+        "RuRuRuRu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--CuRuRu",
+        "RuRuCu--"
+      ]
+    },
+    {
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:RuRuRuRu:cr------:cb------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:RuRuRuRu"
+      ]
+    },
+    {
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:--crcg--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------"
+      ]
+    },
+    {
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cr--cb--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cr------"
+      ]
+    }
+  ]
+}

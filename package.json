@@ -11,6 +11,10 @@
     "bench": "node --expose-gc tests/perf/shapeSolver.bench.mjs --quick",
     "bench:full": "node --expose-gc tests/perf/shapeSolver.bench.mjs --full",
     "bench:stress": "node --expose-gc tests/perf/shapeSolver.bench.mjs --stress",
-    "bench:official": "node tests/perf/officialWorkload.bench.mjs"
+    "bench:official": "node tests/perf/officialWorkload.bench.mjs",
+    "test:historical-v1": "node tests/tools/runHistoricalV1.mjs",
+    "test:physics-v2": "node --test tests/crystalPhysicsFix.test.mjs tests/versionIdentity.test.mjs",
+    "verify:physics-v2": "node tests/tools/validatePhysicsV2.mjs",
+    "measure:physics-v2": "node --expose-gc tests/tools/measurePhysicsV2.mjs"
   }
 }

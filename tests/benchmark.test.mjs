@@ -1,3 +1,4 @@
+import { historicalV1Test } from './helpers/historicalV1Test.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
@@ -73,7 +74,7 @@ function reverseObjectKeyOrder(value) {
         .map(([key, child]) => [key, reverseObjectKeyOrder(child)]));
 }
 
-test('pilot generation is deterministic and the committed artifact independently validates', async () => {
+historicalV1Test('pilot generation is deterministic and the committed artifact independently validates', async () => {
     const generated = await buildPilot({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/pilot/v1/instances.json', import.meta.url), 'utf8'));
     assert.equal(generated.artifact.sha256, committed.sha256);
@@ -96,7 +97,7 @@ test('causal pilot audit preserves witnesses and retains distinct resource ances
     }
 });
 
-test('Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target', async () => {
+historicalV1Test('Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target', async () => {
     const generated = await buildHard53x3DiversityPilot({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/diversity-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const baseline = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
@@ -144,7 +145,7 @@ test('Hard 53x3 diversity pilot preserves the frozen baseline and adds two real 
     assert.equal(baselineValidation.summary.mechanicallyReplayed, 53);
 });
 
-test('Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets', async () => {
+historicalV1Test('Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets', async () => {
     const generated = await buildHard53x3Rollout({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/hard-53x3-rollout/v1/instances.json', import.meta.url), 'utf8'));
     const baseline = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
@@ -197,7 +198,7 @@ test('Hard 53x3 staged composition preserves all source identities and isolates 
     assert.equal(projection.instances.every(instance => /^h53-[0-9a-f]{20}$/.test(instance.id)), true);
 });
 
-test('coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities', async () => {
+historicalV1Test('coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities', async () => {
     const generated = await buildCoveragePilot({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/coverage-pilot/v1/instances.json', import.meta.url), 'utf8'));
     assert.equal(generated.artifact.sha256, committed.sha256);
@@ -211,7 +212,7 @@ test('coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal
     assert.equal(validation.summary.mechanicallyReplayed, 5);
 });
 
-test('expansion pilot separates proof basis from two distinct presented environments and replays all six', async () => {
+historicalV1Test('expansion pilot separates proof basis from two distinct presented environments and replays all six', async () => {
     const generated = await buildExpansionPilot({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     assert.equal(generated.artifact.sha256, committed.sha256);
@@ -232,7 +233,7 @@ test('expansion pilot separates proof basis from two distinct presented environm
     assert.equal(validation.summary.mechanicallyReplayed, 6);
 });
 
-test('Hard 53x1 staged generation covers every target and release-validates every success', async () => {
+historicalV1Test('Hard 53x1 staged generation covers every target and release-validates every success', async () => {
     const generated = await buildHard53x1({ write: false });
     const committed = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
     assert.equal(generated.status.length, 53);
@@ -1145,7 +1146,7 @@ test('repository policy rejects unknown versions, arbitrary profiles, incomplete
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('difficulty comparison uses canonical object keys while preserving array order', async () => {
+historicalV1Test('difficulty comparison uses canonical object keys while preserving array order', async () => {
     const { artifact: source } = await auditPilot({ write: false });
     const directory = await mkdtemp(path.join(tmpdir(), 'benchmark-difficulty-canonical-'));
     try {
@@ -1228,7 +1229,7 @@ test('v3 partition schema uses controlled release profiles rather than one hard-
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('trusted release binds the canonical content of the actual external artifact', async () => {
+historicalV1Test('trusted release binds the canonical content of the actual external artifact', async () => {
     const source = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const mutations = [
         ['generatorVersion', artifact => { artifact.instances[0].provenance.generatorVersion = 'forged-generator'; }],
@@ -1277,7 +1278,7 @@ test('trusted release binds the canonical content of the actual external artifac
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('canonical release identity accepts a content-identical artifact copy and binds the public solver projection', async () => {
+historicalV1Test('canonical release identity accepts a content-identical artifact copy and binds the public solver projection', async () => {
     const source = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const reorderedTopLevel = Object.fromEntries(Object.entries(source).reverse());
     const directory = await mkdtemp(path.join(tmpdir(), 'benchmark-release-copy-'));
@@ -1294,7 +1295,7 @@ test('canonical release identity accepts a content-identical artifact copy and b
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('manifest revision identity is independent from immutable artifact release identity without changing semantic validation', async () => {
+historicalV1Test('manifest revision identity is independent from immutable artifact release identity without changing semantic validation', async () => {
     const pairs = [
         ['hard-pilot-audit-v2', PILOT_MANIFEST_REVISION],
         ['hard-coverage-pilot-v1', COVERAGE_MANIFEST_REVISION],
@@ -1315,7 +1316,7 @@ test('manifest revision identity is independent from immutable artifact release 
     }
 });
 
-test('manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins', async () => {
+historicalV1Test('manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins', async () => {
     const policy = JSON.parse(await readFile(new URL('../benchmarks/policy/official-policy.v1.json', import.meta.url), 'utf8'));
     const artifact = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const currentManifest = JSON.parse(await readFile(new URL('../benchmarks/releases/hard-expansion-pilot-v1-manifest-r2.release.json', import.meta.url), 'utf8'));

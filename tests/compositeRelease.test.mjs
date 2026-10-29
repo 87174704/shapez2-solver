@@ -1,3 +1,4 @@
+import { historicalV1Test } from './helpers/historicalV1Test.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import path from 'node:path';
@@ -39,7 +40,7 @@ async function validateTamper(base, mutate) {
     }
 }
 
-test('released composite deterministically resolves all 159 provenance-preserving members', async () => {
+historicalV1Test('released composite deterministically resolves all 159 provenance-preserving members', async () => {
     const result = await validateCompositeRelease();
     assert.equal(result.valid, true, result.errors.join('\n'));
     assert.deepEqual({
@@ -135,7 +136,7 @@ test('repository authority file substitution cannot hide behind a re-hashed poli
     }
 });
 
-test('JSON formatting and property order do not alter trusted composite identity', async () => {
+historicalV1Test('JSON formatting and property order do not alter trusted composite identity', async () => {
     const manifest = await load(MANIFEST_PATH);
     const reordered = reverseObjectKeys(manifest);
     assert.equal(canonicalJson(reordered), canonicalJson(manifest));

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "current": "shape-operations-v2-support-closure",
+  "versions": {
+    "shape-operations-v1": {
+      "path": "versions/shape-operations-v1.json",
+      "canonicalSha256": "bc6a6f4f4d67b785f704ee7052370a5c5f3b6e8fb174bad30a7a9a37d4f39302"
+    },
+    "shape-operations-v2-support-closure": {
+      "path": "versions/shape-operations-v2-support-closure.json",
+      "canonicalSha256": "3d678923c491776c524f790593815a7b1f44c99621284a0c33e0ec32bed5ca06"
+    }
+  }
+}
