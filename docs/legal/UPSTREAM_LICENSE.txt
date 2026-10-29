@@ -1,0 +1,7 @@
+Upstream: https://github.com/Vystel/shapez2-solver
+Revision: ba626467641243088993d5486e7f22bc455bae69
+
+# License and Usage
+
+This project is MIT licensed, allowing free use, modification, and distribution under the condition that credit is given (link to this repository).
+Feel free to fork, contribute, or build upon it for your own Shapez 2 projects (and let me know if you do so)!

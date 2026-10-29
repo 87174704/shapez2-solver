@@ -1,0 +1,23 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {canonicalHash,configHash,baselineIdentity,aggregateResults,resolveCases} from '../../benchmarks/tools/solver-baseline-core.mjs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+if (!process.argv[2]) throw Error('Explicit verified historical v1 directory required');
+const {validateCompositeRelease}=await import(pathToFileURL(path.resolve(process.argv[2], 'benchmarks/tools/validate-composite-release.mjs')));
+const root=new URL('../../',import.meta.url);const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
+await mkdir(new URL('../../.ci-results/',import.meta.url),{recursive:true});
+const cfg=await read('benchmarks/solver-baselines/hard-53x3-v1/config.json');
+const results=await read('benchmarks/solver-baselines/hard-53x3-v1/results.json');
+const identity=await read('benchmarks/solver-baselines/hard-53x3-v1/identity.json');
+const summary=await read('benchmarks/solver-baselines/hard-53x3-v1/aggregate.json');
+const records=results.records;let recordChecks=0;
+for(const record of records){const {recordCanonicalSha256,...payload}=record;assert.equal(canonicalHash(payload),recordCanonicalSha256);const disk=await read(`benchmarks/solver-baselines/hard-53x3-v1/records/${record.targetId}-${record.familySlot}.json`);assert.deepEqual(disk,record);recordChecks++;}
+const {configCanonicalSha256,...payload}=cfg;assert.equal(configHash(payload),configCanonicalSha256);assert.deepEqual(baselineIdentity(cfg,records),identity);
+const manifest=await read('benchmarks/releases/hard-53x3-stage-v1.release.json');
+const selection=await read(manifest.bindings.finalSelection.path);const sources=new Map(await Promise.all(manifest.sourceRegistry.map(async s=>[s.sourceId,await read(s.path)])));
+const cases=resolveCases(manifest,selection,sources);
+const aggregate=aggregateResults(cases,records);if(summary)assert.deepEqual(aggregate,summary);
+const composite=await validateCompositeRelease();assert.equal(composite.valid,true,composite.errors.join('\n'));
+const evidence={status:'VERIFIED evidence integrity only; historical Solver not rerun',recordChecks,configHashMatches:true,baselineIdentityMatches:true,aggregateChecked:!!summary,baselineCanonicalSha256:identity.baselineCanonicalSha256,composite:composite.summary};
+await writeFile(new URL('../../.ci-results/frozen.json',import.meta.url),JSON.stringify(evidence,null,2)+'\n');console.log(JSON.stringify(evidence,null,2));
