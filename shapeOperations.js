@@ -1,6 +1,9 @@
 // JS port of a file in Loupau38's Shapez 2 Library https://pypi.org/project/shapez2/ 
 import { PART_CODES, SHAPE_LAYER_SEPARATOR, UNCOLORED_CODE, UNPAINTABLE_PARTS, REPLACED_BY_CRYSTAL } from './shapeConstants.js';
 
+// Frozen v1 benchmark bindings remain historical; new results must identify v2.
+export const SHAPE_OPERATIONS_SEMANTICS = 'shape-operations-v2-support-closure';
+
 function deepCopyLayers(layers) {
     const result = new Array(layers.length);
     for (let i = 0; i < layers.length; i++) {
@@ -192,93 +195,56 @@ function _makeLayersFall(layers) {
         return groups;
     }
 
-    function isPartSupported(layerIndex, partIndex, visitedParts, supportedPartStates) {
-        if (supportedPartStates[layerIndex][partIndex] !== null) {
-            return supportedPartStates[layerIndex][partIndex];
+    function calculateSupportedParts() {
+        // Least fixed point of the support graph, seeded only by floor anchors.
+        // Each occupied cell is queued once; cycles cannot support themselves.
+        const supported = layers.map(layer => layer.map(() => false));
+        const queue = [];
+        function mark(layerIndex, partIndex) {
+            if (supported[layerIndex][partIndex] || layers[layerIndex][partIndex].shape === PART_CODES.NOTHING) return;
+            supported[layerIndex][partIndex] = true;
+            queue.push([layerIndex, partIndex]);
         }
-
-        const curPart = layers[layerIndex][partIndex];
-
-        function inner() {
-            if (layers[layerIndex][partIndex].shape === PART_CODES.NOTHING) {
-                return false;
+        for (let partIndex = 0; partIndex < layers[0].length; partIndex++) mark(0, partIndex);
+        for (let cursor = 0; cursor < queue.length; cursor++) {
+            const [layerIndex, partIndex] = queue[cursor];
+            const part = layers[layerIndex][partIndex];
+            // Any supported occupied cell supports the cell directly above it.
+            if (layerIndex + 1 < layers.length) mark(layerIndex + 1, partIndex);
+            for (const offset of [-1, 1]) {
+                const neighbor = _getCorrectedIndex(layers[layerIndex], partIndex + offset);
+                if (_gravityConnected(part, layers[layerIndex][neighbor])) mark(layerIndex, neighbor);
             }
-
-            if (layerIndex === 0) {
-                return true;
+            // Only fused crystals can suspend a cell from above.
+            if (layerIndex > 0 && _crystalsFused(part, layers[layerIndex - 1][partIndex])) {
+                mark(layerIndex - 1, partIndex);
             }
-
-            const toGiveVisitedParts = [...visitedParts, [layerIndex, partIndex]];
-
-            const partUnderneath = [layerIndex - 1, partIndex];
-            if (
-                !visitedParts.some(([l, p]) => l === partUnderneath[0] && p === partUnderneath[1]) &&
-                isPartSupported(partUnderneath[0], partUnderneath[1], toGiveVisitedParts, supportedPartStates)
-            ) {
-                return true;
-            }
-
-            const nextPartPos = [layerIndex, _getCorrectedIndex(layers[layerIndex], partIndex + 1)];
-            if (
-                !visitedParts.some(([l, p]) => l === nextPartPos[0] && p === nextPartPos[1]) &&
-                _gravityConnected(curPart, layers[nextPartPos[0]][nextPartPos[1]]) &&
-                isPartSupported(nextPartPos[0], nextPartPos[1], toGiveVisitedParts, supportedPartStates)
-            ) {
-                return true;
-            }
-
-            const prevPartPos = [layerIndex, _getCorrectedIndex(layers[layerIndex], partIndex - 1)];
-            if (
-                !visitedParts.some(([l, p]) => l === prevPartPos[0] && p === prevPartPos[1]) &&
-                _gravityConnected(curPart, layers[prevPartPos[0]][prevPartPos[1]]) &&
-                isPartSupported(prevPartPos[0], prevPartPos[1], toGiveVisitedParts, supportedPartStates)
-            ) {
-                return true;
-            }
-
-            const partAbove = [layerIndex + 1, partIndex];
-            if (
-                partAbove[0] < layers.length &&
-                !visitedParts.some(([l, p]) => l === partAbove[0] && p === partAbove[1]) &&
-                _crystalsFused(curPart, layers[partAbove[0]][partAbove[1]]) &&
-                isPartSupported(partAbove[0], partAbove[1], toGiveVisitedParts, supportedPartStates)
-            ) {
-                return true;
-            }
-
-            return false;
         }
-
-        const result = inner();
-        supportedPartStates[layerIndex][partIndex] = result;
-        return result;
+        return supported;
     }
 
     // first pass of calculating supported parts
-    let supportedPartStates = layers.map(layer => layer.map(() => null));
-    for (let layerIndex = 0; layerIndex < layers.length; layerIndex++) {
-        for (let partIndex = 0; partIndex < layers[layerIndex].length; partIndex++) {
-            isPartSupported(layerIndex, partIndex, [], supportedPartStates);
-        }
-    }
+    let supportedPartStates = calculateSupportedParts();
 
-    // if a crystal is marked as unsupported it will fall and thus break
+    // Collect complete crystal components before mutating their connectivity.
+    const crystalsToBreak = new Set();
+    const numParts = layers[0].length;
     for (let layerIndex = 0; layerIndex < layers.length; layerIndex++) {
         for (let partIndex = 0; partIndex < layers[layerIndex].length; partIndex++) {
-            const part = layers[layerIndex][partIndex];
-            if (part.shape === PART_CODES.CRYSTAL && !supportedPartStates[layerIndex][partIndex]) {
-                layers[layerIndex][partIndex] = new ShapePart(PART_CODES.NOTHING, PART_CODES.NOTHING);
+            const key = layerIndex * numParts + partIndex;
+            if (layers[layerIndex][partIndex].shape !== PART_CODES.CRYSTAL ||
+                supportedPartStates[layerIndex][partIndex] || crystalsToBreak.has(key)) continue;
+            for (const [l, p] of _getConnectedMultiLayer(layers, layerIndex, partIndex, _crystalsFused)) {
+                crystalsToBreak.add(l * numParts + p);
             }
         }
     }
+    for (const key of crystalsToBreak) {
+        layers[Math.floor(key / numParts)][key % numParts] = new ShapePart(PART_CODES.NOTHING, PART_CODES.NOTHING);
+    }
 
     // second pass of calculating supported parts
-    supportedPartStates = layers.map(layer => layer.map(() => null));
-    for (let layerIndex = 0; layerIndex < layers.length; layerIndex++) {
-        for (let partIndex = 0; partIndex < layers[layerIndex].length; partIndex++) {
-            isPartSupported(layerIndex, partIndex, [], supportedPartStates);
-        }
-    }
+    supportedPartStates = calculateSupportedParts();
 
     for (let layerIndex = 0; layerIndex < layers.length; layerIndex++) {
         const layer = layers[layerIndex];
