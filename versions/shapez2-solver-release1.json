@@ -1624,6 +1624,10 @@
         "sha256": "c73380362c72171b0533fb132468712fe2acdd724b8e3736ac4ec325da6c4bb2"
       },
       {
+        "path": ".github/workflows/pages.yml",
+        "sha256": "e736d0cb241d919489f9da49c11f34fdf68976e4bdefbb9e2730ee25b302b12e"
+      },
+      {
         "path": ".github/workflows/verify.yml",
         "sha256": "8893b7b507be992ed7c38ff76121877ba939db9d6c58cd616c6ed6d000561a21",
         "mixedNewlineRecipe": {
@@ -1715,7 +1719,30 @@
       },
       {
         "path": "README.md",
-        "sha256": "76a40e015e87495424349625945d63147f506a09b5c87fa6a3380d693635133a"
+        "sha256": "c6a67117ce13818ee6096b9a9911f1949d936fa8c259739f56f8c62355555211",
+        "mixedNewlineRecipe": {
+          "normalizedLfSha256": "769964dfee8c4d33af5afc4e3f2009bc6f307392e09a539102c6e1b43eaadd5b",
+          "crlfLineIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
       },
       {
         "path": "REPORT.md",
@@ -27527,7 +27554,7 @@
       },
       {
         "path": "release.json",
-        "sha256": "7ccd9aec61e665ca1a60410e5fca52cdc7c14c8281d879260fca1c6ff6edc372"
+        "sha256": "343458787902dbbe23dca12582ece56f2ad2a656b69c59658421d35b812dcecb"
       },
       {
         "path": "scripts/ci/prepare-checkout.mjs",
@@ -27940,11 +27967,11 @@
       },
       {
         "path": "tests/tools/boundedPhysicsV2.mjs",
-        "sha256": "9dd35d364376d7f9f39828fe94bb58b21bb7e901ab26a9432c2286829351cc7a"
+        "sha256": "7d341a8c2c4ff7fb6ef96f19e69027f515ec0047f024daa0f3e083256fa95420"
       },
       {
         "path": "tests/tools/capturePhysicsV2.mjs",
-        "sha256": "8c1da8658937b0094982ccc7b474f1e7b461fe6f3eb643e9b91afa6f4f5438f8"
+        "sha256": "9da1a41a131063473853371bf20bc72d4d7c6b65fb479f7dbbbe2c31de0c7f8d"
       },
       {
         "path": "tests/tools/discoverNestedSplitterWitness.mjs",
@@ -27952,7 +27979,7 @@
       },
       {
         "path": "tests/tools/measurePhysicsV2.mjs",
-        "sha256": "d95f2f8dd4fba0c08220604be060b1a26d080a67f7b3f67c2839ab2a385775cb"
+        "sha256": "3bee7f8ab2901ac0391d8ffc7d7b16a8b43287a8a4e488d211bda83a5f6f6e02"
       },
       {
         "path": "tests/tools/runHistoricalV1.mjs",
@@ -28252,7 +28279,7 @@
       },
       {
         "path": "tools/release1/seal-source.mjs",
-        "sha256": "ff6f73adc7d1f4f2707bf2dfc42b62516df86d3503908c478b215ffe46998e3a"
+        "sha256": "90773d2856950bdb4994de1dc2878e7c6dbcab7f743da33d2eb18e227bb95963"
       },
       {
         "path": "tools/release1/worker.mjs",
@@ -28264,7 +28291,7 @@
       },
       {
         "path": "tools/static-build/acceptance.mjs",
-        "sha256": "c03a978555c61a84f68a039688142d30c8d5e294d7958521446305f2fb83b900"
+        "sha256": "09a4712e5a58556455ef8ccbd26793a8dc187c8a24043e82adbda56a95feeeae"
       },
       {
         "path": "tools/static-build/browser.mjs",
@@ -28371,7 +28398,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "6d8c3745d44f9bb9e8c4a88437b6c78b1540657ff7dd019a17439aac11d290f3"
+    "sha256": "058b43f4a8b4f9e3348cd310ac5b2aea810c35d8b4c5595649dcf6c9cc408b63"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
@@ -28380,6 +28407,7 @@
   ],
   "exclusionReason": "Manifest/pin avoid self reference; release reports are post-validation evidence. Complete Git HEAD/tree additionally binds every tracked file in build-manifest.json.",
   "reviewedChangesFromBaseline": [
+    ".github/workflows/pages.yml",
     ".github/workflows/verify.yml",
     ".gitignore",
     "ARTIFACT_MANIFEST.md",
@@ -28388,8 +28416,12 @@
     "CDN_VERIFICATION.md",
     "DEPENDENCY_MATRIX.md",
     "NEXT_DEPLOY_PLAN.md",
+    "README.md",
     "REPORT.md",
     "constructive/validate-strict-plan.js",
+    "docs/release1/.gitattributes",
+    "docs/release1/REPORT.md",
+    "docs/release1/evidence/integration-audit.json",
     "docs/strict-orientation-constructive-20261030/.gitattributes",
     "docs/strict-orientation-constructive-20261030/.gitignore",
     "docs/strict-orientation-constructive-20261030/CORRECTNESS_VALIDATION.md",
@@ -33869,6 +33901,9 @@
     "tests/strict-routing/holdout-lock.json",
     "tests/strict-routing/holdouts.json",
     "tests/strict-routing/lock-holdouts.mjs",
+    "tests/tools/boundedPhysicsV2.mjs",
+    "tests/tools/capturePhysicsV2.mjs",
+    "tests/tools/measurePhysicsV2.mjs",
     "tests/tools/validatePhysicsV2.mjs",
     "tests/versionIdentity.test.mjs",
     "third-party/.gitattributes",

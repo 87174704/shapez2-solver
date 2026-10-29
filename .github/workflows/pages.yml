@@ -1,0 +1,71 @@
+name: Publish approved Global RC
+on:
+  workflow_dispatch:
+    inputs:
+      rc_commit:
+        description: Full 40-character approved RC commit (must have successful hosted verification)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: github-pages-production
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Require immutable RC and successful hosted CI
+        env:
+          RC: ${{ inputs.rc_commit }}
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          [[ "$RC" =~ ^[0-9a-f]{40}$ ]]
+          gh api "repos/$REPOSITORY/actions/workflows/verify.yml/runs?head_sha=$RC&status=success&per_page=100" > "$RUNNER_TEMP/verified-runs.json"
+          jq -e --arg rc "$RC" '.workflow_runs | any(.head_sha == $rc and .conclusion == "success" and .head_branch == "codex/maintained")' "$RUNNER_TEMP/verified-runs.json"
+      - name: Checkout exactly the approved RC
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ inputs.rc_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up fixed Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.21.0
+      - name: Build verified Global artifact
+        env:
+          RC: ${{ inputs.rc_commit }}
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD)" = "$RC"
+          git merge-base --is-ancestor "$RC" origin/codex/maintained
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --prefix tools/static-build --ignore-scripts --no-audit --no-fund
+          node tools/release1/prepare-checkout.mjs
+          node tools/static-build/build.mjs global
+          node --input-type=module -e "import fs from 'node:fs'; import assert from 'node:assert/strict'; const m=JSON.parse(fs.readFileSync('dist/global/build-manifest.json')); assert.equal(m.sourceCommit,process.env.RC); assert.equal(m.profile,'global'); assert.equal(m.basePath,'/shapez2-solver/'); assert.equal(m.identity.valid,true);"
+      - name: Upload only the approved site artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
+        with:
+          path: dist/global
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the bound artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

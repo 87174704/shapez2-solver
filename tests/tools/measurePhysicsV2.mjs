@@ -1,3 +1,4 @@
+import { verifyRelease } from '../../versions/release1.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -12,7 +13,7 @@ const base = await json(path.join(OUT, 'acceptance.json'));
 if (process.argv[4] === '--worker') {
     const version = process.argv[5], destination = process.argv[6];
     const root = version === 'v1' ? historicalRoot : ROOT;
-    const identity = await verifyVersion({ version: version === 'v1' ? 'shape-operations-v1' : 'shape-operations-v2-support-closure', root });
+    const identity = version === 'v1' ? await verifyVersion({ version: 'shape-operations-v1', root }) : await verifyRelease({ root });
     assert.equal(identity.valid, true, identity.errors.join('\n'));
     assert.equal(typeof globalThis.gc, 'function');
     globalThis.self = { postMessage() {} };

@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "sourceCommit": "e62fc38193b491ccfb5f800af944225b4c09f106",
+  "oldRc": "ec9cc5cb633d021b6af276565223a392f8329b87",
+  "o1OriginalEvidenceFilesChecked": 5475,
+  "measuredCases": 201,
+  "caseInputsExact": true,
+  "oldConstructiveDispatchUnchanged": true,
+  "coreAndExplorerUnchanged": true,
+  "productionFeatureFlagAbsent": true,
+  "normalization": "Code block comparison only normalizes CRLF; release identity verifies exact bytes separately."
+}

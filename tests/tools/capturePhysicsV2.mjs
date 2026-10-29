@@ -1,3 +1,4 @@
+import { verifyRelease } from '../../versions/release1.mjs';
 import fs from 'node:fs/promises';
 import { registerHooks } from 'node:module';
 import { pathToFileURL } from 'node:url';
@@ -5,7 +6,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import { ROOT as rootPath, verifyVersion } from '../../versions/identity.mjs';
 const ROOT=rootPath.replaceAll('\\','/'),OUT=path.resolve(process.argv[2]??path.join(ROOT,'docs/physics-v2-release-gate-20261029/evidence')).replaceAll('\\','/');
-const identity=await verifyVersion({version:'shape-operations-v2-support-closure'});assert.equal(identity.valid,true,identity.errors.join('\n'));
+const identity=await verifyRelease();assert.equal(identity.valid,true,identity.errors.join('\n'));
 const {probe}=await import(pathToFileURL(ROOT+'/tests/helpers/physicsProbe.mjs'));
 const {source}=await probe(ROOT);
 const model=await import(pathToFileURL(ROOT+'/tests/helpers/independentPhysics.mjs'));

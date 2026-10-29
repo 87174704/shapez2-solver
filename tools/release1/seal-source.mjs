@@ -19,10 +19,13 @@ const binding = async p => {
   return result;
 };
 const sourceFiles = git('ls-files','-z').split('\0').filter(p => p && !excluded(p)).sort();
-const source = { files: await Promise.all(sourceFiles.map(binding)) };
-source.sha256 = aggregate(source.files);
 const runtime = { files: await Promise.all([...old.runtime.files.map(f=>f.path), 'constructive/validate-strict-plan.js'].sort().map(binding)) };
 runtime.sha256 = aggregate(runtime.files);
+const release = await json(path.join(ROOT,'release.json'));
+release.runtimeIdentitySha256 = runtime.sha256;
+await fs.writeFile(path.join(ROOT,'release.json'),JSON.stringify(release,null,2)+'\n');
+const source = { files: await Promise.all(sourceFiles.map(binding)) };
+source.sha256 = aggregate(source.files);
 const changedOriginalFiles = git('diff','--cached','--name-only','ec9cc5cb633d021b6af276565223a392f8329b87','--').split('\n').filter(Boolean);
 const m = { schemaVersion: 1, release: RELEASE,
   baselineCommit: 'ec9cc5cb633d021b6af276565223a392f8329b87',

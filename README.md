@@ -1,3 +1,5 @@
+> Release 1 集成与验收记录见 [docs/release1/REPORT.md](docs/release1/REPORT.md)。严格方向普通目标的有界 Constructive 尝试默认启用，无 O1 feature flag；历史报告保持原貌。
+
 # Shapez 2 Solver
 
 A browser-based solver for [Shapez 2](https://shapez2.com/), independently maintained from [Vystel/shapez2-solver](https://github.com/Vystel/shapez2-solver). It supports shape operations, constructive solving, and visual solution graphs.
