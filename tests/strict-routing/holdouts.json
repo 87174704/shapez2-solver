@@ -1,0 +1,636 @@
+[
+  {
+    "id": "L01-mixed",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "RuCuSuWu"
+      ],
+      "startingShapeCodes": [
+        "RuRuRuRu",
+        "CuCuCuCu",
+        "SuSuSuSu",
+        "WuWuWuWu"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L02-two-layer",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "RuRu----:CuCu----"
+      ],
+      "startingShapeCodes": [
+        "RuRu----",
+        "CuCu----"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L03-three-layer",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Su------:Ru------:Cu------"
+      ],
+      "startingShapeCodes": [
+        "Su------",
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L04-four-layer",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Wu------:Su------:Ru------:Cu------"
+      ],
+      "startingShapeCodes": [
+        "Wu------",
+        "Su------",
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L05-clockwise",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "--Ru----"
+      ],
+      "startingShapeCodes": [
+        "Ru------"
+      ],
+      "enabledOperations": [
+        "Rotator CW"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L06-counterclockwise",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "------Ru"
+      ],
+      "startingShapeCodes": [
+        "Ru------"
+      ],
+      "enabledOperations": [
+        "Rotator CCW"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L07-halfturn",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "----Su--"
+      ],
+      "startingShapeCodes": [
+        "Su------"
+      ],
+      "enabledOperations": [
+        "Rotator 180"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L08-copies",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Ru------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Ru------"
+      ],
+      "enabledOperations": [
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L09-surplus-copies",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "RuCuSuWu"
+      ],
+      "startingShapeCodes": [
+        "RuRuRuRu",
+        "CuCuCuCu",
+        "SuSuSuSu",
+        "WuWuWuWu",
+        "RuRuRuRu",
+        "CuCuCuCu"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L10-no-rotation-needed",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Cu------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L11-clean-paint",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Cr------"
+      ],
+      "startingShapeCodes": [
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker",
+        "Painter"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L12-paint-disabled",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "unreachable",
+    "input": {
+      "targetShapeCodes": [
+        "Cr------"
+      ],
+      "startingShapeCodes": [
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L13-insufficient-copy",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "unreachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Ru------"
+      ],
+      "startingShapeCodes": [
+        "Ru------"
+      ],
+      "enabledOperations": [
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L14-wrong-direction",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "unreachable",
+    "input": {
+      "targetShapeCodes": [
+        "--Ru----"
+      ],
+      "startingShapeCodes": [
+        "Ru------"
+      ],
+      "enabledOperations": [],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L15-stack-disabled",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "unreachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Cu------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Rotator CW"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L16-cutter-only",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "RuRu----"
+      ],
+      "startingShapeCodes": [
+        "RuRuRuRu"
+      ],
+      "enabledOperations": [
+        "Cutter"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L17-no-cutters",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Su------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Su------"
+      ],
+      "enabledOperations": [
+        "Stacker",
+        "Rotator CW"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L18-rotated-mixed",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "WuRuCuSu"
+      ],
+      "startingShapeCodes": [
+        "RuRuRuRu",
+        "CuCuCuCu",
+        "SuSuSuSu",
+        "WuWuWuWu"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L19-layer-cap-two",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------:Cu------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Stacker"
+      ],
+      "maxLayers": 2,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L20-waste-rule",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "unreachable",
+    "input": {
+      "targetShapeCodes": [
+        "Ru------"
+      ],
+      "startingShapeCodes": [
+        "Ru------",
+        "Cu------"
+      ],
+      "enabledOperations": [],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": true,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L21-paint-rule-off",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "Cr------"
+      ],
+      "startingShapeCodes": [
+        "Cu------"
+      ],
+      "enabledOperations": [
+        "Painter"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": false
+    }
+  },
+  {
+    "id": "L22-rotation-insensitive",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "--Ru----"
+      ],
+      "startingShapeCodes": [
+        "Ru------"
+      ],
+      "enabledOperations": [],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": false,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L23-multilayer-resource",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "RuRu----:CuCu----"
+      ],
+      "startingShapeCodes": [
+        "RuRu----:CuCu----"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  },
+  {
+    "id": "L24-different-parts",
+    "tier": "holdout",
+    "source": "independent-prespecified",
+    "expectation": "reachable",
+    "input": {
+      "targetShapeCodes": [
+        "HuFuGuRu"
+      ],
+      "startingShapeCodes": [
+        "HuHuHuHu",
+        "FuFuFuFu",
+        "GuGuGuGu",
+        "RuRuRuRu"
+      ],
+      "enabledOperations": [
+        "Rotator CW",
+        "Rotator CCW",
+        "Rotator 180",
+        "Half Destroyer",
+        "Cutter",
+        "Swapper",
+        "Stacker"
+      ],
+      "maxLayers": 4,
+      "maxStatesPerLevel": 3000,
+      "preventWaste": false,
+      "orientationSensitive": true,
+      "allowSplitting": false,
+      "cleanPainting": true
+    }
+  }
+]

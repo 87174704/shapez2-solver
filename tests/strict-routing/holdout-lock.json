@@ -1,0 +1,8 @@
+{
+  "createdBeforeImplementation": true,
+  "rc": "ec9cc5cb633d021b6af276565223a392f8329b87",
+  "createdAt": "2026-10-29T17:28:25.774Z",
+  "sha256": "2a6ae274495800fa20dd83d24a72141970d92dfbd53630b88013973fa749a877",
+  "cases": 24,
+  "policy": "All prespecified cases retained; no solver used in selection. Reachability expectations are hypotheses checked by replay, not witnesses."
+}
