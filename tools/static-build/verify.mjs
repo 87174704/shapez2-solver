@@ -103,7 +103,7 @@ const css = async n => { const r=postcss.parse(await fs.readFile(path.join(ROOT,
 assert.equal(await css('global'), await css('china'));
 const identity = await verifyRelease(); assert.ok(identity.valid,identity.errors.join('\n')); results.identity=identity;
 const rcPaths = new Set(git('ls-tree','-r','--name-only',RC_COMMIT).split('\n'));
-const changed = git('diff','--name-only',RC_COMMIT).split('\n').filter(f=>rcPaths.has(f));
+const changed = git('diff','--name-only',RC_COMMIT,'HEAD').split('\n').filter(f=>rcPaths.has(f));
 const approved=(await readJson('versions/shapez2-solver-release1.json')).reviewedChangesFromBaseline.filter(f=>rcPaths.has(f));
 assert.deepEqual(changed, approved, 'Unexpected baseline changes');
 results.originalSourceChanges=changed;

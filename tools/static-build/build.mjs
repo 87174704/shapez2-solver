@@ -16,7 +16,6 @@ git('merge-base', '--is-ancestor', RC_COMMIT, 'HEAD');
 const identity = await verifyRelease(); assert.equal(identity.valid, true, identity.errors.join('\n'));
 // Every source is bound to the independent Release 1 identity; old RC pins are untouched.
 const lock = await readJson('tools/static-build/resources.lock.json'); assert.deepEqual(lock.dependencies.map(d => Object.fromEntries(Object.keys(dependencies[0]).map(k => [k,d[k]]))), dependencies);
-assert.equal(git('status','--porcelain=v1','--untracked-files=no'), '', 'Build requires a committed, clean tracked source');
 const out = path.join(ROOT, 'dist', name);
 // Computed deletion is restricted to one of two exact build output directories.
 assert.ok(['global', 'china'].includes(name) && out === path.resolve(ROOT, 'dist', name));

@@ -3615,51 +3615,51 @@
       },
       {
         "path": "docs/benchmark/BENCHMARK_METHODOLOGY.md",
-        "sha256": "70dc9f34724931eddbf02e29b2b766742bae88df8fd5c5dd59cd813b7d6c7050"
+        "sha256": "f91f174807124df0cd3da862167b716ba243cfbc8054e08263b062d7bc5216c2"
       },
       {
         "path": "docs/benchmark/BENCHMARK_RULES.md",
-        "sha256": "773e3a3d2c693d4e2450b37126aa52d6a3fca70fd5f9bb7faf2727a622765fb8"
+        "sha256": "184c7fd28e6549b56e0ab9dd59043db4327d09a24b9a4b4e78c7f1c6c2286d63"
       },
       {
         "path": "docs/benchmark/BENCHMARK_STATUS.md",
-        "sha256": "4bf5e34fe259dddbe093bc8b170bf64b1b30b7b4fb3231922de9e75de065c3a0"
+        "sha256": "659f0b27f3ebc732e5a5e5c72c333ed929432f0118f9ef146b72158f9db160cf"
       },
       {
         "path": "docs/benchmark/COVERAGE_PILOT_REPORT.md",
-        "sha256": "fb74ff3d9bcf228a8e33595dc119a24bed2382ea96c6d8247af7acf8c69abf61"
+        "sha256": "b78b79f4302dd880f9ba7b6220266d66f324a333dffc54af60ade18c178144cd"
       },
       {
         "path": "docs/benchmark/CRYSTAL_CONSTRUCTION_PLANNER_REPORT.md",
-        "sha256": "5b9b9ebeeb0859567d786e69e3bfc81731dc8464f6f2340e118ff0f886ded165"
+        "sha256": "5bd922b0d7df3d04378d16f767b55adc4b9b84fc23ccdbdc782f307cd140bf0c"
       },
       {
         "path": "docs/benchmark/GAME_SEMANTICS.md",
-        "sha256": "e73cb5481cfb2f255e3e3fc1f4555fd0b5b9d7e5253affac655b421461ad7c6d"
+        "sha256": "5141ccd032b6e1edc40658b3a4973fcaba215b835cd902a91f6140f6f33ec80f"
       },
       {
         "path": "docs/benchmark/HARD_53X1_REPORT.md",
-        "sha256": "07bc9294e0d0876ce1f9f7f77bb1612a9e658b52ee0472577571a189fe71cb68"
+        "sha256": "7f0d6cf9880f5a82197b0c6f327bb545c99ede94328ddfb24f470c34e99fad1d"
       },
       {
         "path": "docs/benchmark/HARD_53X3_DIVERSITY_PILOT_REPORT.md",
-        "sha256": "523cce72b332bdf7e4af3fc1c6a767a2395b78871927902c2400c85f951cd566"
+        "sha256": "e6f6840cf638886ed6f4bebada79a11d0949d6a025e5e0465d64f0d1ef6e461c"
       },
       {
         "path": "docs/benchmark/HARD_53X3_ROLLOUT_REPORT.md",
-        "sha256": "fc89bd9d36230ea192478d85050796c37f8c6b62cfe6af95f37b2ece72dd476d"
+        "sha256": "15514049fd397d58f6b582f0e3c443a5434b05a94535495726cc06719df18382"
       },
       {
         "path": "docs/benchmark/MIXED_PIN_CRYSTAL_INTERACTION_REPORT.md",
-        "sha256": "7bbb9b1ab2edc4a882f2177eb2ec96232dfd01df81283577cc909c67a3aa048f"
+        "sha256": "2eb41bd496af350a4e3e3d204c83c964708a5bf25f3431f6378878bed91e37bc"
       },
       {
         "path": "docs/benchmark/PILOT_REPORT.md",
-        "sha256": "869b90a88e9271e723c9f8bae67714193033785ac68ff3e0d60e552dbd6745af"
+        "sha256": "52871a3e78c9ad54a8f50162c742c5ada5eddb3cce6f303dde4073238021fdbe"
       },
       {
         "path": "docs/benchmark/PIN_CONSTRUCTION_PLANNER_REPORT.md",
-        "sha256": "1d8254703b4bdfb2f2a670280ac6538c08b1cc2c4c9ba74bb8c453246944b6ec"
+        "sha256": "094e9634dfc3aff892a4b56d5fad0c380db5adf657df2768a3d5b412ed706271"
       },
       {
         "path": "docs/benchmark/PROVENANCE.md",
@@ -3671,7 +3671,308 @@
       },
       {
         "path": "docs/benchmark/USER_RULES.md",
-        "sha256": "ae9019499f203b69852e0b2e786f4067b2ad72398762fc8700dcd19234bd3dd7"
+        "sha256": "7ec9b4fddf71f33cf1d088823a4fa869b06690f19133f99a349dca2fda58b331",
+        "mixedNewlineRecipe": {
+          "normalizedLfSha256": "e877d1ab728a2e2b79feb85c88d4b162a634691e5ff6ca9f5427f591eb6d514d",
+          "crlfLineIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237,
+            238,
+            239,
+            240,
+            241,
+            242,
+            243,
+            244,
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            257,
+            258,
+            259,
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            271,
+            272,
+            273,
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            296,
+            297,
+            298,
+            299,
+            300,
+            302,
+            303,
+            304
+          ]
+        }
       },
       {
         "path": "docs/legal/.gitattributes",
@@ -3755,63 +4056,63 @@
       },
       {
         "path": "docs/optimization/ARCHITECTURE_PROFILING.md",
-        "sha256": "9c360a43fb8f50fa973ef403b96af3d4a58d0be791c22309f7f8fa48e4c78858"
+        "sha256": "1517508bc1aada5c9b252f8000e7ceed5bf4c2852bf98252f528263c0f9b749d"
       },
       {
         "path": "docs/optimization/ASTRA_REVIEW.md",
-        "sha256": "f7cdaefca0fdb991bf7b8af77ff94c18c437c40b92860d55128abd9497987260"
+        "sha256": "6fc6b56d50d4f0c99725799c0558e04e679e7a06909fdbffd3419bc2caa07f75"
       },
       {
         "path": "docs/optimization/BASELINE.md",
-        "sha256": "c831003e960f8aedec312ce1717111c8bd93e83969f9e7e8b8dfd8462f69eb7f"
+        "sha256": "b5381486a30e1a6322edc850a1afa5be524d99ba2a962490ef1cdfa2d699896a"
       },
       {
         "path": "docs/optimization/BENCHMARKS.md",
-        "sha256": "e3f1d5a030249937825ce32a5cdb379c61feac7fcec9bdf55c7b0de7bbd851d2"
+        "sha256": "d7b3b6fbb5831504375f6368cf7a10566ce754964b138b6b281e9dab4a3a385d"
       },
       {
         "path": "docs/optimization/DECISIONS.md",
-        "sha256": "7f4e06581861edbfd460c30446454e18d7bfd2f7528589976f4420236999d42f"
+        "sha256": "aca82af7a84a357121d94fe9966a0ef6c9490b1eb767441ee8aaf08477ff0988"
       },
       {
         "path": "docs/optimization/EXPERIMENTS.md",
-        "sha256": "2942c07d58e470dfb9a97c706f1604d1a8626e38111f41d45046f9dbf7cf0ba7"
+        "sha256": "24261701a16b5b6c2f6f389bba52d71c513e9f957751263263df57213e88a45b"
       },
       {
         "path": "docs/optimization/FORMAL_BASELINE_AUDIT.md",
-        "sha256": "b684be538484e4b1f78770642089c0625cdfb0277f9aac99446036ad48b8ffb3"
+        "sha256": "265442426f8886c6e1a1fd18c77d9fe3fe71d01c5af71a392a621114b2e1d464"
       },
       {
         "path": "docs/optimization/ORACLE.md",
-        "sha256": "3be5de2e10eac706a4b20fd3950bd22097c7a2d21ab7497c8404e7829041aaab"
+        "sha256": "c5b1420a142764a3c4d0318c373c211ecf281f03302e7a64e45e20d4e0217d37"
       },
       {
         "path": "docs/optimization/P6_03_OBSERVER.md",
-        "sha256": "8114a0ac4c0e6db2a72c993aa74019761a56fc5c2648067bd81f497a95f37f53"
+        "sha256": "98ff484ab367220bf11a09f5cada188dfe534415d83683cfbb98d68af1a64267"
       },
       {
         "path": "docs/optimization/PROJECT_STATE.md",
-        "sha256": "d18e048c48d90d69d84291e753664792b3cee3cbbd4b2b4eef0637f6b335bc3b"
+        "sha256": "38b988236474c57bfbeae2cfe81487ff971c174dee8eba34841e92f04007d020"
       },
       {
         "path": "docs/optimization/RELEASE_CANDIDATE.md",
-        "sha256": "0d26715811fa0acec3348a0edfa0b150db5285da8d85192a05bf4cc62383efd8"
+        "sha256": "b31dea685f79c0248c6830fe30a95f039fc458f46b40e371000b7396e6cb806a"
       },
       {
         "path": "docs/optimization/RESUME.md",
-        "sha256": "131a5f9fa75f3e9848dee14b6fbeff090006618b2f623df26cdcb797897bb382"
+        "sha256": "77427ec144e5dbc7860f35cda4d489ff548fd4e4af559ecf62a6d619f4989b8f"
       },
       {
         "path": "docs/optimization/TARGET_CONDITIONED_CANDIDATE_GENERATION.md",
-        "sha256": "830a1294fd4eb2793eb9ce6ea39f9df8cdbde2abad4239f7ed974dfd27914473"
+        "sha256": "24192bec387b41057f819e7b170d3638dc61f2f4ee21f704a11621eb9aa575e6"
       },
       {
         "path": "docs/optimization/TASKS.md",
-        "sha256": "8b781edc82e5628021f163fefa3596ca269c6e46145d4846458558da5633239f"
+        "sha256": "d692776eff7fef108a513dccf51c03766c190b03ba26c3ba19b8a43ba664bce8"
       },
       {
         "path": "docs/optimization/WORKFLOW.md",
-        "sha256": "3c8ffd25b5c395364efc675078235bc1047b896ffc1f4dd887a75bd0d45f6357"
+        "sha256": "befb9d7d9d9a892f7fc7ca78e766425017fe6301deacdc5d31583368b262bccf"
       },
       {
         "path": "docs/physics-fix-20261029/README.md",
@@ -27222,7 +27523,7 @@
       },
       {
         "path": "project_summary.md",
-        "sha256": "05c718e66e9217823e3724703268b62f7de1e3db79049e5a62ece5f3f6c690ee"
+        "sha256": "7d114c97fc4292bba223b364603d0128285bb756d6a1a00a5ab15cb89ac156df"
       },
       {
         "path": "release.json",
@@ -27499,7 +27800,115 @@
       },
       {
         "path": "tests/shapeSolver.test.mjs",
-        "sha256": "43505e69c9236cbbcaecba0b484766dcc51b7a61a7e275efa42aa644a2528f8d"
+        "sha256": "0fb38ae8cbd84b5962edd708c64dc32b085d0d3dc462068c2cb621b52354edfc",
+        "mixedNewlineRecipe": {
+          "normalizedLfSha256": "43505e69c9236cbbcaecba0b484766dcc51b7a61a7e275efa42aa644a2528f8d",
+          "crlfLineIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            228,
+            229,
+            230,
+            231,
+            232,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            277,
+            279,
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            330,
+            331,
+            332,
+            333,
+            334,
+            335,
+            336,
+            337,
+            338,
+            339,
+            340,
+            341,
+            342,
+            343,
+            344,
+            345,
+            346
+          ]
+        }
       },
       {
         "path": "tests/sharedOccurrenceGoalDecomposedSolver.test.mjs",
@@ -27843,7 +28252,7 @@
       },
       {
         "path": "tools/release1/seal-source.mjs",
-        "sha256": "b88c6d277081d0f68f33cbf5d2bbc035dac8692d3d5ba840ef8382280c4dc106"
+        "sha256": "ff6f73adc7d1f4f2707bf2dfc42b62516df86d3503908c478b215ffe46998e3a"
       },
       {
         "path": "tools/release1/worker.mjs",
@@ -27863,7 +28272,7 @@
       },
       {
         "path": "tools/static-build/build.mjs",
-        "sha256": "b6cd5962efc0f39474d3eaa9857d50255e926e28366f79d2e9037f852fb0dcb7"
+        "sha256": "29180bec0d30fa9ad5a0b29ee4055f48c1c470b82aec94d7d4729c3be1647534"
       },
       {
         "path": "tools/static-build/html.mjs",
@@ -27915,7 +28324,7 @@
       },
       {
         "path": "tools/static-build/verify.mjs",
-        "sha256": "e4610815ecba58ae14fc723a90ee55bc33c942108a7a54a9ee82bd9d3373ce20"
+        "sha256": "4de342c3a6cf861ccd06aac4d8a650649a08404b72e084e112c8130af546cb53"
       },
       {
         "path": "unsupportedCrystalResourcePoolSolver.js",
@@ -27962,7 +28371,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "dfe720a2562800e9e045e986ccded2336c34420ec95495dc73c3c7eb581474c6"
+    "sha256": "6d8c3745d44f9bb9e8c4a88437b6c78b1540657ff7dd019a17439aac11d290f3"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
@@ -33550,7 +33959,9 @@
     "tools/static-build/verify-cdn.mjs",
     "tools/static-build/verify.mjs",
     "versions/benchmark-v2.mjs",
-    "versions/release1.mjs"
+    "versions/release1.mjs",
+    "versions/release1.pin.json",
+    "versions/shapez2-solver-release1.json"
   ],
   "routing": {
     "strictOrdinaryDefault": true,
