@@ -1,3 +1,8 @@
 node_modules/
 .codex-temp-*/
 benchmarks/profiling/**/records/*.states.ndjson
+
+.release1/
+.ci-results/
+.f1/
+dist/

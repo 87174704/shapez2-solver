@@ -7,7 +7,7 @@ import postcss from 'postcss';
 import { ROOT, sha, sri, readJson, writeJson, filesUnder, git } from './shared.mjs';
 import { profiles, RC_COMMIT } from './profiles.mjs';
 import { parseHtml, elements, attr, textContent } from './html.mjs';
-import { verifyVersion } from '../../versions/identity.mjs';
+import { verifyRelease } from '../../versions/release1.mjs';
 import { serve } from './serve.mjs';
 const results = { status: 'VERIFIED', profiles: {}, differences: [], originalSourceChanges: [] };
 const lock = await readJson('tools/static-build/resources.lock.json');
@@ -101,9 +101,11 @@ for (const file of ['index.html','cn/index.html','en/index.html']) {
 }
 const css = async n => { const r=postcss.parse(await fs.readFile(path.join(ROOT,'dist',n,'styles.css'),'utf8'));r.walkAtRules('import',d=>d.remove());return r.toString(); };
 assert.equal(await css('global'), await css('china'));
-const identity = await verifyVersion({version:'shape-operations-v2-support-closure'}); assert.ok(identity.valid,identity.errors.join('\n')); results.identity=identity;
+const identity = await verifyRelease(); assert.ok(identity.valid,identity.errors.join('\n')); results.identity=identity;
 const rcPaths = new Set(git('ls-tree','-r','--name-only',RC_COMMIT).split('\n'));
-const changed = git('diff','--name-only',RC_COMMIT).split('\n').filter(f=>rcPaths.has(f)); assert.deepEqual(changed, [], 'Original RC tracked files changed');
+const changed = git('diff','--name-only',RC_COMMIT).split('\n').filter(f=>rcPaths.has(f));
+const approved=(await readJson('versions/shapez2-solver-release1.json')).reviewedChangesFromBaseline.filter(f=>rcPaths.has(f));
+assert.deepEqual(changed, approved, 'Unexpected baseline changes');
 results.originalSourceChanges=changed;
 results.sharedApplicationFiles = Object.keys(a).filter(f => f.endsWith('.js') && a[f] === b[f]).length;
 await writeJson('.f1/evidence/static-validation.json', results);

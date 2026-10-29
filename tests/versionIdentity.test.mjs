@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { verifyRelease, RELEASE } from '../versions/release1.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import os from 'node:os';
@@ -13,16 +14,19 @@ import { buildSolverEvaluationView } from '../benchmarks/tools/environment-expan
 const V2 = 'shape-operations-v2-support-closure';
 const ARTIFACT = 'benchmarks/expansion-pilot/v1/instances.json';
 
-test('current source strictly verifies as v2 with all frozen benchmark bytes', async () => {
+test('current release strictly verifies with unchanged Physics v2 and frozen bytes', async () => {
     assert.equal(SHAPE_OPERATIONS_SEMANTICS, V2);
-    const result = await verifyVersion({ version: V2 });
+    const result = await verifyRelease();
     assert.equal(result.valid, true, result.errors.join('\n'));
     assert.equal(result.frozenFilesChecked, 461);
     const release = await json(path.join(ROOT, 'release.json'));
     const index = await json(path.join(ROOT, 'versions/index.json'));
-    assert.equal(release.release, V2);
-    assert.equal(release.versionManifestCanonicalSha256, index.versions[V2].canonicalSha256);
-    assert.equal(release.status, 'local-release-candidate-not-published');
+    assert.equal(release.release, RELEASE);
+    assert.equal(release.physicsManifestCanonicalSha256, index.versions[V2].canonicalSha256);
+    assert.equal(release.status, 'release-candidate');
+    const old = await verifyVersion({ version: V2 });
+    assert.equal(old.valid, false);
+    assert.ok(old.errors.includes('runtime: shapeSolver.js hash differs'));
     assert.equal(release.gameCertification, 'UNKNOWN');
 });
 

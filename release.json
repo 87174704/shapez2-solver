@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "release": "shape-operations-v2-support-closure",
+  "release": "shapez2-solver-release1",
   "releaseTag": null,
-  "status": "local-release-candidate-not-published",
+  "status": "release-candidate",
   "physicsSemantics": "shape-operations-v2-support-closure",
   "versionManifest": "versions/shape-operations-v2-support-closure.json",
   "versionManifestCanonicalSha256": "3d678923c491776c524f790593815a7b1f44c99621284a0c33e0ec32bed5ca06",
-  "runtimeIdentitySha256": "c3adcaf60727f035166ccc30c74fde979faf4be482c1e7d71a2d52eeaa9c1897",
+  "runtimeIdentitySha256": null,
   "baseCommit": "0647b8502f75145936faf8fbcde7cf2ab5371f75",
   "gameCertification": "UNKNOWN",
   "historicalRelease": {
@@ -16,5 +16,12 @@
     "candidateId": "hard-capable-rc-v1",
     "candidateIdentity": "hard-capable-rc-v1:3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17",
     "runtimeManifestSha256": "3e94ef55d6bcb09a4a74e7777516ae547ee02b7168ca566b2e0963dde80e5f17"
+  },
+  "physicsManifestCanonicalSha256": "3d678923c491776c524f790593815a7b1f44c99621284a0c33e0ec32bed5ca06",
+  "releaseIdentity": "versions/release1.pin.json",
+  "strictOrdinaryConstructive": {
+    "defaultEnabled": true,
+    "featureFlag": false,
+    "cooperativeBudgetMs": 50
   }
 }

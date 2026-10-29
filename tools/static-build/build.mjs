@@ -3,7 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import postcss from 'postcss';
 import { parse } from 'acorn';
-import { verifyVersion } from '../../versions/identity.mjs';
+import { verifyRelease } from '../../versions/release1.mjs';
 import { RC_COMMIT, RC_TREE, FONT_CSS, dependencies, profiles } from './profiles.mjs';
 import { ROOT, sha, sri, git, readJson, writeJson, filesUnder } from './shared.mjs';
 import { parseHtml, serialize, elements, attr, setAttr, tag, textContent } from './html.mjs';
@@ -13,19 +13,21 @@ const basePath = baseArg?.slice('--base-path='.length) ?? config.basePath;
 assert.match(basePath, /^\/(?:[A-Za-z0-9_-]+\/)*$/, 'Base must be a safe absolute directory ending in /');
 assert.equal(git('rev-parse', `${RC_COMMIT}^{tree}`), RC_TREE);
 git('merge-base', '--is-ancestor', RC_COMMIT, 'HEAD');
-const identity = await verifyVersion({ version: 'shape-operations-v2-support-closure' }); assert.equal(identity.valid, true, identity.errors.join('\n'));
-// Every application source remains byte-for-byte bound to the verified RC identity.
+const identity = await verifyRelease(); assert.equal(identity.valid, true, identity.errors.join('\n'));
+// Every source is bound to the independent Release 1 identity; old RC pins are untouched.
 const lock = await readJson('tools/static-build/resources.lock.json'); assert.deepEqual(lock.dependencies.map(d => Object.fromEntries(Object.keys(dependencies[0]).map(k => [k,d[k]]))), dependencies);
+assert.equal(git('status','--porcelain=v1','--untracked-files=no'), '', 'Build requires a committed, clean tracked source');
 const out = path.join(ROOT, 'dist', name);
 // Computed deletion is restricted to one of two exact build output directories.
 assert.ok(['global', 'china'].includes(name) && out === path.resolve(ROOT, 'dist', name));
 await fs.rm(out, { recursive: true, force: true }); await fs.mkdir(out, { recursive: true });
 const copy = async (from, to = from) => { await fs.mkdir(path.dirname(path.join(out, to)), { recursive: true }); await fs.copyFile(path.join(ROOT, from), path.join(out, to)); };
 // Copy only site inputs; no checkout, cache, tests, credentials or absolute paths.
-const manifest = await readJson('versions/shape-operations-v2-support-closure.json');
+const manifest = await readJson('versions/shapez2-solver-release1.json');
 const appFiles = manifest.runtime.files.map(f => f.path).filter(f => f.endsWith('.js') || f.startsWith('images/'));
 for (const f of appFiles) await copy(f);
 await copy('LICENSE'); await copy('release.json');
+await copy('versions/shapez2-solver-release1.json'); await copy('versions/release1.pin.json');
 for (const f of (await filesUnder(path.join(ROOT, 'docs/legal'))).filter(f=>!f.startsWith('.'))) await copy(`docs/legal/${f}`);
 await fs.writeFile(path.join(out, '.nojekyll'), '');
 for (const d of lock.dependencies) {

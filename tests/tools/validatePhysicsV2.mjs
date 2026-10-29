@@ -1,3 +1,4 @@
+import { verifyRelease } from '../../versions/release1.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -12,7 +13,7 @@ import { replayWitness } from '../../benchmarks/tools/benchmark-core.mjs';
 const OUT = path.resolve(process.argv[2] ?? path.join(ROOT, 'docs/physics-v2-release-gate-20261029/evidence'));
 const historicalRoot = path.resolve(process.argv[3] ?? path.join(ROOT, '.codex-temp-physics-v2-v1'));
 await fs.mkdir(OUT, { recursive: true });
-const identity = await verifyVersion({ version: prod.SHAPE_OPERATIONS_SEMANTICS });
+const identity = await verifyRelease();
 assert.equal(identity.valid, true, identity.errors.join('\n'));
 const historicalIdentity = await verifyVersion({ version: 'shape-operations-v1', root: historicalRoot });
 assert.equal(historicalIdentity.valid, true, historicalIdentity.errors.join('\n'));

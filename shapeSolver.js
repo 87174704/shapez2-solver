@@ -367,8 +367,7 @@ self.onmessage = async function (e) {
                 preventWaste,
                 orientationSensitive,
                 allowSplitting,
-                cleanPainting,
-                solverFeatures
+                cleanPainting
             } = data;
 
             const result = await shapeSolver(
@@ -380,8 +379,7 @@ self.onmessage = async function (e) {
                 preventWaste,
                 orientationSensitive,
                 allowSplitting,
-                cleanPainting,
-                solverFeatures
+                cleanPainting
             );
             if (!cancelled) {
                 self.postMessage({ type: 'result', result });
@@ -404,24 +402,22 @@ self.onmessage = async function (e) {
     }
 };
 
-async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel = Infinity, preventWaste, orientationSensitive, allowSplitting, cleanPainting, solverFeatures) {
-    // Opt-in per request; omitted/false preserves the original dispatch verbatim.
-    if (solverFeatures?.strictOrientationConstructive === true) {
-        const started = performance.now();
-        const instance = { targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers,
-            maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting };
-        if (strictOrdinaryEligible(instance)) {
-            const { candidate, attempt } = await tryStrictConstructive(instance);
-            if (candidate) return { ...candidate, solverRoute: 'strict-ordinary-constructive',
-                strictConstructiveAttempt: attempt, searchWallMs: performance.now() - started };
-            // Charge failed construction and replay to the same total solve cap.
-            const remainingMs = Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - (performance.now() - started));
-            const result = await shapeSolverCore(targetShapeCodes, startingShapeCodes, enabledOperations,
-                maxLayers, maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting,
-                { useCoarseness: true, limits: { ...DEFAULT_SOLVER_LIMITS, maxSearchTimeMs: remainingMs } });
-            return { ...result, solverRoute: 'general-search', strictConstructiveAttempt: attempt,
-                searchWallMs: performance.now() - started };
-        }
+async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel = Infinity, preventWaste, orientationSensitive, allowSplitting, cleanPainting) {
+    // Strict ordinary targets use the bounded production constructor by default.
+    const started = performance.now();
+    const instance = { targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers,
+        maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting };
+    if (strictOrdinaryEligible(instance)) {
+        const { candidate, attempt } = await tryStrictConstructive(instance);
+        if (candidate) return { ...candidate, solverRoute: 'strict-ordinary-constructive',
+            strictConstructiveAttempt: attempt, searchWallMs: performance.now() - started };
+        // Charge failed construction and replay to the same total solve cap.
+        const remainingMs = Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - (performance.now() - started));
+        const result = await shapeSolverCore(targetShapeCodes, startingShapeCodes, enabledOperations,
+            maxLayers, maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting,
+            { useCoarseness: true, limits: { ...DEFAULT_SOLVER_LIMITS, maxSearchTimeMs: remainingMs } });
+        return { ...result, solverRoute: 'general-search', strictConstructiveAttempt: attempt,
+            searchWallMs: performance.now() - started };
     }
     const constructiveEligible = targetShapeCodes.length === 1
         && maxLayers === 4

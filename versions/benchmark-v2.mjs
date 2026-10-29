@@ -1,3 +1,4 @@
+import { verifyRelease } from './release1.mjs';
 import path from 'node:path';
 import { readFile } from 'node:fs/promises';
 import { ROOT, json, sha256, canonical, verifyVersion } from './identity.mjs';
@@ -6,7 +7,7 @@ import { buildSolverEvaluationView } from '../benchmarks/tools/environment-expan
 
 // New acceptance of old immutable inputs. This does not issue a v1 release PASS.
 export async function validateFrozenArtifactV2({ artifactPath, artifactDocument, projectionDocument } = {}) {
-    const identity = await verifyVersion({ version: 'shape-operations-v2-support-closure' });
+    const identity = await verifyRelease();
     const errors = [...identity.errors];
     const inventory = await json(path.join(ROOT, 'versions/frozen-v1.inventory.json'));
     const binding = inventory.files.find(f => f.path === artifactPath && f.path.startsWith('benchmarks/'));

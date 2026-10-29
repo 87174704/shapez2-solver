@@ -38,14 +38,15 @@ phase('history', () => {
   assert.equal(git('rev-parse', 'refs/tags/hard-capable-v1').toString().trim(), m.tag.oid);
   assert.equal(sha256(git('cat-file', 'tag', m.tag.oid)), m.tag.rawSha256);
   assert.equal(git('rev-parse', `${m.tag.oid}^{commit}`).toString().trim(), m.tagTarget);
-  const allowed = new Set(['.gitattributes', 'README.md', 'package.json', 'release.json', 'shapeOperations.js', 'tests/benchmark.test.mjs', 'tests/compositeRelease.test.mjs']);
+  const current = JSON.parse(fs.readFileSync(path.join(root,'versions/shapez2-solver-release1.json')));
+  const allowed = new Set(['.gitattributes', 'README.md', 'package.json', 'release.json', 'shapeOperations.js', 'tests/benchmark.test.mjs', 'tests/compositeRelease.test.mjs', ...current.reviewedChangesFromBaseline]);
   for (const f of m.files.filter(f => !allowed.has(f.path))) {
     assert.equal(sha256(fs.readFileSync(path.join(root, f.path))), f.originalWorkingSha256, f.path);
     assert.equal(git('rev-parse', `HEAD:${f.path}`).toString().trim(), f.blob, `original blob ${f.path}`);
   }
   return JSON.stringify({ originalCommits: m.commits.length, tag: m.tag, unchangedOriginalFiles: m.files.length - allowed.size, reviewedChangedOriginalFiles: [...allowed] }, null, 2);
 });
-phase('version-v2', () => node(['--input-type=module', '-e', "import {verifyVersion} from './versions/identity.mjs'; const r=await verifyVersion({version:'shape-operations-v2-support-closure'}); console.log(JSON.stringify(r)); if(!r.valid)process.exitCode=1;"]));
+phase('release1-identity', () => node(['--input-type=module','-e',"import {verifyRelease} from './versions/release1.mjs'; const r=await verifyRelease(); console.log(JSON.stringify(r)); if(!r.valid)process.exitCode=1;"]));
 phase('syntax', () => {
   const files = git('ls-files', '--cached', '--others', '--exclude-standard', '-z').toString().split('\0').filter(p => /\.(js|mjs)$/.test(p));
   for (const file of files) node(['--check', file]);
@@ -68,6 +69,7 @@ phase('regressions-v2', () => node(['--test', '--test-reporter=tap']));
 for (const name of ['input-lateral.json', 'input-propagation-controls.json']) fs.copyFileSync(path.join(root, 'tests/fixtures/physics-v2', name), path.join(output, name));
 phase('acceptance-v2', () => node(['tests/tools/validatePhysicsV2.mjs', output, historical]));
 phase('current-solver-159', () => node(['tests/tools/verifyBrowserSafeProduction.mjs']));
+phase('static-profiles', () => node(['tools/static-build/verify.mjs']));
 summary.finishedAt = new Date().toISOString(); summary.passed = summary.phases.every(p => p.exitCode === 0);
 summary.finalWorkingTreeStatus = git('status', '--porcelain=v1').toString();
 fs.writeFileSync(path.join(output, 'summary.json'), JSON.stringify(summary, null, 2) + '\n');

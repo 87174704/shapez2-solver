@@ -9,8 +9,8 @@ const base = { targetShapeCodes: ['--Ru----'], startingShapeCodes: ['Ru------'],
     preventWaste: false, orientationSensitive: true, allowSplitting: false, cleanPainting: true };
 const step = { operation: 'Rotator CW', inputs: [{ id: 0, shape: 'Ru------' }],
     outputs: [{ id: 1, shape: '--Ru----' }], params: {} };
-const invoke = (p, feature) => shapeSolver(p.targetShapeCodes, p.startingShapeCodes, p.enabledOperations,
-    p.maxLayers, p.maxStatesPerLevel, p.preventWaste, p.orientationSensitive, p.allowSplitting, p.cleanPainting, feature);
+const invoke = p => shapeSolver(p.targetShapeCodes, p.startingShapeCodes, p.enabledOperations,
+    p.maxLayers, p.maxStatesPerLevel, p.preventWaste, p.orientationSensitive, p.allowSplitting, p.cleanPainting);
 
 test('prespecified holdout bytes remain locked', () => {
     const bytes = fs.readFileSync(new URL('./strict-routing/holdouts.json', import.meta.url));
@@ -77,15 +77,14 @@ test('constructor errors, invalid plans and deadline reject to fallback; replay 
     const accepted = await seam.tryStrictConstructive(base, { construct: async () => good });
     assert.equal(accepted.candidate, good);
 });
-test('request opt-in and real construction failure fallback retain core solution', async () => {
-    const off = await invoke(base, { strictOrientationConstructive: false });
-    assert.deepEqual(await invoke(base), off);
-    const on = await invoke(base, { strictOrientationConstructive: true });
-    assert.equal(seam.validate(base, on.solutionPath).valid, true);
+test('default production routing and real construction failure fallback retain core solution', async () => {
+    const result = await invoke(base);
+    assert.equal(seam.validate(base, result.solutionPath).valid, true);
+    assert.ok(result.strictConstructiveAttempt);
     // Already-assembled multilevel source: old constructor cannot extract it
     // using no operations, but core must still accept its zero-step solution.
     const p = { ...base, targetShapeCodes: ['Ru------:Cu------'], startingShapeCodes: ['Ru------:Cu------'], enabledOperations: [] };
-    const fallback = await invoke(p, { strictOrientationConstructive: true });
+    const fallback = await invoke(p);
     assert.equal(fallback.solverRoute, 'general-search');
     assert.equal(fallback.strictConstructiveAttempt.fallback, true);
     assert.deepEqual(fallback.solutionPath, []);
@@ -98,9 +97,9 @@ test('unsupported domains keep original dispatch', () => {
         assert.equal(seam.strictOrdinaryEligible({ ...base, ...delta }), false);
     }
 });
-test('worker message carries the same opt-in flag', async () => {
+test('worker invokes production strict routing without a feature flag', async () => {
     const messages = []; self.postMessage = m => messages.push(m);
-    await self.onmessage({ data: { action: 'solve', data: { ...base, solverFeatures: { strictOrientationConstructive: true } } } });
+    await self.onmessage({ data: { action: 'solve', data: base } });
     assert.equal(messages.at(-1).type, 'result');
     assert.ok(messages.at(-1).result.strictConstructiveAttempt);
 });
