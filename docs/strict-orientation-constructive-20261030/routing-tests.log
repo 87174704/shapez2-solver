@@ -1,0 +1,15 @@
+✔ prespecified holdout bytes remain locked (2.5829ms)
+✔ exact direction and finite inventory acceptance controls (1.4403ms)
+✔ paint parameter, clean paint, byproduct and waste controls (0.5846ms)
+✔ constructor errors, invalid plans and deadline reject to fallback; replay is charged (1.662ms)
+✔ request opt-in and real construction failure fallback retain core solution (7.8705ms)
+✔ unsupported domains keep original dispatch (0.2142ms)
+✔ worker message carries the same opt-in flag (0.5029ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 143.7832

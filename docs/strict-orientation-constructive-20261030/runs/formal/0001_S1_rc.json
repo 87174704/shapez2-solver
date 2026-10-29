@@ -1,0 +1,103 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "rc",
+  "searchMs": 0.4720999999999975,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Half Destroyer",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 1,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 1,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 2,
+            "shape": "--CuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Half Destroyer",
+        "inputs": [
+          {
+            "id": 2,
+            "shape": "--CuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 3,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 3,
+    "statesExplored": 12,
+    "generatedStates": 17,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 3
+  },
+  "operationCount": 3,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "daea8f714d98281746a7baa753bade129a6bd183192c98c4733544043c7c2305",
+  "caseId": "S1",
+  "tier": "simple",
+  "source": "new-common-v2",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 1,
+  "order": 1,
+  "inputHash": "ae7e13ed35fef87f363cd76567468d548e97847adcd2ae0be543812c0e5f2c71",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.125,
+  "peakPrivateCommitMiB": 26.8125,
+  "processWallMs": 147.0273000013549,
+  "startupToStartMs": 135.31830000283662,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 22.618300000000005,
+    "beforeSearchMs": 46.8816
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.4720999999999975,
+    "peakRssMiB": 63.125
+  }
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "source": "new-common-v2",
+    "algorithm": "rc",
+    "runs": 54,
+    "statuses": {
+      "SOLVED": 39,
+      "TIMEOUT": 15
+    },
+    "totalCappedMs": 40268.4045,
+    "solvedMedianMs": 107.6549,
+    "maxCommitMiB": 275.703125,
+    "maxWorkingSetMiB": 305.59765625,
+    "routes": {
+      "general-search": 54
+    },
+    "fallback": 0
+  },
+  {
+    "source": "new-common-v2",
+    "algorithm": "off",
+    "runs": 54,
+    "statuses": {
+      "SOLVED": 39,
+      "TIMEOUT": 15
+    },
+    "totalCappedMs": 40209.0784,
+    "solvedMedianMs": 101.03550000000001,
+    "maxCommitMiB": 274.73046875,
+    "maxWorkingSetMiB": 304.6484375,
+    "routes": {
+      "general-search": 54
+    },
+    "fallback": 0
+  },
+  {
+    "source": "new-common-v2",
+    "algorithm": "on",
+    "runs": 54,
+    "statuses": {
+      "SOLVED": 54
+    },
+    "totalCappedMs": 522.2055,
+    "solvedMedianMs": 8.393350000000005,
+    "maxCommitMiB": 28.90234375,
+    "maxWorkingSetMiB": 64.88671875,
+    "routes": {
+      "strict-ordinary-constructive": 54
+    },
+    "fallback": 0
+  },
+  {
+    "source": "independent-prespecified",
+    "algorithm": "rc",
+    "runs": 72,
+    "statuses": {
+      "SOLVED": 57,
+      "exhausted": 15
+    },
+    "totalCappedMs": 7427.2516,
+    "solvedMedianMs": 0.44410000000000593,
+    "maxCommitMiB": 214.90234375,
+    "maxWorkingSetMiB": 246.82421875,
+    "routes": {
+      "general-search": 72
+    },
+    "fallback": 0
+  },
+  {
+    "source": "independent-prespecified",
+    "algorithm": "off",
+    "runs": 72,
+    "statuses": {
+      "SOLVED": 57,
+      "exhausted": 15
+    },
+    "totalCappedMs": 7724.907,
+    "solvedMedianMs": 0.4188000000000045,
+    "maxCommitMiB": 214.4609375,
+    "maxWorkingSetMiB": 246.28125,
+    "routes": {
+      "general-search": 72
+    },
+    "fallback": 0
+  },
+  {
+    "source": "independent-prespecified",
+    "algorithm": "on",
+    "runs": 72,
+    "statuses": {
+      "SOLVED": 57,
+      "exhausted": 15
+    },
+    "totalCappedMs": 484.0343,
+    "solvedMedianMs": 3.518799999999999,
+    "maxCommitMiB": 28.2265625,
+    "maxWorkingSetMiB": 64.69140625,
+    "routes": {
+      "strict-ordinary-constructive": 42,
+      "general-search": 30
+    },
+    "fallback": 18
+  },
+  {
+    "source": "frozen-159",
+    "algorithm": "rc",
+    "runs": 477,
+    "statuses": {
+      "SOLVED": 477
+    },
+    "totalCappedMs": 17696.564,
+    "solvedMedianMs": 35.991200000000006,
+    "maxCommitMiB": 34.55078125,
+    "maxWorkingSetMiB": 71.1484375,
+    "routes": {
+      "constructive-hybrid": 477
+    },
+    "fallback": 0
+  },
+  {
+    "source": "frozen-159",
+    "algorithm": "off",
+    "runs": 477,
+    "statuses": {
+      "SOLVED": 477
+    },
+    "totalCappedMs": 17991.2381,
+    "solvedMedianMs": 37.419200000000004,
+    "maxCommitMiB": 34.7578125,
+    "maxWorkingSetMiB": 70.98828125,
+    "routes": {
+      "constructive-hybrid": 477
+    },
+    "fallback": 0
+  },
+  {
+    "source": "frozen-159",
+    "algorithm": "on",
+    "runs": 477,
+    "statuses": {
+      "SOLVED": 477
+    },
+    "totalCappedMs": 16581.0072,
+    "solvedMedianMs": 34.34010000000001,
+    "maxCommitMiB": 36.2890625,
+    "maxWorkingSetMiB": 71.64453125,
+    "routes": {
+      "constructive-hybrid": 477
+    },
+    "fallback": 0
+  }
+]

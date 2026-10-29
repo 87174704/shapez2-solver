@@ -1,0 +1,95 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "rc",
+  "searchMs": 1.5863999999999976,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "Su------"
+          },
+          {
+            "id": 1,
+            "shape": "Ru------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 3,
+            "shape": "Su------:Ru------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 3,
+            "shape": "Su------:Ru------"
+          },
+          {
+            "id": 2,
+            "shape": "Cu------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 4,
+            "shape": "Su------:Ru------:Cu------"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 2,
+    "statesExplored": 16,
+    "generatedStates": 27,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 2
+  },
+  "operationCount": 2,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "3f1871bb52d67e5c0c757b3b9ed04330b472b60a9d220148ca772b4f6889c470",
+  "caseId": "L03-three-layer",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1144,
+  "inputHash": "f356b592bf4f0c365ad402cc90be4cad1ee5275dc0298b92fdf8504c3fb8b018",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 62.63671875,
+  "peakPrivateCommitMiB": 26.36328125,
+  "processWallMs": 161.06800000125077,
+  "startupToStartMs": 145.81729999918025,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 23.996300000000005,
+    "beforeSearchMs": 50.1974
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 1.5863999999999976,
+    "peakRssMiB": 62.63671875
+  }
+}

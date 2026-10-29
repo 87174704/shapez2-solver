@@ -1,0 +1,124 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "on",
+  "searchMs": 8.66319999999999,
+  "result": {
+    "architecture": "interior-crystal-column-decomposition-v1",
+    "architectureConfig": "strict-ordinary-v1",
+    "extractionStates": 27,
+    "matchingTransitions": 3,
+    "wallMs": 8.453400000000002,
+    "solutionPath": [
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "Su------"
+          },
+          {
+            "id": 1,
+            "shape": "Ru------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 3,
+            "shape": "Su------:Ru------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 3,
+            "shape": "Su------:Ru------"
+          },
+          {
+            "id": 2,
+            "shape": "Cu------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 4,
+            "shape": "Su------:Ru------:Cu------"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 2,
+    "statesExplored": 27,
+    "generatedStates": 3,
+    "outcome": "solved",
+    "beamPruned": false,
+    "architectureStatus": "solved",
+    "component": "crystal-scaffold-gdcs-v1",
+    "isolationStage": "delegated-e010",
+    "delegatedArchitecture": "unsupported-crystal-resource-pool-activation-v1",
+    "sharedOccurrenceStage": "delegated-e011",
+    "unsupportedCrystalStage": "delegated-e012",
+    "interiorCrystalStage": "delegated-e013",
+    "solverRoute": "strict-ordinary-constructive",
+    "strictConstructiveAttempt": {
+      "budgetMs": 50,
+      "elapsedMs": 8.617999999999995,
+      "accepted": true,
+      "fallback": false,
+      "reason": null,
+      "architectureStatus": "solved"
+    },
+    "searchWallMs": 8.654800000000009
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 2
+  },
+  "operationCount": 2,
+  "solverRoute": "strict-ordinary-constructive",
+  "attempt": {
+    "budgetMs": 50,
+    "elapsedMs": 8.617999999999995,
+    "accepted": true,
+    "fallback": false,
+    "reason": null,
+    "architectureStatus": "solved"
+  },
+  "pathHash": "3f1871bb52d67e5c0c757b3b9ed04330b472b60a9d220148ca772b4f6889c470",
+  "caseId": "L03-three-layer",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "on",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1268,
+  "inputHash": "f356b592bf4f0c365ad402cc90be4cad1ee5275dc0298b92fdf8504c3fb8b018",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.1328125,
+  "peakPrivateCommitMiB": 26.3203125,
+  "processWallMs": 129.86190000083297,
+  "startupToStartMs": 111.50959999940824,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "on",
+    "warmMs": 13.009,
+    "beforeSearchMs": 34.5374
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 8.66319999999999,
+    "peakRssMiB": 63.1328125
+  }
+}

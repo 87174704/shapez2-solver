@@ -1,0 +1,47 @@
+{
+  "type": "RESULT",
+  "status": "exhausted",
+  "mode": "rc",
+  "searchMs": 0.45659999999999457,
+  "result": {
+    "solutionPath": null,
+    "depth": 6,
+    "statesExplored": 16,
+    "generatedStates": 32,
+    "outcome": "exhausted",
+    "beamPruned": false
+  },
+  "validation": null,
+  "independent": null,
+  "operationCount": null,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": null,
+  "caseId": "L15-stack-disabled",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1108,
+  "inputHash": "f378f8eb1aa8ec27bfa7c5600d901f63b5f245c8fed4ecdadbc467265982a332",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.53515625,
+  "peakPrivateCommitMiB": 27.16015625,
+  "processWallMs": 194.73629999993136,
+  "startupToStartMs": 184.32749999919906,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 23.8403,
+    "beforeSearchMs": 49.58829999999999
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.45659999999999457,
+    "peakRssMiB": 63.53515625
+  }
+}

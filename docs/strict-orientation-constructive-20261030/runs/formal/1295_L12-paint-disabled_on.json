@@ -1,0 +1,64 @@
+{
+  "type": "RESULT",
+  "status": "exhausted",
+  "mode": "on",
+  "searchMs": 11.343500000000006,
+  "result": {
+    "solutionPath": null,
+    "depth": 1,
+    "statesExplored": 4,
+    "generatedStates": 12,
+    "outcome": "exhausted",
+    "beamPruned": false,
+    "solverRoute": "general-search",
+    "strictConstructiveAttempt": {
+      "budgetMs": 50,
+      "elapsedMs": 7.6584,
+      "accepted": false,
+      "fallback": true,
+      "reason": "construction-failed",
+      "architectureStatus": "construction-failed"
+    },
+    "searchWallMs": 11.326800000000006
+  },
+  "validation": null,
+  "independent": null,
+  "operationCount": null,
+  "solverRoute": "general-search",
+  "attempt": {
+    "budgetMs": 50,
+    "elapsedMs": 7.6584,
+    "accepted": false,
+    "fallback": true,
+    "reason": "construction-failed",
+    "architectureStatus": "construction-failed"
+  },
+  "pathHash": null,
+  "caseId": "L12-paint-disabled",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "on",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1295,
+  "inputHash": "2b09f5d81388f971f341372d143ed510c29139fc81e92da3b8b9746e0a84f100",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 62.95703125,
+  "peakPrivateCommitMiB": 27.046875,
+  "processWallMs": 141.90180000150576,
+  "startupToStartMs": 121.86170000495622,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "on",
+    "warmMs": 15.186699999999988,
+    "beforeSearchMs": 37.894
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 11.343500000000006,
+    "peakRssMiB": 62.95703125
+  }
+}

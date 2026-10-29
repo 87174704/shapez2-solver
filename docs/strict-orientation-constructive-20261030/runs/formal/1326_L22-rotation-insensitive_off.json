@@ -1,0 +1,54 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "off",
+  "searchMs": 2.9786,
+  "result": {
+    "solutionPath": [],
+    "depth": 0,
+    "statesExplored": 1,
+    "generatedStates": 0,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 0
+  },
+  "operationCount": 0,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "caseId": "L22-rotation-insensitive",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1326,
+  "inputHash": "a8d394ce420a7ce88ee58f80d8024b6bbb53084f0c92f378450b91c7676736dc",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.1796875,
+  "peakPrivateCommitMiB": 26.66015625,
+  "processWallMs": 132.97379999858094,
+  "startupToStartMs": 120.34970000240719,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 19.444599999999994,
+    "beforeSearchMs": 41.7319
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 2.9786,
+    "peakRssMiB": 63.1796875
+  }
+}

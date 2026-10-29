@@ -1,0 +1,47 @@
+{
+  "type": "RESULT",
+  "status": "exhausted",
+  "mode": "rc",
+  "searchMs": 0.1717000000000013,
+  "result": {
+    "solutionPath": null,
+    "depth": 0,
+    "statesExplored": 1,
+    "generatedStates": 0,
+    "outcome": "exhausted",
+    "beamPruned": false
+  },
+  "validation": null,
+  "independent": null,
+  "operationCount": null,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": null,
+  "caseId": "L13-insufficient-copy",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1116,
+  "inputHash": "e0dc497eb450326cee1ebaf53d8ef9c64e8e032017a69ee6f52b9abe973f9ebf",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 62.87109375,
+  "peakPrivateCommitMiB": 26.23828125,
+  "processWallMs": 170.61330000433372,
+  "startupToStartMs": 160.52260000287788,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 21.307999999999993,
+    "beforeSearchMs": 48.454
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.1717000000000013,
+    "peakRssMiB": 62.87109375
+  }
+}

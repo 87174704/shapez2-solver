@@ -1,0 +1,75 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "off",
+  "searchMs": 0.21640000000000725,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "Ru------"
+          },
+          {
+            "id": 1,
+            "shape": "Cu------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 2,
+            "shape": "Ru------:Cu------"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 1,
+    "statesExplored": 1,
+    "generatedStates": 1,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 1
+  },
+  "operationCount": 1,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "dd576ba7b596d7c4603cd8600335db7c06254bda5dc6c50303829ef66f052928",
+  "caseId": "L10-no-rotation-needed",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1124,
+  "inputHash": "2ee423e4946509a436f5fbb21fb3a0336c9013125c63d06635534f32fa64a0cc",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 62.60546875,
+  "peakPrivateCommitMiB": 25.8828125,
+  "processWallMs": 141.3237000015215,
+  "startupToStartMs": 128.45959999685874,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 22.421899999999994,
+    "beforeSearchMs": 46.5807
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.21640000000000725,
+    "peakRssMiB": 62.60546875
+  }
+}

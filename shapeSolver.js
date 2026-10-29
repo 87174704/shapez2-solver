@@ -5,6 +5,46 @@ import {
 } from './shapeOperations.js';
 import { COLOR_CODES, UNCOLORED_CODE, UNPAINTABLE_PARTS } from './shapeConstants.js';
 import { interiorCrystalColumnSolve } from './interiorCrystalColumnSolver.js';
+import { validateStrictPlan } from './constructive/validate-strict-plan.js';
+
+const STRICT_CONSTRUCTIVE_CONFIG = Object.freeze({
+    id: 'strict-ordinary-v1', maxExtractionOperations: 8, maxExtractionStates: 6000,
+    maxMatchingTransitions: 20000, maxOperations: 256, maxWallMs: 50,
+});
+
+function strictOrdinaryEligible(instance) {
+    // Bound the synchronous constructor's input domain as well as its native
+    // cooperative time/work limits. Large or special-material pools use core.
+    const ordinary = code => typeof code === 'string' && code.split(':').length <= 4
+        && code.split(':').every(layer => /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/.test(layer));
+    return instance.targetShapeCodes.length === 1 && instance.maxLayers === 4
+        && instance.orientationSensitive === true && instance.allowSplitting === false
+        && instance.cleanPainting === true && instance.preventWaste === false
+        && instance.startingShapeCodes.length <= 64
+        && ordinary(instance.targetShapeCodes[0]) && instance.startingShapeCodes.every(ordinary);
+}
+
+async function tryStrictConstructive(instance, { construct = interiorCrystalColumnSolve,
+    now = () => performance.now(), budgetMs = STRICT_CONSTRUCTIVE_CONFIG.maxWallMs } = {}) {
+    const started = now();
+    const expired = () => now() - started >= budgetMs;
+    let candidate, acceptance, reason;
+    try {
+        candidate = await construct(instance, { ...STRICT_CONSTRUCTIVE_CONFIG, maxWallMs: budgetMs });
+        reason = expired() ? 'budget' : !Array.isArray(candidate?.solutionPath) ? 'construction-failed' : null;
+        if (!reason) {
+            acceptance = validateStrictPlan(instance, candidate.solutionPath, operations, expired);
+            reason = acceptance.valid ? null : acceptance.reason;
+        }
+    } catch (error) {
+        reason = 'construction-error';
+    }
+    const elapsedMs = now() - started;
+    if (elapsedMs >= budgetMs) reason = 'budget';
+    const attempt = { budgetMs, elapsedMs, accepted: reason === null, fallback: reason !== null,
+        reason, architectureStatus: candidate?.architectureStatus ?? null };
+    return { candidate: reason === null ? candidate : null, attempt };
+}
 
 const PRODUCTION_CONSTRUCTIVE_CONFIG = Object.freeze({
     id: 'PCHA-A',
@@ -327,7 +367,8 @@ self.onmessage = async function (e) {
                 preventWaste,
                 orientationSensitive,
                 allowSplitting,
-                cleanPainting
+                cleanPainting,
+                solverFeatures
             } = data;
 
             const result = await shapeSolver(
@@ -339,7 +380,8 @@ self.onmessage = async function (e) {
                 preventWaste,
                 orientationSensitive,
                 allowSplitting,
-                cleanPainting
+                cleanPainting,
+                solverFeatures
             );
             if (!cancelled) {
                 self.postMessage({ type: 'result', result });
@@ -362,7 +404,25 @@ self.onmessage = async function (e) {
     }
 };
 
-async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel = Infinity, preventWaste, orientationSensitive, allowSplitting, cleanPainting) {
+async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel = Infinity, preventWaste, orientationSensitive, allowSplitting, cleanPainting, solverFeatures) {
+    // Opt-in per request; omitted/false preserves the original dispatch verbatim.
+    if (solverFeatures?.strictOrientationConstructive === true) {
+        const started = performance.now();
+        const instance = { targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers,
+            maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting };
+        if (strictOrdinaryEligible(instance)) {
+            const { candidate, attempt } = await tryStrictConstructive(instance);
+            if (candidate) return { ...candidate, solverRoute: 'strict-ordinary-constructive',
+                strictConstructiveAttempt: attempt, searchWallMs: performance.now() - started };
+            // Charge failed construction and replay to the same total solve cap.
+            const remainingMs = Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - (performance.now() - started));
+            const result = await shapeSolverCore(targetShapeCodes, startingShapeCodes, enabledOperations,
+                maxLayers, maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting,
+                { useCoarseness: true, limits: { ...DEFAULT_SOLVER_LIMITS, maxSearchTimeMs: remainingMs } });
+            return { ...result, solverRoute: 'general-search', strictConstructiveAttempt: attempt,
+                searchWallMs: performance.now() - started };
+        }
+    }
     const constructiveEligible = targetShapeCodes.length === 1
         && maxLayers === 4
         && orientationSensitive === false
@@ -1822,4 +1882,6 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
     return makeResult('complete', null, depthReached);
 }
 
-export { BoundedStateCollector, shapeExplorerTestOnly, shapeSolver, shapeSolverTestOnly };
+const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible,
+    validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
+export { BoundedStateCollector, shapeExplorerTestOnly, shapeSolver, shapeSolverTestOnly, strictRoutingTestOnly };

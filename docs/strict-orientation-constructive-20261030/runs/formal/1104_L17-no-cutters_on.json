@@ -1,0 +1,104 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "on",
+  "searchMs": 11.892499999999998,
+  "result": {
+    "architecture": "interior-crystal-column-decomposition-v1",
+    "architectureConfig": "strict-ordinary-v1",
+    "extractionStates": 10,
+    "matchingTransitions": 2,
+    "wallMs": 11.576700000000002,
+    "solutionPath": [
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "Ru------"
+          },
+          {
+            "id": 1,
+            "shape": "Su------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 2,
+            "shape": "Ru------:Su------"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 1,
+    "statesExplored": 10,
+    "generatedStates": 2,
+    "outcome": "solved",
+    "beamPruned": false,
+    "architectureStatus": "solved",
+    "component": "crystal-scaffold-gdcs-v1",
+    "isolationStage": "delegated-e010",
+    "delegatedArchitecture": "unsupported-crystal-resource-pool-activation-v1",
+    "sharedOccurrenceStage": "delegated-e011",
+    "unsupportedCrystalStage": "delegated-e012",
+    "interiorCrystalStage": "delegated-e013",
+    "solverRoute": "strict-ordinary-constructive",
+    "strictConstructiveAttempt": {
+      "budgetMs": 50,
+      "elapsedMs": 11.802599999999998,
+      "accepted": true,
+      "fallback": false,
+      "reason": null,
+      "architectureStatus": "solved"
+    },
+    "searchWallMs": 11.8784
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 1
+  },
+  "operationCount": 1,
+  "solverRoute": "strict-ordinary-constructive",
+  "attempt": {
+    "budgetMs": 50,
+    "elapsedMs": 11.802599999999998,
+    "accepted": true,
+    "fallback": false,
+    "reason": null,
+    "architectureStatus": "solved"
+  },
+  "pathHash": "51e11fa1d3578c84625b1f4cc0b88d59cfdb13022e93b1e74cdbf2b38d5f74b0",
+  "caseId": "L17-no-cutters",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "on",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1104,
+  "inputHash": "281e8b22d7673ed03a2a0636a844c2389759145120768e830959e4c72077880e",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.20703125,
+  "peakPrivateCommitMiB": 26.9609375,
+  "processWallMs": 187.18880000233185,
+  "startupToStartMs": 162.60799999872688,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "on",
+    "warmMs": 23.458,
+    "beforeSearchMs": 54.3565
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 11.892499999999998,
+    "peakRssMiB": 63.20703125
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "off",
+  "searchMs": 790.8209,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 2,
+            "shape": "SuSuSuSu"
+          },
+          {
+            "id": 3,
+            "shape": "WuWuWuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 6,
+            "shape": "SuSuWuWu"
+          },
+          {
+            "id": 7,
+            "shape": "WuWuSuSu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 6,
+            "shape": "SuSuWuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 8,
+            "shape": "WuSuSuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 4,
+            "shape": "RuRuRuRu"
+          },
+          {
+            "id": 8,
+            "shape": "WuSuSuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 9,
+            "shape": "RuRuSuWu"
+          },
+          {
+            "id": 10,
+            "shape": "WuSuRuRu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "RuRuRuRu"
+          },
+          {
+            "id": 5,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 11,
+            "shape": "RuRuCuCu"
+          },
+          {
+            "id": 12,
+            "shape": "CuCuRuRu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 12,
+            "shape": "CuCuRuRu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 13,
+            "shape": "RuCuCuRu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 9,
+            "shape": "RuRuSuWu"
+          },
+          {
+            "id": 13,
+            "shape": "RuCuCuRu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 14,
+            "shape": "RuCuSuWu"
+          },
+          {
+            "id": 15,
+            "shape": "RuRuCuRu"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 6,
+    "statesExplored": 9669,
+    "generatedStates": 462500,
+    "outcome": "solved",
+    "beamPruned": true
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 6
+  },
+  "operationCount": 6,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "8314c415ada04ace6bf79cf21ca40ed18b58cfc2e5329ff9d3441a18077775ab",
+  "caseId": "L09-surplus-copies",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1285,
+  "inputHash": "15682feb5dd5d37423affad91e78f443a121addc76b224f82c48f0f14996d9ad",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 246.28125,
+  "peakPrivateCommitMiB": 214.4609375,
+  "processWallMs": 938.1301000030362,
+  "startupToStartMs": 121.82020000182092,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 19.911200000000008,
+    "beforeSearchMs": 42.074
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 790.8209,
+    "peakRssMiB": 246.28125
+  }
+}

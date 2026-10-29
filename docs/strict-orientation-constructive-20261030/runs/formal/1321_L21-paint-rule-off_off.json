@@ -1,0 +1,73 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "off",
+  "searchMs": 0.4000000000000057,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Painter",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "Cu------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 1,
+            "shape": "Cr------"
+          }
+        ],
+        "params": {
+          "color": "r"
+        }
+      }
+    ],
+    "depth": 1,
+    "statesExplored": 1,
+    "generatedStates": 1,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 1
+  },
+  "operationCount": 1,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "b987e9af49466215dcfb398e74fdea8518e5389fc8b3ce8363b5dfbeb8306d67",
+  "caseId": "L21-paint-rule-off",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1321,
+  "inputHash": "30cf2241ef2d8d92f7bcfa4311b77dca474584eab90f8ea901ab0e1a33a9f7df",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.33203125,
+  "peakPrivateCommitMiB": 26.80078125,
+  "processWallMs": 126.24350000260165,
+  "startupToStartMs": 116.73180000070715,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 18.751899999999992,
+    "beforeSearchMs": 39.9819
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.4000000000000057,
+    "peakRssMiB": 63.33203125
+  }
+}

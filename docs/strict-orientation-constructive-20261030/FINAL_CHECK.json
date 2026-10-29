@@ -1,0 +1,35 @@
+{
+  "status": "VERIFIED_LOCAL_NOT_PUBLISHED",
+  "rows": 1809,
+  "validatedPaths": 1734,
+  "frozenExactPaths": 1431,
+  "regressionPassed": 95,
+  "physicsIdentityHistoricalPassed": 42,
+  "physicsIdentityHistoricalExpectedFailures": 2,
+  "expectedIdentityError": "runtime: shapeSolver.js hash differs",
+  "frozenFilesChecked": 461,
+  "source": {
+    "shapeSolver.js": "e798c38d2267d7f6d0e0408d5d9f1b5527be25824b38aeb972bf609acf42fb4b",
+    "constructive/validate-strict-plan.js": "b4b3c5e95cd4307589c5cc5ef81434130127dbc07601ebfa4b8320749fc81654",
+    "shapeOperations.js": "3052ea5686bf7808cdefbee0d58347b3dcef812ea694d0a23bf1749e1be0bcc9",
+    "shapeConstants.js": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+  },
+  "originalChanges": [],
+  "strictAttempts": 114,
+  "strictAccepted": 96,
+  "strictFallback": 18,
+  "maxAttemptMs": 30.53009999999999,
+  "holdoutLockCommit": "db25eb4",
+  "holdoutSha256": "2a6ae274495800fa20dd83d24a72141970d92dfbd53630b88013973fa749a877",
+  "defaultFeatureFlag": false,
+  "release": false,
+  "reports": [
+    "REPORT.md",
+    "ROUTING_PATCH.md",
+    "CORRECTNESS_VALIDATION.md",
+    "PERFORMANCE_COMPARISON.md",
+    "HOLDOUT_RESULTS.md",
+    "REPRODUCE.md"
+  ],
+  "note": "Cooperative 50ms construction/replay cutoff; external 2s process deadline. Not a historical RC identity or game certification."
+}

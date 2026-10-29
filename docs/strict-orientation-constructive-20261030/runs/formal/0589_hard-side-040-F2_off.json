@@ -1,0 +1,4085 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "off",
+  "searchMs": 26.2432,
+  "result": {
+    "architecture": "interior-crystal-column-decomposition-v1",
+    "architectureConfig": "PCHA-A",
+    "component": "shared-occurrence-resource-pool-v1",
+    "solutionPath": [
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 44,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 44,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 45,
+            "shape": "------Su"
+          },
+          {
+            "id": 46,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 1,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 47,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 47,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 48,
+            "shape": "------Su"
+          },
+          {
+            "id": 49,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 2,
+            "shape": "--CuWuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 50,
+            "shape": "----WuSu"
+          },
+          {
+            "id": 51,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 50,
+            "shape": "----WuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 52,
+            "shape": "Su----Wu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 52,
+            "shape": "Su----Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 53,
+            "shape": "------Wu"
+          },
+          {
+            "id": 54,
+            "shape": "Su------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 3,
+            "shape": "--CuWuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 55,
+            "shape": "----WuSu"
+          },
+          {
+            "id": 56,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 55,
+            "shape": "----WuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 57,
+            "shape": "Su----Wu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 57,
+            "shape": "Su----Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 58,
+            "shape": "------Wu"
+          },
+          {
+            "id": 59,
+            "shape": "Su------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 4,
+            "shape": "--CuWuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 60,
+            "shape": "----WuSu"
+          },
+          {
+            "id": 61,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 60,
+            "shape": "----WuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 62,
+            "shape": "Su----Wu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 62,
+            "shape": "Su----Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 63,
+            "shape": "------Wu"
+          },
+          {
+            "id": 64,
+            "shape": "Su------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 5,
+            "shape": "--SuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 65,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 66,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 65,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 67,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 67,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 68,
+            "shape": "------Su"
+          },
+          {
+            "id": 69,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 6,
+            "shape": "--SuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 70,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 71,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 70,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 72,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 72,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 73,
+            "shape": "------Su"
+          },
+          {
+            "id": 74,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 7,
+            "shape": "--SuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 75,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 76,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 75,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 77,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 77,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 78,
+            "shape": "------Su"
+          },
+          {
+            "id": 79,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 8,
+            "shape": "Cu--Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 80,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 81,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 9,
+            "shape": "Cu--Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 82,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 83,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 10,
+            "shape": "Cu--Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 84,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 85,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 11,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 86,
+            "shape": "--CuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 86,
+            "shape": "--CuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 87,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 88,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 12,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 89,
+            "shape": "--CuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 89,
+            "shape": "--CuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 90,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 91,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 13,
+            "shape": "CuRu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 92,
+            "shape": "--CuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 92,
+            "shape": "--CuRu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 93,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 94,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 14,
+            "shape": "CuRu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 95,
+            "shape": "--CuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 95,
+            "shape": "--CuRu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 96,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 97,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 15,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 98,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 98,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 99,
+            "shape": "----Su--"
+          },
+          {
+            "id": 100,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 16,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 101,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 101,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 102,
+            "shape": "----Su--"
+          },
+          {
+            "id": 103,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 17,
+            "shape": "CuSu--Cu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 104,
+            "shape": "------Cu"
+          },
+          {
+            "id": 105,
+            "shape": "CuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 105,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 106,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 106,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 107,
+            "shape": "----Su--"
+          },
+          {
+            "id": 108,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 18,
+            "shape": "CuSu--Cu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 109,
+            "shape": "------Cu"
+          },
+          {
+            "id": 110,
+            "shape": "CuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 110,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 111,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 111,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 112,
+            "shape": "----Su--"
+          },
+          {
+            "id": 113,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 19,
+            "shape": "CuSuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 114,
+            "shape": "----Su--"
+          },
+          {
+            "id": 115,
+            "shape": "CuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 115,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 116,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 116,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 117,
+            "shape": "----Su--"
+          },
+          {
+            "id": 118,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 20,
+            "shape": "CuSuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 119,
+            "shape": "----Su--"
+          },
+          {
+            "id": 120,
+            "shape": "CuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 120,
+            "shape": "CuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 121,
+            "shape": "--CuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 121,
+            "shape": "--CuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 122,
+            "shape": "----Su--"
+          },
+          {
+            "id": 123,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 21,
+            "shape": "CuWuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 124,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 125,
+            "shape": "CuWu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 125,
+            "shape": "CuWu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 126,
+            "shape": "--CuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 126,
+            "shape": "--CuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 127,
+            "shape": "----Wu--"
+          },
+          {
+            "id": 128,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 124,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 129,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 129,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 130,
+            "shape": "------Su"
+          },
+          {
+            "id": 131,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 22,
+            "shape": "CuWuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 132,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 133,
+            "shape": "CuWu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 133,
+            "shape": "CuWu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 134,
+            "shape": "--CuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 134,
+            "shape": "--CuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 135,
+            "shape": "----Wu--"
+          },
+          {
+            "id": 136,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 132,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 137,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 137,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 138,
+            "shape": "------Su"
+          },
+          {
+            "id": 139,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 23,
+            "shape": "CuWuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 140,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 141,
+            "shape": "CuWu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 141,
+            "shape": "CuWu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 142,
+            "shape": "--CuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 142,
+            "shape": "--CuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 143,
+            "shape": "----Wu--"
+          },
+          {
+            "id": 144,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 140,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 145,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 145,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 146,
+            "shape": "------Su"
+          },
+          {
+            "id": 147,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 24,
+            "shape": "RuCuWuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 148,
+            "shape": "----WuCu"
+          },
+          {
+            "id": 149,
+            "shape": "RuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 149,
+            "shape": "RuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 150,
+            "shape": "--RuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 150,
+            "shape": "--RuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 151,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 152,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 148,
+            "shape": "----WuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 153,
+            "shape": "Cu----Wu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 153,
+            "shape": "Cu----Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 154,
+            "shape": "------Wu"
+          },
+          {
+            "id": 155,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 25,
+            "shape": "RuCuWuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 156,
+            "shape": "----WuCu"
+          },
+          {
+            "id": 157,
+            "shape": "RuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 157,
+            "shape": "RuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 158,
+            "shape": "--RuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 158,
+            "shape": "--RuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 159,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 160,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 156,
+            "shape": "----WuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 161,
+            "shape": "Cu----Wu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 161,
+            "shape": "Cu----Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 162,
+            "shape": "------Wu"
+          },
+          {
+            "id": 163,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 26,
+            "shape": "RuRuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 164,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 165,
+            "shape": "RuRu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 165,
+            "shape": "RuRu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 166,
+            "shape": "--RuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 166,
+            "shape": "--RuRu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 167,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 168,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 164,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 169,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 169,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 170,
+            "shape": "------Su"
+          },
+          {
+            "id": 171,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 27,
+            "shape": "RuRuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 172,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 173,
+            "shape": "RuRu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 173,
+            "shape": "RuRu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 174,
+            "shape": "--RuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 174,
+            "shape": "--RuRu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 175,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 176,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 172,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 177,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 177,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 178,
+            "shape": "------Su"
+          },
+          {
+            "id": 179,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 28,
+            "shape": "RuWuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 180,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 181,
+            "shape": "RuWu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 181,
+            "shape": "RuWu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 182,
+            "shape": "--RuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 182,
+            "shape": "--RuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 183,
+            "shape": "----Wu--"
+          },
+          {
+            "id": 184,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 29,
+            "shape": "RuWuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 185,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 186,
+            "shape": "RuWu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 186,
+            "shape": "RuWu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 187,
+            "shape": "--RuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 187,
+            "shape": "--RuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 188,
+            "shape": "----Wu--"
+          },
+          {
+            "id": 189,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 30,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 190,
+            "shape": "----Su--"
+          },
+          {
+            "id": 191,
+            "shape": "SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 191,
+            "shape": "SuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 192,
+            "shape": "--SuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 192,
+            "shape": "--SuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 193,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 194,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 31,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 195,
+            "shape": "----Su--"
+          },
+          {
+            "id": 196,
+            "shape": "SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 196,
+            "shape": "SuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 197,
+            "shape": "--SuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 197,
+            "shape": "--SuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 198,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 199,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 32,
+            "shape": "SuSuRuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 200,
+            "shape": "----RuCu"
+          },
+          {
+            "id": 201,
+            "shape": "SuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 201,
+            "shape": "SuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 202,
+            "shape": "--SuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 202,
+            "shape": "--SuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 203,
+            "shape": "----Su--"
+          },
+          {
+            "id": 204,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 200,
+            "shape": "----RuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 205,
+            "shape": "Cu----Ru"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 205,
+            "shape": "Cu----Ru"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 206,
+            "shape": "------Ru"
+          },
+          {
+            "id": 207,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 33,
+            "shape": "SuSuRuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 208,
+            "shape": "----RuCu"
+          },
+          {
+            "id": 209,
+            "shape": "SuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 209,
+            "shape": "SuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 210,
+            "shape": "--SuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 210,
+            "shape": "--SuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 211,
+            "shape": "----Su--"
+          },
+          {
+            "id": 212,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 208,
+            "shape": "----RuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 213,
+            "shape": "Cu----Ru"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 213,
+            "shape": "Cu----Ru"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 214,
+            "shape": "------Ru"
+          },
+          {
+            "id": 215,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 34,
+            "shape": "SuSuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 216,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 217,
+            "shape": "SuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 217,
+            "shape": "SuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 218,
+            "shape": "--SuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 218,
+            "shape": "--SuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 219,
+            "shape": "----Su--"
+          },
+          {
+            "id": 220,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 216,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 221,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 221,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 222,
+            "shape": "------Su"
+          },
+          {
+            "id": 223,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 35,
+            "shape": "SuSuSuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 224,
+            "shape": "----SuCu"
+          },
+          {
+            "id": 225,
+            "shape": "SuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 225,
+            "shape": "SuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 226,
+            "shape": "--SuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 226,
+            "shape": "--SuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 227,
+            "shape": "----Su--"
+          },
+          {
+            "id": 228,
+            "shape": "--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 224,
+            "shape": "----SuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 229,
+            "shape": "Cu----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 229,
+            "shape": "Cu----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 230,
+            "shape": "------Su"
+          },
+          {
+            "id": 231,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 36,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 232,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 232,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 233,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 234,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 37,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 235,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 235,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 236,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 237,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 38,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 238,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 238,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 239,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 240,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 39,
+            "shape": "WuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 241,
+            "shape": "----Su--"
+          },
+          {
+            "id": 242,
+            "shape": "WuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 242,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 243,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 243,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 244,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 245,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 40,
+            "shape": "WuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 246,
+            "shape": "----Su--"
+          },
+          {
+            "id": 247,
+            "shape": "WuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 247,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 248,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 248,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 249,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 250,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 41,
+            "shape": "WuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 251,
+            "shape": "----Su--"
+          },
+          {
+            "id": 252,
+            "shape": "WuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 252,
+            "shape": "WuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 253,
+            "shape": "--WuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 253,
+            "shape": "--WuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 254,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 255,
+            "shape": "--Wu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 42,
+            "shape": "XkXkXkXk"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 256,
+            "shape": "----XkXk"
+          },
+          {
+            "id": 257,
+            "shape": "XkXk----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 257,
+            "shape": "XkXk----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 258,
+            "shape": "--XkXk--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 258,
+            "shape": "--XkXk--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 259,
+            "shape": "----Xk--"
+          },
+          {
+            "id": 260,
+            "shape": "--Xk----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 256,
+            "shape": "----XkXk"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 261,
+            "shape": "Xk----Xk"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 261,
+            "shape": "Xk----Xk"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 262,
+            "shape": "------Xk"
+          },
+          {
+            "id": 263,
+            "shape": "Xk------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 43,
+            "shape": "XwXwXwXw"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 264,
+            "shape": "----XwXw"
+          },
+          {
+            "id": 265,
+            "shape": "XwXw----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 265,
+            "shape": "XwXw----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 266,
+            "shape": "--XwXw--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 266,
+            "shape": "--XwXw--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 267,
+            "shape": "----Xw--"
+          },
+          {
+            "id": 268,
+            "shape": "--Xw----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 264,
+            "shape": "----XwXw"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 269,
+            "shape": "Xw----Xw"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 269,
+            "shape": "Xw----Xw"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 270,
+            "shape": "------Xw"
+          },
+          {
+            "id": 271,
+            "shape": "Xw------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 80,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 45,
+            "shape": "------Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 272,
+            "shape": "----RuSu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 272,
+            "shape": "----RuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 273,
+            "shape": "cycyRuSu"
+          }
+        ],
+        "params": {
+          "color": "y"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 273,
+            "shape": "cycyRuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 274,
+            "shape": "----RuSu"
+          },
+          {
+            "id": 275,
+            "shape": "cycy----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 46,
+            "shape": "Cu------"
+          },
+          {
+            "id": 51,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 276,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 276,
+            "shape": "CuCu----"
+          },
+          {
+            "id": 87,
+            "shape": "----Cu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 277,
+            "shape": "CuCuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 277,
+            "shape": "CuCuCu--"
+          },
+          {
+            "id": 104,
+            "shape": "------Cu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 278,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 278,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 279,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "params": {
+          "color": "y"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 279,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 280,
+            "shape": "----CuCu"
+          },
+          {
+            "id": 281,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 275,
+            "shape": "cycy----"
+          },
+          {
+            "id": 280,
+            "shape": "----CuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 282,
+            "shape": "cycyCuCu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 56,
+            "shape": "--Cu----"
+          },
+          {
+            "id": 82,
+            "shape": "----Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 283,
+            "shape": "--CuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 283,
+            "shape": "--CuRu--"
+          },
+          {
+            "id": 48,
+            "shape": "------Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 284,
+            "shape": "--CuRuSu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 61,
+            "shape": "--Cu----"
+          },
+          {
+            "id": 84,
+            "shape": "----Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 285,
+            "shape": "--CuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 285,
+            "shape": "--CuRu--"
+          },
+          {
+            "id": 53,
+            "shape": "------Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 286,
+            "shape": "--CuRuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 66,
+            "shape": "--Su----"
+          },
+          {
+            "id": 90,
+            "shape": "----Cu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 287,
+            "shape": "--SuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 287,
+            "shape": "--SuCu--"
+          },
+          {
+            "id": 58,
+            "shape": "------Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 288,
+            "shape": "--SuCuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 71,
+            "shape": "--Su----"
+          },
+          {
+            "id": 93,
+            "shape": "----Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 289,
+            "shape": "--SuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 289,
+            "shape": "--SuRu--"
+          },
+          {
+            "id": 63,
+            "shape": "------Wu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 290,
+            "shape": "--SuRuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 284,
+            "shape": "--CuRuSu"
+          },
+          {
+            "id": 286,
+            "shape": "--CuRuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 291,
+            "shape": "--CuRuSu:--CuRuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 291,
+            "shape": "--CuRuSu:--CuRuWu"
+          },
+          {
+            "id": 288,
+            "shape": "--SuCuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 292,
+            "shape": "--CuRuSu:--CuRuWu:--SuCuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 292,
+            "shape": "--CuRuSu:--CuRuWu:--SuCuWu"
+          },
+          {
+            "id": 290,
+            "shape": "--SuRuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 293,
+            "shape": "--CuRuSu:--CuRuWu:--SuCuWu:--SuRuWu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 293,
+            "shape": "--CuRuSu:--CuRuWu:--SuCuWu:--SuRuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 294,
+            "shape": "crCuRuSu:crCuRuWu:crSuCuWu:crSuRuWu"
+          }
+        ],
+        "params": {
+          "color": "r"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 294,
+            "shape": "crCuRuSu:crCuRuWu:crSuCuWu:crSuRuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 295,
+            "shape": "----RuSu:----RuWu:----CuWu:----RuWu"
+          },
+          {
+            "id": 296,
+            "shape": "crCu----:crCu----:crSu----:crSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 296,
+            "shape": "crCu----:crCu----:crSu----:crSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 297,
+            "shape": "--crCu--:--crCu--:--crSu--:--crSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 297,
+            "shape": "--crCu--:--crCu--:--crSu--:--crSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 298,
+            "shape": "----Cu--:----Cu--:----Su--:----Su--"
+          },
+          {
+            "id": 299,
+            "shape": "--cr----:--cr----:--cr----:--cr----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 295,
+            "shape": "----RuSu:----RuWu:----CuWu:----RuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 300,
+            "shape": "Su----Ru:Wu----Ru:Wu----Cu:Wu----Ru"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 300,
+            "shape": "Su----Ru:Wu----Ru:Wu----Cu:Wu----Ru"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 301,
+            "shape": "------Ru:------Ru:------Cu:------Ru"
+          },
+          {
+            "id": 302,
+            "shape": "Su------:Wu------:Wu------:Wu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 299,
+            "shape": "--cr----:--cr----:--cr----:--cr----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 303,
+            "shape": "----cr--:----cr--:----cr--:----cr--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 303,
+            "shape": "----cr--:----cr--:----cr--:----cr--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 304,
+            "shape": "------cr:------cr:------cr:------cr"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 304,
+            "shape": "------cr:------cr:------cr:------cr"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 305,
+            "shape": "cr------:cr------:cr------:cr------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Pin Pusher",
+        "inputs": [
+          {
+            "id": 305,
+            "shape": "cr------:cr------:cr------:cr------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 306,
+            "shape": "P-------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 263,
+            "shape": "Xk------"
+          },
+          {
+            "id": 306,
+            "shape": "P-------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 307,
+            "shape": "Xk------:P-------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Painter",
+        "inputs": [
+          {
+            "id": 88,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 308,
+            "shape": "--Cy----"
+          }
+        ],
+        "params": {
+          "color": "y"
+        }
+      },
+      {
+        "operation": "Pin Pusher",
+        "inputs": [
+          {
+            "id": 308,
+            "shape": "--Cy----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 309,
+            "shape": "--P-----:--Cy----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 151,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 159,
+            "shape": "----Cu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 310,
+            "shape": "----Cu--:----Cu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 49,
+            "shape": "Cu------"
+          },
+          {
+            "id": 76,
+            "shape": "--Su----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 311,
+            "shape": "CuSu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 311,
+            "shape": "CuSu----"
+          },
+          {
+            "id": 96,
+            "shape": "----Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 312,
+            "shape": "CuSuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 54,
+            "shape": "Su------"
+          },
+          {
+            "id": 91,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 313,
+            "shape": "SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 313,
+            "shape": "SuCu----"
+          },
+          {
+            "id": 99,
+            "shape": "----Su--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 314,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 59,
+            "shape": "Su------"
+          },
+          {
+            "id": 94,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 315,
+            "shape": "SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 315,
+            "shape": "SuCu----"
+          },
+          {
+            "id": 102,
+            "shape": "----Su--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 316,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 64,
+            "shape": "Su------"
+          },
+          {
+            "id": 97,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 317,
+            "shape": "SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 317,
+            "shape": "SuCu----"
+          },
+          {
+            "id": 107,
+            "shape": "----Su--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 318,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 312,
+            "shape": "CuSuRu--"
+          },
+          {
+            "id": 314,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 319,
+            "shape": "CuSuRu--:SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 319,
+            "shape": "CuSuRu--:SuCuSu--"
+          },
+          {
+            "id": 316,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 320,
+            "shape": "CuSuRu--:SuCuSu--:SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 320,
+            "shape": "CuSuRu--:SuCuSu--:SuCuSu--"
+          },
+          {
+            "id": 318,
+            "shape": "SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 321,
+            "shape": "CuSuRu--:SuCuSu--:SuCuSu--:SuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 321,
+            "shape": "CuSuRu--:SuCuSu--:SuCuSu--:SuCuSu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 322,
+            "shape": "CuSuRucr:SuCuSucr:SuCuSucr:SuCuSucr"
+          }
+        ],
+        "params": {
+          "color": "r"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 322,
+            "shape": "CuSuRucr:SuCuSucr:SuCuSucr:SuCuSucr"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 323,
+            "shape": "----Rucr:----Sucr:----Sucr:----Sucr"
+          },
+          {
+            "id": 324,
+            "shape": "CuSu----:SuCu----:SuCu----:SuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 324,
+            "shape": "CuSu----:SuCu----:SuCu----:SuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 325,
+            "shape": "--CuSu--:--SuCu--:--SuCu--:--SuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 325,
+            "shape": "--CuSu--:--SuCu--:--SuCu--:--SuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 326,
+            "shape": "----Su--:----Cu--:----Cu--:----Cu--"
+          },
+          {
+            "id": 327,
+            "shape": "--Cu----:--Su----:--Su----:--Su----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 323,
+            "shape": "----Rucr:----Sucr:----Sucr:----Sucr"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 328,
+            "shape": "cr----Ru:cr----Su:cr----Su:cr----Su"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 328,
+            "shape": "cr----Ru:cr----Su:cr----Su:cr----Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 329,
+            "shape": "------Ru:------Su:------Su:------Su"
+          },
+          {
+            "id": 330,
+            "shape": "cr------:cr------:cr------:cr------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 330,
+            "shape": "cr------:cr------:cr------:cr------"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 331,
+            "shape": "--cr----:--cr----:--cr----:--cr----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 331,
+            "shape": "--cr----:--cr----:--cr----:--cr----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 332,
+            "shape": "----cr--:----cr--:----cr--:----cr--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 332,
+            "shape": "----cr--:----cr--:----cr--:----cr--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 333,
+            "shape": "------cr:------cr:------cr:------cr"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Pin Pusher",
+        "inputs": [
+          {
+            "id": 333,
+            "shape": "------cr:------cr:------cr:------cr"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 334,
+            "shape": "------P-"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 109,
+            "shape": "------Cu"
+          },
+          {
+            "id": 334,
+            "shape": "------P-"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 335,
+            "shape": "------Cu:------P-"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 307,
+            "shape": "Xk------:P-------"
+          },
+          {
+            "id": 309,
+            "shape": "--P-----:--Cy----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 336,
+            "shape": "XkP-----:P-Cy----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 336,
+            "shape": "XkP-----:P-Cy----"
+          },
+          {
+            "id": 310,
+            "shape": "----Cu--:----Cu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 337,
+            "shape": "XkP-Cu--:P-CyCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 337,
+            "shape": "XkP-Cu--:P-CyCu--"
+          },
+          {
+            "id": 335,
+            "shape": "------Cu:------P-"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 338,
+            "shape": "XkP-CuCu:P-CyCuP-"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 282,
+            "shape": "cycyCuCu"
+          },
+          {
+            "id": 338,
+            "shape": "XkP-CuCu:P-CyCuP-"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 339,
+            "shape": "cycyCuCu:XkP-CuCu:P-CyCuP-"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 339,
+            "shape": "cycyCuCu:XkP-CuCu:P-CyCuP-"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 340,
+            "shape": "cycyCuCu:XkcwCuCu:cwCyCucw"
+          }
+        ],
+        "params": {
+          "color": "w"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 340,
+            "shape": "cycyCuCu:XkcwCuCu:cwCyCucw"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 341,
+            "shape": "----CuCu:----CuCu:----Cu--"
+          },
+          {
+            "id": 342,
+            "shape": "cycy----:Xkcw----:--Cy----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 69,
+            "shape": "Cu------"
+          },
+          {
+            "id": 100,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 343,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 343,
+            "shape": "CuCu----"
+          },
+          {
+            "id": 112,
+            "shape": "----Su--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 344,
+            "shape": "CuCuSu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 344,
+            "shape": "CuCuSu--"
+          },
+          {
+            "id": 68,
+            "shape": "------Su"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 345,
+            "shape": "CuCuSuSu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 345,
+            "shape": "CuCuSuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 346,
+            "shape": "CuCuSuSu"
+          }
+        ],
+        "params": {
+          "color": "y"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 346,
+            "shape": "CuCuSuSu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 347,
+            "shape": "----SuSu"
+          },
+          {
+            "id": 348,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 74,
+            "shape": "Cu------"
+          },
+          {
+            "id": 103,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 349,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Crystal Generator",
+        "inputs": [
+          {
+            "id": 349,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 350,
+            "shape": "CuCucycy"
+          }
+        ],
+        "params": {
+          "color": "y"
+        }
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 350,
+            "shape": "CuCucycy"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 351,
+            "shape": "----cycy"
+          },
+          {
+            "id": 352,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 348,
+            "shape": "CuCu----"
+          },
+          {
+            "id": 351,
+            "shape": "----cycy"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 353,
+            "shape": "CuCucycy"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 353,
+            "shape": "CuCucycy"
+          },
+          {
+            "id": 259,
+            "shape": "----Xk--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 354,
+            "shape": "CuCucycy:----Xk--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 354,
+            "shape": "CuCucycy:----Xk--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 355,
+            "shape": "----cycy:----Xk--"
+          },
+          {
+            "id": 356,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Swapper",
+        "inputs": [
+          {
+            "id": 342,
+            "shape": "cycy----:Xkcw----:--Cy----"
+          },
+          {
+            "id": 355,
+            "shape": "----cycy:----Xk--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 357,
+            "shape": "cycycycy:XkcwXk--:--Cy----"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 215,
+    "statesExplored": 215,
+    "generatedStates": 89,
+    "outcome": "solved",
+    "beamPruned": false,
+    "wallMs": 26.11500000000001,
+    "architectureStatus": "solved",
+    "sharedPlanKind": "sparse-upper-refinement-mask",
+    "partitionOperations": 215,
+    "pooledAtoms": 89,
+    "unusedPooledAtoms": 89,
+    "unsupportedCrystalStage": "physical-mask-resource-pool",
+    "delegatedArchitecture": "unsupported-crystal-resource-pool-activation-v1",
+    "delegatedStatus": "unsupported-crystal-layout",
+    "interiorCrystalStage": "delegated-e013",
+    "solverRoute": "constructive-hybrid"
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 215
+  },
+  "operationCount": 215,
+  "solverRoute": "constructive-hybrid",
+  "attempt": null,
+  "pathHash": "cf981d4cc42d978826217e0b747096a56977993bf1ee677fda265e4850112385",
+  "caseId": "hard-side-040-F2",
+  "tier": "frozen-hard",
+  "source": "frozen-159",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 1,
+  "order": 589,
+  "inputHash": "9f30e7132e3c97f8b514399a673f3b400a6fdfed11b4db2afae447e1401fe5c6",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 65.80078125,
+  "peakPrivateCommitMiB": 32.3125,
+  "processWallMs": 187.15870000596624,
+  "startupToStartMs": 133.98969999980181,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 21.523399999999995,
+    "beforeSearchMs": 45.185100000000006
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 26.2432,
+    "peakRssMiB": 64.796875
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "rc",
+  "searchMs": 248.3451,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 1,
+            "shape": "----RuRu"
+          },
+          {
+            "id": 2,
+            "shape": "SuSu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 4,
+            "shape": "SuSuRuRu"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 5,
+            "shape": "--CuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CCW",
+        "inputs": [
+          {
+            "id": 3,
+            "shape": "----WuWu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 6,
+            "shape": "--WuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 4,
+            "shape": "SuSuRuRu"
+          },
+          {
+            "id": 6,
+            "shape": "--WuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 7,
+            "shape": "SuSuRuRu:--WuWu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 5,
+            "shape": "--CuCu--"
+          },
+          {
+            "id": 7,
+            "shape": "SuSuRuRu:--WuWu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 8,
+            "shape": "--CuCu--:SuSuRuRu:--WuWu--"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 5,
+    "statesExplored": 4984,
+    "generatedStates": 39173,
+    "outcome": "solved",
+    "beamPruned": true
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 5
+  },
+  "operationCount": 5,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "0de1138cd3193741e6dae91eb7fa6262ec1903f3e2d9f9f848e7d42006b2546c",
+  "caseId": "M4",
+  "tier": "medium",
+  "source": "new-common-v2",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1228,
+  "inputHash": "6d224e096b89dfa728e8324f1dcbe6d8a92b50ee4888cd2d645a690c1215aab2",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 116.2265625,
+  "peakPrivateCommitMiB": 84.25,
+  "processWallMs": 445.26089999999385,
+  "startupToStartMs": 154.60300000268035,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 24.456300000000013,
+    "beforeSearchMs": 55.0054
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 248.3451,
+    "peakRssMiB": 115.96875
+  }
+}

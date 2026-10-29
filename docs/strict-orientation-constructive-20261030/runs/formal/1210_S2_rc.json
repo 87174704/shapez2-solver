@@ -1,0 +1,111 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "rc",
+  "searchMs": 3.9255999999999887,
+  "result": {
+    "solutionPath": [
+      {
+        "operation": "Half Destroyer",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "CuCuCuCu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 2,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 1,
+            "shape": "RuRuRuRu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 3,
+            "shape": "----RuRu"
+          },
+          {
+            "id": 4,
+            "shape": "RuRu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 2,
+            "shape": "CuCu----"
+          },
+          {
+            "id": 3,
+            "shape": "----RuRu"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 5,
+            "shape": "CuCuRuRu"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 3,
+    "statesExplored": 45,
+    "generatedStates": 217,
+    "outcome": "solved",
+    "beamPruned": false
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 3
+  },
+  "operationCount": 3,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": "23c6706a5431f4ec0ea8148c0903a7d712b1d39cf5b0680e60980e6d5cf823fa",
+  "caseId": "S2",
+  "tier": "simple",
+  "source": "new-common-v2",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 3,
+  "order": 1210,
+  "inputHash": "6ea212d1275c02a4b029e534995e943d300ac12813167448f4fd35607f70e35d",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.19921875,
+  "peakPrivateCommitMiB": 29.69921875,
+  "processWallMs": 145.18780000071274,
+  "startupToStartMs": 129.17970000125933,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 20.9414,
+    "beforeSearchMs": 42.8243
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 3.9255999999999887,
+    "peakRssMiB": 63.19921875
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "TIMEOUT",
+  "searchMs": 2000,
+  "error": "",
+  "caseId": "H1-extra1",
+  "tier": "hard",
+  "source": "new-common-v2",
+  "algorithm": "rc",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1157,
+  "inputHash": "bea0a36e2e3eea42f96def173c2a364ef707f18467a688beb08f75fbb874878b",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 303.01171875,
+  "peakPrivateCommitMiB": 273.890625,
+  "processWallMs": 2191.2349999984144,
+  "startupToStartMs": 157.08480000466807,
+  "exitCode": 1,
+  "warmup": {
+    "type": "START",
+    "mode": "rc",
+    "warmMs": 23.107899999999987,
+    "beforeSearchMs": 53.7233
+  },
+  "searchEnd": null
+}

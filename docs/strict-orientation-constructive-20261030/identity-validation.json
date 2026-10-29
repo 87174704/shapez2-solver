@@ -1,0 +1,43 @@
+{
+  "rc": "ec9cc5cb633d021b6af276565223a392f8329b87",
+  "baseline": {
+    "valid": true,
+    "version": "shape-operations-v2-support-closure",
+    "manifestCanonicalSha256": "3d678923c491776c524f790593815a7b1f44c99621284a0c33e0ec32bed5ca06",
+    "semanticsSha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "frozenFilesChecked": 461,
+    "errors": []
+  },
+  "candidate": {
+    "valid": false,
+    "version": "shape-operations-v2-support-closure",
+    "manifestCanonicalSha256": "3d678923c491776c524f790593815a7b1f44c99621284a0c33e0ec32bed5ca06",
+    "semanticsSha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "frozenFilesChecked": 461,
+    "errors": [
+      "runtime: shapeSolver.js hash differs"
+    ]
+  },
+  "candidateIsHistoricalRC": false,
+  "explanation": "Expected runtime identity divergence is exactly shapeSolver.js; historical pins are untouched. New validator is separately hashed.",
+  "originalChanges": [],
+  "patchChanges": [
+    "shapeSolver.js"
+  ],
+  "cloneEol": [
+    ".gitea/workflows/deploy.yml",
+    "tests/shapeSolver.test.mjs"
+  ],
+  "source": {
+    "shapeSolver.js": "e798c38d2267d7f6d0e0408d5d9f1b5527be25824b38aeb972bf609acf42fb4b",
+    "constructive/validate-strict-plan.js": "b4b3c5e95cd4307589c5cc5ef81434130127dbc07601ebfa4b8320749fc81654",
+    "shapeOperations.js": "3052ea5686bf7808cdefbee0d58347b3dcef812ea694d0a23bf1749e1be0bcc9",
+    "shapeConstants.js": "81d04e69c1ba2711c6c425b34bb98ea89edeea93bf1a479fdf8c35ffc9594444"
+  },
+  "coreAndExplorerUnchanged": true,
+  "cacheAndBeamUnchanged": true,
+  "newProductionFiles": [
+    "constructive/validate-strict-plan.js"
+  ],
+  "recordedAt": "2026-10-29T17:42:33.131Z"
+}

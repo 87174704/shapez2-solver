@@ -1,0 +1,47 @@
+{
+  "type": "RESULT",
+  "status": "exhausted",
+  "mode": "off",
+  "searchMs": 0.5397000000000105,
+  "result": {
+    "solutionPath": null,
+    "depth": 1,
+    "statesExplored": 4,
+    "generatedStates": 12,
+    "outcome": "exhausted",
+    "beamPruned": false
+  },
+  "validation": null,
+  "independent": null,
+  "operationCount": null,
+  "solverRoute": "general-search",
+  "attempt": null,
+  "pathHash": null,
+  "caseId": "L12-paint-disabled",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "off",
+  "phase": "formal",
+  "repeat": 2,
+  "order": 1119,
+  "inputHash": "2b09f5d81388f971f341372d143ed510c29139fc81e92da3b8b9746e0a84f100",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 63.265625,
+  "peakPrivateCommitMiB": 27.046875,
+  "processWallMs": 136.3950000013574,
+  "startupToStartMs": 126.98230000387412,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "off",
+    "warmMs": 21.968300000000013,
+    "beforeSearchMs": 44.4852
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 0.5397000000000105,
+    "peakRssMiB": 63.265625
+  }
+}

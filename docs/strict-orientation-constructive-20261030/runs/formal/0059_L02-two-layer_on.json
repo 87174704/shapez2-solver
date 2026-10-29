@@ -1,0 +1,250 @@
+{
+  "type": "RESULT",
+  "status": "SOLVED",
+  "mode": "on",
+  "searchMs": 10.400599999999997,
+  "result": {
+    "architecture": "interior-crystal-column-decomposition-v1",
+    "architectureConfig": "strict-ordinary-v1",
+    "component": "shared-occurrence-resource-pool-v1",
+    "solutionPath": [
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 0,
+            "shape": "RuRu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 2,
+            "shape": "--RuRu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 2,
+            "shape": "--RuRu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 3,
+            "shape": "----Ru--"
+          },
+          {
+            "id": 4,
+            "shape": "--Ru----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator CW",
+        "inputs": [
+          {
+            "id": 1,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 5,
+            "shape": "--CuCu--"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Cutter",
+        "inputs": [
+          {
+            "id": 5,
+            "shape": "--CuCu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 6,
+            "shape": "----Cu--"
+          },
+          {
+            "id": 7,
+            "shape": "--Cu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator 180",
+        "inputs": [
+          {
+            "id": 3,
+            "shape": "----Ru--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 8,
+            "shape": "Ru------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 8,
+            "shape": "Ru------"
+          },
+          {
+            "id": 4,
+            "shape": "--Ru----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 9,
+            "shape": "RuRu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Rotator 180",
+        "inputs": [
+          {
+            "id": 6,
+            "shape": "----Cu--"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 10,
+            "shape": "Cu------"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 10,
+            "shape": "Cu------"
+          },
+          {
+            "id": 7,
+            "shape": "--Cu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 11,
+            "shape": "CuCu----"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "operation": "Stacker",
+        "inputs": [
+          {
+            "id": 9,
+            "shape": "RuRu----"
+          },
+          {
+            "id": 11,
+            "shape": "CuCu----"
+          }
+        ],
+        "outputs": [
+          {
+            "id": 12,
+            "shape": "RuRu----:CuCu----"
+          }
+        ],
+        "params": {}
+      }
+    ],
+    "depth": 9,
+    "statesExplored": 9,
+    "generatedStates": 0,
+    "outcome": "solved",
+    "beamPruned": false,
+    "wallMs": 10.225200000000001,
+    "architectureStatus": "solved",
+    "sharedPlanKind": "ordinary-layer-first",
+    "partitionOperations": 9,
+    "pooledAtoms": 0,
+    "unusedPooledAtoms": 0,
+    "sharedOccurrenceStage": "resource-mismatch-fallback",
+    "delegatedArchitecture": "unsupported-crystal-resource-pool-activation-v1",
+    "delegatedStatus": "resource-mismatch",
+    "unsupportedCrystalStage": "delegated-e012",
+    "interiorCrystalStage": "delegated-e013",
+    "solverRoute": "strict-ordinary-constructive",
+    "strictConstructiveAttempt": {
+      "budgetMs": 50,
+      "elapsedMs": 10.344799999999992,
+      "accepted": true,
+      "fallback": false,
+      "reason": null,
+      "architectureStatus": "solved"
+    },
+    "searchWallMs": 10.392499999999998
+  },
+  "validation": {
+    "valid": true,
+    "error": null
+  },
+  "independent": {
+    "valid": true,
+    "error": null,
+    "at": 9
+  },
+  "operationCount": 9,
+  "solverRoute": "strict-ordinary-constructive",
+  "attempt": {
+    "budgetMs": 50,
+    "elapsedMs": 10.344799999999992,
+    "accepted": true,
+    "fallback": false,
+    "reason": null,
+    "architectureStatus": "solved"
+  },
+  "pathHash": "dfab04e476baadb503766718a32352f25fde65c49e3b02e7195dbbe6627814dd",
+  "caseId": "L02-two-layer",
+  "tier": "holdout",
+  "source": "independent-prespecified",
+  "algorithm": "on",
+  "phase": "formal",
+  "repeat": 1,
+  "order": 59,
+  "inputHash": "aa36983d05a2de0819ac209f28ff584357494f1cf3700a325e6c8e35cb8357bf",
+  "wallLimitMs": 2000,
+  "memoryLimitMiB": 768,
+  "v8HeapLimitMiB": 512,
+  "peakWorkingSetMiB": 62.6875,
+  "peakPrivateCommitMiB": 26.3671875,
+  "processWallMs": 152.3726000013994,
+  "startupToStartMs": 129.69530000555096,
+  "exitCode": 0,
+  "warmup": {
+    "type": "START",
+    "mode": "on",
+    "warmMs": 16.3146,
+    "beforeSearchMs": 42.596999999999994
+  },
+  "searchEnd": {
+    "type": "SEARCH_END",
+    "searchMs": 10.400599999999997,
+    "peakRssMiB": 62.6875
+  }
+}
