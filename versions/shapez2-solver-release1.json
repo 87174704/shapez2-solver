@@ -28295,7 +28295,7 @@
       },
       {
         "path": "tools/static-build/browser.mjs",
-        "sha256": "5e3373548fe1d61bccdafc089cbc66c33a3245a6c8e0308933a8b60c1bbe364c"
+        "sha256": "c0037ceb44c43657b37bb442267be7cf2d5dd127e9388af70024c2014f45b452"
       },
       {
         "path": "tools/static-build/build.mjs",
@@ -28398,7 +28398,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "058b43f4a8b4f9e3348cd310ac5b2aea810c35d8b4c5595649dcf6c9cc408b63"
+    "sha256": "eb31b3652a1acd7fd5047edfd14cf413e2816c612a5a48e1c034210cf96a9cf5"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",

@@ -57,6 +57,33 @@ if(process.env.F1_EXCLUSIVE_WINDOW !== '1') {
       });
       await check('Mixing Worker and mixing graph',async()=>{await page.click('.sidebar-tab[data-panel="mixing"]');await page.click('#mix-manual-inputs + .toggle-track');await page.fill('.mix-color-row[data-color="red"] .mix-have','1');await page.fill('.mix-color-row[data-color="green"] .mix-have','1');await page.fill('.mix-color-row[data-color="yellow"] .mix-want','2');await page.click('#solve-mix');await page.waitForFunction(()=>document.querySelector('#status-dot')?.classList.contains('done'));assert.ok(row.workers.some(u=>u===new URL('mixingSolver.js',host.url).href));return {workers:row.workers};});
       await check('locale switch and refresh under deployment prefix',async()=>{await page.selectOption('#lang-preference','en');await page.waitForURL(host.url+'en/');await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelectorAll('#starting-shapes canvas').length===4);assert.equal(await page.locator('#lang-preference').inputValue(),'en');await page.goto(host.url+'en/index.html',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelectorAll('#starting-shapes canvas').length===4);return {path:new URL(page.url()).pathname};});
+      await check('served release identity and default strict Solver Worker',async()=>{
+        const input=(await readJson('docs/strict-orientation-constructive-20261030/measured-cases.json')).find(c=>c.id==='S2').input;
+        const observed=await page.evaluate(async({input,base})=>{
+          const manifest=await (await fetch(new URL('build-manifest.json',base))).json();
+          const release=await (await fetch(new URL('release.json',base))).json();
+          const result=await new Promise((resolve,reject)=>{
+            const w=new Worker(new URL('shapeSolver.js',base),{type:'module'});
+            const timer=setTimeout(()=>{w.terminate();reject(Error('Strict Worker timeout'));},10000);
+            w.onerror=e=>{clearTimeout(timer);w.terminate();reject(Error(e.message));};
+            w.onmessage=e=>{if(e.data.type==='result'){clearTimeout(timer);w.terminate();resolve(e.data.result);}};
+            w.postMessage({action:'solve',data:input});
+          });
+          return {manifest,release,result};
+        },{input,base:host.url});
+        assert.equal(observed.manifest.sourceCommit,host.manifest.sourceCommit);
+        assert.equal(observed.manifest.sourceTree,host.manifest.sourceTree);
+        assert.equal(observed.manifest.identity.valid,true);
+        assert.equal(observed.release.release,'shapez2-solver-release1');
+        assert.deepEqual(observed.release.strictOrdinaryConstructive,{defaultEnabled:true,featureFlag:false,cooperativeBudgetMs:50});
+        assert.equal(observed.result.solverRoute,'strict-ordinary-constructive');
+        assert.equal(observed.result.strictConstructiveAttempt.accepted,true);
+        const {replay}=await import('../release1/replay.mjs');
+        const {replaySolution}=await import('../../tests/helpers/shapeSolverOracle.mjs');
+        assert.equal(replay(input,observed.result.solutionPath).valid,true);
+        assert.equal(replaySolution(input,observed.result.solutionPath,observed.result).valid,true);
+        return {sourceCommit:observed.manifest.sourceCommit,sourceTree:observed.manifest.sourceTree,route:observed.result.solverRoute,independentlyReplayed:true};
+      });
       await page.screenshot({path:path.join(ROOT,`.f1/evidence/${profile}-page.png`),fullPage:true});
       await Promise.all(pending);
       await check('all five real CDN responses match reviewed bytes',async()=>{for(const d of lock.dependencies){const entries=row.responses.filter(r=>r.url===d[profile]);assert.ok(entries.length>0&&entries.every(r=>r.status===200&&r.hashMatches),d.name);}return {scripts:5,network:'native browser requests; no interception or mock'};});
@@ -71,7 +98,7 @@ if(process.env.F1_EXCLUSIVE_WINDOW !== '1') {
         await fallback.fill('#target-input','CuCuCuCu');await fallback.click('#add-target-shape-btn');await fallback.click('#panel-solver .btn-primary');await fallback.waitForFunction(()=>document.querySelector('#status-dot')?.classList.contains('done'));await fallback.close();return 'Intentional font-only failure; initialization and actual Solver Worker succeeded';
       });
     }catch(error){row.error=error.stack;}finally{if(context)await context.close();row.localRequests=host.requests;await host.close();}
-    row.status=!row.error&&row.checks.length===10&&row.checks.every(c=>c.status==='VERIFIED')?'VERIFIED':'BLOCKED';
+    row.status=!row.error&&row.checks.length===11&&row.checks.every(c=>c.status==='VERIFIED')?'VERIFIED':'BLOCKED';
     await writeJson(destination,results);
   }
   results.status=results.profiles.every(r=>r.status==='VERIFIED')?'VERIFIED':'BLOCKED';await writeJson(destination,results);console.log(results.status);if(results.status!=='VERIFIED')process.exitCode=1;
