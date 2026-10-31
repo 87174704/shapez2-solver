@@ -1,6 +1,6 @@
 import { createShapeCanvas, createShapeElement } from './shapeRendering.js';
 import { Shape, _extractLayers } from './shapeOperations.js';
-import { getCyInstance, copyGraphToClipboard, applyGraphLayout, renderGraph, renderSpaceGraph, renderMixGraph } from './operationGraph.js';
+import { getCyInstance, refreshGraphTranslations, copyGraphToClipboard, applyGraphLayout, renderGraph, renderSpaceGraph, renderMixGraph } from './operationGraph.js';
 import { showValidationErrors } from './shapeValidation.js';
 import { readColorCounts } from './mixingSolver.js';
 import { getCurrentColorMode, getMixColor } from './colorMode.js';
@@ -103,6 +103,7 @@ function renderShapeList(containerId, shapeCodes, onRemove) {
         const removeButton = document.createElement('button');
         removeButton.className = 'shape-remove';
         removeButton.title = t('common.remove');
+        removeButton.setAttribute('aria-label', `${t('common.remove')} ${code}`);
         removeButton.textContent = 'x';
         removeButton.addEventListener('click', () => onRemove(index));
 
@@ -336,28 +337,8 @@ function setupSolverPanel() {
                         statesExplored: result.statesExplored,
                     }), 'done');
                 } else if (result?.limitReached) {
-                    const reasonMessages = getCurrentLocale() === 'cn'
-                        ? {
-                            time: '已达到 120 秒搜索时间预算。',
-                            'generated-states': '已达到候选状态生成预算。',
-                            'visited-states': '已达到历史状态内存预算。',
-                            'shape-universe': '已达到唯一形状内存预算。',
-                        }
-                        : {
-                            time: 'The 120-second search-time budget was reached.',
-                            'generated-states': 'The generated-candidate budget was reached.',
-                            'visited-states': 'The visited-state memory budget was reached.',
-                            'shape-universe': 'The unique-shape memory budget was reached.',
-                        };
-                    const reason = reasonMessages[result.limitReason] ?? (
-                        getCurrentLocale() === 'cn'
-                            ? '已达到求解器安全预算。'
-                            : 'The solver safety budget was reached.'
-                    );
-                    const message = getCurrentLocale() === 'cn'
-                        ? `${reason} 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。`
-                        : `${reason} The search stopped safely; disable irrelevant operations or lower states per level and retry.`;
-                    setStatus({ rawText: message }, 'error');
+                    const reason = ['time', 'generated-states', 'visited-states', 'shape-universe'].includes(result.limitReason) ? result.limitReason : 'safety';
+                    setStatus(statusDescriptor(`solver.limit.${reason}`), 'error');
                 } else if (result?.outcome === 'exhausted') {
                     setStatus(statusDescriptor('solver.status.exhausted'), 'error');
                 } else if (result?.outcome === 'not-found-pruned') {
@@ -791,18 +772,16 @@ function switchLanguage(locale, { updateHistory = true } = {}) {
     if (state.mixResultsRendered) {
         renderMixSolutionsList(state.mixSolutions, state.mixFallbackHaveCounts, {
             preserveSelection: true,
-            renderGraphOnComplete: state.lastGraph?.type === 'mix',
+            renderGraphOnComplete: false,
         });
     }
 
-    if (state.lastGraph?.type && state.lastGraph.type !== 'mix') {
-        rerenderCurrentGraph();
-    }
+    refreshGraphTranslations(state.lastGraph);
 }
 
 function setupLanguagePreference() {
-    const initialLocale = getLocaleFromPath() ?? getCurrentLocale() ?? DEFAULT_LOCALE;
-    switchLanguage(initialLocale, { updateHistory: !getLocaleFromPath() });
+    const initialLocale = getCurrentLocale() ?? DEFAULT_LOCALE;
+    switchLanguage(initialLocale);
 
     byId('lang-preference')?.addEventListener('change', (event) => {
         switchLanguage(event.target.value);
@@ -832,6 +811,11 @@ function initializeUi() {
     setupTabGroup('.mode-tab', '.mode-panel');
 
     qsa('.operation-item').forEach((item) => {
+        item.setAttribute('role', 'button');
+        item.tabIndex = 0;
+        item.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); item.click(); }
+        });
         item.addEventListener('click', () => item.classList.toggle('enabled'));
     });
 

@@ -8,6 +8,7 @@ import { ROOT, sha, sri, readJson, writeJson, filesUnder, git } from './shared.m
 import { profiles, RC_COMMIT } from './profiles.mjs';
 import { parseHtml, elements, attr, textContent } from './html.mjs';
 import { verifyRelease } from '../../versions/release1.mjs';
+import { SUPPORTED_LOCALES } from '../../localeConfig.js';
 import { serve } from './serve.mjs';
 const results = { status: 'VERIFIED', profiles: {}, differences: [], originalSourceChanges: [] };
 const lock = await readJson('tools/static-build/resources.lock.json');
@@ -74,7 +75,7 @@ for (const [name, cfg] of Object.entries(profiles)) {
   assert.equal(Object.keys(first).length, m.files.length + 1, 'No unlisted artifact files');
   const host=await serve(name);let httpChecks=0;
   try {
-    for(const file of ['index.html','cn/','en/','en/index.html','main.js','shapeSolver.js','mixingSolver.js','operationGraph.js','images/operations/half-destroyer.png',...(name==='china'?['assets/fonts/barlow.css','assets/fonts/barlow-0.woff2']:[])]){
+    for(const file of ['index.html','cn/', ...SUPPORTED_LOCALES.flatMap(l => [`${l}/`, `${l}/index.html`]),'main.js','shapeSolver.js','mixingSolver.js','operationGraph.js','images/operations/half-destroyer.png',...(name==='china'?['assets/fonts/barlow.css','assets/fonts/barlow-0.woff2']:[])]){
       const response=await fetch(host.url+file);assert.equal(response.status,200,`${name} HTTP ${file}`);
       const bytes=Buffer.from(await response.arrayBuffer());const diskFile=file.endsWith('/')?file+'index.html':file;assert.equal(sha(bytes),first[diskFile]);httpChecks++;
     }
@@ -87,7 +88,7 @@ const a = await digestTree(path.join(ROOT, 'dist/global')), b = await digestTree
 for (const file of [...new Set([...Object.keys(a), ...Object.keys(b)])].sort()) {
   if (a[file] === b[file]) continue;
   let reason;
-  if (['index.html','cn/index.html','en/index.html'].includes(file)) reason = 'CDN URLs, profile CSP and configured base path; SRI/order and application markup identical';
+  if (['index.html','cn/index.html', ...SUPPORTED_LOCALES.map(l => `${l}/index.html`)].includes(file)) reason = 'CDN URLs, profile CSP and configured base path; SRI/order and application markup identical';
   else if (file === 'styles.css') reason = 'Only Barlow @import source differs';
   else if (file.startsWith('assets/fonts/')) reason = 'China-only licensed local Barlow font snapshot';
   else if (file === 'build-manifest.json') reason = 'Profile, base path, font/CDN configuration and artifact digests';
@@ -95,7 +96,7 @@ for (const file of [...new Set([...Object.keys(a), ...Object.keys(b)])].sort()) 
   results.differences.push({ file, globalSha256: a[file] ?? null, chinaSha256: b[file] ?? null, reason });
 }
 // Check structural equality after removing exactly the authorized configuration fields.
-for (const file of ['index.html','cn/index.html','en/index.html']) {
+for (const file of ['index.html','cn/index.html', ...SUPPORTED_LOCALES.map(l => `${l}/index.html`)]) {
   const normalize = async name => { const doc = parseHtml(await fs.readFile(path.join(ROOT,'dist',name,file),'utf8')); for (const n of elements(doc)) { if (n.tagName === 'base') n.attrs = []; if (attr(n,'http-equiv') === 'Content-Security-Policy') n.attrs = []; if (n.tagName === 'script' && /^https:/.test(attr(n,'src') ?? '')) n.attrs = n.attrs.filter(a => a.name !== 'src'); } const clean = n => ({ nodeName:n.nodeName, tagName:n.tagName, attrs:n.attrs, value:n.value, childNodes:n.childNodes?.map(clean) });return clean(doc); };
   assert.deepEqual(await normalize('global'), await normalize('china'), file);
 }

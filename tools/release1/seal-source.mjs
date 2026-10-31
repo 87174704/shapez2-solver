@@ -19,7 +19,7 @@ const binding = async p => {
   return result;
 };
 const sourceFiles = git('ls-files','-z').split('\0').filter(p => p && !excluded(p)).sort();
-const runtime = { files: await Promise.all([...old.runtime.files.map(f=>f.path), 'constructive/validate-strict-plan.js'].sort().map(binding)) };
+const runtime = { files: await Promise.all([...old.runtime.files.map(f=>f.path), 'constructive/validate-strict-plan.js', 'localeConfig.js', ...git('ls-files', 'locales').split('\n').filter(Boolean)].sort().map(binding)) };
 runtime.sha256 = aggregate(runtime.files);
 const release = await json(path.join(ROOT,'release.json'));
 release.runtimeIdentitySha256 = runtime.sha256;

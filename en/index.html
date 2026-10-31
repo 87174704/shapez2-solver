@@ -2,40 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    (() => {
-      const storageKey = 'shapez2-solver-locale';
-      const supported = new Set(['cn', 'en']);
-      const segments = window.location.pathname.split('/').filter(Boolean);
-      const last = segments.at(-1);
-      const locale = supported.has(last)
-        ? last
-        : last === 'index.html' && supported.has(segments.at(-2))
-          ? segments.at(-2)
-          : null;
-
-      if (locale) {
-        try { localStorage.setItem(storageKey, locale); } catch {}
-        return;
-      }
-
-      const preferred = (() => {
-        try {
-          const saved = localStorage.getItem(storageKey);
-          return supported.has(saved) ? saved : 'cn';
-        } catch {
-          return 'cn';
-        }
-      })();
-
-      const baseSegments = [...segments];
-      if (last === 'index.html') baseSegments.pop();
-      const nextPath = `/${[...baseSegments, preferred].join('/')}/`.replace(/\/+/g, '/');
-      window.location.replace(`${nextPath}${window.location.search}${window.location.hash}`);
-    })();
+    // Shared locale initialization runs in main.js without reloading the editor.
   </script>
-  <base href="../">
   <title>Shapez 2 Solver</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -44,7 +15,7 @@
 <div class="app">
 
   <aside class="sidebar">
-    <button class="icon-btn sidebar-toggle" id="sidebar-toggle" title="Collapse sidebar" data-i18n-title="sidebar.toggle.collapse">
+    <button class="icon-btn sidebar-toggle" data-i18n-aria-label="sidebar.toggle.collapse" id="sidebar-toggle" title="Collapse sidebar" data-i18n-title="sidebar.toggle.collapse">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="15 18 9 12 15 6"></polyline>
       </svg>
@@ -75,7 +46,7 @@
               <div class="subsection-label" data-i18n="subsections.outputs">Outputs</div>
               <div class="shape-list scroll-thin" id="target-shapes"></div>
               <div class="input-row">
-                <input type="text" id="target-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
+                <input type="text" aria-label="Target shape" data-i18n-aria-label="validation.context.targetShape" id="target-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
                 <button class="btn-icon" id="add-target-shape-btn" title="Add" data-i18n-title="common.add">+</button>
               </div>
             </div>
@@ -84,7 +55,7 @@
               <div class="subsection-label" data-i18n="subsections.inputs">Inputs</div>
               <div class="shape-list scroll-thin" id="starting-shapes"></div>
               <div class="input-row">
-                <input type="text" id="starting-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
+                <input type="text" aria-label="Starting shape" data-i18n-aria-label="validation.context.startingShape" id="starting-input" placeholder="Shape code..." data-i18n-placeholder="shape.input.placeholder">
                 <button class="btn-icon" id="add-starting-shape-btn" title="Add" data-i18n-title="common.add">+</button>
               </div>
               <button class="btn-ghost" id="extract-shapes-btn" data-i18n="buttons.extractFromOutputs">Extract from Outputs</button>
@@ -105,22 +76,22 @@
               <div class="subsection-label" data-i18n="subsections.operations">Operations</div>
               <div id="enabled-operations">
                 <div class="operation-row">
-                  <div class="operation-item enabled" data-operation="Rotator CW"><img src="images/operations/rotator-cw.png" class="operation-icon"><span data-i18n="operations.short.rotatorCw">CW</span></div>
-                  <div class="operation-item enabled" data-operation="Rotator CCW"><img src="images/operations/rotator-ccw.png" class="operation-icon"><span data-i18n="operations.short.rotatorCcw">CCW</span></div>
-                  <div class="operation-item enabled" data-operation="Rotator 180"><img src="images/operations/rotator-180.png" class="operation-icon"><span data-i18n="operations.short.rotator180">180°</span></div>
+                  <div class="operation-item enabled" data-operation="Rotator CW"><img src="images/operations/rotator-cw.png" class="operation-icon" alt=""><span data-i18n="operations.short.rotatorCw">CW</span></div>
+                  <div class="operation-item enabled" data-operation="Rotator CCW"><img src="images/operations/rotator-ccw.png" class="operation-icon" alt=""><span data-i18n="operations.short.rotatorCcw">CCW</span></div>
+                  <div class="operation-item enabled" data-operation="Rotator 180"><img src="images/operations/rotator-180.png" class="operation-icon" alt=""><span data-i18n="operations.short.rotator180">180°</span></div>
                 </div>
                 <div class="operation-row">
-                  <div class="operation-item enabled" data-operation="Half Destroyer"><img src="images/operations/half-destroyer.png" class="operation-icon"><span data-i18n="operations.short.halfDestroyer">Destroy</span></div>
-                  <div class="operation-item enabled" data-operation="Cutter"><img src="images/operations/cutter.png" class="operation-icon"><span data-i18n="operations.short.cutter">Cut</span></div>
-                  <div class="operation-item enabled" data-operation="Swapper"><img src="images/operations/swapper.png" class="operation-icon"><span data-i18n="operations.short.swapper">Swap</span></div>
+                  <div class="operation-item enabled" data-operation="Half Destroyer"><img src="images/operations/half-destroyer.png" class="operation-icon" alt=""><span data-i18n="operations.short.halfDestroyer">Destroy</span></div>
+                  <div class="operation-item enabled" data-operation="Cutter"><img src="images/operations/cutter.png" class="operation-icon" alt=""><span data-i18n="operations.short.cutter">Cut</span></div>
+                  <div class="operation-item enabled" data-operation="Swapper"><img src="images/operations/swapper.png" class="operation-icon" alt=""><span data-i18n="operations.short.swapper">Swap</span></div>
                 </div>
                 <div class="operation-row">
-                  <div class="operation-item enabled" data-operation="Stacker"><img src="images/operations/stacker.png" class="operation-icon"><span data-i18n="operations.short.stacker">Stack</span></div>
-                  <div class="operation-item enabled" data-operation="Painter"><img src="images/operations/painter.png" class="operation-icon"><span data-i18n="operations.short.painter">Paint</span></div>
+                  <div class="operation-item enabled" data-operation="Stacker"><img src="images/operations/stacker.png" class="operation-icon" alt=""><span data-i18n="operations.short.stacker">Stack</span></div>
+                  <div class="operation-item enabled" data-operation="Painter"><img src="images/operations/painter.png" class="operation-icon" alt=""><span data-i18n="operations.short.painter">Paint</span></div>
                 </div>
                 <div class="operation-row">
-                  <div class="operation-item enabled" data-operation="Pin Pusher"><img src="images/operations/pin-pusher.png" class="operation-icon"><span data-i18n="operations.short.pinPusher">Pin</span></div>
-                  <div class="operation-item enabled" data-operation="Crystal Generator"><img src="images/operations/crystal-generator.png" class="operation-icon"><span data-i18n="operations.short.crystalGenerator">Crystal</span></div>
+                  <div class="operation-item enabled" data-operation="Pin Pusher"><img src="images/operations/pin-pusher.png" class="operation-icon" alt=""><span data-i18n="operations.short.pinPusher">Pin</span></div>
+                  <div class="operation-item enabled" data-operation="Crystal Generator"><img src="images/operations/crystal-generator.png" class="operation-icon" alt=""><span data-i18n="operations.short.crystalGenerator">Crystal</span></div>
                 </div>
               </div>
             </div>
@@ -315,7 +286,7 @@ Larger may find more solutions but uses more memory (maximum 5,000).</p>
   </aside>
 
   <main class="main">
-    <button class="icon-btn sidebar-toggle-float" id="sidebar-toggle-float" title="Expand sidebar" data-i18n-title="sidebar.toggle.expand">
+    <button class="icon-btn sidebar-toggle-float" data-i18n-aria-label="sidebar.toggle.expand" id="sidebar-toggle-float" title="Expand sidebar" data-i18n-title="sidebar.toggle.expand">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
@@ -323,13 +294,13 @@ Larger may find more solutions but uses more memory (maximum 5,000).</p>
 
     <div class="graph-area">
       <div class="graph-grid"></div>
-      <div id="graph-container" style="position:absolute; inset:0;"></div>
+      <div role="group" aria-label="Shape graph" data-i18n-aria-label="a11y.graph" id="graph-container" style="position:absolute; inset:0;"></div>
 
       <div class="graph-placeholder" id="placeholder">
         <span class="graph-placeholder-text" data-i18n="placeholder.noGraph">No graph generated yet</span>
       </div>
 
-      <button class="snapshot-btn" title="Copy snapshot" data-i18n-title="buttons.copySnapshot">
+      <button class="snapshot-btn" data-i18n-aria-label="buttons.copySnapshot" title="Copy snapshot" data-i18n-title="buttons.copySnapshot">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <rect width="14" height="14" x="8" y="8" rx="2"></rect>
           <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
@@ -341,7 +312,7 @@ Larger may find more solutions but uses more memory (maximum 5,000).</p>
     <div class="status-bar">
       <div class="status-item">
         <div class="status-dot idle" id="status-dot"></div>
-        <span id="status-text" data-i18n="status.idle">Idle</span>
+        <span role="status" aria-live="polite" id="status-text" data-i18n="status.idle">Idle</span>
       </div>
       <div class="spacer"></div>
       <div class="graph-controls-bar">
@@ -367,7 +338,7 @@ Larger may find more solutions but uses more memory (maximum 5,000).</p>
         <div class="graph-control-group">
           <label for="lang-preference" data-i18n="language.label">Language</label>
           <select id="lang-preference" class="language-select">
-            <option value="cn" data-i18n="language.option.cn">Chinese</option>
+            <option value="zh-CN">简体中文</option>
             <option value="en" data-i18n="language.option.en">English</option>
           </select>
         </div>

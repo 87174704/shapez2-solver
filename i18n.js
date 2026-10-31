@@ -1,6 +1,6 @@
-export const DEFAULT_LOCALE = 'cn';
-export const SUPPORTED_LOCALES = Object.freeze(['cn', 'en']);
-export const LANGUAGE_STORAGE_KEY = 'shapez2-solver-locale';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, LANGUAGE_STORAGE_KEY, LANGUAGE_NAMES, normalizeLocale, getStoredLocale, getPreferredLocale } from './localeConfig.js';
+export { DEFAULT_LOCALE, SUPPORTED_LOCALES, LANGUAGE_STORAGE_KEY, normalizeLocale, getStoredLocale } from './localeConfig.js';
+import { additionalTranslations } from './locales/index.js';
 
 const COLOR_LABEL_KEYS = Object.freeze({
     r: 'colors.red',
@@ -46,7 +46,7 @@ function pluralizeEn(count, singular, plural = `${singular}s`) {
     return `${count} ${count === 1 ? singular : plural}`;
 }
 
-const TRANSLATIONS = {
+export const TRANSLATIONS = {
     en: {
         'page.title': 'Shapez 2 Solver',
         'header.source': 'Source on GitHub',
@@ -224,7 +224,7 @@ const TRANSLATIONS = {
             `Layer ${layerNumber} has ${actualParts} parts, but expected ${expectedParts}. All layers must have the same number of parts.`,
         'validation.invalidCode': ({ context, shapeCode, errors }) => `Invalid ${context} code: ${shapeCode}\n\nErrors:\n${errors}`,
     },
-    cn: {
+    'zh-CN': {
         'page.title': 'Shapez 2 求解器',
         'header.source': 'GitHub 源码',
         'language.label': '语言',
@@ -399,20 +399,33 @@ const TRANSLATIONS = {
     },
 };
 
-let currentLocale = normalizeLocale(getLocaleFromPath()) ?? getStoredLocale() ?? DEFAULT_LOCALE;
-
-export function normalizeLocale(locale) {
-    if (typeof locale !== 'string') return null;
-    const normalized = locale.toLowerCase();
-    return SUPPORTED_LOCALES.includes(normalized) ? normalized : null;
-}
+Object.assign(TRANSLATIONS["en"], {
+    "a11y.graph": "Shape relationship graph (2D/3D)",
+    "solver.status.beamPruned": " · beam pruning encountered",
+    "solver.limit.time": "The 120-second search-time budget was reached. The search stopped safely; disable irrelevant operations or lower states per level and retry.",
+    "solver.limit.generated-states": "The generated-candidate budget was reached. The search stopped safely; disable irrelevant operations or lower states per level and retry.",
+    "solver.limit.visited-states": "The visited-state memory budget was reached. The search stopped safely; disable irrelevant operations or lower states per level and retry.",
+    "solver.limit.shape-universe": "The unique-shape memory budget was reached. The search stopped safely; disable irrelevant operations or lower states per level and retry.",
+    "solver.limit.safety": "The solver safety budget was reached. The search stopped safely; disable irrelevant operations or lower states per level and retry."
+});
+Object.assign(TRANSLATIONS["zh-CN"], {
+    "a11y.graph": "形状关系图（2D/3D）",
+    "solver.status.beamPruned": " · 已发生 beam 剪枝",
+    "solver.limit.time": "已达到 120 秒搜索时间预算。 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。",
+    "solver.limit.generated-states": "已达到候选状态生成预算。 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。",
+    "solver.limit.visited-states": "已达到历史状态内存预算。 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。",
+    "solver.limit.shape-universe": "已达到唯一形状内存预算。 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。",
+    "solver.limit.safety": "已达到求解器安全预算。 搜索已安全停止；可关闭无关操作或降低每层状态数后重试。"
+});
+Object.assign(TRANSLATIONS, additionalTranslations);
+let currentLocale = getPreferredLocale();
 
 export function getLocaleFromPath(pathname = globalThis.location?.pathname ?? '/') {
     const segments = pathname.split('/').filter(Boolean);
     if (segments.length === 0) return null;
 
     const last = segments.at(-1);
-    if (normalizeLocale(last)) return last.toLowerCase();
+    if (normalizeLocale(last)) return normalizeLocale(last);
 
     if (last === 'index.html') {
         const parent = segments.at(-2);
@@ -442,14 +455,6 @@ export function getLocaleUrl(locale, locationLike = globalThis.location) {
     return `${path}${search}${hash}`;
 }
 
-export function getStoredLocale() {
-    try {
-        return normalizeLocale(globalThis.localStorage?.getItem(LANGUAGE_STORAGE_KEY));
-    } catch {
-        return null;
-    }
-}
-
 export function setStoredLocale(locale) {
     const normalized = normalizeLocale(locale) ?? DEFAULT_LOCALE;
     try {
@@ -466,7 +471,7 @@ export function getCurrentLocale() {
 export function setCurrentLocale(locale) {
     currentLocale = normalizeLocale(locale) ?? DEFAULT_LOCALE;
     if (globalThis.document?.documentElement) {
-        globalThis.document.documentElement.lang = currentLocale === 'cn' ? 'zh-CN' : 'en';
+        globalThis.document.documentElement.lang = currentLocale;
     }
     return currentLocale;
 }
@@ -478,7 +483,7 @@ export function t(key, params = {}, locale = currentLocale) {
     const value = dict[key] ?? fallback[key] ?? key;
 
     if (typeof value === 'function') return value(params, normalized);
-    if (typeof value === 'string') return formatTemplate(value, params);
+    if (typeof value === 'string') return formatTemplate(value, { ...params, ...(key === 'solver.status.progress' ? { beamPruned: params.beamPruned ? t('solver.status.beamPruned', {}, normalized) : '' } : {}) });
     return String(value);
 }
 
@@ -502,7 +507,7 @@ export function getOperationLabel(operationName, params = {}, locale = currentLo
 export function applyTranslations(root = globalThis.document) {
     if (!root?.querySelectorAll) return;
 
-    if ('title' in globalThis.document) {
+    if (globalThis.document && 'title' in globalThis.document) {
         globalThis.document.title = t('page.title');
     }
 
@@ -518,6 +523,33 @@ export function applyTranslations(root = globalThis.document) {
         element.setAttribute('title', t(element.dataset.i18nTitle));
     });
 
+    root.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+        element.setAttribute('aria-label', t(element.dataset.i18nAriaLabel));
+    });
+    root.querySelectorAll('.operation-item[data-operation]').forEach(element => {
+        const name = getOperationDisplayName(element.dataset.operation);
+        element.title = name;
+        element.setAttribute('aria-label', name);
+    });
+    root.querySelectorAll('.mix-color-row[data-color]').forEach(row => {
+        row.querySelectorAll('.mix-input').forEach(input => {
+            const label = input.classList.contains('mix-have') ? 'mix.have' : 'mix.want';
+            input.setAttribute('aria-label', `${getColorDisplayName(row.dataset.color)} · ${t(label)}`);
+        });
+    });
+    root.querySelectorAll('.toggle-row, .extraction-option').forEach(row => {
+        const input = row.querySelector('input');
+        const label = row.querySelector('[data-i18n]');
+        if (input && label) input.setAttribute('aria-label', t(label.dataset.i18n));
+    });
     const languageSelect = root.querySelector('#lang-preference');
+    if (languageSelect && !languageSelect.dataset.languagesReady) {
+        languageSelect.replaceChildren(...SUPPORTED_LOCALES.map(locale => {
+            const option = document.createElement('option');
+            option.value = locale; option.lang = locale; option.textContent = LANGUAGE_NAMES[locale];
+            return option;
+        }));
+        languageSelect.dataset.languagesReady = 'true';
+    }
     if (languageSelect) languageSelect.value = getCurrentLocale();
 }

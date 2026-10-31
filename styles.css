@@ -1237,3 +1237,32 @@ select.field-input {
     padding: 10px 0 4px;
     font-style: italic;
 }
+
+/* Identical script fallbacks and wrapping in both build profiles. */
+:root {
+    --sans: 'Barlow', 'Segoe UI', 'Microsoft YaHei', 'Yu Gothic', 'Malgun Gothic', 'Leelawadee UI', 'Noto Sans Thai', sans-serif;
+    --mono: var(--sans);
+}
+.section-label, .subsection-label, .toggle-name, .option-label, .btn-ghost, .btn-primary {
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 1.45;
+}
+.status-bar { height: auto; min-height: 44px; flex-wrap: wrap; padding: 8px 12px; gap: 8px 16px; }
+.status-item { min-width: 0; overflow-wrap: anywhere; }
+.graph-controls-bar { flex-wrap: wrap; min-width: 0; }
+.graph-control-group { min-width: 0; max-width: 100%; }
+.graph-controls-bar select { min-width: 0; max-width: 100%; }
+.operation-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+@media (max-width: 640px) {
+    .app { flex-direction: column; }
+    .sidebar { width: 100%; min-width: 0; max-height: 50dvh; }
+    .sidebar.collapsed { width: 0; max-height: 0; }
+    .sidebar-header, .sidebar-sections { min-width: 0; }
+    .main { flex: 1; min-height: 0; width: 100%; }
+    .status-bar .spacer { display: none; }
+    .graph-controls-bar { width: 100%; gap: 6px 10px; }
+    .graph-controls-bar label { white-space: normal; }
+}
+
+.mix-col-headers span { min-width: 0; overflow-wrap: anywhere; white-space: normal; line-height: 1.4; }

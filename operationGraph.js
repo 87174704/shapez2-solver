@@ -31,6 +31,27 @@ const explorerState = {
 
 export function getCyInstance() { return cyInstance; }
 
+// Update only display labels: preserve topology, viewport, selection and results.
+export function refreshGraphTranslations(lastGraph) {
+    if (cyInstance && lastGraph?.type === 'solver') {
+        cyInstance.batch(() => lastGraph.data.forEach((step, i) => {
+            cyInstance.getElementById(`op-${i}`).data('label', getOperationLabel(step.operation, step.params));
+        }));
+    } else if (cyInstance && lastGraph?.type === 'mix') {
+        cyInstance.nodes('.mixer').data('label', t('mix.mixer'));
+    }
+    if (graph3dInstance && explorerState.graphCache) {
+        const { opById } = explorerState.graphCache;
+        for (const node of graph3dInstance.graphData().nodes) {
+            const op = opById.get(node.id);
+            if (op) node.label = getOperationLabel(op.type, op.params);
+        }
+        graph3dInstance.nodeLabel(node => node.label);
+        const selected = graph3dInstance.graphData().nodes.find(n => n.id === explorerState.selectedShapeId);
+        if (selected) renderExplorerPopup(selected);
+    }
+}
+
 // graph utils
 function getGraphContainer() {
     return document.getElementById('graph-container');
@@ -560,7 +581,7 @@ function createExplorerNavButtons(entries, direction) {
         btn.className = 'explorer-nav-btn';
 
         const opIcon = Object.assign(document.createElement('img'), {
-            className: 'explorer-nav-op-icon', src: operationImagePath(operation.type), alt: operation.type,
+            className: 'explorer-nav-op-icon', src: operationImagePath(operation.type), alt: '',
         });
 
         const shapeIcon = Object.assign(document.createElement('img'), {

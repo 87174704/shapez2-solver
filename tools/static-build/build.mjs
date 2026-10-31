@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import postcss from 'postcss';
 import { parse } from 'acorn';
+import { SUPPORTED_LOCALES } from '../../localeConfig.js';
 import { verifyRelease } from '../../versions/release1.mjs';
 import { RC_COMMIT, RC_TREE, FONT_CSS, dependencies, profiles } from './profiles.mjs';
 import { ROOT, sha, sri, git, readJson, writeJson, filesUnder } from './shared.mjs';
@@ -47,7 +48,7 @@ assert.equal(imports[0].params, `url('${FONT_CSS}')`); imports[0].params = `url(
 await fs.writeFile(path.join(out, 'styles.css'), stylesheet.toString());
 const source = await fs.readFile(path.join(ROOT, 'index.html'), 'utf8');
 const scriptHashes = [];
-for (const [locale, filename, lang] of [[null,'index.html','en'],['cn','cn/index.html','zh-CN'],['en','en/index.html','en']]) {
+for (const [locale, filename, lang] of [[null,'index.html','en'],['cn','cn/index.html','zh-CN'], ...SUPPORTED_LOCALES.map(locale => [locale, `${locale}/index.html`, locale])]) {
   const doc = parseHtml(source, 'index.html'), nodes = elements(doc);
   const head = nodes.find(n => n.tagName === 'head');
   setAttr(nodes.find(n => n.tagName === 'html'), 'lang', lang);
@@ -76,7 +77,7 @@ for (const file of await filesUnder(out)) fileHashes.push({ path: file, bytes: (
 const buildTools = [];
 for (const file of (await filesUnder(path.join(ROOT, 'tools/static-build'), { ignoreDirs: ['node_modules'] })).filter(f => /\.(mjs|json)$/.test(f))) buildTools.push({ path: `tools/static-build/${file}`, sha256: sha(await fs.readFile(path.join(ROOT, 'tools/static-build', file))) });
 await writeJson(`dist/${name}/build-manifest.json`, { schemaVersion: 1, sourceCommit: git('rev-parse', 'HEAD'), sourceTree: git('rev-parse', 'HEAD^{tree}'), rcCommit: RC_COMMIT, rcTree: RC_TREE,
-  trackedChanges: git('diff', '--name-only', 'HEAD'), profile: name, basePath, buildTool: 'shapez2-static-build/1.0.0', node: process.version, toolingPackages: (await readJson('tools/static-build/package.json')).devDependencies,
+  locales: SUPPORTED_LOCALES, trackedChanges: git('diff', '--name-only', 'HEAD'), profile: name, basePath, buildTool: 'shapez2-static-build/1.0.0', node: process.version, toolingPackages: (await readJson('tools/static-build/package.json')).devDependencies,
   identity, buildTools, dependencies: lock.dependencies.map(d => ({ name: d.name, version: d.version, url: d[name], sha256: d.sha256, integrity: d.integrity, license: d.license, generatedByCdn: d.generatedByCdn })),
   font: name === 'global' ? { family: 'Barlow', css: config.fontCss, behavior: 'Google UA-dependent CSS; font-display swap, system sans fallback', snapshot: lock.font.distributionVersion } : { ...lock.font, css: config.fontCss },
   files: fileHashes });
