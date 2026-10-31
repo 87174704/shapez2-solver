@@ -1,3 +1,5 @@
+# Preserve versioned bytes; nested authority rules retain their explicit overrides.
+* -text
 /*.js -text
 /*.html -text
 /styles.css -text

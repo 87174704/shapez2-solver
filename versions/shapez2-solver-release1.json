@@ -1696,7 +1696,7 @@
       },
       {
         "path": ".gitattributes",
-        "sha256": "a2ae6af2d41b3db10329eda4b8703e45b572aae9e1f6a1b66a502ac388dacff7"
+        "sha256": "90cf82ce40aab0bf3f5d6e616336a657cdb55fc135207f1c07cbe9a86947dd4d"
       },
       {
         "path": ".gitea/workflows/deploy.yml",
@@ -6795,7 +6795,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "8356910911df41d2ad1ce020e4bd8dd40b23f65b1a2bd826a18ad3d8708bf33b"
+    "sha256": "a7f35193a0e165860a2079df7d230a60cd3d8ebbe7c7a872f8124a00165ac95c"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
@@ -6804,7 +6804,9 @@
   ],
   "exclusionReason": "Manifest/pin avoid self reference; release reports are post-validation evidence. Complete Git HEAD/tree additionally binds every tracked file in build-manifest.json.",
   "reviewedChangesFromBaseline": [
+    ".ci-results/.gitignore",
     ".gitattributes",
+    ".gitea/workflows/deploy.yml",
     ".github/workflows/pages.yml",
     ".github/workflows/verify.yml",
     ".gitignore",
@@ -6813,13 +6815,30 @@
     "BUILD_PROFILES.md",
     "CDN_VERIFICATION.md",
     "DEPENDENCY_MATRIX.md",
+    "LICENSE",
     "NEXT_DEPLOY_PLAN.md",
     "README.md",
     "REPORT.md",
+    "benchmarks/sources/.gitattributes",
+    "benchmarks/sources/README.md",
     "cn/index.html",
     "constructive/validate-strict-plan.js",
+    "docs/benchmark/PROVENANCE.md",
+    "docs/benchmark/REPRODUCIBILITY.md",
     "docs/benchmark/USER_RULES.md",
     "docs/i18n/TERMINOLOGY.md",
+    "docs/legal/.gitattributes",
+    "docs/legal/ATTRIBUTION.md",
+    "docs/legal/LICENSING.md",
+    "docs/legal/THIRD_PARTY.md",
+    "docs/physics-fix-20261029/README.md",
+    "docs/release/ARCHITECTURE.md",
+    "docs/release/CI.md",
+    "docs/release/PHASE_C.md",
+    "docs/release/PHYSICS_V2.md",
+    "docs/release/PUBLISH_PLAN.md",
+    "docs/release/action-pins.json",
+    "docs/release/frozen-maintenance.json",
     "docs/release1/.gitattributes",
     "docs/release1/REPORT.md",
     "docs/release1/evidence/integration-audit.json",
@@ -6904,8 +6923,10 @@
     "locales/zh-TW.js",
     "main.js",
     "operationGraph.js",
+    "package-lock.json",
     "release.json",
     "scripts/ci/prepare-checkout.mjs",
+    "scripts/ci/verify-frozen.mjs",
     "scripts/ci/verify.mjs",
     "shapeSolver.js",
     "styles.css",
