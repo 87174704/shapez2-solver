@@ -1798,9 +1798,9 @@
       },
       {
         "path": "README.md",
-        "sha256": "588677ef1946518f8463e43c83ab447542bf3afd39d733c4df27aab25c500cbb",
+        "sha256": "2fef94b86a7a520db2307438a1e3112f4454f2bf4e63367ae52e5fbb594858ba",
         "mixedNewlineRecipe": {
-          "normalizedLfSha256": "8025a2a18328e573e98e3d975e06ef5d3a90051e5b814a43a987669ebef549b5",
+          "normalizedLfSha256": "a7b95f1fc1442b1016db1951d63bed2ac08a8da3fa67935f0fda48696a7e6192",
           "crlfLineIndices": [
             2,
             3,
@@ -6795,7 +6795,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "a7f35193a0e165860a2079df7d230a60cd3d8ebbe7c7a872f8124a00165ac95c"
+    "sha256": "0ba49ea7f1f55df2b4c2eaaf7608e9c5ee80b48f97315c5e06e817bda2c5b7d6"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
