@@ -27861,11 +27861,11 @@
       },
       {
         "path": "tests/browser/productPerformance.browser.mjs",
-        "sha256": "104888d64fefc0feda435ef7078e7b510cb84f767a2d11581d9e4732bf1212f3"
+        "sha256": "d8ea7c8e8ac1e4894fe74f41c8475c3e9f30ff37dff6214553eabb4b6f30fe98"
       },
       {
         "path": "tests/browser/workerLifecycle.browser.mjs",
-        "sha256": "42fa274196ce467df715bb1d37cf12b624676ef7f7b72c496c46814c87dd0c82"
+        "sha256": "f1a259e7cd4d4c7c18a79292d1bba5a676a93d41a45bd8eab8192bc8d9dac159"
       },
       {
         "path": "tests/browser/workerLifecycleHarness.html",
@@ -28365,7 +28365,7 @@
       },
       {
         "path": "tools/static-build/browser.mjs",
-        "sha256": "cd07a278b3cb95b61dd76e4d6716705a7bedba2fa34ffb3ea1dabe57d1f5fdfb"
+        "sha256": "874aea195498b35c951802cb63fb78f57ded05246db1ecb98baf20e487114640"
       },
       {
         "path": "tools/static-build/build.mjs",
@@ -28472,7 +28472,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "3462021c9248479fef09fb6179b5d8653e79153bb31b64b81ae32438fae7b3be"
+    "sha256": "daa8f77939849a044577656d6e848ca46e59f0361c93ece49711910e3a3eeac1"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
@@ -33991,6 +33991,8 @@
     "scripts/ci/verify.mjs",
     "shapeSolver.js",
     "styles.css",
+    "tests/browser/productPerformance.browser.mjs",
+    "tests/browser/workerLifecycle.browser.mjs",
     "tests/i18n.test.mjs",
     "tests/release1Identity.test.mjs",
     "tests/strict-routing.test.mjs",

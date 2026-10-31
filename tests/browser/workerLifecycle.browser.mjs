@@ -181,6 +181,9 @@ try {
     );
 
     const configured = await pageClient.evaluate(`(() => {
+        const language = document.getElementById('lang-preference');
+        language.value = 'en';
+        language.dispatchEvent(new Event('change'));
         const targetInput = document.getElementById('target-input');
         targetInput.value = 'CuRuSuWu';
         document.getElementById('add-target-shape-btn').click();

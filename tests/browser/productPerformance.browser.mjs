@@ -472,6 +472,11 @@ async function runProfile({ browser, profileIndex, options, url }) {
             'the production UI to initialize',
             15000,
         );
+        await client.evaluate(`(() => {
+            const language = document.getElementById('lang-preference');
+            language.value = 'en';
+            language.dispatchEvent(new Event('change'));
+        })()`);
         assert.equal(await client.evaluate(instrumentationExpression), true);
         const records = [];
 
