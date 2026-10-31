@@ -1,11 +1,12 @@
 import test from 'node:test';
-import { verifyRelease, RELEASE } from '../versions/release1.mjs';
+import { RELEASE } from '../versions/release1.mjs';
+import { verifyCurrentInputs } from '../versions/current.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { ROOT, json, verifyVersion } from '../versions/identity.mjs';
-import { validateFrozenArtifactV2 } from '../versions/benchmark-v2.mjs';
+import { validateFrozenArtifactCurrent } from '../versions/benchmark-current.mjs';
 import { SHAPE_OPERATIONS_SEMANTICS } from '../shapeOperations.js';
 import { validateCompositeRelease } from '../benchmarks/tools/validate-composite-release.mjs';
 import { validateBenchmarkArtifact } from '../benchmarks/tools/validate-benchmark.mjs';
@@ -14,11 +15,12 @@ import { buildSolverEvaluationView } from '../benchmarks/tools/environment-expan
 const V2 = 'shape-operations-v2-support-closure';
 const ARTIFACT = 'benchmarks/expansion-pilot/v1/instances.json';
 
-test('current release strictly verifies with unchanged Physics v2 and frozen bytes', async () => {
+test('maintenance inputs strictly verify unchanged Physics v2 and frozen bytes', async () => {
     assert.equal(SHAPE_OPERATIONS_SEMANTICS, V2);
-    const result = await verifyRelease();
+    const result = await verifyCurrentInputs();
     assert.equal(result.valid, true, result.errors.join('\n'));
     assert.equal(result.frozenFilesChecked, 461);
+    // Repository release.json remains historical metadata; maintenance builds issue their own identity.
     const release = await json(path.join(ROOT, 'release.json'));
     const index = await json(path.join(ROOT, 'versions/index.json'));
     assert.equal(release.release, RELEASE);
@@ -87,11 +89,11 @@ test('v2 source substitution is detected in an isolated implementation tree', as
 test('v2 independently accepts frozen artifact and canonical content-identical copies', async () => {
     const source = await json(path.join(ROOT, ARTIFACT));
     const copy = Object.fromEntries(Object.entries(source).reverse());
-    const result = await validateFrozenArtifactV2({ artifactPath: ARTIFACT, artifactDocument: copy,
+    const result = await validateFrozenArtifactCurrent({ artifactPath: ARTIFACT, artifactDocument: copy,
         projectionDocument: buildSolverEvaluationView(copy) });
     assert.equal(result.valid, true, result.errors.join('\n'));
     assert.equal(result.replayed, 6);
-    assert.equal(result.certification, 'v2-replay-of-frozen-v1-inputs');
+    assert.equal(result.certification, 'maintenance-replay-of-frozen-v1-inputs');
 });
 
 test('v2 frozen artifact tamper matrix binds provenance, resources, witness, difficulty and release', async t => {
@@ -106,7 +108,7 @@ test('v2 frozen artifact tamper matrix binds provenance, resources, witness, dif
     ];
     for (const [name, mutate] of mutations) await t.test(name, async () => {
         const doc = structuredClone(source); mutate(doc);
-        const r = await validateFrozenArtifactV2({ artifactPath: ARTIFACT, artifactDocument: doc });
+        const r = await validateFrozenArtifactCurrent({ artifactPath: ARTIFACT, artifactDocument: doc });
         assert.equal(r.valid, false);
         assert.ok(r.errors.includes('actual artifact canonical content differs from frozen identity'));
     });
@@ -116,8 +118,8 @@ test('v2 rejects a substituted public solver projection and unregistered artifac
     const artifact = await json(path.join(ROOT, ARTIFACT));
     const projection = buildSolverEvaluationView(artifact);
     projection.instances[0].target = 'RuRuRuRu';
-    const r = await validateFrozenArtifactV2({ artifactPath: ARTIFACT, projectionDocument: projection });
+    const r = await validateFrozenArtifactCurrent({ artifactPath: ARTIFACT, projectionDocument: projection });
     assert.equal(r.valid, false);
     assert.ok(r.errors.includes('public projection differs from actual artifact'));
-    assert.equal((await validateFrozenArtifactV2({ artifactPath: 'unregistered.json' })).valid, false);
+    assert.equal((await validateFrozenArtifactCurrent({ artifactPath: 'unregistered.json' })).valid, false);
 });
