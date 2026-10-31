@@ -5,7 +5,7 @@
   "status": "release-candidate",
   "physicsSemantics": "shape-operations-v2-support-closure",
   "versionManifest": "versions/shapez2-solver-release1.json",
-  "runtimeIdentitySha256": "5dffb1065634b46d238f3143dda9d96f0c4c65ad84bc0d6b692b38ca3e89b133",
+  "runtimeIdentitySha256": "81d12d86ac88544e19052b160f14d330acdb417d9ca7acd4ac209acf894151df",
   "baseCommit": "0647b8502f75145936faf8fbcde7cf2ab5371f75",
   "gameCertification": "UNKNOWN",
   "historicalRelease": {

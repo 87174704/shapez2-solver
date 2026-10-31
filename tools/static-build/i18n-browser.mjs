@@ -199,6 +199,8 @@ try {
                     const rect = await page.locator(selector).boundingBox();
                     assert.ok(rect && rect.x >= 0 && rect.x + rect.width <= 391 && rect.y + rect.height <= 845, `${locale} ${selector}: clipped ${JSON.stringify(rect)}`);
                 }
+                const languageLabel = await page.locator('label[for=lang-preference]').boundingBox();
+                assert.ok(languageLabel.height <= 20, `${locale}: language label squeezed onto multiple lines`);
                 assert.equal(await page.locator('.mix-col-headers span').evaluateAll(es => es.every(e => e.scrollWidth <= e.clientWidth)), true, `${locale}: mixing headers overflow`);
                 await page.screenshot({ path: path.join(ROOT, out, `${profile}-narrow-${locale}.png`), fullPage: true });
             }

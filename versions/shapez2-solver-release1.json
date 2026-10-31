@@ -1664,12 +1664,12 @@
       },
       {
         "path": "styles.css",
-        "sha256": "f945a2503f4380f5447bc594cdc4c5aae1c707eb4b697ef850814d541fd1f469",
+        "sha256": "11b3db5adeaadef8704d5b1f15c9c6a776b67b4f64a42af7afc8eb9a9d10a95f",
         "mixedNewlineRecipe": {
-          "normalizedLfSha256": "9ed4c5e5246adf6c9b0ef7fc5577d59c1e433ddc9e143c307a00ff3cda2c5901",
+          "normalizedLfSha256": "47e372421cd20de815dd15a3479f1ca5e312bbbb8079161b307685f525e3eddb",
           "crlfLineIndices": [
-            1266,
-            1267
+            1267,
+            1268
           ]
         }
       },
@@ -1686,7 +1686,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "5dffb1065634b46d238f3143dda9d96f0c4c65ad84bc0d6b692b38ca3e89b133"
+    "sha256": "81d12d86ac88544e19052b160f14d330acdb417d9ca7acd4ac209acf894151df"
   },
   "source": {
     "files": [
@@ -27709,7 +27709,7 @@
       },
       {
         "path": "release.json",
-        "sha256": "41e041d5c89c76b71659e45444e1d1796879e3e19e5b1d42e1059efa9beb339c"
+        "sha256": "9e646eedd8880075db1fa1c98d481d0520b68d6bb61574b4fd6eecc5befa2740"
       },
       {
         "path": "scripts/ci/prepare-checkout.mjs",
@@ -27834,12 +27834,12 @@
       },
       {
         "path": "styles.css",
-        "sha256": "f945a2503f4380f5447bc594cdc4c5aae1c707eb4b697ef850814d541fd1f469",
+        "sha256": "11b3db5adeaadef8704d5b1f15c9c6a776b67b4f64a42af7afc8eb9a9d10a95f",
         "mixedNewlineRecipe": {
-          "normalizedLfSha256": "9ed4c5e5246adf6c9b0ef7fc5577d59c1e433ddc9e143c307a00ff3cda2c5901",
+          "normalizedLfSha256": "47e372421cd20de815dd15a3479f1ca5e312bbbb8079161b307685f525e3eddb",
           "crlfLineIndices": [
-            1266,
-            1267
+            1267,
+            1268
           ]
         }
       },
@@ -28377,7 +28377,7 @@
       },
       {
         "path": "tools/static-build/i18n-browser.mjs",
-        "sha256": "a0ffa43476160288ee83bd770f925a61522a1d005214a3f0ae398e5a21e2901f"
+        "sha256": "6ea62effc8dd833612582ca5f5e039feeb6c83f0a3466c3a13f590203cceb2f4"
       },
       {
         "path": "tools/static-build/package-lock.json",
@@ -28472,7 +28472,7 @@
         "sha256": "b71059217a3fd553800f141354ba82a8c8088c621b3a0bd3aa7dcd7033af0c26"
       }
     ],
-    "sha256": "daa8f77939849a044577656d6e848ca46e59f0361c93ece49711910e3a3eeac1"
+    "sha256": "68252508acf924fab921634c9ac266f23f3d3ccfaed1935568f9ea0c62fdebfb"
   },
   "exclusions": [
     "versions/shapez2-solver-release1.json",
