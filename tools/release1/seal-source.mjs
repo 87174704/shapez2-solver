@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { ROOT, json, sha256, canonical, aggregate } from '../../versions/identity.mjs';
 import { RELEASE, MANIFEST, PIN, excluded } from '../../versions/release1.mjs';
+import { restore } from './prepare.mjs';
 const git = (...args) => execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64*1024*1024 }).trim();
 const old = await json(path.join(ROOT, 'versions/shape-operations-v2-support-closure.json'));
 const binding = async p => {
@@ -19,6 +20,14 @@ const binding = async p => {
   return result;
 };
 const sourceFiles = git('ls-files','-z').split('\0').filter(p => p && !excluded(p)).sort();
+// A normalized checkout cannot rediscover historical mixed-newline recipes.
+// Recover them from the frozen authority before hashing unchanged Git blobs.
+const inventoryBytes = await fs.readFile(path.join(ROOT, old.frozenInventory.path));
+assert.equal(sha256(inventoryBytes), old.frozenInventory.sha256, 'frozen inventory hash differs');
+const inventory = JSON.parse(inventoryBytes);
+const frozenMixedFiles = inventory.files.filter(f => f.mixedNewlineRecipe && sourceFiles.includes(f.path) &&
+  git('rev-parse', `:${f.path}`) === git('rev-parse', `${inventory.commit}:${f.path}`));
+await restore(ROOT, frozenMixedFiles);
 const runtime = { files: await Promise.all([...old.runtime.files.map(f=>f.path), 'constructive/validate-strict-plan.js', 'localeConfig.js', ...git('ls-files', 'locales').split('\n').filter(Boolean)].sort().map(binding)) };
 runtime.sha256 = aggregate(runtime.files);
 const release = await json(path.join(ROOT,'release.json'));
