@@ -1,0 +1,6 @@
+validated 30/159
+validated 60/159
+validated 90/159
+validated 120/159
+validated 150/159
+{"cases":159,"witnessSteps":15150,"frozenSteps":11087,"actualSteps":11087,"witnessReferences":331,"uniqueWitnessInstances":331,"outputChecks":67855,"gravityCalls":57345,"supportChecks":4675,"allPairsChecks":4675,"componentChecks":476}

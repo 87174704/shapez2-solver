@@ -1,0 +1,6466 @@
+{
+  "status": "VERIFIED",
+  "engine": "chrome.exe",
+  "node": "v24.21.0",
+  "toolSha256": "874aea195498b35c951802cb63fb78f57ded05246db1ecb98baf20e487114640",
+  "exclusiveWindowConfirmed": true,
+  "profiles": [
+    {
+      "profile": "global",
+      "basePath": "/shapez2-solver/",
+      "status": "VERIFIED",
+      "checks": [
+        {
+          "name": "entry redirect, initialization and shape rendering",
+          "status": "VERIFIED",
+          "detail": {
+            "path": "/shapez2-solver/en/",
+            "startingShapes": 4
+          }
+        },
+        {
+          "name": "shape input, Solver Worker, solution and 2D graph",
+          "status": "VERIFIED",
+          "detail": {
+            "nodes": 3,
+            "edges": 2
+          }
+        },
+        {
+          "name": "2D direction control and actual ELK adapter execution",
+          "status": "VERIFIED",
+          "detail": {
+            "direction": "TB",
+            "positions": [
+              {
+                "x": 52,
+                "y": 142
+              },
+              {
+                "x": 52,
+                "y": 52
+              },
+              {
+                "x": 52,
+                "y": 232
+              }
+            ]
+          }
+        },
+        {
+          "name": "Explorer Worker and actual 3D WebGL graph",
+          "status": "VERIFIED",
+          "detail": {
+            "width": 1440,
+            "height": 1000,
+            "webgl": true
+          }
+        },
+        {
+          "name": "Barlow original normal/italic weights and fallback policy",
+          "status": "VERIFIED",
+          "detail": [
+            {
+              "style": "normal",
+              "weight": 100,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 200,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 300,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 400,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 500,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 600,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 700,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 800,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 900,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 100,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 200,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 300,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 400,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 500,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 600,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 700,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 800,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 900,
+              "count": 1,
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "name": "Mixing Worker and mixing graph",
+          "status": "VERIFIED",
+          "detail": {
+            "workers": [
+              "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+              "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+              "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+              "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js"
+            ]
+          }
+        },
+        {
+          "name": "locale switch and refresh under deployment prefix",
+          "status": "VERIFIED",
+          "detail": {
+            "path": "/shapez2-solver/en/"
+          }
+        },
+        {
+          "name": "served release identity and default strict Solver Worker",
+          "status": "VERIFIED",
+          "detail": {
+            "sourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+            "sourceTree": "f293315d02484a751fafcc41e91c18d1a781ec34",
+            "route": "strict-ordinary-constructive",
+            "defaultStrictAttempted": true,
+            "budgetFallback": false,
+            "independentlyReplayed": true
+          }
+        },
+        {
+          "name": "all five real CDN responses match reviewed bytes",
+          "status": "VERIFIED",
+          "detail": {
+            "scripts": 5,
+            "network": "native browser requests; no interception or mock"
+          }
+        },
+        {
+          "name": "no unexpected domains, local 404, console error or CSP violation",
+          "status": "VERIFIED",
+          "detail": {
+            "requests": 234
+          }
+        },
+        {
+          "name": "font failure leaves Solver functional",
+          "status": "VERIFIED",
+          "detail": "Intentional font-only failure; initialization and actual Solver Worker succeeded"
+        }
+      ],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/color-mixer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/en/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/en/index.html",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/build-manifest.json",
+          "type": "fetch"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/release.json",
+          "type": "fetch"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        }
+      ],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "status": 200
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/color-mixer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/en/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/en/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/styles.css",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8H0JmA.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s7wH8.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/build-manifest.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/release.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:50821/shapez2-solver/goalDecomposedSolver.js",
+          "status": 200
+        }
+      ],
+      "console": [
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        },
+        {
+          "type": "warning",
+          "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine."
+        },
+        {
+          "type": "warning",
+          "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        },
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        }
+      ],
+      "pageErrors": [],
+      "workers": [
+        "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+        "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js",
+        "http://127.0.0.1:50821/shapez2-solver/mixingSolver.js",
+        "http://127.0.0.1:50821/shapez2-solver/shapeSolver.js"
+      ],
+      "csp": [],
+      "failures": [],
+      "artifactSourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+      "artifactManifestSha256": "31d6055759de141c99367a065b50d22c7d9d46743087f15922e2704d70082905",
+      "browserVersion": "156.0.8078.74",
+      "localRequests": [
+        {
+          "url": "/shapez2-solver/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/favicon.ico",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/color-mixer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/en/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/favicon.ico",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/en/index.html",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/build-manifest.json",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/release.json",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/en/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapez2-solver/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "profile": "china",
+      "basePath": "/",
+      "status": "VERIFIED",
+      "checks": [
+        {
+          "name": "entry redirect, initialization and shape rendering",
+          "status": "VERIFIED",
+          "detail": {
+            "path": "/en/",
+            "startingShapes": 4
+          }
+        },
+        {
+          "name": "shape input, Solver Worker, solution and 2D graph",
+          "status": "VERIFIED",
+          "detail": {
+            "nodes": 3,
+            "edges": 2
+          }
+        },
+        {
+          "name": "2D direction control and actual ELK adapter execution",
+          "status": "VERIFIED",
+          "detail": {
+            "direction": "TB",
+            "positions": [
+              {
+                "x": 52,
+                "y": 142
+              },
+              {
+                "x": 52,
+                "y": 52
+              },
+              {
+                "x": 52,
+                "y": 232
+              }
+            ]
+          }
+        },
+        {
+          "name": "Explorer Worker and actual 3D WebGL graph",
+          "status": "VERIFIED",
+          "detail": {
+            "width": 1440,
+            "height": 1000,
+            "webgl": true
+          }
+        },
+        {
+          "name": "Barlow original normal/italic weights and fallback policy",
+          "status": "VERIFIED",
+          "detail": [
+            {
+              "style": "normal",
+              "weight": 100,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 200,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 300,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 400,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 500,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 600,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 700,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 800,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "normal",
+              "weight": 900,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 100,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 200,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 300,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 400,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 500,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 600,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 700,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 800,
+              "count": 1,
+              "loaded": true
+            },
+            {
+              "style": "italic",
+              "weight": 900,
+              "count": 1,
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "name": "Mixing Worker and mixing graph",
+          "status": "VERIFIED",
+          "detail": {
+            "workers": [
+              "http://127.0.0.1:53940/shapeSolver.js",
+              "http://127.0.0.1:53940/shapeSolver.js",
+              "http://127.0.0.1:53940/mixingSolver.js",
+              "http://127.0.0.1:53940/shapeSolver.js"
+            ]
+          }
+        },
+        {
+          "name": "locale switch and refresh under deployment prefix",
+          "status": "VERIFIED",
+          "detail": {
+            "path": "/en/"
+          }
+        },
+        {
+          "name": "served release identity and default strict Solver Worker",
+          "status": "VERIFIED",
+          "detail": {
+            "sourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+            "sourceTree": "f293315d02484a751fafcc41e91c18d1a781ec34",
+            "route": "strict-ordinary-constructive",
+            "defaultStrictAttempted": true,
+            "budgetFallback": false,
+            "independentlyReplayed": true
+          }
+        },
+        {
+          "name": "all five real CDN responses match reviewed bytes",
+          "status": "VERIFIED",
+          "detail": {
+            "scripts": 5,
+            "network": "native browser requests; no interception or mock"
+          }
+        },
+        {
+          "name": "no unexpected domains, local 404, console error or CSP violation",
+          "status": "VERIFIED",
+          "detail": {
+            "requests": 206
+          }
+        },
+        {
+          "name": "font failure leaves Solver functional",
+          "status": "VERIFIED",
+          "detail": "Intentional font-only failure; initialization and actual Solver Worker succeeded"
+        }
+      ],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:53940/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-29.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-32.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-35.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-47.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-50.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-53.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-2.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-5.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-8.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-14.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-17.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-20.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-23.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-26.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/color-mixer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/en/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/en/index.html",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "type": "image"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "type": "font"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "type": "script"
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "type": "font"
+        },
+        {
+          "url": "http://127.0.0.1:53940/build-manifest.json",
+          "type": "fetch"
+        },
+        {
+          "url": "http://127.0.0.1:53940/release.json",
+          "type": "fetch"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "type": "script"
+        }
+      ],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:53940/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-29.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-32.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-35.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-47.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-50.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-53.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-2.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-5.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-8.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-14.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-17.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-20.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-23.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-26.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/color-mixer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/en/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/en/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-cw.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/cutter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-180.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/half-destroyer.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/rotator-ccw.png",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape@3.29.2/dist/cytoscape.min.js",
+          "status": 200,
+          "sha256": "4d1ba05f57890d46e90ffb603e7d665bf9466e1d674e030f93d8e6e63b958587",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/pin-pusher.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/swapper.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/painter.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/stacker.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/images/operations/crystal-generator.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-41.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-38.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-44.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/elkjs@0.9.3/lib/elk.bundled.js",
+          "status": 200,
+          "sha256": "b0745abd7f23cd91690a1587e377edbe19fd7233c783300290936720546216d4",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/cytoscape-elk@2.3.0/dist/cytoscape-elk.min.js",
+          "status": 200,
+          "sha256": "a5d8177d848b6f0ce5a6656a3b0982294f60992c7f9badc7ac0e78b5ab13eacc",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/three@0.159.0/build/three.min.js",
+          "status": 200,
+          "sha256": "7b1c5d75b28d9de15042e2b374f83566d8c7146697af8fdeb4558b0fb528a585",
+          "hashMatches": true
+        },
+        {
+          "url": "https://jsdelivr.topthink.com/npm/3d-force-graph@1.74.7/dist/3d-force-graph.min.js",
+          "status": 200,
+          "sha256": "9dde93387b15d744bdc21ac16f16bb1f114c8aaa0a66815d4bf82e1f10bbd001",
+          "hashMatches": true
+        },
+        {
+          "url": "http://127.0.0.1:53940/main.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeValidation.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixingSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeRendering.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/colorMode.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/operationGraph.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/workerLifecycle.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/i18n.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/index.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/localeConfig.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ko.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/fr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/de.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/zh-TW.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/es-ES.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/tr.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/ru.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pl.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/pt-BR.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/locales/th.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/assets/fonts/barlow-11.woff2",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/build-manifest.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/release.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeConstants.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/shapeOperations.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/interiorCrystalColumnSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/validate-strict-plan.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/unsupportedCrystalResourcePoolSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/sharedOccurrenceGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/interior-crystal-column-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/isolatedPinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructiveSolverRuntime.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/mixed-pin-crystal-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/constructive/pin-construction-planner.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/mixedPinCrystalGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/pinGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/crystalScaffoldGoalDecomposedSolver.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:53940/goalDecomposedSolver.js",
+          "status": 200
+        }
+      ],
+      "console": [
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        },
+        {
+          "type": "warning",
+          "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine."
+        },
+        {
+          "type": "warning",
+          "text": "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Setting a `style` bypass at element creation should be done only when absolutely necessary.  Try to use the stylesheet instead."
+        },
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        },
+        {
+          "type": "warning",
+          "text": "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+        },
+        {
+          "type": "warning",
+          "text": "WARNING: Multiple instances of Three.js being imported."
+        }
+      ],
+      "pageErrors": [],
+      "workers": [
+        "http://127.0.0.1:53940/shapeSolver.js",
+        "http://127.0.0.1:53940/shapeSolver.js",
+        "http://127.0.0.1:53940/mixingSolver.js",
+        "http://127.0.0.1:53940/shapeSolver.js"
+      ],
+      "csp": [],
+      "failures": [],
+      "artifactSourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+      "artifactManifestSha256": "7dba38fbc028e44283d11965dbd0523fefbe9bd0886f21a5929e591f5086adb4",
+      "browserVersion": "156.0.8078.74",
+      "localRequests": [
+        {
+          "url": "/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-38.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-41.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-44.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-11.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/favicon.ico",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-29.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-32.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-35.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-47.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-50.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-53.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-2.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-5.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-8.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-14.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-17.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-20.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-23.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-26.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/color-mixer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/en/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-38.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-41.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-44.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-11.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/favicon.ico",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/en/index.html",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-38.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-41.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-44.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/assets/fonts/barlow-11.woff2",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/build-manifest.json",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/release.json",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/en/",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/styles.css",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-cw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-ccw.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/rotator-180.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/half-destroyer.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/cutter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/swapper.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/stacker.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/painter.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/pin-pusher.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/images/operations/crystal-generator.png",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/main.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeRendering.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/operationGraph.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeValidation.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixingSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/colorMode.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/workerLifecycle.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/i18n.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/localeConfig.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/index.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/zh-TW.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ja.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ko.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/fr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/de.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/es-ES.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pt-BR.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/ru.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/pl.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/tr.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/locales/th.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeOperations.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/shapeConstants.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/interiorCrystalColumnSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/validate-strict-plan.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/unsupportedCrystalResourcePoolSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/sharedOccurrenceGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/interior-crystal-column-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructiveSolverRuntime.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/isolatedPinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/pin-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/constructive/mixed-pin-crystal-construction-planner.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/mixedPinCrystalGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/pinGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/crystalScaffoldGoalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        },
+        {
+          "url": "/goalDecomposedSolver.js",
+          "method": "GET",
+          "status": 200
+        }
+      ]
+    }
+  ]
+}

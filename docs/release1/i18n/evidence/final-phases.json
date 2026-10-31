@@ -1,0 +1,81 @@
+{
+  "commit": "6179850d95a45074730f9f64f34e04d2b867332e",
+  "releasePin": "87822650c1bcf1aebc9a77e27548175d200fb3b7b1b9f6189d3850d4cb1c5e74",
+  "node": "v24.21.0",
+  "execution": "Serial, no overlapping test phases",
+  "phases": [
+    {
+      "name": "f1-browser",
+      "args": [
+        "tools/static-build/browser.mjs"
+      ],
+      "started": "2026-10-31T13:47:20.871Z",
+      "ended": "2026-10-31T13:47:38.113Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "f1-browser-run.log",
+      "sha256": "8f5a1374b3eb9532a67c0de915a0810ea089fc304c33a44642a7f4878984803e"
+    },
+    {
+      "name": "i18n-browser",
+      "args": [
+        "tools/static-build/i18n-browser.mjs"
+      ],
+      "started": "2026-10-31T13:47:38.116Z",
+      "ended": "2026-10-31T13:48:41.336Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "browser-run.log",
+      "sha256": "2c6fd5bb0bb8be71fdb2092697ca5892bcc0baef5065ecd04de695c337cdab10"
+    },
+    {
+      "name": "worker-lifecycle",
+      "args": [
+        "tests/browser/workerLifecycle.browser.mjs"
+      ],
+      "started": "2026-10-31T13:48:41.337Z",
+      "ended": "2026-10-31T13:48:49.135Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "worker-lifecycle.log",
+      "sha256": "250b671d4b909ef6ea2bb7b06deab66549fcd0a215eeeb6b09ad67821719fa96"
+    },
+    {
+      "name": "correctness",
+      "args": [
+        "tools/static-build/acceptance.mjs"
+      ],
+      "started": "2026-10-31T13:48:49.136Z",
+      "ended": "2026-10-31T13:51:07.242Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "acceptance-run.log",
+      "sha256": "3f3fb306cf1ba99700988bbf8f252e67bb2883394d6b5b0639c1192661f3bce5"
+    },
+    {
+      "name": "ordinary-and-holdouts",
+      "args": [
+        "tools/i18n/ordinary.mjs"
+      ],
+      "started": "2026-10-31T13:51:07.243Z",
+      "ended": "2026-10-31T13:51:11.841Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "ordinary-run.log",
+      "sha256": "59c7831ea98600b2e05b1f210939f02be360680b4cdef0a724eb8b38b847df73"
+    },
+    {
+      "name": "coverage-and-protected-source",
+      "args": [
+        "tools/i18n/audit.mjs"
+      ],
+      "started": "2026-10-31T13:51:11.842Z",
+      "ended": "2026-10-31T13:51:12.028Z",
+      "exitCode": 0,
+      "status": "PASS",
+      "log": "coverage-run.log",
+      "sha256": "302270310491a4f5dae0d7cf398c81050d2bb305b62e77579a8e3ffc5805e772"
+    }
+  ],
+  "status": "PASS"
+}

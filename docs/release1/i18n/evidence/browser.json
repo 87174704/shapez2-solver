@@ -1,0 +1,1141 @@
+{
+  "browser": "156.0.8078.74",
+  "profiles": [
+    {
+      "profile": "global",
+      "basePath": "/shapez2-solver/",
+      "sourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+      "sourceTree": "f293315d02484a751fafcc41e91c18d1a781ec34",
+      "checks": [
+        "English default; identical native-name menu; prefix/query/hash retained",
+        "13 manual selections preserve input drafts, resource inventory, configuration, Worker messages, result path, graph instance, topology and viewport",
+        "Translated validation dialogs in 13 languages; active Solver continues through a language switch",
+        "All 13 languages retain the actual 3D WebGL canvas and Explorer result without a new task",
+        "All 13 languages retain Mixing results, inventory and selection with no new Worker traffic",
+        "390px viewport: long French/German labels and Chinese/Japanese/Korean/Thai controls remain reachable",
+        "Selection survives refresh; legacy cn storage and entry migrate to zh-CN",
+        "Real browser regional detection, unsupported-language fallback, and storage-denied selection",
+        "All 13 directory index entries load under the configured deployment prefix"
+      ],
+      "locales": [
+        {
+          "locale": "zh-CN",
+          "issues": [],
+          "status": "0.14 秒求解完成 · 深度 1 · 1 个状态",
+          "title": "Shapez 2 求解器",
+          "operationLabels": [
+            "顺时针旋转",
+            "逆时针旋转",
+            "旋转 180°",
+            "半破",
+            "分割",
+            "交换",
+            "堆垛",
+            "染色",
+            "顶针",
+            "晶体生成"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "zh-TW",
+          "issues": [],
+          "status": "0.14 秒內完成 · 深度 1 · 1 個狀態",
+          "title": "Shapez 2 求解器",
+          "operationLabels": [
+            "順時針旋轉",
+            "逆時針旋轉",
+            "旋轉 180°",
+            "半形銷毀器",
+            "切割器",
+            "交換器",
+            "堆疊器",
+            "染色器",
+            "針腳推入器",
+            "晶體生成器"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "en",
+          "issues": [],
+          "status": "Solved in 0.14s · depth 1 · 1 states",
+          "title": "Shapez 2 Solver",
+          "operationLabels": [
+            "Clockwise Rotate",
+            "Counterclockwise Rotate",
+            "Rotate 180°",
+            "Half Destroyer",
+            "Cutter",
+            "Swapper",
+            "Stacker",
+            "Painter",
+            "Pin Pusher",
+            "Crystal Generator"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "locale": "ja",
+          "issues": [],
+          "status": "0.14 秒で求解完了 · 深さ 1 · 状態数 1",
+          "title": "Shapez 2 ソルバー",
+          "operationLabels": [
+            "時計回りに回転",
+            "反時計回りに回転",
+            "180° 回転",
+            "半分破棄機",
+            "カッター",
+            "交換機",
+            "積み重ね機",
+            "塗装機",
+            "ピン押し込み機",
+            "結晶生成機"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "ko",
+          "issues": [],
+          "status": "0.14초 만에 완료 · 깊이 1 · 상태 1개",
+          "title": "Shapez 2 솔버",
+          "operationLabels": [
+            "시계 방향 회전",
+            "반시계 방향 회전",
+            "180° 회전",
+            "반쪽 제거기",
+            "절단기",
+            "교환기",
+            "적층기",
+            "도색기",
+            "핀 밀어넣기 장치",
+            "결정 생성기"
+          ],
+          "fonts": [
+            {
+              "familyName": "Malgun Gothic",
+              "postScriptName": "MalgunGothic",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "fr",
+          "issues": [],
+          "status": "Résolu en 0.14 s · profondeur 1 · états : 1",
+          "title": "Solveur Shapez 2",
+          "operationLabels": [
+            "Rotation horaire",
+            "Rotation antihoraire",
+            "Rotation de 180°",
+            "Destructeur de moitié",
+            "Découpeur",
+            "Échangeur",
+            "Empileur",
+            "Peintre",
+            "Pousseur de broches",
+            "Générateur de cristaux"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "locale": "de",
+          "issues": [],
+          "status": "Gelöst in 0.14 s · Tiefe 1 · Zustände: 1",
+          "title": "Shapez 2 Solver",
+          "operationLabels": [
+            "Im Uhrzeigersinn drehen",
+            "Gegen den Uhrzeigersinn drehen",
+            "Um 180° drehen",
+            "Halbierer mit Vernichtung",
+            "Schneider",
+            "Tauscher",
+            "Stapler",
+            "Färber",
+            "Stiftschieber",
+            "Kristallgenerator"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "locale": "es-ES",
+          "issues": [],
+          "status": "Resuelto en 0.14 s · profundidad 1 · estados: 1",
+          "title": "Solucionador de Shapez 2",
+          "operationLabels": [
+            "Giro horario",
+            "Giro antihorario",
+            "Giro de 180°",
+            "Destructor de mitades",
+            "Cortador",
+            "Intercambiador",
+            "Apilador",
+            "Pintor",
+            "Insertador de pines",
+            "Generador de cristales"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "locale": "pt-BR",
+          "issues": [],
+          "status": "Resolvido em 0.14 s · profundidade 1 · estados: 1",
+          "title": "Solucionador de Shapez 2",
+          "operationLabels": [
+            "Giro horário",
+            "Giro anti-horário",
+            "Giro de 180°",
+            "Destruidor de metades",
+            "Cortador",
+            "Trocador",
+            "Empilhador",
+            "Pintor",
+            "Inseridor de pinos",
+            "Gerador de cristais"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "locale": "ru",
+          "issues": [],
+          "status": "Решено за 0.14 с · глубина 1 · состояний: 1",
+          "title": "Решатель Shapez 2",
+          "operationLabels": [
+            "Поворот по часовой стрелке",
+            "Поворот против часовой стрелки",
+            "Поворот на 180°",
+            "Уничтожитель половины",
+            "Резак",
+            "Обменник",
+            "Укладчик",
+            "Краситель",
+            "Вставщик штифтов",
+            "Генератор кристаллов"
+          ],
+          "fonts": [
+            {
+              "familyName": "Segoe UI Semibold",
+              "postScriptName": "SegoeUI-Semibold",
+              "isCustomFont": false,
+              "glyphCount": 9
+            }
+          ]
+        },
+        {
+          "locale": "pl",
+          "issues": [],
+          "status": "Rozwiązano w 0.14 s · głębokość 1 · stany: 1",
+          "title": "Solver Shapez 2",
+          "operationLabels": [
+            "Obrót w prawo",
+            "Obrót w lewo",
+            "Obrót o 180°",
+            "Niszczyciel połówek",
+            "Przecinarka",
+            "Wymiennik",
+            "Układarka",
+            "Malarka",
+            "Wciskarka kołków",
+            "Generator kryształów"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "locale": "tr",
+          "issues": [],
+          "status": "0.14 sn içinde çözüldü · derinlik 1 · durumlar: 1",
+          "title": "Shapez 2 Çözücü",
+          "operationLabels": [
+            "Saat yönünde döndür",
+            "Saat yönünün tersine döndür",
+            "180° döndür",
+            "Yarım yok edici",
+            "Kesici",
+            "Değiştirici",
+            "İstifleyici",
+            "Boyayıcı",
+            "Pim itici",
+            "Kristal üretici"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "locale": "th",
+          "issues": [],
+          "status": "พบคำตอบใน 0.14 วินาที · ความลึก 1 · 1 สถานะ",
+          "title": "ตัวแก้ปัญหา Shapez 2",
+          "operationLabels": [
+            "หมุนตามเข็มนาฬิกา",
+            "หมุนทวนเข็มนาฬิกา",
+            "หมุน 180°",
+            "เครื่องทำลายครึ่งหนึ่ง",
+            "เครื่องตัด",
+            "เครื่องสลับ",
+            "เครื่องซ้อน",
+            "เครื่องทาสี",
+            "เครื่องดันหมุด",
+            "เครื่องสร้างผลึก"
+          ],
+          "fonts": [
+            {
+              "familyName": "Leelawadee UI",
+              "postScriptName": "LeelawadeeUI",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "failedRequests": [],
+      "validationDialogs": [
+        {
+          "locale": "zh-CN",
+          "message": "目标形状代码无效：Zr------\n\n错误：\n第 1 层，第 1 个部件：'Z' 不是有效的形状。"
+        },
+        {
+          "locale": "zh-TW",
+          "message": "目標形狀代碼無效：Zr------\n\n錯誤：\n第 1 層，第 1 個部件：「Z」不是有效形狀。"
+        },
+        {
+          "locale": "en",
+          "message": "Invalid target shape code: Zr------\n\nErrors:\nLayer 1, Part 1: 'Z' is not a valid shape."
+        },
+        {
+          "locale": "ja",
+          "message": "目標図形のコードが無効です: Zr------\n\nエラー:\nレイヤー 1、部品 1: 「Z」は無効な図形です。"
+        },
+        {
+          "locale": "ko",
+          "message": "목표 도형 코드가 잘못되었습니다: Zr------\n\n오류:\n1층, 부품 1: 'Z'은(는) 유효한 도형이 아닙니다."
+        },
+        {
+          "locale": "fr",
+          "message": "Code invalide (forme cible) : Zr------\n\nErreurs :\nCouche 1, pièce 1 : « Z » n’est pas une forme valide."
+        },
+        {
+          "locale": "de",
+          "message": "Ungültiger Code (Zielform): Zr------\n\nFehler:\nSchicht 1, Teil 1: „Z“ ist keine gültige Form."
+        },
+        {
+          "locale": "es-ES",
+          "message": "Código no válido (forma objetivo): Zr------\n\nErrores:\nCapa 1, pieza 1: «Z» no es una forma válida."
+        },
+        {
+          "locale": "pt-BR",
+          "message": "Código inválido (forma de destino): Zr------\n\nErros:\nCamada 1, peça 1: “Z” não é uma forma válida."
+        },
+        {
+          "locale": "ru",
+          "message": "Недопустимый код (целевая фигура): Zr------\n\nОшибки:\nСлой 1, часть 1: «Z» — недопустимая фигура."
+        },
+        {
+          "locale": "pl",
+          "message": "Nieprawidłowy kod (kształt docelowy): Zr------\n\nBłędy:\nWarstwa 1, część 1: „Z” nie jest prawidłowym kształtem."
+        },
+        {
+          "locale": "tr",
+          "message": "Geçersiz kod (hedef şekil): Zr------\n\nHatalar:\nKatman 1, parça 1: “Z” geçerli bir şekil değil."
+        },
+        {
+          "locale": "th",
+          "message": "รหัสไม่ถูกต้อง (รูปทรงเป้าหมาย): Zr------\n\nข้อผิดพลาด:\nชั้น 1, ชิ้นส่วน 1: “Z” ไม่ใช่รูปทรงที่ถูกต้อง"
+        }
+      ],
+      "activeWorkerSwitch": {
+        "before": [
+          {
+            "event": "create",
+            "url": "http://127.0.0.1:55535/shapez2-solver/shapeSolver.js"
+          },
+          {
+            "event": "sent",
+            "data": {
+              "action": "solve",
+              "data": {
+                "targetShapeCodes": [
+                  "CuCu----"
+                ],
+                "startingShapeCodes": [
+                  "CuCuCuCu",
+                  "RuRuRuRu",
+                  "SuSuSuSu",
+                  "WuWuWuWu"
+                ],
+                "enabledOperations": [
+                  "Rotator CW",
+                  "Rotator CCW",
+                  "Rotator 180",
+                  "Half Destroyer",
+                  "Cutter",
+                  "Swapper",
+                  "Stacker",
+                  "Painter",
+                  "Pin Pusher",
+                  "Crystal Generator"
+                ],
+                "maxLayers": 4,
+                "maxStatesPerLevel": 3000,
+                "preventWaste": false,
+                "orientationSensitive": false,
+                "allowSplitting": false,
+                "cleanPainting": false
+              }
+            }
+          }
+        ],
+        "after": [
+          {
+            "event": "create",
+            "url": "http://127.0.0.1:55535/shapez2-solver/shapeSolver.js"
+          },
+          {
+            "event": "sent",
+            "data": {
+              "action": "solve",
+              "data": {
+                "targetShapeCodes": [
+                  "CuCu----"
+                ],
+                "startingShapeCodes": [
+                  "CuCuCuCu",
+                  "RuRuRuRu",
+                  "SuSuSuSu",
+                  "WuWuWuWu"
+                ],
+                "enabledOperations": [
+                  "Rotator CW",
+                  "Rotator CCW",
+                  "Rotator 180",
+                  "Half Destroyer",
+                  "Cutter",
+                  "Swapper",
+                  "Stacker",
+                  "Painter",
+                  "Pin Pusher",
+                  "Crystal Generator"
+                ],
+                "maxLayers": 4,
+                "maxStatesPerLevel": 3000,
+                "preventWaste": false,
+                "orientationSensitive": false,
+                "allowSplitting": false,
+                "cleanPainting": false
+              }
+            }
+          }
+        ],
+        "status": "求解中…"
+      },
+      "workerParity": [
+        {
+          "locale": "zh-CN",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "zh-TW",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "en",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ja",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ko",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "fr",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "de",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "es-ES",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "pt-BR",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ru",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "pl",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "tr",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "th",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "profile": "china",
+      "basePath": "/",
+      "sourceCommit": "6179850d95a45074730f9f64f34e04d2b867332e",
+      "sourceTree": "f293315d02484a751fafcc41e91c18d1a781ec34",
+      "checks": [
+        "English default; identical native-name menu; prefix/query/hash retained",
+        "13 manual selections preserve input drafts, resource inventory, configuration, Worker messages, result path, graph instance, topology and viewport",
+        "Translated validation dialogs in 13 languages; active Solver continues through a language switch",
+        "All 13 languages retain the actual 3D WebGL canvas and Explorer result without a new task",
+        "All 13 languages retain Mixing results, inventory and selection with no new Worker traffic",
+        "390px viewport: long French/German labels and Chinese/Japanese/Korean/Thai controls remain reachable",
+        "Selection survives refresh; legacy cn storage and entry migrate to zh-CN",
+        "Real browser regional detection, unsupported-language fallback, and storage-denied selection",
+        "All 13 directory index entries load under the configured deployment prefix"
+      ],
+      "locales": [
+        {
+          "locale": "zh-CN",
+          "issues": [],
+          "status": "0.12 秒求解完成 · 深度 1 · 1 个状态",
+          "title": "Shapez 2 求解器",
+          "operationLabels": [
+            "顺时针旋转",
+            "逆时针旋转",
+            "旋转 180°",
+            "半破",
+            "分割",
+            "交换",
+            "堆垛",
+            "染色",
+            "顶针",
+            "晶体生成"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "zh-TW",
+          "issues": [],
+          "status": "0.12 秒內完成 · 深度 1 · 1 個狀態",
+          "title": "Shapez 2 求解器",
+          "operationLabels": [
+            "順時針旋轉",
+            "逆時針旋轉",
+            "旋轉 180°",
+            "半形銷毀器",
+            "切割器",
+            "交換器",
+            "堆疊器",
+            "染色器",
+            "針腳推入器",
+            "晶體生成器"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "en",
+          "issues": [],
+          "status": "Solved in 0.12s · depth 1 · 1 states",
+          "title": "Shapez 2 Solver",
+          "operationLabels": [
+            "Clockwise Rotate",
+            "Counterclockwise Rotate",
+            "Rotate 180°",
+            "Half Destroyer",
+            "Cutter",
+            "Swapper",
+            "Stacker",
+            "Painter",
+            "Pin Pusher",
+            "Crystal Generator"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "locale": "ja",
+          "issues": [],
+          "status": "0.12 秒で求解完了 · 深さ 1 · 状態数 1",
+          "title": "Shapez 2 ソルバー",
+          "operationLabels": [
+            "時計回りに回転",
+            "反時計回りに回転",
+            "180° 回転",
+            "半分破棄機",
+            "カッター",
+            "交換機",
+            "積み重ね機",
+            "塗装機",
+            "ピン押し込み機",
+            "結晶生成機"
+          ],
+          "fonts": [
+            {
+              "familyName": "Microsoft YaHei",
+              "postScriptName": "MicrosoftYaHei",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "ko",
+          "issues": [],
+          "status": "0.12초 만에 완료 · 깊이 1 · 상태 1개",
+          "title": "Shapez 2 솔버",
+          "operationLabels": [
+            "시계 방향 회전",
+            "반시계 방향 회전",
+            "180° 회전",
+            "반쪽 제거기",
+            "절단기",
+            "교환기",
+            "적층기",
+            "도색기",
+            "핀 밀어넣기 장치",
+            "결정 생성기"
+          ],
+          "fonts": [
+            {
+              "familyName": "Malgun Gothic",
+              "postScriptName": "MalgunGothic",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "locale": "fr",
+          "issues": [],
+          "status": "Résolu en 0.12 s · profondeur 1 · états : 1",
+          "title": "Solveur Shapez 2",
+          "operationLabels": [
+            "Rotation horaire",
+            "Rotation antihoraire",
+            "Rotation de 180°",
+            "Destructeur de moitié",
+            "Découpeur",
+            "Échangeur",
+            "Empileur",
+            "Peintre",
+            "Pousseur de broches",
+            "Générateur de cristaux"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "locale": "de",
+          "issues": [],
+          "status": "Gelöst in 0.12 s · Tiefe 1 · Zustände: 1",
+          "title": "Shapez 2 Solver",
+          "operationLabels": [
+            "Im Uhrzeigersinn drehen",
+            "Gegen den Uhrzeigersinn drehen",
+            "Um 180° drehen",
+            "Halbierer mit Vernichtung",
+            "Schneider",
+            "Tauscher",
+            "Stapler",
+            "Färber",
+            "Stiftschieber",
+            "Kristallgenerator"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "locale": "es-ES",
+          "issues": [],
+          "status": "Resuelto en 0.12 s · profundidad 1 · estados: 1",
+          "title": "Solucionador de Shapez 2",
+          "operationLabels": [
+            "Giro horario",
+            "Giro antihorario",
+            "Giro de 180°",
+            "Destructor de mitades",
+            "Cortador",
+            "Intercambiador",
+            "Apilador",
+            "Pintor",
+            "Insertador de pines",
+            "Generador de cristales"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "locale": "pt-BR",
+          "issues": [],
+          "status": "Resolvido em 0.12 s · profundidade 1 · estados: 1",
+          "title": "Solucionador de Shapez 2",
+          "operationLabels": [
+            "Giro horário",
+            "Giro anti-horário",
+            "Giro de 180°",
+            "Destruidor de metades",
+            "Cortador",
+            "Trocador",
+            "Empilhador",
+            "Pintor",
+            "Inseridor de pinos",
+            "Gerador de cristais"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 13
+            }
+          ]
+        },
+        {
+          "locale": "ru",
+          "issues": [],
+          "status": "Решено за 0.12 с · глубина 1 · состояний: 1",
+          "title": "Решатель Shapez 2",
+          "operationLabels": [
+            "Поворот по часовой стрелке",
+            "Поворот против часовой стрелки",
+            "Поворот на 180°",
+            "Уничтожитель половины",
+            "Резак",
+            "Обменник",
+            "Укладчик",
+            "Краситель",
+            "Вставщик штифтов",
+            "Генератор кристаллов"
+          ],
+          "fonts": [
+            {
+              "familyName": "Segoe UI Semibold",
+              "postScriptName": "SegoeUI-Semibold",
+              "isCustomFont": false,
+              "glyphCount": 9
+            }
+          ]
+        },
+        {
+          "locale": "pl",
+          "issues": [],
+          "status": "Rozwiązano w 0.12 s · głębokość 1 · stany: 1",
+          "title": "Solver Shapez 2",
+          "operationLabels": [
+            "Obrót w prawo",
+            "Obrót w lewo",
+            "Obrót o 180°",
+            "Niszczyciel połówek",
+            "Przecinarka",
+            "Wymiennik",
+            "Układarka",
+            "Malarka",
+            "Wciskarka kołków",
+            "Generator kryształów"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 10
+            }
+          ]
+        },
+        {
+          "locale": "tr",
+          "issues": [],
+          "status": "0.12 sn içinde çözüldü · derinlik 1 · durumlar: 1",
+          "title": "Shapez 2 Çözücü",
+          "operationLabels": [
+            "Saat yönünde döndür",
+            "Saat yönünün tersine döndür",
+            "180° döndür",
+            "Yarım yok edici",
+            "Kesici",
+            "Değiştirici",
+            "İstifleyici",
+            "Boyayıcı",
+            "Pim itici",
+            "Kristal üretici"
+          ],
+          "fonts": [
+            {
+              "familyName": "Barlow Medium",
+              "postScriptName": "Barlow-Medium",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "locale": "th",
+          "issues": [],
+          "status": "พบคำตอบใน 0.12 วินาที · ความลึก 1 · 1 สถานะ",
+          "title": "ตัวแก้ปัญหา Shapez 2",
+          "operationLabels": [
+            "หมุนตามเข็มนาฬิกา",
+            "หมุนทวนเข็มนาฬิกา",
+            "หมุน 180°",
+            "เครื่องทำลายครึ่งหนึ่ง",
+            "เครื่องตัด",
+            "เครื่องสลับ",
+            "เครื่องซ้อน",
+            "เครื่องทาสี",
+            "เครื่องดันหมุด",
+            "เครื่องสร้างผลึก"
+          ],
+          "fonts": [
+            {
+              "familyName": "Leelawadee UI",
+              "postScriptName": "LeelawadeeUI",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "csp": [],
+      "failedRequests": [],
+      "validationDialogs": [
+        {
+          "locale": "zh-CN",
+          "message": "目标形状代码无效：Zr------\n\n错误：\n第 1 层，第 1 个部件：'Z' 不是有效的形状。"
+        },
+        {
+          "locale": "zh-TW",
+          "message": "目標形狀代碼無效：Zr------\n\n錯誤：\n第 1 層，第 1 個部件：「Z」不是有效形狀。"
+        },
+        {
+          "locale": "en",
+          "message": "Invalid target shape code: Zr------\n\nErrors:\nLayer 1, Part 1: 'Z' is not a valid shape."
+        },
+        {
+          "locale": "ja",
+          "message": "目標図形のコードが無効です: Zr------\n\nエラー:\nレイヤー 1、部品 1: 「Z」は無効な図形です。"
+        },
+        {
+          "locale": "ko",
+          "message": "목표 도형 코드가 잘못되었습니다: Zr------\n\n오류:\n1층, 부품 1: 'Z'은(는) 유효한 도형이 아닙니다."
+        },
+        {
+          "locale": "fr",
+          "message": "Code invalide (forme cible) : Zr------\n\nErreurs :\nCouche 1, pièce 1 : « Z » n’est pas une forme valide."
+        },
+        {
+          "locale": "de",
+          "message": "Ungültiger Code (Zielform): Zr------\n\nFehler:\nSchicht 1, Teil 1: „Z“ ist keine gültige Form."
+        },
+        {
+          "locale": "es-ES",
+          "message": "Código no válido (forma objetivo): Zr------\n\nErrores:\nCapa 1, pieza 1: «Z» no es una forma válida."
+        },
+        {
+          "locale": "pt-BR",
+          "message": "Código inválido (forma de destino): Zr------\n\nErros:\nCamada 1, peça 1: “Z” não é uma forma válida."
+        },
+        {
+          "locale": "ru",
+          "message": "Недопустимый код (целевая фигура): Zr------\n\nОшибки:\nСлой 1, часть 1: «Z» — недопустимая фигура."
+        },
+        {
+          "locale": "pl",
+          "message": "Nieprawidłowy kod (kształt docelowy): Zr------\n\nBłędy:\nWarstwa 1, część 1: „Z” nie jest prawidłowym kształtem."
+        },
+        {
+          "locale": "tr",
+          "message": "Geçersiz kod (hedef şekil): Zr------\n\nHatalar:\nKatman 1, parça 1: “Z” geçerli bir şekil değil."
+        },
+        {
+          "locale": "th",
+          "message": "รหัสไม่ถูกต้อง (รูปทรงเป้าหมาย): Zr------\n\nข้อผิดพลาด:\nชั้น 1, ชิ้นส่วน 1: “Z” ไม่ใช่รูปทรงที่ถูกต้อง"
+        }
+      ],
+      "activeWorkerSwitch": {
+        "before": [
+          {
+            "event": "create",
+            "url": "http://127.0.0.1:65447/shapeSolver.js"
+          },
+          {
+            "event": "sent",
+            "data": {
+              "action": "solve",
+              "data": {
+                "targetShapeCodes": [
+                  "CuCu----"
+                ],
+                "startingShapeCodes": [
+                  "CuCuCuCu",
+                  "RuRuRuRu",
+                  "SuSuSuSu",
+                  "WuWuWuWu"
+                ],
+                "enabledOperations": [
+                  "Rotator CW",
+                  "Rotator CCW",
+                  "Rotator 180",
+                  "Half Destroyer",
+                  "Cutter",
+                  "Swapper",
+                  "Stacker",
+                  "Painter",
+                  "Pin Pusher",
+                  "Crystal Generator"
+                ],
+                "maxLayers": 4,
+                "maxStatesPerLevel": 3000,
+                "preventWaste": false,
+                "orientationSensitive": false,
+                "allowSplitting": false,
+                "cleanPainting": false
+              }
+            }
+          }
+        ],
+        "after": [
+          {
+            "event": "create",
+            "url": "http://127.0.0.1:65447/shapeSolver.js"
+          },
+          {
+            "event": "sent",
+            "data": {
+              "action": "solve",
+              "data": {
+                "targetShapeCodes": [
+                  "CuCu----"
+                ],
+                "startingShapeCodes": [
+                  "CuCuCuCu",
+                  "RuRuRuRu",
+                  "SuSuSuSu",
+                  "WuWuWuWu"
+                ],
+                "enabledOperations": [
+                  "Rotator CW",
+                  "Rotator CCW",
+                  "Rotator 180",
+                  "Half Destroyer",
+                  "Cutter",
+                  "Swapper",
+                  "Stacker",
+                  "Painter",
+                  "Pin Pusher",
+                  "Crystal Generator"
+                ],
+                "maxLayers": 4,
+                "maxStatesPerLevel": 3000,
+                "preventWaste": false,
+                "orientationSensitive": false,
+                "allowSplitting": false,
+                "cleanPainting": false
+              }
+            }
+          }
+        ],
+        "status": "求解中…"
+      },
+      "workerParity": [
+        {
+          "locale": "zh-CN",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "zh-TW",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "en",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ja",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ko",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "fr",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "de",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "es-ES",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "pt-BR",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "ru",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "pl",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "tr",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        },
+        {
+          "locale": "th",
+          "pathSha256": "21bfeeca2b933b5362150b928b8fd3c6fb57973a38462ddcae9cf5af4b00a7ad",
+          "replayValid": true
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "automation": "Real installed browser; native CDN requests, no network interception",
+  "status": "PASS"
+}

@@ -1,0 +1,473 @@
+{
+  "identity": {
+    "valid": true,
+    "release": "shapez2-solver-release1",
+    "manifestCanonicalSha256": "87822650c1bcf1aebc9a77e27548175d200fb3b7b1b9f6189d3850d4cb1c5e74",
+    "physicsSemantics": "shape-operations-v2-support-closure",
+    "semanticsSha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "sourceSha256": "68252508acf924fab921634c9ac266f23f3d3ccfaed1935568f9ea0c62fdebfb",
+    "sourceFilesChecked": 6241,
+    "frozenFilesChecked": 461,
+    "errors": []
+  },
+  "cases": 367,
+  "helperControls": 5,
+  "triggerControls": 6,
+  "differences": [
+    {
+      "id": "pin-u-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "old": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "new": [
+        "------P-:------Cu:cucu--cu"
+      ]
+    },
+    {
+      "id": "pin-u-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu----"
+      ],
+      "old": [
+        "P-------:Cu------:cucu----"
+      ],
+      "new": [
+        "P-------:Cu------:cucucu--"
+      ]
+    },
+    {
+      "id": "pin-u-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cucu--"
+      ],
+      "old": [
+        "--P-----:--Cu----:--cucu--"
+      ],
+      "new": [
+        "--P-----:--Cu----:--cucucu"
+      ]
+    },
+    {
+      "id": "pin-u-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cu----cu"
+      ],
+      "old": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cu----cu"
+      ],
+      "new": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cucu--cu"
+      ]
+    },
+    {
+      "id": "pin-u-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cu----cu"
+      ],
+      "old": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cu----cu"
+      ],
+      "new": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cucu--cu"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cr"
+      ],
+      "old": [
+        "------P-:------Cu:cr----cr"
+      ],
+      "new": [
+        "------P-:------Cu:crcr--cr"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:crcrcr--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:crcr----"
+      ],
+      "old": [
+        "P-------:Cu------:crcr----"
+      ],
+      "new": [
+        "P-------:Cu------:crcrcr--"
+      ]
+    },
+    {
+      "id": "pin-r-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--crcrcr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--crcr--"
+      ],
+      "old": [
+        "--P-----:--Cu----:--crcr--"
+      ],
+      "new": [
+        "--P-----:--Cu----:--crcrcr"
+      ]
+    },
+    {
+      "id": "pin-r-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cr"
+      ],
+      "old": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cr"
+      ],
+      "new": [
+        "P-P-P-P-:P-P-P-P-:------Cu:crcr--cr"
+      ]
+    },
+    {
+      "id": "pin-r-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:crcr--cr"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cr"
+      ],
+      "old": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cr"
+      ],
+      "new": [
+        "P-P-P-P-:CuCuCuCu:------Cu:crcr--cr"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot0",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cb"
+      ],
+      "old": [
+        "------P-:------Cu:cr----cb"
+      ],
+      "new": [
+        "------P-:------Cu:crcg--cb"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot1",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cbcrcg--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cbcr----"
+      ],
+      "old": [
+        "P-------:Cu------:cbcr----"
+      ],
+      "new": [
+        "P-------:Cu------:cbcrcg--"
+      ]
+    },
+    {
+      "id": "pin-mixed-mirrorfalse-rot2",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cbcrcg"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cbcr--"
+      ],
+      "old": [
+        "--P-----:--Cu----:--cbcr--"
+      ],
+      "new": [
+        "--P-----:--Cu----:--cbcrcg"
+      ]
+    },
+    {
+      "id": "pin-mixed-prefix-P-P-P-P-:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "P-P-P-P-:------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cb"
+      ],
+      "old": [
+        "P-P-P-P-:P-P-P-P-:------Cu:cr----cb"
+      ],
+      "new": [
+        "P-P-P-P-:P-P-P-P-:------Cu:crcg--cb"
+      ]
+    },
+    {
+      "id": "pin-mixed-prefix-CuCuCuCu:",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "CuCuCuCu:------Cu:crcg--cb"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cb"
+      ],
+      "old": [
+        "P-P-P-P-:CuCuCuCu:------Cu:cr----cb"
+      ],
+      "new": [
+        "P-P-P-P-:CuCuCuCu:------Cu:crcg--cb"
+      ]
+    },
+    {
+      "id": "pin-mask-0-7",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "Cu------:cucucu--"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "P-------:Cu------:cucu----"
+      ],
+      "old": [
+        "P-------:Cu------:cucu----"
+      ],
+      "new": [
+        "P-------:Cu------:cucucu--"
+      ]
+    },
+    {
+      "id": "stack-mask-0-7",
+      "operation": "Stacker",
+      "inputs": [
+        "Cu------:cucucu--",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "Cu------:cucu----:Ru------"
+      ],
+      "old": [
+        "Cu------:cucu----:Ru------"
+      ],
+      "new": [
+        "Cu------:cucucu--:Ru------"
+      ]
+    },
+    {
+      "id": "pin-mask-1-14",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "--Cu----:--cucucu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "--P-----:--Cu----:--cucu--"
+      ],
+      "old": [
+        "--P-----:--Cu----:--cucu--"
+      ],
+      "new": [
+        "--P-----:--Cu----:--cucucu"
+      ]
+    },
+    {
+      "id": "stack-mask-1-14",
+      "operation": "Stacker",
+      "inputs": [
+        "--Cu----:--cucucu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "RuCu----:--cucu--"
+      ],
+      "old": [
+        "RuCu----:--cucu--"
+      ],
+      "new": [
+        "RuCu----:--cucucu"
+      ]
+    },
+    {
+      "id": "pin-mask-3-11",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "old": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "new": [
+        "------P-:------Cu:cucu--cu"
+      ]
+    },
+    {
+      "id": "stack-mask-3-11",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu----cu:Ru------"
+      ],
+      "old": [
+        "------Cu:cu----cu:Ru------"
+      ],
+      "new": [
+        "------Cu:cucu--cu:Ru------"
+      ]
+    },
+    {
+      "id": "control-pin-------Cu:cucu--cu",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:cucu--cu"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "old": [
+        "------P-:------Cu:cu----cu"
+      ],
+      "new": [
+        "------P-:------Cu:cucu--cu"
+      ]
+    },
+    {
+      "id": "control-stack-------Cu:cucu--cu",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:cucu--cu",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cu----cu:Ru------"
+      ],
+      "old": [
+        "------Cu:cu----cu:Ru------"
+      ],
+      "new": [
+        "------Cu:cucu--cu:Ru------"
+      ]
+    },
+    {
+      "id": "control-pin-------Cu:crcg--cb:--cw----",
+      "operation": "Pin Pusher",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------P-:------Cu:cr----cb"
+      ],
+      "old": [
+        "------P-:------Cu:cr----cb"
+      ],
+      "new": [
+        "------P-:------Cu:crcg--cb:--cw----"
+      ]
+    },
+    {
+      "id": "control-stack-------Cu:crcg--cb:--cw----",
+      "operation": "Stacker",
+      "inputs": [
+        "------Cu:crcg--cb:--cw----",
+        "Ru------"
+      ],
+      "params": {},
+      "maxLayers": 4,
+      "actual": [
+        "------Cu:cr----cb:Ru------"
+      ],
+      "old": [
+        "------Cu:cr----cb:Ru------"
+      ],
+      "new": [
+        "------Cu:crcg--cb:Rucw----"
+      ]
+    }
+  ]
+}

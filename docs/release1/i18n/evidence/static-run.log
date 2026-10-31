@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "profiles": {
+    "global": {
+      "reproducible": true,
+      "fileCount": 117,
+      "htmlCount": 15,
+      "jsCount": 41,
+      "cssCount": 1,
+      "localReferences": 285,
+      "httpChecks": 35,
+      "manifestSha256": "31d6055759de141c99367a065b50d22c7d9d46743087f15922e2704d70082905"
+    },
+    "china": {
+      "reproducible": true,
+      "fileCount": 172,
+      "htmlCount": 15,
+      "jsCount": 41,
+      "cssCount": 2,
+      "localReferences": 340,
+      "httpChecks": 36,
+      "manifestSha256": "7dba38fbc028e44283d11965dbd0523fefbe9bd0886f21a5929e591f5086adb4"
+    }
+  },
+  "sharedApplicationFiles": 41,
+  "explainedDifferences": 72,
+  "frozenFiles": 461
+}

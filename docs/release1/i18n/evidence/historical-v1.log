@@ -1,0 +1,1200 @@
+{"historicalEnvironment":{"root":"E:\\shapez2-i18n-20261031\\.f1\\acceptance\\historical-v1-1793454529201","identity":{"valid":true,"version":"shape-operations-v1","manifestCanonicalSha256":"bc6a6f4f4d67b785f704ee7052370a5c5f3b6e8fb174bad30a7a9a37d4f39302","semanticsSha256":"066085c4182a663326fa8f02b367aa00a2a036c4a44558efc2514e7ff099dfa5","frozenFilesChecked":461,"errors":[]},"files":593}}
+TAP version 13
+# Subtest: pilot generation is deterministic and the committed artifact independently validates
+ok 1 - pilot generation is deterministic and the committed artifact independently validates
+  ---
+  duration_ms: 1119.6592
+  type: 'test'
+  ...
+# Subtest: causal pilot audit preserves witnesses and retains distinct resource ancestry
+ok 2 - causal pilot audit preserves witnesses and retains distinct resource ancestry
+  ---
+  duration_ms: 160.0742
+  type: 'test'
+  ...
+# Subtest: Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target
+ok 3 - Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target
+  ---
+  duration_ms: 12633.5622
+  type: 'test'
+  ...
+# Subtest: Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets
+ok 4 - Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets
+  ---
+  duration_ms: 28618.6259
+  type: 'test'
+  ...
+# Subtest: Hard 53x3 staged composition preserves all source identities and isolates its public projection
+ok 5 - Hard 53x3 staged composition preserves all source identities and isolates its public projection
+  ---
+  duration_ms: 313.1617
+  type: 'test'
+  ...
+# Subtest: coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities
+ok 6 - coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities
+  ---
+  duration_ms: 127.4609
+  type: 'test'
+  ...
+# Subtest: expansion pilot separates proof basis from two distinct presented environments and replays all six
+ok 7 - expansion pilot separates proof basis from two distinct presented environments and replays all six
+  ---
+  duration_ms: 147.7057
+  type: 'test'
+  ...
+# Subtest: Hard 53x1 staged generation covers every target and release-validates every success
+ok 8 - Hard 53x1 staged generation covers every target and release-validates every success
+  ---
+  duration_ms: 803.6979
+  type: 'test'
+  ...
+# Subtest: Solver evaluation view excludes core basis, witness and expansion provenance
+ok 9 - Solver evaluation view excludes core basis, witness and expansion provenance
+  ---
+  duration_ms: 23.3392
+  type: 'test'
+  ...
+# Subtest: expansion validation rejects missing presented resources, hidden core use, invalid bridges and false deltas
+ok 10 - expansion validation rejects missing presented resources, hidden core use, invalid bridges and false deltas
+  ---
+  duration_ms: 27.5787
+  type: 'test'
+  ...
+# Subtest: expanded presented environments still enforce multiplicity and exact refinement bundles
+ok 11 - expanded presented environments still enforce multiplicity and exact refinement bundles
+  ---
+  duration_ms: 30.5204
+  type: 'test'
+  ...
+# Subtest: expansion policy enforces maximumAddedOrdinaryMultiplicity as a total delta count
+ok 12 - expansion policy enforces maximumAddedOrdinaryMultiplicity as a total delta count
+  ---
+  duration_ms: 27.9058
+  type: 'test'
+  ...
+# Subtest: input rules reject excluded, over-multiplicity, special-main and incomplete refinement inputs
+ok 13 - input rules reject excluded, over-multiplicity, special-main and incomplete refinement inputs
+  ---
+  duration_ms: 93.3485
+  type: 'test'
+  ...
+# Subtest: refinement classification preserves module type and selects exactly one generator bundle
+ok 14 - refinement classification preserves module type and selects exactly one generator bundle
+  ---
+  duration_ms: 3.5773
+  type: 'test'
+  ...
+# Subtest: independent replay rejects forged lineage, operation output and final result
+ok 15 - independent replay rejects forged lineage, operation output and final result
+  ---
+  duration_ms: 89.7763
+  type: 'test'
+  ...
+# Subtest: available inputs may be unselected, including refinement members
+ok 16 - available inputs may be unselected, including refinement members
+  ---
+  duration_ms: 81.3211
+  type: 'test'
+  ...
+# Subtest: terminal operation byproducts may remain live
+ok 17 - terminal operation byproducts may remain live
+  ---
+  duration_ms: 81.7943
+  type: 'test'
+  ...
+# Subtest: canonical shape operations pin representative Pin, Crystal, gravity and four-layer behavior
+ok 18 - canonical shape operations pin representative Pin, Crystal, gravity and four-layer behavior
+  ---
+  duration_ms: 0.528
+  type: 'test'
+  ...
+# Subtest: generic Pin planner forward-replays column, supported-region and isolated-Pin primitives
+ok 19 - generic Pin planner forward-replays column, supported-region and isolated-Pin primitives
+  ---
+  duration_ms: 5.7323
+  type: 'test'
+  ...
+# Subtest: generic Crystal planner forward-replays scaffold extraction, deliberate breakage and Swapper recomposition
+ok 20 - generic Crystal planner forward-replays scaffold extraction, deliberate breakage and Swapper recomposition
+  ---
+  duration_ms: 40.9506
+  type: 'test'
+  ...
+# Subtest: Crystal composition falls back from destructive dense-layer Stack to the existing half-scaffold planner
+ok 21 - Crystal composition falls back from destructive dense-layer Stack to the existing half-scaffold planner
+  ---
+  duration_ms: 3.463
+  type: 'test'
+  ...
+# Subtest: staged refinement-mask planner protects the first color, consumes a real Pin mask and rejects bad ordering or geometry
+ok 22 - staged refinement-mask planner protects the first color, consumes a real Pin mask and rejects bad ordering or geometry
+  ---
+  duration_ms: 7.0069
+  type: 'test'
+  ...
+# Subtest: sparse upper mask removes physical masks before half recomposition and preserves exact Group C lineage
+ok 23 - sparse upper mask removes physical masks before half recomposition and preserves exact Group C lineage
+  ---
+  duration_ms: 397.4373
+  type: 'test'
+  ...
+# Subtest: mixed Pin/Crystal planner preserves ordered generation, Pin support, gravity and resource provenance
+ok 24 - mixed Pin/Crystal planner preserves ordered generation, Pin support, gravity and resource provenance
+  ---
+  duration_ms: 459.7027
+  type: 'test'
+  ...
+# Subtest: Splitter remains disabled until throughput success semantics are decided
+ok 25 - Splitter remains disabled until throughput success semantics are decided
+  ---
+  duration_ms: 74.4922
+  type: 'test'
+  ...
+# Subtest: cleanPainting switch is honored by replay while formal profiles keep it enabled
+ok 26 - cleanPainting switch is honored by replay while formal profiles keep it enabled
+  ---
+  duration_ms: 84.1451
+  type: 'test'
+  ...
+# Subtest: duplicate input rows aggregate metadata correctly and formal artifacts reject the duplicate representation
+ok 27 - duplicate input rows aggregate metadata correctly and formal artifacts reject the duplicate representation
+  ---
+  duration_ms: 137.3166
+  type: 'test'
+  ...
+# Subtest: causal fingerprint rejects superficial family inflation
+ok 28 - causal fingerprint rejects superficial family inflation
+  ---
+  duration_ms: 46.6239
+  type: 'test'
+  ...
+# Subtest: three independent Swappers canonicalize all 2^3 input orderings to one family
+ok 29 - three independent Swappers canonicalize all 2^3 input orderings to one family
+  ---
+  duration_ms: 3.7692
+  type: 'test'
+  ...
+# Subtest: order-sensitive Stacker remains a negative control for operand canonicalization
+ok 30 - order-sensitive Stacker remains a negative control for operand canonicalization
+  ---
+  duration_ms: 1.8702
+  type: 'test'
+  ...
+# Subtest: causal fingerprint separates replay-valid construction ancestry and preserves Pin/Crystal dependencies
+ok 31 - causal fingerprint separates replay-valid construction ancestry and preserves Pin/Crystal dependencies
+  ---
+  duration_ms: 3.4674
+  type: 'test'
+  ...
+# Subtest: generation framework exposes Swapper while tracking both outputs
+ok 32 - generation framework exposes Swapper while tracking both outputs
+  ---
+  duration_ms: 0.3538
+  type: 'test'
+  ...
+# Subtest: repository policy rejects unknown versions, arbitrary profiles, incomplete membership, nonofficial targets and forged metadata
+ok 33 - repository policy rejects unknown versions, arbitrary profiles, incomplete membership, nonofficial targets and forged metadata
+  ---
+  duration_ms: 1016.887
+  type: 'test'
+  ...
+# Subtest: difficulty comparison uses canonical object keys while preserving array order
+ok 34 - difficulty comparison uses canonical object keys while preserving array order
+  ---
+  duration_ms: 216.3312
+  type: 'test'
+  ...
+# Subtest: repository policy rejects a catalog that claims the seed hash but changes seed content
+ok 35 - repository policy rejects a catalog that claims the seed hash but changes seed content
+  ---
+  duration_ms: 72.4484
+  type: 'test'
+  ...
+# Subtest: repository policy rejects an altered official target manifest even when instance metadata is unchanged
+ok 36 - repository policy rejects an altered official target manifest even when instance metadata is unchanged
+  ---
+  duration_ms: 76.2097
+  type: 'test'
+  ...
+# Subtest: v3 partition schema uses controlled release profiles rather than one hard-coded pilot value
+ok 37 - v3 partition schema uses controlled release profiles rather than one hard-coded pilot value
+  ---
+  duration_ms: 142.5558
+  type: 'test'
+  ...
+# Subtest: trusted release binds the canonical content of the actual external artifact
+ok 38 - trusted release binds the canonical content of the actual external artifact
+  ---
+  duration_ms: 968.8095
+  type: 'test'
+  ...
+# Subtest: canonical release identity accepts a content-identical artifact copy and binds the public solver projection
+ok 39 - canonical release identity accepts a content-identical artifact copy and binds the public solver projection
+  ---
+  duration_ms: 92.4192
+  type: 'test'
+  ...
+# Subtest: manifest revision identity is independent from immutable artifact release identity without changing semantic validation
+ok 40 - manifest revision identity is independent from immutable artifact release identity without changing semantic validation
+  ---
+  duration_ms: 923.0458
+  type: 'test'
+  ...
+# Subtest: manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins
+ok 41 - manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins
+  ---
+  duration_ms: 328.3948
+  type: 'test'
+  ...
+# Subtest: best-first plan synthesis covers a two-step preparatory rotation chain
+ok 42 - best-first plan synthesis covers a two-step preparatory rotation chain
+  ---
+  duration_ms: 7.9205
+  type: 'test'
+  ...
+# Subtest: best-first plan synthesis preserves Cutter siblings in public replay
+ok 43 - best-first plan synthesis preserves Cutter siblings in public replay
+  ---
+  duration_ms: 1.4117
+  type: 'test'
+  ...
+# Subtest: best-first plan synthesis covers ordered Stacker with disjoint resources
+ok 44 - best-first plan synthesis covers ordered Stacker with disjoint resources
+  ---
+  duration_ms: 27.4521
+  type: 'test'
+  ...
+# Subtest: resource masks prevent consuming one input twice
+ok 45 - resource masks prevent consuming one input twice
+  ---
+  duration_ms: 0.6951
+  type: 'test'
+  ...
+# Subtest: best-first plan synthesis supports Pin Pusher targets
+ok 46 - best-first plan synthesis supports Pin Pusher targets
+  ---
+  duration_ms: 1.2473
+  type: 'test'
+  ...
+# Subtest: best-first plan synthesis supports target-colored Crystal Generator
+ok 47 - best-first plan synthesis supports target-colored Crystal Generator
+  ---
+  duration_ms: 0.6473
+  type: 'test'
+  ...
+# Subtest: unsupported splitting is classified without reading benchmark metadata
+ok 48 - unsupported splitting is classified without reading benchmark metadata
+  ---
+  duration_ms: 0.2563
+  type: 'test'
+  ...
+# Subtest: released composite deterministically resolves all 159 provenance-preserving members
+ok 49 - released composite deterministically resolves all 159 provenance-preserving members
+  ---
+  duration_ms: 2186.8804
+  type: 'test'
+  ...
+# Subtest: composite tamper matrix rejects selection, source, member, family, and cardinality attacks
+    # Subtest: modified final-selection hash
+    ok 1 - modified final-selection hash
+      ---
+      duration_ms: 1175.0147
+      type: 'test'
+      ...
+    # Subtest: substituted source artifact identity
+    ok 2 - substituted source artifact identity
+      ---
+      duration_ms: 975.8052
+      type: 'test'
+      ...
+    # Subtest: same-target wrong source instance
+    ok 3 - same-target wrong source instance
+      ---
+      duration_ms: 897.9106
+      type: 'test'
+      ...
+    # Subtest: deleted member gives 158
+    ok 4 - deleted member gives 158
+      ---
+      duration_ms: 927.2564
+      type: 'test'
+      ...
+    # Subtest: duplicated member reference
+    ok 5 - duplicated member reference
+      ---
+      duration_ms: 817.599
+      type: 'test'
+      ...
+    # Subtest: source member signature mismatch
+    ok 6 - source member signature mismatch
+      ---
+      duration_ms: 796.0465
+      type: 'test'
+      ...
+    # Subtest: added member gives 160
+    ok 7 - added member gives 160
+      ---
+      duration_ms: 824.6249
+      type: 'test'
+      ...
+    # Subtest: target loses one of three unique families
+    ok 8 - target loses one of three unique families
+      ---
+      duration_ms: 777.5847
+      type: 'test'
+      ...
+    # Subtest: member provenance points to nonexistent source
+    ok 9 - member provenance points to nonexistent source
+      ---
+      duration_ms: 762.9896
+      type: 'test'
+      ...
+    1..9
+ok 50 - composite tamper matrix rejects selection, source, member, family, and cardinality attacks
+  ---
+  duration_ms: 7961.0551
+  type: 'test'
+  ...
+# Subtest: source content mutation is detected without rewriting the composite manifest
+ok 51 - source content mutation is detected without rewriting the composite manifest
+  ---
+  duration_ms: 796.0243
+  type: 'test'
+  ...
+# Subtest: repository authority file substitution cannot hide behind a re-hashed policy document
+ok 52 - repository authority file substitution cannot hide behind a re-hashed policy document
+  ---
+  duration_ms: 747.0425
+  type: 'test'
+  ...
+# Subtest: JSON formatting and property order do not alter trusted composite identity
+ok 53 - JSON formatting and property order do not alter trusted composite identity
+  ---
+  duration_ms: 671.9495
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold reversal builds a dense Crystal layer under physical solids
+ok 54 - Crystal scaffold reversal builds a dense Crystal layer under physical solids
+  ---
+  duration_ms: 44.0735
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold reversal supports a dense multi-layer mixed solid scaffold
+ok 55 - Crystal scaffold reversal supports a dense multi-layer mixed solid scaffold
+  ---
+  duration_ms: 6.0451
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold stage rejects a disabled Crystal Generator
+ok 56 - Crystal scaffold stage rejects a disabled Crystal Generator
+  ---
+  duration_ms: 0.3827
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold stage truthfully rejects sparse Crystal layouts
+ok 57 - Crystal scaffold stage truthfully rejects sparse Crystal layouts
+  ---
+  duration_ms: 0.2602
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold stage truthfully rejects mixed Crystal colors
+ok 58 - Crystal scaffold stage truthfully rejects mixed Crystal colors
+  ---
+  duration_ms: 0.2886
+  type: 'test'
+  ...
+# Subtest: Crystal scaffold stage truthfully rejects final Pin layouts
+ok 59 - Crystal scaffold stage truthfully rejects final Pin layouts
+  ---
+  duration_ms: 0.2305
+  type: 'test'
+  ...
+# Subtest: non-Crystal targets delegate unchanged to the Pin-aware component
+ok 60 - non-Crystal targets delegate unchanged to the Pin-aware component
+  ---
+  duration_ms: 1.5008
+  type: 'test'
+  ...
+# Subtest: existing planners enumerate mechanically distinct macro-plan candidates
+ok 61 - existing planners enumerate mechanically distinct macro-plan candidates
+  ---
+  duration_ms: 172.5317
+  type: 'test'
+  ...
+# Subtest: depth classifier reproduces the audited 106/106 Level B overlay baseline
+ok 62 - depth classifier reproduces the audited 106/106 Level B overlay baseline
+  ---
+  duration_ms: 883.9793
+  type: 'test'
+  ...
+# Subtest: deep macro-plan pass preserves authority and accepts only replay-valid C/D/E replacements
+ok 63 - deep macro-plan pass preserves authority and accepts only replay-valid C/D/E replacements
+  ---
+  duration_ms: 5494.742
+  type: 'test'
+  ...
+# Subtest: targeted final depth re-selection reproduces only the scoped candidate artifact
+ok 64 - targeted final depth re-selection reproduces only the scoped candidate artifact
+  ---
+  duration_ms: 4149.4241
+  type: 'test'
+  ...
+# Subtest: old rotation aliases and inflated replacements remain rejected
+ok 65 - old rotation aliases and inflated replacements remain rejected
+  ---
+  duration_ms: 2.6889
+  type: 'test'
+  ...
+# Subtest: final targeted selection is a deterministic mechanical reconstruction
+ok 66 - final targeted selection is a deterministic mechanical reconstruction
+  ---
+  duration_ms: 999.1051
+  type: 'test'
+  ...
+# Subtest: selection identity depends only on canonical final slot content
+ok 67 - selection identity depends only on canonical final slot content
+  ---
+  duration_ms: 25.2067
+  type: 'test'
+  ...
+# Subtest: frozen optional decisions, replacement provenance, and structural uniqueness are preserved
+ok 68 - frozen optional decisions, replacement provenance, and structural uniqueness are preserved
+  ---
+  duration_ms: 10.184
+  type: 'test'
+  ...
+# Subtest: extracts Cutter output, rotates it, paints it, and replays the exact public path
+ok 69 - extracts Cutter output, rotates it, paints it, and replays the exact public path
+  ---
+  duration_ms: 31.3395
+  type: 'test'
+  ...
+# Subtest: constructs an exact multi-cell layer from distinct one-use resources
+ok 70 - constructs an exact multi-cell layer from distinct one-use resources
+  ---
+  duration_ms: 17.9532
+  type: 'test'
+  ...
+# Subtest: constructs and replays an exact multi-layer target
+ok 71 - constructs and replays an exact multi-layer target
+  ---
+  duration_ms: 3.4407
+  type: 'test'
+  ...
+# Subtest: global resource matching repairs a greedy allocation trap
+ok 72 - global resource matching repairs a greedy allocation trap
+  ---
+  duration_ms: 1.8097
+  type: 'test'
+  ...
+# Subtest: resource shortage is an exhausted mismatch and never reuses a starting token
+ok 73 - resource shortage is an exhausted mismatch and never reuses a starting token
+  ---
+  duration_ms: 0.5265
+  type: 'test'
+  ...
+# Subtest: unpaintable refined cells require an exact source color
+ok 74 - unpaintable refined cells require an exact source color
+  ---
+  duration_ms: 0.7632
+  type: 'test'
+  ...
+# Subtest: disabled extraction operation is not silently used
+ok 75 - disabled extraction operation is not silently used
+  ---
+  duration_ms: 0.3255
+  type: 'test'
+  ...
+# Subtest: special-part targets remain explicitly unsupported in GDCS-A
+ok 76 - special-part targets remain explicitly unsupported in GDCS-A
+  ---
+  duration_ms: 0.2295
+  type: 'test'
+  ...
+# Subtest: interior Crystal column and ordinary overlay construct and replay
+ok 77 - interior Crystal column and ordinary overlay construct and replay
+  ---
+  duration_ms: 59.2286
+  type: 'test'
+  ...
+# Subtest: rotated interior Crystal column uses the same target-derived topology
+ok 78 - rotated interior Crystal column uses the same target-derived topology
+  ---
+  duration_ms: 17.0768
+  type: 'test'
+  ...
+# Subtest: interior Crystal solution consumes every token at most once
+ok 79 - interior Crystal solution consumes every token at most once
+  ---
+  duration_ms: 6.6037
+  type: 'test'
+  ...
+# Subtest: missing Crystal Generator fails cleanly
+ok 80 - missing Crystal Generator fails cleanly
+  ---
+  duration_ms: 5.8648
+  type: 'test'
+  ...
+# Subtest: insufficient sacrificial resources exhaust without token reuse
+ok 81 - insufficient sacrificial resources exhaust without token reuse
+  ---
+  duration_ms: 4.3382
+  type: 'test'
+  ...
+# Subtest: existing E-013 solution delegates unchanged
+ok 82 - existing E-013 solution delegates unchanged
+  ---
+  duration_ms: 4.5417
+  type: 'test'
+  ...
+# Subtest: isolated Pin uses a resource-accounted Crystal scaffold and replays
+ok 83 - isolated Pin uses a resource-accounted Crystal scaffold and replays
+  ---
+  duration_ms: 86.4668
+  type: 'test'
+  ...
+# Subtest: pure Pin stage builds a terminal isolated Pin above an ordinary base
+ok 84 - pure Pin stage builds a terminal isolated Pin above an ordinary base
+  ---
+  duration_ms: 11.4882
+  type: 'test'
+  ...
+# Subtest: mixed stage uses the same isolated-Pin primitive for a terminal Pin branch
+ok 85 - mixed stage uses the same isolated-Pin primitive for a terminal Pin branch
+  ---
+  duration_ms: 35.7749
+  type: 'test'
+  ...
+# Subtest: global distinct matching rejects one-too-few sacrificial resources
+ok 86 - global distinct matching rejects one-too-few sacrificial resources
+  ---
+  duration_ms: 2.2875
+  type: 'test'
+  ...
+# Subtest: isolated construction rejects a required disabled operation
+ok 87 - isolated construction rejects a required disabled operation
+  ---
+  duration_ms: 4.1319
+  type: 'test'
+  ...
+# Subtest: prior E-010 member delegates without invoking isolated-Pin construction
+ok 88 - prior E-010 member delegates without invoking isolated-Pin construction
+  ---
+  duration_ms: 2.8514
+  type: 'test'
+  ...
+# Subtest: mixed stage builds a Crystal suffix before adding its supporting Pin
+ok 89 - mixed stage builds a Crystal suffix before adding its supporting Pin
+  ---
+  duration_ms: 57.6981
+  type: 'test'
+  ...
+# Subtest: mixed stage replays a quarter-column recomposition exactly
+ok 90 - mixed stage replays a quarter-column recomposition exactly
+  ---
+  duration_ms: 14.0328
+  type: 'test'
+  ...
+# Subtest: mixed stage enforces globally distinct starting resources
+ok 91 - mixed stage enforces globally distinct starting resources
+  ---
+  duration_ms: 4.6252
+  type: 'test'
+  ...
+# Subtest: mixed stage rejects a required disabled operation
+ok 92 - mixed stage rejects a required disabled operation
+  ---
+  duration_ms: 3.1182
+  type: 'test'
+  ...
+# Subtest: frozen stage detects and excludes terminal isolated-Pin layouts
+ok 93 - frozen stage detects and excludes terminal isolated-Pin layouts
+  ---
+  duration_ms: 19.9894
+  type: 'test'
+  ...
+# Subtest: non-mixed targets delegate through the unchanged E-009 frontier component
+ok 94 - non-mixed targets delegate through the unchanged E-009 frontier component
+  ---
+  duration_ms: 5.8393
+  type: 'test'
+  ...
+# Subtest: frozen optional promotion selection binds the authoritative 16/5 decision
+ok 95 - frozen optional promotion selection binds the authoritative 16/5 decision
+  ---
+  duration_ms: 303.0713
+  type: 'test'
+  ...
+# Subtest: Pin-aware construction builds a Pin below a physically extracted solid
+ok 96 - Pin-aware construction builds a Pin below a physically extracted solid
+  ---
+  duration_ms: 16.8571
+  type: 'test'
+  ...
+# Subtest: Pin-aware construction uses canonical overflow for terminal Pins in a full column
+ok 97 - Pin-aware construction uses canonical overflow for terminal Pins in a full column
+  ---
+  duration_ms: 10.5228
+  type: 'test'
+  ...
+# Subtest: Pin-aware construction composes disjoint Pin columns without reusing resources
+ok 98 - Pin-aware construction composes disjoint Pin columns without reusing resources
+  ---
+  duration_ms: 23.8662
+  type: 'test'
+  ...
+# Subtest: Pin-aware matching rejects a distinct-resource shortage
+ok 99 - Pin-aware matching rejects a distinct-resource shortage
+  ---
+  duration_ms: 1.248
+  type: 'test'
+  ...
+# Subtest: Pin-aware construction rejects a disabled Pin Pusher
+ok 100 - Pin-aware construction rejects a disabled Pin Pusher
+  ---
+  duration_ms: 0.3834
+  type: 'test'
+  ...
+# Subtest: Pin-aware first stage leaves Crystal-bearing targets outside its domain
+ok 101 - Pin-aware first stage leaves Crystal-bearing targets outside its domain
+  ---
+  duration_ms: 0.2564
+  type: 'test'
+  ...
+# Subtest: production Solver static graph contains only browser-safe runtime modules
+ok 102 - production Solver static graph contains only browser-safe runtime modules
+  ---
+  duration_ms: 109.0754
+  type: 'test'
+  ...
+# Subtest: eligible public entry returns a replay-valid constructive solution
+ok 103 - eligible public entry returns a replay-valid constructive solution
+  ---
+  duration_ms: 17.9059
+  type: 'test'
+  ...
+# Subtest: eligible unsupported construction falls back to bounded search
+ok 104 - eligible unsupported construction falls back to bounded search
+  ---
+  duration_ms: 9.8407
+  type: 'test'
+  ...
+# Subtest: ineligible public parameters preserve the bounded-search route
+ok 105 - ineligible public parameters preserve the bounded-search route
+  ---
+  duration_ms: 2.6166
+  type: 'test'
+  ...
+# Subtest: Explorer matches reusable-input reference closure by expression height
+ok 106 - Explorer matches reusable-input reference closure by expression height
+  ---
+  duration_ms: 71.4833
+  type: 'test'
+  ...
+# Subtest: Explorer keeps both ordered Stacker directions and reusable self-pairs
+ok 107 - Explorer keeps both ordered Stacker directions and reusable self-pairs
+  ---
+  duration_ms: 0.8752
+  type: 'test'
+  ...
+# Subtest: an unchanged multi-output sibling cannot suppress a novel sibling
+ok 108 - an unchanged multi-output sibling cannot suppress a novel sibling
+  ---
+  duration_ms: 0.9262
+  type: 'test'
+  ...
+# Subtest: mixed-part invalid calls are isolated while compatible calls continue
+ok 109 - mixed-part invalid calls are isolated while compatible calls continue
+  ---
+  duration_ms: 0.6722
+  type: 'test'
+  ...
+# Subtest: colored operations cover the full color domain while empty outputs and pure cycles stay out
+ok 110 - colored operations cover the full color domain while empty outputs and pure cycles stay out
+  ---
+  duration_ms: 1.272
+  type: 'test'
+  ...
+# Subtest: explicit Explorer depth zero executes no operation
+ok 111 - explicit Explorer depth zero executes no operation
+  ---
+  duration_ms: 0.4974
+  type: 'test'
+  ...
+# Subtest: empty starting shapes are ignored before shape and serialization admission
+ok 112 - empty starting shapes are ignored before shape and serialization admission
+  ---
+  duration_ms: 0.4136
+  type: 'test'
+  ...
+# Subtest: public Worker protocol preserves explicit depth zero and returns the Explorer envelope
+ok 113 - public Worker protocol preserves explicit depth zero and returns the Explorer envelope
+  ---
+  duration_ms: 0.5704
+  type: 'test'
+  ...
+# Subtest: Explorer resource limits stop before half-committing a productive call
+ok 114 - Explorer resource limits stop before half-committing a productive call
+  ---
+  duration_ms: 0.8633
+  type: 'test'
+  ...
+# Subtest: Explorer time and serialization limits return classified partial graphs
+ok 115 - Explorer time and serialization limits return classified partial graphs
+  ---
+  duration_ms: 4.0675
+  type: 'test'
+  ...
+# Subtest: recipe limits honor exact boundaries under an external watchdog
+ok 116 - recipe limits honor exact boundaries under an external watchdog
+  ---
+  duration_ms: 544.0058
+  type: 'test'
+  ...
+# Subtest: passive trace preserves ordered Swapper outputs, Stacker operands, and FIFO frontier
+ok 117 - passive trace preserves ordered Swapper outputs, Stacker operands, and FIFO frontier
+  ---
+  duration_ms: 27.2123
+  type: 'test'
+  ...
+# Subtest: passive observer never materializes an additional ranking-precheck loser
+ok 118 - passive observer never materializes an additional ranking-precheck loser
+  ---
+  duration_ms: 15.534
+  type: 'test'
+  ...
+# Subtest: ordered trace can stream events without retaining an event array
+ok 119 - ordered trace can stream events without retaining an event array
+  ---
+  duration_ms: 1.5595
+  type: 'test'
+  ...
+# Subtest: D-024 shape, generated, visited and attempted-action time boundaries are unchanged
+ok 120 - D-024 shape, generated, visited and attempted-action time boundaries are unchanged
+  ---
+  duration_ms: 6.4497
+  type: 'test'
+  ...
+# Subtest: partial Cutter overflow consumes the first output slot before attempt/time checks
+ok 121 - partial Cutter overflow consumes the first output slot before attempt/time checks
+  ---
+  duration_ms: 0.8522
+  type: 'test'
+  ...
+# Subtest: ordered trace distinguishes legal empty output from invalid inputs
+ok 122 - ordered trace distinguishes legal empty output from invalid inputs
+  ---
+  duration_ms: 1.137
+  type: 'test'
+  ...
+# Subtest: integer throughput aggregates split capacity and stops at one unit
+ok 123 - integer throughput aggregates split capacity and stops at one unit
+  ---
+  duration_ms: 3.2885
+  type: 'test'
+  ...
+# Subtest: reference BFS keeps the unsplit shortest path while the split aggregate witness remains replayable
+ok 124 - reference BFS keeps the unsplit shortest path while the split aggregate witness remains replayable
+  ---
+  duration_ms: 2.6545
+  type: 'test'
+  ...
+# Subtest: binary transitions discard unequal throughput and retain the smaller output units
+ok 125 - binary transitions discard unequal throughput and retain the smaller output units
+  ---
+  duration_ms: 34.247
+  type: 'test'
+  ...
+# Subtest: preventWaste permits only legal consume-only destruction and distinguishes surplus
+ok 126 - preventWaste permits only legal consume-only destruction and distinguishes surplus
+  ---
+  duration_ms: 0.9715
+  type: 'test'
+  ...
+# Subtest: orientation and multi-target allocation are independent of target ordering
+ok 127 - orientation and multi-target allocation are independent of target ordering
+  ---
+  duration_ms: 0.6428
+  type: 'test'
+  ...
+# Subtest: pair enumeration honors swapper commutativity, stacker direction, count and incompatibility boundaries
+ok 128 - pair enumeration honors swapper commutativity, stacker direction, count and incompatibility boundaries
+  ---
+  duration_ms: 4.5211
+  type: 'test'
+  ...
+# Subtest: public solution paths replay IDs, splitter lineage, consume-only steps and binary loss diagnostics
+ok 129 - public solution paths replay IDs, splitter lineage, consume-only steps and binary loss diagnostics
+  ---
+  duration_ms: 5.632
+  type: 'test'
+  ...
+# Subtest: replay covers Painter, Pin Pusher and Crystal Generator with exact color parameters
+ok 130 - replay covers Painter, Pin Pusher and Crystal Generator with exact color parameters
+  ---
+  duration_ms: 1.1115
+  type: 'test'
+  ...
+# Subtest: replay applies the production cleanPainting rule to Painter inputs
+ok 131 - replay applies the production cleanPainting rule to Painter inputs
+  ---
+  duration_ms: 1.7316
+  type: 'test'
+  ...
+# Subtest: replay treats only Swapper outputs as an unordered shape multiset while preserving declared ID lineage
+ok 132 - replay treats only Swapper outputs as an unordered shape multiset while preserving declared ID lineage
+  ---
+  duration_ms: 2.0232
+  type: 'test'
+  ...
+# Subtest: oracle comparison separates semantic depth mismatches and search limits from unsolved cases
+ok 133 - oracle comparison separates semantic depth mismatches and search limits from unsolved cases
+  ---
+  duration_ms: 0.8478
+  type: 'test'
+  ...
+# Subtest: reference transition guard stops exactly at its configured budget
+ok 134 - reference transition guard stops exactly at its configured budget
+  ---
+  duration_ms: 7.8222
+  type: 'test'
+  ...
+# Subtest: fixed narrow beam fixture remains replayable but is three primitive steps longer
+ok 135 - fixed narrow beam fixture remains replayable but is three primitive steps longer
+  ---
+  duration_ms: 27.437
+  type: 'test'
+  ...
+# Subtest: P4-02a insensitive counterexample needs splitting without throughput discard
+ok 136 - P4-02a insensitive counterexample needs splitting without throughput discard
+  ---
+  duration_ms: 9.6568
+  type: 'test'
+  ...
+# Subtest: P5-07 cap-2 gate exercises E-003 beam membership on a split-required witness
+ok 137 - P5-07 cap-2 gate exercises E-003 beam membership on a split-required witness
+  ---
+  duration_ms: 6.1842
+  type: 'test'
+  ...
+# Subtest: oracle splitter restrictions cap total use and prohibit a second-generation split
+ok 138 - oracle splitter restrictions cap total use and prohibit a second-generation split
+  ---
+  duration_ms: 1.367
+  type: 'test'
+  ...
+# Subtest: P4-02a sensitive counterexample needs a final half-turn after the split recipe
+ok 139 - P4-02a sensitive counterexample needs a final half-turn after the split recipe
+  ---
+  duration_ms: 4.5103
+  type: 'test'
+  ...
+# Subtest: P4-02a preserves an independent six-part target while splitting solves the four-part target
+ok 140 - P4-02a preserves an independent six-part target while splitting solves the four-part target
+  ---
+  duration_ms: 4.5569
+  type: 'test'
+  ...
+# Subtest: small deterministic reference-production matrix is exact and every public path replays
+ok 141 - small deterministic reference-production matrix is exact and every public path replays
+  ---
+  duration_ms: 21.6926
+  type: 'test'
+  ...
+# Subtest: profile observes a solved search without changing its logical result or counters
+ok 142 - profile observes a solved search without changing its logical result or counters
+  ---
+  duration_ms: 19.5287
+  type: 'test'
+  ...
+# Subtest: pair probe separates theoretical, eligible and invalid attempts
+ok 143 - pair probe separates theoretical, eligible and invalid attempts
+  ---
+  duration_ms: 23.691
+  type: 'test'
+  ...
+# Subtest: bounded collector retains only the best unique states
+ok 144 - bounded collector retains only the best unique states
+  ---
+  duration_ms: 3.352
+  type: 'test'
+  ...
+# Subtest: bounded collector latches only unique beam pruning and stays lazy afterwards
+ok 145 - bounded collector latches only unique beam pruning and stays lazy afterwards
+  ---
+  duration_ms: 0.6581
+  type: 'test'
+  ...
+# Subtest: bounded collector marks a unique eviction as beam pruning
+ok 146 - bounded collector marks a unique eviction as beam pruning
+  ---
+  duration_ms: 0.6286
+  type: 'test'
+  ...
+# Subtest: diagnostic collector partitions every non-retained event exactly
+ok 147 - diagnostic collector partitions every non-retained event exactly
+  ---
+  duration_ms: 1.2801
+  type: 'test'
+  ...
+# Subtest: bounded collector matches a full stable sort
+ok 148 - bounded collector matches a full stable sort
+  ---
+  duration_ms: 0.8374
+  type: 'test'
+  ...
+# Subtest: bounded collector uses coarseness only after an exactly equal primary score
+ok 149 - bounded collector uses coarseness only after an exactly equal primary score
+  ---
+  duration_ms: 0.4328
+  type: 'test'
+  ...
+# Subtest: coarseness heap ordering matches stable top-K across eviction, duplicates, and visited keys
+ok 150 - coarseness heap ordering matches stable top-K across eviction, duplicates, and visited keys
+  ---
+  duration_ms: 0.4681
+  type: 'test'
+  ...
+# Subtest: coarseness square-total formulas match explicit throughput/count inventories
+ok 151 - coarseness square-total formulas match explicit throughput/count inventories
+  ---
+  duration_ms: 0.6114
+  type: 'test'
+  ...
+# Subtest: solver recognizes a target already present at depth zero
+ok 152 - solver recognizes a target already present at depth zero
+  ---
+  duration_ms: 7.3402
+  type: 'test'
+  ...
+# Subtest: solver classifies a naturally exhausted no-result as exhaustive
+ok 153 - solver classifies a naturally exhausted no-result as exhaustive
+  ---
+  duration_ms: 1.3842
+  type: 'test'
+  ...
+# Subtest: solver labels a beam-pruned no-result without claiming exhaustion
+ok 154 - solver labels a beam-pruned no-result without claiming exhaustion
+  ---
+  duration_ms: 3.3912
+  type: 'test'
+  ...
+# Subtest: solver returns immediately when a generated successor is the target
+ok 155 - solver returns immediately when a generated successor is the target
+  ---
+  duration_ms: 0.8145
+  type: 'test'
+  ...
+# Subtest: interned throughput tokens preserve splitting-mode solutions
+ok 156 - interned throughput tokens preserve splitting-mode solutions
+  ---
+  duration_ms: 1.8689
+  type: 'test'
+  ...
+# Subtest: half destroyer can consume a shape without producing output
+ok 157 - half destroyer can consume a shape without producing output
+  ---
+  duration_ms: 2.5757
+  type: 'test'
+  ...
+# Subtest: swapper skips mixed-part pairs and still solves with a compatible pair
+ok 158 - swapper skips mixed-part pairs and still solves with a compatible pair
+  ---
+  duration_ms: 3.9624
+  type: 'test'
+  ...
+# Subtest: stacker skips mixed-part pairs and still solves with a compatible pair
+ok 159 - stacker skips mixed-part pairs and still solves with a compatible pair
+  ---
+  duration_ms: 6.5756
+  type: 'test'
+  ...
+# Subtest: omni swapper integration case still resolves with the bounded search
+ok 160 - omni swapper integration case still resolves with the bounded search
+  ---
+  duration_ms: 1114.5962
+  type: 'test'
+  ...
+# Subtest: shared occurrence retains both Cutter outputs and solves a one-token four-cell target
+ok 161 - shared occurrence retains both Cutter outputs and solves a one-token four-cell target
+  ---
+  duration_ms: 20.9638
+  type: 'test'
+  ...
+# Subtest: shared occurrence never reuses a consumed token
+ok 162 - shared occurrence never reuses a consumed token
+  ---
+  duration_ms: 7.5564
+  type: 'test'
+  ...
+# Subtest: insufficient multiplicity remains an exhausted resource failure
+ok 163 - insufficient multiplicity remains an exhausted resource failure
+  ---
+  duration_ms: 1.3197
+  type: 'test'
+  ...
+# Subtest: disabled Cutter prevents shared partitioning cleanly
+ok 164 - disabled Cutter prevents shared partitioning cleanly
+  ---
+  duration_ms: 0.5252
+  type: 'test'
+  ...
+# Subtest: already solved E-011 members delegate without entering the shared stage
+ok 165 - already solved E-011 members delegate without entering the shared stage
+  ---
+  duration_ms: 18.7328
+  type: 'test'
+  ...
+# Subtest: unsupported broader-Crystal layouts do not enter the resource fallback
+ok 166 - unsupported broader-Crystal layouts do not enter the resource fallback
+  ---
+  duration_ms: 0.6647
+  type: 'test'
+  ...
+# Subtest: frozen composite members resolve to exact source inputs and metadata
+ok 167 - frozen composite members resolve to exact source inputs and metadata
+  ---
+  duration_ms: 157.1925
+  type: 'test'
+  ...
+# Subtest: terminal status retains the actual Solver cause
+ok 168 - terminal status retains the actual Solver cause
+  ---
+  duration_ms: 1.1238
+  type: 'test'
+  ...
+# Subtest: canonical hashes ignore object key order and config creation time
+ok 169 - canonical hashes ignore object key order and config creation time
+  ---
+  duration_ms: 2.2636
+  type: 'test'
+  ...
+# Subtest: atomic JSON replacement works for repeated resume checkpoints
+ok 170 - atomic JSON replacement works for repeated resume checkpoints
+  ---
+  duration_ms: 43.4493
+  type: 'test'
+  ...
+# Subtest: aggregation covers 159 outcomes, target family counts, mechanism and cost quantiles
+ok 171 - aggregation covers 159 outcomes, target family counts, mechanism and cost quantiles
+  ---
+  duration_ms: 48.0498
+  type: 'test'
+  ...
+# Subtest: target analysis recognizes attainable uncolored fragments but not conflicting parts
+ok 172 - target analysis recognizes attainable uncolored fragments but not conflicting parts
+  ---
+  duration_ms: 9.9792
+  type: 'test'
+  ...
+# Subtest: small-domain oracle gate covers target-conditioned rotation
+ok 173 - small-domain oracle gate covers target-conditioned rotation
+  ---
+  duration_ms: 9.3059
+  type: 'test'
+  ...
+# Subtest: small-domain oracle gate covers Cutter sibling selection and replay order
+ok 174 - small-domain oracle gate covers Cutter sibling selection and replay order
+  ---
+  duration_ms: 2.3693
+  type: 'test'
+  ...
+# Subtest: small-domain oracle gate covers clean Painter
+ok 175 - small-domain oracle gate covers clean Painter
+  ---
+  duration_ms: 4.187
+  type: 'test'
+  ...
+# Subtest: small-domain oracle gate covers ordered Stacker with disjoint resources
+ok 176 - small-domain oracle gate covers ordered Stacker with disjoint resources
+  ---
+  duration_ms: 27.3617
+  type: 'test'
+  ...
+# Subtest: resource masks prevent one input from being consumed twice
+ok 177 - resource masks prevent one input from being consumed twice
+  ---
+  duration_ms: 0.5197
+  type: 'test'
+  ...
+# Subtest: ordinary first stage rejects special-part targets without reading benchmark metadata
+ok 178 - ordinary first stage rejects special-part targets without reading benchmark metadata
+  ---
+  duration_ms: 0.2053
+  type: 'test'
+  ...
+# Subtest: broader staged Crystal layout enters the physical-mask pool and replays
+ok 179 - broader staged Crystal layout enters the physical-mask pool and replays
+  ---
+  duration_ms: 67.5693
+  type: 'test'
+  ...
+# Subtest: broader Crystal solution consumes every token at most once
+ok 180 - broader Crystal solution consumes every token at most once
+  ---
+  duration_ms: 13.1189
+  type: 'test'
+  ...
+# Subtest: existing E-012 solution delegates without entering the new stage
+ok 181 - existing E-012 solution delegates without entering the new stage
+  ---
+  duration_ms: 6.644
+  type: 'test'
+  ...
+# Subtest: disabled Cutter fails the broader-Crystal stage cleanly
+ok 182 - disabled Cutter fails the broader-Crystal stage cleanly
+  ---
+  duration_ms: 1.2486
+  type: 'test'
+  ...
+# Subtest: unsupported Crystal geometry remains a clean exhausted result
+ok 183 - unsupported Crystal geometry remains a clean exhausted result
+  ---
+  duration_ms: 9.9759
+  type: 'test'
+  ...
+# Subtest: worker task terminates and detaches before delivering one result
+ok 184 - worker task terminates and detaches before delivering one result
+  ---
+  duration_ms: 3.4046
+  type: 'test'
+  ...
+# Subtest: result callback failures cannot prevent Worker cleanup
+ok 185 - result callback failures cannot prevent Worker cleanup
+  ---
+  duration_ms: 11.5953
+  type: 'test'
+  ...
+# Subtest: terminate-based cancellation suppresses stale status, result, and error events
+ok 186 - terminate-based cancellation suppresses stale status, result, and error events
+  ---
+  duration_ms: 2.8306
+  type: 'test'
+  ...
+# Subtest: terminal Worker errors clean up once and a new task can complete
+ok 187 - terminal Worker errors clean up once and a new task can complete
+  ---
+  duration_ms: 0.6486
+  type: 'test'
+  ...
+# Subtest: native, message, and synchronous Worker errors use the same one-shot cleanup path
+ok 188 - native, message, and synchronous Worker errors use the same one-shot cleanup path
+  ---
+  duration_ms: 0.7863
+  type: 'test'
+  ...
+# Subtest: Worker construction failures are reported after returning an inactive task
+ok 189 - Worker construction failures are reported after returning an inactive task
+  ---
+  duration_ms: 1.0054
+  type: 'test'
+  ...
+1..189
+# tests 198
+# suites 0
+# pass 198
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 50139.1635

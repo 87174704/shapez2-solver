@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "locales": [
+    "zh-CN",
+    "zh-TW",
+    "en",
+    "ja",
+    "ko",
+    "fr",
+    "de",
+    "es-ES",
+    "pt-BR",
+    "ru",
+    "pl",
+    "tr",
+    "th"
+  ],
+  "keyCount": 170,
+  "totalEntries": 2210,
+  "coverage": [
+    {
+      "locale": "zh-CN",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "163 existing messages retained; 7 new messages AI-assisted, native review pending"
+    },
+    {
+      "locale": "zh-TW",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "en",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "163 existing messages retained; 7 new messages AI-assisted, native review pending"
+    },
+    {
+      "locale": "ja",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "ko",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "fr",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "de",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "es-ES",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "pt-BR",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "ru",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "pl",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "tr",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    },
+    {
+      "locale": "th",
+      "keys": 170,
+      "missing": [],
+      "extra": [],
+      "parameterMismatches": [],
+      "translationReview": "AI-assisted initial translation; native review pending"
+    }
+  ]
+}

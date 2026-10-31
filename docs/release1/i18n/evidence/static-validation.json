@@ -1,0 +1,495 @@
+{
+  "status": "VERIFIED",
+  "profiles": {
+    "global": {
+      "reproducible": true,
+      "fileCount": 117,
+      "htmlCount": 15,
+      "jsCount": 41,
+      "cssCount": 1,
+      "localReferences": 285,
+      "httpChecks": 35,
+      "manifestSha256": "31d6055759de141c99367a065b50d22c7d9d46743087f15922e2704d70082905"
+    },
+    "china": {
+      "reproducible": true,
+      "fileCount": 172,
+      "htmlCount": 15,
+      "jsCount": 41,
+      "cssCount": 2,
+      "localReferences": 340,
+      "httpChecks": 36,
+      "manifestSha256": "7dba38fbc028e44283d11965dbd0523fefbe9bd0886f21a5929e591f5086adb4"
+    }
+  },
+  "differences": [
+    {
+      "file": "assets/fonts/barlow-0.woff2",
+      "globalSha256": null,
+      "chinaSha256": "a0e2a4ce70e08fb73874eb7f5be3864f0e4660fc44c3b2e48aeb3fe28d0aaf6d",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-1.woff2",
+      "globalSha256": null,
+      "chinaSha256": "4ebbdef62b0f8e22dbdde8b2e75f5b7ffdb27dcdf9c1c45a23f2213319b7c7d9",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-10.woff2",
+      "globalSha256": null,
+      "chinaSha256": "dcc40914416cf9c17ca57deeed46b2eea1749b2b3a57db34147ed0ee004b866b",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-11.woff2",
+      "globalSha256": null,
+      "chinaSha256": "7a306c56f630df002deeafbd521738e20795d765feea65030def2e80f9a3d62f",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-12.woff2",
+      "globalSha256": null,
+      "chinaSha256": "a18be0a1f14fb278ecac3e0d919bc56304f5cce1081c30bab0f6657ac9a006d4",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-13.woff2",
+      "globalSha256": null,
+      "chinaSha256": "48d125ab6f182bc8bb52f8fcdfb82ea4027bcecddc5a962dfef1d5e3fd08369b",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-14.woff2",
+      "globalSha256": null,
+      "chinaSha256": "15fff91140576edddc04333d4a03c4634d25e327597db5f855dce6c92023e4ba",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-15.woff2",
+      "globalSha256": null,
+      "chinaSha256": "356f4dfd8c4d48b4814e3426207366fe7b33aaecdd12ca713593e9689bf7c2e7",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-16.woff2",
+      "globalSha256": null,
+      "chinaSha256": "b348d5eade8d61fb56782af290ffb68bed4a0ff71df48364b3b6e08ed22c8517",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-17.woff2",
+      "globalSha256": null,
+      "chinaSha256": "8eccc3c886206556e8aa3d585003d5fc1b8071a4f1d63a04fcd58d4b9a492e92",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-18.woff2",
+      "globalSha256": null,
+      "chinaSha256": "30a808a776b20e071f05bf550978f1ff2809d30fce245c0910698cc5bb9b2fc9",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-19.woff2",
+      "globalSha256": null,
+      "chinaSha256": "cf54080f2ca3711deed8291a944d9f256a96ba0afb41309f30831b686ce488b1",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-2.woff2",
+      "globalSha256": null,
+      "chinaSha256": "b3b429954ed286eb79cfb89271a66f852ed62317e904c58c4f607e33a231537d",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-20.woff2",
+      "globalSha256": null,
+      "chinaSha256": "717f61f0f8cf46b1f2aa54283e91ae39b1a80c4769ccaa761c7fab813708bcff",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-21.woff2",
+      "globalSha256": null,
+      "chinaSha256": "a0cd642775c3ad8e9014d8d5bb5e074234257145b228e20a00a27ba7b64a33bc",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-22.woff2",
+      "globalSha256": null,
+      "chinaSha256": "ed9a4ca1af613c59351e065bc86e4744dc2bbd295fe926bbefae99261059df26",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-23.woff2",
+      "globalSha256": null,
+      "chinaSha256": "d8f19e32b17e71814c011dfb8f45a766533974263463bc0e6b60faded692db06",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-24.woff2",
+      "globalSha256": null,
+      "chinaSha256": "9d660dbd0f437f98efb2c7bdee0f9090e1b735c47a0f113cb46254d9db6c3a67",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-25.woff2",
+      "globalSha256": null,
+      "chinaSha256": "0ba304575a6371dc270666321dd922c34af4d9bcffed46068128bd20f2a36f02",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-26.woff2",
+      "globalSha256": null,
+      "chinaSha256": "8cc0dedd7351c607b934e82026d64d55532d3592bdd67a902e038bc3c19dd8c5",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-27.woff2",
+      "globalSha256": null,
+      "chinaSha256": "0e1d4a296cacbfa2cc3071108b4ab414d903516845a3be32f5607d127e4e2dce",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-28.woff2",
+      "globalSha256": null,
+      "chinaSha256": "d145eefba3762a24c761a13c8e588578322b48d6c5df67182adc067c5c4f617f",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-29.woff2",
+      "globalSha256": null,
+      "chinaSha256": "79213a0cddd7c9ee19cdd9e258827d840c5b69d508e88a5c18a85f6fa85cee8d",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-3.woff2",
+      "globalSha256": null,
+      "chinaSha256": "3f237049f389015efc308f6541e77ed9040dc1f8c8b1e1a3ed25bb99b446145b",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-30.woff2",
+      "globalSha256": null,
+      "chinaSha256": "0aff952122d1f7736d224b99a542ec3cfe6c2b2dd85e43e0434c6534cee92a70",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-31.woff2",
+      "globalSha256": null,
+      "chinaSha256": "98f98ad7afacd9024dbbc5fb3adcce6dc8ce662d110b9df52181fad7ad4d5e6a",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-32.woff2",
+      "globalSha256": null,
+      "chinaSha256": "8452443f54db2db87d5a0efee9a68b42b2775303a5e23b90cbf112e25e03be9e",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-33.woff2",
+      "globalSha256": null,
+      "chinaSha256": "b81915f6cf4c1a474646ebc88b85cb61e3ad7721d42168d9386d89a86a2d86ae",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-34.woff2",
+      "globalSha256": null,
+      "chinaSha256": "5d396229b78ff1a9abba40931592ce7dd5b67c63ec6137d3a7a165b2356e903e",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-35.woff2",
+      "globalSha256": null,
+      "chinaSha256": "889347d7bc19d53d984a12f413457fbc8b3723757464cf514121534f626dc4db",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-36.woff2",
+      "globalSha256": null,
+      "chinaSha256": "fef1e3c39d06f701c21120978484610a6848dc357d1ec603421927d709016b10",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-37.woff2",
+      "globalSha256": null,
+      "chinaSha256": "122b24bc2a90b0abe189f5229768bf2e9ba641324fe2459b48850079625934f1",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-38.woff2",
+      "globalSha256": null,
+      "chinaSha256": "b0a8ad37ac45f5fb22ced461576db72e44e295107aad7a9c8a7a4bad728fd03b",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-39.woff2",
+      "globalSha256": null,
+      "chinaSha256": "ba426fe513fa9e7e053ae6cf15132bb0ee3a076c634d0a02a0d221c66d74ea5e",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-4.woff2",
+      "globalSha256": null,
+      "chinaSha256": "596b8d50d3b584b8f159d4f79885267159949783a88f43887271f458194f730d",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-40.woff2",
+      "globalSha256": null,
+      "chinaSha256": "3facdf66b60778c7e64693013be7799e6686b2488dad65525b4036e211ab03e0",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-41.woff2",
+      "globalSha256": null,
+      "chinaSha256": "cd759df8ef9efc98fee14307b4eb5ba27f08b1f8f2f3ad2872432e25c89907a8",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-42.woff2",
+      "globalSha256": null,
+      "chinaSha256": "d9bb523921d15e2b3fca0b22860af8b6f4a878a54c0bddd7c522588988253943",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-43.woff2",
+      "globalSha256": null,
+      "chinaSha256": "b7f099c421968b583734bc631e6706bff8fc23908112a219f5f0e37f59b03b32",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-44.woff2",
+      "globalSha256": null,
+      "chinaSha256": "4b52ddd4836b592df0e4832b8286956883cdc651b015126bdd18f184b7f90cc3",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-45.woff2",
+      "globalSha256": null,
+      "chinaSha256": "73b48c8588dc2bf62ee6c47f6e5d3074dd4098e1cc3f9082752f0d5776097d66",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-46.woff2",
+      "globalSha256": null,
+      "chinaSha256": "88c786d5fa8700a201615bc7b8ede09d209ec5d08cc3dd0a30ea1c4baff3476f",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-47.woff2",
+      "globalSha256": null,
+      "chinaSha256": "2d797dd8b35dcb3413e1af9d7052b3f4f8c341a147cdcb01f4f06af80db53289",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-48.woff2",
+      "globalSha256": null,
+      "chinaSha256": "dccc9bb5cc1035edaf1420572012f17b6d6a315ac900d97195035e3ac005c786",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-49.woff2",
+      "globalSha256": null,
+      "chinaSha256": "1647a6cc123594599e459587d251f034e2f28bac2fec980bd0933c3ad13ce5e8",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-5.woff2",
+      "globalSha256": null,
+      "chinaSha256": "dec37c095eaeb5a57884b473c0e61ff6c38f44d8deaa254a3a534d9febb39193",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-50.woff2",
+      "globalSha256": null,
+      "chinaSha256": "231d487a993e28bc5567c2be8da48acd8e0a209891c11448491eab45db0f8d7c",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-51.woff2",
+      "globalSha256": null,
+      "chinaSha256": "a5441aef37e84a12c5ddc37b431f55bacb40fef97d245e9112ec422f85d6bd37",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-52.woff2",
+      "globalSha256": null,
+      "chinaSha256": "ff236c2a65201d5d0213138c1721fdc7075d5691e556fda9e0a129b826dd0a85",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-53.woff2",
+      "globalSha256": null,
+      "chinaSha256": "6f5d995ccc4d8ffd9e8cb4c303fc1f3646d6c62d40269ef59463332f12d5b897",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-6.woff2",
+      "globalSha256": null,
+      "chinaSha256": "cd97b18a6009015e7a4e65d3dca6690de571aa805158a852404f684e101c4789",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-7.woff2",
+      "globalSha256": null,
+      "chinaSha256": "6ee4c14c3ece0c2f03cd0ef82645a65a89861612c8804b85dfc878906c908541",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-8.woff2",
+      "globalSha256": null,
+      "chinaSha256": "f6c59bf21b212784adb329f91e2e32aef59a1adf5c23c5140fd4e3f1730142d7",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow-9.woff2",
+      "globalSha256": null,
+      "chinaSha256": "83dc508fed711b2dc8ff393f97f3b943f66ee2500cc7c4cf889867d024840560",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "assets/fonts/barlow.css",
+      "globalSha256": null,
+      "chinaSha256": "150d74692b42f234783f749701f1782b2861ab97835160c4a3c3b3f0ba8ca3ab",
+      "reason": "China-only licensed local Barlow font snapshot"
+    },
+    {
+      "file": "build-manifest.json",
+      "globalSha256": "31d6055759de141c99367a065b50d22c7d9d46743087f15922e2704d70082905",
+      "chinaSha256": "7dba38fbc028e44283d11965dbd0523fefbe9bd0886f21a5929e591f5086adb4",
+      "reason": "Profile, base path, font/CDN configuration and artifact digests"
+    },
+    {
+      "file": "cn/index.html",
+      "globalSha256": "4dc092def38b14fd8ed0a1d77e0bc51ba33e2acf296c89482009b4c8c36b18e4",
+      "chinaSha256": "21eacc3f1f83ee52ec4f59040465e3783aaeb98f389911034951e678ba5d1bff",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "de/index.html",
+      "globalSha256": "ff03a03580bc8b87ac559be5846615bc267ce9cbfb8c9cb99fd146ef071108b8",
+      "chinaSha256": "a97766d8ae97a5869cee181742f45a2930f02210bdcdd6c1af59bf51e810ce5c",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "en/index.html",
+      "globalSha256": "c6bba7a3641d3e18d102815f60a337beb4872f5c21746b67b5be091ffbb3af93",
+      "chinaSha256": "c3010984c6bd9c04b853fc40bab0bbb0e4f78d238d33e33c1f2fde1d0c96cc34",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "es-ES/index.html",
+      "globalSha256": "2377721ea81af1d5790ae32dff54c8926b4c322963781ddfccb0692896284e32",
+      "chinaSha256": "ddc10bb638efe0c269c4e4e429e7eba5a37656f7e95246b7907664a00af911e7",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "fr/index.html",
+      "globalSha256": "7238e9a89c77ad9912de76291785333fb1a706bdb7c2a9a2f021f6997f4a813f",
+      "chinaSha256": "4ad1a583defc1bf80d524accb82504ce18d24fa212393c0fc8d6736f199a8406",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "index.html",
+      "globalSha256": "c6bba7a3641d3e18d102815f60a337beb4872f5c21746b67b5be091ffbb3af93",
+      "chinaSha256": "c3010984c6bd9c04b853fc40bab0bbb0e4f78d238d33e33c1f2fde1d0c96cc34",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "ja/index.html",
+      "globalSha256": "0f68f33792934aa0a78d3a53b0baf1d002ed2fea9909e7e34c9f02aef751dfba",
+      "chinaSha256": "bd67f8e27590c5016fc1edf7824d85c091edfbe06170af2e290bace4bdd3f178",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "ko/index.html",
+      "globalSha256": "324ab9df818a0cd5c92789203e71a352720291ae2921dc5c98a5353bf6233c16",
+      "chinaSha256": "66c54d92d7af6c82593ae09b9fff9059f0a5fa15f67e28d1289a5f49e357df96",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "pl/index.html",
+      "globalSha256": "76eb4223354cc1f21a59acb557bdc62742b0658e4ab5b9def689dd436d8b3192",
+      "chinaSha256": "f1545f875ac6d744dbb22253aa073ce0f11b4fab18ce5ece87b83265bd8053b1",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "pt-BR/index.html",
+      "globalSha256": "da29d719dae8d6f31d4fffcfe5b371579f407c218f23d44c437818d024365276",
+      "chinaSha256": "fe3ce464c7956dc877fac09c66fc9333d039fd5e44238a407888a7e92f74d572",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "ru/index.html",
+      "globalSha256": "8f723c44ad614e9cc610b3a8c129fb4acd5fae9b69cc2515abd370ef0908a766",
+      "chinaSha256": "aa1e5bbbdbfda081558d06ce0e98b145be0c8a6ef28babc0d78d2bffc9588b37",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "styles.css",
+      "globalSha256": "f2c9ce0b4d765a06cb9aec41709c7ed7ec7ac4a7a9872da370d64ee1297c614e",
+      "chinaSha256": "fa3cda0661dc75ab6bfbe6877fe27860e65450804615b08d6ecd884deccda6df",
+      "reason": "Only Barlow @import source differs"
+    },
+    {
+      "file": "th/index.html",
+      "globalSha256": "6966eb264f6f0a38d132353c174849ef0af3e5c196dd14dcfabd9fa16bf3909d",
+      "chinaSha256": "9c72e4c97a71a5ef48fc8906b17473593114920e938d53d8edc9cea8e6e4e227",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "tr/index.html",
+      "globalSha256": "738893a9963540dcfcf2ebf49c18d432cd3ff707b61510878e53b0a4f6967024",
+      "chinaSha256": "aadc8b24ffced2e7464d26df56cffc9463b4af631160927369536b8e398d1877",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "zh-CN/index.html",
+      "globalSha256": "4dc092def38b14fd8ed0a1d77e0bc51ba33e2acf296c89482009b4c8c36b18e4",
+      "chinaSha256": "21eacc3f1f83ee52ec4f59040465e3783aaeb98f389911034951e678ba5d1bff",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    },
+    {
+      "file": "zh-TW/index.html",
+      "globalSha256": "4be0684ffc5a95e92b3c2dda8d5bd0a8877a6635c3a3a849abbc7d9608da18c8",
+      "chinaSha256": "b21e51297703f28f9e9dd25995c62d6bdc484bc68ba6879d93031af39f991f8a",
+      "reason": "CDN URLs, profile CSP and configured base path; SRI/order and application markup identical"
+    }
+  ],
+  "originalSourceChanges": [
+    ".github/workflows/verify.yml",
+    ".gitignore",
+    "README.md",
+    "cn/index.html",
+    "en/index.html",
+    "i18n.js",
+    "index.html",
+    "main.js",
+    "operationGraph.js",
+    "release.json",
+    "scripts/ci/prepare-checkout.mjs",
+    "scripts/ci/verify.mjs",
+    "shapeSolver.js",
+    "styles.css",
+    "tests/browser/productPerformance.browser.mjs",
+    "tests/browser/workerLifecycle.browser.mjs",
+    "tests/tools/boundedPhysicsV2.mjs",
+    "tests/tools/capturePhysicsV2.mjs",
+    "tests/tools/measurePhysicsV2.mjs",
+    "tests/tools/validatePhysicsV2.mjs",
+    "tests/versionIdentity.test.mjs",
+    "versions/benchmark-v2.mjs"
+  ],
+  "identity": {
+    "valid": true,
+    "release": "shapez2-solver-release1",
+    "manifestCanonicalSha256": "87822650c1bcf1aebc9a77e27548175d200fb3b7b1b9f6189d3850d4cb1c5e74",
+    "physicsSemantics": "shape-operations-v2-support-closure",
+    "semanticsSha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "sourceSha256": "68252508acf924fab921634c9ac266f23f3d3ccfaed1935568f9ea0c62fdebfb",
+    "sourceFilesChecked": 6241,
+    "frozenFilesChecked": 461,
+    "errors": []
+  },
+  "sharedApplicationFiles": 41
+}

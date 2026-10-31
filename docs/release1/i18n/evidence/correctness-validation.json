@@ -1,0 +1,90 @@
+{
+  "status": "VERIFIED",
+  "exclusiveWindowConfirmed": true,
+  "node": "v24.21.0",
+  "phases": [
+    {
+      "name": "historical-v1",
+      "status": "VERIFIED",
+      "exitCode": 0,
+      "counts": {
+        "tests": 198,
+        "pass": 198,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "expectedCounts": {
+        "tests": 198,
+        "pass": 198,
+        "fail": 0,
+        "skipped": 0
+      },
+      "countsMatch": true,
+      "log": ".f1/acceptance/historical-v1.log",
+      "sha256": "07788d783e4bf94e3b42af4feb6f9cad61c67b78e4edeb313ba6c88c900ab0d3"
+    },
+    {
+      "name": "frozen-evidence-v1",
+      "status": "VERIFIED",
+      "exitCode": 0,
+      "counts": {},
+      "expectedCounts": null,
+      "countsMatch": true,
+      "log": ".f1/acceptance/frozen-evidence-v1.log",
+      "sha256": "20a6fd5576ccce89260679e4923a981ec8177a22f70e6be26e43663bca27bc30"
+    },
+    {
+      "name": "regressions-v2",
+      "status": "VERIFIED",
+      "exitCode": 0,
+      "counts": {
+        "tests": 262,
+        "pass": 249,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 13
+      },
+      "expectedCounts": {
+        "tests": 262,
+        "pass": 249,
+        "fail": 0,
+        "skipped": 13
+      },
+      "countsMatch": true,
+      "log": ".f1/acceptance/regressions-v2.log",
+      "sha256": "74ee0509365f6be141c250b9e376d5d6c714e128bc3c1a1cc48d184229d7acbb"
+    },
+    {
+      "name": "current-solver-159",
+      "status": "VERIFIED",
+      "exitCode": 0,
+      "counts": {},
+      "expectedCounts": null,
+      "countsMatch": true,
+      "log": ".f1/acceptance/current-solver-159.log",
+      "sha256": "157273b6edbc69d67c489ff83bf09b330a20221346b543cd6b7d07d792c9fe41"
+    },
+    {
+      "name": "physics-v2-witnesses",
+      "status": "VERIFIED",
+      "exitCode": 0,
+      "counts": {},
+      "expectedCounts": null,
+      "countsMatch": true,
+      "log": ".f1/acceptance/physics-v2-witnesses.log",
+      "sha256": "6682ad8b01414e14f88c7af1b5a354d00018bb9cde05ae3cc5eaa3c244bb48cb"
+    }
+  ],
+  "identity": {
+    "valid": true,
+    "release": "shapez2-solver-release1",
+    "manifestCanonicalSha256": "87822650c1bcf1aebc9a77e27548175d200fb3b7b1b9f6189d3850d4cb1c5e74",
+    "physicsSemantics": "shape-operations-v2-support-closure",
+    "semanticsSha256": "28aac91525a7f15a1ab081ed73f425f39f4f2e68d30599fbf8b46e1a9bf09a97",
+    "sourceSha256": "68252508acf924fab921634c9ac266f23f3d3ccfaed1935568f9ea0c62fdebfb",
+    "sourceFilesChecked": 6241,
+    "frozenFilesChecked": 461,
+    "errors": []
+  }
+}
