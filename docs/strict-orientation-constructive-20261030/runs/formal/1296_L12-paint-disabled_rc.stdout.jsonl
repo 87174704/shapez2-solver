@@ -1,3 +1,0 @@
-{"type":"START","mode":"rc","warmMs":19.496499999999997,"beforeSearchMs":40.1055}
-{"type":"SEARCH_END","searchMs":0.4311999999999898,"peakRssMiB":63.30859375}
-{"type":"RESULT","status":"exhausted","mode":"rc","searchMs":0.4311999999999898,"result":{"solutionPath":null,"depth":1,"statesExplored":4,"generatedStates":12,"outcome":"exhausted","beamPruned":false},"validation":null,"independent":null,"operationCount":null,"solverRoute":"general-search","attempt":null,"pathHash":null}

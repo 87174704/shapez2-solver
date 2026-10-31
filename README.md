@@ -17,4 +17,16 @@ Physics v2 corrects support propagation and complete crystal shattering. The fro
 - [Verification-only GitHub CI](docs/release/CI.md)
 - [Future international/domestic release architecture](docs/release/ARCHITECTURE.md)
 
-Use Node.js 24.21.0. Run `npm ci --ignore-scripts --no-audit --no-fund`, `git config core.autocrlf input`, and `node scripts/ci/verify.mjs` once in a clean clone. See [reproduction steps](docs/benchmark/REPRODUCIBILITY.md) before rerunning. Serve the repository with a local static server to open `cn/` or `en/`.
+Use Node.js 24.21.0. Install dependencies from the two lockfiles:
+
+```powershell
+npm ci --ignore-scripts --no-audit --no-fund
+npm ci --prefix tools/static-build --ignore-scripts --no-audit --no-fund
+node tools/release1/prepare-checkout.mjs
+node tools/static-build/build.mjs global
+node tools/static-build/build.mjs china
+```
+
+The maintained release enables strict constructive routing by default and supports 13 languages in both profiles. Serve `dist/global` at `/shapez2-solver/` or `dist/china` at `/solver/` with a local static server; each build manifest records the exact source commit and tree.
+
+For current regressions, historical v1 certification, frozen benchmarks, witness replay, ordinary/holdout cases and browser checks, follow the [current validation commands](docs/strict-orientation-constructive-20261030/REPRODUCE.md). All inputs and resources are versioned; no historical workspace or cache is required. Use `core.autocrlf=false` for this checkout to retain the exact pinned representations. Generated outputs are disposable and ignored.

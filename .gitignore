@@ -6,3 +6,8 @@ benchmarks/profiling/**/records/*.states.ndjson
 .ci-results/
 .f1/
 dist/
+
+# Disposable local agent and Python outputs
+.i18n-work/
+__pycache__/
+*.pyc

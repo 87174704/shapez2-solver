@@ -1,3 +1,5 @@
+> 历史记录：以下结论对应 2026-10-30 的 opt-in 实验；正式 Release 1 已默认启用 O1。工作区收敛时已移除原始性能采样、逐次日志和一次性审计脚本；原始记录仍属于既有 Git 历史，未重写历史。当前回归请使用 REPRODUCE.md 的仓库内入口。
+
 # Shapez 2 Solver — Strict-Orientation Constructive Routing
 
 日期：2026-10-30（Asia/Shanghai）。固定 RC ec9cc5cb633d021b6af276565223a392f8329b87。隔离目录 E:\solver-strict-constructive-20261030，分支 codex/strict-orientation-constructive。

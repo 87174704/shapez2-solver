@@ -1,3 +1,0 @@
-{"type":"START","mode":"rc","warmMs":19.21719999999999,"beforeSearchMs":40.7155}
-{"type":"SEARCH_END","searchMs":2.099499999999992,"peakRssMiB":63.1640625}
-{"type":"RESULT","status":"SOLVED","mode":"rc","searchMs":2.099499999999992,"result":{"solutionPath":[],"depth":0,"statesExplored":1,"generatedStates":0,"outcome":"solved","beamPruned":false},"validation":{"valid":true,"error":null},"independent":{"valid":true,"error":null,"at":0},"operationCount":0,"solverRoute":"general-search","attempt":null,"pathHash":"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"}

@@ -1,3 +1,5 @@
+> 历史记录：以下结论对应 2026-10-30 的 opt-in 实验；正式 Release 1 已默认启用 O1。工作区收敛时已移除原始性能采样、逐次日志和一次性审计脚本；原始记录仍属于既有 Git 历史，未重写历史。当前回归请使用 REPRODUCE.md 的仓库内入口。
+
 # Strict-orientation Constructive 路由补丁
 
 固定基线：`ec9cc5cb633d021b6af276565223a392f8329b87`。仅修改 `shapeSolver.js`，新增 `constructive/validate-strict-plan.js`，其余新增文件均为测试与本报告目录的证据/脚本。历史 benchmark、witness、Physics v2、构造核心、通用搜索、Beam、缓存、版本清单及部署文件无提交改动。

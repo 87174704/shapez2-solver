@@ -1,3 +1,0 @@
-{"type":"START","mode":"rc","warmMs":20.752200000000002,"beforeSearchMs":45.0063}
-{"type":"SEARCH_END","searchMs":0.3159999999999883,"peakRssMiB":63.4609375}
-{"type":"RESULT","status":"SOLVED","mode":"rc","searchMs":0.3159999999999883,"result":{"solutionPath":[{"operation":"Stacker","inputs":[{"id":1,"shape":"Ru------"},{"id":0,"shape":"Ru------"}],"outputs":[{"id":2,"shape":"Ru------:Ru------"}],"params":{}}],"depth":1,"statesExplored":1,"generatedStates":1,"outcome":"solved","beamPruned":false},"validation":{"valid":true,"error":null},"independent":{"valid":true,"error":null,"at":1},"operationCount":1,"solverRoute":"general-search","attempt":null,"pathHash":"f936ef08a7cb1c7155f3b947f38e32d231718b1d39ff999f25cf231b68884cd1"}

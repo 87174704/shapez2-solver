@@ -8,3 +8,7 @@
 /package.json -text
 /release.json -text
 /docs/physics-v2-release-gate-20261029/** -text
+
+# Preserve the exact representations used by the release and frozen authority.
+/README.md -text
+/docs/benchmark/USER_RULES.md -text

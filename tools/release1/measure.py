@@ -3,7 +3,7 @@ from pathlib import Path
 REPO=Path(__file__).resolve().parents[2]
 OUT=REPO/'.release1'/'performance'
 OUT.mkdir(parents=True,exist_ok=False)
-spec=importlib.util.spec_from_file_location('original_o1_limiter',REPO/'docs/strict-orientation-constructive-20261030/limiter.py')
+spec=importlib.util.spec_from_file_location('original_o1_limiter',REPO/'tools/release1/limiter.py')
 limiter=importlib.util.module_from_spec(spec);spec.loader.exec_module(limiter)
 limiter.ROOT=OUT
 # Limiter is the original 768 MiB Windows Job Object / 2-second process monitor.
