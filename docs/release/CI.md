@@ -16,9 +16,10 @@ locked dependencies, syntax and local documentation links, reconstructs the v1
 byte tree only as an input for current Physics comparison, runs the real corpus
 acceptance (`scripts/bench/validate-corpus.mjs --semantics=deferred`) and the
 current regression suite, independently validates all 331 frozen witnesses and
-159 solved paths, runs the 159-case production Solver check, and verifies both
-static profiles. The two immutable control inputs are copied from committed test
-fixtures. The v1 comparison tree shares only this clone's freshly installed
+the 159 solved paths with one current Solver call per case, including exact frozen
+paths, replay, constructive-hybrid routing, zero resource reuse and 53-target
+coverage, and verifies both static profiles. The two immutable control inputs are
+copied from committed test fixtures. The v1 comparison tree shares only this clone's freshly installed
 dependencies; it never uses caches or dependencies from the original workspace.
 
 The [historical entry](../../scripts/ci/verify-history.mjs) certifies the fixed

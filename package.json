@@ -7,7 +7,6 @@
     "test": "node --test",
     "test:browser-worker": "node tests/browser/workerLifecycle.browser.mjs",
     "measure:browser-performance": "node tests/browser/productPerformance.browser.mjs",
-    "verify:production": "node tests/tools/verifyBrowserSafeProduction.mjs",
     "bench": "node --expose-gc tests/perf/shapeSolver.bench.mjs --quick",
     "bench:full": "node --expose-gc tests/perf/shapeSolver.bench.mjs --full",
     "bench:stress": "node --expose-gc tests/perf/shapeSolver.bench.mjs --stress",

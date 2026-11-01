@@ -23,9 +23,8 @@ if(process.env.F1_EXCLUSIVE_WINDOW!=='1') {
   const historicalOk=await run('historical-v1',['tests/tools/runHistoricalV1.mjs',historical]);
   if(historicalOk)await run('frozen-evidence-v1',['scripts/ci/verify-frozen.mjs',historical]);
   await run('regressions-v2',['--test','--test-reporter=tap']);
-  await run('current-solver-159',['tests/tools/verifyBrowserSafeProduction.mjs']);
   for(const file of ['input-lateral.json','input-propagation-controls.json'])await fs.copyFile(path.join(ROOT,'tests/fixtures/physics-v2',file),path.join(out,file));
   if(historicalOk)await run('physics-v2-witnesses',['tests/tools/validatePhysicsV2.mjs',out,historical]);
   result.identity=await verifyRelease();
-  result.status=result.phases.length===5&&result.phases.every(p=>p.status==='VERIFIED')&&result.identity.valid?'VERIFIED':'BLOCKED';await writeJson('.f1/evidence/correctness-validation.json',result);console.log(result.status);if(result.status!=='VERIFIED')process.exitCode=1;
+  result.status=result.phases.length===4&&result.phases.every(p=>p.status==='VERIFIED')&&result.identity.valid?'VERIFIED':'BLOCKED';await writeJson('.f1/evidence/correctness-validation.json',result);console.log(result.status);if(result.status!=='VERIFIED')process.exitCode=1;
 }

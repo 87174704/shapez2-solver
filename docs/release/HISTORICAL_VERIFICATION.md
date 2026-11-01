@@ -50,8 +50,10 @@ new identity manifest or project-local historical files are created.
 
 This is the independent historical entry, not part of the daily maintenance
 gate. The [current entry](../../scripts/ci/verify-current.mjs) verifies current
-source, corpus acceptance, current Physics behaviour, the 159-case production
-Solver check and both static profiles; it uses the reconstructed v1 tree only as
+source, corpus acceptance, current Physics behaviour, the merged 159-case
+acceptance (one current Solver call per case, including exact frozen paths,
+replay, constructive-hybrid routing, zero resource reuse and 53-target coverage)
+and both static profiles; it uses the reconstructed v1 tree only as
 a comparison input and does not run the v1 suite or frozen evidence.
 [verify-history.yml](../../.github/workflows/verify-history.yml) runs this
 historical entry on manual dispatch and whenever a frozen identity input,

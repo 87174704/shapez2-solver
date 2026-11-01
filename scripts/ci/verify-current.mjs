@@ -71,7 +71,6 @@ try {
   for (const f of ['input-lateral.json', 'input-propagation-controls.json'])
     await fs.copyFile(path.join(ROOT, 'tests/fixtures/physics-v2', f), path.join(output, f));
   await phase('acceptance-current', () => node(['tests/tools/validateCurrentPhysics.mjs', output, historical]));
-  await phase('current-solver-159', () => node(['tests/tools/verifyBrowserSafeProduction.mjs']));
   await phase('static-profiles-current', () => node(['tools/static-build/verify-current.mjs', `--commit=${commit}`]));
   assert.deepEqual(await verifyCurrentSource({ commit }), summary.identity, 'Source changed during verification');
   await verifyInstalledDependencies(ROOT, summary.dependencies);

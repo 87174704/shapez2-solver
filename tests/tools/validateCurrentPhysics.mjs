@@ -112,25 +112,39 @@ const frozen = await json(path.join(ROOT, 'benchmarks/experiments/interior-cryst
 const operations = ['Rotator CW', 'Rotator CCW', 'Rotator 180', 'Half Destroyer', 'Cutter', 'Swapper', 'Stacker', 'Painter', 'Pin Pusher', 'Crystal Generator'];
 const directory = path.join(ROOT, 'benchmarks/solver-baselines/hard-53x3-v1/records');
 const cases = []; let witnessSteps = 0, frozenSteps = 0, actualSteps = 0;
+const targets = new Set(); let constructiveRoutes = 0, resourceReuse = 0;
 for (const name of (await fs.readdir(directory)).filter(n => n.endsWith('.json')).sort()) {
     const record = await json(path.join(directory, name));
     const source = await json(path.join(ROOT, record.sourceArtifact));
     const instance = (Array.isArray(source) ? source : source.instances).find(i => i.id === record.instanceId);
+    assert.ok(instance, name + ' missing source instance');
     assert.equal(instance.instanceSha256, record.sourceInstanceSha256);
     const caseId = record.targetId + ':' + record.familySlot;
+    targets.add(record.targetId);
     const p = { targetShapeCodes: [instance.target], startingShapeCodes: instance.availableInputs.flatMap(r => Array(r.count).fill(r.shape)),
         enabledOperations: operations, maxLayers: 4, maxStatesPerLevel: 3000, preventWaste: false, orientationSensitive: false, allowSplitting: false, cleanPainting: true };
     const witness = replayWitness(instance, catalog); assert.equal(witness.valid, true, caseId);
     pathCheck('witness', caseId, witness.trace.steps); witnessSteps += witness.trace.steps.length;
-    const historical = frozen.records.find(r => r.targetId + ':' + r.familySlot === caseId).result;
+    const frozenRecord = frozen.records.find(r => r.targetId + ':' + r.familySlot === caseId);
+    assert.ok(frozenRecord, caseId + ' missing frozen E-014 repeat');
+    const historical = frozenRecord.result;
+    assert.ok(historical, caseId + ' missing frozen E-014 result');
     pathCheck('frozen', caseId, historical.solutionPath); frozenSteps += historical.solutionPath.length;
     const frozenReplay = replaySolution(p, historical.solutionPath, historical); assert.equal(frozenReplay.valid, true, frozenReplay.error);
     const args = [p.targetShapeCodes, p.startingShapeCodes, p.enabledOperations, 4, 3000, false, false, false, true];
     const oldResult = await oldSolver(...args);
     const start = performance.now(), result = await shapeSolver(...args), elapsedMs = performance.now() - start;
     assert.ok(result.solutionPath, caseId + ' unsolved');
+    assert.equal(result.solverRoute, 'constructive-hybrid', caseId + ' constructive route changed');
     assert.deepEqual(oldResult.solutionPath, historical.solutionPath, 'reproduced v1 path');
     assert.deepEqual(result.solutionPath, historical.solutionPath, 'v2 path changed');
+    assert.equal(JSON.stringify(result.solutionPath), JSON.stringify(historical.solutionPath), 'exact frozen E-014 path ' + caseId);
+    const consumed = new Set();
+    for (const step of result.solutionPath) for (const token of step.inputs) {
+        if (consumed.has(token.id)) resourceReuse++;
+        consumed.add(token.id);
+    }
+    constructiveRoutes++;
     const replay = replaySolution(p, result.solutionPath, result); assert.equal(replay.valid, true, replay.error);
     pathCheck('actual', caseId, result.solutionPath); actualSteps += result.solutionPath.length;
     cases.push({ caseId, input: p, result, replayValid: true, frozenReplayValid: true, v1Reproduced: true, pathEqual: true, elapsedMs });
@@ -138,9 +152,14 @@ for (const name of (await fs.readdir(directory)).filter(n => n.endsWith('.json')
 }
 delete globalThis.__physicsProbe;
 assert.equal(cases.length, 159); assert.equal(operationDifferences.length, 0);
+assert.equal(constructiveRoutes, 159, 'constructive-hybrid routes');
+assert.equal(resourceReuse, 0, 'resource reuse');
+assert.equal(targets.size, 53, 'distinct targets');
 await save('acceptance.json', { semantics: prod.SHAPE_OPERATIONS_SEMANTICS, identity, historicalIdentity,
     summary: { cases: cases.length, solved: cases.length, resourceReplayValid: cases.length, frozenReplayValid: cases.length,
-        exactFrozenPaths: cases.length, v1ReproducedPaths: cases.length, witnessSteps, frozenSteps, actualSteps,
+        exactFrozenPaths: cases.length, exactE014Paths: cases.length, v1ReproducedPaths: cases.length, witnessSteps, frozenSteps, actualSteps,
         allFrozenWitnessReferences: witnessReferences, allFrozenWitnessInstances: allWitnesses.length, allFrozenWitnessSteps: allWitnessSteps,
-        pathDifferences: 0, operationDifferences: operationDifferences.length, ...summary }, operationDifferences, cases });
+        pathDifferences: 0, operationDifferences: operationDifferences.length,
+        members: cases.length, replayValid: cases.length, constructiveRoutes, resourceReuse, distinctTargets: targets.size, ...summary },
+    operationDifferences, cases });
 console.log(JSON.stringify({ cases: cases.length, witnessSteps, frozenSteps, actualSteps, witnessReferences, uniqueWitnessInstances: allWitnesses.length, ...summary }));

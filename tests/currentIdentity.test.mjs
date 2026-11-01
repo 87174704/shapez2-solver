@@ -38,7 +38,7 @@ test('maintenance source permits committed validator evolution and rejects incon
     });
     let evolved;
     await t.test('a reviewed validator comment is a new maintenance identity', async () => {
-      await fs.appendFile(path.join(root, 'tests/tools/verifyBrowserSafeProduction.mjs'), '\n// maintenance evolution experiment\n');
+      await fs.appendFile(path.join(root, 'tests/tools/validateCurrentPhysics.mjs'), '\n// maintenance evolution experiment\n');
       evolved = saveCommit();
       const identity = await verifyCurrentSource({ root, commit: evolved });
       assert.equal(identity.sourceCommit, evolved);
