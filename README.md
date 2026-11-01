@@ -124,6 +124,10 @@ No release path is functional for this branch, and none may be assumed:
   [attribution](docs/legal/ATTRIBUTION.md),
   [third-party boundaries](docs/legal/THIRD_PARTY.md)
 - [i18n terminology](docs/i18n/TERMINOLOGY.md)
+- [Project summary](project_summary.md) — architecture and research-context guide
+  for the maintained branch: module relationships, solver algorithms, validation
+  boundaries and research cautions. This README covers installation, commands and
+  maintenance status.
 
 ## Historical material (read-only)
 
@@ -140,5 +144,3 @@ No release path is functional for this branch, and none may be assumed:
 - `docs/release1/` and
   [docs/strict-orientation-constructive-20261030/](docs/strict-orientation-constructive-20261030/REPORT.md)
   — Release 1 records and a closed experiment.
-- [project_summary.md](project_summary.md) is outdated (2026-09) and is retained
-  unchanged pending a separate rewrite; do not use it as a current guide.

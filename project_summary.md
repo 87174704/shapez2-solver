@@ -617,8 +617,26 @@ expectations.
 environment expansion, four `*-planner.mjs` copies, the validators and the shared
 Benchmark core. The four copies are byte-frozen historical snapshots. They are
 still imported by the frozen v1 generators, so deleting or merging them would break
-both the 461-file identity and historical regeneration. The current tests use the
-maintained planners in [constructive/](constructive/), not the frozen copies.
+both the 461-file identity and historical regeneration. The dependency roles are
+distinct:
+
+- **Production runtime:** for planner code, [shapeSolver.js](shapeSolver.js)
+  imports only the maintained implementations in [constructive/](constructive/).
+  The production import-graph test asserts that `benchmarks/` is absent, and the
+  application closure rejects any non-application import.
+- **Direct planner tests:** the tests that exercise planner behaviour directly
+  import the maintained implementations:
+  [tests/benchmark.test.mjs](tests/benchmark.test.mjs) and
+  [tests/mixedPinCrystalGoalDecomposedSolver.test.mjs](tests/mixedPinCrystalGoalDecomposedSolver.test.mjs).
+- **Research regression tests:** [tests/deepDiversity.test.mjs](tests/deepDiversity.test.mjs)
+  and [tests/finalDepthReselection.test.mjs](tests/finalDepthReselection.test.mjs)
+  still execute frozen research generators. Those generators reach
+  [macro-plan-enumerator.mjs](benchmarks/tools/macro-plan-enumerator.mjs), which
+  imports and uses the frozen Pin, Crystal and Mixed planners. This is an indirect
+  historical-generation and reproduction dependency, not a production runtime
+  dependency. `tests/benchmark.test.mjs` also uses frozen pilot/audit generators and
+  the frozen generation framework as test fixtures, but that path does not import
+  the four frozen planner copies.
 
 This separation is intentional. If the frozen generator were changed to import the
 current production planner, “historical regeneration” would be decided by today's
