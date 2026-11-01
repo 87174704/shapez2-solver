@@ -28,15 +28,15 @@ tracked source. It writes logs and generated acceptance results to ignored
 exact original newline representations only after their existing SHA-256 pins
 match. Git blobs, frozen rules, records, witnesses and expected hashes are not
 changed. The immutable control inputs are under tests/fixtures/physics-v2.
+Its phases, prerequisites and current test counts are documented once in
+[CI.md](../release/CI.md); this file does not repeat them.
 
-Current regressions register 271 tests: 269 PASS, zero FAIL, and 2 explicit
-historical skips (the two composite-release cases) excluded from the current
-score. The six v1 regeneration cases remain in the fixed v1 snapshot and are
-executed by the historical entry. The original committed v1 tree is reconstructed
-only as a comparison input for current Physics acceptance: all 593 original files
-must match their exact inventory bytes. Its 198 original tests, the frozen
-evidence check and the fixed Physics v2 / Release 1 regressions belong to the
-independent historical entry:
+The six v1 regeneration cases remain in the fixed v1 snapshot and are executed by
+the historical entry, never replayed from current HEAD. The original committed v1
+tree is reconstructed only as a comparison input for current Physics acceptance:
+all 593 original files must match their exact inventory bytes. Its 198 original
+tests, the frozen evidence check and the fixed Physics v2 / Release 1 regressions
+belong to the independent historical entry:
 
 ~~~text
 node scripts/ci/verify-history.mjs
@@ -55,7 +55,10 @@ independent bounded model and resource replay. This workload is used in
 development; it does not establish completeness, optimality or untouched holdout
 performance. See [Physics v2 scope](../release/PHYSICS_V2.md).
 
-After the full suite, optional bounded observations can be run explicitly:
+After the full suite, two optional Physics v2 RC observation tools exist. They
+are historical-only entries: they require the Release 1 identity and therefore
+refuse the maintained tree, and their recorded RC observations are not part of
+current acceptance.
 
 ~~~text
 node tests/tools/capturePhysicsV2.mjs .ci-results
@@ -70,6 +73,7 @@ UNKNOWN. Local Windows success does not certify hosted Ubuntu or browser runs.
 The original eight commits and hard-capable-v1 tag remain unchanged. Its old
 56-file RC digest is historical, not this v2 publication identity. The external
 Phase D seal binds the final full Git commit/tree, every candidate file and
-fresh-clone results. Source publication follows the
-[new plan](../release/PUBLISH_PLAN.md); no remote action or deployment is
-authorized by these reproduction commands.
+fresh-clone results. [PUBLISH_PLAN.md](../release/PUBLISH_PLAN.md) was never
+executed and depends on repository-external Phase D materials; no remote action
+or deployment is authorized or implied by these reproduction commands. Current
+publication limits are listed in the [README](../../README.md).

@@ -7,14 +7,33 @@ import assert from 'node:assert/strict';
 import os from 'node:os';
 import { ROOT, json, sha256, verifyVersion } from '../../versions/identity.mjs';
 
-const OUT = path.resolve(process.argv[2] ?? path.join(ROOT, 'docs/physics-v2-release-gate-20261029/evidence'));
-const historicalRoot = path.resolve(process.argv[3] ?? path.join(ROOT, '.codex-temp-physics-v2-v1'));
-const base = await json(path.join(OUT, 'acceptance.json'));
-if (process.argv[4] === '--worker') {
+// Historical Physics v2 RC measurement only. It re-measures the Release 1 / v1 pair and is
+// not part of the current maintenance gate (scripts/ci/verify-current.mjs). The evidence
+// directory is explicit: the tool never defaults to a repository path, and it never writes
+// anything before its identity checks pass.
+const USAGE = 'Usage: node tests/tools/measurePhysicsV2.mjs <evidence-dir> [historical-v1-root]';
+if (process.argv[2] === '--help') { console.log(USAGE); process.exit(0); }
+if (!process.argv[2]) {
+    console.error(`${USAGE}\nAn explicit evidence directory containing acceptance.json is required.`);
+    process.exit(1);
+}
+const OUT = path.resolve(process.argv[2]);
+const historicalRoot = path.resolve(process.argv[3] ?? path.join(os.tmpdir(), 'shapez2-physics-v2-v1'));
+const worker = process.argv[4] === '--worker';
+function refuse(label, result) {
+    const errors = result.errors ?? [];
+    console.error(`measure:physics-v2: refusing to run; this is not the historical ${label} identity.`);
+    console.error(errors.slice(0, 10).join('\n'));
+    if (errors.length > 10) console.error(`... ${errors.length - 10} more error(s)`);
+    console.error('Nothing was written. The current maintenance gate is scripts/ci/verify-current.mjs.');
+    process.exit(1);
+}
+if (worker) {
     const version = process.argv[5], destination = process.argv[6];
     const root = version === 'v1' ? historicalRoot : ROOT;
     const identity = version === 'v1' ? await verifyVersion({ version: 'shape-operations-v1', root }) : await verifyRelease({ root });
-    assert.equal(identity.valid, true, identity.errors.join('\n'));
+    if (!identity.valid) refuse(version === 'v1' ? 'v1' : 'Release 1', identity);
+    const base = await json(path.join(OUT, 'acceptance.json'));
     assert.equal(typeof globalThis.gc, 'function');
     globalThis.self = { postMessage() {} };
     const importStart = performance.now();
@@ -39,6 +58,11 @@ if (process.argv[4] === '--worker') {
     await fs.writeFile(destination, JSON.stringify({ version, identity, node: process.version, platform: process.platform,
         arch: process.arch, moduleImportMs, cold, rounds, resourceUsage: process.resourceUsage() }, null, 2) + '\n');
 } else {
+    const identity = await verifyRelease();
+    if (!identity.valid) refuse('Release 1', identity);
+    const historicalIdentity = await verifyVersion({ version: 'shape-operations-v1', root: historicalRoot });
+    if (!historicalIdentity.valid) refuse('v1', historicalIdentity);
+    const base = await json(path.join(OUT, 'acceptance.json'));
     const runs = [];
     for (let pair = 0; pair < 3; pair++) {
         const order = pair % 2 ? ['v2', 'v1'] : ['v1', 'v2'];

@@ -1,5 +1,11 @@
 # Subsequent release architecture
 
+> **Future plan, not current implementation.** This records an agreed direction
+> for a later release architecture; no part of it is deployed. The current
+> maintained build and gate are `tools/static-build/build-current.mjs` and
+> `scripts/ci/verify-current.mjs` (see [CI.md](CI.md) and
+> [README.md](../../README.md)).
+
 VERIFIED user decisions — GitHub will be the public source, Issue/PR entry point, and future GitHub Pages international host. Gitea and the current Alibaba Cloud ECS remain the domestic site and controlled release copy. The existing production deployment and runner stay in place.
 
 INFERRED implementation plan — Both sites must use the same explicitly approved source commit and release version. Keep `hard-capable-v1` unchanged. Future releases get new tags and a separate publication manifest containing source commit/tree, common runtime file hashes, package digest and site-specific deployment evidence. Use the Phase B 60-file application allowlist as the current runtime base, with mandatory legal notices and publication metadata added by a separately reviewed packaging step. Do not deploy the whole source repository, Benchmark, tests, `.git`, `.gitea` or dependencies directory as site content. The old 56-file RC hash is not the new publication identity.

@@ -9,10 +9,14 @@ import os from 'node:os';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import { canonical } from '../../versions/identity.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '../..');
 const MANIFEST_PATH = path.join(ROOT, 'benchmarks', 'manifest.json');
+const RELEASE_MANIFEST = 'versions/shapez2-solver-release1.json';
+const RELEASE_PIN = 'versions/release1.pin.json';
+const FROZEN_RUNTIME = 'shapeSolver_web.js';
 const ALL_OPERATIONS = Object.freeze([
     'Rotator CW', 'Rotator CCW', 'Rotator 180', 'Half Destroyer', 'Cutter',
     'Swapper', 'Stacker', 'Painter', 'Pin Pusher', 'Crystal Generator',
@@ -21,9 +25,12 @@ const REQUIRED_CASE_FIELDS = Object.freeze(['id', 'suite', 'source', 'line', 'ta
 const SUITES = new Set(['hard', 'insane']);
 const PARTITIONS = new Set(['development', 'validation', 'holdout', 'stress']);
 const MANIFEST_SOURCES = new Set(['hard_main.txt', 'hard_side.txt', 'insane_main.txt', 'insane_side.txt']);
+// shapeSolver.js is the maintained Solver this workload executes. shapeSolver_web.js is a
+// frozen Release 1 runtime artifact kept only for historical byte comparison: it is never
+// imported here and is not required to equal the current Solver.
 const IDENTITY_FILES = Object.freeze({
     shapeSolver: 'shapeSolver.js',
-    shapeSolverWeb: 'shapeSolver_web.js',
+    shapeSolverWeb: FROZEN_RUNTIME,
     shapeOperations: 'shapeOperations.js',
     oracleHelper: 'tests/helpers/shapeSolverOracle.mjs',
     harness: 'tests/perf/officialWorkload.bench.mjs',
@@ -44,7 +51,11 @@ function usage() {
   --help                                Show this help
 
 The manifest is benchmarks/manifest.json. No result is treated as an
-observation, never as a wall-clock pass/fail result.`;
+observation, never as a wall-clock pass/fail result.
+
+Every case executes shapeSolver.js, the maintained Solver. shapeSolver_web.js is
+a frozen Release 1 artifact verified against its runtime pin; it is not imported
+and is not required to be byte-identical to the current Solver.`;
 }
 
 function positiveInteger(value, flag) {
@@ -97,20 +108,49 @@ function sha256(value) {
     return createHash('sha256').update(value).digest('hex');
 }
 
+// The Release 1 runtime identity is the only authority for the frozen historical artifact.
+// Reading its pin does not certify the current tree as Release 1; it only protects the
+// frozen bytes from being silently rewritten to look like the current Solver.
+async function frozenRuntimePin() {
+    const manifest = JSON.parse(await readFile(path.join(ROOT, RELEASE_MANIFEST), 'utf8'));
+    const pin = JSON.parse(await readFile(path.join(ROOT, RELEASE_PIN), 'utf8'));
+    if (sha256(canonical(manifest)) !== pin.canonicalSha256) {
+        throw new Error(`${RELEASE_MANIFEST} differs from its trusted pin ${RELEASE_PIN}.`);
+    }
+    const entry = manifest.runtime?.files?.find(file => file.path === FROZEN_RUNTIME);
+    if (!entry) throw new Error(`${FROZEN_RUNTIME} is not bound by the Release 1 runtime identity.`);
+    return { manifest: RELEASE_MANIFEST, section: 'runtime', sha256: entry.sha256 };
+}
+
 async function loadSourceIdentity() {
     const entries = await Promise.all(Object.entries(IDENTITY_FILES).map(async ([name, relativePath]) => {
         const bytes = await readFile(path.join(ROOT, relativePath));
         return [name, { path: relativePath, sha256: sha256(bytes), bytes: bytes.byteLength, raw: bytes }];
     }));
     const sourceIdentity = Object.fromEntries(entries);
-    const byteIdentical = sourceIdentity.shapeSolver.raw.equals(sourceIdentity.shapeSolverWeb.raw);
-    if (!byteIdentical) throw new Error('shapeSolver.js and shapeSolver_web.js are not byte-identical.');
+    const frozen = await frozenRuntimePin();
+    if (sourceIdentity.shapeSolverWeb.sha256 !== frozen.sha256) {
+        throw new Error(`${FROZEN_RUNTIME} differs from its Release 1 runtime pin ${frozen.sha256}; `
+            + 'the frozen historical artifact must keep its original bytes.');
+    }
     for (const source of MANIFEST_SOURCES) {
         const bytes = await readFile(path.join(ROOT, 'benchmarks', source));
         sourceIdentity[source] = { path: `benchmarks/${source}`, sha256: sha256(bytes), bytes: bytes.byteLength };
     }
     for (const source of Object.values(sourceIdentity)) delete source.raw;
-    return { ...sourceIdentity, byteIdentical };
+    // Current measurements and historical measurements must stay distinguishable: this
+    // record names the Solver that actually ran and the frozen artifact that did not.
+    const solverBinding = {
+        kind: 'current-maintenance-solver/frozen-release1-runtime',
+        executedSolver: { path: IDENTITY_FILES.shapeSolver, sha256: sourceIdentity.shapeSolver.sha256 },
+        frozenHistoricalRuntime: {
+            path: FROZEN_RUNTIME, sha256: sourceIdentity.shapeSolverWeb.sha256,
+            pinnedSha256: frozen.sha256, pin: { manifest: frozen.manifest, section: frozen.section },
+            executed: false,
+        },
+        byteIdentityRequired: false,
+    };
+    return { sourceIdentity, solverBinding };
 }
 
 function manifestCases(manifest) {
@@ -326,6 +366,7 @@ function growthByDepth(records) {
 function printHuman(report) {
     console.log(`Official shape-solver workload — ${report.cases.length} case(s), Node ${report.environment.node}`);
     console.log(`manifest ${report.manifest.path} sha256=${report.manifest.sha256}`);
+    console.log(`solver ${report.solverBinding.executedSolver.path} sha256=${report.solverBinding.executedSolver.sha256}; frozen runtime ${report.solverBinding.frozenHistoricalRuntime.path} sha256=${report.solverBinding.frozenHistoricalRuntime.sha256} (not executed)`);
     for (const record of report.cases) {
         const metrics = `depth=${record.depth ?? '-'} states=${record.statesExplored ?? '-'} candidates=${record.candidates ?? '-'} wallMs=${record.wallMs ?? '-'}`;
         console.log(`${record.id}: ${record.status}; ${metrics}; replay=${record.replay?.status ?? 'not-run'}`);
@@ -414,7 +455,7 @@ async function main() {
         console.log(usage());
         return;
     }
-    const sourceIdentity = await loadSourceIdentity();
+    const { sourceIdentity, solverBinding } = await loadSourceIdentity();
     const { cases, identity } = await loadManifest();
     const selected = selectCases(cases, options);
     const records = [];
@@ -436,7 +477,7 @@ async function main() {
             cpuModel: os.cpus()[0]?.model ?? 'unknown', logicalCpuCount: os.cpus().length,
             totalMemoryGiB: os.totalmem() / 1024 / 1024 / 1024,
         },
-        manifest: identity, sourceIdentity, configuration: fixedConfiguration, cases: records,
+        manifest: identity, sourceIdentity, solverBinding, configuration: fixedConfiguration, cases: records,
         aggregate: summarize(records), growthByDepth: growthByDepth(records),
     };
     const serializedReport = JSON.stringify(report, null, 2);

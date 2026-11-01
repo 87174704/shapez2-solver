@@ -1,5 +1,11 @@
 # Physics v2 RC: future C-Publish plan (not executed)
 
+> **Not executed.** This plan was never run. Its only acceptable source is the
+> repository-external Phase D `RC_IDENTITY.md`, `rc-manifest.json` and
+> `PUBLISH_DELTA.md`, none of which are in this repository, so it cannot be
+> independently verified or reproduced from here. Do not read it as a current
+> release path, a deployment record or evidence that a site was published.
+
 This plan supersedes the Phase C candidate SHA/tree and same-name branch push
 assumptions. Its only acceptable source is the complete final HEAD and tree
 in the external Phase D `RC_IDENTITY.md` and `rc-manifest.json`. Verify those

@@ -1,4 +1,12 @@
-# 当前验证入口
+# 历史验证方法（已收口）
+
+> **历史文档。** 本文件记录的严格方向构造实验验收方法已收口，不再是当前验证入口。
+> 其中的 `tools/release1/prepare-checkout.mjs`、`tools/static-build/acceptance.mjs`、
+> `build.mjs`、`verify.mjs` 属于 Release 1 历史管线，在当前维护版上会因 Release 1
+> 身份断言失败而拒绝执行，这是预期行为而不是待修缺陷。当前测试、完整门禁与构建命令见
+> [README.md](../../README.md) 与 [docs/release/CI.md](../release/CI.md)；独立历史认证见
+> [scripts/ci/verify-history.mjs](../../scripts/ci/verify-history.mjs)。以下原文保持原样，
+> 仅作为方法记录。
 
 在仓库根目录安装版本化依赖并恢复被冻结的精确换行表示：
 

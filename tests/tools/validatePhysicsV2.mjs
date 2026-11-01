@@ -1,5 +1,6 @@
 import { verifyRelease } from '../../versions/release1.mjs';
 import fs from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import assert from 'node:assert/strict';
@@ -10,13 +11,31 @@ import * as prod from '../../shapeOperations.js';
 import { replaySolution } from '../helpers/shapeSolverOracle.mjs';
 import { replayWitness } from '../../benchmarks/tools/benchmark-core.mjs';
 
-const OUT = path.resolve(process.argv[2] ?? path.join(ROOT, 'docs/physics-v2-release-gate-20261029/evidence'));
-const historicalRoot = path.resolve(process.argv[3] ?? path.join(ROOT, '.codex-temp-physics-v2-v1'));
-await fs.mkdir(OUT, { recursive: true });
+// Historical Physics v2 RC acceptance only. It certifies the Release 1 / v1 pair; it is
+// not part of the current maintenance gate (scripts/ci/verify-current.mjs). A tree that is
+// not that historical implementation is refused before any evidence directory is created.
+const USAGE = 'Usage: node tests/tools/validatePhysicsV2.mjs [evidence-dir] [historical-v1-root]';
+if (process.argv[2] === '--help') { console.log(USAGE); process.exit(0); }
+let OUT = process.argv[2] ? path.resolve(process.argv[2]) : null;
+const historicalRoot = path.resolve(process.argv[3] ?? path.join(os.tmpdir(), 'shapez2-physics-v2-v1'));
+function refuse(label, result) {
+    const errors = result.errors ?? [];
+    console.error(`verify:physics-v2: refusing to run; this is not the historical ${label} identity.`);
+    console.error(errors.slice(0, 10).join('\n'));
+    if (errors.length > 10) console.error(`... ${errors.length - 10} more error(s)`);
+    console.error('No evidence directory was created. The current maintenance gate is scripts/ci/verify-current.mjs.');
+    process.exit(1);
+}
 const identity = await verifyRelease();
-assert.equal(identity.valid, true, identity.errors.join('\n'));
+if (!identity.valid) refuse('Release 1', identity);
 const historicalIdentity = await verifyVersion({ version: 'shape-operations-v1', root: historicalRoot });
-assert.equal(historicalIdentity.valid, true, historicalIdentity.errors.join('\n'));
+if (!historicalIdentity.valid) refuse('v1', historicalIdentity);
+if (OUT === null) {
+    OUT = await fs.mkdtemp(path.join(os.tmpdir(), 'shapez2-physics-v2-'));
+    for (const name of ['input-lateral.json', 'input-propagation-controls.json'])
+        await fs.copyFile(path.join(ROOT, 'tests/fixtures/physics-v2', name), path.join(OUT, name));
+    console.log(`evidence: ${OUT} (temporary)`);
+} else await fs.mkdir(OUT, { recursive: true });
 const old = await import(pathToFileURL(path.join(historicalRoot, 'shapeOperations.js')));
 const { module: observed } = await probe(ROOT.replaceAll('\\', '/'));
 const save = (name, data) => fs.writeFile(path.join(OUT, name), JSON.stringify(data, null, 2) + '\n');

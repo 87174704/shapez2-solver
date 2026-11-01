@@ -1,5 +1,10 @@
 # Phase B2：验收重复求解与源码身份阻点
 
+> **Superseded（历史记录）。** B2 去重已由 `60981ab`
+> （collapse duplicate 159-case Solver acceptance）与 P1/P2 的当前 Corpus 验收
+> 实现；当前门禁对 159 个案例各执行一次当前 Solver 调用，见 [CI.md](CI.md)。
+> 本文保留 `855d96e` 时点的阻塞状态记录，以下陈述不再是当前要求。
+
 2026-11-01，工作区 `E:\solver`，基线提交
 `855d96efbad20dd9d52f9abc304ad6f4f4fe5458`，Node `v24.21.0`。
 

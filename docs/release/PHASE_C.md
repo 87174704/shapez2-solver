@@ -1,5 +1,10 @@
 # Phase C history and current RC publication boundary
 
+> **Historical decision record.** Phase C's publication path is superseded by
+> [PUBLISH_PLAN.md](PUBLISH_PLAN.md), which is itself an unexecuted plan that
+> depends on repository-external Phase D materials. Nothing here describes a
+> deployed state or a currently authorized release path.
+
 Phase C prepared a separate maintenance repository at commit
 `796fe5ef8228dbcaad7eec0de369770e9cd38694`, tree
 `1844572b6548a155588feab5486ecac4bfe3ba0e`. Its six preparation commits and its

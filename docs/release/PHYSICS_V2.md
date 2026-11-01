@@ -1,5 +1,13 @@
 # Physics v2 Release Candidate
 
+> **RC snapshot (2026-10-29).** This document records the Physics v2 release
+> candidate scope. Its test counts (242 registered, 229 PASS, 13
+> HISTORICAL_V1_ONLY) are a dated snapshot, not a current requirement or a
+> current gate description. Current gate phases and counts are in
+> [CI.md](CI.md); current v2 semantics are in
+> [SEMANTICS_V2.md](../../versions/SEMANTICS_V2.md). The physics description
+> below is unchanged.
+
 This local candidate uses `shape-operations-v2-support-closure`. It fixes two
 audited defects in `shapeOperations.js`: path-dependent DFS false caching could
 discard a supported cell; deleting crystals before collecting their fused graph
