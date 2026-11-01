@@ -15,6 +15,12 @@ validate against this branch by design. Current physics semantics:
 `shape-operations-v2-support-closure`
 ([SEMANTICS_V2.md](versions/SEMANTICS_V2.md)).
 
+Long-lived ref roles are defined in
+[VERSIONING.md](docs/release/VERSIONING.md): `codex/maintained` is the only
+development branch, GitHub `main` preserves the independent upstream lineage,
+Gitea `main` is a deployment trigger, and two frozen refs keep v1 at `0647b85`.
+Do not fast-forward the upstream or deployment branch to "sync" maintenance code.
+
 ## Install (Node.js 24.21.0)
 
 ~~~powershell
@@ -116,6 +122,7 @@ No release path is functional for this branch, and none may be assumed:
 ## Documentation
 
 - [Current gate and counts](docs/release/CI.md)
+- [Versioning and branch roles](docs/release/VERSIONING.md)
 - [Reproduction and historical limitations](docs/benchmark/REPRODUCIBILITY.md)
 - [Independent historical certification](docs/release/HISTORICAL_VERIFICATION.md)
 - [Benchmark provenance](docs/benchmark/PROVENANCE.md)

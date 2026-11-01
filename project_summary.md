@@ -812,6 +812,21 @@ the current Worker.
 - Release/deployment: a separate decision. Nothing in this repository currently
   authorises a deployment of this branch (see section 8).
 
+Reference roles for those changes (authoritative rules:
+[docs/release/VERSIONING.md](docs/release/VERSIONING.md)):
+
+- **Development**: `codex/maintained`, the GitHub default branch and the only
+  branch that receives new work.
+- **Frozen historical preservation**: `codex/pre-migration-main` and
+  `codex/solver-optimization`, both at `0647b85` (v1). They share a commit but
+  serve different purposes — pre-migration `main` state and optimisation-batch
+  provenance — and neither is a development branch.
+- **Independent upstream lineage**: GitHub `main` at `ba62646`. Read-only.
+- **Deployment**: Gitea `main` at `0647b85`, which triggers the Gitea deploy
+  workflow. Do not fast-forward it to sync maintenance code.
+- **Historical certification tag**: `hard-capable-v1` (`c27b895` → `f62683a`).
+  It is not the current product version.
+
 ## 7. Development and research workflow
 
 ### 7.1 Read before changing an algorithm
@@ -990,6 +1005,7 @@ These are long-lived constraints, not a task list:
 | Normative Benchmark rules | [USER_RULES.md](docs/benchmark/USER_RULES.md) → [BENCHMARK_RULES.md](docs/benchmark/BENCHMARK_RULES.md) → [BENCHMARK_METHODOLOGY.md](docs/benchmark/BENCHMARK_METHODOLOGY.md) |
 | Current physics scope | [versions/SEMANTICS_V2.md](versions/SEMANTICS_V2.md) |
 | Historical certification design | [docs/release/HISTORICAL_VERIFICATION.md](docs/release/HISTORICAL_VERIFICATION.md) |
+| Branch roles, tag namespaces, release conditions | [docs/release/VERSIONING.md](docs/release/VERSIONING.md) |
 | Physics v2 RC scope (dated snapshot) | [docs/release/PHYSICS_V2.md](docs/release/PHYSICS_V2.md) |
 | Future release architecture (not current) | [docs/release/ARCHITECTURE.md](docs/release/ARCHITECTURE.md) |
 | Closed optimisation research record | [docs/optimization/README.md](docs/optimization/README.md) |

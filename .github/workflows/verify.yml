@@ -1,9 +1,9 @@
 name: Verify maintained solver
 on:
   push:
-    branches: [codex/maintained, codex/crystal-physics-fix-20261029]
+    branches: [codex/maintained]
   pull_request:
-    branches: [codex/maintained, codex/crystal-physics-fix-20261029]
+    branches: [codex/maintained]
   workflow_dispatch:
 permissions:
   contents: read

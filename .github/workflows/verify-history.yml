@@ -2,7 +2,7 @@ name: Verify fixed historical releases
 on:
   workflow_dispatch:
   push:
-    branches: [codex/maintained, codex/crystal-physics-fix-20261029]
+    branches: [codex/maintained]
     # Historical certification is required only when a frozen identity input,
     # authenticator, policy or trust root changes. Ordinary current-only pushes
     # are covered by verify.yml and must not repeat this workload.
