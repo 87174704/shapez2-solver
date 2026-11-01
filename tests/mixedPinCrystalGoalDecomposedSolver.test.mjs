@@ -5,7 +5,7 @@ import {
     mixedPinCrystalGoalDecomposedSolve,
     mixedPinCrystalGoalDecomposedTestOnly,
 } from '../mixedPinCrystalGoalDecomposedSolver.js';
-import { planMixedPinCrystalSubassembly } from '../benchmarks/tools/mixed-pin-crystal-construction-planner.mjs';
+import { planMixedPinCrystalSubassembly } from '../constructive/mixed-pin-crystal-construction-planner.js';
 import { replaySolution } from './helpers/shapeSolverOracle.mjs';
 
 const CONFIG = Object.freeze({

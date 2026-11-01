@@ -1,4 +1,3 @@
-import { historicalV1Test } from './helpers/historicalV1Test.mjs';
 import { compatibleValidation } from './helpers/corpusCompatibility.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -7,16 +6,11 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { buildPilot, selectRefinementBundle } from '../benchmarks/tools/build-pilot.mjs';
 import { auditPilot } from '../benchmarks/tools/audit-pilot.mjs';
-import { buildCoveragePilot } from '../benchmarks/tools/build-coverage-pilot.mjs';
 import { buildExpansionPilot } from '../benchmarks/tools/build-expansion-pilot.mjs';
 import { buildHard53x1, previewDirectLayerComposition } from '../benchmarks/tools/build-hard-53x1.mjs';
-import {
-    buildHard53x3DiversityPilot, DIVERSITY_PILOT_TARGET_IDS,
-} from '../benchmarks/tools/build-hard-53x3-diversity-pilot.mjs';
-import { buildHard53x3Rollout } from '../benchmarks/tools/build-hard-53x3-rollout.mjs';
 import { auditHard53x3StagedComposition } from '../benchmarks/tools/audit-hard-53x3-staged-composition.mjs';
 import {
-    artifactContentHash, artifactInstancesHash, canonicalMultiset, classifyTargetRefinement, compileCatalog, deriveMetadata,
+    artifactInstancesHash, classifyTargetRefinement, compileCatalog, deriveMetadata,
     deriveStructuralFingerprint, instanceContentHash, replayWitness, sha256,
     validateExpansionMetadata, validateInputRules,
 } from '../benchmarks/tools/benchmark-core.mjs';
@@ -25,14 +19,17 @@ import { createBenchmarkSchemaValidator } from '../benchmarks/tools/schema-valid
 import {
     consolidateAvailableInputs, OrdinaryAtomAllocator, WitnessBuilder,
 } from '../benchmarks/tools/generation-framework.mjs';
-import { buildPinSubassembly, planPinSubassembly } from '../benchmarks/tools/pin-construction-planner.mjs';
+// Planner behavior is verified against the maintained production implementation.
+// The benchmark/tools copies are frozen Release 1 inputs with no maintenance role;
+// their historical behavior is re-certified from fixed Git objects by verify-history.
+import { buildPinSubassembly, planPinSubassembly } from '../constructive/pin-construction-planner.js';
 import {
     buildCrystalSubassembly, planCrystalSubassembly, validateSparseUpperMaskPlan,
     validateStagedRefinementMaskPlan,
-} from '../benchmarks/tools/crystal-construction-planner.mjs';
+} from '../constructive/crystal-construction-planner.js';
 import {
     planMixedPinCrystalSubassembly, validateMixedPinCrystalPlan,
-} from '../benchmarks/tools/mixed-pin-crystal-construction-planner.mjs';
+} from '../constructive/mixed-pin-crystal-construction-planner.js';
 import {
     Shape, ShapeOperationConfig, cut, genCrystal, halfCut, pushPin, stack,
 } from '../shapeOperations.js';
@@ -43,8 +40,6 @@ const PILOT_MANIFEST_REVISION = 'hard-pilot-audit-v2-manifest-r2';
 const COVERAGE_MANIFEST_REVISION = 'hard-coverage-pilot-v1-manifest-r2';
 const EXPANSION_MANIFEST_REVISION = 'hard-expansion-pilot-v1-manifest-r2';
 const HARD_53X1_MANIFEST_REVISION = 'hard-53x1-stage-v1-manifest-r2';
-const HARD_53X3_PILOT_MANIFEST_REVISION = 'hard-53x3-diversity-pilot-v1-manifest-r1';
-const HARD_53X3_ROLLOUT_MANIFEST_REVISION = 'hard-53x3-rollout-stage-v1-manifest-r1';
 
 function relabelWitness(witness, offset = 1000) {
     const result = clone(witness);
@@ -75,17 +70,6 @@ function reverseObjectKeyOrder(value) {
         .map(([key, child]) => [key, reverseObjectKeyOrder(child)]));
 }
 
-historicalV1Test('pilot generation is deterministic and the committed artifact independently validates', async () => {
-    const generated = await buildPilot({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/pilot/v1/instances.json', import.meta.url), 'utf8'));
-    assert.equal(generated.artifact.sha256, committed.sha256);
-    assert.equal(committed.acceptedCount, 25);
-    assert.deepEqual(committed.targetIds.map(id => committed.instances.filter(instance => instance.targetId === id).length), [5, 5, 5, 5, 5]);
-    const validation = await validateBenchmarkArtifact();
-    assert.equal(validation.valid, true, validation.errors.join('\n'));
-    assert.equal(validation.summary.mechanicallyReplayed, 25);
-});
-
 test('causal pilot audit preserves witnesses and retains distinct resource ancestry', async () => {
     const { artifact, familySummary } = await auditPilot({ write: false });
     assert.equal(artifact.acceptedCount, 25);
@@ -96,89 +80,6 @@ test('causal pilot audit preserves witnesses and retains distinct resource ances
         assert.deepEqual(instance.inputs, legacy.instances[index].inputs);
         assert.deepEqual(instance.witness, legacy.instances[index].witness);
     }
-});
-
-historicalV1Test('Hard 53x3 diversity pilot preserves the frozen baseline and adds two real families per selected target', async () => {
-    const generated = await buildHard53x3DiversityPilot({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/diversity-pilot/v1/instances.json', import.meta.url), 'utf8'));
-    const baseline = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
-    const baselineProjection = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/solver-inputs.json', import.meta.url), 'utf8'));
-    const catalog = JSON.parse(await readFile(new URL('../benchmarks/input_catalog.json', import.meta.url), 'utf8'));
-
-    assert.deepEqual(generated.artifact, committed);
-    assert.equal(artifactContentHash(baseline), '11005e04e359fff9d0d3a0fec66dd491ca8e441f5c5c880e1ff3441b9fc77da3');
-    assert.equal(baseline.sha256, '40c4ea586dfeafb5f5e37545101220451d2cc9a9ca2ab54eb9d00a94806c8375');
-    assert.equal(artifactContentHash(baselineProjection), '52b07a352c8da0215bd4e052c08262b2255aa094d1cddd9635a75f5ea68bf15a');
-    assert.equal(committed.acceptedCount, DIVERSITY_PILOT_TARGET_IDS.length * 2);
-    assert.equal(generated.status.every(item => item.familyCoverage === '3/3'), true);
-    assert.ok(generated.attempts.filter(item => item.category === 'structural duplicate collapse').length > 0);
-
-    for (const targetId of DIVERSITY_PILOT_TARGET_IDS) {
-        const family1 = baseline.instances.find(instance => instance.targetId === targetId);
-        const additions = committed.instances.filter(instance => instance.targetId === targetId);
-        assert.equal(additions.length, 2);
-        const familySignatures = new Set([family1.diversity.structureSignature]);
-        const environmentSignatures = new Set([canonicalMultiset(family1.availableInputs)]);
-        for (const instance of additions) {
-            const replay = replayWitness(instance, catalog);
-            assert.equal(replay.valid, true, `${targetId}: ${replay.errors?.join('\n')}`);
-            const structural = deriveStructuralFingerprint(instance, replay);
-            assert.equal(structural.signature, instance.diversity.structureSignature);
-            familySignatures.add(structural.signature);
-            environmentSignatures.add(canonicalMultiset(instance.availableInputs));
-            assert.equal(instance.expansion.kind, 'transformative');
-            assert.equal(instance.expansion.sourceInstance.releaseId, baseline.releaseId);
-            assert.equal(instance.expansion.sourceInstance.id, family1.id);
-            assert.equal(instance.expansion.sourceInstance.instanceSha256, family1.instanceSha256);
-        }
-        assert.equal(familySignatures.size, 3, `${targetId}: structural families`);
-        assert.equal(environmentSignatures.size, 3, `${targetId}: presented environments`);
-    }
-
-    const publicProjection = generated.solverView;
-    assert.deepEqual(publicProjection.instances.map(instance => Object.keys(instance).sort()),
-        publicProjection.instances.map(() => ['availableInputs', 'id', 'rules', 'target', 'targetId', 'track']));
-    const pilotValidation = await validateBenchmarkArtifact({ releaseId: HARD_53X3_PILOT_MANIFEST_REVISION });
-    assert.equal(pilotValidation.valid, true, pilotValidation.errors.join('\n'));
-    assert.equal(pilotValidation.summary.releaseAcceptance, true);
-    const baselineValidation = await validateBenchmarkArtifact({ releaseId: HARD_53X1_MANIFEST_REVISION });
-    assert.equal(baselineValidation.valid, true, baselineValidation.errors.join('\n'));
-    assert.equal(baselineValidation.summary.mechanicallyReplayed, 53);
-});
-
-historicalV1Test('Hard 53x3 rollout mechanically subtracts the pilot and fills the remaining forty targets', async () => {
-    const generated = await buildHard53x3Rollout({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/hard-53x3-rollout/v1/instances.json', import.meta.url), 'utf8'));
-    const baseline = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
-    const pilot = JSON.parse(await readFile(new URL('../benchmarks/diversity-pilot/v1/instances.json', import.meta.url), 'utf8'));
-
-    assert.deepEqual(generated.artifact, committed);
-    assert.equal(generated.remainingTargetIds.length, 40);
-    assert.equal(generated.remainingTargetIds.some(id => pilot.targetIds.includes(id)), false);
-    assert.equal(generated.status.every(item => item.familyCoverage === '3/3'), true);
-    assert.equal(generated.checkpoints.length, 5);
-    assert.deepEqual(generated.checkpoints.map(item => item.targetsAttempted.length), [8, 8, 8, 8, 8]);
-    assert.equal(committed.acceptedCount, 80);
-    assert.equal(committed.instances.every(instance => instance.expansion.sourceInstance.releaseId === baseline.releaseId), true);
-
-    const difficult = generated.status.find(item => item.targetId === 'hard-main-009');
-    assert.equal(difficult.acceptedFamilies.length, 2);
-    assert.equal(difficult.acceptedFamilies.every(item => item.diversityDepth === 'preprocessing topology'), true);
-    assert.equal(difficult.acceptedFamilies.every(item => item.replacementTopology[0].presentedInputs.length === 2), true);
-
-    for (const targetId of generated.remainingTargetIds) {
-        const signatures = new Set([
-            baseline.instances.find(instance => instance.targetId === targetId).diversity.structureSignature,
-            ...committed.instances.filter(instance => instance.targetId === targetId)
-                .map(instance => instance.diversity.structureSignature),
-        ]);
-        assert.equal(signatures.size, 3, `${targetId}: structural families`);
-    }
-    const validation = await validateBenchmarkArtifact({ releaseId: HARD_53X3_ROLLOUT_MANIFEST_REVISION });
-    assert.equal(validation.valid, true, validation.errors.join('\n'));
-    assert.equal(validation.summary.mechanicallyReplayed, 80);
-    assert.equal(validation.summary.structuralFamilies, 80);
-    assert.equal(validation.summary.releaseAcceptance, true);
 });
 
 test('Hard 53x3 staged composition preserves all source identities and isolates its public projection', async () => {
@@ -197,69 +98,6 @@ test('Hard 53x3 staged composition preserves all source identities and isolates 
     assert.deepEqual(projection.instances.map(instance => Object.keys(instance).sort()),
         projection.instances.map(() => ['availableInputs', 'id', 'rules', 'target', 'targetId', 'track']));
     assert.equal(projection.instances.every(instance => /^h53-[0-9a-f]{20}$/.test(instance.id)), true);
-});
-
-historicalV1Test('coverage pilot deterministically forward-replays main, B/C/D, Pin, Crystal and reuse capabilities', async () => {
-    const generated = await buildCoveragePilot({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/coverage-pilot/v1/instances.json', import.meta.url), 'utf8'));
-    assert.equal(generated.artifact.sha256, committed.sha256);
-    assert.equal(generated.artifact.acceptedCount, 5);
-    assert.ok(generated.artifact.instances.some(instance => instance.track === 'main'));
-    assert.deepEqual(new Set(generated.artifact.instances.map(instance => instance.difficulty.refinementGroup).filter(Boolean)), new Set(['B', 'C', 'D']));
-    assert.ok(generated.artifact.instances.some(instance => (instance.difficulty.operationCounts['Pin Pusher'] ?? 0) > 0));
-    assert.ok(generated.artifact.instances.some(instance => (instance.difficulty.operationCounts['Crystal Generator'] ?? 0) > 0));
-    const validation = await validateBenchmarkArtifact({ releaseId: COVERAGE_MANIFEST_REVISION });
-    assert.equal(validation.valid, true, validation.errors.join('\n'));
-    assert.equal(validation.summary.mechanicallyReplayed, 5);
-});
-
-historicalV1Test('expansion pilot separates proof basis from two distinct presented environments and replays all six', async () => {
-    const generated = await buildExpansionPilot({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
-    assert.equal(generated.artifact.sha256, committed.sha256);
-    assert.equal(generated.artifact.acceptedCount, 6);
-    assert.equal(generated.artifact.instances.filter(instance => instance.expansion.kind === 'additive').length, 4);
-    assert.equal(generated.artifact.instances.filter(instance => instance.expansion.kind === 'transformative').length, 2);
-    for (const targetId of generated.artifact.targetIds) {
-        const environments = generated.artifact.instances.filter(instance => instance.targetId === targetId)
-            .map(instance => instance.diversity.inputMultisetSignature);
-        assert.equal(environments.length, 2);
-        assert.equal(new Set(environments).size, 2);
-    }
-    assert.ok(generated.artifact.instances.some(instance => (instance.difficulty.operationCounts['Pin Pusher'] ?? 0) > 0));
-    assert.ok(generated.artifact.instances.some(instance => (instance.difficulty.operationCounts['Crystal Generator'] ?? 0) > 0));
-    assert.ok(generated.artifact.instances.every(instance => instance.difficulty.inputMultiplicity > instance.difficulty.coreInputMultiplicity));
-    const validation = await validateBenchmarkArtifact({ releaseId: EXPANSION_MANIFEST_REVISION });
-    assert.equal(validation.valid, true, validation.errors.join('\n'));
-    assert.equal(validation.summary.mechanicallyReplayed, 6);
-});
-
-historicalV1Test('Hard 53x1 staged generation covers every target and release-validates every success', async () => {
-    const generated = await buildHard53x1({ write: false });
-    const committed = JSON.parse(await readFile(new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8'));
-    assert.equal(generated.status.length, 53);
-    assert.equal(generated.artifact.acceptedCount, 53);
-    assert.equal(generated.status.filter(item => item.generated).length, 53);
-    assert.equal(generated.status.filter(item => !item.generated).length, 0);
-    const finalStatus = generated.status.find(item => item.targetId === 'hard-side-033');
-    assert.equal(finalStatus.rejectionCount, 1);
-    assert.equal(finalStatus.forwardReplayPassed, true);
-    assert.ok(finalStatus.availableInputCount > finalStatus.coreBasisCount);
-    assert.deepEqual(
-        generated.attempts.filter(attempt => attempt.targetId === 'hard-side-033').map(attempt => attempt.accepted),
-        [false, true, true],
-    );
-    assert.equal(
-        generated.coreArtifact.instances.find(instance => instance.targetId === 'hard-side-033').construction.strategy,
-        'generic-crystal-single-color-half-scaffold',
-    );
-    assert.equal(generated.artifact.sha256, committed.sha256);
-    assert.ok(generated.status.filter(item => !item.generated).every(item => item.failureReason && item.failureDetail));
-    assert.ok(generated.artifact.instances.every(instance => instance.difficulty.inputMultiplicity > instance.difficulty.coreInputMultiplicity));
-    const validation = await validateBenchmarkArtifact({ releaseId: HARD_53X1_MANIFEST_REVISION });
-    assert.equal(validation.valid, true, validation.errors.join('\n'));
-    assert.equal(validation.summary.mechanicallyReplayed, 53);
-    assert.equal(validation.summary.releaseAcceptance, true);
 });
 
 test('Solver evaluation view excludes core basis, witness and expansion provenance', async () => {

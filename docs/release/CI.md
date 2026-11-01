@@ -28,10 +28,12 @@ v1, Physics v2 and Release 1 identities. It is not part of the daily gate:
 dispatch and on changes to a frozen identity input, authenticator, policy or
 trust root. Ordinary current-only pushes do not repeat that workload.
 
-Current tests register 277 tests: 269 PASS, 8 explicit historical skips (the six
-v1 regeneration cases and two composite-release cases) and 0 FAIL. Historical v1
-must report 198 PASS with no skips. Original frozen records are verified in their
-v1 environment, not falsely accepted under current physics.
+Current tests register 271 tests: 269 PASS, 2 explicit historical skips (the two
+composite-release cases) and 0 FAIL. The six v1 regeneration cases exist only in
+the fixed v1 snapshot and are executed by the historical entry, not replayed from
+current HEAD. Historical v1 must report 198 PASS with no skips. Original frozen
+records are verified in their v1 environment, not falsely accepted under current
+physics.
 
 Run the suite once per clean clone after the locked install. GitHub uploads
 `.ci-results/current/` even on failure; an uploaded log is not a PASS. Local

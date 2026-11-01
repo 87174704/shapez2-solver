@@ -1,11 +1,7 @@
 import {
-    combineDisjoint, parseParts, partitionIntoColumns, rotateColumnToQuadrant, stackLayers,
+    combineDisjoint, EMPTY_PART as EMPTY, isEmptyLayer, layerCode, parseParts, partitionIntoColumns,
+    rotateColumnToQuadrant, stackLayers,
 } from '../constructiveSolverRuntime.js';
-
-const EMPTY = Object.freeze({ shape: '-', color: '-' });
-const partCode = part => `${part.shape}${part.color}`;
-const layerCode = parts => parts.map(partCode).join('');
-const isEmptyLayer = parts => parts.every(part => part.shape === '-');
 
 function shapeFromLayers(layers) {
     let length = layers.length;

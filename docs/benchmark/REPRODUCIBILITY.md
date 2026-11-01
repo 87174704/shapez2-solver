@@ -29,9 +29,10 @@ exact original newline representations only after their existing SHA-256 pins
 match. Git blobs, frozen rules, records, witnesses and expected hashes are not
 changed. The immutable control inputs are under tests/fixtures/physics-v2.
 
-Current regressions register 277 tests: 269 PASS, zero FAIL, and 8 explicit
-historical skips (six v1 regeneration cases and two composite-release cases)
-excluded from the current score. The original committed v1 tree is reconstructed
+Current regressions register 271 tests: 269 PASS, zero FAIL, and 2 explicit
+historical skips (the two composite-release cases) excluded from the current
+score. The six v1 regeneration cases remain in the fixed v1 snapshot and are
+executed by the historical entry. The original committed v1 tree is reconstructed
 only as a comparison input for current Physics acceptance: all 593 original files
 must match their exact inventory bytes. Its 198 original tests, the frozen
 evidence check and the fixed Physics v2 / Release 1 regressions belong to the

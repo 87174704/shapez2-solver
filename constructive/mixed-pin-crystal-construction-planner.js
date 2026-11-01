@@ -2,7 +2,8 @@ import {
     Shape, ShapeOperationConfig, pushPin, rotate90CCW, rotate90CW, stack, swapHalves,
 } from '../shapeOperations.js';
 import {
-    combineDisjoint, parseParts, partitionIntoColumns, rotateColumnToQuadrant, selectColumn, stackLayers,
+    combineDisjoint, EMPTY_PART as EMPTY, layerCode, parseParts, partitionIntoColumns, partCode,
+    rotateColumnToQuadrant, selectColumn, stackLayers,
 } from '../constructiveSolverRuntime.js';
 import { buildIsolatedPin } from './pin-construction-planner.js';
 import {
@@ -26,9 +27,6 @@ export const MIXED_PIN_CRYSTAL_CAPABILITIES = Object.freeze([
     },
 ]);
 
-const EMPTY = Object.freeze({ shape: '-', color: '-' });
-const partCode = part => `${part.shape}${part.color}`;
-const layerCode = parts => parts.map(partCode).join('');
 const emptyLayer = () => Array.from({ length: 4 }, () => EMPTY);
 const isEmpty = part => part.shape === '-';
 

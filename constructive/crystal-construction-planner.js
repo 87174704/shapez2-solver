@@ -1,7 +1,7 @@
 import {
     Shape, ShapeOperationConfig, cut, genCrystal, stack, swapHalves,
 } from '../shapeOperations.js';
-import { combineDisjoint, parseParts, stackLayers } from '../constructiveSolverRuntime.js';
+import { combineDisjoint, EMPTY_PART as EMPTY, isEmptyLayer, layerCode, parseParts, stackLayers } from '../constructiveSolverRuntime.js';
 import { buildIsolatedPin, buildPinSubassembly } from './pin-construction-planner.js';
 
 export const CRYSTAL_CONSTRUCTION_PLANNER_VERSION = 'generic-crystal-construction-v3';
@@ -28,11 +28,6 @@ export const CRYSTAL_CONSTRUCTION_CAPABILITIES = Object.freeze([
         mechanisms: ['spatial component decomposition', 'physical Pin/solid masks', 'pre-recomposition mask removal'],
     },
 ]);
-
-const EMPTY = Object.freeze({ shape: '-', color: '-' });
-const partCode = part => `${part.shape}${part.color}`;
-const layerCode = parts => parts.map(partCode).join('');
-const isEmptyLayer = parts => parts.every(part => part.shape === '-');
 
 function trimEmptyUpperLayers(layers) {
     let length = layers.length;

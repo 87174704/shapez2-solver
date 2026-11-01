@@ -1,6 +1,6 @@
 import { Shape, ShapeOperationConfig, stack } from '../shapeOperations.js';
 import {
-    combineDisjoint, parseParts, partitionIntoColumns, rotateColumnToQuadrant, selectColumn, stackLayers,
+    combineDisjoint, layerCode, parseParts, partitionIntoColumns, partCode, rotateColumnToQuadrant, selectColumn, stackLayers,
 } from '../constructiveSolverRuntime.js';
 
 export const PIN_CONSTRUCTION_PLANNER_VERSION = 'generic-pin-construction-v1';
@@ -11,8 +11,6 @@ export const PIN_CONSTRUCTION_CAPABILITIES = Object.freeze([
     { id: 'isolated-pin-crystal-scaffold', mechanisms: ['temporary Crystal column', 'Cutter extraction', 'Pin overflow breakage', 'process-only scaffold'] },
 ]);
 
-const partCode = part => `${part.shape}${part.color}`;
-const layerCode = parts => parts.map(partCode).join('');
 const emptyPart = () => ({ shape: '-', color: '-' });
 
 function columnCode(parts, quadrant) {

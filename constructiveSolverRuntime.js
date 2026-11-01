@@ -11,6 +11,12 @@ export function parseParts(shapeCode) {
     });
 }
 
+/** Canonical empty cell, part spelling and layer spelling shared by the planners. */
+export const EMPTY_PART = Object.freeze({ shape: '-', color: '-' });
+export const partCode = part => `${part.shape}${part.color}`;
+export const layerCode = parts => parts.map(partCode).join('');
+export const isEmptyLayer = parts => parts.every(part => part.shape === '-');
+
 function occupiedCount(shapeCode) {
     return parseParts(shapeCode).flat().filter(part => part.shape !== '-').length;
 }
