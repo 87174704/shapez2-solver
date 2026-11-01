@@ -4,10 +4,10 @@ The [current workflow](../../.github/workflows/verify.yml) uses GitHub-hosted
 Ubuntu, `contents: read`, full checkout without persisted credentials, locked npm
 install without lifecycle scripts, and the Phase C reviewed action commit pins
 recorded in [action-pins.json](action-pins.json). It runs on pushes and pull
-requests to `codex/maintained` and `codex/crystal-physics-fix-20261029`, plus
-manual dispatch. There is no deployment, self-hosted runner, secret, OIDC, Pages
-write or production connection in this workflow. The Gitea deployment workflow
-triggers only on Gitea `main`; verification branches do not trigger it.
+requests to `codex/maintained`, plus manual dispatch. There is no deployment,
+self-hosted runner, secret, OIDC, Pages write or production connection in this
+workflow. The Gitea deployment workflow triggers only on Gitea `main`;
+verification branches do not trigger it.
 
 ## Current gate
 

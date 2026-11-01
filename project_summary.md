@@ -982,8 +982,8 @@ These are long-lived constraints, not a task list:
 9. **No release path is functional for this branch as of 2026-11-01.** The
    [Pages workflow](.github/workflows/pages.yml) builds with the Release 1 entry and
    requires the Release 1 identity; the
-   [Gitea workflow](.gitea/workflows/deploy.yml) triggers only on Gitea `main` (the
-   Release 1 tree) and its whitelist is incomplete;
+   [Gitea workflow](.gitea/workflows/deploy.yml) triggers only on Gitea `main`
+   (the v1 tree) and its whitelist is incomplete;
    [PUBLISH_PLAN.md](docs/release/PUBLISH_PLAN.md) was never executed. Treat
    deployment status as a dated observation and re-check [README.md](README.md)
    before making any claim.

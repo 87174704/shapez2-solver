@@ -108,7 +108,7 @@ No release path is functional for this branch, and none may be assumed:
   Release 1 entry (`build.mjs`) and requires the Release 1 identity, so it cannot
   publish current code.
 - [.gitea/workflows/deploy.yml](.gitea/workflows/deploy.yml) triggers only on
-  Gitea `main` (currently `0647b85`, the Release 1 tree) and copies a whitelist
+  Gitea `main` (currently `0647b85`, the v1 tree) and copies a whitelist
   that lacks `locales/` and `assets/`; fast-forwarding Gitea `main` would publish
   a broken site.
 - [PUBLISH_PLAN.md](docs/release/PUBLISH_PLAN.md) was never executed and depends
@@ -121,6 +121,8 @@ No release path is functional for this branch, and none may be assumed:
 
 ## Documentation
 
+- [Agent maintenance contract](AGENTS.md) — daily maintenance expectations for
+  code agents.
 - [Current gate and counts](docs/release/CI.md)
 - [Versioning and branch roles](docs/release/VERSIONING.md)
 - [Reproduction and historical limitations](docs/benchmark/REPRODUCIBILITY.md)

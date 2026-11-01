@@ -37,7 +37,7 @@ Independent upstream history: `ba62646`, 87 commits, no common ancestor with
 ### Gitea `main`
 
 Triggers [.gitea/workflows/deploy.yml](../../.gitea/workflows/deploy.yml) on
-push. It currently sits at `0647b85` (the Release 1 tree). Do not fast-forward it
+push. It currently sits at `0647b85` (the v1 tree). Do not fast-forward it
 to "sync" maintenance code: that workflow copies a whitelist that lacks
 `locales/` and `assets/`, so it would publish a broken site. See the README
 section "Known release limits".
@@ -98,9 +98,12 @@ Create one only when all three hold:
 2. a deployable artifact path exists for that commit;
 3. the intent is to publish, not to make the history look tidy.
 
-None of these hold today (see the README "Known release limits"), so this
-repository has no formal version and must not claim one. Publishing stays a
-separate decision from merging.
+The formal release conditions are not all satisfied today: hosted verification
+has succeeded for some maintained commits, but no usable formal release path
+exists for the maintained branch (see the README "Known release limits"). The
+repository therefore has no formal version and must not claim one; do not create
+a new formal tag or Release while that remains true. Publishing stays a separate
+decision from merging.
 
 ## Preserving published history
 
