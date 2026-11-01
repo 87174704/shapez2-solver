@@ -1,0 +1,39 @@
+name: Verify fixed historical releases
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/maintained, codex/crystal-physics-fix-20261029]
+    # Historical certification is required only when a frozen identity input,
+    # authenticator, policy or trust root changes. Ordinary current-only pushes
+    # are covered by verify.yml and must not repeat this workload.
+    paths:
+      - 'versions/**'
+      - 'tests/helpers/historicalV1Test.mjs'
+      - 'tests/tools/runHistoricalV1.mjs'
+      - 'tests/fixtures/physics-v2/**'
+      - 'scripts/ci/verify-history.mjs'
+      - 'scripts/ci/verify-frozen.mjs'
+      - 'tools/release1/**'
+      - 'benchmarks/policy/**'
+      - 'docs/release/frozen-maintenance.json'
+permissions:
+  contents: read
+concurrency:
+  group: verify-history-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout complete verification history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24.21.0
+      - name: Certify fixed v1, Physics v2 and Release 1 identities
+        run: node scripts/ci/verify-history.mjs

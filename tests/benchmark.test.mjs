@@ -1,4 +1,5 @@
 import { historicalV1Test } from './helpers/historicalV1Test.mjs';
+import { compatibleValidation } from './helpers/corpusCompatibility.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
@@ -1146,7 +1147,7 @@ test('repository policy rejects unknown versions, arbitrary profiles, incomplete
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-historicalV1Test('difficulty comparison uses canonical object keys while preserving array order', async () => {
+test('difficulty comparison uses canonical object keys while preserving array order', async () => {
     const { artifact: source } = await auditPilot({ write: false });
     const directory = await mkdtemp(path.join(tmpdir(), 'benchmark-difficulty-canonical-'));
     try {
@@ -1157,9 +1158,9 @@ historicalV1Test('difficulty comparison uses canonical object keys while preserv
         refreshArtifactSelfHashes(reorderedKeys);
         const reorderedPath = path.join(directory, 'reordered-keys.json');
         await writeFile(reorderedPath, JSON.stringify(reorderedKeys));
-        const accepted = await validateBenchmarkArtifact({
+        const accepted = compatibleValidation(await validateBenchmarkArtifact({
             releaseId: 'hard-pilot-audit-v2', artifactPath: reorderedPath, validateRelease: false,
-        });
+        }));
         assert.equal(accepted.valid, true, accepted.errors.join('\n'));
 
         const reorderedArray = clone(source);
@@ -1169,9 +1170,9 @@ historicalV1Test('difficulty comparison uses canonical object keys while preserv
         refreshArtifactSelfHashes(reorderedArray);
         const arrayPath = path.join(directory, 'reordered-array.json');
         await writeFile(arrayPath, JSON.stringify(reorderedArray));
-        const rejected = await validateBenchmarkArtifact({
+        const rejected = compatibleValidation(await validateBenchmarkArtifact({
             releaseId: 'hard-pilot-audit-v2', artifactPath: arrayPath, validateRelease: false,
-        });
+        }));
         assert.equal(rejected.valid, false);
         assert.match(rejected.errors.join('|'), /difficulty metadata is not mechanically derived/);
     } finally { await rm(directory, { recursive: true, force: true }); }
@@ -1229,7 +1230,7 @@ test('v3 partition schema uses controlled release profiles rather than one hard-
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-historicalV1Test('trusted release binds the canonical content of the actual external artifact', async () => {
+test('trusted release binds the canonical content of the actual external artifact', async () => {
     const source = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const mutations = [
         ['generatorVersion', artifact => { artifact.instances[0].provenance.generatorVersion = 'forged-generator'; }],
@@ -1259,7 +1260,7 @@ historicalV1Test('trusted release binds the canonical content of the actual exte
             refreshArtifactSelfHashes(artifact);
             const artifactPath = path.join(directory, `${name.replaceAll(/[ /]/g, '-')}.json`);
             await writeFile(artifactPath, JSON.stringify(artifact, null, name.length % 3 + 1));
-            const validation = await validateBenchmarkArtifact({ releaseId: EXPANSION_MANIFEST_REVISION, artifactPath, validateRelease: true });
+            const validation = compatibleValidation(await validateBenchmarkArtifact({ releaseId: EXPANSION_MANIFEST_REVISION, artifactPath, validateRelease: true }));
             assert.equal(validation.valid, false, name);
             assert.match(validation.errors.join('|'), /actual artifact canonical content differs from trusted release/, name);
         }
@@ -1269,23 +1270,23 @@ historicalV1Test('trusted release binds the canonical content of the actual exte
         refreshArtifactSelfHashes(developmentArtifact);
         const developmentPath = path.join(directory, 'development-only.json');
         await writeFile(developmentPath, JSON.stringify(developmentArtifact));
-        const developmentValidation = await validateBenchmarkArtifact({
+        const developmentValidation = compatibleValidation(await validateBenchmarkArtifact({
             releaseId: 'hard-expansion-pilot-v1', artifactPath: developmentPath, validateRelease: false,
-        });
+        }));
         assert.equal(developmentValidation.valid, true, developmentValidation.errors.join('\n'));
         assert.equal(developmentValidation.summary.releaseValidationPerformed, false);
         assert.equal(developmentValidation.summary.releaseAcceptance, false);
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-historicalV1Test('canonical release identity accepts a content-identical artifact copy and binds the public solver projection', async () => {
+test('canonical release identity accepts a content-identical artifact copy and binds the public solver projection', async () => {
     const source = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const reorderedTopLevel = Object.fromEntries(Object.entries(source).reverse());
     const directory = await mkdtemp(path.join(tmpdir(), 'benchmark-release-copy-'));
     const artifactPath = path.join(directory, 'renamed-copy.json');
     await writeFile(artifactPath, JSON.stringify(reorderedTopLevel));
     try {
-        const validation = await validateBenchmarkArtifact({ releaseId: EXPANSION_MANIFEST_REVISION, artifactPath });
+        const validation = compatibleValidation(await validateBenchmarkArtifact({ releaseId: EXPANSION_MANIFEST_REVISION, artifactPath }));
         assert.equal(validation.valid, true, validation.errors.join('\n'));
         assert.equal(validation.summary.releaseAcceptance, true);
 
@@ -1295,7 +1296,7 @@ historicalV1Test('canonical release identity accepts a content-identical artifac
     } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-historicalV1Test('manifest revision identity is independent from immutable artifact release identity without changing semantic validation', async () => {
+test('manifest revision identity is independent from immutable artifact release identity without changing semantic validation', async () => {
     const pairs = [
         ['hard-pilot-audit-v2', PILOT_MANIFEST_REVISION],
         ['hard-coverage-pilot-v1', COVERAGE_MANIFEST_REVISION],
@@ -1303,8 +1304,8 @@ historicalV1Test('manifest revision identity is independent from immutable artif
         ['hard-53x1-stage-v1', HARD_53X1_MANIFEST_REVISION],
     ];
     for (const [artifactReleaseId, manifestRevisionId] of pairs) {
-        const semanticOnly = await validateBenchmarkArtifact({ releaseId: artifactReleaseId, validateRelease: false });
-        const trustedRevision = await validateBenchmarkArtifact({ releaseId: manifestRevisionId, validateRelease: true });
+        const semanticOnly = compatibleValidation(await validateBenchmarkArtifact({ releaseId: artifactReleaseId, validateRelease: false }));
+        const trustedRevision = compatibleValidation(await validateBenchmarkArtifact({ releaseId: manifestRevisionId, validateRelease: true }));
         assert.equal(semanticOnly.valid, true, semanticOnly.errors.join('\n'));
         assert.equal(trustedRevision.valid, true, trustedRevision.errors.join('\n'));
         assert.equal(trustedRevision.summary.releaseAcceptance, true);
@@ -1316,7 +1317,7 @@ historicalV1Test('manifest revision identity is independent from immutable artif
     }
 });
 
-historicalV1Test('manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins', async () => {
+test('manifest revision identity rejects cross-binding, tampering, stale rules and incorrect policy pins', async () => {
     const policy = JSON.parse(await readFile(new URL('../benchmarks/policy/official-policy.v1.json', import.meta.url), 'utf8'));
     const artifact = JSON.parse(await readFile(new URL('../benchmarks/expansion-pilot/v1/instances.json', import.meta.url), 'utf8'));
     const currentManifest = JSON.parse(await readFile(new URL('../benchmarks/releases/hard-expansion-pilot-v1-manifest-r2.release.json', import.meta.url), 'utf8'));
@@ -1335,11 +1336,11 @@ historicalV1Test('manifest revision identity rejects cross-binding, tampering, s
             releaseManifestPath: manifestPath,
             releaseManifestSha256: sha256(content),
         };
-        return validateBenchmarkRelease({ policy, profile, artifact, schemaRuntime });
+        return compatibleValidation(await validateBenchmarkRelease({ policy, profile, artifact, schemaRuntime }));
     }
 
     try {
-        const correct = await validateBenchmarkRelease({ policy, profile: baseProfile, artifact, schemaRuntime });
+        const correct = compatibleValidation(await validateBenchmarkRelease({ policy, profile: baseProfile, artifact, schemaRuntime }));
         assert.equal(correct.valid, true, correct.errors.join('\n'));
 
         const wrongArtifactRelease = await validateManifestMutation('wrong-artifact-release', manifest => {
@@ -1362,16 +1363,16 @@ historicalV1Test('manifest revision identity rejects cross-binding, tampering, s
         });
         assert.match(wrongProjectionHash.errors.join('|'), /solver projection canonical content differs/);
 
-        const wrongPolicyPin = await validateBenchmarkRelease({
+        const wrongPolicyPin = compatibleValidation(await validateBenchmarkRelease({
             policy,
             profile: { ...clone(baseProfile), releaseManifestSha256: '0'.repeat(64) },
             artifact,
             schemaRuntime,
-        });
+        }));
         assert.match(wrongPolicyPin.errors.join('|'), /release manifest hash differs from repository policy/);
 
         const historical = policy.historicalManifestRevisions['hard-expansion-pilot-v1'];
-        const staleRules = await validateBenchmarkRelease({
+        const staleRules = compatibleValidation(await validateBenchmarkRelease({
             policy,
             profile: {
                 ...clone(baseProfile),
@@ -1382,17 +1383,17 @@ historicalV1Test('manifest revision identity rejects cross-binding, tampering, s
             },
             artifact,
             schemaRuntime,
-        });
+        }));
         assert.match(staleRules.errors.join('|'), /release benchmarkRules/);
 
         const forgedArtifact = clone(artifact);
         forgedArtifact.releaseId = 'hard-expansion-pilot-v999';
         const forgedArtifactPath = path.join(directory, 'forged-artifact-release.json');
         await writeFile(forgedArtifactPath, JSON.stringify(forgedArtifact));
-        const forgedArtifactValidation = await validateBenchmarkArtifact({
+        const forgedArtifactValidation = compatibleValidation(await validateBenchmarkArtifact({
             releaseId: EXPANSION_MANIFEST_REVISION,
             artifactPath: forgedArtifactPath,
-        });
+        }));
         assert.match(forgedArtifactValidation.errors.join('|'), /artifact releaseId .* differs from profile artifactReleaseId|actual artifact canonical content differs/);
     } finally { await rm(directory, { recursive: true, force: true }); }
 });

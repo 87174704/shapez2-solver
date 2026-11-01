@@ -48,14 +48,15 @@ results and cleanup path. Forced process termination or machine failure can
 interrupt cleanup. No persistent audit directory, clone, worktree registration,
 new identity manifest or project-local historical files are created.
 
-This is an additional historical entry, not a replacement for
-[full CI](../../scripts/ci/verify.mjs). Full CI's workflow, phases, current source
-checks, documentation/syntax checks, 159-case production check and global/China
-static profile gates are unchanged. The historical entry does not certify current
-HEAD or build its static profiles. Existing production/build validation still
-requires the frozen files in the current checkout. B2 may separately decouple
-those consumers and remove duplicate historical work only after preserving all
-existing blocking assertions; B1 does not authorize that switch.
+This is the independent historical entry, not part of the daily maintenance
+gate. The [current entry](../../scripts/ci/verify-current.mjs) verifies current
+source, corpus acceptance, current Physics behaviour, the 159-case production
+Solver check and both static profiles; it uses the reconstructed v1 tree only as
+a comparison input and does not run the v1 suite or frozen evidence.
+[verify-history.yml](../../.github/workflows/verify-history.yml) runs this
+historical entry on manual dispatch and whenever a frozen identity input,
+authenticator, policy or trust root changes; ordinary current-only pushes do not
+repeat it. This entry does not certify current HEAD or build its static profiles.
 
 This entry is additive because modifying an existing sealed script or document
 would violate the unchanged Release 1 source pin. No old file, pin or whitelist

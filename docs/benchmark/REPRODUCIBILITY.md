@@ -8,34 +8,44 @@ VERIFIED — The owner explicitly accepted this disclosure in Phase C. Phase B s
 
 VERIFIED — Historical [config.json](../../benchmarks/solver-baselines/hard-53x3-v1/config.json) records 176 uncommitted status entries at freeze. Checkout of its named commit alone cannot reconstruct the recorded execution. The retained 159 record hashes, record files, configuration identity, aggregate and baseline identity can be recomputed. This must not be described as rerunning the missing Solver. No historical output is overwritten.
 
-## Current Physics v2 clean-clone verification
+## Current maintenance and historical verification
 
-Use Node.js 24.21.0 and the checked-in npm lockfile. Create a full independent
-clone, including the original annotated tag and all ancestors (no shallow clone).
-No original-workspace dependencies, caches or untracked evidence are required.
+Use Node.js 24.21.0 and the checked-in npm lockfiles (root and tools/static-build).
+Create a full independent clone, including the original annotated tag and all
+ancestors (no shallow clone). No original-workspace dependencies, caches or
+untracked evidence are required.
 
 ~~~text
 npm ci --ignore-scripts --no-audit --no-fund
+npm ci --prefix tools/static-build --ignore-scripts --no-audit --no-fund
 git config core.autocrlf input
-node scripts/ci/verify.mjs
+node scripts/ci/verify-current.mjs "--commit=$(git rev-parse HEAD)"
 ~~~
 
-Run the suite once in each clone. It preserves its historical directory and logs;
-for another attempt, create another clone rather than overwriting that evidence.
-The suite reconstructs exact original newline representations only after their
-existing SHA-256 pins match. Git blobs, frozen rules, records, witnesses and
-expected hashes are not changed. The source tree includes the immutable control
-inputs under tests/fixtures/physics-v2. Logs and generated acceptance results go
-to ignored .ci-results/, bound to source HEAD/tree and Node/OS.
+The entry refuses any selected commit other than HEAD and requires a clean
+tracked source. It writes logs and generated acceptance results to ignored
+.ci-results/current/, bound to source HEAD/tree and Node/OS. It reconstructs
+exact original newline representations only after their existing SHA-256 pins
+match. Git blobs, frozen rules, records, witnesses and expected hashes are not
+changed. The immutable control inputs are under tests/fixtures/physics-v2.
 
-Current regressions register 242 tests: 229 PASS, zero FAIL, and 13 explicitly
-historical skips excluded from the v2 score. Separately, the original committed
-v1 tree is reconstructed by tests/tools/runHistoricalV1.mjs: all 593 original
-files must match their exact inventory bytes before its 198 original tests run.
-Only dependencies installed afresh in this clone are shared, through a local
-link to that clone's node_modules; no v2 module graph is reused in the v1 process.
-Historical record integrity is checked in the v1 environment. This does not
-reconstruct the missing earlier Solver source identified above.
+Current regressions register 277 tests: 269 PASS, zero FAIL, and 8 explicit
+historical skips (six v1 regeneration cases and two composite-release cases)
+excluded from the current score. The original committed v1 tree is reconstructed
+only as a comparison input for current Physics acceptance: all 593 original files
+must match their exact inventory bytes. Its 198 original tests, the frozen
+evidence check and the fixed Physics v2 / Release 1 regressions belong to the
+independent historical entry:
+
+~~~text
+node scripts/ci/verify-history.mjs
+~~~
+
+That entry runs on manual dispatch and on changes to frozen identity inputs,
+authenticators, policies or trust roots (see verify-history.yml); daily current
+CI does not repeat it. Historical record integrity is checked in the v1
+environment. This does not reconstruct the missing earlier Solver source
+identified above.
 
 Independent v2 acceptance checks all 461 frozen files, all 331 frozen witness
 instances (30,158 steps), and the 159 selected solves. V1 rerun, v2 and frozen

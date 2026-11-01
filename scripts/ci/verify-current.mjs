@@ -8,6 +8,7 @@ import { promisify } from 'node:util';
 import { ROOT } from '../../versions/identity.mjs';
 import { selectedCommit, prepareCurrentInputs, verifyCurrentSource } from '../../versions/current.mjs';
 import { verifyDependencies, verifyInstalledDependencies } from '../../tools/static-build/current-dependencies.mjs';
+import { prepareHistoricalV1 } from '../../tests/tools/runHistoricalV1.mjs';
 
 const run = promisify(execFile), commit = selectedCommit();
 assert.equal(process.argv.length, 3, 'Usage: node scripts/ci/verify-current.mjs --commit=<full OID>');
@@ -61,8 +62,11 @@ try {
     }
     return `Checked ${checked} local documentation links.`;
   });
-  await phase('historical-v1', () => node(['tests/tools/runHistoricalV1.mjs', historical]));
-  await phase('frozen-evidence-v1', () => node(['scripts/ci/verify-frozen.mjs', historical]));
+  await phase('corpus-current', () => node(['scripts/bench/validate-corpus.mjs', '--semantics=deferred']));
+  // The v1 byte tree is an input for current Physics comparison (331 witnesses and
+  // 159 v1 path reproductions). The v1 suite and frozen evidence are certified only
+  // by verify-history.mjs, never in this daily gate.
+  await phase('historical-inputs', () => prepareHistoricalV1(historical));
   await phase('regressions-current', () => node(['--test', '--test-reporter=tap']));
   for (const f of ['input-lateral.json', 'input-propagation-controls.json'])
     await fs.copyFile(path.join(ROOT, 'tests/fixtures/physics-v2', f), path.join(output, f));

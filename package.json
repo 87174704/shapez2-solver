@@ -12,6 +12,8 @@
     "bench:full": "node --expose-gc tests/perf/shapeSolver.bench.mjs --full",
     "bench:stress": "node --expose-gc tests/perf/shapeSolver.bench.mjs --stress",
     "bench:official": "node tests/perf/officialWorkload.bench.mjs",
+    "bench:validate": "node scripts/bench/validate-corpus.mjs --semantics=deferred",
+    "bench:validate:strict": "node scripts/bench/validate-corpus.mjs",
     "test:historical-v1": "node tests/tools/runHistoricalV1.mjs",
     "test:physics-v2": "node --test tests/crystalPhysicsFix.test.mjs tests/versionIdentity.test.mjs",
     "verify:physics-v2": "node tests/tools/validatePhysicsV2.mjs",

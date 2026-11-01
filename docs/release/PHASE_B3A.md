@@ -167,3 +167,11 @@ B3b 应使用显式 CI Commit、完整历史和原锁定依赖，在目标平台
 临时克隆、运行日志和产物在提取上述结果后清理；不新增长期证据目录。
 本阶段实现、测试及本文作为一个本地提交交付，完整提交号见交付消息。
 STOP：不自动切换工作流，不进入 B2。
+
+## B3b/P1b 切换后注记
+
+上述内容是 B3a 当时的状态。正式切换后，日常入口为
+`scripts/ci/verify-current.mjs`（工作流 `verify.yml`），历史入口为
+`scripts/ci/verify-history.mjs`（工作流 `verify-history.yml`）；旧
+`scripts/ci/verify.mjs` 与 `scripts/ci/prepare-checkout.mjs` 已删除。
+本节以前的描述不再代表当前默认 CI。

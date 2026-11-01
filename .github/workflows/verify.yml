@@ -28,16 +28,16 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Install locked static build tooling
         run: npm ci --prefix tools/static-build --ignore-scripts --no-audit --no-fund
-      - name: Verify source, Benchmark and regressions
+      - name: Verify current source, corpus, physics and regressions
         run: |
           git config core.autocrlf input
-          node scripts/ci/verify.mjs
+          node scripts/ci/verify-current.mjs "--commit=$(git rev-parse HEAD)"
       - name: Retain traceable verification results
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: verification-${{ github.run_id }}-${{ github.run_attempt }}
-          path: .ci-results/
+          path: .ci-results/current/
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 30
