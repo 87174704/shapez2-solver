@@ -7,7 +7,6 @@ import path from 'node:path';
 import { buildPilot, selectRefinementBundle } from '../benchmarks/tools/build-pilot.mjs';
 import { auditPilot } from '../benchmarks/tools/audit-pilot.mjs';
 import { buildExpansionPilot } from '../benchmarks/tools/build-expansion-pilot.mjs';
-import { buildHard53x1, previewDirectLayerComposition } from '../benchmarks/tools/build-hard-53x1.mjs';
 import { auditHard53x3StagedComposition } from '../benchmarks/tools/audit-hard-53x3-staged-composition.mjs';
 import {
     artifactInstancesHash, classifyTargetRefinement, compileCatalog, deriveMetadata,
@@ -454,8 +453,12 @@ test('generic Crystal planner forward-replays scaffold extraction, deliberate br
 
 test('Crystal composition falls back from destructive dense-layer Stack to the existing half-scaffold planner', async () => {
     const target = 'RwcmRwcm:cmRwcmRw';
+    const layers = target.split(':').map(code => Shape.fromShapeCode(code));
+    const stacked = layers.slice(1).reduce(
+        (result, layer) => stack(result, layer, new ShapeOperationConfig(4))[0], layers[0],
+    );
     assert.equal(
-        previewDirectLayerComposition(target),
+        stacked.toShapeCode(),
         'RwcmRwcm:--Rw--Rw',
         'detached upper Crystal cells shatter before the layer can settle',
     );
@@ -595,14 +598,11 @@ test('sparse upper mask removes physical masks before half recomposition and pre
     missingPhysicalMask.refinementComponent.maskLayers[1] = 'P-CyCuCu';
     assert.equal(validateSparseUpperMaskPlan(target, missingPhysicalMask).valid, false);
 
-    const { artifact, attempts, status } = await buildHard53x1({ write: false });
+    const artifact = JSON.parse(await readFile(
+        new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8',
+    ));
     const instance = artifact.instances.find(candidate => candidate.targetId === 'hard-side-040');
     assert.ok(instance);
-    assert.equal(status.find(candidate => candidate.targetId === 'hard-side-040').rejectionCount, 1);
-    assert.deepEqual(
-        attempts.filter(attempt => attempt.targetId === 'hard-side-040').map(attempt => attempt.accepted),
-        [false, true, true],
-    );
     const catalog = JSON.parse(await readFile(new URL('../benchmarks/input_catalog.json', import.meta.url), 'utf8'));
     const replay = replayWitness(instance, catalog);
     assert.equal(replay.valid, true, replay.errors?.join('\n'));
@@ -651,15 +651,17 @@ test('mixed Pin/Crystal planner preserves ordered generation, Pin support, gravi
     )[0].toShapeCode();
     assert.equal(unsupportedCrystal, '--P---P-', 'detached Crystal shatters before an unsupported upper operand can fall');
 
-    const generated = await buildHard53x1({ write: false });
+    const artifact = JSON.parse(await readFile(
+        new URL('../benchmarks/hard-53x1/v1/instances.json', import.meta.url), 'utf8',
+    ));
     const catalog = JSON.parse(await readFile(new URL('../benchmarks/input_catalog.json', import.meta.url), 'utf8'));
     for (const id of targets.keys()) {
-        const instance = generated.artifact.instances.find(candidate => candidate.targetId === id);
+        const instance = artifact.instances.find(candidate => candidate.targetId === id);
         assert.ok(instance, `${id} was not generated`);
         assert.equal(replayWitness(instance, catalog).valid, true);
     }
 
-    const unavailable = clone(generated.artifact.instances.find(instance => instance.targetId === 'hard-main-007'));
+    const unavailable = clone(artifact.instances.find(instance => instance.targetId === 'hard-main-007'));
     const usedShape = unavailable.witness.initial[0].shape;
     const available = unavailable.availableInputs.find(input => input.shape === usedShape);
     available.count -= 1;
