@@ -188,15 +188,16 @@ before it can replace a search result.
 
 ### 3.1 Public routing
 
-[shapeSolver.js](shapeSolver.js) implements three routes:
+[shapeSolver.js](shapeSolver.js) implements four routes:
 
 | Route | Eligibility (current code) | Result marker |
 | --- | --- | --- |
 | Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; boolean `cleanPainting`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers; clean painting tries construction first, unrestricted painting only after `not-found-pruned` | `solverRoute: 'strict-ordinary-constructive'` |
+| Strict special constructive recovery | same finite-token, layer, resource-count and parameter bounds as strict ordinary; target contains Pin or Crystal; target/starting cells may additionally be `P-` or coloured Crystal; only after general search reports `not-found-pruned` or a `generated-states`, `visited-states` or `shape-universe` limit | `solverRoute: 'strict-special-constructive'` |
 | Hybrid constructive | one target; `maxLayers === 4`; `preventWaste === false`; `orientationSensitive === false`; `allowSplitting === false`; `cleanPainting === true`; no shape-family restriction | `solverRoute: 'constructive-hybrid'` |
 | General search | everything else, or any constructive rejection | `solverRoute` is `'general-search'` after a rejected attempt; absent when general search is entered directly |
 
-The strict route exists for exact-direction ordinary targets and uses a short
+The strict routes serve exact-direction targets and use a short
 cooperative budget (currently 50 ms). The hybrid route serves rotation-insensitive
 targets, including Pin and Crystal targets, and uses a larger budget (currently
 12 s). Both budgets are charged against the same total solve cap (currently 120 s);
@@ -217,8 +218,20 @@ pruned result and its counters are retained with the constructive rejection reas
 `generalSearchAttempt` records the preceding search's outcome, depth, state and
 candidate counts and elapsed time for either recovery outcome. On recovery success,
 the top-level counters belong to the constructor; they must not be compared with
-general-search counts as if they measured identical work. No special-material,
-rotation-insensitive or splitting domain is added by this recovery.
+general-search counts as if they measured identical work. This ordinary recovery
+adds no special-material, rotation-insensitive or splitting domain.
+
+Strict special-material recovery reuses the same exact finite-token constructor
+and replay gate, with the same 50 ms cap and work limits, after core search has
+returned a recoverable miss. Successful search paths (including shorter Pin
+plans), `exhausted`, time limits and cancellation are returned unchanged. A
+non-time safety limit does not increase the core state/shape caps: recovery runs
+the separate bounded constructor using the remaining time within the original
+120 s total cap. On rejection the original result and its limit counters remain;
+on success `generalSearchAttempt` retains the preceding outcome, `limitReason`,
+depth, state/generated counts and elapsed time. This is partial coverage of
+strict Pin/Crystal targets: unsupported construction topology, resource matching
+or a constructor deadline can still leave the original miss unresolved.
 
 ### 3.2 Bounded general search
 
@@ -323,7 +336,7 @@ below.
 | `maxLayers` | `ShapeOperationConfig`; constructive eligibility requires 4 | Constructive and core must agree on layer truncation |
 | `maxStatesPerLevel` | core beam width only | Changing it does not change constructive behaviour |
 | `preventWaste` | route gate, validator and core goal allocation | Constructive routes are entered only with `false`, but the validator still enforces it if present |
-| `orientationSensitive` | chooses strict vs hybrid routing; changes the core goal set | Strict means exact orientation; hybrid means rotation-insensitive |
+| `orientationSensitive` | chooses strict ordinary / strict special recovery vs hybrid routing; changes the core goal set | Strict means exact orientation; hybrid means rotation-insensitive |
 | `allowSplitting` | core splitter + throughput accounting; excludes constructive routes | Constructive plans contain no Splitter and no partial tokens |
 | `cleanPainting` | route eligibility, planner matching/finishing, validator and core Painter pre-filter | The rule is enforced at three layers; see 3.5 |
 | Wall time | strict 50 ms, hybrid 12 s, total solve 120 s | Construction **and** acceptance replay are charged to the same budget |

@@ -160,7 +160,8 @@ try {
     const page = await waitForPage(port, url);
     pageClient = await connectToPage(page.webSocketDebuggerUrl);
 
-    const deadline = Date.now() + 10000;
+    // The harness includes a real production generated-state-limit solve.
+    const deadline = Date.now() + 30000;
     let status;
     while (Date.now() < deadline) {
         status = await pageClient.evaluate("document.getElementById('result')?.dataset.status");

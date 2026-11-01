@@ -9,6 +9,9 @@ there is no feature flag for them.
 With unrestricted painting (`cleanPainting: false`), the same bounded constructor
 recovers ordinary `not-found-pruned` search results while preserving existing
 successful search paths.
+Strict-orientation Pin/Crystal targets also get a bounded constructive recovery
+after search pruning or a non-time state/shape limit. Existing successful paths
+are preserved; recovery uses at most 50 ms of the same total solve allowance.
 
 Maintained branch: **`codex/maintained`**. Its certificate covers the Git-selected
 source plus the original immutable inputs

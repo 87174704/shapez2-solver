@@ -155,6 +155,21 @@ async function main() {
         'unrestricted ordinary recovery failed in the module Worker');
     checks.push('strict-pruned-recovery');
 
+    const specialData = { ...constructiveSolve.data, orientationSensitive: true,
+        targetShapeCodes: ['P-----Cu:cr------'], startingShapeCodes: Array(4).fill('CuCuCuCu'),
+        enabledOperations: ['Rotator CW', 'Rotator CCW', 'Rotator 180', 'Cutter', 'Swapper',
+            'Stacker', 'Pin Pusher', 'Crystal Generator'] };
+    const special = await runWorker({ action: 'solve', data: specialData });
+    assert(special.type === 'result' && special.result.outcome === 'solved'
+        && special.result.solverRoute === 'strict-special-constructive'
+        && special.result.generalSearchAttempt?.limitReason === 'generated-states'
+        && special.result.generalSearchAttempt.generatedStates === 5000000
+        && special.result.strictConstructiveAttempt.accepted
+        && replaySolution(specialData, special.result.solutionPath, special.result).valid
+        && independentReplay(specialData, special.result.solutionPath).valid,
+        'strict special-material recovery failed in the module Worker');
+    checks.push('strict-special-recovery');
+
     const explore = await runWorker(tinyExplore);
     assert(
         explore.type === 'result'

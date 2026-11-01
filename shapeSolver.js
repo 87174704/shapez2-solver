@@ -12,18 +12,28 @@ const STRICT_CONSTRUCTIVE_CONFIG = Object.freeze({
     maxMatchingTransitions: 20000, maxOperations: 256, maxWallMs: 50,
 });
 
-function strictOrdinaryEligible(instance) {
+function strictFiniteEligible(instance, layerPattern) {
     // Bound the synchronous constructor's input domain as well as its native
-    // cooperative time/work limits. Large or special-material pools use core.
-    const ordinary = code => typeof code === 'string' && code.split(':').length <= 4
-        && code.split(':').every(layer => /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/.test(layer));
+    // cooperative time/work limits. Each caller selects its supported cells.
+    const supported = code => typeof code === 'string' && code.split(':').length <= 4
+        && code.split(':').every(layer => layerPattern.test(layer));
     return instance.targetShapeCodes.length === 1 && instance.maxLayers === 4
         && instance.orientationSensitive === true && instance.allowSplitting === false
         // Both painting modes are implemented by matching/finishing and replay.
         && (instance.cleanPainting === true || instance.cleanPainting === false)
         && instance.preventWaste === false
         && instance.startingShapeCodes.length <= 64
-        && ordinary(instance.targetShapeCodes[0]) && instance.startingShapeCodes.every(ordinary);
+        && supported(instance.targetShapeCodes[0]) && instance.startingShapeCodes.every(supported);
+}
+
+function strictOrdinaryEligible(instance) {
+    return strictFiniteEligible(instance, /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/);
+}
+
+function strictSpecialEligible(instance) {
+    return strictFiniteEligible(instance, /^(?:--|P-|[CRSWHFGXYc][rgbymcwku]){4}$/)
+        && instance.targetShapeCodes[0].split(':').some(layer => layer.match(/../g)
+            .some(cell => cell[0] === 'P' || cell[0] === 'c'));
 }
 
 async function tryStrictConstructive(instance, { construct = interiorCrystalColumnSolve,
@@ -65,6 +75,28 @@ async function recoverPrunedOrdinary(instance, result, started,
         strictConstructiveAttempt: attempt,
         generalSearchAttempt: { outcome: result.outcome, depth: result.depth,
             statesExplored: result.statesExplored, generatedStates: result.generatedStates, elapsedMs },
+        searchWallMs: now() - started };
+}
+
+async function recoverStrictSpecial(instance, result, started,
+    { now = () => performance.now(), construct = interiorCrystalColumnSolve } = {}) {
+    // Keep successful core paths, including short Pin/Crystal plans. The exact
+    // finite-token planner can recover misses without changing core safety caps.
+    const recoverable = result?.outcome === 'not-found-pruned'
+        || (result?.outcome === 'limit'
+            && ['generated-states', 'visited-states', 'shape-universe'].includes(result.limitReason));
+    if (!recoverable || !strictSpecialEligible(instance)) return result;
+    const elapsedMs = now() - started;
+    const budgetMs = Math.min(STRICT_CONSTRUCTIVE_CONFIG.maxWallMs,
+        Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - elapsedMs));
+    if (budgetMs <= 0) return result;
+    const { candidate, attempt } = await tryStrictConstructive(instance, { budgetMs, now, construct });
+    return { ...(candidate ?? result),
+        solverRoute: candidate ? 'strict-special-constructive' : 'general-search',
+        strictConstructiveAttempt: attempt,
+        generalSearchAttempt: { outcome: result.outcome, limitReason: result.limitReason ?? null,
+            depth: result.depth, statesExplored: result.statesExplored,
+            generatedStates: result.generatedStates, elapsedMs },
         searchWallMs: now() - started };
 }
 
@@ -488,7 +520,8 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
         targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel,
         preventWaste, orientationSensitive, allowSplitting, cleanPainting, null,
     );
-    return recoverPrunedOrdinary(instance, result, started);
+    const recovered = await recoverPrunedOrdinary(instance, result, started);
+    return recoverStrictSpecial(instance, recovered, started);
 }
 
 // This named seam is intentionally test-only. It leaves the Worker message
@@ -1920,6 +1953,7 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
 }
 
 const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible, recoverPrunedOrdinary,
+    strictSpecialEligible, recoverStrictSpecial,
     validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
 const hybridRoutingTestOnly = Object.freeze({ tryHybridConstructive,
     validate: (instance, path, expired) => validateHybridPlan(instance, path, operations, expired) });
