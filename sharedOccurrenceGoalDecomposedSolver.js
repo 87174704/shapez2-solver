@@ -32,6 +32,7 @@ class PublicPlanBuilder {
     constructor(instance) {
         this.config = new ShapeOperationConfig(instance.maxLayers ?? 4);
         this.enabled = new Set(instance.enabledOperations ?? []);
+        this.cleanPainting = instance.cleanPainting;
         this.startingShapeCodes = [...(instance.startingShapeCodes ?? [])];
         this.live = new Map(this.startingShapeCodes.map((code, id) => [id, code]));
         this.nextId = this.startingShapeCodes.length;
@@ -48,7 +49,15 @@ class PublicPlanBuilder {
         if (!this.enabled.has(operation)) throw new Error(`Required operation disabled: ${operation}`);
         const implementation = OPERATION_IMPL[operation];
         if (!implementation) throw new Error(`Unsupported construction operation: ${operation}`);
+        if (new Set(inputIds).size !== inputIds.length) throw new Error('Construction attempted to reuse one live token');
         const inputCodes = inputIds.map(id => this.shape(id));
+        if (operation === 'Painter' && this.cleanPainting) {
+            const shape = Shape.fromShapeCode(inputCodes[0]);
+            if (shape.numLayers !== 1 || shape.layers[0].some(part =>
+                !UNPAINTABLE_PARTS.includes(part.shape) && part.color !== UNCOLORED_CODE)) {
+                throw new Error('Construction Painter input violates cleanPainting');
+            }
+        }
         let shapes;
         try {
             shapes = implementation(
@@ -87,11 +96,12 @@ function occupiedCells(code) {
     return result;
 }
 
-function canSupply(part, targetPart, painterEnabled) {
+function canSupply(part, targetPart, painterEnabled, cleanPainting) {
     if (part.shape !== targetPart.shape) return false;
     if (UNPAINTABLE_PARTS.includes(part.shape)) return part.color === targetPart.color;
     if (targetPart.color === UNCOLORED_CODE) return part.color === UNCOLORED_CODE;
-    return part.color === targetPart.color || painterEnabled;
+    return part.color === targetPart.color
+        || (painterEnabled && (!cleanPainting || part.color === UNCOLORED_CODE));
 }
 
 function rotationOperations(from, to, enabled) {
@@ -174,7 +184,7 @@ function sharedResourceConstruct(instance, limits, overrides = {}) {
         function augment(needIndex, seen) {
             for (let atomIndex = 0; atomIndex < atoms.length; atomIndex += 1) {
                 if (seen.has(atomIndex)
-                    || !canSupply(atoms[atomIndex].part, needs[needIndex], painterEnabled)) continue;
+                    || !canSupply(atoms[atomIndex].part, needs[needIndex], painterEnabled, instance.cleanPainting)) continue;
                 seen.add(atomIndex);
                 if (atomMatch[atomIndex] === -1 || augment(atomMatch[atomIndex], seen)) {
                     atomMatch[atomIndex] = needIndex;
@@ -184,8 +194,8 @@ function sharedResourceConstruct(instance, limits, overrides = {}) {
             return false;
         }
         const order = needs.map((part, index) => ({ part, index })).sort((a, b) => {
-            const aCount = atoms.filter(atom => canSupply(atom.part, a.part, painterEnabled)).length;
-            const bCount = atoms.filter(atom => canSupply(atom.part, b.part, painterEnabled)).length;
+            const aCount = atoms.filter(atom => canSupply(atom.part, a.part, painterEnabled, instance.cleanPainting)).length;
+            const bCount = atoms.filter(atom => canSupply(atom.part, b.part, painterEnabled, instance.cleanPainting)).length;
             return aCount - bCount || a.index - b.index;
         });
         return order.every(({ index }) => augment(index, new Set()));
@@ -210,7 +220,7 @@ function sharedResourceConstruct(instance, limits, overrides = {}) {
         const nextNeeds = [...remainingNeeds];
         if (needIndex >= 0) nextNeeds.splice(needIndex, 1);
         const candidates = pool.map((atom, index) => ({ atom, index })).filter(({ atom }) => (
-            canSupply(atom.part, part, painterEnabled)
+            canSupply(atom.part, part, painterEnabled, instance.cleanPainting)
         ));
         candidates.sort((a, b) => (
             Number(a.atom.part.color !== part.color) - Number(b.atom.part.color !== part.color)

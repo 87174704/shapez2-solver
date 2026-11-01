@@ -36,11 +36,12 @@ function hasPart(shape, code) {
     return occupiedCells(shape).some(({ part }) => part.shape === code);
 }
 
-function canFinishCell(part, targetPart) {
+function canFinishCell(part, targetPart, painterEnabled, cleanPainting) {
     if (part.shape !== targetPart.shape) return false;
     if (UNPAINTABLE_PARTS.includes(part.shape)) return part.color === targetPart.color;
     if (targetPart.color === UNCOLORED_CODE) return part.color === UNCOLORED_CODE;
-    return true;
+    return part.color === targetPart.color
+        || (painterEnabled && (!cleanPainting || part.color === UNCOLORED_CODE));
 }
 
 function physicalUnary(fn, code, config) {
@@ -135,7 +136,7 @@ function rotateAtom(planAndCode, targetQuadrant, enabled, operationConfig) {
     return { plan, code };
 }
 
-function finishAtom(planAndCode, demand, enabled, operationConfig) {
+function finishAtom(planAndCode, demand, enabled, operationConfig, cleanPainting) {
     let result = rotateAtom(planAndCode, demand.quadrant, enabled, operationConfig);
     if (!result) return null;
     const cell = occupiedCells(Shape.fromShapeCode(result.code))[0];
@@ -143,7 +144,9 @@ function finishAtom(planAndCode, demand, enabled, operationConfig) {
     if (cell.part.color !== demand.part.color) {
         if (UNPAINTABLE_PARTS.includes(cell.part.shape)
             || demand.part.color === UNCOLORED_CODE
-            || !enabled.has('Painter')) return null;
+            || !enabled.has('Painter')
+            || (cleanPainting && (cell.part.color !== UNCOLORED_CODE
+                || Shape.fromShapeCode(result.code).numLayers !== 1))) return null;
         const outputs = topPaint(Shape.fromShapeCode(result.code), demand.part.color, operationConfig)
             .map(shape => shape.toShapeCode());
         result = {
@@ -559,7 +562,7 @@ export async function mixedPinCrystalGoalDecomposedSolve(instance, experimentCon
         if (!recipeCache.has(key)) {
             const localCounters = { extractionStates: 0 };
             const predicate = demand.kind === 'exact'
-                ? part => canFinishCell(part, demand.part)
+                ? part => canFinishCell(part, demand.part, enabled.has('Painter'), instance.cleanPainting)
                 : part => !UNPAINTABLE_PARTS.includes(part.shape) && part.shape !== PART_CODES.NOTHING;
             const recipe = findExtractionRecipe(
                 sourceCode, predicate, enabled, operationConfig, limits, localCounters, timedOut,
@@ -641,7 +644,7 @@ export async function mixedPinCrystalGoalDecomposedSolve(instance, experimentCon
         const leaf = Object.freeze({ kind: 'leaf', inputId: sourceIndex, code: startingShapeCodes[sourceIndex] });
         const wrapped = wrapRecipe(leaf, recipe);
         return demand.kind === 'exact'
-            ? finishAtom(wrapped, demand, enabled, operationConfig)
+            ? finishAtom(wrapped, demand, enabled, operationConfig, instance.cleanPainting)
             : rotateAtom(wrapped, demand.quadrant, enabled, operationConfig);
     }
 

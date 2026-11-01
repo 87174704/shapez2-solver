@@ -5,7 +5,7 @@ import {
 } from './shapeOperations.js';
 import { COLOR_CODES, UNCOLORED_CODE, UNPAINTABLE_PARTS } from './shapeConstants.js';
 import { interiorCrystalColumnSolve } from './interiorCrystalColumnSolver.js';
-import { validateStrictPlan } from './constructive/validate-strict-plan.js';
+import { validateStrictPlan, validateHybridPlan } from './constructive/validate-strict-plan.js';
 
 const STRICT_CONSTRUCTIVE_CONFIG = Object.freeze({
     id: 'strict-ordinary-v1', maxExtractionOperations: 8, maxExtractionStates: 6000,
@@ -54,6 +54,32 @@ const PRODUCTION_CONSTRUCTIVE_CONFIG = Object.freeze({
     maxOperations: 768,
     maxWallMs: 12000,
 });
+
+async function tryHybridConstructive(instance, { construct = interiorCrystalColumnSolve,
+    now = () => performance.now() } = {}) {
+    const started = now();
+    const budgetMs = PRODUCTION_CONSTRUCTIVE_CONFIG.maxWallMs;
+    const expired = () => now() - started >= budgetMs;
+    let candidate, reason;
+    try {
+        candidate = await construct(instance, PRODUCTION_CONSTRUCTIVE_CONFIG);
+        reason = expired() ? 'budget' : !Array.isArray(candidate?.solutionPath) ? 'construction-failed' : null;
+        if (!reason) {
+            const acceptance = validateHybridPlan(instance, candidate.solutionPath, operations, expired);
+            reason = acceptance.valid ? null : acceptance.reason;
+        }
+        if (!reason && (candidate.outcome !== 'solved' || candidate.depth !== candidate.solutionPath.length)) {
+            reason = 'result-metadata';
+        }
+    } catch (error) {
+        reason = 'construction-error';
+    }
+    const elapsedMs = now() - started;
+    if (elapsedMs >= budgetMs) reason = 'budget';
+    const attempt = { budgetMs, elapsedMs, accepted: reason === null, fallback: reason !== null,
+        reason, architectureStatus: candidate?.architectureStatus ?? null };
+    return { candidate: reason === null ? candidate : null, attempt };
+}
 
 const operations = {
     "Rotator CW": { fn: rotate90CW, inputCount: 1, cacheId: 0 },
@@ -421,28 +447,20 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     }
     const constructiveEligible = targetShapeCodes.length === 1
         && maxLayers === 4
+        && preventWaste === false
         && orientationSensitive === false
         && allowSplitting === false
         && cleanPainting === true;
     if (constructiveEligible) {
-        const instance = {
-            targetShapeCodes,
-            startingShapeCodes,
-            enabledOperations,
-            maxLayers,
-            maxStatesPerLevel,
-            preventWaste,
-            orientationSensitive,
-            allowSplitting,
-            cleanPainting,
-        };
-        const constructed = await interiorCrystalColumnSolve(
-            instance,
-            PRODUCTION_CONSTRUCTIVE_CONFIG,
-        );
-        if (Array.isArray(constructed.solutionPath)) {
-            return { ...constructed, solverRoute: 'constructive-hybrid' };
-        }
+        const { candidate, attempt } = await tryHybridConstructive(instance);
+        if (candidate) return { ...candidate, solverRoute: 'constructive-hybrid',
+            hybridConstructiveAttempt: attempt, searchWallMs: performance.now() - started };
+        const remainingMs = Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - (performance.now() - started));
+        const result = await shapeSolverCore(targetShapeCodes, startingShapeCodes, enabledOperations,
+            maxLayers, maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting,
+            { useCoarseness: true, limits: { ...DEFAULT_SOLVER_LIMITS, maxSearchTimeMs: remainingMs } });
+        return { ...result, solverRoute: 'general-search', hybridConstructiveAttempt: attempt,
+            searchWallMs: performance.now() - started };
     }
     return shapeSolverCore(
         targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel,
@@ -1880,4 +1898,6 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
 
 const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible,
     validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
-export { BoundedStateCollector, shapeExplorerTestOnly, shapeSolver, shapeSolverTestOnly, strictRoutingTestOnly };
+const hybridRoutingTestOnly = Object.freeze({ tryHybridConstructive,
+    validate: (instance, path, expired) => validateHybridPlan(instance, path, operations, expired) });
+export { BoundedStateCollector, shapeExplorerTestOnly, shapeSolver, shapeSolverTestOnly, strictRoutingTestOnly, hybridRoutingTestOnly };

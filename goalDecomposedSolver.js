@@ -55,11 +55,12 @@ function isOrdinaryTarget(shape) {
     ));
 }
 
-function canFinishCell(part, targetPart) {
+function canFinishCell(part, targetPart, painterEnabled, cleanPainting) {
     if (part.shape !== targetPart.shape) return false;
     if (UNPAINTABLE_PARTS.includes(part.shape)) return part.color === targetPart.color;
     if (targetPart.color === UNCOLORED_CODE) return part.color === UNCOLORED_CODE;
-    return true;
+    return part.color === targetPart.color
+        || (painterEnabled && (!cleanPainting || part.color === UNCOLORED_CODE));
 }
 
 function physicalUnary(fn, code, config) {
@@ -73,7 +74,7 @@ function physicalUnary(fn, code, config) {
     }
 }
 
-function findExtractionRecipe(sourceCode, targetPart, enabled, config, limits, counters, timedOut) {
+function findExtractionRecipe(sourceCode, targetPart, enabled, config, limits, counters, timedOut, cleanPainting) {
     const queue = [{ code: sourceCode, steps: [] }];
     const visited = new Set([sourceCode]);
     let cursor = 0;
@@ -86,7 +87,7 @@ function findExtractionRecipe(sourceCode, targetPart, enabled, config, limits, c
         counters.extractionStates += 1;
         const shape = Shape.fromShapeCode(current.code);
         const cells = occupiedCells(shape);
-        if (cells.length === 1 && canFinishCell(cells[0].part, targetPart)) {
+        if (cells.length === 1 && canFinishCell(cells[0].part, targetPart, enabled.has('Painter'), cleanPainting)) {
             return { code: current.code, steps: current.steps };
         }
         if (current.steps.length >= limits.maxExtractionOperations) continue;
@@ -158,7 +159,7 @@ function rotateAtom(planAndCode, targetQuadrant, enabled, operationConfig) {
     return { plan, code };
 }
 
-function finishAtom(planAndCode, demand, enabled, operationConfig) {
+function finishAtom(planAndCode, demand, enabled, operationConfig, cleanPainting) {
     let result = rotateAtom(planAndCode, demand.quadrant, enabled, operationConfig);
     if (!result) return null;
     const cell = occupiedCells(Shape.fromShapeCode(result.code))[0];
@@ -166,7 +167,9 @@ function finishAtom(planAndCode, demand, enabled, operationConfig) {
     if (cell.part.color !== demand.part.color) {
         if (UNPAINTABLE_PARTS.includes(cell.part.shape)
             || demand.part.color === UNCOLORED_CODE
-            || !enabled.has('Painter')) return null;
+            || !enabled.has('Painter')
+            || (cleanPainting && (cell.part.color !== UNCOLORED_CODE
+                || Shape.fromShapeCode(result.code).numLayers !== 1))) return null;
         const outputs = topPaint(
             Shape.fromShapeCode(result.code), demand.part.color, operationConfig,
         ).map(shape => shape.toShapeCode());
@@ -317,7 +320,7 @@ export async function goalDecomposedSolve(instance, experimentConfig) {
         if (!recipeCache.has(key)) {
             const localCounters = { extractionStates: 0 };
             const recipe = findExtractionRecipe(
-                sourceCode, demand.part, enabled, operationConfig, limits, localCounters, timedOut,
+                sourceCode, demand.part, enabled, operationConfig, limits, localCounters, timedOut, instance.cleanPainting,
             );
             counters.extractionStates += localCounters.extractionStates;
             recipeCache.set(key, recipe);
@@ -395,7 +398,7 @@ export async function goalDecomposedSolve(instance, experimentConfig) {
         const leaf = Object.freeze({
             kind: 'leaf', inputId: sourceIndex, code: startingShapeCodes[sourceIndex],
         });
-        const atom = finishAtom(wrapRecipe(leaf, recipe), demand, enabled, operationConfig);
+        const atom = finishAtom(wrapRecipe(leaf, recipe), demand, enabled, operationConfig, instance.cleanPainting);
         if (!atom) {
             return resultBase(limits, started, counters, {
                 solutionPath: null, depth: 0, statesExplored: counters.extractionStates,

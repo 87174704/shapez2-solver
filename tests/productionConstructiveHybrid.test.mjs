@@ -85,7 +85,9 @@ test('eligible unsupported construction falls back to bounded search', async () 
         allowSplitting: false,
         cleanPainting: true,
     });
-    assert.equal(result.solverRoute, undefined);
+    assert.equal(result.solverRoute, 'general-search');
+    assert.equal(result.hybridConstructiveAttempt.fallback, true);
+    assert.equal(result.hybridConstructiveAttempt.reason, 'construction-failed');
     assert.equal(result.solutionPath, null);
     assert.equal(result.outcome, 'exhausted');
 });

@@ -6,11 +6,29 @@ const COLORS = new Set(Object.values(COLOR_CODES));
 // Deliberately narrow: one exact goal, whole finite tokens, no splitting.
 // Re-executes Physics v2, without importing the Node test oracle.
 export function validateStrictPlan(instance, path, operations, expired = () => false) {
-    const reject = reason => ({ valid: false, reason });
     if (instance.orientationSensitive !== true || instance.allowSplitting !== false
         || instance.targetShapeCodes.length !== 1 || !Array.isArray(path) || path.length > 256) {
-        return reject('unsupported-plan');
+        return { valid: false, reason: 'unsupported-plan' };
     }
+    return validateExactFinitePlan(instance, path, operations, expired);
+}
+
+// Hybrid constructors also produce ONE exact goal from whole finite tokens.
+// An exact goal is sufficient when rotation is allowed; never rotate/canonicalize
+// intermediate inputs or outputs during replay. Splitting/throughput and multiple
+// goals remain outside this validator's domain. Keep strict routing's gate above.
+export function validateHybridPlan(instance, path, operations, expired = () => false) {
+    if (instance.orientationSensitive !== false || instance.allowSplitting !== false
+        || instance.preventWaste !== false || instance.cleanPainting !== true
+        || instance.maxLayers !== 4 || instance.targetShapeCodes.length !== 1
+        || !Array.isArray(path) || path.length > 768) {
+        return { valid: false, reason: 'unsupported-plan' };
+    }
+    return validateExactFinitePlan(instance, path, operations, expired);
+}
+
+function validateExactFinitePlan(instance, path, operations, expired) {
+    const reject = reason => ({ valid: false, reason });
     const live = new Map(instance.startingShapeCodes.map((shape, id) => [id, shape]));
     const used = new Set(live.keys());
     const config = new ShapeOperationConfig(instance.maxLayers);

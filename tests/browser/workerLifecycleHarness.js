@@ -1,4 +1,6 @@
 import { startWorkerTask } from '../../workerLifecycle.js';
+import { replaySolution } from '../helpers/shapeSolverOracle.mjs';
+import { replay as independentReplay } from '../../tools/release1/replay.mjs';
 
 const workerUrl = new URL('../../shapeSolver.js', import.meta.url);
 const busyWorkerUrl = new URL('./busyLifecycleWorker.js', import.meta.url);
@@ -119,6 +121,25 @@ async function main() {
         `constructive solve did not complete in the module Worker: ${JSON.stringify(constructive)}`,
     );
     checks.push('constructive-solve-result');
+
+    for (const orientationSensitive of [false, true]) {
+        for (const source of ['Cb------', 'Cu------']) {
+            const data = { ...constructiveSolve.data, targetShapeCodes: ['Cr------'],
+                startingShapeCodes: [source], enabledOperations: ['Painter'], maxStatesPerLevel: 100,
+                orientationSensitive };
+            const response = await runWorker({ action: 'solve', data });
+            assert(response.type === 'result', 'clean paint Worker returned an error');
+            const result = response.result;
+            if (source === 'Cb------') {
+                assert(result.outcome === 'exhausted' && result.solutionPath === null,
+                    'Worker accepted illegal recoloring');
+            } else {
+                assert(result.outcome === 'solved' && replaySolution(data, result.solutionPath, result).valid
+                    && independentReplay(data, result.solutionPath).valid, 'Worker clean painting failed dual replay');
+            }
+        }
+    }
+    checks.push('constructive-clean-painting-controls');
 
     const explore = await runWorker(tinyExplore);
     assert(

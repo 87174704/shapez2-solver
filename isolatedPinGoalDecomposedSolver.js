@@ -49,11 +49,12 @@ function occupiedCells(shape) {
     return cells;
 }
 
-function canFinishCell(part, targetPart) {
+function canFinishCell(part, targetPart, painterEnabled, cleanPainting) {
     if (part.shape !== targetPart.shape) return false;
     if (UNPAINTABLE_PARTS.includes(part.shape)) return part.color === targetPart.color;
     if (targetPart.color === UNCOLORED_CODE) return part.color === UNCOLORED_CODE;
-    return true;
+    return part.color === targetPart.color
+        || (painterEnabled && (!cleanPainting || part.color === UNCOLORED_CODE));
 }
 
 function physicalUnary(fn, code, config) {
@@ -258,14 +259,16 @@ function rotateAtom(builder, id, targetQuadrant) {
     return id;
 }
 
-function finishAtom(builder, id, demand) {
+function finishAtom(builder, id, demand, cleanPainting) {
     id = rotateAtom(builder, id, demand.quadrant);
     if (id === null) return null;
     let cell = occupiedCells(Shape.fromShapeCode(builder.shape(id)))[0];
     if (cell.part.shape !== demand.part.shape) return null;
     if (cell.part.color !== demand.part.color) {
         if (UNPAINTABLE_PARTS.includes(cell.part.shape)
-            || demand.part.color === UNCOLORED_CODE || !builder.enabled.has('Painter')) return null;
+            || demand.part.color === UNCOLORED_CODE || !builder.enabled.has('Painter')
+            || (cleanPainting && (cell.part.color !== UNCOLORED_CODE
+                || Shape.fromShapeCode(builder.shape(id)).numLayers !== 1))) return null;
         const outputs = builder.operate('Painter', [id], { color: demand.part.color });
         if (outputs.length !== 1) return null;
         [id] = outputs;
@@ -336,7 +339,7 @@ export async function isolatedPinGoalDecomposedSolve(instance, experimentConfig)
         if (!recipeCache.has(key)) {
             const localCounters = { extractionStates: 0 };
             const predicate = demand.kind === 'exact'
-                ? part => canFinishCell(part, demand.part)
+                ? part => canFinishCell(part, demand.part, enabled.has('Painter'), instance.cleanPainting)
                 : part => part.shape !== PART_CODES.NOTHING
                     && !UNPAINTABLE_PARTS.includes(part.shape);
             const recipe = findExtractionRecipe(
@@ -420,7 +423,7 @@ export async function isolatedPinGoalDecomposedSolve(instance, experimentConfig)
         }
         const sourceIndex = demandSource.get(demand.id);
         let id = applyRecipe(builder, sourceIndex, recipeFor(sourceIndex, demand));
-        id = kind === 'exact' ? finishAtom(builder, id, demand) : rotateAtom(builder, id, quadrant);
+        id = kind === 'exact' ? finishAtom(builder, id, demand, instance.cleanPainting) : rotateAtom(builder, id, quadrant);
         if (id === null) throw new Error(`Unable to materialize ${demand.id}`);
         return id;
     }
