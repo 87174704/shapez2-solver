@@ -102,10 +102,11 @@ export function sourceFiles({ root = ROOT, commit } = {}) {
 }
 
 export async function applicationFiles({ root = ROOT, commit } = {}) {
-  // Current Git inventory, not a frozen Release runtime list. Reference closure is
-  // checked independently by static verification (imports, workers, HTML and CSS).
-  return sourceFiles({ root, commit }).filter(f => /^[^/]+\.js$/.test(f) ||
-    /^(constructive|locales)\/.*\.js$/.test(f) || f.startsWith('images/'));
+  // Current Git inventory, not a frozen Release runtime list. The browser
+  // reference closure decides which modules are genuinely reachable; build and
+  // static verification share it so omission of a required module fails loudly.
+  const { applicationClosure } = await import('../tools/static-build/application-closure.mjs');
+  return applicationClosure({ root, files: sourceFiles({ root, commit }) });
 }
 
 export const identityDigest = identity => sha256(canonical(identity));
