@@ -628,9 +628,10 @@ files by editing the frozen side.
 
 [benchmarks/tools/benchmark-core.mjs](benchmarks/tools/benchmark-core.mjs),
 `validate-benchmark.mjs` and `repository-policy.mjs` are the shared validation
-basis. They use production shape operations for witness replay, so their replay is
-a production-physics semantic check, not the independent model. The independent
-check is the separate layer described in section 4.
+basis. `benchmark-core.mjs` (and the validators built on it) uses production shape
+operations for witness replay, so that replay is a production-physics semantic
+check, not the independent model. The independent check is the separate layer
+described in section 4.
 
 Two standalone research solvers are deliberately outside the production closure:
 [targetConditionedSolver.js](targetConditionedSolver.js) and
