@@ -141,6 +141,20 @@ async function main() {
     }
     checks.push('constructive-clean-painting-controls');
 
+    const recoveryData = { ...tinySolve.data, targetShapeCodes: ['WuCuRuSu'],
+        startingShapeCodes: ['CuCuCuCu', 'RuRuRuRu', 'SuSuSuSu', 'WuWuWuWu'],
+        enabledOperations: ['Rotator CW', 'Rotator CCW', 'Rotator 180', 'Half Destroyer', 'Cutter', 'Stacker'],
+        maxStatesPerLevel: 100 };
+    const recovery = await runWorker({ action: 'solve', data: recoveryData });
+    assert(recovery.type === 'result' && recovery.result.outcome === 'solved'
+        && recovery.result.solverRoute === 'strict-ordinary-constructive'
+        && recovery.result.generalSearchAttempt?.outcome === 'not-found-pruned'
+        && recovery.result.strictConstructiveAttempt.accepted
+        && replaySolution(recoveryData, recovery.result.solutionPath, recovery.result).valid
+        && independentReplay(recoveryData, recovery.result.solutionPath).valid,
+        'unrestricted ordinary recovery failed in the module Worker');
+    checks.push('strict-pruned-recovery');
+
     const explore = await runWorker(tinyExplore);
     assert(
         explore.type === 'result'

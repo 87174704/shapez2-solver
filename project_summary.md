@@ -179,11 +179,12 @@ The Solver has two families behind one public function:
 2. a **constructive delegation ladder** that can produce an exact plan directly for
    narrow parts of the input space.
 
-The ladder is tried first only when its eligibility conditions hold. A rejected
-constructive candidate falls back to the general search with the same public
-parameters. This is the central design fact: the constructive code is a fast path,
-not a replacement for search, and every failure must degrade to search rather than
-return a wrong result.
+The ladder is tried first for eligible clean-painting requests; eligible
+unrestricted ordinary requests try it only after beam-pruned search failure.
+A rejected initial constructive candidate falls back to general search with the
+same public parameters; a rejected recovery candidate retains that search's
+failure. Constructive code supplements search, and every candidate must pass replay
+before it can replace a search result.
 
 ### 3.1 Public routing
 
@@ -191,7 +192,7 @@ return a wrong result.
 
 | Route | Eligibility (current code) | Result marker |
 | --- | --- | --- |
-| Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; `cleanPainting === true`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers | `solverRoute: 'strict-ordinary-constructive'` |
+| Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; boolean `cleanPainting`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers; clean painting tries construction first, unrestricted painting only after `not-found-pruned` | `solverRoute: 'strict-ordinary-constructive'` |
 | Hybrid constructive | one target; `maxLayers === 4`; `preventWaste === false`; `orientationSensitive === false`; `allowSplitting === false`; `cleanPainting === true`; no shape-family restriction | `solverRoute: 'constructive-hybrid'` |
 | General search | everything else, or any constructive rejection | `solverRoute` is `'general-search'` after a rejected attempt; absent when general search is entered directly |
 
@@ -199,13 +200,25 @@ The strict route exists for exact-direction ordinary targets and uses a short
 cooperative budget (currently 50 ms). The hybrid route serves rotation-insensitive
 targets, including Pin and Crystal targets, and uses a larger budget (currently
 12 s). Both budgets are charged against the same total solve cap (currently 120 s);
-after a failure, the remaining time is handed to general search. `maxStatesPerLevel`
+after an initial construction failure, the remaining time is handed to general search. `maxStatesPerLevel`
 is a beam-size control for general search only; constructive stages ignore it.
 
 The strict route is unconditional code, not a feature flag. The
 `strictOrdinaryConstructive` object in the root [release.json](release.json) is
 historical Release 1 metadata; it does not configure the current runtime. See
 [README.md](README.md) for the same statement.
+
+For `cleanPainting === false`, strict ordinary construction is a recovery step
+after general search reports `not-found-pruned`. Existing search successes,
+`exhausted` and safety `limit` results keep their original paths and metadata.
+Recovery uses at most 50 ms of the remaining total solve allowance, including
+acceptance replay; it never resets the deadline. If recovery fails, the original
+pruned result and its counters are retained with the constructive rejection reason.
+`generalSearchAttempt` records the preceding search's outcome, depth, state and
+candidate counts and elapsed time for either recovery outcome. On recovery success,
+the top-level counters belong to the constructor; they must not be compared with
+general-search counts as if they measured identical work. No special-material,
+rotation-insensitive or splitting domain is added by this recovery.
 
 ### 3.2 Bounded general search
 

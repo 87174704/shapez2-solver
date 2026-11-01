@@ -6,6 +6,9 @@ It supports shape operations, constructive solving and visual solution graphs,
 serves 13 UI languages, and builds as two static profiles (`global`, `china`).
 Strict-orientation ordinary targets use bounded constructive attempts by default;
 there is no feature flag for them.
+With unrestricted painting (`cleanPainting: false`), the same bounded constructor
+recovers ordinary `not-found-pruned` search results while preserving existing
+successful search paths.
 
 Maintained branch: **`codex/maintained`**. Its certificate covers the Git-selected
 source plus the original immutable inputs

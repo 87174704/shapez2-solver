@@ -19,7 +19,9 @@ function strictOrdinaryEligible(instance) {
         && code.split(':').every(layer => /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/.test(layer));
     return instance.targetShapeCodes.length === 1 && instance.maxLayers === 4
         && instance.orientationSensitive === true && instance.allowSplitting === false
-        && instance.cleanPainting === true && instance.preventWaste === false
+        // Both painting modes are implemented by matching/finishing and replay.
+        && (instance.cleanPainting === true || instance.cleanPainting === false)
+        && instance.preventWaste === false
         && instance.startingShapeCodes.length <= 64
         && ordinary(instance.targetShapeCodes[0]) && instance.startingShapeCodes.every(ordinary);
 }
@@ -44,6 +46,26 @@ async function tryStrictConstructive(instance, { construct = interiorCrystalColu
     const attempt = { budgetMs, elapsedMs, accepted: reason === null, fallback: reason !== null,
         reason, architectureStatus: candidate?.architectureStatus ?? null };
     return { candidate: reason === null ? candidate : null, attempt };
+}
+
+async function recoverPrunedOrdinary(instance, result, started,
+    { now = () => performance.now(), construct = interiorCrystalColumnSolve } = {}) {
+    // Preserve unrestricted painting's existing successful search paths. Only
+    // recover beam-pruned ordinary misses, using the existing bounded planner
+    // and replay gate, with no increase to the total solve time allowance.
+    if (result?.outcome !== 'not-found-pruned' || instance.cleanPainting !== false
+        || !strictOrdinaryEligible(instance)) return result;
+    const elapsedMs = now() - started;
+    const budgetMs = Math.min(STRICT_CONSTRUCTIVE_CONFIG.maxWallMs,
+        Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - elapsedMs));
+    if (budgetMs <= 0) return result;
+    const { candidate, attempt } = await tryStrictConstructive(instance, { budgetMs, now, construct });
+    return { ...(candidate ?? result),
+        solverRoute: candidate ? 'strict-ordinary-constructive' : 'general-search',
+        strictConstructiveAttempt: attempt,
+        generalSearchAttempt: { outcome: result.outcome, depth: result.depth,
+            statesExplored: result.statesExplored, generatedStates: result.generatedStates, elapsedMs },
+        searchWallMs: now() - started };
 }
 
 const PRODUCTION_CONSTRUCTIVE_CONFIG = Object.freeze({
@@ -433,7 +455,7 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     const started = performance.now();
     const instance = { targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers,
         maxStatesPerLevel, preventWaste, orientationSensitive, allowSplitting, cleanPainting };
-    if (strictOrdinaryEligible(instance)) {
+    if (strictOrdinaryEligible(instance) && cleanPainting === true) {
         const { candidate, attempt } = await tryStrictConstructive(instance);
         if (candidate) return { ...candidate, solverRoute: 'strict-ordinary-constructive',
             strictConstructiveAttempt: attempt, searchWallMs: performance.now() - started };
@@ -462,10 +484,11 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
         return { ...result, solverRoute: 'general-search', hybridConstructiveAttempt: attempt,
             searchWallMs: performance.now() - started };
     }
-    return shapeSolverCore(
+    const result = await shapeSolverCore(
         targetShapeCodes, startingShapeCodes, enabledOperations, maxLayers, maxStatesPerLevel,
         preventWaste, orientationSensitive, allowSplitting, cleanPainting, null,
     );
+    return recoverPrunedOrdinary(instance, result, started);
 }
 
 // This named seam is intentionally test-only. It leaves the Worker message
@@ -1896,7 +1919,7 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
     return makeResult('complete', null, depthReached);
 }
 
-const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible,
+const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible, recoverPrunedOrdinary,
     validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
 const hybridRoutingTestOnly = Object.freeze({ tryHybridConstructive,
     validate: (instance, path, expired) => validateHybridPlan(instance, path, operations, expired) });

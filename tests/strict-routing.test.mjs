@@ -94,7 +94,7 @@ test('default production routing and real construction failure fallback retain c
 });
 test('unsupported domains keep original dispatch', () => {
     for (const delta of [{ orientationSensitive: false }, { allowSplitting: true }, { maxLayers: 2 },
-        { cleanPainting: false }, { preventWaste: true }, { targetShapeCodes: ['P-------'] },
+        { cleanPainting: null }, { cleanPainting: undefined }, { preventWaste: true }, { targetShapeCodes: ['P-------'] },
         { targetShapeCodes: ['cr------'] }, { startingShapeCodes: Array(65).fill('Ru------') }]) {
         assert.equal(seam.strictOrdinaryEligible({ ...base, ...delta }), false);
     }
