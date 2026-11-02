@@ -160,8 +160,9 @@ try {
     const page = await waitForPage(port, url);
     pageClient = await connectToPage(page.webSocketDebuggerUrl);
 
-    // The harness includes a real production generated-state-limit solve.
-    const deadline = Date.now() + 30000;
+    // Four serial production state-limit solves, including inventory disposal.
+    // This is the observation window for the suite, not a Solver time limit.
+    const deadline = Date.now() + 45000;
     let status;
     while (Date.now() < deadline) {
         status = await pageClient.evaluate("document.getElementById('result')?.dataset.status");

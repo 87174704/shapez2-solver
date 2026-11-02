@@ -29,7 +29,19 @@ export function validateHybridPlan(instance, path, operations, expired = () => f
     return validateExactFinitePlan(instance, path, operations, expired);
 }
 
-function validateExactFinitePlan(instance, path, operations, expired) {
+// Also exposes the physically replayed inventory for bounded disposal. Prefixes
+// use preventWaste:false only while generating a candidate; final acceptance
+// must call this again with the original preventWaste:true request.
+export function validateDisposalPlan(instance, path, operations, expired = () => false) {
+    if (![true, false].includes(instance.orientationSensitive) || instance.allowSplitting !== false
+        || ![true, false].includes(instance.preventWaste) || instance.maxLayers !== 4
+        || instance.targetShapeCodes.length !== 1 || !Array.isArray(path) || path.length > 256) {
+        return { valid: false, reason: 'unsupported-plan' };
+    }
+    return validateExactFinitePlan(instance, path, operations, expired, true);
+}
+
+function validateExactFinitePlan(instance, path, operations, expired, includeInventory = false) {
     const reject = reason => ({ valid: false, reason });
     const live = new Map(instance.startingShapeCodes.map((shape, id) => [id, shape]));
     const used = new Set(live.keys());
@@ -75,6 +87,8 @@ function validateExactFinitePlan(instance, path, operations, expired) {
         const target = instance.targetShapeCodes[0];
         if (![...live.values()].includes(target)) return reject('exact-goal');
         if (instance.preventWaste && [...live.values()].some(code => code !== target)) return reject('waste');
+        if (includeInventory) return { valid: true, reason: null,
+            inventory: [...live].map(([id, shape]) => ({ id, shape })) };
         return { valid: true, reason: null };
     } catch (error) {
         return reject(error.message);

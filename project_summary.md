@@ -188,7 +188,7 @@ before it can replace a search result.
 
 ### 3.1 Public routing
 
-[shapeSolver.js](shapeSolver.js) implements five routes:
+[shapeSolver.js](shapeSolver.js) implements six routes:
 
 | Route | Eligibility (current code) | Result marker |
 | --- | --- | --- |
@@ -196,6 +196,7 @@ before it can replace a search result.
 | Strict special constructive recovery | same finite-token, layer, resource-count and parameter bounds as strict ordinary; target contains Pin or Crystal; target/starting cells may additionally be `P-` or coloured Crystal; only after general search reports `not-found-pruned` or a `generated-states`, `visited-states` or `shape-universe` limit | `solverRoute: 'strict-special-constructive'` |
 | Hybrid constructive | one target; `maxLayers === 4`; `preventWaste === false`; `orientationSensitive === false`; `allowSplitting === false`; `cleanPainting === true`; no shape-family restriction | `solverRoute: 'constructive-hybrid'` |
 | Rotatable special repaint recovery | same bounded four-cell/finite-token special-material domain as strict special recovery, but `orientationSensitive === false` and `cleanPainting === false`; only after `not-found-pruned` or a generated/visited/shape-universe limit | `solverRoute: 'repaint-special-constructive'` |
+| Waste disposal recovery | single target; four-cell ordinary/Pin/Crystal domain, four-layer cap, at most 64 initial whole tokens; `preventWaste === true`, no splitting, boolean orientation and painting modes, Half Destroyer enabled; only after pruning or a generated/visited/shape-universe limit | `solverRoute: 'waste-disposal-constructive'` |
 | General search | everything else, or any constructive rejection | `solverRoute` is `'general-search'` after a rejected attempt; absent when general search is entered directly |
 
 The strict routes serve exact-direction targets and use a short
@@ -248,6 +249,25 @@ status; `generalSearchAttempt` preserves the preceding outcome, limit reason and
 counts. Rejected candidates retain the original search result. Existing successful
 search paths, exhaustion, cancellation and time limits bypass recovery. This route
 does not add target rotation postprocessing or waste disposal.
+
+Waste disposal recovery generates one existing bounded constructive plan with
+waste allowed, then replays its full finite inventory. It protects one exact
+target occurrence by ID and consumes every other occurrence, including surplus
+copies of the target. For four-cell shapes, Half Destroyer leaves only cells
+0/1; a physical 180-degree turn (or two enabled CW/CCW quarter turns) followed by
+another Half Destroyer erases that remainder. Every output comes from production
+physics; only physically empty outputs are omitted. Without an available half
+turn, a nonempty first output causes conservative rejection. This is a sufficient
+rule, not a complete characterization of disposal without Half Destroyer.
+
+The cleanup module [dispose-inventory.js](constructive/dispose-inventory.js) has
+no search, persistent cache or binary resource combinations. It uses at most 3–4
+operations per leftover, subject to the same combined 256-operation cap. Prefix
+replay, disposal and final replay share one remaining budget of at most 50 ms;
+final acceptance uses the original `preventWaste: true` request. A missing
+operation, invalid plan, deadline or operation-cap rejection preserves the
+original search failure, with `wasteDisposalAttempt` diagnostics. Existing core
+successes and all `preventWaste: false` routes are unchanged.
 
 ### 3.2 Bounded general search
 
@@ -368,11 +388,11 @@ strict acceptance share the existing 50 ms recovery budget and 120 s total cap.
 | `enabledOperations` | into the instance, then planners and the validator | A required disabled operation makes the stage unsupported; it must fall back, not use it silently |
 | `maxLayers` | `ShapeOperationConfig`; constructive eligibility requires 4 | Constructive and core must agree on layer truncation |
 | `maxStatesPerLevel` | core beam width only | Changing it does not change constructive behaviour |
-| `preventWaste` | route gate, validator and core goal allocation | Constructive routes are entered only with `false`, but the validator still enforces it if present |
+| `preventWaste` | route gate, validator and core goal allocation | Ordinary routes require `false`; the separate waste recovery replays a generated prefix and bounded disposal, then accepts only under original `true` |
 | `orientationSensitive` | chooses strict routing vs hybrid / special repaint recovery; changes the core goal set | Strict means exact orientation; hybrid means rotation-insensitive |
 | `allowSplitting` | core splitter + throughput accounting; excludes constructive routes | Constructive plans contain no Splitter and no partial tokens |
 | `cleanPainting` | route eligibility, planner matching/finishing, validator and core Painter pre-filter | The rule is enforced at three layers; see 3.5 |
-| Wall time | strict / special repaint recovery 50 ms, hybrid 12 s, total solve 120 s | Construction **and** acceptance replay are charged to the same budget |
+| Wall time | strict / special repaint / waste recovery 50 ms, hybrid 12 s, total solve 120 s | Construction, disposal and acceptance replay are charged to the same budget |
 | Resource/matching limits | extraction states, matching transitions, operation count, wall time | Each stage checks its own config; the current values are in `shapeSolver.js` and the planners |
 
 Constructive plans use finite, single-use tokens: every input ID must be live and
@@ -392,15 +412,17 @@ The router applies a narrow domain gate and then replays the path with productio
 operations:
 
 - [validate-strict-plan.js](constructive/validate-strict-plan.js) exports
-  `validateStrictPlan` and `validateHybridPlan`. Both share
+  `validateStrictPlan`, `validateHybridPlan` and `validateDisposalPlan`. They share
   `validateExactFinitePlan`.
 - The gate rejects unsupported parameter combinations, paths longer than 256
   (strict) or 768 (hybrid), unknown or disabled operations, wrong arity, malformed
   or extra parameters, colours outside the colour set, `cleanPainting` violations,
   production output mismatches, missing/duplicate/spent input IDs, reused output
   IDs, a missing exact goal, and remaining waste when the instance requests it.
-  The production constructive routes always pass `preventWaste: false`; the shared
-  validator still enforces the rule for its tests and future domains.
+  The ordinary production constructive routes pass `preventWaste: false`; the shared
+  validator enforces waste prevention for final disposal acceptance. The disposal
+  validator additionally returns the replayed inventory to build the cleanup
+  suffix; generation alone is never accepted for a waste-preventing request.
 - Swapper outputs are compared as an unordered multiset; all other operations are
   ordered. Empty operation outputs are removed from the expected list, so a
   declared path must contain only the non-empty outputs.

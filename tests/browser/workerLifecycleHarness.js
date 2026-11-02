@@ -185,6 +185,20 @@ async function main() {
         'strict rotated decomposition failed physical inverse rotation in the module Worker');
     checks.push('strict-rotation-recovery');
 
+    const wasteData = { ...specialData, preventWaste: true,
+        enabledOperations: [...specialData.enabledOperations, 'Half Destroyer'] };
+    const waste = await runWorker({ action: 'solve', data: wasteData });
+    const wasteReplay = waste.result?.solutionPath ? independentReplay(wasteData, waste.result.solutionPath) : null;
+    assert(waste.type === 'result' && waste.result.outcome === 'solved'
+        && waste.result.solverRoute === 'waste-disposal-constructive'
+        && waste.result.generalSearchAttempt?.generatedStates === 5000000
+        && waste.result.wasteDisposalAttempt.accepted
+        && waste.result.depth === 51
+        && replaySolution(wasteData, waste.result.solutionPath, waste.result).valid
+        && wasteReplay?.valid && wasteReplay.terminal.length === 1,
+        'finite inventory disposal failed original waste-preventing acceptance in the module Worker');
+    checks.push('waste-disposal-recovery');
+
     const repaintSpecialData = { ...specialData, orientationSensitive: false, cleanPainting: false,
         targetShapeCodes: ['P-----Sr:cg------'], startingShapeCodes: Array(4).fill('SbSbSbSb'),
         enabledOperations: [...specialData.enabledOperations, 'Painter'] };

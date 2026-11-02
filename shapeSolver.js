@@ -5,7 +5,8 @@ import {
 } from './shapeOperations.js';
 import { COLOR_CODES, UNCOLORED_CODE, UNPAINTABLE_PARTS } from './shapeConstants.js';
 import { interiorCrystalColumnSolve } from './interiorCrystalColumnSolver.js';
-import { validateStrictPlan, validateHybridPlan } from './constructive/validate-strict-plan.js';
+import { validateStrictPlan, validateHybridPlan, validateDisposalPlan } from './constructive/validate-strict-plan.js';
+import { disposeInventory } from './constructive/dispose-inventory.js';
 
 const STRICT_CONSTRUCTIVE_CONFIG = Object.freeze({
     id: 'strict-ordinary-v1', maxExtractionOperations: 8, maxExtractionStates: 6000,
@@ -130,6 +131,61 @@ async function recoverRepaintSpecial(instance, result, started,
         generalSearchAttempt: { outcome: result.outcome, limitReason: result.limitReason ?? null,
             depth: result.depth, statesExplored: result.statesExplored,
             generatedStates: result.generatedStates, elapsedMs },
+        searchWallMs: now() - started };
+}
+
+function wasteRecoveryEligible(instance) {
+    return instance.preventWaste === true && [true, false].includes(instance.orientationSensitive)
+        && instance.enabledOperations.includes('Half Destroyer')
+        && boundedFiniteEligible({ ...instance, preventWaste: false }, /^(?:--|P-|[CRSWHFGXYc][rgbymcwku]){4}$/);
+}
+
+async function recoverWaste(instance, result, started,
+    { now = () => performance.now(), construct = interiorCrystalColumnSolve } = {}) {
+    const recoverable = result?.outcome === 'not-found-pruned'
+        || (result?.outcome === 'limit'
+            && ['generated-states', 'visited-states', 'shape-universe'].includes(result.limitReason));
+    if (!recoverable || !wasteRecoveryEligible(instance)) return result;
+    const attemptStarted = now(), elapsedMs = attemptStarted - started;
+    const budgetMs = Math.min(STRICT_CONSTRUCTIVE_CONFIG.maxWallMs,
+        Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - elapsedMs));
+    if (budgetMs <= 0) return result;
+    const expired = () => now() - attemptStarted >= budgetMs;
+    let candidate, reason;
+    try {
+        // Generation may retain waste. Only the combined, physically replayed
+        // plan can satisfy the original waste-preventing request below.
+        const generation = { ...instance, preventWaste: false };
+        candidate = await construct(generation, { ...STRICT_CONSTRUCTIVE_CONFIG, maxWallMs: budgetMs });
+        reason = expired() ? 'budget' : !Array.isArray(candidate?.solutionPath) ? 'construction-failed' : null;
+        if (!reason && (candidate.outcome !== 'solved' || candidate.depth !== candidate.solutionPath.length)) reason = 'result-metadata';
+        if (!reason) {
+            const prefix = validateDisposalPlan(generation, candidate.solutionPath, operations, expired);
+            reason = prefix.valid ? null : prefix.reason;
+            if (!reason) {
+                const target = prefix.inventory.find(token => token.shape === instance.targetShapeCodes[0]);
+                const disposal = disposeInventory(instance, candidate.solutionPath, prefix.inventory, target.id, { expired });
+                reason = disposal.valid ? null : disposal.reason;
+                if (!reason) {
+                    const solutionPath = [...candidate.solutionPath, ...disposal.steps];
+                    const acceptance = validateDisposalPlan(instance, solutionPath, operations, expired);
+                    reason = acceptance.valid ? null : acceptance.reason;
+                    if (!reason) candidate = { ...candidate, solutionPath, depth: solutionPath.length };
+                }
+            }
+        }
+    } catch (error) {
+        reason = 'construction-error';
+    }
+    const attemptElapsedMs = now() - attemptStarted;
+    if (attemptElapsedMs >= budgetMs) reason = 'budget';
+    const accepted = reason === null;
+    return { ...(accepted ? candidate : result),
+        solverRoute: accepted ? 'waste-disposal-constructive' : 'general-search',
+        wasteDisposalAttempt: { budgetMs, elapsedMs: attemptElapsedMs, accepted, fallback: !accepted, reason,
+            architectureStatus: candidate?.architectureStatus ?? null },
+        generalSearchAttempt: { outcome: result.outcome, limitReason: result.limitReason ?? null,
+            depth: result.depth, statesExplored: result.statesExplored, generatedStates: result.generatedStates, elapsedMs },
         searchWallMs: now() - started };
 }
 
@@ -556,7 +612,8 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
     );
     const recovered = await recoverPrunedOrdinary(instance, result, started);
     const special = await recoverStrictSpecial(instance, recovered, started);
-    return recoverRepaintSpecial(instance, special, started);
+    const repaint = await recoverRepaintSpecial(instance, special, started);
+    return recoverWaste(instance, repaint, started);
 }
 
 // This named seam is intentionally test-only. It leaves the Worker message
@@ -1989,6 +2046,7 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
 
 const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible, recoverPrunedOrdinary,
     strictSpecialEligible, recoverStrictSpecial, repaintSpecialEligible, recoverRepaintSpecial,
+    wasteRecoveryEligible, recoverWaste,
     validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
 const hybridRoutingTestOnly = Object.freeze({ tryHybridConstructive,
     validate: (instance, path, expired) => validateHybridPlan(instance, path, operations, expired) });

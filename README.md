@@ -18,6 +18,12 @@ Rotator steps must be enabled and pass exact-direction replay within that budget
 Rotation-insensitive Pin/Crystal targets with unrestricted painting use the same
 failure-only recovery budget, with exact finite-inventory replay of the original
 parameters. This route excludes splitting and waste prevention.
+Waste-preventing single-target requests in the bounded four-cell domain can also
+recover a pruned or non-time state/shape-limit miss. With Half Destroyer enabled,
+the existing constructor is followed by bounded disposal of each leftover token;
+real half turns erase the retained half when needed. Construction, disposal and
+original-parameter acceptance share at most 50 ms of the same total allowance.
+Existing successful search paths and `preventWaste: false` routing are preserved.
 
 Maintained branch: **`codex/maintained`**. Its certificate covers the Git-selected
 source plus the original immutable inputs
