@@ -170,6 +170,21 @@ async function main() {
         'strict special-material recovery failed in the module Worker');
     checks.push('strict-special-recovery');
 
+    const rotationData = { ...specialData, targetShapeCodes: ['RuP-----:--cb----'],
+        startingShapeCodes: Array(4).fill('RuRuRuRu'),
+        enabledOperations: [...specialData.enabledOperations, 'Half Destroyer', 'Painter'] };
+    const rotation = await runWorker({ action: 'solve', data: rotationData });
+    assert(rotation.type === 'result' && rotation.result.outcome === 'solved'
+        && rotation.result.solverRoute === 'strict-special-constructive'
+        && rotation.result.generalSearchAttempt?.generatedStates === 5000000
+        && rotation.result.strictConstructiveAttempt.accepted
+        && rotation.result.depth === 27
+        && rotation.result.solutionPath.at(-1).operation === 'Rotator CCW'
+        && replaySolution(rotationData, rotation.result.solutionPath, rotation.result).valid
+        && independentReplay(rotationData, rotation.result.solutionPath).valid,
+        'strict rotated decomposition failed physical inverse rotation in the module Worker');
+    checks.push('strict-rotation-recovery');
+
     const repaintSpecialData = { ...specialData, orientationSensitive: false, cleanPainting: false,
         targetShapeCodes: ['P-----Sr:cg------'], startingShapeCodes: Array(4).fill('SbSbSbSb'),
         enabledOperations: [...specialData.enabledOperations, 'Painter'] };

@@ -255,7 +255,12 @@ export function planMixedPinCrystalSubassembly(target, maxLayers = 4) {
             const lowerTarget = codeFor(lowerLayers);
             const left = planHalf(maskLayers(lowerLayers, [0, 1]), [0, 1], maxLayers);
             const right = planHalf(maskLayers(lowerLayers, [2, 3]), [2, 3], maxLayers);
-            if (!left || !right || !swapResult(left.target, right.target, lowerTarget, maxLayers)) continue;
+            // Both builders materialize each prerequisite as a nonempty finite
+            // token. Algebraic Swapper replay with an empty shape is insufficient:
+            // that component cannot be built. Keep the next feasible orientation.
+            if (!left || !right || Shape.fromShapeCode(left.target).isEmpty()
+                || Shape.fromShapeCode(right.target).isEmpty()
+                || !swapResult(left.target, right.target, lowerTarget, maxLayers)) continue;
             const upper = splitLayer < layers.length ? solidUpperPlan(layers.slice(splitLayer), maxLayers) : null;
             if (splitLayer < layers.length && !upper) continue;
             const result = upper ? stackCodes(lowerTarget, upper.target, maxLayers) : lowerTarget;

@@ -344,6 +344,23 @@ availability, layer limits, resource multiplicity, clean painting and output IDs
 while building. The final authority is still the router's replay gate described
 below.
 
+In the four-layer recovery domain, the mixed Pin/Crystal planner considers at
+most four working orientations and four layer splits in its existing bounded
+structural pass. Both spatial Swapper
+prerequisites must be nonempty: canonical physics can combine an empty shape,
+but neither builder can materialize an empty finite token. Such decompositions
+are excluded before the unchanged ordering by rotation count and split layer.
+Previously successful materializations cannot have used an excluded prerequisite.
+The selected working target is constructed with the original finite resources;
+each inverse turn is an existing real `Rotator CCW` step consuming the preceding
+output ID and preserving all other inventory. Pin/Crystal cells and layer order
+are permuted without gravity or Crystal breaking by rotation itself. Exact final
+orientation still requires replay; geometric equivalence alone is insufficient.
+Disabled required Rotators, unsupported topology or resource mismatch reject the
+candidate and retain the search failure. This adds no constructor retry, no
+per-orientation time allowance and no new route: construction, inverse steps and
+strict acceptance share the existing 50 ms recovery budget and 120 s total cap.
+
 ### 3.4 Budgets, resources and constraints
 
 | Control | How it flows | Important consequence |

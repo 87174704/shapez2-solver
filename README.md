@@ -12,6 +12,9 @@ successful search paths.
 Strict-orientation Pin/Crystal targets also get a bounded constructive recovery
 after search pruning or a non-time state/shape limit. Existing successful paths
 are preserved; recovery uses at most 50 ms of the same total solve allowance.
+Mixed Pin/Crystal decomposition excludes empty spatial prerequisites so an
+executable rotated decomposition can be selected. Its existing real inverse
+Rotator steps must be enabled and pass exact-direction replay within that budget.
 Rotation-insensitive Pin/Crystal targets with unrestricted painting use the same
 failure-only recovery budget, with exact finite-inventory replay of the original
 parameters. This route excludes splitting and waste prevention.
