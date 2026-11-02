@@ -16,10 +16,12 @@ export function validateStrictPlan(instance, path, operations, expired = () => f
 // Hybrid constructors also produce ONE exact goal from whole finite tokens.
 // An exact goal is sufficient when rotation is allowed; never rotate/canonicalize
 // intermediate inputs or outputs during replay. Splitting/throughput and multiple
-// goals remain outside this validator's domain. Keep strict routing's gate above.
+// goals remain outside this validator's domain. Both painting modes are replayed
+// under the original parameters. Keep strict routing's gate above.
 export function validateHybridPlan(instance, path, operations, expired = () => false) {
     if (instance.orientationSensitive !== false || instance.allowSplitting !== false
-        || instance.preventWaste !== false || instance.cleanPainting !== true
+        || instance.preventWaste !== false
+        || (instance.cleanPainting !== true && instance.cleanPainting !== false)
         || instance.maxLayers !== 4 || instance.targetShapeCodes.length !== 1
         || !Array.isArray(path) || path.length > 768) {
         return { valid: false, reason: 'unsupported-plan' };

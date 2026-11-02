@@ -12,13 +12,13 @@ const STRICT_CONSTRUCTIVE_CONFIG = Object.freeze({
     maxMatchingTransitions: 20000, maxOperations: 256, maxWallMs: 50,
 });
 
-function strictFiniteEligible(instance, layerPattern) {
+function boundedFiniteEligible(instance, layerPattern) {
     // Bound the synchronous constructor's input domain as well as its native
     // cooperative time/work limits. Each caller selects its supported cells.
     const supported = code => typeof code === 'string' && code.split(':').length <= 4
         && code.split(':').every(layer => layerPattern.test(layer));
     return instance.targetShapeCodes.length === 1 && instance.maxLayers === 4
-        && instance.orientationSensitive === true && instance.allowSplitting === false
+        && instance.allowSplitting === false
         // Both painting modes are implemented by matching/finishing and replay.
         && (instance.cleanPainting === true || instance.cleanPainting === false)
         && instance.preventWaste === false
@@ -27,13 +27,23 @@ function strictFiniteEligible(instance, layerPattern) {
 }
 
 function strictOrdinaryEligible(instance) {
-    return strictFiniteEligible(instance, /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/);
+    return instance.orientationSensitive === true
+        && boundedFiniteEligible(instance, /^(?:--|[CRSWHFGXY][rgbymcwku]){4}$/);
+}
+
+function boundedSpecialEligible(instance) {
+    return boundedFiniteEligible(instance, /^(?:--|P-|[CRSWHFGXYc][rgbymcwku]){4}$/)
+        && instance.targetShapeCodes[0].split(':').some(layer => layer.match(/../g)
+            .some(cell => cell[0] === 'P' || cell[0] === 'c'));
 }
 
 function strictSpecialEligible(instance) {
-    return strictFiniteEligible(instance, /^(?:--|P-|[CRSWHFGXYc][rgbymcwku]){4}$/)
-        && instance.targetShapeCodes[0].split(':').some(layer => layer.match(/../g)
-            .some(cell => cell[0] === 'P' || cell[0] === 'c'));
+    return instance.orientationSensitive === true && boundedSpecialEligible(instance);
+}
+
+function repaintSpecialEligible(instance) {
+    return instance.orientationSensitive === false && instance.cleanPainting === false
+        && boundedSpecialEligible(instance);
 }
 
 async function tryStrictConstructive(instance, { construct = interiorCrystalColumnSolve,
@@ -100,6 +110,29 @@ async function recoverStrictSpecial(instance, result, started,
         searchWallMs: now() - started };
 }
 
+async function recoverRepaintSpecial(instance, result, started,
+    { now = () => performance.now(), construct = interiorCrystalColumnSolve } = {}) {
+    // Preserve all existing core successes. An exact construction also satisfies
+    // a rotation-insensitive goal; replay the original parameters and inventory.
+    const recoverable = result?.outcome === 'not-found-pruned'
+        || (result?.outcome === 'limit'
+            && ['generated-states', 'visited-states', 'shape-universe'].includes(result.limitReason));
+    if (!recoverable || !repaintSpecialEligible(instance)) return result;
+    const elapsedMs = now() - started;
+    const budgetMs = Math.min(STRICT_CONSTRUCTIVE_CONFIG.maxWallMs,
+        Math.max(0, DEFAULT_SOLVER_LIMITS.maxSearchTimeMs - elapsedMs));
+    if (budgetMs <= 0) return result;
+    const { candidate, attempt } = await tryHybridConstructive(instance,
+        { budgetMs, now, construct, config: STRICT_CONSTRUCTIVE_CONFIG });
+    return { ...(candidate ?? result),
+        solverRoute: candidate ? 'repaint-special-constructive' : 'general-search',
+        repaintSpecialConstructiveAttempt: attempt,
+        generalSearchAttempt: { outcome: result.outcome, limitReason: result.limitReason ?? null,
+            depth: result.depth, statesExplored: result.statesExplored,
+            generatedStates: result.generatedStates, elapsedMs },
+        searchWallMs: now() - started };
+}
+
 const PRODUCTION_CONSTRUCTIVE_CONFIG = Object.freeze({
     id: 'PCHA-A',
     maxExtractionOperations: 8,
@@ -110,14 +143,15 @@ const PRODUCTION_CONSTRUCTIVE_CONFIG = Object.freeze({
 });
 
 async function tryHybridConstructive(instance, { construct = interiorCrystalColumnSolve,
-    now = () => performance.now() } = {}) {
+    now = () => performance.now(), config = PRODUCTION_CONSTRUCTIVE_CONFIG,
+    budgetMs = config.maxWallMs } = {}) {
     const started = now();
-    const budgetMs = PRODUCTION_CONSTRUCTIVE_CONFIG.maxWallMs;
     const expired = () => now() - started >= budgetMs;
     let candidate, reason;
     try {
-        candidate = await construct(instance, PRODUCTION_CONSTRUCTIVE_CONFIG);
+        candidate = await construct(instance, { ...config, maxWallMs: budgetMs });
         reason = expired() ? 'budget' : !Array.isArray(candidate?.solutionPath) ? 'construction-failed' : null;
+        if (!reason && candidate.solutionPath.length > config.maxOperations) reason = 'unsupported-plan';
         if (!reason) {
             const acceptance = validateHybridPlan(instance, candidate.solutionPath, operations, expired);
             reason = acceptance.valid ? null : acceptance.reason;
@@ -521,7 +555,8 @@ async function shapeSolver(targetShapeCodes, startingShapeCodes, enabledOperatio
         preventWaste, orientationSensitive, allowSplitting, cleanPainting, null,
     );
     const recovered = await recoverPrunedOrdinary(instance, result, started);
-    return recoverStrictSpecial(instance, recovered, started);
+    const special = await recoverStrictSpecial(instance, recovered, started);
+    return recoverRepaintSpecial(instance, special, started);
 }
 
 // This named seam is intentionally test-only. It leaves the Worker message
@@ -1953,7 +1988,7 @@ async function shapeExplorerCore(startingShapeCodes, enabledOperations, depthLim
 }
 
 const strictRoutingTestOnly = Object.freeze({ tryStrictConstructive, strictOrdinaryEligible, recoverPrunedOrdinary,
-    strictSpecialEligible, recoverStrictSpecial,
+    strictSpecialEligible, recoverStrictSpecial, repaintSpecialEligible, recoverRepaintSpecial,
     validate: (instance, path, expired) => validateStrictPlan(instance, path, operations, expired) });
 const hybridRoutingTestOnly = Object.freeze({ tryHybridConstructive,
     validate: (instance, path, expired) => validateHybridPlan(instance, path, operations, expired) });

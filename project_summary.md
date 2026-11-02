@@ -188,19 +188,21 @@ before it can replace a search result.
 
 ### 3.1 Public routing
 
-[shapeSolver.js](shapeSolver.js) implements four routes:
+[shapeSolver.js](shapeSolver.js) implements five routes:
 
 | Route | Eligibility (current code) | Result marker |
 | --- | --- | --- |
 | Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; boolean `cleanPainting`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers; clean painting tries construction first, unrestricted painting only after `not-found-pruned` | `solverRoute: 'strict-ordinary-constructive'` |
 | Strict special constructive recovery | same finite-token, layer, resource-count and parameter bounds as strict ordinary; target contains Pin or Crystal; target/starting cells may additionally be `P-` or coloured Crystal; only after general search reports `not-found-pruned` or a `generated-states`, `visited-states` or `shape-universe` limit | `solverRoute: 'strict-special-constructive'` |
 | Hybrid constructive | one target; `maxLayers === 4`; `preventWaste === false`; `orientationSensitive === false`; `allowSplitting === false`; `cleanPainting === true`; no shape-family restriction | `solverRoute: 'constructive-hybrid'` |
+| Rotatable special repaint recovery | same bounded four-cell/finite-token special-material domain as strict special recovery, but `orientationSensitive === false` and `cleanPainting === false`; only after `not-found-pruned` or a generated/visited/shape-universe limit | `solverRoute: 'repaint-special-constructive'` |
 | General search | everything else, or any constructive rejection | `solverRoute` is `'general-search'` after a rejected attempt; absent when general search is entered directly |
 
 The strict routes serve exact-direction targets and use a short
 cooperative budget (currently 50 ms). The hybrid route serves rotation-insensitive
 targets, including Pin and Crystal targets, and uses a larger budget (currently
-12 s). Both budgets are charged against the same total solve cap (currently 120 s);
+12 s); special repaint recovery uses the smaller 50 ms cap after search. All
+constructive budgets are charged against the same total solve cap (currently 120 s);
 after an initial construction failure, the remaining time is handed to general search. `maxStatesPerLevel`
 is a beam-size control for general search only; constructive stages ignore it.
 
@@ -232,6 +234,20 @@ on success `generalSearchAttempt` retains the preceding outcome, `limitReason`,
 depth, state/generated counts and elapsed time. This is partial coverage of
 strict Pin/Crystal targets: unsupported construction topology, resource matching
 or a constructor deadline can still leave the original miss unresolved.
+
+Rotation-insensitive Pin/Crystal targets with unrestricted painting use that same
+bounded constructor only after a recoverable search miss. They retain the original
+parameters during construction and hybrid acceptance: an exact goal suffices for
+rotation-insensitive success. The hybrid validator supports both boolean painting
+modes; this does not expand the existing clean-painting hybrid route's eligibility.
+The recovery uses the strict work limits (8 extraction operations, 6000 extraction
+states, 20000 matching transitions, 256 plan operations) and at most 50 ms of the
+remaining 120 s allowance, including replay. `repaintSpecialConstructiveAttempt`
+reports budget, elapsed time, acceptance/fallback, rejection reason and architecture
+status; `generalSearchAttempt` preserves the preceding outcome, limit reason and
+counts. Rejected candidates retain the original search result. Existing successful
+search paths, exhaustion, cancellation and time limits bypass recovery. This route
+does not add target rotation postprocessing or waste disposal.
 
 ### 3.2 Bounded general search
 
@@ -336,10 +352,10 @@ below.
 | `maxLayers` | `ShapeOperationConfig`; constructive eligibility requires 4 | Constructive and core must agree on layer truncation |
 | `maxStatesPerLevel` | core beam width only | Changing it does not change constructive behaviour |
 | `preventWaste` | route gate, validator and core goal allocation | Constructive routes are entered only with `false`, but the validator still enforces it if present |
-| `orientationSensitive` | chooses strict ordinary / strict special recovery vs hybrid routing; changes the core goal set | Strict means exact orientation; hybrid means rotation-insensitive |
+| `orientationSensitive` | chooses strict routing vs hybrid / special repaint recovery; changes the core goal set | Strict means exact orientation; hybrid means rotation-insensitive |
 | `allowSplitting` | core splitter + throughput accounting; excludes constructive routes | Constructive plans contain no Splitter and no partial tokens |
 | `cleanPainting` | route eligibility, planner matching/finishing, validator and core Painter pre-filter | The rule is enforced at three layers; see 3.5 |
-| Wall time | strict 50 ms, hybrid 12 s, total solve 120 s | Construction **and** acceptance replay are charged to the same budget |
+| Wall time | strict / special repaint recovery 50 ms, hybrid 12 s, total solve 120 s | Construction **and** acceptance replay are charged to the same budget |
 | Resource/matching limits | extraction states, matching transitions, operation count, wall time | Each stage checks its own config; the current values are in `shapeSolver.js` and the planners |
 
 Constructive plans use finite, single-use tokens: every input ID must be live and
@@ -371,11 +387,13 @@ operations:
 - Swapper outputs are compared as an unordered multiset; all other operations are
   ordered. Empty operation outputs are removed from the expected list, so a
   declared path must contain only the non-empty outputs.
-- The hybrid path additionally requires `outcome === 'solved'` and
-  `depth === solutionPath.length`.
+- The hybrid path (including special repaint recovery) additionally requires
+  `outcome === 'solved'` and `depth === solutionPath.length`. Special repaint
+  recovery enforces its smaller 256-operation limit before hybrid replay.
 - A rejection returns a reason such as `clean-painting`, `physics`,
   `input-inventory`, `exact-goal`, `waste`, `result-metadata` or `budget`, and the
-  router runs general search with the original public parameters.
+  router runs general search with the original public parameters, or retains the
+  preceding search miss when construction was a recovery attempt.
 
 The validator imports production physics. It is a strong semantic gate against
 planner mistakes, but it is **not** an independent physics oracle. The independent
@@ -404,8 +422,9 @@ still report success. The fix has two independent parts:
 
 The boundary is therefore: **a constructive success is an exact-replayed plan; a
 public success is either that accepted plan or a path produced by general search.**
-A future constructor regression should cause `hybridConstructiveAttempt.fallback`
-or `strictConstructiveAttempt.fallback` to be true and a `general-search` result,
+A future constructor regression should cause `hybridConstructiveAttempt.fallback`,
+`strictConstructiveAttempt.fallback` or `repaintSpecialConstructiveAttempt.fallback`
+to be true and a `general-search` result,
 not a silently invalid constructive result. Tests should assert both the public
 outcome and the attempt metadata, and should exercise the public-API matrix
 (coloured/uncoloured inputs, exact/rotatable, clean/unrestricted, Painter

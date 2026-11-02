@@ -170,6 +170,21 @@ async function main() {
         'strict special-material recovery failed in the module Worker');
     checks.push('strict-special-recovery');
 
+    const repaintSpecialData = { ...specialData, orientationSensitive: false, cleanPainting: false,
+        targetShapeCodes: ['P-----Sr:cg------'], startingShapeCodes: Array(4).fill('SbSbSbSb'),
+        enabledOperations: [...specialData.enabledOperations, 'Painter'] };
+    const repaintSpecial = await runWorker({ action: 'solve', data: repaintSpecialData });
+    assert(repaintSpecial.type === 'result' && repaintSpecial.result.outcome === 'solved'
+        && repaintSpecial.result.solverRoute === 'repaint-special-constructive'
+        && repaintSpecial.result.generalSearchAttempt?.generatedStates === 5000000
+        && repaintSpecial.result.repaintSpecialConstructiveAttempt.accepted
+        && repaintSpecial.result.solutionPath.some(step => step.operation === 'Painter'
+            && step.inputs.some(input => input.shape.includes('Sb')))
+        && replaySolution(repaintSpecialData, repaintSpecial.result.solutionPath, repaintSpecial.result).valid
+        && independentReplay(repaintSpecialData, repaintSpecial.result.solutionPath).valid,
+        'rotatable special repaint recovery failed in the module Worker');
+    checks.push('repaint-special-recovery');
+
     const explore = await runWorker(tinyExplore);
     assert(
         explore.type === 'result'
