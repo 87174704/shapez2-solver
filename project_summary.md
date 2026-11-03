@@ -180,7 +180,7 @@ The Solver has two families behind one public function:
    narrow parts of the input space.
 
 The ladder is tried first for eligible clean-painting requests; eligible
-unrestricted ordinary requests try it only after beam-pruned search failure.
+unrestricted ordinary requests try it after pruning or a non-time generated/visited/shape limit.
 A rejected initial constructive candidate falls back to general search with the
 same public parameters; a rejected recovery candidate retains that search's
 failure. Constructive code supplements search, and every candidate must pass replay
@@ -192,7 +192,7 @@ before it can replace a search result.
 
 | Route | Eligibility (current code) | Result marker |
 | --- | --- | --- |
-| Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; boolean `cleanPainting`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers; clean painting tries construction first, unrestricted painting only after `not-found-pruned` | `solverRoute: 'strict-ordinary-constructive'` |
+| Strict ordinary constructive | one target; `maxLayers === 4`; `orientationSensitive === true`; `allowSplitting === false`; boolean `cleanPainting`; `preventWaste === false`; at most 64 starting shapes; every target/starting layer is exactly four cells, each empty or an ordinary part (C/R/S/W/H/F/G/X/Y plus colour), and at most four layers; clean painting tries construction first, unrestricted painting only after `not-found-pruned` or a generated/visited/shape-universe limit | `solverRoute: 'strict-ordinary-constructive'` |
 | Strict special constructive recovery | same finite-token, layer, resource-count and parameter bounds as strict ordinary; target contains Pin or Crystal; target/starting cells may additionally be `P-` or coloured Crystal; only after general search reports `not-found-pruned` or a `generated-states`, `visited-states` or `shape-universe` limit | `solverRoute: 'strict-special-constructive'` |
 | Hybrid constructive | one target; `maxLayers === 4`; `preventWaste === false`; `orientationSensitive === false`; `allowSplitting === false`; `cleanPainting === true`; no shape-family restriction | `solverRoute: 'constructive-hybrid'` |
 | Rotatable special repaint recovery | same bounded four-cell/finite-token special-material domain as strict special recovery, but `orientationSensitive === false` and `cleanPainting === false`; only after `not-found-pruned` or a generated/visited/shape-universe limit | `solverRoute: 'repaint-special-constructive'` |
@@ -213,12 +213,13 @@ historical Release 1 metadata; it does not configure the current runtime. See
 [README.md](README.md) for the same statement.
 
 For `cleanPainting === false`, strict ordinary construction is a recovery step
-after general search reports `not-found-pruned`. Existing search successes,
-`exhausted` and safety `limit` results keep their original paths and metadata.
+after general search reports `not-found-pruned` or a `generated-states`,
+`visited-states` or `shape-universe` limit. Existing search successes,
+`exhausted`, time limits, unknown limits and cancellation keep their original paths and metadata.
 Recovery uses at most 50 ms of the remaining total solve allowance, including
 acceptance replay; it never resets the deadline. If recovery fails, the original
-pruned result and its counters are retained with the constructive rejection reason.
-`generalSearchAttempt` records the preceding search's outcome, depth, state and
+search result and its counters are retained with the constructive rejection reason.
+`generalSearchAttempt` records the preceding search's outcome, limit reason, depth, state and
 candidate counts and elapsed time for either recovery outcome. On recovery success,
 the top-level counters belong to the constructor; they must not be compared with
 general-search counts as if they measured identical work. This ordinary recovery

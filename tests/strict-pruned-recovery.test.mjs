@@ -78,8 +78,12 @@ test('recovery domain excludes other outcomes, painting modes, special parts and
         { startingShapeCodes: Array(65).fill('Cu------') }, { targetShapeCodes: ['Cu------', 'Ru------'] }]) {
         assert.equal(await seam.recoverPrunedOrdinary({ ...base, ...delta }, missed, 0, { construct }), missed);
     }
-    for (const outcome of ['solved', 'exhausted', 'limit']) {
+    for (const outcome of ['solved', 'exhausted', 'cancelled', 'limit']) {
         const r = { ...missed, outcome };
+        assert.equal(await seam.recoverPrunedOrdinary(base, r, 0, { construct }), r);
+    }
+    for (const limitReason of ['time', 'unknown', undefined]) {
+        const r = { ...missed, outcome: 'limit', limitReason };
         assert.equal(await seam.recoverPrunedOrdinary(base, r, 0, { construct }), r);
     }
 });
@@ -89,6 +93,30 @@ const atom = { ...base, targetShapeCodes: ['--Ru----'], startingShapeCodes: ['Ru
 const step = { operation: 'Rotator CW', inputs: [{ id: 0, shape: 'Ru------' }],
     outputs: [{ id: 1, shape: '--Ru----' }], params: {} };
 const candidate = { outcome: 'solved', depth: 1, solutionPath: [step] };
+
+test('ordinary recovery accepts only the known non-time limits and retains rejected core metadata', async () => {
+    for (const limitReason of ['generated-states', 'visited-states', 'shape-universe']) {
+        const core = { ...missed, outcome: 'limit', limitReached: true, limitReason };
+        const recovered = await seam.recoverPrunedOrdinary(atom, core, 0,
+            { now: () => 0, construct: async () => candidate });
+        assert.equal(recovered.outcome, 'solved');
+        assert.equal(recovered.generalSearchAttempt.limitReason, limitReason);
+        assert.equal(recovered.strictConstructiveAttempt.budgetMs, 50);
+        assert.equal(independentReplay(atom, recovered.solutionPath).valid, true);
+        assert.equal(replaySolution(atom, recovered.solutionPath, recovered).valid, true);
+        for (const construct of [async () => null, async () => ({ ...candidate, solutionPath: [] })]) {
+            const rejected = await seam.recoverPrunedOrdinary(atom, core, 0, { now: () => 0, construct });
+            for (const key of Object.keys(core)) assert.deepEqual(rejected[key], core[key]);
+        }
+        assert.equal(await seam.recoverPrunedOrdinary(atom, core, 0,
+            { now: () => 120000, construct: () => assert.fail('expired') }), core);
+        let time = 119980;
+        const late = await seam.recoverPrunedOrdinary(atom, core, 0, { now: () => time,
+            construct: async (_, config) => { assert.equal(config.maxWallMs, 20); time += 20; return candidate; } });
+        for (const key of Object.keys(core)) assert.deepEqual(late[key], core[key]);
+        assert.equal(late.strictConstructiveAttempt.reason, 'budget');
+    }
+});
 
 test('recovery rejects invalid or disabled candidates through the unchanged replay gate', async () => {
     for (const [p, construct, reason] of [

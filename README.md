@@ -7,7 +7,7 @@ serves 13 UI languages, and builds as two static profiles (`global`, `china`).
 Strict-orientation ordinary targets use bounded constructive attempts by default;
 there is no feature flag for them.
 With unrestricted painting (`cleanPainting: false`), the same bounded constructor
-recovers ordinary `not-found-pruned` search results while preserving existing
+recovers ordinary pruned or non-time generated/visited/shape-limit search results while preserving existing
 successful search paths.
 Strict-orientation Pin/Crystal targets also get a bounded constructive recovery
 after search pruning or a non-time state/shape limit. Existing successful paths

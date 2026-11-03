@@ -72,9 +72,12 @@ async function tryStrictConstructive(instance, { construct = interiorCrystalColu
 async function recoverPrunedOrdinary(instance, result, started,
     { now = () => performance.now(), construct = interiorCrystalColumnSolve } = {}) {
     // Preserve unrestricted painting's existing successful search paths. Only
-    // recover beam-pruned ordinary misses, using the existing bounded planner
+    // recover pruned or non-time state/shape misses, using the existing bounded planner
     // and replay gate, with no increase to the total solve time allowance.
-    if (result?.outcome !== 'not-found-pruned' || instance.cleanPainting !== false
+    const recoverable = result?.outcome === 'not-found-pruned'
+        || (result?.outcome === 'limit'
+            && ['generated-states', 'visited-states', 'shape-universe'].includes(result.limitReason));
+    if (!recoverable || instance.cleanPainting !== false
         || !strictOrdinaryEligible(instance)) return result;
     const elapsedMs = now() - started;
     const budgetMs = Math.min(STRICT_CONSTRUCTIVE_CONFIG.maxWallMs,
@@ -84,7 +87,7 @@ async function recoverPrunedOrdinary(instance, result, started,
     return { ...(candidate ?? result),
         solverRoute: candidate ? 'strict-ordinary-constructive' : 'general-search',
         strictConstructiveAttempt: attempt,
-        generalSearchAttempt: { outcome: result.outcome, depth: result.depth,
+        generalSearchAttempt: { outcome: result.outcome, limitReason: result.limitReason ?? null, depth: result.depth,
             statesExplored: result.statesExplored, generatedStates: result.generatedStates, elapsedMs },
         searchWallMs: now() - started };
 }
